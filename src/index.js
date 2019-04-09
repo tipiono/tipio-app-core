@@ -1,5 +1,3 @@
-import ExampleComponent from './ExampleComponent'
-import TestStyled from './TestStyled'
-// export default { ExampleComponent }
+import {Button} from './Button/Button'
 
-export { ExampleComponent, TestStyled }
+export { Button }
