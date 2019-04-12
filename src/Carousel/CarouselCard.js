@@ -74,7 +74,7 @@ class Carousel extends Component {
                 this.handleClick((this.state.active - 1 + children.length) % children.length, e)
               }
             >
-              <span className="carousel-control-prev-icon" aria-hidden="true" />
+              <span className="carousel-control-prev-icon" aria-hidden="true">Prev</span>
               <span className="sr-only">Previous</span>
             </a>
             <a
@@ -86,7 +86,7 @@ class Carousel extends Component {
                 this.handleClick((this.state.active + 1 + children.length) % children.length, e)
               }
             >
-              <span className="carousel-control-next-icon" aria-hidden="true" />
+              <span className="carousel-control-next-icon" aria-hidden="true">Next</span>
               <span className="sr-only">Next</span>
             </a>
           </div>
