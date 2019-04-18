@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 
 class Carousel extends Component {
   constructor(props) {
+
     super(props);
     this.state = {
       active: 0
@@ -57,8 +58,8 @@ class Carousel extends Component {
             </ol>
             {thumbnails && (
               <ul className="carousel-thumbnails">
-                {thumbnails.map(item => (
-                  <li className="thumbnail-item">
+                {thumbnails.map((item, index) => (
+                  <li className="thumbnail-item" onClick={(e)=>{this.handleClick(index, e)}}>
                     <img src={item} alt="..." />
                   </li>
                 ))}
