@@ -19,7 +19,7 @@ class Carousel extends Component {
     this.setActive(index);
   };
   render() {
-    const {className, children, thumbnails} = this.props;
+    const { className, children, thumbnails } = this.props;
     return (
       <React.Fragment>
         <div className="carousel-card card">
