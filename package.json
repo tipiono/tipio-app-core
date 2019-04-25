@@ -58,5 +58,8 @@
   "files": [
     "dist"
   ],
-  "dependencies": {}
+  "dependencies": {
+    "react-swipe": "^6.0.4",
+    "swipe-js-iso": "^2.1.5"
+  }
 }
