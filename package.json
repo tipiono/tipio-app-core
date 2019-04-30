@@ -58,5 +58,7 @@
   "files": [
     "dist"
   ],
-  "dependencies": {}
+  "dependencies": {
+    "react-swipeable-views": "^0.13.1"
+  }
 }
