@@ -60,6 +60,8 @@
   ],
   "dependencies": {
     "react-swipe": "^6.0.4",
+    "react-swipeable": "^5.2.0",
+    "react-swipeable-views": "^0.13.1",
     "swipe-js-iso": "^2.1.5"
   }
 }
