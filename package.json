@@ -59,6 +59,13 @@
     "dist"
   ],
   "dependencies": {
+<<<<<<< HEAD
     "react-swipeable-views": "^0.13.1"
+=======
+    "react-swipe": "^6.0.4",
+    "react-swipeable": "^5.2.0",
+    "react-swipeable-views": "^0.13.1",
+    "swipe-js-iso": "^2.1.5"
+>>>>>>> 889ad3085c69758f9ba42415cd24dcbe3d5d6464
   }
 }
