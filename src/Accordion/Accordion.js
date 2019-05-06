@@ -50,7 +50,7 @@ class Accordion extends Component {
     render() {
         return (
             <div className="accordion" id="accordionExample">
-                {this.props.children.map((child, index) => {
+                {React.Children.map(this.props.children, (child, index) => {
                     const { title } = child.props;
                     return  <Card>
                                 <CardHeader title={title} id={index+1} onClick={this.headerOnClick}/>
