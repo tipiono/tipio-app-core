@@ -101,7 +101,6 @@ class Carousel extends Component {
                                 </a>
                             </ul>
                         )}
-
                     </div>
                 </div>
             </React.Fragment>
