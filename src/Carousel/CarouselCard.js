@@ -4,6 +4,9 @@ import PropTypes from "prop-types";
 import LeftArrow from '../static/assets/images/left-arrow.svg';
 import RightArrow from '../static/assets/images/right-arrow.svg';
 
+
+import SwipeableViews from 'react-swipeable-views';
+
 class Carousel extends Component {
     constructor(props) {
 
@@ -34,13 +37,17 @@ class Carousel extends Component {
                         data-ride="carousel"
                     >
                         <div className="carousel-inner">
-                            {React.Children.map(children, (child, index) => {
-                                let itemClassName = "carousel-item";
-                                if (this.state.active === index) {
+                            <SwipeableViews index={this.state.active} onChangeIndex={(index)=>{
+                                this.setActive(index)
+                            }}>
+                                {React.Children.map(children, (child, index) => {
+                                    let itemClassName = "";
+                                    if (this.state.active === index) {
                                     itemClassName += " active";
-                                }
-                                return <div className={itemClassName}>{child}</div>;
-                            })}
+                                    }
+                                    return child;
+                                })}
+                            </SwipeableViews>
                         </div>
 
                         <ol className="carousel-indicators d-lg-none">
