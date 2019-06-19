@@ -1,45 +1,49 @@
 import React, {Component} from 'react';
 
 const Card = ({children}) => {
-    return (
-        <div className="card">
-            {children}
-        </div>
-    );
+  return (
+    {children}
+  );
 };
 
-const CardHeader = ({title, id, onClick}) => {
-    return (
-        <div className="card-header" id={id}>
-            <h2 className="mb-0">
-                <button id={id} className="btn btn-link" type="button" data-toggle="collapse"
-                        aria-expanded="true" onClick={onClick}>
-                    {title}
-                </button>
-            </h2>
-        </div>
-    );
+const CardHeader = ({title, titleOnShow, id, onClick, show}) => {
+  let titleLabel = title;
+  if (titleOnShow && show) {
+    titleLabel = titleOnShow;
+  }
+  return (
+    <div className={"card-header " + (show ? "show" : "")} id={id}>
+      <button id={id} className="accordion-link" onClick={onClick}>
+        {titleLabel}
+        <svg id={id} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" onClick={onClick}>
+          <g className="nc-icon-wrapper" fill="#8c8f91">
+            <path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"/>
+          </g>
+        </svg>
+      </button>
+    </div>
+  );
 };
 
 const CardBody = ({children, id, show}) => {
-    return (
-        <div id={id} className={"collapse " + (show ? 'show' : '')} data-parent="#accordionExample">
-            <div className="card-body">
-                {children}
-            </div>
-        </div>
-    );
+  return (
+    <div id={id} className={"collapse " + (show ? 'show' : '')} data-parent="#accordionExample">
+      <div className="card-body">
+        {children}
+      </div>
+    </div>
+  );
 };
 
 class Accordion extends Component {
 
-    constructor(props){
-        super(props);
-        this.headerOnClick = this.headerOnClick.bind(this)
-        this.state = {
-            active: 0
-        }
+  constructor(props) {
+    super(props);
+    this.headerOnClick = this.headerOnClick.bind(this)
+    this.state = {
+      active: 0
     }
+  }
 
     headerOnClick(e) {
         let active =  parseInt(e.target.id);
@@ -47,21 +51,22 @@ class Accordion extends Component {
         this.setState({active})
     }
 
-    render() {
-        return (
-            <div className="accordion" id="accordionExample">
-                {React.Children.map(this.props.children, (child, index) => {
-                    const { title } = child.props;
-                    return  <Card>
-                                <CardHeader title={title} id={index+1} onClick={this.headerOnClick}/>
-                                <CardBody id={index} show={this.state.active === index+1}>
-                                    {child}
-                                </CardBody>
-                            </Card>;
-                })}
-            </div>
-        );
-    }
+  render() {
+    return (
+      <div className="accordion-item" id="accordionExample">
+        {React.Children.map(this.props.children, (child, index) => {
+          const {title, titleOnShow} = child.props;
+          const show = this.state.active === index + 1;
+          return [
+            <CardHeader title={title} titleOnShow={titleOnShow} id={index + 1} onClick={this.headerOnClick} show={show}/>,
+            <CardBody id={index} show={show}>
+              {child}
+            </CardBody>
+          ]
+        })}
+      </div>
+    );
+  }
 };
 
 export {Accordion};
