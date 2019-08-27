@@ -1,13 +1,13 @@
-import {Button} from './Button/Button'
-import InputValidationError from './InputValidationError/InputValidationError'
-import Carousel from './Carousel/CarouselCard'
-import CarouselItem from './Carousel/CarouselItem'
-import {Accordion} from './Accordion/Accordion'
+import React from 'react';
+import { render } from "react-dom";
+import { TextInput } from "./lib";
+import "./styles/_fonts.scss";
 
-export {
-    Button,
-    InputValidationError,
-    Carousel,
-    CarouselItem,
-    Accordion
-}
+const App = () => (
+  <div style={{ width: 640, margin: "15px auto" }}>
+    <h1>Hello React</h1>
+    <TextInput label="Email Address" placeholder="name@example.com" />
+  </div>
+);
+
+render(<App />, document.getElementById("root"));
