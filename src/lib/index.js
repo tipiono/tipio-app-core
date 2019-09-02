@@ -1,5 +1,5 @@
 import TextInput from "./TextInput/TextInput";
 import Button from "./Button/Button";
-import "./index.scss";
+import styles from './styles/main.scss';
 
-export { TextInput, Button };
+export { styles, TextInput, Button };

@@ -1,0 +1,59 @@
+.tipio-posted-by {
+    display: flex;
+    width: 100%;
+    margin-top: 80px;
+    align-items: center;
+    border-top: solid 1px #eeeeee;
+    padding-top: 11px;
+
+    img {
+        margin-right: 15px;
+        object-fit: cover;
+    }
+
+    .content {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+
+        h5 {
+            margin-bottom: 0px !important;
+        }
+
+        img {
+            margin-right: 0px !important;
+            cursor: pointer;
+        }
+
+        span {
+            font-size: 12px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: #505659;
+        }
+    }
+
+    .custom-dropdown {
+        .dropdown-menu {
+            padding: 10px 0;
+
+            .dropdown-item {
+                padding: 12px 60px 12px 30px;
+                color: $gray-700;
+            }
+
+            small {
+                color: $gray-500;
+            }
+        }
+
+        .dropdown-toggle {
+            &:after {
+                content: none;
+            }
+        }
+    }
+}

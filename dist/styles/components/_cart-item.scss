@@ -1,0 +1,101 @@
+.cart-item {
+    border-bottom: 1px solid $gray-200;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+
+    .cart-item-header {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 24px;
+    }
+
+    .cart-item-footer {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        .select-form {
+            width: 48%;
+        }
+        .form-row {
+            justify-content: space-between;
+            width: 100%;
+        }
+    }
+
+    .cart-item-thumbnail {
+        position: relative;
+        width: 50%;
+        display: inline-table;
+
+        .cart-item-img {
+            width: 90%;
+            height: 110px;
+            object-fit: cover;
+            //border: 1px solid $gray-200;
+            border: 1px solid #F5F5F5;
+        }
+
+        .cart-item-time-left {
+            position: absolute;
+            right: 10%;
+            bottom: 0;
+            background: #4F2E90;
+            color: #fff;
+            padding: 2px 14px;
+            font-size: 13px;
+            font-family: 'DroidSansMono', sans-serif;
+        }
+    }
+
+    .cart-item-content {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .cart-item-price {
+            margin-bottom: 0.25rem;
+        }
+
+        .cart-item-title {
+            font-size: 14px;
+            line-height: 18px;
+            font-family: 'Riposte-Regular', sans-serif;
+            margin-bottom: 1rem;
+            a {
+                color: $gray-800;
+
+                &:hover {
+                    color: $primary;
+                }
+            }
+        }
+
+
+        .cart-item-stock {
+            small {
+                color: $danger;
+            }
+        }
+    }
+
+    .cart-item-delete {
+        width: 48%;
+        padding-top: 14px;
+
+        .cart-item-delete-link {
+            display: flex;
+            align-items: center;
+            color: $gray-500;
+            cursor: pointer;
+            &:hover {
+                color: $danger;
+                text-decoration: none;
+
+                svg * {
+                    stroke: $danger;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,100 @@
+.select-images {
+    .page-title {
+        color: $dark;
+        text-align: center;
+        margin: 38px 0;
+        font-family: Riposte-Regular, sans-serif;
+
+        @include media-breakpoint-down(md) {
+            font-size: 24px;
+        }
+    }
+
+    .layout-container {
+        background: $gray-100;
+
+        .layout-content {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: center;
+            align-items: start;
+            padding-top: 40px;
+            padding-bottom: 60px;
+
+            .layout-item {
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+                position: relative;
+                margin-bottom: 16px;
+
+                input {
+                    display: none;
+
+                    &:checked + img {
+                        opacity: .5;
+                        box-shadow: inset 0 0 0 1px white, 0 0 0 3px $secondary;
+
+                        &:before {
+                            content: "1";
+                        }
+                    }
+                }
+
+                .layout-img {
+                    width: 100%;
+                    height: auto;
+                }
+
+                .selected-number {
+                    background-color: $secondary;
+                    width: 45px;
+                    height: 45px;
+                    border-radius: 25px;
+                    color: $primary;
+                    font-weight: 600;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    position: absolute;
+                }
+            }
+        }
+    }
+}
+
+.one-half {
+    width: 70% !important;
+    margin: 0 auto !important;
+
+    .my-masonry-grid_column {
+        width: 50% !important;
+    }
+
+    @include media-breakpoint-down(md) {
+        width: 100%;
+    }
+}
+
+.one-third {
+    .my-masonry-grid_column {
+        width: 33% !important;
+
+        @include media-breakpoint-down(md) {
+            width: 50% !important;
+        }
+    }
+}
+
+.one-quarter {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+
+    .layout-item {
+        flex-basis: calc(25% - 24px);
+    }
+}

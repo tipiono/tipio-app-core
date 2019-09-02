@@ -1,0 +1,45 @@
+.custom-accordion {
+    .accordion-item {
+        padding: 14px 0;
+        border-bottom: 1px solid $gray-200;
+
+        &:last-child {
+            border-bottom: none;
+        }
+
+        .card-header {
+            padding: 0;
+            background: none;
+
+        }
+        .card-body {
+            padding: 14px 0;
+            color: $gray-700;
+        }
+
+        .accordion-link {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            color: $gray-700;
+            font-family: 'Riposte-Medium', sans-serif;
+            box-shadow: none;
+            border: none;
+            background: no-repeat;
+            outline: none;
+            padding: 0;
+
+            &:hover {
+                color: $primary;
+
+                svg * {
+                    fill: $primary;
+                }
+            }
+        }
+        .show svg {
+            transform: rotate(180deg);
+        }
+    }
+}
+
