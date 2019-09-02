@@ -1,0 +1,81 @@
+// 1. Abstracts, configuration and helpers
+@import
+    'abstracts/bootstrap/functions',
+    'abstracts/bootstrap/variables';
+
+// 2. Base stuff
+@import
+    'base/fonts',
+    'base/font-sizes',
+    'base/view_port',
+    'base/base';
+
+@import '~bootstrap/scss/bootstrap';
+
+// 3. Components
+@import
+    'components/navigation',
+    'components/carousel-card',
+    'components/product-card',
+    'components/hamburger-button',
+    'components/special-card',
+    'components/shopping-bag-special-card',
+    'components/cart-item',
+    'components/order-item',
+    'components/_checkout',
+    'components/invite-friends',
+    'components/completed-tipio',
+    'components/login-register',
+    'components/toggle-switch',
+    'components/radio-buttons',
+    'components/custom-material-select',
+    'components/checkboxes',
+    'components/add-tipio',
+    'components/pagination',
+    'components/material-inputs',
+    'components/custom-accordion',
+    'components/_image-uploader',
+    'components/custom-modal',
+    'components/_cropper.scss',
+    'components/_carouse.scss',
+    'components/main-categories',
+    'components/timeline',
+    'components/_timetag.scss',
+    'components/tipio-status',
+    'components/choose-category',
+    'components/pinky-countdown',
+    'components/_empty_interested',
+    'components/_empty-recived-offers.scss',
+    'components/_empty-orders.scss',
+    'components/tipio-posted-by',
+    'components/tipio-gallery',
+    'components/tipio-view-card';
+
+
+// 4. Layout-related sections
+@import
+    'layout/footer',
+    'layout/header';
+
+// 5. Page-specific styles
+@import 'pages/login',
+'pages/select-images',
+'pages/searchresult',
+'pages/your-tipios',
+'pages/userprofile',
+'pages/add-link',
+'pages/tipio-publish',
+'pages/credit-cart',
+'pages/tipio-view',
+'pages/frontpage',
+'pages/about-page';
+
+
+// 6. Themes
+@import 'themes/default';
+
+// 7. Vendors
+
+// . Custom
+@import
+    'custom-css';

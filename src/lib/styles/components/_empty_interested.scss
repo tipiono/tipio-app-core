@@ -1,0 +1,12 @@
+.empty-interested {
+    margin-top: 20px;
+    //margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    .add-tipio {
+        height: 150px;
+        background: transparent;
+    }
+}

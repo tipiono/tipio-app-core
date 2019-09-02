@@ -15,11 +15,17 @@ Object.defineProperty(exports, "Button", {
     return _Button.default;
   }
 });
+Object.defineProperty(exports, "styles", {
+  enumerable: true,
+  get: function get() {
+    return _main.default;
+  }
+});
 
-var _TextInput = _interopRequireDefault(require("./TextInput"));
+var _TextInput = _interopRequireDefault(require("./TextInput/TextInput"));
 
 var _Button = _interopRequireDefault(require("./Button/Button"));
 
-require("./index.scss");
+var _main = _interopRequireDefault(require("./styles/main.scss"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }

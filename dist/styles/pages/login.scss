@@ -1,0 +1,96 @@
+.login {
+    padding: 70px 0;
+    text-align: center;
+
+    form {
+        .form-group {
+            margin-bottom: 30px;
+        }
+    }
+}
+
+.signup {
+    padding: 70px 0;
+    form {
+        .form-group {
+            margin-bottom: 30px;
+        }
+    }
+}
+
+.divider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:before {
+        content: '';
+        height: 1px;
+        width: 50%;
+        background: $gray-300;
+        display: block;
+
+    }
+    &:after {
+        content: '';
+        height: 1px;
+        width: 50%;
+        background: $gray-300;
+        display: block;
+
+    }
+}
+
+.vertical-divider {
+    width: 1px;
+    height: 100%;
+    background: $gray-200;
+    display: block;
+    margin: 0 auto;
+}
+
+.google-btn {
+    position: relative;
+    background: #3d81f6;
+    color: $white;
+    width: 100%;
+    height: 50px;
+    border: 0;
+    letter-spacing: .5px;
+    margin-bottom: 20px;
+
+    .google-icon {
+        position: absolute;
+        left: 24px;
+        top: 3px;
+    }
+}
+.facebook-btn {
+    position: relative;
+    background: #405bb0;
+    color: $white;
+    width: 100%;
+    height: 50px;
+    border: 0;
+    letter-spacing: .5px;
+    margin-bottom: 20px;
+
+    .facebook-icon {
+        position: absolute;
+        left: 24px;
+        top: 8px;
+    }
+}
+
+.login-checklist {
+    text-align: left;
+    background: $light;
+    padding: 24px;
+
+    .checklist-item {
+        font-size: 12px;
+
+        img {
+            margin-right: 10px;
+        }
+    }
+}

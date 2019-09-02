@@ -1,0 +1,64 @@
+.hamburger-button {
+    position: relative;
+    transform: scale(0.6);
+    text-indent: -999em;
+    overflow: hidden;
+    display: block;
+    height: 3em;
+    width: 2.5em;
+    transition: background 800ms;
+    background: linear-gradient(transparent 0%, transparent 46%, #f9f6ff 46%, #f9f6ff 54%, transparent 54%, transparent 100%);
+    z-index: 6;
+    &:after,
+    &:before {
+        transition: all ease 200ms;
+        position: absolute;
+        content: 'a';
+        background-color: $white;
+        height: .25em;
+        width: 2.5em;
+    }
+    &:before {
+        top: .6em;
+        right: 0;
+    }
+    &:after {
+        bottom: .6em;
+        right: 0;
+    }
+    // Active
+    &.show {
+        background: transparent;
+        &:hover {
+            background: transparent;
+        }
+        &:hover:after,
+        &:hover:before,
+        &:after,
+        &:before {
+            top: 50%;
+        }
+        &:before {
+            transform: rotate(45deg);
+            transform-origin: 50%;
+        }
+        &:after {
+            transform: rotate(-45deg);
+            transform-origin: 50%;
+        }
+    }
+    // Hover Styles
+    &:hover {
+        background: linear-gradient(transparent 0%, transparent 46%, #4abcac 46%, #4abcac 54%, transparent 54%, transparent 100%);
+        &:after,
+        &:before {
+            background-color: $secondary;
+        }
+        &:before {
+            top: .6em;
+        }
+        &:after {
+            bottom: .6em;
+        }
+    }
+}

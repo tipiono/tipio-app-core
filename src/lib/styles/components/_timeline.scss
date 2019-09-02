@@ -1,0 +1,441 @@
+.vertical-timeline {
+    position: relative;
+
+    .vertical-timeline-item {
+        position: relative;
+        padding-left: 24px;
+        padding-bottom: 30px;
+
+        .timeline-item-title {
+            display: block;
+            font-size: 14px;
+        }
+
+        &:last-child {
+            padding-bottom: 0;
+            border-left: none;
+
+            &:before {
+                border: none;
+            }
+        }
+
+        .timeline-item-content {
+            .content-title {
+                font-size: 18px;
+            }
+
+            .content-description {
+                font-size: 14px;
+                line-height: 1.2;
+            }
+        }
+    }
+
+    /// completed | Timeline item
+    .completed {
+        /// Border
+        &:before {
+            content: "";
+            height: 100%;
+            border-left: 2px solid $primary;
+            position: absolute;
+            left: -2px;
+        }
+
+        /// Dot
+        &:after {
+            content: "";
+            width: 20px;
+            height: 20px;
+            background: url("../../static/assets/images/checked.svg") center white;
+            background-size: cover;
+            border-radius: 25px;
+            position: absolute;
+            left: -11px;
+            top: 0;
+        }
+    }
+
+    /// Ongoing | Timeline item
+    .ongoing {
+        /// Border
+        &:before {
+            content: "";
+            height: 100%;
+            border-left: 2px dashed $gray-300;
+            position: absolute;
+            left: -2px;
+        }
+
+        /// Dot
+        &:after {
+            content: "";
+            width: 20px;
+            height: 20px;
+            border: 2px solid $primary;
+            background: $white;
+            border-radius: 25px;
+            position: absolute;
+            left: -11px;
+            top: 0;
+        }
+
+        .timeline-tooltip {
+            display: inline-block;
+            position: relative;
+            margin-bottom: 30px;
+            margin-top: -6px;
+
+            &:before {
+                position: absolute;
+                left: -6px;
+                top: 11px;
+                border-top: 6px solid transparent;
+                border-bottom: 6px solid transparent;
+                border-right: 6px solid $primary;
+                content: '';
+            }
+
+            .timeline-tooltip-inner {
+                display: flex;
+                align-items: center;
+                background: $primary;
+                color: $white;
+                font-size: 14px;
+                padding: 7px 12px;
+                border-radius: 4px;
+
+                .tooltip-divider {
+                    display: block;
+                    width: 2px;
+                    height: 20px;
+                    margin: 0 10px;
+                    background: #381b81;
+                }
+
+                .right-text {
+                    font-family: 'DroidSansMono', sans-serif;
+                }
+            }
+        }
+    }
+
+    /// Coming | Timeline item
+    .coming {
+        /// Border
+        &:before {
+            content: "";
+            height: 100%;
+            border-left: 2px dashed $gray-300;
+            position: absolute;
+            left: -2px;
+        }
+
+        /// Dot
+        &:after {
+            content: "";
+            width: 20px;
+            height: 20px;
+            border: 2px solid $gray-300;
+            background: $white;
+            border-radius: 25px;
+            position: absolute;
+            left: -11px;
+            top: 0;
+        }
+    }
+
+    .step-1 {
+        /// Border
+        &:before {
+            transform: scaleX(0);
+            transform-origin: top;
+            animation: grow-top 0.3s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+            animation-delay: 0.3s;
+        }
+
+        /// Dot
+        &:after {
+            animation: scale-center 0.5s ease-in;
+            animation-fill-mode: backwards;
+        }
+
+        .timeline-item-title, .timeline-tooltip, .timeline-item-content {
+            animation: fade-top .1s ease-in;
+            animation-fill-mode: backwards;
+            animation-delay: 0.3s;
+        }
+    }
+
+    .step-2 {
+        /// Border
+        &:before {
+            transform: scaleX(0);
+            transform-origin: top;
+            animation: grow-top 0.3s cubic-bezier(0.4, 0, 1, 1) forwards;
+            animation-delay: 0.9s;
+        }
+
+        /// Dot
+        &:after {
+            animation: scale-center .2s ease-in;
+            animation-fill-mode: backwards;
+            animation-delay: 0.6s;
+        }
+
+        .timeline-item-title, .timeline-tooltip, .timeline-item-content {
+            animation: fade-top .2s ease-in;
+            animation-fill-mode: backwards;
+            animation-delay: 0.9s;
+        }
+    }
+
+    .step-3 {
+        /// Border
+        &:before {
+            transform: scaleX(0);
+            transform-origin: top;
+            animation: grow-top 0.3s forwards;
+            animation-delay: 1.2s;
+        }
+
+        /// Dot
+        &:after {
+            animation: scale-center .2s ease-in;
+            animation-fill-mode: backwards;
+            animation-delay: 0.9s;
+        }
+
+        .timeline-item-title, .timeline-tooltip, .timeline-item-content {
+            animation: fade-top .2s ease-in;
+            animation-fill-mode: backwards;
+            animation-delay: 1.2s;
+        }
+    }
+
+    .step-4 {
+        /// Border
+        &:before {
+            transform: scaleX(0);
+            transform-origin: top;
+            animation: grow-top 0.3s forwards;
+            animation-delay: 1.5s;
+        }
+
+        /// Dot
+        &:after {
+            animation: scale-center .2s ease-in;
+            animation-fill-mode: backwards;
+            animation-delay: 1.2s;
+        }
+
+        .timeline-item-title, .timeline-tooltip, .timeline-item-content {
+            animation: fade-top .2s ease-in;
+            animation-delay: 1.5s;
+            animation-fill-mode: backwards;
+        }
+    }
+
+    .step-5 {
+        /// Border
+        &:before {
+            transform: scaleX(0);
+            transform-origin: top;
+            animation: grow-top 0.3s forwards;
+            animation-delay: 1.8s;
+        }
+
+        /// Dot
+        &:after {
+            animation: scale-center .2s ease-in;
+            animation-fill-mode: backwards;
+            animation-delay: 1.5s;
+        }
+
+        .timeline-item-title, .timeline-tooltip, .timeline-item-content {
+            animation: fade-top .2s ease-in;
+            animation-delay: 1.8s;
+            animation-fill-mode: backwards;
+        }
+    }
+}
+
+
+// Horizontal Timeline ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+.horizontal-timeline {
+    position: relative;
+    margin-left: -20px;
+    margin-bottom: 2rem;
+
+    .horizontal-timeline-item {
+        position: relative;
+        display: inline-block;
+        padding-right: 50px;
+
+        &:last-child {
+            padding-right: 0;
+        }
+    }
+
+
+    /// COMPLETED | Horizontal timeline item
+
+    .completed {
+        /// Border
+        &:before {
+            content: "";
+            width: 100%;
+            border-top: 2px solid $primary;
+            position: absolute;
+            left: 0px;
+            top: 8px;
+        }
+
+        /// Dot
+        &:after {
+            content: "";
+            width: 20px;
+            height: 20px;
+            background: url("../../static/assets/images/checked.svg") center white;
+            background-size: cover;
+            border-radius: 25px;
+            position: absolute;
+        }
+    }
+
+    /// ONGOING | Horizontal timeline item
+
+    .ongoing {
+        /// Border
+        &:before {
+            content: "";
+            width: 100%;
+            border-top: 2px dashed #c9cfd3;
+            position: absolute;
+            left: 0px;;
+            top: 8px;
+        }
+
+        /// Dot
+        &:after {
+            content: "";
+            width: 20px;
+            height: 20px;
+            border: 2px solid $primary;
+            background: $white;
+            border-radius: 25px;
+            position: absolute;
+            //right: -11px;
+        }
+
+    }
+
+    .coming {
+        /// Dot
+        &:after {
+            content: "";
+            width: 20px;
+            height: 20px;
+            border: 2px solid #c9cfd3;
+            background: #fff;
+            border-radius: 25px;
+            position: absolute;
+        }
+    }
+
+    .step-1 {
+        /// Border
+        &:before {
+            transform: scaleX(0);
+            transform-origin: top;
+            animation: grow-left 0.3s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+            animation-delay: 0.3s;
+        }
+
+        /// Dot
+        &:after {
+            animation: scale-center 0.5s ease-in;
+            animation-fill-mode: backwards;
+        }
+    }
+
+    .step-2 {
+        /// Border
+        &:before {
+            transform: scaleX(0);
+            transform-origin: top;
+            animation: grow-left 0.3s cubic-bezier(0.4, 0, 1, 1) forwards;
+            animation-delay: 0.9s;
+        }
+
+        /// Dot
+        &:after {
+            animation: scale-center .2s ease-in;
+            animation-fill-mode: backwards;
+            animation-delay: 0.6s;
+        }
+    }
+
+    .step-3 {
+        /// Dot
+        &:after {
+            animation: scale-center .2s ease-in;
+            animation-fill-mode: backwards;
+            animation-delay: 1.2s;
+        }
+    }
+}
+
+
+//// Scale icon/dot
+@keyframes scale-center {
+    0% {
+        transform: scale(0.7);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+//// Grow border from top
+@keyframes grow-top {
+    from {
+        transform: scaleY(0);
+        opacity: 0;
+    }
+    to {
+        transform: scaleY(1);
+        opacity: 1;
+    }
+}
+
+//// Grow border from left
+@keyframes grow-left {
+    from {
+        transform: scaleX(0);
+        opacity: 0;
+    }
+    to {
+        transform: scaleX(1);
+        opacity: 1;
+    }
+}
+
+//// Fade in content
+@keyframes fade-top {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
