@@ -1,0 +1,47 @@
+.invite-friends {
+    text-align: center;
+    padding: 60px 0;
+
+    .modal-image {
+        width: 227px;
+        height: 188px;
+        object-fit: cover;
+        margin-bottom: 24px;
+    }
+    .modal-title {
+        margin-bottom: 8px;
+        //font-size: 26px;
+    }
+    .modal-description {
+        margin-bottom: 34px;
+        line-height: 22px;
+        padding: 0 20px;
+    }
+    .modal-share {
+        padding-left: 0;
+        list-style: none;
+        margin-bottom: 40px;
+
+        .modal-share-item {
+            display: inline-block;
+            padding: 0 10px;
+        }
+    }
+    button {
+        width: 90%;
+    }
+
+    @include media-breakpoint-up(md) {
+
+        .modal-image {
+            width: 305px;
+            height: 305px;
+        }
+        .modal-description {
+            font-size: 18px;
+        }
+        button {
+            width: 80%;
+        }
+    }
+}

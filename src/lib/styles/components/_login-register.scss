@@ -1,0 +1,34 @@
+.login-register {
+    position: relative;
+    text-align: center;
+    padding: 100px 0;
+
+    .modal-title {
+        font-family: 'Riposte-Regular', sans-serif;
+        margin-bottom: 8px;
+        font-size: 34px;
+    }
+    .modal-description {
+        margin-bottom: 64px;
+        padding: 0 20px;
+    }
+    button {
+        width: 90%;
+    }
+
+    @include media-breakpoint-up(md) {
+        padding: 160px 0;
+
+        .modal-title {
+            font-size: 38px;
+        }
+        .modal-description {
+            font-size: 18px;
+            padding: 0px;
+
+        }
+        button {
+            width: 80%;
+        }
+    }
+}

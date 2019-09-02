@@ -1,0 +1,44 @@
+.cropper-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    h3 {
+        margin-top: 77px;
+        margin-bottom: 46px;
+    }
+    .cropper-view-box {
+        border: solid 1px #8c8f91;
+        outline: transparent !important;
+        outline-color: transparent !important;
+    }
+    .cropper-line {
+        background: transparent !important;
+    }
+    .cropper-dashed {
+        border: 0 solid #8c8f91;
+    }
+    .cropper-point {
+        width: 16px;
+        height: 16px;
+        border: solid 1px #8c8f91;
+        background-color: #ffffff;
+        border-radius: 50%;
+    }
+    //.cropper-point.point-e,.point-ne,.point-w,.point-nw,.point-sw,.point-se {
+    //    display: none !important;
+    //}
+    //.cropper-point.point-s {
+    //    bottom: -7px !important;
+    //}
+    //.cropper-point.point-n {
+    //    top: -7px !important;
+    //}
+}
+
+.two-column {
+    display: flex;
+    justify-content: space-between;
+    .special-inputs {
+        width: 48% !important;
+    }
+}
