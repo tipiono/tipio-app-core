@@ -2,7 +2,6 @@ import React from "react";
 import PropTypes from 'prop-types';
 
 import "./TextInput.scss";
-import Button from "../Button/Button";
 
 const TextInput = ({ value, placeholder, label, onChange, onBlur}) => (
     <div className="form-group">

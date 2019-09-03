@@ -1,9 +1,9 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import OnboardingTooltip from '../../lib/OnboardingTooltip/OnboardingTooltip'
+import OnboardingTooltip from '../../../lib/UI/OnboardingTooltip/OnboardingTooltip'
 
 
-storiesOf('Components/OnboardingTooltip', module)
+storiesOf('UI/Components/OnboardingTooltip', module)
     .add('Tooltip on top', () =>
         <>
             <div className="col-3 m-3">

@@ -1,13 +1,13 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import SalesProgressBar from '../../lib/SalesProgressBar/SalesProgressBar'
+import SalesProgressBar from '../../../lib/Customer/SalesProgressBar/SalesProgressBar'
 
 
-storiesOf('Components/SalesProgressBar', module)
+storiesOf('Customer/Components/SalesProgressBar', module)
     .add('SalesProgressBar', () =>
         <>
             <div className="col-3 mb-3">
-                <SalesProgressBar />
+                <SalesProgressBar percentage={25} />
             </div>
         </>
     )
