@@ -4,18 +4,48 @@ import OnboardingTooltip from '../../lib/OnboardingTooltip/OnboardingTooltip'
 
 
 storiesOf('Components/OnboardingTooltip', module)
-    .add('default', () =>  <OnboardingTooltip step={{
-        title: 'Markedspris',
-        content: 'Er prisen for produktet i dag.',
-        placement: 'top',
-    }} />)
-    .add('withLongerText', () =>  <OnboardingTooltip step={{
-        title: 'Lorem ipsum',
-        content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec aliquam fermentum massa, in euismod massa finibus a. Pellentesque sit amet erat leo. Aenean sagittis tortor posuere, pretium felis ut, porta sapien. Cras id lectus efficitur, cursus odio eu, aliquam arcu. Cras efficitur vehicula elit nec porta.',
-        placement: 'top',
-    }} />)
-    .add('withContinuousTrue', () =>  <OnboardingTooltip step={{
-        title: 'Lorem ipsum',
-        content: 'Er prisen for produktet i dag.',
-        placement: 'top',
-    }} continuous={true}/>)
+    .add('Tooltip on top', () =>
+        <>
+            <div className="col-3 m-3">
+                <OnboardingTooltip step={{
+                title: 'Meld interesse',
+                content: 'Trykk her hvis du virkelig vil ha produktet! Det gjør det enklere for leverandøren å sette best mulig rabatt!',
+                placement: 'top',
+            }} />
+            </div>
+        </>
+    )
+    .add('Tooltip on right', () =>
+        <>
+            <div className="col-3 m-3">
+                <OnboardingTooltip step={{
+                    title: 'Meld interesse',
+                    content: 'Trykk her hvis du virkelig vil ha produktet! Det gjør det enklere for leverandøren å sette best mulig rabatt!',
+                    placement: 'right',
+                }} />
+            </div>
+        </>
+    )
+    .add('Tooltip on bottom', () =>
+        <>
+            <div className="col-3 m-3">
+                <OnboardingTooltip step={{
+                    title: 'Meld interesse',
+                    content: 'Trykk her hvis du virkelig vil ha produktet! Det gjør det enklere for leverandøren å sette best mulig rabatt!',
+                    placement: 'bottom',
+                }} />
+            </div>
+        </>
+    )
+    .add('Tooltip on left', () =>
+        <>
+            <div className="col-3 m-3">
+                <OnboardingTooltip step={{
+                    title: 'Meld interesse',
+                    content: 'Trykk her hvis du virkelig vil ha produktet! Det gjør det enklere for leverandøren å sette best mulig rabatt!',
+                    placement: 'left',
+                }} />
+            </div>
+        </>
+    )
+
