@@ -60,7 +60,7 @@
 
                 input[type=checkbox] + label {
                     display: inline-block;
-                    background: url(../../static/assets/images/favourite-outline.svg) no-repeat;
+                    // background: url(../../static/assets/images/favourite-outline.svg) no-repeat;
                     height: 26px;
                     width: 26px;
                     background-size: 100%;
@@ -68,7 +68,7 @@
                 }
 
                 input[type=checkbox]:checked + label {
-                    background: url(../../static/assets/images/favourite-glyph.svg) no-repeat;
+                    // background: url(../../static/assets/images/favourite-glyph.svg) no-repeat;
                     height: 26px;
                     width: 26px;
                     display: inline-block;
