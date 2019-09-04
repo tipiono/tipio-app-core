@@ -1,19 +1,22 @@
 import React from "react";
-import { Modal } from '../../../UI/Modal/Modal'
+import {Modal} from '../../../UI/Modal/Modal'
 
-function TipioWithOffer ({ image, sale, joined }) {
+function TipioWithOffer({image, sale, joined}) {
     return (
         <>
             <Modal showCloseButton>
-                <div className="text-center">
-                    <img className="img-fluid" src={image} width="310px" alt="Tipio with offer"/>
+                <div className="tipio__withOffer">
 
-                    <h3>Gratulerer!</h3>
-                    <p>{joined} andre kjøpte med deg! Prisen gikk ytterligere ned til</p>
+                    <a href="">
+                    <img className="tipio__withOffer--image" src={image} width="310px" alt="Tipio with offer" />
+                    </a>
 
-                    <h4 className="text-secondary">{sale}</h4>
+                    <h3 className="tipio__withOffer--title">Gratulerer!</h3>
+                    <p className="tipio__withOffer--description">{joined} andre kjøpte med deg! Prisen gikk ytterligere ned til</p>
 
-                    <button type="button" className="btn btn-secondary px-5">Neste</button>
+                    <h4 className="tipio__withOffer--salePrice">{sale}</h4>
+
+                    <button type="button" className="btn btn-lg btn-secondary w-50 px-5">Neste</button>
                 </div>
             </Modal>
         </>

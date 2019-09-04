@@ -1,13 +1,15 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
-import { Modal, OnboardingTooltip } from '../../../lib'
+import {storiesOf} from '@storybook/react';
+import {Modal, SuccessModal} from '../../../lib'
 
 storiesOf('UI/Components/Modal', module)
     .add('Modal', () =>
         <>
             <div className="col-3 m-3">
                 <Modal>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    <div className="p-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua.
+                    </div>
                 </Modal>
             </div>
         </>
@@ -16,8 +18,31 @@ storiesOf('UI/Components/Modal', module)
         <>
             <div className="col-3 m-3">
                 <Modal showCloseButton>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    <div className="p-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua.
+                    </div>
                 </Modal>
             </div>
         </>
     )
+
+    .add('Successfully signed up', () =>
+        <>
+            <div className="col-3 m-3">
+                <SuccessModal
+                    successTitle={"Du har nå opprettet en konto!"}
+                />
+            </div>
+        </>
+    )
+
+    .add('Password successfully changed', () =>
+        <>
+            <div className="col-3 m-3">
+                <SuccessModal
+                    successTitle={"Passord ditt er oppdatert!"}
+                />
+            </div>
+        </>
+    )
+
