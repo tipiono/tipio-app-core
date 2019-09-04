@@ -16,7 +16,6 @@
 @import
     'components/navigation',
     'components/carousel-card',
-    'components/product-card',
     'components/hamburger-button',
     'components/special-card',
     'components/shopping-bag-special-card',
@@ -35,7 +34,6 @@
     'components/material-inputs',
     'components/custom-accordion',
     'components/_image-uploader',
-    'components/custom-modal',
     'components/_cropper.scss',
     'components/_carouse.scss',
     'components/main-categories',
@@ -51,7 +49,18 @@
     'components/tipio-gallery',
     'components/tipio-view-card',
     'components/onboarding-tooltip',
-    'components/sales-progressbar';
+
+    // 3.1 UI Components
+    'components/UI/custom-modal',
+    'components/UI/success-modal',
+
+
+    // 3.2 Customer Components
+    'components/Customer/sales-progressbar',
+    'components/Customer/product-card',
+    'components/Customer/Modals/_tipio-with-offer.scss',
+    'components/Customer/Modals/_tipio-confirmation.scss',
+    'components/Customer/Modals/_login-or-register.scss';
 
 
 // 4. Layout-related sections
