@@ -5,14 +5,12 @@ import {
     TipioConfirmation,
     LoginOrRegister,
     SuccessModal,
-    ImageCropper,
     JoinTipioOnboarding,
     VerticalTimeline,
     OnboardingMovie,
     ReadyToBid,
     ChooseCategory
 } from '../../../lib/index';
-
 
 storiesOf('Customer/Components/Modals', module)
     .add('TipioWithOffer', () =>
@@ -77,13 +75,6 @@ storiesOf('Customer/Components/Modals', module)
         </>
     )
 
-    .add('Crop image', () =>
-        <>
-            <div className="col-3 m-3">
-                <ImageCropper/>
-            </div>
-        </>
-    )
 
     .add('Join Tipio Onboarding', () =>
         <>
