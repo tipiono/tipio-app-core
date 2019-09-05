@@ -27,7 +27,8 @@ import ChooseCategory from './Customer/Modals/ChooseCategory/ChooseCategory';
 /*
 *   Company Components
 * */
-
+import DeleteAccount from './Company/Modals/DeleteAccount/DeleteAccount';
+import AddAdditionalSales from './Company/Modals/AddAdditionalSales/AddAdditionalSales';
 
 export {
     styles,
@@ -46,5 +47,7 @@ export {
     VerticalTimeline,
     OnboardingMovie,
     ReadyToBid,
-    ChooseCategory
+    ChooseCategory,
+    DeleteAccount,
+    AddAdditionalSales
 };
