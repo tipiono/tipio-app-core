@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import {SuccessModal} from '../../../lib/index';
+import {SuccessModal, DeleteAccount, AddAdditionalSales} from '../../../lib/index';
 
 
 storiesOf('Company/Components/Modals', module)
@@ -44,5 +44,22 @@ storiesOf('Company/Components/Modals', module)
             </div>
         </>
     )
+
+    .add('Delete company account', () =>
+        <>
+            <div className="col-3 m-3">
+                <DeleteAccount/>
+            </div>
+        </>
+    )
+
+    .add('Add additional sales', () =>
+        <>
+            <div className="col-3 m-3">
+                <AddAdditionalSales/>
+            </div>
+        </>
+    )
+
 
 
