@@ -1,6 +1,6 @@
 import React from 'react';
 import {storiesOf} from '@storybook/react';
-import {Modal, SuccessModal} from '../../../lib'
+import {Modal, SuccessModal, ModalSpinner} from '../../../lib'
 
 storiesOf('UI/Components/Modal', module)
     .add('Modal', () =>
@@ -46,3 +46,10 @@ storiesOf('UI/Components/Modal', module)
         </>
     )
 
+    .add('Modal Spinner', () =>
+        <>
+            <div className="col-3 m-3">
+                <ModalSpinner />
+            </div>
+        </>
+    )
