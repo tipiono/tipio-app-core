@@ -8,7 +8,7 @@ function TipioWithOffer({image, sale, joined}) {
                 <div className="tipio__withOffer">
 
                     <a href="">
-                    <img className="tipio__withOffer--image" src={image} width="310px" alt="Tipio with offer" />
+                        <img className="tipio__withOffer--image" src={image} width="310px" alt="Tipio with offer" />
                     </a>
 
                     <h3 className="tipio__withOffer--title">Gratulerer!</h3>
@@ -16,7 +16,7 @@ function TipioWithOffer({image, sale, joined}) {
 
                     <h4 className="tipio__withOffer--salePrice">{sale}</h4>
 
-                    <button type="button" className="btn btn-lg btn-secondary w-50 px-5">Neste</button>
+                    <button type="button" className="btn btn-lg btn-secondary w-50">Neste</button>
                 </div>
             </Modal>
         </>
