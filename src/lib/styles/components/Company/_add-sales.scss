@@ -1,0 +1,31 @@
+.addSales {
+  padding: 5.625rem 0;
+  text-align: center;
+
+  &--title {
+    //font-family: 'Riposte-Regular', sans-serif;
+    margin-bottom: .8rem;
+  }
+
+  &--description {
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+    margin-bottom: 2.875rem;
+  }
+
+  &--action {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    button {
+      width: 50%;
+    }
+
+    @include media-breakpoint-down(sm) {
+      button {
+        width: 90%;
+      }
+    }
+  }
+}

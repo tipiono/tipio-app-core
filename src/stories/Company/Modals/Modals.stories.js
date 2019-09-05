@@ -56,7 +56,9 @@ storiesOf('Company/Components/Modals', module)
     .add('Add additional sales', () =>
         <>
             <div className="col-3 m-3">
-                <AddAdditionalSales/>
+                <AddAdditionalSales
+                    image={"https://tipio.ams3.cdn.digitaloceanspaces.com/staging/4/tipios/131/1563957777437"}
+                />
             </div>
         </>
     )
