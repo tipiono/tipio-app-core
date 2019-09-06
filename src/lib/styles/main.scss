@@ -58,6 +58,7 @@
     // 3.2 Company Components
     'components/Company/delete-account',
     'components/Company/add-sales',
+    'components/Company/won-bidding-round',
 
     // 3.3 Customer Components
     'components/Customer/sales-progressbar',
@@ -66,7 +67,8 @@
     'components/Customer/Modals/_tipio-confirmation.scss',
     'components/Customer/Modals/_onboarding-movie',
     'components/Customer/Modals/_login-or-register.scss',
-    'components/Customer/Modals/_ready-to-bid.scss';
+    'components/Customer/Modals/_ready-to-bid.scss',
+    'components/Customer/Cards/voting-card';
 
 // 4. Layout-related sections
 @import

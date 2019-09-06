@@ -1,0 +1,18 @@
+.votingCard {
+  box-shadow: 0 1px 1px 0 #e5e5e5;
+
+  &__header {
+    &--image {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  &__body {
+    &--interested {
+      &--counter {
+        color: red;
+      }
+    }
+  }
+}

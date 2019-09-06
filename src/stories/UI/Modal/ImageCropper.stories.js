@@ -2,8 +2,8 @@ import React, {useState} from 'react';
 import {storiesOf} from '@storybook/react';
 import {
     ImageCropper
-} from '../../../lib/index';
-import { action } from '@storybook/addon-actions';
+} from '../../../lib';
+import { action } from '@storybook/addon-actions/dist/index';
 
 function CropperDemo() {
     const [showCropper, setShowCropper] = useState(false);
@@ -34,7 +34,7 @@ function CropperDemo() {
     )
 }
 
-storiesOf('Customer/Components/Modals/ImageCropper', module)
+storiesOf('UI/Components/Modal/ImageCropper', module)
     .add('Crop image', () =>
         <>
             <div className="col-3 m-3">

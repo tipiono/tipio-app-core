@@ -1,4 +1,4 @@
-.addSales {
+.wonBiddingRound {
   padding: 5.625rem 0;
   text-align: center;
 
@@ -16,13 +16,14 @@
   &--description {
     font-size: 1.125rem;
     line-height: 1.5rem;
-    margin-bottom: 2.875rem;
+    margin-bottom: 3.75rem;
   }
 
   &--action {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 2.6rem;
 
     button {
       width: 40%;

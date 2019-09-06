@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Modal, ModalType} from '../../../UI/Modal/Modal'
+import {Modal, ModalType} from '../Modal'
 import 'cropperjs/dist/cropper.css';
 import Cropper from 'cropperjs';
 
@@ -54,7 +54,7 @@ class ImageCropper extends Component {
         }
         return (
             <div>
-                <Modal showCloseButton={showCloseButton} type={ModalType.LARGE} onCloseButtonClick={modalOnClose}>
+                <Modal showCloseButton>
                     <div className="cropper-wrapper">
                         <div className="cropper-content">
                             <h3>Tilpass bilde for mobil</h3>

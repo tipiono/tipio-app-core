@@ -16,12 +16,13 @@ import ModalSpinner from './UI/Modal/ModalSpinner/ModalSpinner';
 import TipioWithOffer from './Customer/Modals/TipioWithOffer/TipioWithOffer';
 import TipioConfirmation from './Customer/Modals/TipioConfirmation/TipioConfirmation';
 import LoginOrRegister from './Customer/Modals/LoginOrRegister/LoginOrRegister';
-import ImageCropper from './Customer/Modals/ImageCropper/ImageCropper';
+import ImageCropper from './UI/Modal/ImageCropper/ImageCropper';
 import JoinTipioOnboarding from './Customer/Modals/JoinTipioOnboarding/JoinTipioOnboarding';
 import VerticalTimeline from './Customer/Modals/VerticalTimeline/VerticalTimeline';
 import OnboardingMovie from './Customer/Modals/OnboardingMovie/OnboardingMovie';
 import ReadyToBid from './Customer/Modals/ReadyToBid/ReadyToBid';
 import ChooseCategory from './Customer/Modals/ChooseCategory/ChooseCategory';
+import VotingCard from './Customer/Cards/VotingCard/VotingCard';
 
 
 /*
@@ -29,6 +30,7 @@ import ChooseCategory from './Customer/Modals/ChooseCategory/ChooseCategory';
 * */
 import DeleteAccount from './Company/Modals/DeleteAccount/DeleteAccount';
 import AddAdditionalSales from './Company/Modals/AddAdditionalSales/AddAdditionalSales';
+import WonBiddingRound from './Company/Modals/WonBiddingRound/WonBiddingRound';
 
 export {
     styles,
@@ -49,5 +51,7 @@ export {
     ReadyToBid,
     ChooseCategory,
     DeleteAccount,
-    AddAdditionalSales
+    AddAdditionalSales,
+    WonBiddingRound,
+    VotingCard
 };
