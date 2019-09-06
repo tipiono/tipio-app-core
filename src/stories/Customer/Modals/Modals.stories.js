@@ -6,10 +6,10 @@ import {
     LoginOrRegister,
     SuccessModal,
     JoinTipioOnboarding,
-    VerticalTimeline,
     OnboardingMovie,
     ReadyToBid,
-    ChooseCategory
+    TimeUp,
+    Onboarding
 } from '../../../lib/index';
 
 storiesOf('Customer/Components/Modals', module)
@@ -74,8 +74,6 @@ storiesOf('Customer/Components/Modals', module)
             </div>
         </>
     )
-
-
     .add('Join Tipio Onboarding', () =>
         <>
             <div className="col-3 m-3">
@@ -83,23 +81,6 @@ storiesOf('Customer/Components/Modals', module)
             </div>
         </>
     )
-
-    .add('Vertical Timeline', () =>
-        <>
-            <div className="col-3 m-3">
-                <VerticalTimeline/>
-            </div>
-        </>
-    )
-
-    .add('Choose Category', () =>
-        <>
-            <div className="col-3 m-3">
-                <ChooseCategory/>
-            </div>
-        </>
-    )
-
     .add('Binding Onboarding Movie', () =>
         <>
             <div className="col-3 m-3">
@@ -117,4 +98,18 @@ storiesOf('Customer/Components/Modals', module)
                 />
             </div>
         </>
+    )
+    .add('Time Up', () =>
+        <>
+            <div className="col-3 m-3">
+                <TimeUp />
+            </div>
+        </>
+    )
+    .add('Onboarding', () =>
+    <>
+        <div className="col-3 m-3">
+            <Onboarding />
+        </div>
+    </>
     )

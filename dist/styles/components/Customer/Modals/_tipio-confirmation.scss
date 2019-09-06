@@ -1,0 +1,44 @@
+.tipio__confirmation {
+  padding: 5.625rem 0;
+  text-align: center;
+
+  &--image {
+    display: block;
+    position: relative;
+    height: 100%;
+    width: 19.375rem;
+    margin: 0 auto;
+    border: 1px solid $gray-100;
+  }
+
+  &--timeLeft {
+    span {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+  }
+
+  &--title {
+    font-family: 'Riposte-Regular', sans-serif;
+    margin-top: 1.5rem;
+    margin-bottom: .8rem;
+  }
+
+  &--description {
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  &__share {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    &--item {
+      margin: 0 .25rem;
+    }
+  }
+}
+

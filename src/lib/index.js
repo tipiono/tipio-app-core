@@ -22,7 +22,9 @@ import VerticalTimeline from './Customer/Modals/VerticalTimeline/VerticalTimelin
 import OnboardingMovie from './Customer/Modals/OnboardingMovie/OnboardingMovie';
 import ReadyToBid from './Customer/Modals/ReadyToBid/ReadyToBid';
 import ChooseCategory from './Customer/Modals/ChooseCategory/ChooseCategory';
-
+import TimeUp from './Customer/Modals/TimeUp/TimeUp';
+import Onboarding from './Customer/Modals/Onboarding/Onboarding';
+import Categories from './Customer/Modals/ChooseCategory/Categories';
 
 /*
 *   Company Components
@@ -49,5 +51,8 @@ export {
     ReadyToBid,
     ChooseCategory,
     DeleteAccount,
-    AddAdditionalSales
+    AddAdditionalSales,
+    TimeUp,
+    Onboarding,
+    Categories
 };
