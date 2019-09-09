@@ -65,7 +65,7 @@ export {
     VotingCard,
     VotingCardShowInterestButton,
     VotingCardShareButton,
-    BiddingCard
+    BiddingCard,
     AddAdditionalSales,
     TimeUp,
     Onboarding,
