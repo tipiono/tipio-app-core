@@ -4,7 +4,8 @@ import styles from './styles/main.scss';
 *   UI Components
 * */
 import TextInput from "./UI/TextInput/TextInput";
-import Button from "./UI/Button/Button";
+import SecondaryButton from "./UI/Buttons/SecondaryButton";
+import SecondaryOutlineButton from "./UI/Buttons/SecondaryOutlineButton";
 import { Modal, ModalType } from "./UI/Modal/Modal";
 import OnboardingTooltip from './UI/OnboardingTooltip/OnboardingTooltip';
 import SuccessModal from './UI/Modal/SuccessModal/SuccessModal';
@@ -23,6 +24,9 @@ import OnboardingMovie from './Customer/Modals/OnboardingMovie/OnboardingMovie';
 import ReadyToBid from './Customer/Modals/ReadyToBid/ReadyToBid';
 import ChooseCategory from './Customer/Modals/ChooseCategory/ChooseCategory';
 import VotingCard from './Customer/Cards/VotingCard/VotingCard';
+import VotingCardShowInterestButton from './Customer/Cards/VotingCard/VotingCardShowInterestButton';
+import VotingCardShareButton from './Customer/Cards/VotingCard/VotingCardShareButton';
+import BiddingCard from './Customer/Cards/BiddingCard/BiddingCard';
 
 
 /*
@@ -32,10 +36,12 @@ import DeleteAccount from './Company/Modals/DeleteAccount/DeleteAccount';
 import AddAdditionalSales from './Company/Modals/AddAdditionalSales/AddAdditionalSales';
 import WonBiddingRound from './Company/Modals/WonBiddingRound/WonBiddingRound';
 
+
 export {
     styles,
     TextInput,
-    Button,
+    SecondaryButton,
+    SecondaryOutlineButton,
     Modal,
     ModalType,
     OnboardingTooltip,
@@ -53,5 +59,8 @@ export {
     DeleteAccount,
     AddAdditionalSales,
     WonBiddingRound,
-    VotingCard
+    VotingCard,
+    VotingCardShowInterestButton,
+    VotingCardShareButton,
+    BiddingCard
 };

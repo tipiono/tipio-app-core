@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import {Button, TextInput} from '../../../lib';
+import {SecondaryButton, TextInput} from '../../../lib';
 import { action } from '@storybook/addon-actions/dist/index';
 import { text, boolean } from '@storybook/addon-knobs';
 

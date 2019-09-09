@@ -68,7 +68,8 @@
     'components/Customer/Modals/_onboarding-movie',
     'components/Customer/Modals/_login-or-register.scss',
     'components/Customer/Modals/_ready-to-bid.scss',
-    'components/Customer/Cards/voting-card';
+    'components/Customer/Cards/voting-card',
+    'components/Customer/Cards/bidding-card';
 
 // 4. Layout-related sections
 @import
@@ -76,21 +77,23 @@
     'layout/header';
 
 // 5. Page-specific styles
-@import 'pages/login',
-'pages/select-images',
-'pages/searchresult',
-'pages/your-tipios',
-'pages/userprofile',
-'pages/add-link',
-'pages/tipio-publish',
-'pages/credit-cart',
-'pages/tipio-view',
-'pages/frontpage',
-'pages/about-page';
+@import
+    'pages/login',
+    'pages/select-images',
+    'pages/searchresult',
+    'pages/your-tipios',
+    'pages/userprofile',
+    'pages/add-link',
+    'pages/tipio-publish',
+    'pages/credit-cart',
+    'pages/tipio-view',
+    'pages/frontpage',
+    'pages/about-page';
 
 
 // 6. Themes
-@import 'themes/default';
+@import
+    'themes/default';
 
 // 7. Vendors
 
