@@ -28,6 +28,9 @@ import VotingCardShowInterestButton from './Customer/Cards/VotingCard/VotingCard
 import VotingCardShareButton from './Customer/Cards/VotingCard/VotingCardShareButton';
 import BiddingCard from './Customer/Cards/BiddingCard/BiddingCard';
 
+import TimeUp from './Customer/Modals/TimeUp/TimeUp';
+import Onboarding from './Customer/Modals/Onboarding/Onboarding';
+import Categories from './Customer/Modals/ChooseCategory/Categories';
 
 /*
 *   Company Components
@@ -63,4 +66,8 @@ export {
     VotingCardShowInterestButton,
     VotingCardShareButton,
     BiddingCard
+    AddAdditionalSales,
+    TimeUp,
+    Onboarding,
+    Categories
 };

@@ -11,8 +11,6 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 
 require("./TextInput.scss");
 
-var _Button = _interopRequireDefault(require("../Button/Button"));
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var TextInput = function TextInput(_ref) {
