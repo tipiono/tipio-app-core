@@ -10,6 +10,7 @@ import { Modal, ModalType } from "./UI/Modal/Modal";
 import OnboardingTooltip from './UI/OnboardingTooltip/OnboardingTooltip';
 import SuccessModal from './UI/Modal/SuccessModal/SuccessModal';
 import ModalSpinner from './UI/Modal/ModalSpinner/ModalSpinner';
+import { Accordion } from './UI/Accordion/Accordion';
 
 /*
 *   Customer/Private Components
@@ -66,8 +67,8 @@ export {
     VotingCardShowInterestButton,
     VotingCardShareButton,
     BiddingCard,
-    AddAdditionalSales,
     TimeUp,
     Onboarding,
-    Categories
+    Categories,
+    Accordion
 };

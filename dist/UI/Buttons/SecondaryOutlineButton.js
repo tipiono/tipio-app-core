@@ -9,11 +9,9 @@ var _react = _interopRequireDefault(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
-require("./Button.scss");
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var Button = function Button(_ref) {
+var SecondaryOutlineButton = function SecondaryOutlineButton(_ref) {
   var loading = _ref.loading,
       text = _ref.text,
       onClick = _ref.onClick;
@@ -21,7 +19,7 @@ var Button = function Button(_ref) {
     id: "tipio-join-button",
     type: "button",
     disabled: loading,
-    className: "btn btn-secondary btn-block btn-lg",
+    className: "btn btn-outline-secondary btn-block btn-lg",
     onClick: onClick
   }, !loading && text, loading && _react.default.createElement("span", null, ' ', _react.default.createElement("span", {
     className: "spinner-border spinner-border-sm",
@@ -30,13 +28,13 @@ var Button = function Button(_ref) {
   }), ' ', "Loading..."));
 };
 
-Button.defaultProps = {
+SecondaryOutlineButton.defaultProps = {
   loading: false
 };
-Button.propTypes = {
+SecondaryOutlineButton.propTypes = {
   loading: _propTypes.default.bool,
   text: _propTypes.default.string.isRequired,
   children: _propTypes.default.instanceOf(Array).isRequired
 };
-var _default = Button;
+var _default = SecondaryOutlineButton;
 exports.default = _default;
