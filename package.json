@@ -20,8 +20,10 @@
     "bootstrap": "^4.3.1",
     "cropperjs": "^1.5.5",
     "react-countdown-now": "^2.1.1",
+    "react-masonry-css": "^1.0.12",
     "react-onclickoutside": "^6.9.0",
-    "react-paginate": "^6.3.0"
+    "react-paginate": "^6.3.0",
+    "react-swipe": "^6.0.4"
   },
   "devDependencies": {
     "@babel/cli": "^7.5.5",

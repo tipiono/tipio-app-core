@@ -4,9 +4,6 @@ import PropTypes from 'prop-types';
 import onClickOutside from "react-onclickoutside";
 
 class OnClickOutsideWrapper extends Component {
-    handleClickOutside = evt => {
-        this.props.onClickOutside();
-    };
     render() {
         return <div>
             {this.props.children}

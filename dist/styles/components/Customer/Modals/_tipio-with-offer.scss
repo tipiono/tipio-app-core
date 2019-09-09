@@ -1,0 +1,27 @@
+.tipio__withOffer {
+  padding: 5.625rem 0;
+  text-align: center;
+
+  &--image {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid $gray-100;
+    margin-bottom: 1.5rem;
+  }
+
+  &--title {
+    font-family: 'Riposte-Regular', sans-serif;
+    margin-bottom: .8rem;
+  }
+
+  &--description {
+    margin-bottom: 1.25rem;
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+  }
+
+  &--salePrice {
+    color: #188576;
+    margin-bottom: 2.2rem;
+  }
+}
