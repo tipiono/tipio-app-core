@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 import ProductCard from '../../../lib/Customer/ProductCard/ProductCard'
 
 
-storiesOf('Customer/Components/Cards/ProductCard', module)
+storiesOf('Customer/Components/ProductCard', module)
     .add('ProductCard', () =>
         <>
             <div className="col-3 m-3">

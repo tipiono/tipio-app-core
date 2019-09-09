@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import {SuccessModal, DeleteAccount, AddAdditionalSales} from '../../../lib/index';
+import {SuccessModal, DeleteAccount, AddAdditionalSales, WonBiddingRound} from '../../../lib/index';
 
 
 storiesOf('Company/Components/Modals', module)
@@ -56,7 +56,19 @@ storiesOf('Company/Components/Modals', module)
     .add('Add additional sales', () =>
         <>
             <div className="col-3 m-3">
-                <AddAdditionalSales/>
+                <AddAdditionalSales
+                    image={"https://tipio.ams3.cdn.digitaloceanspaces.com/staging/4/tipios/111/1562311855626"}
+                />
+            </div>
+        </>
+    )
+
+    .add('Company won bidding round', () =>
+        <>
+            <div className="col-3 m-3">
+                <WonBiddingRound
+                    image={"https://tipio.ams3.cdn.digitaloceanspaces.com/staging/4/tipios/111/1562311855626"}
+                />
             </div>
         </>
     )

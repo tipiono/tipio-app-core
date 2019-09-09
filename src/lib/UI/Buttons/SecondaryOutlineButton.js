@@ -1,13 +1,12 @@
 import React from "react";
 import PropTypes from 'prop-types';
-import "./Button.scss";
 
-const Button = ({ loading, text, onClick }) => (
+const SecondaryOutlineButton = ({ loading, text, onClick }) => (
     <button
         id="tipio-join-button"
         type="button"
         disabled={loading}
-        className="btn btn-secondary btn-block btn-lg"
+        className="btn btn-outline-secondary btn-block btn-lg"
         onClick={onClick}
     >
         {!loading && text}
@@ -25,14 +24,14 @@ const Button = ({ loading, text, onClick }) => (
     </button>
 );
 
-Button.defaultProps = {
+SecondaryOutlineButton.defaultProps = {
     loading: false
 };
 
-Button.propTypes = {
+SecondaryOutlineButton.propTypes = {
     loading: PropTypes.bool,
     text: PropTypes.string.isRequired,
     children: PropTypes.instanceOf(Array).isRequired
 };
 
-export default Button;
+export default SecondaryOutlineButton;
