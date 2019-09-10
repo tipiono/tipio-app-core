@@ -38,10 +38,8 @@
     'components/_carouse.scss',
     'components/main-categories',
     'components/timeline',
-    'components/_timetag.scss',
     'components/tipio-status',
     'components/choose-category',
-    'components/pinky-countdown',
     'components/_empty_interested',
     'components/_empty-recived-offers.scss',
     'components/_empty-orders.scss',
@@ -54,6 +52,9 @@
     'components/UI/custom-modal',
     'components/UI/success-modal',
     'components/UI/modal-spinner',
+    'components/UI/pinky-countdown',
+    'components/UI/green-countdown',
+    'components/UI/timetag',
 
     // 3.2 Company Components
     'components/Company/delete-account',
@@ -62,14 +63,16 @@
 
     // 3.3 Customer Components
     'components/Customer/sales-progressbar',
-    'components/Customer/product-card',
     'components/Customer/Modals/_tipio-with-offer.scss',
     'components/Customer/Modals/_tipio-confirmation.scss',
     'components/Customer/Modals/_onboarding-movie',
     'components/Customer/Modals/_login-or-register.scss',
     'components/Customer/Modals/_ready-to-bid.scss',
+    'components/Customer/Modals/_join-tipio-onboarding.scss',
     'components/Customer/Cards/voting-card',
-    'components/Customer/Cards/bidding-card';
+    'components/Customer/Cards/bidding-card',
+    'components/Customer/Cards/sale-card';
+
 
 // 4. Layout-related sections
 @import

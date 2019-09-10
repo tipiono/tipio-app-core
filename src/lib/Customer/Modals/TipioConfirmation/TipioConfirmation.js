@@ -1,6 +1,6 @@
 import React from "react";
 import {Modal} from '../../../UI/Modal/Modal'
-import TipioCountdown from "../../TipioCountdown/TipioCountdown";
+import TipioCountdown from "../../../UI/TipioCountdown/TipioCountdown";
 
 function TipioConfirmation({image, expiresIn}) {
     return (

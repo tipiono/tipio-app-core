@@ -1,0 +1,20 @@
+.green-countdown-sm {
+  display: flex;
+  align-items: center;
+
+  .green-countdown-sm-icon {
+    width: 14px;
+    height: 14px;
+    margin-right: 6px;
+
+    * {
+      fill: $secondary;
+    }
+  }
+
+  .green-countdown-sm-time {
+    color: $secondary;
+    font-family: 'DroidSansMono', sans-serif;
+    font-size: 14px;
+  }
+}
