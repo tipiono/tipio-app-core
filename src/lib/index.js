@@ -43,6 +43,9 @@ import SaleCard from './Customer/Cards/SaleCard/SaleCard';
 import SaleCardAddToCartButton from './Customer/Cards/SaleCard/SaleCardAddToCartButton';
 import Onboarding from './Customer/Modals/Onboarding/Onboarding';
 import Categories from './Customer/Modals/ChooseCategory/Categories';
+import TipioSidebarVotingCard from './Customer/TipioSidebarCards/VotingCard';
+import TipioSidebarBindingCard from './Customer/TipioSidebarCards/BindingCard';
+
 /*
 *   Company Components
 * */
@@ -91,5 +94,7 @@ export {
     Select,
     Checkbox,
     RadioButton,
-    ToggleSwitch
+    ToggleSwitch,
+    TipioSidebarVotingCard,
+    TipioSidebarBindingCard
 };
