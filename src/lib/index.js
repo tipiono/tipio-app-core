@@ -13,6 +13,7 @@ import ModalSpinner from './UI/Modal/ModalSpinner/ModalSpinner';
 import { Accordion } from './UI/Accordion/Accordion';
 import PinkyCountdownSM from './UI/Countdown/PinkyCountdownSM';
 import TipioCountdown from './UI/TipioCountdown/TipioCountdown';
+import Select from './UI/Select/Select';
 import * as CountdownType from "./UI/Countdown/CountdownType";
 
 /*
@@ -77,5 +78,6 @@ export {
     SaleCardAddToCartButton,
     PinkyCountdownSM,
     TipioCountdown,
-    CountdownType
+    CountdownType,
+    Select
 };
