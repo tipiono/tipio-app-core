@@ -10,6 +10,9 @@ import { Modal, ModalType } from "./UI/Modal/Modal";
 import OnboardingTooltip from './UI/OnboardingTooltip/OnboardingTooltip';
 import SuccessModal from './UI/Modal/SuccessModal/SuccessModal';
 import ModalSpinner from './UI/Modal/ModalSpinner/ModalSpinner';
+import PinkyCountdownSM from './UI/Countdown/PinkyCountdownSM';
+import TipioCountdown from './UI/TipioCountdown/TipioCountdown';
+import * as CountdownType from "./UI/Countdown/CountdownType";
 
 /*
 *   Customer/Private Components
@@ -27,8 +30,9 @@ import VotingCard from './Customer/Cards/VotingCard/VotingCard';
 import VotingCardShowInterestButton from './Customer/Cards/VotingCard/VotingCardShowInterestButton';
 import VotingCardShareButton from './Customer/Cards/VotingCard/VotingCardShareButton';
 import BiddingCard from './Customer/Cards/BiddingCard/BiddingCard';
-
-import TimeUp from './Customer/Modals/TimeUp/TimeUp';
+import BiddingCardShareButton from './Customer/Cards/BiddingCard/BiddingCardShareButton';
+import SaleCard from './Customer/Cards/SaleCard/SaleCard';
+import SaleCardAddToCartButton from './Customer/Cards/SaleCard/SaleCardAddToCartButton';
 import Onboarding from './Customer/Modals/Onboarding/Onboarding';
 import Categories from './Customer/Modals/ChooseCategory/Categories';
 
@@ -66,8 +70,12 @@ export {
     VotingCardShowInterestButton,
     VotingCardShareButton,
     BiddingCard,
-    AddAdditionalSales,
-    TimeUp,
+    BiddingCardShareButton,
     Onboarding,
-    Categories
+    Categories,
+    SaleCard,
+    SaleCardAddToCartButton,
+    PinkyCountdownSM,
+    TipioCountdown,
+    CountdownType
 };

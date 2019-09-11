@@ -1,5 +1,5 @@
 import React from "react";
-import TipioCountdown from "../../TipioCountdown/TipioCountdown";
+import TipioCountdown from "../../../UI/TipioCountdown/TipioCountdown";
 
 function VotingCard({image, interestedCounter, title, description, expiresIn, children}) {
     return (
