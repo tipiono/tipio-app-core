@@ -12,13 +12,13 @@ const VerticalTimeline = ({
         <div className="container">
             {isLoading && <p>Loading...</p>}
             {!isLoading && <div className="row">
-                <div className="col-md-5 mx-auto">
+                <div className="col-md-6 mx-auto">
                     <div className="tipio-status">
                         <div className="tipio-status-header">
-                            <a href="/">
+                            <a className="tipio-status-header-image" href="/">
                                 <img
                                     src={tipio.mainImageUrl}
-                                    alt="" className="img-fluid"/>
+                                    alt=""/>
                             </a>
                             <div>
                                 <h5 className="tipio-status-header-title"><a href="/">{tipio.title}</a></h5>
