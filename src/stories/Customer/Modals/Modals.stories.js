@@ -8,7 +8,6 @@ import {
     JoinTipioOnboarding,
     OnboardingMovie,
     ReadyToBid,
-    TimeUp,
     Onboarding
 } from '../../../lib/index';
 
@@ -99,14 +98,7 @@ storiesOf('Customer/Components/Modals', module)
             </div>
         </>
     )
-    .add('Time Up', () =>
-        <>
-            <div className="col-3 m-3">
-                <TimeUp />
-            </div>
-        </>
-    )
-    .add('Onboarding', () =>
+    .add('Join Tipio Onboarding', () =>
     <>
         <div className="col-3 m-3">
             <Onboarding />

@@ -2923,7 +2923,7 @@ class-utils@^0.3.5:
     isobject "^3.0.0"
     static-extend "^0.1.1"
 
-classnames@^2.2.5:
+classnames@^2.2.5, classnames@^2.2.6:
   version "2.2.6"
   resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.2.6.tgz#43935bffdd291f326dad0a205309b38d00f650ce"
 
@@ -3317,7 +3317,6 @@ create-react-context@^0.3.0:
 cropperjs@^1.5.5:
   version "1.5.5"
   resolved "https://registry.yarnpkg.com/cropperjs/-/cropperjs-1.5.5.tgz#07d04c64244ab88c1bfc382a848ec346ef50b7b9"
-  integrity sha512-aJF6GuGk0K+nxYpmK9ZEc0p8foHcrM3DAAK/1F66qe0h/b08hBNbjpZRM0JbPNHw452LCxzS8NndG5VMv+/hLA==
 
 cross-spawn@6.0.5, cross-spawn@^6.0.0, cross-spawn@^6.0.5:
   version "6.0.5"
@@ -8749,7 +8748,6 @@ react-lifecycles-compat@^3.0.2, react-lifecycles-compat@^3.0.4:
 react-masonry-css@^1.0.12:
   version "1.0.12"
   resolved "https://registry.yarnpkg.com/react-masonry-css/-/react-masonry-css-1.0.12.tgz#e252a74c0e6d5272f759588232487d707608298a"
-  integrity sha512-tDO4dJugSLorlsqZ7WD/yW+OGIWFhUdrSv3VeGYOaFwqwwYwdcXOHh/rsu1PItb/kkmA8iQmpVcweKcZ6RIjmQ==
 
 react-onclickoutside@^6.9.0:
   version "6.9.0"
@@ -8864,7 +8862,6 @@ react-select@^2.2.0:
 react-swipe@^6.0.4:
   version "6.0.4"
   resolved "https://registry.yarnpkg.com/react-swipe/-/react-swipe-6.0.4.tgz#76e53599b1a093d5a3a841c7f391ef0abcc1babb"
-  integrity sha512-NIF+gVOqPpE8GyCg0ssFC+fPgeqCwNnvqFU/A8nDAOvoncW3KjSVFwgkYNnErHvpFZGmsVw4SLWK96n7+mnChg==
   dependencies:
     lodash.isequal "^4.5.0"
     prop-types "^15.6.0"
@@ -10096,7 +10093,6 @@ svgo@^1.0.0, svgo@^1.2.2:
 swipe-js-iso@^2.1.5:
   version "2.1.5"
   resolved "https://registry.yarnpkg.com/swipe-js-iso/-/swipe-js-iso-2.1.5.tgz#9b0eea8b9740487e6169d655184fc6440b6a2e34"
-  integrity sha512-yTTU5tDYEvtKfCD8PN+Rva25acJwogUCd6wPT1n1im/MOJlg6PtHiPKaaNK7HDBiIrWThA/WRbJZbox2letghg==
 
 symbol-observable@^1.0.4:
   version "1.2.0"
