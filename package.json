@@ -24,6 +24,7 @@
     "react-masonry-css": "^1.0.12",
     "react-onclickoutside": "^6.9.0",
     "react-paginate": "^6.3.0",
+    "react-select": "^3.0.4",
     "react-swipe": "^6.0.4"
   },
   "devDependencies": {
