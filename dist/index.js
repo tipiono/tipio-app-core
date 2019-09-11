@@ -75,6 +75,12 @@ Object.defineProperty(exports, "TipioCountdown", {
     return _TipioCountdown.default;
   }
 });
+Object.defineProperty(exports, "Select", {
+  enumerable: true,
+  get: function get() {
+    return _Select.default;
+  }
+});
 Object.defineProperty(exports, "TipioWithOffer", {
   enumerable: true,
   get: function get() {
@@ -218,6 +224,8 @@ var _Accordion = require("./UI/Accordion/Accordion");
 var _PinkyCountdownSM = _interopRequireDefault(require("./UI/Countdown/PinkyCountdownSM"));
 
 var _TipioCountdown = _interopRequireDefault(require("./UI/TipioCountdown/TipioCountdown"));
+
+var _Select = _interopRequireDefault(require("./UI/Select/Select"));
 
 var CountdownType = _interopRequireWildcard(require("./UI/Countdown/CountdownType"));
 
