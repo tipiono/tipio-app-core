@@ -63,6 +63,18 @@ Object.defineProperty(exports, "Accordion", {
     return _Accordion.Accordion;
   }
 });
+Object.defineProperty(exports, "PinkyCountdownSM", {
+  enumerable: true,
+  get: function get() {
+    return _PinkyCountdownSM.default;
+  }
+});
+Object.defineProperty(exports, "TipioCountdown", {
+  enumerable: true,
+  get: function get() {
+    return _TipioCountdown.default;
+  }
+});
 Object.defineProperty(exports, "TipioWithOffer", {
   enumerable: true,
   get: function get() {
@@ -141,10 +153,16 @@ Object.defineProperty(exports, "BiddingCard", {
     return _BiddingCard.default;
   }
 });
-Object.defineProperty(exports, "TimeUp", {
+Object.defineProperty(exports, "SaleCard", {
   enumerable: true,
   get: function get() {
-    return _TimeUp.default;
+    return _SaleCard.default;
+  }
+});
+Object.defineProperty(exports, "SaleCardAddToCartButton", {
+  enumerable: true,
+  get: function get() {
+    return _SaleCardAddToCartButton.default;
   }
 });
 Object.defineProperty(exports, "Onboarding", {
@@ -177,6 +195,7 @@ Object.defineProperty(exports, "WonBiddingRound", {
     return _WonBiddingRound.default;
   }
 });
+exports.CountdownType = void 0;
 
 var _main = _interopRequireDefault(require("./styles/main.scss"));
 
@@ -195,6 +214,14 @@ var _SuccessModal = _interopRequireDefault(require("./UI/Modal/SuccessModal/Succ
 var _ModalSpinner = _interopRequireDefault(require("./UI/Modal/ModalSpinner/ModalSpinner"));
 
 var _Accordion = require("./UI/Accordion/Accordion");
+
+var _PinkyCountdownSM = _interopRequireDefault(require("./UI/Countdown/PinkyCountdownSM"));
+
+var _TipioCountdown = _interopRequireDefault(require("./UI/TipioCountdown/TipioCountdown"));
+
+var CountdownType = _interopRequireWildcard(require("./UI/Countdown/CountdownType"));
+
+exports.CountdownType = CountdownType;
 
 var _TipioWithOffer = _interopRequireDefault(require("./Customer/Modals/TipioWithOffer/TipioWithOffer"));
 
@@ -222,7 +249,11 @@ var _VotingCardShareButton = _interopRequireDefault(require("./Customer/Cards/Vo
 
 var _BiddingCard = _interopRequireDefault(require("./Customer/Cards/BiddingCard/BiddingCard"));
 
-var _TimeUp = _interopRequireDefault(require("./Customer/Modals/TimeUp/TimeUp"));
+var _BiddingCardShareButton = _interopRequireDefault(require("./Customer/Cards/BiddingCard/BiddingCardShareButton"));
+
+var _SaleCard = _interopRequireDefault(require("./Customer/Cards/SaleCard/SaleCard"));
+
+var _SaleCardAddToCartButton = _interopRequireDefault(require("./Customer/Cards/SaleCard/SaleCardAddToCartButton"));
 
 var _Onboarding = _interopRequireDefault(require("./Customer/Modals/Onboarding/Onboarding"));
 
@@ -233,5 +264,7 @@ var _DeleteAccount = _interopRequireDefault(require("./Company/Modals/DeleteAcco
 var _AddAdditionalSales = _interopRequireDefault(require("./Company/Modals/AddAdditionalSales/AddAdditionalSales"));
 
 var _WonBiddingRound = _interopRequireDefault(require("./Company/Modals/WonBiddingRound/WonBiddingRound"));
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }

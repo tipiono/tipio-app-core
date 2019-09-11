@@ -9,10 +9,15 @@ var _react = _interopRequireDefault(require("react"));
 
 var _Modal = require("../../../UI/Modal/Modal");
 
+var _addonKnobs = require("@storybook/addon-knobs");
+
+var _index = require("../../../index");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function ReadyToBid(_ref) {
-  var joined = _ref.joined;
+  var joined = _ref.joined,
+      defaultValue = _ref.defaultValue;
   return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_Modal.Modal, {
     showCloseButton: true
   }, _react.default.createElement("div", {
@@ -39,15 +44,10 @@ function ReadyToBid(_ref) {
     className: "readyToBid--title"
   }, "Dere var ", joined, " som kj\xF8pte! N\xE5 kan ", _react.default.createElement("br", null), "leverand\xF8rene\u2028by p\xE5 orderen."), _react.default.createElement("div", {
     className: "mb-5"
-  }, _react.default.createElement("svg", {
-    width: 14,
-    height: 15
-  }, _react.default.createElement("path", {
-    fill: "#50C4B6",
-    d: "M2.389 10.076C.15 8.459-.535 5.386.799 2.945a.155.155 0 01-.04-.046L.443 2.5A1.458 1.458 0 01.69.44a1.487 1.487 0 012.077.265l.107.138a5.29 5.29 0 015.25 0l.107-.138A1.487 1.487 0 0110.31.439a1.459 1.459 0 01.255 2.062l-.318.398a.155.155 0 01-.04.046c1.333 2.443.646 5.516-1.595 7.13l1.064 1.083c.11.112.11.292 0 .404a.276.276 0 01-.396 0L8.148 10.41a5.302 5.302 0 01-5.216 0L1.8 11.562a.276.276 0 01-.396 0 .289.289 0 010-.404l.985-1.082zm7.495-7.644l.232-.294a.887.887 0 00-.153-1.25.933.933 0 00-1.29.156l-.062.092c.494.355.925.793 1.273 1.296zm-8.768 0a5.327 5.327 0 011.273-1.296l-.063-.086a.933.933 0 00-1.29-.156.887.887 0 00-.153 1.25l.233.288zM5.5 10.496c2.656 0 4.809-2.192 4.809-4.896C10.309 2.896 8.156.704 5.5.704S.691 2.896.691 5.6c.004 2.703 2.155 4.893 4.809 4.896zM4.007 4.16l1.516 1.601L8.13 3.094a.276.276 0 01.396 0 .29.29 0 010 .404l-2.829 2.88a.28.28 0 01-.407 0L3.594 4.54a.29.29 0 010-.409.274.274 0 01.413.029z"
-  })), _react.default.createElement("span", {
-    className: "text-secondary"
-  }, "47:30:19")), _react.default.createElement("button", {
+  }, _react.default.createElement(_index.PinkyCountdownSM, {
+    expires_in: (0, _addonKnobs.date)(defaultValue),
+    type: _index.CountdownType.GREEN
+  })), _react.default.createElement("button", {
     type: "button",
     className: "btn btn-lg btn-secondary w-50"
   }, "Sjekk status"))));
