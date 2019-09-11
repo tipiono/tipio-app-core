@@ -7,7 +7,7 @@ exports.default = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
 
-var _Modal = require("../../../UI/Modal/Modal");
+var _Modal = require("../Modal");
 
 require("cropperjs/dist/cropper.css");
 
@@ -116,9 +116,7 @@ function (_Component) {
       }
 
       return _react.default.createElement("div", null, _react.default.createElement(_Modal.Modal, {
-        showCloseButton: showCloseButton,
-        type: _Modal.ModalType.LARGE,
-        onCloseButtonClick: modalOnClose
+        showCloseButton: true
       }, _react.default.createElement("div", {
         className: "cropper-wrapper"
       }, _react.default.createElement("div", {
