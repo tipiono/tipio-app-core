@@ -9,6 +9,5 @@ storiesOf('UI/Text Input', module)
         <TextInput
             onChange={action('changed')}
             placeholder={text('Placeholder', 'email@ornio.no')}
-            label={text("Label", "E-mail")}
         />
     </div>)

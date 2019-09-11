@@ -6,6 +6,7 @@ import styles from './styles/main.scss';
 import TextInput from "./UI/TextInput/TextInput";
 import SecondaryButton from "./UI/Buttons/SecondaryButton";
 import SecondaryOutlineButton from "./UI/Buttons/SecondaryOutlineButton";
+import DisabledButton from "./UI/Buttons/DisabledButton";
 import { Modal, ModalType } from "./UI/Modal/Modal";
 import OnboardingTooltip from './UI/OnboardingTooltip/OnboardingTooltip';
 import SuccessModal from './UI/Modal/SuccessModal/SuccessModal';
@@ -13,6 +14,9 @@ import ModalSpinner from './UI/Modal/ModalSpinner/ModalSpinner';
 import PinkyCountdownSM from './UI/Countdown/PinkyCountdownSM';
 import TipioCountdown from './UI/TipioCountdown/TipioCountdown';
 import * as CountdownType from "./UI/Countdown/CountdownType";
+import Input from './UI/Forms/Input';
+import Textarea from './UI/Forms/Textarea';
+import Select from './UI/Forms/Select';
 
 /*
 *   Customer/Private Components
@@ -49,6 +53,7 @@ export {
     TextInput,
     SecondaryButton,
     SecondaryOutlineButton,
+    DisabledButton,
     Modal,
     ModalType,
     OnboardingTooltip,
@@ -77,5 +82,8 @@ export {
     SaleCardAddToCartButton,
     PinkyCountdownSM,
     TipioCountdown,
-    CountdownType
+    CountdownType,
+    Input,
+    Textarea,
+    Select
 };

@@ -6,7 +6,7 @@ import { PinkyCountdownSM, TipioCountdown, CountdownType } from '../../../lib';
 
 const defaultValue = new Date('Jan 20 2017');
 
-storiesOf('UI/Countdown', module)
+storiesOf('UI/Countdowns', module)
 
     .add('Pinky Countdown', () =>
         <>
