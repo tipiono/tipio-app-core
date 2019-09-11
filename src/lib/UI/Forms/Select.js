@@ -10,7 +10,8 @@ function Select({placeholder, options, label}) {
         setValue(v);
     };
     return (
-        <div className={"custom-material-select "} >
+
+        <div className="custom-material-select">
             <label className="select-label">{label}</label>
             <ReactSelect
                 value={value}

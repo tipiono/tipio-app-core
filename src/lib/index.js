@@ -3,9 +3,9 @@ import styles from './styles/main.scss';
 /*
 *   UI Components
 * */
-import TextInput from "./UI/TextInput/TextInput";
 import SecondaryButton from "./UI/Buttons/SecondaryButton";
 import SecondaryOutlineButton from "./UI/Buttons/SecondaryOutlineButton";
+import DisabledButton from "./UI/Buttons/DisabledButton";
 import { Modal, ModalType } from "./UI/Modal/Modal";
 import OnboardingTooltip from './UI/OnboardingTooltip/OnboardingTooltip';
 import SuccessModal from './UI/Modal/SuccessModal/SuccessModal';
@@ -13,8 +13,14 @@ import ModalSpinner from './UI/Modal/ModalSpinner/ModalSpinner';
 import { Accordion } from './UI/Accordion/Accordion';
 import PinkyCountdownSM from './UI/Countdown/PinkyCountdownSM';
 import TipioCountdown from './UI/TipioCountdown/TipioCountdown';
-import Select from './UI/Select/Select';
+import Select from './UI/Forms/Select';
 import * as CountdownType from "./UI/Countdown/CountdownType";
+import Input from './UI/Forms/Input';
+import Textarea from './UI/Forms/Textarea';
+import Checkbox from './UI/Forms/Checkbox';
+import RadioButton from './UI/Forms/RadioButton';
+import ToggleSwitch from './UI/Forms/ToggleSwitch';
+
 
 /*
 *   Customer/Private Components
@@ -47,9 +53,9 @@ import WonBiddingRound from './Company/Modals/WonBiddingRound/WonBiddingRound';
 
 export {
     styles,
-    TextInput,
     SecondaryButton,
     SecondaryOutlineButton,
+    DisabledButton,
     Modal,
     ModalType,
     OnboardingTooltip,
@@ -71,6 +77,7 @@ export {
     VotingCardShowInterestButton,
     VotingCardShareButton,
     BiddingCard,
+    BiddingCardShareButton,
     Onboarding,
     Categories,
     Accordion,
@@ -79,5 +86,10 @@ export {
     PinkyCountdownSM,
     TipioCountdown,
     CountdownType,
-    Select
+    Input,
+    Textarea,
+    Select,
+    Checkbox,
+    RadioButton,
+    ToggleSwitch
 };
