@@ -9,7 +9,7 @@ var _react = _interopRequireDefault(require("react"));
 
 var _Modal = require("../../../UI/Modal/Modal");
 
-var _TipioCountdown = _interopRequireDefault(require("../../TipioCountdown/TipioCountdown"));
+var _TipioCountdown = _interopRequireDefault(require("../../../UI/TipioCountdown/TipioCountdown"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 

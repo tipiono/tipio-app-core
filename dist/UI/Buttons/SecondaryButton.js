@@ -9,11 +9,9 @@ var _react = _interopRequireDefault(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
-require("./Button.scss");
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var Button = function Button(_ref) {
+var SecondaryButton = function SecondaryButton(_ref) {
   var loading = _ref.loading,
       text = _ref.text,
       onClick = _ref.onClick;
@@ -30,13 +28,13 @@ var Button = function Button(_ref) {
   }), ' ', "Loading..."));
 };
 
-Button.defaultProps = {
+SecondaryButton.defaultProps = {
   loading: false
 };
-Button.propTypes = {
+SecondaryButton.propTypes = {
   loading: _propTypes.default.bool,
   text: _propTypes.default.string.isRequired,
   children: _propTypes.default.instanceOf(Array).isRequired
 };
-var _default = Button;
+var _default = SecondaryButton;
 exports.default = _default;

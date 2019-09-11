@@ -6,18 +6,17 @@ import styles from './styles/main.scss';
 import TextInput from "./UI/TextInput/TextInput";
 import SecondaryButton from "./UI/Buttons/SecondaryButton";
 import SecondaryOutlineButton from "./UI/Buttons/SecondaryOutlineButton";
-import DisabledButton from "./UI/Buttons/DisabledButton";
 import { Modal, ModalType } from "./UI/Modal/Modal";
 import OnboardingTooltip from './UI/OnboardingTooltip/OnboardingTooltip';
 import SuccessModal from './UI/Modal/SuccessModal/SuccessModal';
 import ModalSpinner from './UI/Modal/ModalSpinner/ModalSpinner';
+<<<<<<< HEAD
 import { Accordion } from './UI/Accordion/Accordion';
+=======
 import PinkyCountdownSM from './UI/Countdown/PinkyCountdownSM';
 import TipioCountdown from './UI/TipioCountdown/TipioCountdown';
 import * as CountdownType from "./UI/Countdown/CountdownType";
-import Input from './UI/Forms/Input';
-import Textarea from './UI/Forms/Textarea';
-import Select from './UI/Forms/Select';
+>>>>>>> f4941be4a80306006521b283085fdd152e11081c
 
 /*
 *   Customer/Private Components
@@ -40,6 +39,7 @@ import SaleCard from './Customer/Cards/SaleCard/SaleCard';
 import SaleCardAddToCartButton from './Customer/Cards/SaleCard/SaleCardAddToCartButton';
 import Onboarding from './Customer/Modals/Onboarding/Onboarding';
 import Categories from './Customer/Modals/ChooseCategory/Categories';
+
 /*
 *   Company Components
 * */
@@ -53,7 +53,6 @@ export {
     TextInput,
     SecondaryButton,
     SecondaryOutlineButton,
-    DisabledButton,
     Modal,
     ModalType,
     OnboardingTooltip,
@@ -75,15 +74,19 @@ export {
     VotingCardShowInterestButton,
     VotingCardShareButton,
     BiddingCard,
+<<<<<<< HEAD
+    TimeUp,
     Onboarding,
     Categories,
-    Accordion,
+    Accordion
+=======
+    BiddingCardShareButton,
+    Onboarding,
+    Categories,
     SaleCard,
     SaleCardAddToCartButton,
     PinkyCountdownSM,
     TipioCountdown,
-    CountdownType,
-    Input,
-    Textarea,
-    Select
+    CountdownType
+>>>>>>> f4941be4a80306006521b283085fdd152e11081c
 };
