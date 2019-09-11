@@ -14,10 +14,11 @@ import ModalSpinner from './UI/Modal/ModalSpinner/ModalSpinner';
 import { Accordion } from './UI/Accordion/Accordion';
 import PinkyCountdownSM from './UI/Countdown/PinkyCountdownSM';
 import TipioCountdown from './UI/TipioCountdown/TipioCountdown';
+import Select from './UI/Select/Select';
 import * as CountdownType from "./UI/Countdown/CountdownType";
 import Input from './UI/Forms/Input';
 import Textarea from './UI/Forms/Textarea';
-import Select from './UI/Forms/Select';
+
 
 /*
 *   Customer/Private Components
