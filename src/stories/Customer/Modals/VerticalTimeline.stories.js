@@ -5,8 +5,8 @@ import { VerticalTimeline } from '../../../lib/index';
 const demoImageUrl = 'https://tipio.ams3.cdn.digitaloceanspaces.com/staging/4/tipios/131/1563957777437';
 const tipio={
     mainImageUrl: demoImageUrl,
-    title: 'Test',
-    subheading: 'Sart value has mixed support, consider using flex-start instead',
+    title: 'WAGNER Stol',
+    subheading: 'Stol 71x74x92 Lær, Jern, Brun',
     meta: {
         joinedCount: 12,
         bidCount: 4,

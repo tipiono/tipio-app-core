@@ -48,8 +48,9 @@
             content: "";
             width: 20px;
             height: 20px;
-            // background: url("../../static/assets/images/checked.svg") center white;
+            background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg width='24px' height='24px' viewBox='0 0 24 24' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch --%3E%3Ctitle%3EShape%3C/title%3E%3Cdesc%3ECreated with Sketch.%3C/desc%3E%3Cdefs%3E%3C/defs%3E%3Cg id='Page-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cpath d='M12,0 C5.372583,-4.05812251e-16 8.11624501e-16,5.372583 0,12 C-8.11624501e-16,18.627417 5.372583,24 12,24 C18.627417,24 24,18.627417 24,12 C23.9807773,5.38056166 18.6194383,0.0192227178 12,0 Z M10,17.414 L4.586,12 L6,10.586 L10,14.586 L18,6.586 L19.414,8 L10,17.414 Z' id='Shape' fill='%234F2E90' fill-rule='nonzero'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
             background-size: cover;
+            background-color: $white;
             border-radius: 25px;
             position: absolute;
             left: -11px;
