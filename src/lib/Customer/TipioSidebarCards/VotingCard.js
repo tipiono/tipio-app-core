@@ -9,7 +9,7 @@ const VotingCard = ({ children, state }) => {
             {
                 state !== 'interested' && (
                     <>
-                      <SecondaryOutlineButton text={'Show interest'} />
+                        <SecondaryOutlineButton text={'Meld interesse'} />
                         <small>Dette er ikke bindende</small>
                     </>
                 )

@@ -2,11 +2,11 @@ import React from 'react';
 
 const BaseCard = ({children}) => {
     return (
-        <div>
+        <div className="sidebarCard">
 
-            <div className="header">
-                Title <br/>
-                Description <br/>
+            <div className="sidebarCard__header">
+                <h4 className="sidebarCard__header--title">Long product name</h4>
+                <p className="sidebarCard__header--subtitle">Brandname</p>
                 Marketprice <br/>
                 250
             </div>
