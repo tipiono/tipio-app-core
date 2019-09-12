@@ -6,6 +6,8 @@ import styles from './styles/main.scss';
 import SecondaryButton from "./UI/Buttons/SecondaryButton";
 import SecondaryOutlineButton from "./UI/Buttons/SecondaryOutlineButton";
 import DisabledButton from "./UI/Buttons/DisabledButton";
+import GrayButton from "./UI/Buttons/GrayButton";
+import GrayOutlineButton from "./UI/Buttons/GrayOutlineButton";
 import LinkButton from "./UI/Buttons/LinkButton";
 import { Modal, ModalType } from "./UI/Modal/Modal";
 import OnboardingTooltip from './UI/OnboardingTooltip/OnboardingTooltip';
@@ -21,6 +23,8 @@ import Textarea from './UI/Forms/Textarea';
 import Checkbox from './UI/Forms/Checkbox';
 import RadioButton from './UI/Forms/RadioButton';
 import ToggleSwitch from './UI/Forms/ToggleSwitch';
+import ImageSlider from './UI/ImageSlider/ImageSlider';
+import ProductDetails from './UI/ProductDetails/ProductDetails';
 
 
 /*
@@ -62,6 +66,7 @@ export {
     SecondaryOutlineButton,
     DisabledButton,
     LinkButton,
+    GrayButton,
     Modal,
     ModalType,
     OnboardingTooltip,
@@ -70,6 +75,7 @@ export {
     LoginOrRegister,
     SuccessModal,
     ImageCropper,
+    GrayOutlineButton,
     ModalSpinner,
     JoinTipioOnboarding,
     VerticalTimeline,
@@ -100,5 +106,7 @@ export {
     RadioButton,
     ToggleSwitch,
     TipioSidebarVotingCard,
-    TipioSidebarBindingCard
+    TipioSidebarBindingCard,
+    ImageSlider,
+    ProductDetails
 };

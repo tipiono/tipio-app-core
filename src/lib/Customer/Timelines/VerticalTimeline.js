@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import SecondaryOutlineButton from "../../UI/Buttons/SecondaryOutlineButton";
 
 const VerticalTimeline = ({
                               isLoading,
@@ -120,7 +121,9 @@ const VerticalTimeline = ({
                             </ul>
                         </div>
                         <div className="tipio-status-footer">
-                            <button type="button" className="btn btn-outline-secondary btn-lg btn-block" onClick={onClose}>Gå til produkt</button>
+                            {/*<button type="button" className="btn btn-outline-secondary btn-lg btn-block" onClick={onClose}></button>*/}
+
+                            <SecondaryOutlineButton text="Gå til produkt" onClick={onClose} />
                         </div>
                     </div>
                 </div>

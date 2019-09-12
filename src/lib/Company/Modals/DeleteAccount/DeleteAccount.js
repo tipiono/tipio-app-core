@@ -1,5 +1,7 @@
 import React from "react";
 import {Modal} from '../../../UI/Modal/Modal'
+import SecondaryOutlineButton from "../../../UI/Buttons/SecondaryOutlineButton";
+import GrayOutlineButton from "../../../UI/Buttons/GrayOutlineButton";
 
 function DeleteAccount({}) {
     return (
@@ -40,11 +42,13 @@ function DeleteAccount({}) {
 
                     <h4 className="deleteAccount--title">Er du sikker på at du vil slette <br/> bedrifts kontoen din? Vil all datahistorikk <br/>  bli slettet. </h4>
 
-                    <div className="deleteAccount--action">
-                        <button type="button" className="btn btn-outline-secondary btn-lg mb-4">Ja, slett bruker</button>
-                        <button type="button" className="btn btn-outline-gray-600 btn-lg">Avbryt</button>
+                    <div className="deleteAccount--action mb-4">
+                        <SecondaryOutlineButton text="Ja, slett bruker" />
                     </div>
 
+                    <div className="deleteAccount--action mb-4">
+                        <GrayOutlineButton text="Avbryt" />
+                    </div>
                 </div>
             </Modal>
         </>

@@ -2,6 +2,7 @@ import React from "react";
 import {Modal} from '../../../UI/Modal/Modal'
 import {date} from "@storybook/addon-knobs";
 import {CountdownType, PinkyCountdownSM} from "../../../index";
+import SecondaryButton from "../../../UI/Buttons/SecondaryButton";
 
 function ReadyToBid({joined, defaultValue}) {
     return (
@@ -36,7 +37,9 @@ function ReadyToBid({joined, defaultValue}) {
                         <PinkyCountdownSM expires_in={date(defaultValue)} type={CountdownType.GREEN}/>
                     </div>
 
-                    <button type="button" className="btn btn-lg btn-secondary w-50">Sjekk status</button>
+                    <div className="readyToBid--action">
+                        <SecondaryButton text="Sjekk status" />
+                    </div>
                 </div>
             </Modal>
         </>

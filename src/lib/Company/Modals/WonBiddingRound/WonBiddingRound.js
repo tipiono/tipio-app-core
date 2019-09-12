@@ -2,6 +2,7 @@ import React from "react";
 import {Modal} from '../../../UI/Modal/Modal'
 import {date} from "@storybook/addon-knobs";
 import {CountdownType, PinkyCountdownSM} from "../../../index";
+import SecondaryButton from "../../../UI/Buttons/SecondaryButton";
 
 function WonBiddingRound({image, defaultValue}) {
     return (
@@ -17,7 +18,7 @@ function WonBiddingRound({image, defaultValue}) {
                         tilbud <br/> til dine kunder</p>
 
                     <div className="wonBiddingRound--action">
-                        <button type="button" className="btn btn-secondary btn-lg">Se tilbudet</button>
+                        <SecondaryButton text="Se tilbudet" />
                     </div>
 
                     <div className="wonBiddingRound--timeLeft">
