@@ -4,7 +4,7 @@ import SecondaryButton from '../../UI/Buttons/SecondaryButton';
 const ShareButton = ({ children }) => {
     return (
         <>
-            <SecondaryButton text="Del na"/>
+            <SecondaryButton text="Del nå"/>
         </>
     )
 };

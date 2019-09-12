@@ -6,28 +6,28 @@ import { TipioSidebarVotingCard, TipioSidebarBindingCard } from '../../../lib/in
 storiesOf('Customer/Components/TipioSidebarCards', module)
     .add('Voting/Tipio Show Interest', () =>
         <>
-            <div className="col-5 m-3">
-                <TipioSidebarVotingCard  state=""/>
+            <div className="col-4 m-3">
+                <TipioSidebarVotingCard state=""/>
             </div>
         </>
     )
     .add('Voting/Tipio Share', () =>
         <>
-            <div className="col-5 m-3">
+            <div className="col-4 m-3">
                 <TipioSidebarVotingCard  state="interested"/>
             </div>
         </>
     )
     .add('Binding/Tipio Add to cart', () =>
         <>
-            <div className="col-5 m-3">
+            <div className="col-4 m-3">
                 <TipioSidebarBindingCard  state=""/>
             </div>
         </>
     )
     .add('Binding/Tipio Share', () =>
         <>
-            <div className="col-5 m-3">
+            <div className="col-4 m-3">
                 <TipioSidebarBindingCard   state="bought"/>
             </div>
         </>
