@@ -249,6 +249,12 @@ Object.defineProperty(exports, "WonBiddingRound", {
     return _WonBiddingRound.default;
   }
 });
+Object.defineProperty(exports, "PublicLayout", {
+  enumerable: true,
+  get: function get() {
+    return _index.default;
+  }
+});
 exports.CountdownType = void 0;
 
 var _main = _interopRequireDefault(require("./styles/main.scss"));
@@ -334,6 +340,8 @@ var _DeleteAccount = _interopRequireDefault(require("./Company/Modals/DeleteAcco
 var _AddAdditionalSales = _interopRequireDefault(require("./Company/Modals/AddAdditionalSales/AddAdditionalSales"));
 
 var _WonBiddingRound = _interopRequireDefault(require("./Company/Modals/WonBiddingRound/WonBiddingRound"));
+
+var _index = _interopRequireDefault(require("./UI/Layout/Public/index"));
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
 

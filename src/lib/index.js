@@ -53,6 +53,10 @@ import DeleteAccount from './Company/Modals/DeleteAccount/DeleteAccount';
 import AddAdditionalSales from './Company/Modals/AddAdditionalSales/AddAdditionalSales';
 import WonBiddingRound from './Company/Modals/WonBiddingRound/WonBiddingRound';
 
+/*
+*   Layout
+* */
+import PublicLayout from './UI/Layout/Public/index';
 
 export {
     styles,
@@ -96,5 +100,6 @@ export {
     RadioButton,
     ToggleSwitch,
     TipioSidebarVotingCard,
-    TipioSidebarBindingCard
+    TipioSidebarBindingCard,
+    PublicLayout
 };

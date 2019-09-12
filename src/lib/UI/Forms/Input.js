@@ -1,14 +1,13 @@
 import React from 'react';
 
-function Input({placeholder}) {
-    return (
-        <>
+export default React.forwardRef(({ placeholder, name, errors, ...props }, ref) => (
+    <>
+        <div className="form-group">
             <label className="pure-material-textfield-outlined">
-                <input placeholder=" "/>
+                <input placeholder=" " id={props.id || name} name={name} {...props} ref={ref} />
                 <span className="label-sm">{placeholder}</span>
             </label>
-        </>
-    )
-}
-
-export default Input;
+            {errors && errors[name] && errors[name].message}
+        </div>
+    </>
+));
