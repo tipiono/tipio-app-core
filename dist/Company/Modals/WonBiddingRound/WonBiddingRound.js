@@ -9,10 +9,15 @@ var _react = _interopRequireDefault(require("react"));
 
 var _Modal = require("../../../UI/Modal/Modal");
 
+var _addonKnobs = require("@storybook/addon-knobs");
+
+var _index = require("../../../index");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function WonBiddingRound(_ref) {
-  var image = _ref.image;
+  var image = _ref.image,
+      defaultValue = _ref.defaultValue;
   return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_Modal.Modal, {
     showCloseButton: true
   }, _react.default.createElement("div", {
@@ -33,9 +38,12 @@ function WonBiddingRound(_ref) {
   }, _react.default.createElement("button", {
     type: "button",
     className: "btn btn-secondary btn-lg"
-  }, "Se tilbudet")), _react.default.createElement("span", {
-    className: "text-warning"
-  }, "22:30:19"))));
+  }, "Se tilbudet")), _react.default.createElement("div", {
+    className: "wonBiddingRound--timeLeft"
+  }, _react.default.createElement(_index.PinkyCountdownSM, {
+    expires_in: (0, _addonKnobs.date)(defaultValue),
+    type: _index.CountdownType.PINK
+  })))));
 }
 
 var _default = WonBiddingRound;

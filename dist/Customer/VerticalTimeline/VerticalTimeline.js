@@ -22,17 +22,17 @@ var VerticalTimeline = function VerticalTimeline(_ref) {
   }, isLoading && _react.default.createElement("p", null, "Loading..."), !isLoading && _react.default.createElement("div", {
     className: "row"
   }, _react.default.createElement("div", {
-    className: "col-md-5 mx-auto"
+    className: "col-md-6 mx-auto"
   }, _react.default.createElement("div", {
     className: "tipio-status"
   }, _react.default.createElement("div", {
     className: "tipio-status-header"
   }, _react.default.createElement("a", {
+    className: "tipio-status-header-image",
     href: "/"
   }, _react.default.createElement("img", {
     src: tipio.mainImageUrl,
-    alt: "",
-    className: "img-fluid"
+    alt: ""
   })), _react.default.createElement("div", null, _react.default.createElement("h5", {
     className: "tipio-status-header-title"
   }, _react.default.createElement("a", {

@@ -38,7 +38,7 @@ function Select(_ref) {
   };
 
   return _react.default.createElement("div", {
-    className: "custom-material-select "
+    className: "custom-material-select"
   }, _react.default.createElement("label", {
     className: "select-label"
   }, label), _react.default.createElement(_reactSelect.default, {
