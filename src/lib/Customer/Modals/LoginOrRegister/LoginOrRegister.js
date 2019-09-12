@@ -1,5 +1,8 @@
 import React from "react";
 import {Modal} from '../../../UI/Modal/Modal'
+import SecondaryOutlineButton from "../../../UI/Buttons/SecondaryOutlineButton";
+import SecondaryButton from "../../../UI/Buttons/SecondaryButton";
+
 
 function LoginOrRegister({redirect}) {
     return (
@@ -12,12 +15,15 @@ function LoginOrRegister({redirect}) {
                     <p className="loginOrRegister--description">For å opprette en Tipio må du være innlogget. Logg
                         deg <br/> inn for å få en knall pris!</p>
 
-                    <div className="loginOrRegister--buttons">
+                    <div className="loginOrRegister--action mb-4">
                         <a href={'/auth/login?redirect=' + redirect}>
-                            <button type="button" className="btn btn-outline-secondary btn-lg w-50 mb-4">Logg inn</button>
+                            <SecondaryOutlineButton text="Logg inn"/>
                         </a>
+                    </div>
+
+                    <div className="loginOrRegister--action">
                         <a href={'/user/create?redirect=' + redirect}>
-                            <button type="button" className="btn btn-secondary btn-lg w-50">Jeg er ny her, lag profil</button>
+                            <SecondaryButton text="Jeg er ny her, lag profil"/>
                         </a>
                     </div>
 
