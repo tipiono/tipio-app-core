@@ -3,6 +3,7 @@
 
 .btn-secondary {
     color: $primary;
+    letter-spacing: .75px;
 }
 
 .btn-secondary.disabled, .btn-secondary:disabled {
@@ -22,6 +23,7 @@
 .btn-outline-secondary {
     color: $primary;
     border: 2px solid $secondary;
+    letter-spacing: .75px;
 
     &:hover {
         color: $primary;

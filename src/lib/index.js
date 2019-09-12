@@ -6,6 +6,7 @@ import styles from './styles/main.scss';
 import SecondaryButton from "./UI/Buttons/SecondaryButton";
 import SecondaryOutlineButton from "./UI/Buttons/SecondaryOutlineButton";
 import DisabledButton from "./UI/Buttons/DisabledButton";
+import LinkButton from "./UI/Buttons/LinkButton";
 import { Modal, ModalType } from "./UI/Modal/Modal";
 import OnboardingTooltip from './UI/OnboardingTooltip/OnboardingTooltip';
 import SuccessModal from './UI/Modal/SuccessModal/SuccessModal';
@@ -31,6 +32,7 @@ import LoginOrRegister from './Customer/Modals/LoginOrRegister/LoginOrRegister';
 import ImageCropper from './UI/Modal/ImageCropper/ImageCropper';
 import JoinTipioOnboarding from './Customer/Modals/JoinTipioOnboarding/JoinTipioOnboarding';
 import VerticalTimeline from './Customer/Modals/VerticalTimeline/VerticalTimeline';
+import HorizontalTimeline from './Customer/Timelines/HorizontalTimeline';
 import OnboardingMovie from './Customer/Modals/OnboardingMovie/OnboardingMovie';
 import ReadyToBid from './Customer/Modals/ReadyToBid/ReadyToBid';
 import ChooseCategory from './Customer/Modals/ChooseCategory/ChooseCategory';
@@ -59,6 +61,7 @@ export {
     SecondaryButton,
     SecondaryOutlineButton,
     DisabledButton,
+    LinkButton,
     Modal,
     ModalType,
     OnboardingTooltip,
@@ -70,6 +73,7 @@ export {
     ModalSpinner,
     JoinTipioOnboarding,
     VerticalTimeline,
+    HorizontalTimeline,
     OnboardingMovie,
     ReadyToBid,
     ChooseCategory,
