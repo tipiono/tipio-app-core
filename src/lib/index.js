@@ -25,6 +25,8 @@ import RadioButton from './UI/Forms/RadioButton';
 import ToggleSwitch from './UI/Forms/ToggleSwitch';
 import ImageSlider from './UI/ImageSlider/ImageSlider';
 import ProductDetails from './UI/ProductDetails/ProductDetails';
+import Tabs from './UI/Tabs/Tabs';
+import PillTabs from './UI/PillTabs/PillTabs';
 
 
 /*
@@ -51,6 +53,7 @@ import Onboarding from './Customer/Modals/Onboarding/Onboarding';
 import Categories from './Customer/Modals/ChooseCategory/Categories';
 import TipioSidebarVotingCard from './Customer/TipioSidebarCards/VotingCard';
 import TipioSidebarBindingCard from './Customer/TipioSidebarCards/BindingCard';
+import ImageUploader from './Customer/ImageUploader/ImageUploader';
 
 /*
 *   Company Components
@@ -108,5 +111,8 @@ export {
     TipioSidebarVotingCard,
     TipioSidebarBindingCard,
     ImageSlider,
-    ProductDetails
+    ProductDetails,
+    ImageUploader,
+    Tabs,
+    PillTabs
 };
