@@ -25,6 +25,8 @@ import RadioButton from './UI/Forms/RadioButton';
 import ToggleSwitch from './UI/Forms/ToggleSwitch';
 import ImageSlider from './UI/ImageSlider/ImageSlider';
 import ProductDetails from './UI/ProductDetails/ProductDetails';
+import Tabs from './UI/Tabs/Tabs';
+import PillTabs from './UI/PillTabs/PillTabs';
 
 
 /*
@@ -110,5 +112,7 @@ export {
     TipioSidebarBindingCard,
     ImageSlider,
     ProductDetails,
-    ImageUploader
+    ImageUploader,
+    Tabs,
+    PillTabs
 };
