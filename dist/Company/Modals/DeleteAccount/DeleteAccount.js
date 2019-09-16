@@ -9,6 +9,10 @@ var _react = _interopRequireDefault(require("react"));
 
 var _Modal = require("../../../UI/Modal/Modal");
 
+var _SecondaryOutlineButton = _interopRequireDefault(require("../../../UI/Buttons/SecondaryOutlineButton"));
+
+var _GrayOutlineButton = _interopRequireDefault(require("../../../UI/Buttons/GrayOutlineButton"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _objectDestructuringEmpty(obj) { if (obj == null) throw new TypeError("Cannot destructure undefined"); }
@@ -54,14 +58,14 @@ function DeleteAccount(_ref) {
   }))), _react.default.createElement("h4", {
     className: "deleteAccount--title"
   }, "Er du sikker p\xE5 at du vil slette\u2028", _react.default.createElement("br", null), " bedrifts kontoen din? Vil all datahistorikk ", _react.default.createElement("br", null), " \u2028bli slettet. "), _react.default.createElement("div", {
-    className: "deleteAccount--action"
-  }, _react.default.createElement("button", {
-    type: "button",
-    className: "btn btn-outline-secondary btn-lg mb-4"
-  }, "Ja, slett bruker"), _react.default.createElement("button", {
-    type: "button",
-    className: "btn btn-outline-gray-600 btn-lg"
-  }, "Avbryt")))));
+    className: "deleteAccount--action mb-4"
+  }, _react.default.createElement(_SecondaryOutlineButton.default, {
+    text: "Ja, slett bruker"
+  })), _react.default.createElement("div", {
+    className: "deleteAccount--action mb-4"
+  }, _react.default.createElement(_GrayOutlineButton.default, {
+    text: "Avbryt"
+  })))));
 }
 
 var _default = DeleteAccount;

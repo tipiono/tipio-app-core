@@ -9,6 +9,8 @@ var _react = _interopRequireDefault(require("react"));
 
 var _Modal = require("../../../UI/Modal/Modal");
 
+var _SecondaryButton = _interopRequireDefault(require("../../../UI/Buttons/SecondaryButton"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function TipioWithOffer(_ref) {
@@ -32,10 +34,11 @@ function TipioWithOffer(_ref) {
     className: "tipio__withOffer--description"
   }, joined, " andre kj\xF8pte med deg! Prisen gikk ytterligere ned til"), _react.default.createElement("h4", {
     className: "tipio__withOffer--salePrice"
-  }, sale), _react.default.createElement("button", {
-    type: "button",
-    className: "btn btn-lg btn-secondary w-50"
-  }, "Neste"))));
+  }, sale), _react.default.createElement("div", {
+    className: "tipio__withOffer--action"
+  }, _react.default.createElement(_SecondaryButton.default, {
+    text: "Neste"
+  })))));
 }
 
 var _default = TipioWithOffer;

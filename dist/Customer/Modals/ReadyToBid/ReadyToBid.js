@@ -13,6 +13,8 @@ var _addonKnobs = require("@storybook/addon-knobs");
 
 var _index = require("../../../index");
 
+var _SecondaryButton = _interopRequireDefault(require("../../../UI/Buttons/SecondaryButton"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function ReadyToBid(_ref) {
@@ -47,10 +49,11 @@ function ReadyToBid(_ref) {
   }, _react.default.createElement(_index.PinkyCountdownSM, {
     expires_in: (0, _addonKnobs.date)(defaultValue),
     type: _index.CountdownType.GREEN
-  })), _react.default.createElement("button", {
-    type: "button",
-    className: "btn btn-lg btn-secondary w-50"
-  }, "Sjekk status"))));
+  })), _react.default.createElement("div", {
+    className: "readyToBid--action"
+  }, _react.default.createElement(_SecondaryButton.default, {
+    text: "Sjekk status"
+  })))));
 }
 
 var _default = ReadyToBid;

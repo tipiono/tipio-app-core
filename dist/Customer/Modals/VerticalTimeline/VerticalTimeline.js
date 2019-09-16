@@ -9,7 +9,7 @@ var _react = _interopRequireDefault(require("react"));
 
 var _Modal = require("../../../UI/Modal/Modal");
 
-var _VerticalTimeline = _interopRequireDefault(require("../../VerticalTimeline/VerticalTimeline"));
+var _VerticalTimeline = _interopRequireDefault(require("../../Timelines/VerticalTimeline"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 

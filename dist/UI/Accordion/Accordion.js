@@ -47,25 +47,24 @@ var CardHeader = function CardHeader(_ref2) {
   }
 
   return _react.default.createElement("div", {
-    className: "card-header " + (show ? "show" : ""),
+    className: "customAccordion__item " + (show ? "show" : ""),
     id: id
   }, _react.default.createElement("button", {
     id: id,
-    className: "accordion-link",
+    className: "customAccordion__item--button",
     onClick: onClick
   }, titleLabel, _react.default.createElement("svg", {
-    id: id,
-    xmlns: "http://www.w3.org/2000/svg",
-    width: "24",
-    height: "24",
-    viewBox: "0 0 24 24",
-    onClick: onClick
-  }, _react.default.createElement("g", {
-    className: "nc-icon-wrapper",
-    fill: "#8c8f91"
+    width: 19,
+    height: 11
   }, _react.default.createElement("path", {
-    d: "M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"
-  })))));
+    d: "M18 1l-8.464 9L1 1",
+    stroke: "#8C8F91",
+    strokeWidth: 2,
+    fill: "none",
+    fillRule: "evenodd",
+    strokeLinecap: "round",
+    strokeLinejoin: "round"
+  }))));
 };
 
 var CardBody = function CardBody(_ref3) {
@@ -74,11 +73,9 @@ var CardBody = function CardBody(_ref3) {
       show = _ref3.show;
   return _react.default.createElement("div", {
     id: id,
-    className: "collapse " + (show ? 'show' : ''),
+    className: "customAccordion__item--content " + (show ? 'show' : ''),
     "data-parent": "#accordionExample"
-  }, _react.default.createElement("div", {
-    className: "card-body"
-  }, children));
+  }, children);
 };
 
 var Accordion =
@@ -114,7 +111,7 @@ function (_Component) {
       var _this2 = this;
 
       return _react.default.createElement("div", {
-        className: "accordion-item",
+        className: "customAccordion",
         id: "accordionExample"
       }, _react.default.Children.map(this.props.children, function (child, index) {
         var _child$props = child.props,
