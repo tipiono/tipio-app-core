@@ -262,6 +262,133 @@
     }
 }
 
+
+// Horizontal Timeline ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+.horizontal-timeline {
+    position: relative;
+    margin-left: -20px;
+    margin-bottom: 2rem;
+
+    .horizontal-timeline-item {
+        position: relative;
+        display: inline-block;
+        padding-right: 50px;
+
+        &:last-child {
+            padding-right: 0;
+        }
+    }
+
+
+    /// COMPLETED | Horizontal timeline item
+
+    .completed {
+        /// Border
+        &:before {
+            content: "";
+            width: 100%;
+            border-top: 2px solid $primary;
+            position: absolute;
+            left: 0px;
+            top: 8px;
+        }
+
+        /// Dot
+        &:after {
+            content: "";
+            width: 20px;
+            height: 20px;
+            // background: url("../../static/assets/images/checked.svg") center white;
+            background-size: cover;
+            border-radius: 25px;
+            position: absolute;
+        }
+    }
+
+    /// ONGOING | Horizontal timeline item
+
+    .ongoing {
+        /// Border
+        &:before {
+            content: "";
+            width: 100%;
+            border-top: 2px dashed #c9cfd3;
+            position: absolute;
+            left: 0px;;
+            top: 8px;
+        }
+
+        /// Dot
+        &:after {
+            content: "";
+            width: 20px;
+            height: 20px;
+            border: 2px solid $primary;
+            background: $white;
+            border-radius: 25px;
+            position: absolute;
+            //right: -11px;
+        }
+
+    }
+
+    .coming {
+        /// Dot
+        &:after {
+            content: "";
+            width: 20px;
+            height: 20px;
+            border: 2px solid #c9cfd3;
+            background: #fff;
+            border-radius: 25px;
+            position: absolute;
+        }
+    }
+
+    .step-1 {
+        /// Border
+        &:before {
+            transform: scaleX(0);
+            transform-origin: top;
+            animation: grow-left 0.3s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+            animation-delay: 0.3s;
+        }
+
+        /// Dot
+        &:after {
+            animation: scale-center 0.5s ease-in;
+            animation-fill-mode: backwards;
+        }
+    }
+
+    .step-2 {
+        /// Border
+        &:before {
+            transform: scaleX(0);
+            transform-origin: top;
+            animation: grow-left 0.3s cubic-bezier(0.4, 0, 1, 1) forwards;
+            animation-delay: 0.9s;
+        }
+
+        /// Dot
+        &:after {
+            animation: scale-center .2s ease-in;
+            animation-fill-mode: backwards;
+            animation-delay: 0.6s;
+        }
+    }
+
+    .step-3 {
+        /// Dot
+        &:after {
+            animation: scale-center .2s ease-in;
+            animation-fill-mode: backwards;
+            animation-delay: 1.2s;
+        }
+    }
+}
+
+
 //// Scale icon/dot
 @keyframes scale-center {
     0% {

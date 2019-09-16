@@ -1,14 +1,11 @@
 import React from 'react';
 
-function Checkbox({}) {
-    return (
-        <>
-            <div className="md-checkbox">
-                <input id="i2" type="checkbox" checked/>
-                <label htmlFor="i2">Item 1</label>
-            </div>
-        </>
-    )
-}
-
-export default Checkbox;
+export default React.forwardRef(({ label, name, errors, ...props }, ref) => (
+    <>
+        <div className="md-checkbox">
+            <input type="checkbox" id="i2" name={name} {...props} ref={ref} />
+            <label htmlFor="i2">{label}</label>
+        </div>
+        {errors && errors[name] && errors[name].message}
+    </>
+));

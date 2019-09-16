@@ -5,7 +5,7 @@
 
 // 2. Base stuff
 @import
-    'base/fonts',
+    'base/_fonts.css',
     'base/font-sizes',
     'base/view_port',
     'base/base';
@@ -25,20 +25,28 @@
     'components/invite-friends',
     'components/completed-tipio',
     'components/login-register',
+    'components/UI/toggle-switch',
+    'components/radio-buttons',
+    'components/custom-material-select',
+    'components/UI/checkboxes',
     'components/add-tipio',
+    'components/pagination',
+    'components/UI/material-inputs',
     'components/custom-accordion',
-    'components/upload-viewer',
+    'components/_image-uploader',
+    'components/_cropper.scss',
     'components/_carouse.scss',
     'components/main-categories',
-    'components/Customer/vertical-timeline',
+    'components/timeline',
     'components/tipio-status',
-    'components/Customer/Modals/choose-category',
+    'components/choose-category',
     'components/_empty_interested',
     'components/_empty-recived-offers.scss',
     'components/_empty-orders.scss',
     'components/tipio-posted-by',
     'components/tipio-gallery',
     'components/tipio-view-card',
+    'components/onboarding-tooltip',
 
     // 3.1 UI Components
     'components/UI/custom-modal',
@@ -47,23 +55,11 @@
     'components/UI/pinky-countdown',
     'components/UI/green-countdown',
     'components/UI/timetag',
-    'components/UI/toggle-switch',
-    'components/UI/radio-buttons',
-    'components/UI/custom-material-select',
-    'components/UI/checkboxes',
-    'components/UI/pagination',
-    'components/UI/material-inputs',
-    'components/UI/onboarding-tooltip',
-    'components/UI/image-cropper',
-    'components/UI/tabs',
-    'components/UI/pill-tabs',
 
     // 3.2 Company Components
     'components/Company/delete-account',
     'components/Company/add-sales',
     'components/Company/won-bidding-round',
-    'components/Company/empty-avatar',
-    'components/Company/empty-cover',
 
     // 3.3 Customer Components
     'components/Customer/sales-progressbar',
@@ -76,9 +72,7 @@
     'components/Customer/Cards/voting-card',
     'components/Customer/Cards/bidding-card',
     'components/Customer/Cards/sale-card',
-    'components/Customer/TipioSidebarCards/sidebar-card',
-    'components/Customer/image-uploader',
-    'components/Customer/horizontal-timeline';
+    'components/Customer/TipioSidebarCards/sidebar-card';
 
 
 // 4. Layout-related sections

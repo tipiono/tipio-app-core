@@ -14,7 +14,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var ShareButton = function ShareButton(_ref) {
   var children = _ref.children;
   return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_SecondaryButton.default, {
-    text: "Del n\xE5"
+    text: "Del na"
   }));
 };
 

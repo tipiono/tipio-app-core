@@ -13,8 +13,6 @@ var _addonKnobs = require("@storybook/addon-knobs");
 
 var _index = require("../../../index");
 
-var _SecondaryButton = _interopRequireDefault(require("../../../UI/Buttons/SecondaryButton"));
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function WonBiddingRound(_ref) {
@@ -37,9 +35,10 @@ function WonBiddingRound(_ref) {
     className: "wonBiddingRound--description"
   }, "Du kan n\xE5 legge ut tre eksklusive mersalgs tilbud ", _react.default.createElement("br", null), " til dine kunder"), _react.default.createElement("div", {
     className: "wonBiddingRound--action"
-  }, _react.default.createElement(_SecondaryButton.default, {
-    text: "Se tilbudet"
-  })), _react.default.createElement("div", {
+  }, _react.default.createElement("button", {
+    type: "button",
+    className: "btn btn-secondary btn-lg"
+  }, "Se tilbudet")), _react.default.createElement("div", {
     className: "wonBiddingRound--timeLeft"
   }, _react.default.createElement(_index.PinkyCountdownSM, {
     expires_in: (0, _addonKnobs.date)(defaultValue),

@@ -64,6 +64,10 @@ import WonBiddingRound from './Company/Modals/WonBiddingRound/WonBiddingRound';
 import EmptyAvatar from './Company/EmptyAvatar/EmptyAvatar';
 import EmptyCover from './Company/EmptyCover/EmptyCover';
 
+/*
+*   Layout
+* */
+import PublicLayout from './UI/Layout/Public/index';
 
 export {
     styles,
@@ -119,4 +123,5 @@ export {
     PillTabs,
     EmptyAvatar,
     EmptyCover
+    PublicLayout
 };
