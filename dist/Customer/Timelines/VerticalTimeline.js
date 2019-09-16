@@ -9,6 +9,8 @@ var _react = _interopRequireDefault(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
+var _SecondaryOutlineButton = _interopRequireDefault(require("../../UI/Buttons/SecondaryOutlineButton"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var VerticalTimeline = function VerticalTimeline(_ref) {
@@ -22,17 +24,17 @@ var VerticalTimeline = function VerticalTimeline(_ref) {
   }, isLoading && _react.default.createElement("p", null, "Loading..."), !isLoading && _react.default.createElement("div", {
     className: "row"
   }, _react.default.createElement("div", {
-    className: "col-md-5 mx-auto"
+    className: "col-md-6 mx-auto"
   }, _react.default.createElement("div", {
     className: "tipio-status"
   }, _react.default.createElement("div", {
     className: "tipio-status-header"
   }, _react.default.createElement("a", {
+    className: "tipio-status-header-image",
     href: "/"
   }, _react.default.createElement("img", {
     src: tipio.mainImageUrl,
-    alt: "",
-    className: "img-fluid"
+    alt: ""
   })), _react.default.createElement("div", null, _react.default.createElement("h5", {
     className: "tipio-status-header-title"
   }, _react.default.createElement("a", {
@@ -144,11 +146,10 @@ var VerticalTimeline = function VerticalTimeline(_ref) {
     className: "content-description"
   }, "Bohus leverer varen til deg! Ta kontakt med leverand\xF8r for sp\xF8rsm\xE5l."))))))), _react.default.createElement("div", {
     className: "tipio-status-footer"
-  }, _react.default.createElement("button", {
-    type: "button",
-    className: "btn btn-outline-secondary btn-lg btn-block",
+  }, _react.default.createElement(_SecondaryOutlineButton.default, {
+    text: "G\xE5 til produkt",
     onClick: onClose
-  }, "G\xE5 til produkt"))))));
+  }))))));
 };
 
 VerticalTimeline.propTypes = {

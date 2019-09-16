@@ -1,0 +1,128 @@
+.horizontal-timeline {
+text-align: center;
+
+  .horizontal-timeline-bar {
+    position: relative;
+    margin-left: -20px;
+    margin-bottom: 2rem;
+
+    .horizontal-timeline-item {
+      position: relative;
+      display: inline-block;
+      padding-right: 50px;
+
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+
+
+    /// COMPLETED | Horizontal timeline item
+
+    .completed {
+      /// Border
+      &:before {
+        content: "";
+        width: 100%;
+        border-top: 2px solid $primary;
+        position: absolute;
+        left: 0px;
+        top: 8px;
+      }
+
+      /// Dot
+      &:after {
+        content: "";
+        width: 20px;
+        height: 20px;
+        background-color: $white;
+        background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg width='24px' height='24px' viewBox='0 0 24 24' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch --%3E%3Ctitle%3EShape%3C/title%3E%3Cdesc%3ECreated with Sketch.%3C/desc%3E%3Cdefs%3E%3C/defs%3E%3Cg id='Page-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cpath d='M12,0 C5.372583,-4.05812251e-16 8.11624501e-16,5.372583 0,12 C-8.11624501e-16,18.627417 5.372583,24 12,24 C18.627417,24 24,18.627417 24,12 C23.9807773,5.38056166 18.6194383,0.0192227178 12,0 Z M10,17.414 L4.586,12 L6,10.586 L10,14.586 L18,6.586 L19.414,8 L10,17.414 Z' id='Shape' fill='%234F2E90' fill-rule='nonzero'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
+        background-size: cover;
+        border-radius: 25px;
+        position: absolute;
+      }
+    }
+
+    /// ONGOING | Horizontal timeline item
+
+    .ongoing {
+      /// Border
+      &:before {
+        content: "";
+        width: 100%;
+        border-top: 2px dashed #c9cfd3;
+        position: absolute;
+        left: 0px;;
+        top: 8px;
+      }
+
+      /// Dot
+      &:after {
+        content: "";
+        width: 20px;
+        height: 20px;
+        border: 2px solid $primary;
+        background: $white;
+        border-radius: 25px;
+        position: absolute;
+        //right: -11px;
+      }
+
+    }
+
+    .coming {
+      /// Dot
+      &:after {
+        content: "";
+        width: 20px;
+        height: 20px;
+        border: 2px solid #c9cfd3;
+        background: #fff;
+        border-radius: 25px;
+        position: absolute;
+      }
+    }
+
+    .step-1 {
+      /// Border
+      &:before {
+        transform: scaleX(0);
+        transform-origin: top;
+        animation: grow-left 0.3s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+        animation-delay: 0.3s;
+      }
+
+      /// Dot
+      &:after {
+        animation: scale-center 0.5s ease-in;
+        animation-fill-mode: backwards;
+      }
+    }
+
+    .step-2 {
+      /// Border
+      &:before {
+        transform: scaleX(0);
+        transform-origin: top;
+        animation: grow-left 0.3s cubic-bezier(0.4, 0, 1, 1) forwards;
+        animation-delay: 0.9s;
+      }
+
+      /// Dot
+      &:after {
+        animation: scale-center .2s ease-in;
+        animation-fill-mode: backwards;
+        animation-delay: 0.6s;
+      }
+    }
+
+    .step-3 {
+      /// Dot
+      &:after {
+        animation: scale-center .2s ease-in;
+        animation-fill-mode: backwards;
+        animation-delay: 1.2s;
+      }
+    }
+  }
+}
