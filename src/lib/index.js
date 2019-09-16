@@ -122,6 +122,6 @@ export {
     Tabs,
     PillTabs,
     EmptyAvatar,
-    EmptyCover
+    EmptyCover,
     PublicLayout
 };
