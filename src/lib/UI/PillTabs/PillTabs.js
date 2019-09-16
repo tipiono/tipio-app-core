@@ -5,13 +5,13 @@ function PillTabs({}) {
         <>
            <ul className="pillTab">
                <li className="pillTab__item">
-                   <a href="" className="pillTab__item--link">Interessert</a>
+                   <a href="" className="pillTab__item--link">Alle</a>
                </li>
                <li className="pillTab__item">
-                   <a href="" className="pillTab__item--link">Motatte tilbud</a>
+                   <a href="" className="pillTab__item--link">Levert</a>
                </li>
                <li className="pillTab__item active">
-                   <a href="" className="pillTab__item--link">Bestillinger</a>
+                   <a href="" className="pillTab__item--link">Ikke levert</a>
                </li>
            </ul>
         </>

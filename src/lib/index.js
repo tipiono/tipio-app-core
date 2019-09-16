@@ -61,6 +61,8 @@ import ImageUploader from './Customer/ImageUploader/ImageUploader';
 import DeleteAccount from './Company/Modals/DeleteAccount/DeleteAccount';
 import AddAdditionalSales from './Company/Modals/AddAdditionalSales/AddAdditionalSales';
 import WonBiddingRound from './Company/Modals/WonBiddingRound/WonBiddingRound';
+import EmptyAvatar from './Company/EmptyAvatar/EmptyAvatar';
+import EmptyCover from './Company/EmptyCover/EmptyCover';
 
 
 export {
@@ -114,5 +116,7 @@ export {
     ProductDetails,
     ImageUploader,
     Tabs,
-    PillTabs
+    PillTabs,
+    EmptyAvatar,
+    EmptyCover
 };

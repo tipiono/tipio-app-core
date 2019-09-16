@@ -45,8 +45,32 @@
       display: block;
       height: 100%;
       color: $gray-700;
-      padding: 9px;
+      padding: 9px 32px;
+      font-family: 'Riposte-Light', sans-serif;
+      position: relative;
 
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
+    :nth-child(2) > &--link {
+      &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        height: 24px;
+        width: 1px;
+        box-shadow: -1px 0 0 rgba(0, 0, 0, 0.20);
+      }
+      &:after {
+        content: '';
+        position: absolute;
+        right: 0;
+        height: 24px;
+        width: 1px;
+        box-shadow: 1px 0 0 rgba(0, 0, 0, 0.20);
+      }
     }
   }
 }
