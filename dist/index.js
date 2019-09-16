@@ -315,6 +315,12 @@ Object.defineProperty(exports, "EmptyCover", {
     return _EmptyCover.default;
   }
 });
+Object.defineProperty(exports, "PublicLayout", {
+  enumerable: true,
+  get: function get() {
+    return _index.default;
+  }
+});
 exports.CountdownType = void 0;
 
 var _main = _interopRequireDefault(require("./styles/main.scss"));
@@ -422,6 +428,8 @@ var _WonBiddingRound = _interopRequireDefault(require("./Company/Modals/WonBiddi
 var _EmptyAvatar = _interopRequireDefault(require("./Company/EmptyAvatar/EmptyAvatar"));
 
 var _EmptyCover = _interopRequireDefault(require("./Company/EmptyCover/EmptyCover"));
+
+var _index = _interopRequireDefault(require("./UI/Layout/Public/index"));
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
 
