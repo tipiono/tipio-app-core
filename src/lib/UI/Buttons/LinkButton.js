@@ -1,9 +1,13 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 
-function LinkButton({text}) {
+function LinkButton({text, to}) {
     return (
         <>
-            <button type="button" className="btn btn-link">{text}</button>
+            <Link to={to}>
+                <span> {text}</span>
+            </Link>
+
         </>
     )
 }
