@@ -26,8 +26,11 @@ import ToggleSwitch from './UI/Forms/ToggleSwitch';
 import ImageSlider from './UI/ImageSlider/ImageSlider';
 import ProductDetails from './UI/ProductDetails/ProductDetails';
 import Tabs from './UI/Tabs/Tabs';
+import TabNav from './UI/Tabs/TabNav';
+import TabNavItem from './UI/Tabs/TabNavItem';
+import TabContent from './UI/Tabs/TabContent';
+import TabContentItem from './UI/Tabs/TabContentItem';
 import PillTabs from './UI/PillTabs/PillTabs';
-
 
 /*
 *   Customer/Private Components
@@ -120,6 +123,10 @@ export {
     ProductDetails,
     ImageUploader,
     Tabs,
+    TabNav,
+    TabNavItem,
+    TabContent,
+    TabContentItem,
     PillTabs,
     EmptyAvatar,
     EmptyCover,

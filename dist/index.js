@@ -147,6 +147,30 @@ Object.defineProperty(exports, "Tabs", {
     return _Tabs.default;
   }
 });
+Object.defineProperty(exports, "TabNav", {
+  enumerable: true,
+  get: function get() {
+    return _TabNav.default;
+  }
+});
+Object.defineProperty(exports, "TabNavItem", {
+  enumerable: true,
+  get: function get() {
+    return _TabNavItem.default;
+  }
+});
+Object.defineProperty(exports, "TabContent", {
+  enumerable: true,
+  get: function get() {
+    return _TabContent.default;
+  }
+});
+Object.defineProperty(exports, "TabContentItem", {
+  enumerable: true,
+  get: function get() {
+    return _TabContentItem.default;
+  }
+});
 Object.defineProperty(exports, "PillTabs", {
   enumerable: true,
   get: function get() {
@@ -372,6 +396,14 @@ var _ImageSlider = _interopRequireDefault(require("./UI/ImageSlider/ImageSlider"
 var _ProductDetails = _interopRequireDefault(require("./UI/ProductDetails/ProductDetails"));
 
 var _Tabs = _interopRequireDefault(require("./UI/Tabs/Tabs"));
+
+var _TabNav = _interopRequireDefault(require("./UI/Tabs/TabNav"));
+
+var _TabNavItem = _interopRequireDefault(require("./UI/Tabs/TabNavItem"));
+
+var _TabContent = _interopRequireDefault(require("./UI/Tabs/TabContent"));
+
+var _TabContentItem = _interopRequireDefault(require("./UI/Tabs/TabContentItem"));
 
 var _PillTabs = _interopRequireDefault(require("./UI/PillTabs/PillTabs"));
 
