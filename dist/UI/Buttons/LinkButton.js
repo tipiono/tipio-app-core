@@ -14,9 +14,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function LinkButton(_ref) {
   var text = _ref.text,
       to = _ref.to;
-  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_reactRouterDom.Link, {
-    to: to
-  }, _react.default.createElement("span", null, " ", text)));
+  return _react.default.createElement(_react.default.Fragment, null, "test");
 }
 
 var _default = LinkButton;
