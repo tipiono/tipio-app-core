@@ -1,9 +1,9 @@
 import React from "react";
 
-function Avatar({}) {
+function Avatar({src}) {
     return (
         <>
-            <img className="avatar" src="https://tipio.ams3.cdn.digitaloceanspaces.com/staging/4/tipios/132/1563967717745" alt=""/>
+            <img className="avatar" src={src} alt=""/>
         </>
     )
 }

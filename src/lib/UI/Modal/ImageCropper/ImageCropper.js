@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {Modal, ModalType} from '../Modal'
 import 'cropperjs/dist/cropper.css';
 import Cropper from 'cropperjs';
+import GrayOutlineButton from '../../Buttons/GrayOutlineButton';
 
 class ImageCropper extends Component {
     constructor(props) {
@@ -54,7 +55,7 @@ class ImageCropper extends Component {
         }
         return (
             <div>
-                <Modal showCloseButton>
+                <Modal showCloseButton onCloseButtonClick={this.modalOnClose}>
                     <div className="cropper-wrapper">
                         <div className="cropper-content">
                             <h3>Tilpass bilde for mobil</h3>
@@ -67,6 +68,7 @@ class ImageCropper extends Component {
                                 <img id="image" src={this.props.image.preview}/>
                             </div>
                             {this.props.indicator && this.props.indicator}
+                            {<GrayOutlineButton text="cancel" onClick={this.modalOnClose} />} 
                             <button type="button" className="btn btn-secondary w-100 mt-4 mb-6" onClick={this.cropDoneOnClick} disabled={this.state.isSubmitting}>
                                 {!this.state.isSubmitting && 'Neste'}
                                 {this.state.isSubmitting && <span> <span

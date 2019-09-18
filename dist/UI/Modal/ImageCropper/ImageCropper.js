@@ -13,6 +13,8 @@ require("cropperjs/dist/cropper.css");
 
 var _cropperjs = _interopRequireDefault(require("cropperjs"));
 
+var _GrayOutlineButton = _interopRequireDefault(require("../../Buttons/GrayOutlineButton"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
@@ -116,7 +118,8 @@ function (_Component) {
       }
 
       return _react.default.createElement("div", null, _react.default.createElement(_Modal.Modal, {
-        showCloseButton: true
+        showCloseButton: true,
+        onCloseButtonClick: this.modalOnClose
       }, _react.default.createElement("div", {
         className: "cropper-wrapper"
       }, _react.default.createElement("div", {
@@ -137,7 +140,10 @@ function (_Component) {
       }, _react.default.createElement("img", {
         id: "image",
         src: this.props.image.preview
-      })), this.props.indicator && this.props.indicator, _react.default.createElement("button", {
+      })), this.props.indicator && this.props.indicator, _react.default.createElement(_GrayOutlineButton.default, {
+        text: "cancel",
+        onClick: this.modalOnClose
+      }), _react.default.createElement("button", {
         type: "button",
         className: "btn btn-secondary w-100 mt-4 mb-6",
         onClick: this.cropDoneOnClick,
