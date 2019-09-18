@@ -1,9 +1,9 @@
 import React from "react";
 
-function EmptyAvatar({}) {
+function EmptyAvatar({ onClick }) {
     return (
         <>
-            <a className="emptyAvatar" href="">
+            <a className="emptyAvatar" href="" onClick={(e) => {e.preventDefault(); onClick(); }}>
 
                 <svg className="emptyAvatar--icon" width={47} height={37}>
                     <g fill="#C9CFD3" fillRule="evenodd">

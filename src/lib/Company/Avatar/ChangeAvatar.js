@@ -1,11 +1,11 @@
 import React from 'react';
 import Avatar from "../../UI/Avatar/Avatar";
 
-const ChangeAvatar = () => {
+const ChangeAvatar = ({src}) => {
     return (
 
         <div className="changeAvatar">
-            <Avatar/>
+            <Avatar src={src} />
 
             <svg className="changeAvatar--icon" width={36} height={35}>
                 <title>{'Group 33'}</title>
