@@ -31,6 +31,8 @@ import TabNavItem from './UI/Tabs/TabNavItem';
 import TabContent from './UI/Tabs/TabContent';
 import TabContentItem from './UI/Tabs/TabContentItem';
 import PillTabs from './UI/PillTabs/PillTabs';
+import Avatar from './UI/Avatar/Avatar';
+
 
 /*
 *   Customer/Private Components
@@ -64,8 +66,12 @@ import ImageUploader from './Customer/ImageUploader/ImageUploader';
 import DeleteAccount from './Company/Modals/DeleteAccount/DeleteAccount';
 import AddAdditionalSales from './Company/Modals/AddAdditionalSales/AddAdditionalSales';
 import WonBiddingRound from './Company/Modals/WonBiddingRound/WonBiddingRound';
-import EmptyAvatar from './Company/EmptyAvatar/EmptyAvatar';
-import EmptyCover from './Company/EmptyCover/EmptyCover';
+import EmptyAvatar from './Company/Avatar/EmptyAvatar';
+import ChangeAvatar from './Company/Avatar/ChangeAvatar';
+import EmptyCover from './Company/CoverImage/EmptyCover';
+import ChangeCover from './Company/CoverImage/ChangeCover';
+import Cover from './Company/CoverImage/Cover';
+
 
 /*
 *   Layout
@@ -130,5 +136,9 @@ export {
     PillTabs,
     EmptyAvatar,
     EmptyCover,
-    PublicLayout
+    PublicLayout,
+    Avatar,
+    ChangeAvatar,
+    ChangeCover,
+    Cover
 };
