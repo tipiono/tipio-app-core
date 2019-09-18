@@ -153,6 +153,12 @@ Object.defineProperty(exports, "PillTabs", {
     return _PillTabs.default;
   }
 });
+Object.defineProperty(exports, "Avatar", {
+  enumerable: true,
+  get: function get() {
+    return _Avatar.default;
+  }
+});
 Object.defineProperty(exports, "TipioWithOffer", {
   enumerable: true,
   get: function get() {
@@ -309,10 +315,28 @@ Object.defineProperty(exports, "EmptyAvatar", {
     return _EmptyAvatar.default;
   }
 });
+Object.defineProperty(exports, "ChangeAvatar", {
+  enumerable: true,
+  get: function get() {
+    return _ChangeAvatar.default;
+  }
+});
 Object.defineProperty(exports, "EmptyCover", {
   enumerable: true,
   get: function get() {
     return _EmptyCover.default;
+  }
+});
+Object.defineProperty(exports, "ChangeCover", {
+  enumerable: true,
+  get: function get() {
+    return _ChangeCover.default;
+  }
+});
+Object.defineProperty(exports, "Cover", {
+  enumerable: true,
+  get: function get() {
+    return _Cover.default;
   }
 });
 Object.defineProperty(exports, "PublicLayout", {
@@ -375,6 +399,8 @@ var _Tabs = _interopRequireDefault(require("./UI/Tabs/Tabs"));
 
 var _PillTabs = _interopRequireDefault(require("./UI/PillTabs/PillTabs"));
 
+var _Avatar = _interopRequireDefault(require("./UI/Avatar/Avatar"));
+
 var _TipioWithOffer = _interopRequireDefault(require("./Customer/Modals/TipioWithOffer/TipioWithOffer"));
 
 var _TipioConfirmation = _interopRequireDefault(require("./Customer/Modals/TipioConfirmation/TipioConfirmation"));
@@ -425,9 +451,15 @@ var _AddAdditionalSales = _interopRequireDefault(require("./Company/Modals/AddAd
 
 var _WonBiddingRound = _interopRequireDefault(require("./Company/Modals/WonBiddingRound/WonBiddingRound"));
 
-var _EmptyAvatar = _interopRequireDefault(require("./Company/EmptyAvatar/EmptyAvatar"));
+var _EmptyAvatar = _interopRequireDefault(require("./Company/Avatar/EmptyAvatar"));
 
-var _EmptyCover = _interopRequireDefault(require("./Company/EmptyCover/EmptyCover"));
+var _ChangeAvatar = _interopRequireDefault(require("./Company/Avatar/ChangeAvatar"));
+
+var _EmptyCover = _interopRequireDefault(require("./Company/CoverImage/EmptyCover"));
+
+var _ChangeCover = _interopRequireDefault(require("./Company/CoverImage/ChangeCover"));
+
+var _Cover = _interopRequireDefault(require("./Company/CoverImage/Cover"));
 
 var _index = _interopRequireDefault(require("./UI/Layout/Public/index"));
 
