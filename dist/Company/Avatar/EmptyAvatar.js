@@ -9,14 +9,14 @@ var _react = _interopRequireDefault(require("react"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _objectDestructuringEmpty(obj) { if (obj == null) throw new TypeError("Cannot destructure undefined"); }
-
 function EmptyAvatar(_ref) {
-  _objectDestructuringEmpty(_ref);
-
+  var children = _ref.children;
   return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("a", {
     className: "emptyAvatar",
-    href: ""
+    href: "",
+    onClick: function onClick(e) {
+      e.preventDefault();
+    }
   }, _react.default.createElement("svg", {
     className: "emptyAvatar--icon",
     width: 47,
@@ -61,7 +61,7 @@ function EmptyAvatar(_ref) {
     mask: "url(#prefix__b)"
   }, _react.default.createElement("path", {
     d: "M-17.92-1.92h32v32h-32z"
-  })))))));
+  })))))), children);
 }
 
 var _default = EmptyAvatar;

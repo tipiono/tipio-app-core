@@ -1,0 +1,102 @@
+.orderItemCard {
+  padding: 3rem;
+  box-shadow: 2px 2px 4px 0 #e5e5e5;
+
+
+  /// General Style
+  table {
+    margin-bottom: 0;
+
+    tbody {
+      td {
+        font-family: 'Riposte-Light', sans-serif;
+        padding-top: 0;
+        padding-bottom: 4px;
+
+        &:first-child {
+          padding-left: 0;
+        }
+
+        &:last-child {
+          padding-right: 0;
+        }
+      }
+    }
+  }
+
+
+  /// Customer Details
+  &__customerDetail {
+    border-bottom: 1px solid #dfe3e5;
+
+    tr {
+      &:last-child {
+        td {
+          padding-bottom: 1.5rem !important;
+        }
+      }
+
+      td {
+        font-size: .875rem;
+        vertical-align: baseline;
+      }
+    }
+
+    &--name {
+      font-family: 'Riposte-Medium', sans-serif !important;
+      font-size: 1.375rem !important;
+    }
+
+    &--address {
+      font-family: 'Riposte-Medium', sans-serif !important;
+    }
+  }
+
+
+  /// Order Details
+  &__orderDetail {
+    border-bottom: solid 2px $gray-500 !important;
+
+    tr {
+      &:last-child {
+        td {
+          padding-bottom: 1.5rem !important;
+        }
+      }
+      &:first-child {
+        td {
+          padding-top: 1.5rem !important;
+        }
+      }
+      td {
+        font-size: .875rem;
+        vertical-align: baseline;
+      }
+    }
+
+    &--productName {
+      font-family: 'Riposte-Medium', sans-serif !important;
+    }
+  }
+
+
+  /// Order Total Amount
+  &__orderAmount {
+
+    tr {
+      &:first-child {
+        td {
+          padding-top: 1.5rem !important;
+        }
+      }
+    }
+
+    &--label {
+      font-family: 'Riposte-Medium', sans-serif !important;
+    }
+
+    &--price {
+      font-family: 'Riposte-Medium', sans-serif !important;
+    }
+  }
+}
