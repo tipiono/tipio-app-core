@@ -71,6 +71,7 @@ import ChangeAvatar from './Company/Avatar/ChangeAvatar';
 import EmptyCover from './Company/CoverImage/EmptyCover';
 import ChangeCover from './Company/CoverImage/ChangeCover';
 import Cover from './Company/CoverImage/Cover';
+import OrderItemCard from './Company/Cards/OrderItemCard';
 
 
 /*
@@ -140,5 +141,6 @@ export {
     Avatar,
     ChangeAvatar,
     ChangeCover,
-    Cover
+    Cover,
+    OrderItemCard
 };

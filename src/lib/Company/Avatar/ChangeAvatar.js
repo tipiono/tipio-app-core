@@ -1,7 +1,7 @@
 import React from 'react';
 import Avatar from "../../UI/Avatar/Avatar";
 
-const ChangeAvatar = ({src}) => {
+const ChangeAvatar = ({src, children}) => {
     return (
 
         <div className="changeAvatar">
@@ -17,6 +17,7 @@ const ChangeAvatar = ({src}) => {
                     />
                 </g>
             </svg>
+            {children}
         </div>
     );
 };
