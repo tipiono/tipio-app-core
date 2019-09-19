@@ -1,11 +1,10 @@
 import React from 'react';
 import {Cover} from "../../index";
 
-const ChangeCover = () => {
+const ChangeCover = ({ src, children }) => {
     return (
         <div className="changeCover">
-            <Cover />
-
+            <Cover src={src} />
             <svg className="changeCover--icon" width={36} height={35}>
                 <title>{'Group 33'}</title>
                 <g transform="translate(1 .5)" fill="none" fillRule="evenodd">
@@ -16,6 +15,7 @@ const ChangeCover = () => {
                     />
                 </g>
             </svg>
+            {children}
         </div>
     );
 };
