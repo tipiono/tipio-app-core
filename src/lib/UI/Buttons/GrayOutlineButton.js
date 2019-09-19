@@ -1,13 +1,14 @@
 import React from "react";
 import PropTypes from 'prop-types';
 
-const GrayOutlineButton = ({ loading, text, onClick }) => (
+const GrayOutlineButton = ({ loading, text, onClick, ...props }) => (
     <button
         id="tipio-join-button"
         type="button"
         disabled={loading}
         className="btn btn-outline-gray-600 btn-block btn-lg"
         onClick={onClick}
+        {...props}
     >
         {!loading && text}
         {loading && (
