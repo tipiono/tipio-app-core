@@ -14,12 +14,10 @@ storiesOf('Company/Components/Cards', module)
     )
 
 
-    .add('Add Sale', () =>
+    .add('Add Sale Card', () =>
         <>
             <div className="col-3 m-3">
-                <AddSaleCompanyCard
-                image="https://tipio.ams3.cdn.digitaloceanspaces.com/staging/15/tipios/130/1563779193973"
-                />
+                <AddSaleCompanyCard />
             </div>
         </>
     )

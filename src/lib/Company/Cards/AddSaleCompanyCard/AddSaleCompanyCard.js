@@ -1,18 +1,15 @@
 import React from "react";
-import TipioCountdown from "../../../UI/TipioCountdown/TipioCountdown";
+import BaseCompanyCard from "../BaseCompanyCard/BaseCompanyCard";
+import {SecondaryButton, SecondaryOutlineButton} from "../../../index";
 
-function AddSaleCompanyCard({image, title, description, expiresIn, salePrice, costPrice, children}) {
+function AddSaleCompanyCard({children, ...props}) {
     return (
         <>
-            <div className="biddingCard">
-                <div className="biddingCard__header">
-                    <a href=""><img className="biddingCard__header--image" src={image} alt=""/></a>
-                    <div className="biddingCard__header--timeLeft">
-                        <TipioCountdown className="timer" expires_in={expiresIn}/>
-                    </div>
-                </div>
+            <BaseCompanyCard>
+                <SecondaryButton text={'Legg i handlekurv'}/>
+                <SecondaryOutlineButton text={'Se kundeliste'}/>
+            </BaseCompanyCard>
 
-            </div>
         </>
     )
 }

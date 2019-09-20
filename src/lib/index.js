@@ -72,6 +72,7 @@ import EmptyCover from './Company/CoverImage/EmptyCover';
 import ChangeCover from './Company/CoverImage/ChangeCover';
 import Cover from './Company/CoverImage/Cover';
 import OrderItemCard from './Company/Cards/OrderItemCard';
+import BaseCompanyCard from './Company/Cards/BaseCompanyCard/BaseCompanyCard';
 import AddSaleCompanyCard from './Company/Cards/AddSaleCompanyCard/AddSaleCompanyCard';
 
 
@@ -144,5 +145,6 @@ export {
     ChangeCover,
     Cover,
     OrderItemCard,
+    BaseCompanyCard,
     AddSaleCompanyCard
 };
