@@ -1,11 +1,12 @@
 import React, {useState} from 'react';
 import PropTypes from "prop-types";
 import CategoryItemWithDropdown from "./Categories";
+import Checkbox from '../../../UI/Forms/Checkbox';
 
 function dropdown() {
 }
 
-const SubCategories = ({ sub_categories, onClick, subSubCategoryOnClick }) => {
+const SubCategories = ({ sub_categories, onClick, subSubCategoryOnClick, withCheckbox, onChange, selectedMap }) => {
     let [showSubSubcategories, setShowSubSubcategories] = useState(0);
     function subCategoryOnClick(item) {
         let sci = 0;
@@ -19,14 +20,19 @@ const SubCategories = ({ sub_categories, onClick, subSubCategoryOnClick }) => {
             {sub_categories.map((item) => {
                 return (
                     <>
-                        <li className="sub-category-item">
+                        {withCheckbox &&(<Checkbox id={item.id} onChange={onChange} value={item.id} checked={selectedMap[item.id]}/>)}
+                        <li className="sub-category-item" key={item.id}>
                             <a className="sub-category-link" href="#" onClick={() => {subCategoryOnClick(item); onClick(item);}}>{item.title}</a>
                         </li>
                         {showSubSubcategories === item.id && item.sub_categories && <ul className="sub-sub-categories ">
                             {
                                 item.sub_categories.map((c) => {
                                     return (
-                                        <li className="sub-sub-category-item"><a href="#" className="sub-sub-category-link" onClick={() => {onClick(c);}}>{c.title}</a></li>
+                                            <li key={c.id} className="sub-sub-category-item">
+                                                {withCheckbox &&(<Checkbox id={c.id} onChange={onChange} value={c.id} checked={selectedMap[c.id]}/>)}
+                                                <a href="#" className="sub-sub-category-link" onClick={() => {onClick(c);}}>{c.title}
+                                                </a>
+                                            </li>
                                     );
                                 })
                             }
@@ -38,8 +44,9 @@ const SubCategories = ({ sub_categories, onClick, subSubCategoryOnClick }) => {
     );
 };
 
-const CategoryItem = ({ title, icon, onSelect, active, sub_categories, onClick, subCategoriesOnClick }) => {
+const CategoryItem = ({ id, title, icon, onSelect, active, sub_categories, onClick, subCategoriesOnClick, withCheckbox, onChange, selectedMap }) => {
     return (<div className="category-item dropdown">
+            {withCheckbox &&(<Checkbox id={id} onChange={onChange} value={id} checked={selectedMap[id]}/>)}
         <a className={'category-link ' + (active ? 'active' : '')} href="#" onClick={(e) => { e.preventDefault(); onClick();}}>
             <svg className="category-left-icon" width="26" height="26" viewBox="0 0 26 26">
                 <g fill="#5C6265" fillRule="nonzero">
@@ -64,7 +71,7 @@ const CategoryItem = ({ title, icon, onSelect, active, sub_categories, onClick, 
                 </g>
             </svg>
         </a>
-        {active && <SubCategories sub_categories={sub_categories} onClick={(item) =>{subCategoriesOnClick(item)}}/>}
+        {active && <SubCategories sub_categories={sub_categories} onClick={(item) =>{subCategoriesOnClick(item)}} withCheckbox={withCheckbox} onChange={onChange} selectedMap={selectedMap} />}
     </div>)
 };
 CategoryItem.propTypes = {
