@@ -1,14 +1,13 @@
 import React from "react";
-import { Link } from 'react-router-dom';
 
 function LinkButton({text, to}) {
     return (
         <>
-            {/*<Link to={to}>*/}
-            {/*    <span> {text}</span>*/}
-            {/*</Link>*/}
-            test
-
+            {/* <Link to={to}>
+                <span> {text}</span>
+            </Link> */}
+            linkbutton
+            *** should be implemented ***
         </>
     )
 }

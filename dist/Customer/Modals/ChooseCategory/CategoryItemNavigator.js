@@ -9,6 +9,8 @@ var _react = _interopRequireDefault(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
+var _Checkbox = _interopRequireDefault(require("../../../UI/Forms/Checkbox"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var CategoryItem = function CategoryItem(props) {
@@ -18,7 +20,12 @@ var CategoryItem = function CategoryItem(props) {
     className: 'category-link ',
     href: "#",
     onClick: props.onClick
-  }, props.item.file_store && _react.default.createElement("img", {
+  }, props.withCheckbox && _react.default.createElement(_Checkbox.default, {
+    id: props.item.id,
+    onChange: props.onChange,
+    value: props.item.id,
+    checked: props.selectedMap[props.item.id]
+  }), props.item.file_store && _react.default.createElement("img", {
     src: props.item.file_store.blob_url
   }), _react.default.createElement("span", null, props.item.title), _react.default.createElement("span", null, " --> ")));
 };

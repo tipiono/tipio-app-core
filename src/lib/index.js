@@ -59,6 +59,7 @@ import Categories from './Customer/Modals/ChooseCategory/Categories';
 import TipioSidebarVotingCard from './Customer/TipioSidebarCards/VotingCard';
 import TipioSidebarBindingCard from './Customer/TipioSidebarCards/BindingCard';
 import ImageUploader from './Customer/ImageUploader/ImageUploader';
+import CategoriesForm from './Customer/Modals/ChooseCategory/CategoriesForm';
 
 /*
 *   Company Components
@@ -72,7 +73,6 @@ import EmptyCover from './Company/CoverImage/EmptyCover';
 import ChangeCover from './Company/CoverImage/ChangeCover';
 import Cover from './Company/CoverImage/Cover';
 import OrderItemCard from './Company/Cards/OrderItemCard';
-
 
 /*
 *   Layout
@@ -142,5 +142,6 @@ export {
     ChangeAvatar,
     ChangeCover,
     Cover,
-    OrderItemCard
+    OrderItemCard,
+    CategoriesForm
 };

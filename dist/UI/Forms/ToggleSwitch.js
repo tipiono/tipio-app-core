@@ -23,9 +23,7 @@ function ToggleSwitch(_ref) {
   }), _react.default.createElement("label", {
     htmlFor: "MaterialToggle1",
     className: "label-red"
-  }), _react.default.createElement("span", {
-    className: "ml-3"
-  }, "Ja, gjerne!")));
+  })));
 }
 
 var _default = ToggleSwitch;

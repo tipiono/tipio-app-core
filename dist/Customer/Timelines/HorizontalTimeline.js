@@ -9,6 +9,8 @@ var _react = _interopRequireDefault(require("react"));
 
 var _LinkButton = _interopRequireDefault(require("../../UI/Buttons/LinkButton"));
 
+var _reactRouterDom = require("react-router-dom");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _objectDestructuringEmpty(obj) { if (obj == null) throw new TypeError("Cannot destructure undefined"); }
@@ -31,7 +33,8 @@ function HorizontalTimeline(_ref) {
   }, _react.default.createElement("h4", {
     className: "timeline-item-title"
   }, "P\xE5melding p\xE5g\xE5r"), _react.default.createElement(_LinkButton.default, {
-    text: "Sjekk status"
+    text: "Sjekk status",
+    to: "/"
   }))));
 }
 

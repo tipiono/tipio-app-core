@@ -13,10 +13,7 @@ function EmptyAvatar(_ref) {
   var children = _ref.children;
   return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("a", {
     className: "emptyAvatar",
-    href: "",
-    onClick: function onClick(e) {
-      e.preventDefault();
-    }
+    href: ""
   }, _react.default.createElement("svg", {
     className: "emptyAvatar--icon",
     width: 47,

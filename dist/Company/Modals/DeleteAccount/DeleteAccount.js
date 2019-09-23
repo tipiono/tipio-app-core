@@ -15,14 +15,12 @@ var _GrayOutlineButton = _interopRequireDefault(require("../../../UI/Buttons/Gra
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _objectDestructuringEmpty(obj) { if (obj == null) throw new TypeError("Cannot destructure undefined"); }
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
-function DeleteAccount(_ref) {
-  _objectDestructuringEmpty(_ref);
-
-  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_Modal.Modal, {
-    showCloseButton: true
-  }, _react.default.createElement("div", {
+function DeleteAccount(props) {
+  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_Modal.Modal, _extends({
+    showCloseButton: !props.isLoading
+  }, props), _react.default.createElement("div", {
     className: "deleteAccount"
   }, _react.default.createElement("svg", {
     className: "deleteAccount--icon",
@@ -60,11 +58,15 @@ function DeleteAccount(_ref) {
   }, "Er du sikker p\xE5 at du vil slette\u2028", _react.default.createElement("br", null), " bedrifts kontoen din? Vil all datahistorikk ", _react.default.createElement("br", null), " \u2028bli slettet. "), _react.default.createElement("div", {
     className: "deleteAccount--action mb-4"
   }, _react.default.createElement(_SecondaryOutlineButton.default, {
-    text: "Ja, slett bruker"
+    text: "Ja, slett bruker",
+    onClick: props.onConfirm,
+    loading: props.isLoading
   })), _react.default.createElement("div", {
     className: "deleteAccount--action mb-4"
   }, _react.default.createElement(_GrayOutlineButton.default, {
-    text: "Avbryt"
+    text: "Avbryt",
+    onClick: props.onCloseButtonClick,
+    disabled: props.isLoading
   })))));
 }
 

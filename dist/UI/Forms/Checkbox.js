@@ -16,21 +16,22 @@ function _objectWithoutProperties(source, excluded) { if (source == null) return
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
 var _default = _react.default.forwardRef(function (_ref, ref) {
-  var label = _ref.label,
+  var id = _ref.id,
+      label = _ref.label,
       name = _ref.name,
       errors = _ref.errors,
-      props = _objectWithoutProperties(_ref, ["label", "name", "errors"]);
+      props = _objectWithoutProperties(_ref, ["id", "label", "name", "errors"]);
 
   return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("div", {
     className: "md-checkbox"
   }, _react.default.createElement("input", _extends({
     type: "checkbox",
-    id: "i2",
+    id: id,
     name: name
   }, props, {
     ref: ref
   })), _react.default.createElement("label", {
-    htmlFor: "i2"
+    htmlFor: id
   }, label)), errors && errors[name] && errors[name].message);
 });
 

@@ -9,17 +9,27 @@ var _react = _interopRequireDefault(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
+var _Checkbox = _interopRequireDefault(require("../../../UI/Forms/Checkbox"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var CategoryItem = function CategoryItem(_ref) {
-  var title = _ref.title,
+  var id = _ref.id,
+      title = _ref.title,
       icon = _ref.icon,
       onSelect = _ref.onSelect,
       selected = _ref.selected,
-      sub_categories = _ref.sub_categories;
+      sub_categories = _ref.sub_categories,
+      withCheckbox = _ref.withCheckbox,
+      onChange = _ref.onChange,
+      selectedMap = _ref.selectedMap;
   return _react.default.createElement("div", {
     className: "category-item select"
-  }, _react.default.createElement("a", {
+  }, withCheckbox && _react.default.createElement(_Checkbox.default, {
+    id: id,
+    onChange: onChange,
+    value: id
+  }), _react.default.createElement("a", {
     className: 'category-link ' + (selected ? 'selected' : ''),
     href: "#",
     onClick: onSelect

@@ -11,6 +11,8 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _Categories = _interopRequireDefault(require("./Categories"));
 
+var _Checkbox = _interopRequireDefault(require("../../../UI/Forms/Checkbox"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
@@ -28,7 +30,10 @@ function dropdown() {}
 var SubCategories = function SubCategories(_ref) {
   var sub_categories = _ref.sub_categories,
       _onClick = _ref.onClick,
-      subSubCategoryOnClick = _ref.subSubCategoryOnClick;
+      subSubCategoryOnClick = _ref.subSubCategoryOnClick,
+      withCheckbox = _ref.withCheckbox,
+      onChange = _ref.onChange,
+      selectedMap = _ref.selectedMap;
 
   var _useState = (0, _react.useState)(0),
       _useState2 = _slicedToArray(_useState, 2),
@@ -48,8 +53,14 @@ var SubCategories = function SubCategories(_ref) {
   return _react.default.createElement("ul", {
     className: "sub-categories "
   }, sub_categories.map(function (item) {
-    return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("li", {
-      className: "sub-category-item"
+    return _react.default.createElement(_react.default.Fragment, null, withCheckbox && _react.default.createElement(_Checkbox.default, {
+      id: item.id,
+      onChange: onChange,
+      value: item.id,
+      checked: selectedMap[item.id]
+    }), _react.default.createElement("li", {
+      className: "sub-category-item",
+      key: item.id
     }, _react.default.createElement("a", {
       className: "sub-category-link",
       href: "#",
@@ -62,8 +73,14 @@ var SubCategories = function SubCategories(_ref) {
       className: "sub-sub-categories "
     }, item.sub_categories.map(function (c) {
       return _react.default.createElement("li", {
+        key: c.id,
         className: "sub-sub-category-item"
-      }, _react.default.createElement("a", {
+      }, withCheckbox && _react.default.createElement(_Checkbox.default, {
+        id: c.id,
+        onChange: onChange,
+        value: c.id,
+        checked: selectedMap[c.id]
+      }), _react.default.createElement("a", {
         href: "#",
         className: "sub-sub-category-link",
         onClick: function onClick() {
@@ -75,16 +92,25 @@ var SubCategories = function SubCategories(_ref) {
 };
 
 var CategoryItem = function CategoryItem(_ref2) {
-  var title = _ref2.title,
+  var id = _ref2.id,
+      title = _ref2.title,
       icon = _ref2.icon,
       onSelect = _ref2.onSelect,
       active = _ref2.active,
       sub_categories = _ref2.sub_categories,
       _onClick2 = _ref2.onClick,
-      subCategoriesOnClick = _ref2.subCategoriesOnClick;
+      subCategoriesOnClick = _ref2.subCategoriesOnClick,
+      withCheckbox = _ref2.withCheckbox,
+      onChange = _ref2.onChange,
+      selectedMap = _ref2.selectedMap;
   return _react.default.createElement("div", {
     className: "category-item dropdown"
-  }, _react.default.createElement("a", {
+  }, withCheckbox && _react.default.createElement(_Checkbox.default, {
+    id: id,
+    onChange: onChange,
+    value: id,
+    checked: selectedMap[id]
+  }), _react.default.createElement("a", {
     className: 'category-link ' + (active ? 'active' : ''),
     href: "#",
     onClick: function onClick(e) {
@@ -125,7 +151,10 @@ var CategoryItem = function CategoryItem(_ref2) {
     sub_categories: sub_categories,
     onClick: function onClick(item) {
       subCategoriesOnClick(item);
-    }
+    },
+    withCheckbox: withCheckbox,
+    onChange: onChange,
+    selectedMap: selectedMap
   }));
 };
 
