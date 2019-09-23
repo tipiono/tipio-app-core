@@ -5,7 +5,7 @@
 
 // 2. Base stuff
 @import
-    'base/fonts',
+    'base/_fonts.css',
     'base/font-sizes',
     'base/view_port',
     'base/base';
@@ -16,7 +16,6 @@
 @import
     'components/navigation',
     'components/carousel-card',
-    'components/product-card',
     'components/hamburger-button',
     'components/special-card',
     'components/shopping-bag-special-card',
@@ -26,30 +25,65 @@
     'components/invite-friends',
     'components/completed-tipio',
     'components/login-register',
-    'components/toggle-switch',
-    'components/radio-buttons',
-    'components/custom-material-select',
-    'components/checkboxes',
     'components/add-tipio',
-    'components/pagination',
-    'components/material-inputs',
     'components/custom-accordion',
-    'components/_image-uploader',
-    'components/custom-modal',
-    'components/_cropper.scss',
+    'components/upload-viewer',
     'components/_carouse.scss',
     'components/main-categories',
-    'components/timeline',
-    'components/_timetag.scss',
+    'components/Customer/vertical-timeline',
     'components/tipio-status',
-    'components/choose-category',
-    'components/pinky-countdown',
+    'components/Customer/Modals/choose-category',
     'components/_empty_interested',
     'components/_empty-recived-offers.scss',
     'components/_empty-orders.scss',
     'components/tipio-posted-by',
     'components/tipio-gallery',
-    'components/tipio-view-card';
+    'components/tipio-view-card',
+
+    // 3.1 UI Components
+    'components/UI/custom-modal',
+    'components/UI/success-modal',
+    'components/UI/modal-spinner',
+    'components/UI/pinky-countdown',
+    'components/UI/green-countdown',
+    'components/UI/timetag',
+    'components/UI/toggle-switch',
+    'components/UI/radio-buttons',
+    'components/UI/custom-material-select',
+    'components/UI/checkboxes',
+    'components/UI/pagination',
+    'components/UI/material-inputs',
+    'components/UI/onboarding-tooltip',
+    'components/UI/image-cropper',
+    'components/UI/tabs',
+    'components/UI/pill-tabs',
+    'components/UI/avatar',
+
+    // 3.2 Company Components
+    'components/Company/delete-account',
+    'components/Company/add-sales',
+    'components/Company/won-bidding-round',
+    'components/Company/empty-avatar',
+    'components/Company/empty-cover',
+    'components/Company/change-avatar',
+    'components/Company/change-cover',
+    'components/Company/cover',
+    'components/Company/order-item-card',
+
+    // 3.3 Customer Components
+    'components/Customer/sales-progressbar',
+    'components/Customer/Modals/_tipio-with-offer.scss',
+    'components/Customer/Modals/_tipio-confirmation.scss',
+    'components/Customer/Modals/_onboarding-movie',
+    'components/Customer/Modals/_login-or-register.scss',
+    'components/Customer/Modals/_ready-to-bid.scss',
+    'components/Customer/Modals/_join-tipio-onboarding.scss',
+    'components/Customer/Cards/voting-card',
+    'components/Customer/Cards/bidding-card',
+    'components/Customer/Cards/sale-card',
+    'components/Customer/TipioSidebarCards/sidebar-card',
+    'components/Customer/image-uploader',
+    'components/Customer/horizontal-timeline';
 
 
 // 4. Layout-related sections
@@ -58,21 +92,23 @@
     'layout/header';
 
 // 5. Page-specific styles
-@import 'pages/login',
-'pages/select-images',
-'pages/searchresult',
-'pages/your-tipios',
-'pages/userprofile',
-'pages/add-link',
-'pages/tipio-publish',
-'pages/credit-cart',
-'pages/tipio-view',
-'pages/frontpage',
-'pages/about-page';
+@import
+    'pages/login',
+    'pages/select-images',
+    'pages/searchresult',
+    'pages/your-tipios',
+    'pages/userprofile',
+    'pages/add-link',
+    'pages/tipio-publish',
+    'pages/credit-cart',
+    'pages/tipio-view',
+    'pages/frontpage',
+    'pages/about-page';
 
 
 // 6. Themes
-@import 'themes/default';
+@import
+    'themes/default';
 
 // 7. Vendors
 

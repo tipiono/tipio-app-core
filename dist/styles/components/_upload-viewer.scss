@@ -1,0 +1,87 @@
+.image-preview {
+    position: relative;
+
+    .remove-button-lg {
+        display: flex;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        width: 32px;
+        height: 32px;
+        cursor: pointer;
+    }
+
+    .crop-button-lg {
+        display: flex;
+        position: absolute;
+        left: 10px;
+        bottom: 10px;
+        width: 32px;
+        height: 32px;
+        cursor: pointer;
+    }
+}
+
+.second-image-uploader {
+    margin-top: 24px;
+    margin-bottom: 34px;
+    display: flex;
+    align-items: center;
+
+    img {
+        width: 24px;
+        height: 24px;
+        margin-right: 8px;
+    }
+}
+
+.thumbs-wrapper {
+    position: relative;
+    margin-right: 16px;
+    margin-bottom: 16px;
+
+    .thumb {
+        display: inline-flex;
+        border-radius: 0;
+        border: none;
+        margin-bottom: 0;
+        margin-right: 0;
+        width: 120px;
+        height: 130px;
+        padding: 0;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .remove-button-sm {
+        display: flex;
+        position: absolute;
+        right: 6px;
+        top: 6px;
+        width: 22px;
+        height: 22px;
+        cursor: pointer;
+        visibility: hidden;
+    }
+
+    .crop-button-sm {
+        display: flex;
+        position: absolute;
+        left: 6px;
+        bottom: 6px;
+        width: 22px;
+        height: 22px;
+        cursor: pointer;
+        visibility: hidden;
+    }
+
+    &:hover {
+        .remove-button-sm, .crop-button-sm {
+            visibility: visible;
+        }
+    }
+}

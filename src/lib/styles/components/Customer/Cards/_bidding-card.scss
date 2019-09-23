@@ -1,0 +1,62 @@
+.biddingCard {
+  box-shadow: 0 1px 1px 0 #e5e5e5;
+
+  &__header {
+    position: relative;
+
+    &--image {
+      max-width: 100%;
+      height: auto;
+    }
+
+    &--timeLeft {
+      span {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+      }
+    }
+  }
+
+  &__body {
+    padding: 1.5rem;
+
+    &--price {
+      margin-bottom: 1.4rem;
+
+      &--sale {
+        letter-spacing: .4px;
+      }
+
+      &--cost {
+        color: $gray-500;
+        text-decoration: line-through;
+        font-family: 'Riposte-Regular', sans-serif;
+        letter-spacing: .4px;
+      }
+    }
+
+    &--content {
+      margin-bottom: 1.6rem;
+
+      &--title {
+        font-family: 'Riposte-Regular', sans-serif;
+        color: $gray-700;
+        margin-bottom: .3rem;
+      }
+
+      &--description {
+        font-family: 'Riposte-Light', sans-serif;
+      }
+    }
+
+    &--salesbar {
+      width: 60%;
+      margin-bottom: 2rem;
+    }
+
+    &--share {
+      width: 60%;
+    }
+  }
+}

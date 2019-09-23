@@ -1,9 +1,11 @@
+@import "functions";
 // Variables
 //
 // Variables should follow the `$component-state-property-size` formula for
 // consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
 
 // Color system
+@import "functions";
 
 $white: #fff !default;
 $gray-100: #F5F5F5;
@@ -37,13 +39,13 @@ $grays: map-merge(
 $blue: #007bff !default;
 $indigo: #4F2E90;
 $purple: #6f42c1 !default;
-$pink: #E54498 !default;
+$pink: #e74298 !default;
 $red: #dc3545 !default;
 $orange: #fd7e14 !default;
 $yellow: #ffc107 !default;
 $green: #28a745 !default;
 $teal: #4ABCAC;
-$cyan: #17a2b8 !default;
+$cyan: #188576 !default;
 
 $colors: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
@@ -118,7 +120,7 @@ $body-color: $gray-800 !default;
 //
 // Style anchor elements.
 
-$link-color: theme-color("gray-300") !default;
+$link-color: $cyan !default;
 $link-decoration: none !default;
 $link-hover-color: darken($link-color, 15%) !default;
 $link-hover-decoration: underline !default;

@@ -1,0 +1,16 @@
+.custom__modal {
+    &--close {
+        position: absolute;
+        top: 1.5rem;
+        right: 1.5rem;
+    }
+
+    @include media-breakpoint-down(sm) {
+        &--content {
+            height: 100vh;
+        }
+        &--dialog {
+            margin: 0;
+        }
+    }
+}
