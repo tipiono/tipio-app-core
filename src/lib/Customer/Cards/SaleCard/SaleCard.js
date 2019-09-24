@@ -1,5 +1,5 @@
 import React from "react";
-import {date} from "@storybook/addon-knobs";
+// import {date} from "@storybook/addon-knobs";
 import {CountdownType, PinkyCountdownSM} from "../../../index";
 
 function SaleCard({image, title, salePrice, costPrice, saleDiscount, children, defaultValue}) {
@@ -22,7 +22,7 @@ function SaleCard({image, title, salePrice, costPrice, saleDiscount, children, d
                         <h6 className="saleCard__content--title">{title}</h6>
 
                         <div className="saleCard__content--timeLeft">
-                            <PinkyCountdownSM expires_in={date(defaultValue)} type={CountdownType.PINK}/>
+                            {/* <PinkyCountdownSM expires_in={date(defaultValue)} type={CountdownType.PINK}/> */}
                         </div>
                     </div>
                 </div>

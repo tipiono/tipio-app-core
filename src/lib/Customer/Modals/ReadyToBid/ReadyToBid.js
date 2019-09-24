@@ -1,6 +1,6 @@
 import React from "react";
 import {Modal} from '../../../UI/Modal/Modal'
-import {date} from "@storybook/addon-knobs";
+// import {date} from "@storybook/addon-knobs";
 import {CountdownType, PinkyCountdownSM} from "../../../index";
 import SecondaryButton from "../../../UI/Buttons/SecondaryButton";
 
