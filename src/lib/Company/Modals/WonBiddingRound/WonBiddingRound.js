@@ -1,6 +1,5 @@
 import React from "react";
 import {Modal} from '../../../UI/Modal/Modal'
-import {date} from "@storybook/addon-knobs";
 import {CountdownType, PinkyCountdownSM} from "../../../index";
 import SecondaryButton from "../../../UI/Buttons/SecondaryButton";
 
@@ -22,7 +21,7 @@ function WonBiddingRound({image, defaultValue}) {
                     </div>
 
                     <div className="wonBiddingRound--timeLeft">
-                        <PinkyCountdownSM expires_in={date(defaultValue)} type={CountdownType.PINK}/>
+                        {/* <PinkyCountdownSM expires_in={date(defaultValue)} type={CountdownType.PINK}/> */}
                     </div>
 
                 </div>
