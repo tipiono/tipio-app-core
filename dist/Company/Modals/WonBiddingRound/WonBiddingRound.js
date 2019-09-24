@@ -9,8 +9,6 @@ var _react = _interopRequireDefault(require("react"));
 
 var _Modal = require("../../../UI/Modal/Modal");
 
-var _addonKnobs = require("@storybook/addon-knobs");
-
 var _index = require("../../../index");
 
 var _SecondaryButton = _interopRequireDefault(require("../../../UI/Buttons/SecondaryButton"));
@@ -41,10 +39,7 @@ function WonBiddingRound(_ref) {
     text: "Se tilbudet"
   })), _react.default.createElement("div", {
     className: "wonBiddingRound--timeLeft"
-  }, _react.default.createElement(_index.PinkyCountdownSM, {
-    expires_in: (0, _addonKnobs.date)(defaultValue),
-    type: _index.CountdownType.PINK
-  })))));
+  }))));
 }
 
 var _default = WonBiddingRound;
