@@ -1,6 +1,6 @@
 import React from 'react';
 import {storiesOf} from '@storybook/react';
-import {OrderItemCard, ToggleSwitch} from '../../../lib';
+import {OrderItemCard, AddSaleCompanyCard} from '../../../lib';
 
 
 storiesOf('Company/Components/Cards', module)
@@ -12,3 +12,13 @@ storiesOf('Company/Components/Cards', module)
             </div>
         </>
     )
+
+
+    .add('Add Sale Card', () =>
+        <>
+            <div className="col-3 m-3">
+                <AddSaleCompanyCard />
+            </div>
+        </>
+    )
+
