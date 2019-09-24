@@ -1,0 +1,55 @@
+.baseCompanyCard {
+  box-shadow: 0 1px 1px 0 #e5e5e5;
+
+  &__header {
+    position: relative;
+
+    &--image {
+      max-width: 100%;
+      height: auto;
+    }
+
+    &--timeLeft {
+      span {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+      }
+    }
+  }
+
+  &__body {
+    padding: 1.5rem;
+    text-align: center;
+
+
+    &--title {
+      color: $gray-700;
+      font-family: 'Riposte-Regular', sans-serif;
+    }
+
+    &--description {
+      font-family: 'Riposte-Light', sans-serif;
+    }
+
+    &--cost {
+      margin: 1.5rem 0;
+
+      &--price {
+        margin-bottom: 0;
+      }
+
+      &--label {
+        font-size: .75rem;
+        color: $gray-500;
+      }
+    }
+
+    &--interested {
+      &--counter {
+        color: $cyan;
+        margin-bottom: 1.5rem;
+      }
+    }
+  }
+}
