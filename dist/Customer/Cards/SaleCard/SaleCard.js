@@ -7,12 +7,11 @@ exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
-var _addonKnobs = require("@storybook/addon-knobs");
-
 var _index = require("../../../index");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+// import {date} from "@storybook/addon-knobs";
 function SaleCard(_ref) {
   var image = _ref.image,
       title = _ref.title,
@@ -48,10 +47,7 @@ function SaleCard(_ref) {
     className: "saleCard__content--title"
   }, title), _react.default.createElement("div", {
     className: "saleCard__content--timeLeft"
-  }, _react.default.createElement(_index.PinkyCountdownSM, {
-    expires_in: (0, _addonKnobs.date)(defaultValue),
-    type: _index.CountdownType.PINK
-  })))), children));
+  }))), children));
 }
 
 var _default = SaleCard;
