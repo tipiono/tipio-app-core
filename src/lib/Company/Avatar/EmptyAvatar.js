@@ -3,7 +3,7 @@ import React from "react";
 function EmptyAvatar({ children }) {
     return (
         <>
-            <a className="emptyAvatar" href="" onClick={(e) => {e.preventDefault(); }}>
+            <a className="emptyAvatar" href="" >
 
                 <svg className="emptyAvatar--icon" width={47} height={37}>
                     <g fill="#C9CFD3" fillRule="evenodd">
@@ -36,9 +36,7 @@ function EmptyAvatar({ children }) {
                         </g>
                     </g>
                 </svg>
-
             </a>
-
             {children}
         </>
     )

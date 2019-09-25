@@ -60,6 +60,7 @@ import Categories from './Customer/Modals/ChooseCategory/Categories';
 import TipioSidebarVotingCard from './Customer/TipioSidebarCards/VotingCard';
 import TipioSidebarBindingCard from './Customer/TipioSidebarCards/BindingCard';
 import ImageUploader from './Customer/ImageUploader/ImageUploader';
+import CategoriesForm from './Customer/Modals/ChooseCategory/CategoriesForm';
 
 /*
 *   Company Components
@@ -79,7 +80,6 @@ import CustomerListCompanyCard from './Company/Cards/CustomerListCompanyCard/Cus
 import GiveOfferCompanyCard from './Company/Cards/GiveOfferCompanyCard/GiveOfferCompanyCard';
 import TipioWithOfferCompanyCard from './Company/Cards/TipioWithOfferCompanyCard/TipioWithOfferCompanyCard';
 import AdditionalSaleCompanyCard from './Company/Cards/AdditionalSaleCompanyCard/AdditionalSaleCompanyCard'
-
 
 /*
 *   Layout
@@ -150,6 +150,7 @@ export {
     ChangeCover,
     Cover,
     OrderItemCard,
+    CategoriesForm,
     BaseCompanyCard,
     AddSaleCompanyCard,
     CustomerListCompanyCard,

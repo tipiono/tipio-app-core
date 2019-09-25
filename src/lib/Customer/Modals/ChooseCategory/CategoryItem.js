@@ -1,8 +1,11 @@
 import React from 'react';
 import PropTypes from "prop-types";
+import Checkbox from '../../../UI/Forms/Checkbox';
 
-const CategoryItem = ({ title, icon, onSelect, selected, sub_categories }) => (
+const CategoryItem = ({ id, title, icon, onSelect, selected, sub_categories, withCheckbox, onChange, selectedMap }) => (
     <div className='category-item select'>
+            {withCheckbox &&(<Checkbox id={id} onChange={onChange} value={id} />)}
+
         <a className={'category-link ' + (selected ? 'selected' : '')} href="#" onClick={onSelect}>
             <svg className="category-left-icon" width="26" height="26" viewBox="0 0 26 26">
                 <g fill="#5C6265" fillRule="nonzero">

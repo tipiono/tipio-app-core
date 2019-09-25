@@ -321,6 +321,12 @@ Object.defineProperty(exports, "ImageUploader", {
     return _ImageUploader.default;
   }
 });
+Object.defineProperty(exports, "CategoriesForm", {
+  enumerable: true,
+  get: function get() {
+    return _CategoriesForm.default;
+  }
+});
 Object.defineProperty(exports, "DeleteAccount", {
   enumerable: true,
   get: function get() {
@@ -526,6 +532,8 @@ var _VotingCard2 = _interopRequireDefault(require("./Customer/TipioSidebarCards/
 var _BindingCard = _interopRequireDefault(require("./Customer/TipioSidebarCards/BindingCard"));
 
 var _ImageUploader = _interopRequireDefault(require("./Customer/ImageUploader/ImageUploader"));
+
+var _CategoriesForm = _interopRequireDefault(require("./Customer/Modals/ChooseCategory/CategoriesForm"));
 
 var _DeleteAccount = _interopRequireDefault(require("./Company/Modals/DeleteAccount/DeleteAccount"));
 

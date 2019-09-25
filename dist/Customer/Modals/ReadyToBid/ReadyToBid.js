@@ -9,14 +9,13 @@ var _react = _interopRequireDefault(require("react"));
 
 var _Modal = require("../../../UI/Modal/Modal");
 
-var _addonKnobs = require("@storybook/addon-knobs");
-
 var _index = require("../../../index");
 
 var _SecondaryButton = _interopRequireDefault(require("../../../UI/Buttons/SecondaryButton"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+// import {date} from "@storybook/addon-knobs";
 function ReadyToBid(_ref) {
   var joined = _ref.joined,
       defaultValue = _ref.defaultValue;
@@ -47,7 +46,7 @@ function ReadyToBid(_ref) {
   }, "Dere var ", joined, " som kj\xF8pte! N\xE5 kan ", _react.default.createElement("br", null), "leverand\xF8rene\u2028by p\xE5 orderen."), _react.default.createElement("div", {
     className: "mb-5"
   }, _react.default.createElement(_index.PinkyCountdownSM, {
-    expires_in: (0, _addonKnobs.date)(defaultValue),
+    expires_in: date(defaultValue),
     type: _index.CountdownType.GREEN
   })), _react.default.createElement("div", {
     className: "readyToBid--action"

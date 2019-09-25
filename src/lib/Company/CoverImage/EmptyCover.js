@@ -1,9 +1,9 @@
 import React from "react";
 
-function EmptyCover({}) {
+function EmptyCover({children}) {
     return (
         <>
-            <a className="emptyCover" href="">
+            <a className="emptyCover" href="" onClick={(e) => {e.preventDefault(); }}>
 
                 <svg className="emptyCover--icon" width={47} height={37}>
                     <g fill="#C9CFD3" fillRule="evenodd">
@@ -36,8 +36,8 @@ function EmptyCover({}) {
                         </g>
                     </g>
                 </svg>
-
             </a>
+            {children}
         </>
     )
 }
