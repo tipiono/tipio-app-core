@@ -32,6 +32,7 @@ import TabContent from './UI/Tabs/TabContent';
 import TabContentItem from './UI/Tabs/TabContentItem';
 import PillTabs from './UI/PillTabs/PillTabs';
 import Avatar from './UI/Avatar/Avatar';
+import SubNav from './UI/SubNav/SubNav';
 
 
 /*
@@ -75,6 +76,10 @@ import Cover from './Company/CoverImage/Cover';
 import OrderItemCard from './Company/Cards/OrderItemCard';
 import BaseCompanyCard from './Company/Cards/BaseCompanyCard/BaseCompanyCard';
 import AddSaleCompanyCard from './Company/Cards/AddSaleCompanyCard/AddSaleCompanyCard';
+import CustomerListCompanyCard from './Company/Cards/CustomerListCompanyCard/CustomerListCompanyCard';
+import GiveOfferCompanyCard from './Company/Cards/GiveOfferCompanyCard/GiveOfferCompanyCard';
+import TipioWithOfferCompanyCard from './Company/Cards/TipioWithOfferCompanyCard/TipioWithOfferCompanyCard';
+import AdditionalSaleCompanyCard from './Company/Cards/AdditionalSaleCompanyCard/AdditionalSaleCompanyCard'
 
 /*
 *   Layout
@@ -147,5 +152,10 @@ export {
     OrderItemCard,
     CategoriesForm,
     BaseCompanyCard,
-    AddSaleCompanyCard
+    AddSaleCompanyCard,
+    CustomerListCompanyCard,
+    GiveOfferCompanyCard,
+    TipioWithOfferCompanyCard,
+    AdditionalSaleCompanyCard,
+    SubNav
 };
