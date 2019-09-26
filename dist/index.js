@@ -189,6 +189,12 @@ Object.defineProperty(exports, "SubNav", {
     return _SubNav.default;
   }
 });
+Object.defineProperty(exports, "ButtonXL", {
+  enumerable: true,
+  get: function get() {
+    return _ButtonXL.default;
+  }
+});
 Object.defineProperty(exports, "TipioWithOffer", {
   enumerable: true,
   get: function get() {
@@ -301,6 +307,12 @@ Object.defineProperty(exports, "Categories", {
   enumerable: true,
   get: function get() {
     return _Categories.default;
+  }
+});
+Object.defineProperty(exports, "CustomerCategories", {
+  enumerable: true,
+  get: function get() {
+    return _Categories2.default;
   }
 });
 Object.defineProperty(exports, "TipioSidebarVotingCard", {
@@ -507,6 +519,8 @@ var _Avatar = _interopRequireDefault(require("./UI/Avatar/Avatar"));
 
 var _SubNav = _interopRequireDefault(require("./UI/SubNav/SubNav"));
 
+var _ButtonXL = _interopRequireDefault(require("./UI/Buttons/ButtonXL"));
+
 var _TipioWithOffer = _interopRequireDefault(require("./Customer/Modals/TipioWithOffer/TipioWithOffer"));
 
 var _TipioConfirmation = _interopRequireDefault(require("./Customer/Modals/TipioConfirmation/TipioConfirmation"));
@@ -544,6 +558,8 @@ var _SaleCardAddToCartButton = _interopRequireDefault(require("./Customer/Cards/
 var _Onboarding = _interopRequireDefault(require("./Customer/Modals/Onboarding/Onboarding"));
 
 var _Categories = _interopRequireDefault(require("./Company/Modals/ChooseCategory/Categories"));
+
+var _Categories2 = _interopRequireDefault(require("./Customer/Modals/ChooseCategory/Categories"));
 
 var _VotingCard2 = _interopRequireDefault(require("./Customer/CustomerSidebarCards/VotingCard"));
 
