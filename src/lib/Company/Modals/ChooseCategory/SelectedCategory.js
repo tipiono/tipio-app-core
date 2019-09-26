@@ -5,6 +5,7 @@ const SelectedCategory = ({onClick, title}) => (
     <div className="selected-category">
         <button type="button" className="btn-with-icon" onClick={onClick}>
             <span>{title}</span>
+
             <svg className="" width="20" height="20" viewBox="0 0 24 24">
                 <g className="nc-icon-wrapper" strokeLinecap="round" strokeLinejoin="round"
                    strokeWidth="2" fill="#4ABCAC" stroke="#4ABCAC">
@@ -14,6 +15,7 @@ const SelectedCategory = ({onClick, title}) => (
                             r="11"/>
                 </g>
             </svg>
+
         </button>
     </div>
 );

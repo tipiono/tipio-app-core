@@ -9,20 +9,20 @@ const VotingCard = ({children, state}) => {
             {
                 state !== 'interested' && (
                     <>
-                        <div className="sidebarCard__footer--action">
+                        <div className="customerSidebarCard__footer--action">
                             <SecondaryOutlineButton text={'Meld interesse'}/>
                         </div>
-                        <p className="sidebarCard__footer--alert">Dette er ikke bindende</p>
+                        <p className="customerSidebarCard__footer--alert">Dette er ikke bindende</p>
 
                     </>
                 )
             }
             {state === 'interested' &&
-            <div className="sidebarCard__footer--action">
+            <div className="customerSidebarCard__footer--action">
                 <ShareButton/>
             </div>}
 
-            <p className="sidebarCard__footer--interestedCounter">Allerede 221 Interesserte!</p>
+            <p className="customerSidebarCard__footer--interestedCounter">Allerede 221 Interesserte!</p>
 
         </BaseCard>
     )

@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 import { TipioSidebarVotingCard, TipioSidebarBindingCard } from '../../../lib/index';
 
 
-storiesOf('Customer/Components/TipioSidebarCards', module)
+storiesOf('Customer/Components/CustomerSidebarCards', module)
     .add('Voting/Tipio Show Interest', () =>
         <>
             <div className="col-4 m-3">

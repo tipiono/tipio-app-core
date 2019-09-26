@@ -4,6 +4,7 @@ import CategoryItem from "./CategoryItem";
 import CategoryItemNavigator from "./CategoryItemNavigator";
 import CategoryItemWithDropdown from "./CategoryItemWithDropdown";
 import CategoriesHeader from "./CategoriesHeader";
+import cx from 'classnames';
 
 import SecondaryButton from '../../../UI/Buttons/SecondaryButton';
 
@@ -81,7 +82,7 @@ function CategoriesForm({
                             <Masonry
                                 breakpointCols={breakpointColumnsObj}
                                 className="my-masonry-grid browse-categories"
-                                columnClassName="my-masonry-grid_column main-categories"
+                                columnClassName={cx("my-masonry-grid_column", { "customer-main-categories": !withCheckbox, "company-main-categories": withCheckbox } )}
                             >
                                 {active && active.map((item) => {
                                     if (item.height === 1) {

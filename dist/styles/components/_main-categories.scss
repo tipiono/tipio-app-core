@@ -122,6 +122,8 @@
 
     ////// Select //////////////////////////////////////////////////
     .category-item.select {
+        display: flex;
+        align-items: baseline;
         padding-top: 24px;
         border-bottom: 1px solid $gray-200;
 
@@ -139,6 +141,7 @@
 
             .category-left-icon {
                 margin-right: 22px;
+                margin-left: 22px;
             }
 
             .category-right-icon {

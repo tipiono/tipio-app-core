@@ -47,7 +47,7 @@ import VerticalTimeline from './Customer/Modals/VerticalTimeline/VerticalTimelin
 import HorizontalTimeline from './Customer/Timelines/HorizontalTimeline';
 import OnboardingMovie from './Customer/Modals/OnboardingMovie/OnboardingMovie';
 import ReadyToBid from './Customer/Modals/ReadyToBid/ReadyToBid';
-import ChooseCategory from './Customer/Modals/ChooseCategory/ChooseCategory';
+import ChooseCategory from './Company/Modals/ChooseCategory/ChooseCategory';
 import VotingCard from './Customer/Cards/VotingCard/VotingCard';
 import VotingCardShowInterestButton from './Customer/Cards/VotingCard/VotingCardShowInterestButton';
 import VotingCardShareButton from './Customer/Cards/VotingCard/VotingCardShareButton';
@@ -56,11 +56,11 @@ import BiddingCardShareButton from './Customer/Cards/BiddingCard/BiddingCardShar
 import SaleCard from './Customer/Cards/SaleCard/SaleCard';
 import SaleCardAddToCartButton from './Customer/Cards/SaleCard/SaleCardAddToCartButton';
 import Onboarding from './Customer/Modals/Onboarding/Onboarding';
-import Categories from './Customer/Modals/ChooseCategory/Categories';
-import TipioSidebarVotingCard from './Customer/TipioSidebarCards/VotingCard';
-import TipioSidebarBindingCard from './Customer/TipioSidebarCards/BindingCard';
+import Categories from './Company/Modals/ChooseCategory/Categories';
+import TipioSidebarVotingCard from './Customer/CustomerSidebarCards/VotingCard';
+import TipioSidebarBindingCard from './Customer/CustomerSidebarCards/BindingCard';
 import ImageUploader from './Customer/ImageUploader/ImageUploader';
-import CategoriesForm from './Customer/Modals/ChooseCategory/CategoriesForm';
+import CategoriesForm from './Company/Modals/ChooseCategory/CategoriesForm';
 
 /*
 *   Company Components
@@ -79,12 +79,20 @@ import AddSaleCompanyCard from './Company/Cards/AddSaleCompanyCard/AddSaleCompan
 import CustomerListCompanyCard from './Company/Cards/CustomerListCompanyCard/CustomerListCompanyCard';
 import GiveOfferCompanyCard from './Company/Cards/GiveOfferCompanyCard/GiveOfferCompanyCard';
 import TipioWithOfferCompanyCard from './Company/Cards/TipioWithOfferCompanyCard/TipioWithOfferCompanyCard';
-import AdditionalSaleCompanyCard from './Company/Cards/AdditionalSaleCompanyCard/AdditionalSaleCompanyCard'
+import AdditionalSaleCompanyCard from './Company/Cards/AdditionalSaleCompanyCard/AdditionalSaleCompanyCard';
+import CompanySidebarBaseCard from './Company/CompanySidebarCards/CompanySidebarBaseCard'
 
 /*
 *   Layout
 * */
 import PublicLayout from './UI/Layout/Public/index';
+
+
+/*
+*   Icons
+* */
+import InteriorIcon from './UI/Icons/InteriorIcon';
+import ArrowDownIcon from './UI/Icons/ArrowDownIcon';
 
 export {
     styles,
@@ -157,5 +165,8 @@ export {
     GiveOfferCompanyCard,
     TipioWithOfferCompanyCard,
     AdditionalSaleCompanyCard,
-    SubNav
+    SubNav,
+    InteriorIcon,
+    CompanySidebarBaseCard,
+    ArrowDownIcon
 };
