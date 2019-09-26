@@ -303,6 +303,12 @@ Object.defineProperty(exports, "Categories", {
     return _Categories.default;
   }
 });
+Object.defineProperty(exports, "CustomerCategories", {
+  enumerable: true,
+  get: function get() {
+    return _Categories2.default;
+  }
+});
 Object.defineProperty(exports, "TipioSidebarVotingCard", {
   enumerable: true,
   get: function get() {
@@ -544,6 +550,8 @@ var _SaleCardAddToCartButton = _interopRequireDefault(require("./Customer/Cards/
 var _Onboarding = _interopRequireDefault(require("./Customer/Modals/Onboarding/Onboarding"));
 
 var _Categories = _interopRequireDefault(require("./Company/Modals/ChooseCategory/Categories"));
+
+var _Categories2 = _interopRequireDefault(require("./Customer/Modals/ChooseCategory/Categories"));
 
 var _VotingCard2 = _interopRequireDefault(require("./Customer/CustomerSidebarCards/VotingCard"));
 
