@@ -13,11 +13,13 @@ var _Checkbox = _interopRequireDefault(require("../../../UI/Forms/Checkbox"));
 
 var _InteriorIcon = _interopRequireDefault(require("../../../UI/Icons/InteriorIcon"));
 
+var _ArrowDownIcon = _interopRequireDefault(require("../../../UI/Icons/ArrowDownIcon"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var CategoryItem = function CategoryItem(props) {
   return _react.default.createElement("div", {
-    className: "category-item select"
+    className: "category-item more"
   }, _react.default.createElement("div", {
     className: "d-flex align-items-center"
   }, props.withCheckbox && _react.default.createElement(_Checkbox.default, {
@@ -31,7 +33,9 @@ var CategoryItem = function CategoryItem(props) {
     onClick: props.onClick
   }, props.item.file_store && _react.default.createElement("div", {
     className: "category-left-icon"
-  }, _react.default.createElement(_InteriorIcon.default, null)), _react.default.createElement("span", null, props.item.title), _react.default.createElement("span", null, " --> "))));
+  }, _react.default.createElement(_InteriorIcon.default, null)), _react.default.createElement("span", null, props.item.title), _react.default.createElement("div", {
+    className: "category-right-icon"
+  }, _react.default.createElement(_ArrowDownIcon.default, null)))));
 };
 
 CategoryItem.propTypes = {
