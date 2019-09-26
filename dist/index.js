@@ -417,6 +417,12 @@ Object.defineProperty(exports, "AdditionalSaleCompanyCard", {
     return _AdditionalSaleCompanyCard.default;
   }
 });
+Object.defineProperty(exports, "CompanySidebarBaseCard", {
+  enumerable: true,
+  get: function get() {
+    return _CompanySidebarBaseCard.default;
+  }
+});
 Object.defineProperty(exports, "PublicLayout", {
   enumerable: true,
   get: function get() {
@@ -427,6 +433,12 @@ Object.defineProperty(exports, "InteriorIcon", {
   enumerable: true,
   get: function get() {
     return _InteriorIcon.default;
+  }
+});
+Object.defineProperty(exports, "ArrowDownIcon", {
+  enumerable: true,
+  get: function get() {
+    return _ArrowDownIcon.default;
   }
 });
 exports.CountdownType = void 0;
@@ -513,7 +525,7 @@ var _OnboardingMovie = _interopRequireDefault(require("./Customer/Modals/Onboard
 
 var _ReadyToBid = _interopRequireDefault(require("./Customer/Modals/ReadyToBid/ReadyToBid"));
 
-var _ChooseCategory = _interopRequireDefault(require("./Customer/Modals/ChooseCategory/ChooseCategory"));
+var _ChooseCategory = _interopRequireDefault(require("./Company/Modals/ChooseCategory/ChooseCategory"));
 
 var _VotingCard = _interopRequireDefault(require("./Customer/Cards/VotingCard/VotingCard"));
 
@@ -531,15 +543,15 @@ var _SaleCardAddToCartButton = _interopRequireDefault(require("./Customer/Cards/
 
 var _Onboarding = _interopRequireDefault(require("./Customer/Modals/Onboarding/Onboarding"));
 
-var _Categories = _interopRequireDefault(require("./Customer/Modals/ChooseCategory/Categories"));
+var _Categories = _interopRequireDefault(require("./Company/Modals/ChooseCategory/Categories"));
 
-var _VotingCard2 = _interopRequireDefault(require("./Customer/TipioSidebarCards/VotingCard"));
+var _VotingCard2 = _interopRequireDefault(require("./Customer/CustomerSidebarCards/VotingCard"));
 
-var _BindingCard = _interopRequireDefault(require("./Customer/TipioSidebarCards/BindingCard"));
+var _BindingCard = _interopRequireDefault(require("./Customer/CustomerSidebarCards/BindingCard"));
 
 var _ImageUploader = _interopRequireDefault(require("./Customer/ImageUploader/ImageUploader"));
 
-var _CategoriesForm = _interopRequireDefault(require("./Customer/Modals/ChooseCategory/CategoriesForm"));
+var _CategoriesForm = _interopRequireDefault(require("./Company/Modals/ChooseCategory/CategoriesForm"));
 
 var _DeleteAccount = _interopRequireDefault(require("./Company/Modals/DeleteAccount/DeleteAccount"));
 
@@ -571,9 +583,13 @@ var _TipioWithOfferCompanyCard = _interopRequireDefault(require("./Company/Cards
 
 var _AdditionalSaleCompanyCard = _interopRequireDefault(require("./Company/Cards/AdditionalSaleCompanyCard/AdditionalSaleCompanyCard"));
 
+var _CompanySidebarBaseCard = _interopRequireDefault(require("./Company/CompanySidebarCards/CompanySidebarBaseCard"));
+
 var _index = _interopRequireDefault(require("./UI/Layout/Public/index"));
 
 var _InteriorIcon = _interopRequireDefault(require("./UI/Icons/InteriorIcon"));
+
+var _ArrowDownIcon = _interopRequireDefault(require("./UI/Icons/ArrowDownIcon"));
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
 

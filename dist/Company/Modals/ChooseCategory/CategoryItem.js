@@ -13,7 +13,7 @@ var _Checkbox = _interopRequireDefault(require("../../../UI/Forms/Checkbox"));
 
 var _InteriorIcon = _interopRequireDefault(require("../../../UI/Icons/InteriorIcon"));
 
-var _reactSvg = _interopRequireDefault(require("react-svg"));
+var _index = _interopRequireDefault(require("react-svg/dist/index"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -41,7 +41,7 @@ var CategoryItem = function CategoryItem(_ref) {
     onClick: onSelect
   }, _react.default.createElement("div", {
     className: "category-left-icon"
-  }, _react.default.createElement(_InteriorIcon.default, null)), _react.default.createElement("span", null, title, " checkbox is rendered"), _react.default.createElement("svg", {
+  }, _react.default.createElement(_InteriorIcon.default, null)), _react.default.createElement("span", null, title), _react.default.createElement("svg", {
     className: "category-right-icon",
     width: "20",
     height: "20",

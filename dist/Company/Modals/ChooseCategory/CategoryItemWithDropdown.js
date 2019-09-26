@@ -13,6 +13,10 @@ var _Categories = _interopRequireDefault(require("./Categories"));
 
 var _Checkbox = _interopRequireDefault(require("../../../UI/Forms/Checkbox"));
 
+var _InteriorIcon = _interopRequireDefault(require("../../../UI/Icons/InteriorIcon"));
+
+var _ArrowDownIcon = _interopRequireDefault(require("../../../UI/Icons/ArrowDownIcon"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
@@ -53,12 +57,7 @@ var SubCategories = function SubCategories(_ref) {
   return _react.default.createElement("ul", {
     className: "sub-categories "
   }, sub_categories.map(function (item) {
-    return _react.default.createElement(_react.default.Fragment, null, withCheckbox && _react.default.createElement(_Checkbox.default, {
-      id: item.id,
-      onChange: onChange,
-      value: item.id,
-      checked: selectedMap[item.id]
-    }), _react.default.createElement("li", {
+    return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("li", {
       className: "sub-category-item",
       key: item.id
     }, _react.default.createElement("a", {
@@ -75,12 +74,7 @@ var SubCategories = function SubCategories(_ref) {
       return _react.default.createElement("li", {
         key: c.id,
         className: "sub-sub-category-item"
-      }, withCheckbox && _react.default.createElement(_Checkbox.default, {
-        id: c.id,
-        onChange: onChange,
-        value: c.id,
-        checked: selectedMap[c.id]
-      }), _react.default.createElement("a", {
+      }, _react.default.createElement("a", {
         href: "#",
         className: "sub-sub-category-link",
         onClick: function onClick() {
@@ -105,49 +99,26 @@ var CategoryItem = function CategoryItem(_ref2) {
       selectedMap = _ref2.selectedMap;
   return _react.default.createElement("div", {
     className: "category-item dropdown"
+  }, _react.default.createElement("div", {
+    className: "d-flex align-items-center"
   }, withCheckbox && _react.default.createElement(_Checkbox.default, {
     id: id,
     onChange: onChange,
     value: id,
     checked: selectedMap[id]
   }), _react.default.createElement("a", {
-    className: 'category-link ' + (active ? 'active' : ''),
+    className: 'category-link d-flex align-items-center ' + (active ? 'active' : ''),
     href: "#",
     onClick: function onClick(e) {
       e.preventDefault();
 
       _onClick2();
     }
-  }, _react.default.createElement("svg", {
-    className: "category-left-icon",
-    width: "26",
-    height: "26",
-    viewBox: "0 0 26 26"
-  }, _react.default.createElement("g", {
-    fill: "#5C6265",
-    fillRule: "nonzero"
-  }, _react.default.createElement("path", {
-    d: "M18.597 18a.6.6 0 0 1 .588.482l.73 3.647A2.328 2.328 0 0 0 22.197 24c.994 0 1.8-.806 1.803-1.74L22.797 10.2a3 3 0 0 0-3-3h-14.4c-1.657 0-3 1.343-3.003 3.06L1.197 22.2a1.8 1.8 0 0 0 1.8 1.8c1.11 0 2.065-.783 2.282-1.871l.73-3.647A.6.6 0 0 1 6.597 18h12zM7.089 19.2l-.633 3.164A3.528 3.528 0 0 1 2.997 25.2c-1.657 0-3-1.343-2.997-3.06L1.197 10.2a4.2 4.2 0 0 1 4.2-4.2h14.4c2.32 0 4.2 1.88 4.197 4.14l1.203 12.06a3 3 0 0 1-3 3 3.528 3.528 0 0 1-3.459-2.836l-.633-3.164H7.09z"
-  }), _react.default.createElement("path", {
-    d: "M7.2 12H9a.6.6 0 1 1 0 1.2H7.2V15A.6.6 0 1 1 6 15v-1.8H4.2a.6.6 0 1 1 0-1.2H6v-1.8a.6.6 0 1 1 1.2 0V12zM12 .6v6a.6.6 0 1 0 1.2 0v-6a.6.6 0 1 0-1.2 0zM18 10.8a1.2 1.2 0 1 1 0-2.4 1.2 1.2 0 0 1 0 2.4zm0 4.8a1.2 1.2 0 1 1 0-2.4 1.2 1.2 0 0 1 0 2.4zm-2.4-2.4a1.2 1.2 0 1 1 0-2.4 1.2 1.2 0 0 1 0 2.4zm4.8 0a1.2 1.2 0 1 1 0-2.4 1.2 1.2 0 0 1 0 2.4z"
-  }))), _react.default.createElement("span", null, title), _react.default.createElement("svg", {
-    className: "category-right-icon",
-    width: "16px",
-    viewBox: "0 0 24 24"
-  }, _react.default.createElement("g", {
-    className: "nc-icon-wrapper",
-    strokeLinecap: "round",
-    strokeLinejoin: "round",
-    strokeWidth: "2",
-    fill: "#8c8f91",
-    stroke: "#8c8f91"
-  }, _react.default.createElement("polyline", {
-    fill: "none",
-    stroke: "#8c8f91",
-    strokeMiterlimit: "10",
-    points: "2,7 12,17 22,7 ",
-    transform: "translate(0, 0)"
-  })))), active && _react.default.createElement(SubCategories, {
+  }, _react.default.createElement("div", {
+    className: "category-left-icon"
+  }, _react.default.createElement(_InteriorIcon.default, null)), _react.default.createElement("span", null, title), _react.default.createElement("div", {
+    className: "category-right-icon"
+  }, _react.default.createElement(_ArrowDownIcon.default, null)))), active && _react.default.createElement(SubCategories, {
     sub_categories: sub_categories,
     onClick: function onClick(item) {
       subCategoriesOnClick(item);

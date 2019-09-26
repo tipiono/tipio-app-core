@@ -1,4 +1,4 @@
-.main-categories {
+.customer-main-categories {
     .category-item.dropdown {
         padding-top: 24px;
         border-bottom: 1px solid $gray-200;
@@ -122,8 +122,6 @@
 
     ////// Select //////////////////////////////////////////////////
     .category-item.select {
-        display: flex;
-        align-items: baseline;
         padding-top: 24px;
         border-bottom: 1px solid $gray-200;
 
@@ -141,7 +139,6 @@
 
             .category-left-icon {
                 margin-right: 22px;
-                margin-left: 22px;
             }
 
             .category-right-icon {
@@ -195,4 +192,94 @@
     }
 }
 
+
+
+
+
+
+.company-main-categories {
+    .category-item {
+        border-bottom: 1px solid $gray-200;
+
+        .category-link {
+            display: flex;
+            align-items: center;
+            font-size: 20px;
+            color: $gray-700;
+            width: 100%;
+            padding: 24px 0;
+
+            &:hover {
+                text-decoration: none;
+            }
+
+            .category-left-icon {
+                margin-right: 22px;
+                margin-left: 22px;
+            }
+
+            .category-right-icon {
+                margin-left: auto;
+            }
+        }
+
+        &.select {
+            display: flex;
+            align-items: center;
+
+
+            .category-link {
+                .category-right-icon {
+                    margin-left: auto;
+                    display: none;
+                }
+                &:hover {
+                    cursor: default;
+                }
+            }
+        }
+
+        .active {
+            span {
+                color: $primary;
+                box-shadow: 0 2px 0 0 $secondary;
+            }
+            .category-right-icon {
+                transform: rotate(180deg) !important;
+
+                * {
+                    stroke: $primary;
+                }
+            }
+        }
+
+        .sub-categories {
+            margin-left: 46px;
+            padding-bottom: 24px;
+
+            .sub-category-item {
+                display: flex;
+                align-items: center;
+                padding: 8px 0;
+
+                .sub-category-link {
+                    font-size: 18px;
+                    color: $gray-700;
+                }
+            }
+
+            .sub-sub-categories {
+                margin-left: 30px;
+
+                .sub-sub-category-link {
+                    font-family: 'Riposte-Light', sans-serif;
+                    padding: 8px 0;
+                    display: block;
+                    background-color: transparent;
+                    color: $gray-800;
+                }
+            }
+        }
+    }
+}
 

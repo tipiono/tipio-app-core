@@ -21,15 +21,15 @@ var VotingCard = function VotingCard(_ref) {
   var children = _ref.children,
       state = _ref.state;
   return _react.default.createElement(_BaseCard.default, null, state !== 'interested' && _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("div", {
-    className: "sidebarCard__footer--action"
+    className: "customerSidebarCard__footer--action"
   }, _react.default.createElement(_SecondaryOutlineButton.default, {
     text: 'Meld interesse'
   })), _react.default.createElement("p", {
-    className: "sidebarCard__footer--alert"
+    className: "customerSidebarCard__footer--alert"
   }, "Dette er ikke bindende")), state === 'interested' && _react.default.createElement("div", {
-    className: "sidebarCard__footer--action"
+    className: "customerSidebarCard__footer--action"
   }, _react.default.createElement(_ShareButton.default, null)), _react.default.createElement("p", {
-    className: "sidebarCard__footer--interestedCounter"
+    className: "customerSidebarCard__footer--interestedCounter"
   }, "Allerede 221 Interesserte!"));
 };
 

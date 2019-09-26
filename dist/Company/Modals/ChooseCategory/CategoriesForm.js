@@ -17,6 +17,8 @@ var _CategoryItemWithDropdown = _interopRequireDefault(require("./CategoryItemWi
 
 var _CategoriesHeader = _interopRequireDefault(require("./CategoriesHeader"));
 
+var _classnames = _interopRequireDefault(require("classnames"));
+
 var _SecondaryButton = _interopRequireDefault(require("../../../UI/Buttons/SecondaryButton"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -123,7 +125,10 @@ function CategoriesForm(_ref) {
   }, _react.default.createElement(_reactMasonryCss.default, {
     breakpointCols: breakpointColumnsObj,
     className: "my-masonry-grid browse-categories",
-    columnClassName: "my-masonry-grid_column main-categories"
+    columnClassName: (0, _classnames.default)("my-masonry-grid_column", {
+      "customer-main-categories": !withCheckbox,
+      "company-main-categories": withCheckbox
+    })
   }, active && active.map(function (item) {
     if (item.height === 1) {
       return _react.default.createElement(_CategoryItemNavigator.default, {

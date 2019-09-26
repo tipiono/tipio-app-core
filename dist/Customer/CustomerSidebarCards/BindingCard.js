@@ -29,29 +29,29 @@ var BindingCard = function BindingCard(_ref) {
       props = _objectWithoutProperties(_ref, ["children", "state"]);
 
   return _react.default.createElement(_BaseCard.default, props, _react.default.createElement("ul", {
-    className: "sidebarCard__footer__salePrice"
+    className: "customerSidebarCard__footer__salePrice"
   }, _react.default.createElement("li", {
-    className: "sidebarCard__footer__salePrice--minBuyers"
+    className: "customerSidebarCard__footer__salePrice--minBuyers"
   }, _react.default.createElement("h3", {
-    className: "sidebarCard__footer__salePrice--minBuyers--price"
+    className: "customerSidebarCard__footer__salePrice--minBuyers--price"
   }, "2 490 Kr"), _react.default.createElement("span", {
-    className: "sidebarCard__footer__salePrice--minBuyers--label"
+    className: "customerSidebarCard__footer__salePrice--minBuyers--label"
   }, "Pris fra 1-50 kj\xF8p")), _react.default.createElement("li", {
-    className: "sidebarCard__footer__salePrice--maxBuyers"
+    className: "customerSidebarCard__footer__salePrice--maxBuyers"
   }, _react.default.createElement("h3", {
-    className: "sidebarCard__footer__salePrice--maxBuyers--price"
+    className: "customerSidebarCard__footer__salePrice--maxBuyers--price"
   }, " 1 990 Kr"), _react.default.createElement("span", {
-    className: "sidebarCard__footer__salePrice--maxBuyers--label"
+    className: "customerSidebarCard__footer__salePrice--maxBuyers--label"
   }, "Pris fra 51 kj\xF8p"))), _react.default.createElement("div", {
-    className: "sidebarCard__footer--progressBar"
+    className: "customerSidebarCard__footer--progressBar"
   }, _react.default.createElement(_SalesProgressBarTooltip.default, {
     percentage: 50
   })), state !== 'bought' && _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_SecondaryButton.default, {
     text: 'Legg i handlekurv'
   })), state === 'bought' && _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("div", {
-    className: "sidebarCard__footer--action"
+    className: "customerSidebarCard__footer--action"
   }, _react.default.createElement(_ShareButton.default, null)), _react.default.createElement("div", {
-    className: "sidebarCard__footer--timeline"
+    className: "customerSidebarCard__footer--timeline"
   }, _react.default.createElement(_HorizontalTimeline.default, null))));
 };
 

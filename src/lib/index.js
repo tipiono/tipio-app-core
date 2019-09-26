@@ -57,6 +57,7 @@ import SaleCard from './Customer/Cards/SaleCard/SaleCard';
 import SaleCardAddToCartButton from './Customer/Cards/SaleCard/SaleCardAddToCartButton';
 import Onboarding from './Customer/Modals/Onboarding/Onboarding';
 import Categories from './Company/Modals/ChooseCategory/Categories';
+import CustomerCategories from './Customer/Modals/ChooseCategory/Categories';
 import TipioSidebarVotingCard from './Customer/CustomerSidebarCards/VotingCard';
 import TipioSidebarBindingCard from './Customer/CustomerSidebarCards/BindingCard';
 import ImageUploader from './Customer/ImageUploader/ImageUploader';
@@ -168,5 +169,6 @@ export {
     SubNav,
     InteriorIcon,
     CompanySidebarBaseCard,
-    ArrowDownIcon
+    ArrowDownIcon,
+    CustomerCategories
 };
