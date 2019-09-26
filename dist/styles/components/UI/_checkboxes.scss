@@ -16,6 +16,8 @@ $md-checkbox-label-padding: .75em;
     position: relative;
     margin: $md-checkbox-margin;
     text-align: left;
+    display: flex;
+    align-items: center;
 
     &.md-checkbox-inline {
         display: inline-block;

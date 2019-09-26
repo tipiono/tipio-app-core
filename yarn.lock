@@ -711,6 +711,12 @@
   dependencies:
     regenerator-runtime "^0.13.2"
 
+"@babel/runtime@^7.6.0":
+  version "7.6.2"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.6.2.tgz#c3d6e41b304ef10dcf13777a33e7694ec4a9a6dd"
+  dependencies:
+    regenerator-runtime "^0.13.2"
+
 "@babel/template@^7.1.0", "@babel/template@^7.4.0", "@babel/template@^7.4.4":
   version "7.4.4"
   resolved "https://registry.yarnpkg.com/@babel/template/-/template-7.4.4.tgz#f4b88d1225689a08f5bc3a17483545be9e4ed237"
@@ -1518,6 +1524,12 @@
     "@svgr/plugin-jsx" "^4.3.2"
     "@svgr/plugin-svgo" "^4.3.1"
     loader-utils "^1.2.3"
+
+"@tanem/svg-injector@^8.0.31":
+  version "8.0.32"
+  resolved "https://registry.yarnpkg.com/@tanem/svg-injector/-/svg-injector-8.0.32.tgz#7b710d52c33f36640e1c8ade9bdda11d9b2ccd08"
+  dependencies:
+    "@babel/runtime" "^7.6.0"
 
 "@types/babel__core@^7.1.0":
   version "7.1.2"
@@ -8944,6 +8956,14 @@ react-select@^3.0.4:
     raf "^3.4.0"
     react-input-autosize "^2.2.1"
     react-transition-group "^2.2.1"
+
+react-svg@^10.0.21:
+  version "10.0.21"
+  resolved "https://registry.yarnpkg.com/react-svg/-/react-svg-10.0.21.tgz#328b14b6b12b9a33cf8372377ec00d1f524ad18f"
+  dependencies:
+    "@babel/runtime" "^7.6.0"
+    "@tanem/svg-injector" "^8.0.31"
+    prop-types "^15.7.2"
 
 react-swipe@^6.0.4:
   version "6.0.4"

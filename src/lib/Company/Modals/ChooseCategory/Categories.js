@@ -1,5 +1,5 @@
 import React from 'react';
-import CategoriesForm from '../../../Company/Modals/ChooseCategory/CategoriesForm';
+import CategoriesForm from './CategoriesForm';
 import {Modal, ModalType} from '../../../UI/Modal/Modal'
 
 function Categories (props) {
