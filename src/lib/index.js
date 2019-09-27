@@ -82,7 +82,8 @@ import CustomerListCompanyCard from './Company/Cards/CustomerListCompanyCard/Cus
 import GiveOfferCompanyCard from './Company/Cards/GiveOfferCompanyCard/GiveOfferCompanyCard';
 import TipioWithOfferCompanyCard from './Company/Cards/TipioWithOfferCompanyCard/TipioWithOfferCompanyCard';
 import AdditionalSaleCompanyCard from './Company/Cards/AdditionalSaleCompanyCard/AdditionalSaleCompanyCard';
-import CompanySidebarBaseCard from './Company/CompanySidebarCards/CompanySidebarBaseCard'
+import CompanySidebarBaseCard from './Company/CompanySidebarCards/CompanySidebarBaseCard';
+import CompanyAddBidCard from   './Company/CompanySidebarCards/CompanyAddBidCard';
 
 /*
 *   Layout
@@ -172,5 +173,6 @@ export {
     CompanySidebarBaseCard,
     ArrowDownIcon,
     CustomerCategories,
-    ButtonXL
+    ButtonXL,
+    CompanyAddBidCard
 };

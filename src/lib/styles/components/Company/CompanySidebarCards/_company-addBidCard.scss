@@ -1,0 +1,45 @@
+.companyAddBidCard {
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+
+    border-top: 1px solid $gray-200;
+    padding: 1rem 1rem 0;
+
+    &--cost {
+      &--label {
+        font-size: .875rem;
+        color: $gray-500;
+        margin-bottom: .4rem;
+      }
+
+      &--amount {
+        font-size: 1.125rem;
+        color: $gray-700;
+        text-decoration: line-through;
+        margin-bottom: 0;
+      }
+    }
+
+    &--sale {
+      &--label {
+        color: $gray-500;
+        font-size: .875rem;
+        margin-bottom: .4rem;
+      }
+
+      &--amount {
+        font-size: 1.125rem;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &--interested {
+    color: $cyan;
+    font-size: 1.125rem;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+}

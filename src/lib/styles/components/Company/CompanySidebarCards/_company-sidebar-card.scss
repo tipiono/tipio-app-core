@@ -18,7 +18,7 @@
     }
 
     &__cost {
-      margin-bottom: 2.8rem;
+      margin-bottom: 2rem;
 
       &--label {
         font-size: .875rem;
@@ -27,8 +27,7 @@
       }
 
       &--price {
-        color: $gray-700;
-        text-decoration: line-through;
+        margin-bottom: 0;
       }
     }
   }
