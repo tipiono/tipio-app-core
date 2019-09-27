@@ -435,6 +435,12 @@ Object.defineProperty(exports, "CompanySidebarBaseCard", {
     return _CompanySidebarBaseCard.default;
   }
 });
+Object.defineProperty(exports, "CompanyAddBidCard", {
+  enumerable: true,
+  get: function get() {
+    return _CompanyAddBidCard.default;
+  }
+});
 Object.defineProperty(exports, "PublicLayout", {
   enumerable: true,
   get: function get() {
@@ -600,6 +606,8 @@ var _TipioWithOfferCompanyCard = _interopRequireDefault(require("./Company/Cards
 var _AdditionalSaleCompanyCard = _interopRequireDefault(require("./Company/Cards/AdditionalSaleCompanyCard/AdditionalSaleCompanyCard"));
 
 var _CompanySidebarBaseCard = _interopRequireDefault(require("./Company/CompanySidebarCards/CompanySidebarBaseCard"));
+
+var _CompanyAddBidCard = _interopRequireDefault(require("./Company/CompanySidebarCards/CompanyAddBidCard"));
 
 var _index = _interopRequireDefault(require("./UI/Layout/Public/index"));
 
