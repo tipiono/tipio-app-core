@@ -9,8 +9,14 @@ var _react = _interopRequireDefault(require("react"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
 var CompanySidebarBaseCard = function CompanySidebarBaseCard(_ref) {
-  var children = _ref.children;
+  var children = _ref.children,
+      props = _objectWithoutProperties(_ref, ["children"]);
+
   return _react.default.createElement("div", {
     className: "companySidebarCard"
   }, _react.default.createElement("div", {
@@ -25,7 +31,9 @@ var CompanySidebarBaseCard = function CompanySidebarBaseCard(_ref) {
     className: "companySidebarCard__header__cost"
   }, _react.default.createElement("p", {
     className: "companySidebarCard__header__cost--label"
-  }, "Potensiell omsetning"), _react.default.createElement("h3", {
+  }, "Potensiell omsetning"), props.loading ? _react.default.createElement("div", {
+    className: "placeholder-content companySidebarCard__header--placeholder"
+  }, "\xA0") : _react.default.createElement("h3", {
     className: "companySidebarCard__header__cost--price"
   }, "23 243 850 Kr"))), children);
 };

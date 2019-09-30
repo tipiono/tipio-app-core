@@ -95,7 +95,7 @@ storiesOf('UI/Forms/Radios', module)
     .add('Default', () =>
         <>
             <div className="col-3 m-5">
-                <FromToInput />
+                <FromToInput label={"Antall kjøpere"}/>
             </div>
         </>
     )
@@ -105,7 +105,7 @@ storiesOf('UI/Forms/Radios', module)
         .add('Default', () =>
             <>
                 <div className="col-3 m-5">
-                    <PriceInput />
+                    <PriceInput placeholder={"50"} label={"Ditt tilbud"}/>
                 </div>
             </>
         )

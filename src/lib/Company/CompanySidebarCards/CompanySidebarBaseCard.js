@@ -12,7 +12,7 @@ const CompanySidebarBaseCard = ({children, ...props}) => {
 
                 <div className="companySidebarCard__header__cost">
                     <p className="companySidebarCard__header__cost--label">Potensiell omsetning</p>
-                    {props.loading ? (<div className="placeholder-content">
+                    {props.loading ? (<div className="placeholder-content companySidebarCard__header--placeholder">
                             &nbsp;
                     </div>) : (
                         <h3 className="companySidebarCard__header__cost--price">23 243 850 Kr</h3>

@@ -287,13 +287,21 @@ textarea {
   }
 }
 
+
+
+///// From-to input
+
 .from-to-input {
-  overflow: visible !important;
+  //overflow: visible !important;
 }
 
 .from-to-input input {
   padding-left: 75px !important;
   border-color: #c9cfd3 !important;
+}
+
+.from-to-input input::placeholder {
+  color: $gray-500;
 }
 
 .from-to-input > input:focus, .from-to-input > textarea:focus {
@@ -324,4 +332,41 @@ textarea {
   position: absolute;
   top: 22px;
   left: 56px;
+}
+
+
+///// Price  input
+
+.price-input > input:focus, .price-input > textarea:focus {
+  border-color: #4f2e90 !important;
+}
+
+.price-input input {
+  padding-right: 45px !important;
+  border-color: #c9cfd3 !important;
+}
+
+.price-input input::placeholder {
+  color: $gray-500;
+}
+
+
+.price-input > .outside-label {
+  position: absolute;
+  top: -6px;
+  left: 14px;
+  z-index: 1;
+  background: white;
+  font-size: 12px;
+  color: #8c8f91;
+  margin-bottom: 0;
+  padding: 2px;
+}
+
+.price-input > .static-placeholder {
+  position: absolute;
+  top: 22px;
+  right: 16px;
+  text-align: right;
+  font-size: 14px;
 }
