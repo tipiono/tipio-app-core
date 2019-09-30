@@ -21,3 +21,19 @@ storiesOf('UI/Accordion', module)
             </div>
         </>
     )
+    .add('Accordion With Multiple Items', () =>
+    <>
+        <div className="col-3 m-3">
+            <Accordion >
+                <div title={'First tab'}>
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
+                    terry richardson ad squid.
+                </div>
+                <div title={'Second Tab'}>
+                    3 wolf moon officia aute, non cupidatat skateboard
+                    dolor brunch.
+                </div>
+            </Accordion>
+        </div>
+    </>
+)
