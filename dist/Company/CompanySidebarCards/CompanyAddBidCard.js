@@ -12,13 +12,15 @@ var _CompanySidebarBaseCard = _interopRequireDefault(require("./CompanySidebarBa
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var CompanyAddBidCard = function CompanyAddBidCard(props) {
+  var tipio = props.tipio,
+      meta = props.meta;
   return _react.default.createElement("div", {
     className: "companyAddBidCard"
   }, _react.default.createElement(_CompanySidebarBaseCard.default, props, props.loading ? _react.default.createElement("div", {
     className: "placeholder-content companyAddBidCard--placeholder mb-4"
   }, "\xA0") : _react.default.createElement("h6", {
     className: "companyAddBidCard--interested"
-  }, "987 p\xE5meldte!"), _react.default.createElement("div", {
+  }, meta.joined_count, " p\xE5meldte!"), _react.default.createElement("div", {
     className: "companyAddBidCard__price"
   }, _react.default.createElement("div", {
     className: "companyAddBidCard__price--cost"
@@ -26,7 +28,7 @@ var CompanyAddBidCard = function CompanyAddBidCard(props) {
     className: "companyAddBidCard__price--cost--label"
   }, "Markedspris"), _react.default.createElement("h6", {
     className: "companyAddBidCard__price--cost--amount"
-  }, "27 990 Kr")), _react.default.createElement("span", {
+  }, tipio.market_price, " Kr")), _react.default.createElement("span", {
     className: "border-right"
   }), _react.default.createElement("div", {
     className: "companyAddBidCard__price--sale"
@@ -34,7 +36,7 @@ var CompanyAddBidCard = function CompanyAddBidCard(props) {
     className: "companyAddBidCard__price--sale--label"
   }, "Minimumpris"), _react.default.createElement("h6", {
     className: "companyAddBidCard__price--sale--amount"
-  }, "23 550 Kr")))));
+  }, tipio.wanted_price, " Kr")))));
 };
 
 var _default = CompanyAddBidCard;

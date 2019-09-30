@@ -38,6 +38,7 @@ import FromToInput from './UI/Forms/FromToInput';
 import ButtonXL from './UI/Buttons/ButtonXL';
 import ShowMoreText from './UI/Text/ShowMoreText';
 import PriceInput from './UI/Forms/PriceInput';
+import ContentSpinner from './UI/Spinner/ContentSpinner';
 
 /*
 *   Customer/Private Components
@@ -182,5 +183,6 @@ export {
     DropDownItem,
     FromToInput,
     ShowMoreText,
-    PriceInput
+    PriceInput,
+    ContentSpinner
 };
