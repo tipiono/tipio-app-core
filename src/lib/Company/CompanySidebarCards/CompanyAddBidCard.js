@@ -2,10 +2,17 @@ import React from 'react';
 import CompanySidebarBaseCard from "./CompanySidebarBaseCard";
 
 
-const CompanyAddBidCard = () => {
+const CompanyAddBidCard = (props) => {
     return (
         <div className="companyAddBidCard">
-            <CompanySidebarBaseCard>
+            <CompanySidebarBaseCard {...props}>
+
+                {props.loading ? (<div className="placeholder-content">
+                &nbsp;
+                </div>) : (
+                    <h6 className="companyAddBidCard--interested">987 påmeldte!</h6>
+                )}
+
                 <h6 className="companyAddBidCard--interested">987 påmeldte!</h6>
                 <div className="companyAddBidCard__price">
                     <div className="companyAddBidCard__price--cost">

@@ -1,7 +1,6 @@
 import React from 'react';
-import ShimmerEffect from 'react-shimmer'
 
-const CompanySidebarBaseCard = ({ children }) => {
+const CompanySidebarBaseCard = ({children, ...props}) => {
     return (
         <div className="companySidebarCard">
 
@@ -13,12 +12,11 @@ const CompanySidebarBaseCard = ({ children }) => {
 
                 <div className="companySidebarCard__header__cost">
                     <p className="companySidebarCard__header__cost--label">Potensiell omsetning</p>
-                    <ShimmerEffect
-                        src="https://example.com/test.jpg"
-                        width={640} height={480}
-                        style={{ objectFit: 'cover' }}
-                    />
-                    <h3 className="companySidebarCard__header__cost--price">23 243 850 Kr</h3>
+                    {props.loading ? (<div className="placeholder-content">
+                            &nbsp;
+                    </div>) : (
+                        <h3 className="companySidebarCard__header__cost--price">23 243 850 Kr</h3>
+                    )}
                 </div>
             </div>
             {children}
