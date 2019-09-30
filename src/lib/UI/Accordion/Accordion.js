@@ -48,7 +48,7 @@ class Accordion extends Component {
         super(props);
         this.headerOnClick = this.headerOnClick.bind(this)
         this.state = {
-            active: 0
+            active: 1
         }
     }
 

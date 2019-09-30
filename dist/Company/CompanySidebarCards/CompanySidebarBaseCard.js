@@ -17,6 +17,8 @@ var CompanySidebarBaseCard = function CompanySidebarBaseCard(_ref) {
   var children = _ref.children,
       props = _objectWithoutProperties(_ref, ["children"]);
 
+  var tipio = props.tipio,
+      meta = props.meta;
   return _react.default.createElement("div", {
     className: "companySidebarCard"
   }, _react.default.createElement("div", {
@@ -25,9 +27,9 @@ var CompanySidebarBaseCard = function CompanySidebarBaseCard(_ref) {
     className: "companySidebarCard__header__content"
   }, _react.default.createElement("h3", {
     className: "companySidebarCard__header__content--title"
-  }, "Samsung 65\" UHD Smart- TV UE65NU7105"), _react.default.createElement("p", {
+  }, tipio.title), _react.default.createElement("p", {
     className: "companySidebarCard__header__content--subtitle"
-  }, "Varekode: UE65NU7105XXC")), _react.default.createElement("div", {
+  }, "Varekode: ", tipio.product_code, " ")), _react.default.createElement("div", {
     className: "companySidebarCard__header__cost"
   }, _react.default.createElement("p", {
     className: "companySidebarCard__header__cost--label"
@@ -35,7 +37,7 @@ var CompanySidebarBaseCard = function CompanySidebarBaseCard(_ref) {
     className: "placeholder-content companySidebarCard__header--placeholder"
   }, "\xA0") : _react.default.createElement("h3", {
     className: "companySidebarCard__header__cost--price"
-  }, "23 243 850 Kr"))), children);
+  }, meta.potntial_earning, " Kr"))), children);
 };
 
 var _default = CompanySidebarBaseCard;

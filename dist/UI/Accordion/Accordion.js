@@ -91,7 +91,7 @@ function (_Component) {
     _this = _possibleConstructorReturn(this, _getPrototypeOf(Accordion).call(this, props));
     _this.headerOnClick = _this.headerOnClick.bind(_assertThisInitialized(_this));
     _this.state = {
-      active: 0
+      active: 1
     };
     return _this;
   }
