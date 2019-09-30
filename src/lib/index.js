@@ -37,6 +37,7 @@ import { DropDown, DropDownItem } from './UI/DdropDown/DropDown';
 import FromToInput from './UI/Forms/FromToInput';
 import ButtonXL from './UI/Buttons/ButtonXL';
 import ShowMoreText from './UI/Text/ShowMoreText';
+import PriceInput from './UI/Forms/PriceInput';
 
 /*
 *   Customer/Private Components
@@ -180,5 +181,6 @@ export {
     DropDown,
     DropDownItem,
     FromToInput,
-    ShowMoreText
+    ShowMoreText,
+    PriceInput
 };

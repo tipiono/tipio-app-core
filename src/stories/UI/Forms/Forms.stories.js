@@ -1,6 +1,6 @@
 import React from 'react';
 import {storiesOf} from '@storybook/react';
-import {Input, Textarea, Select, Checkbox, RadioButton, ToggleSwitch, FromToInput } from '../../../lib'
+import {Input, Textarea, Select, Checkbox, RadioButton, ToggleSwitch, FromToInput, PriceInput } from '../../../lib'
 
 storiesOf('UI/Forms', module)
     .add('Input', () =>
@@ -94,8 +94,18 @@ storiesOf('UI/Forms/Radios', module)
 
     .add('Default', () =>
         <>
-            <div className="col-3 m-3">
+            <div className="col-3 m-5">
                 <FromToInput />
             </div>
         </>
     )
+
+    storiesOf('UI/Forms/PriceInput', module)
+
+        .add('Default', () =>
+            <>
+                <div className="col-3 m-5">
+                    <PriceInput />
+                </div>
+            </>
+        )
