@@ -12,8 +12,9 @@
   line-height: 1.5;
   overflow: hidden;
   width: 100%;
+
   > {
-    input, textarea , .css-1pcexqc-container {
+    input, textarea, .css-1pcexqc-container {
       box-sizing: border-box;
       margin: 0;
       width: 100% !important;
@@ -30,7 +31,7 @@
       font-family: inherit;
       font-size: inherit;
       line-height: inherit;
-      caret-color:rgba(var(--pure-material-primary-rgb, 33, 150, 243),1);
+      caret-color: rgba(var(--pure-material-primary-rgb, 33, 150, 243), 1);
       transition: border 0.2s, box-shadow 0.2s;
       //font-size: 16px;
       font-weight: 300;
@@ -38,6 +39,7 @@
       font-stretch: normal;
       color: #5c6265;
     }
+
     input + span, textarea + span, .css-1pcexqc-container + span {
       position: absolute;
       top: 0;
@@ -53,6 +55,7 @@
       transition: color 0.2s, font-size 0.2s, line-height 0.2s;
 
     }
+
     input + span {
       &::before, &::after {
         content: "";
@@ -68,6 +71,7 @@
         transition: border-color 0.2s, box-shadow 0.2s;
       }
     }
+
     textarea + span {
       &::before, &::after {
         content: "";
@@ -98,65 +102,79 @@
         transition: border-color 0.2s, box-shadow 0.2s;
       }
     }
-    input + span::before, textarea + span::before,.css-1pcexqc-container + span::before {
+
+    input + span::before, textarea + span::before, .css-1pcexqc-container + span::before {
       margin-right: 4px;
       border-left: solid 1px transparent;
       border-radius: 1;
     }
-    input + span::after, textarea + span::after,.css-1pcexqc-container + span::after {
+
+    input + span::after, textarea + span::after, .css-1pcexqc-container + span::after {
       flex-grow: 1;
       margin-left: 4px;
       border-right: solid 1px transparent;
       border-radius: 1px;
     }
+
     .css-1pcexqc-container {
       padding: 0px !important;
     }
   }
+
   &:hover > {
-    input, textarea,.css-1pcexqc-container {
+    input, textarea, .css-1pcexqc-container {
       border-color: #4f2e90;
       border-top-color: transparent;
     }
-    input + span::before, textarea + span::before ,.css-1pcexqc-container + span::before , input + span::after, textarea + span::after , .css-1pcexqc-container + span::after {
+
+    input + span::before, textarea + span::before, .css-1pcexqc-container + span::before, input + span::after, textarea + span::after, .css-1pcexqc-container + span::after {
       border-top-color: #4f2e90;
     }
+
     input:not(:focus):placeholder-shown, textarea:not(:focus):placeholder-shown, .css-1pcexqc-container:not(:focus):placeholder-shown {
       border-color: #4f2e90;
     }
   }
+
   > {
-    input:not(:focus):placeholder-shown, textarea:not(:focus):placeholder-shown,.css-1pcexqc-container:not(:focus):placeholder-shown {
+    input:not(:focus):placeholder-shown, textarea:not(:focus):placeholder-shown, .css-1pcexqc-container:not(:focus):placeholder-shown {
       border-top-color: #c9cfd3;
     }
+
     input:not(:focus):placeholder-shown + span, textarea:not(:focus):placeholder-shown + span, .css-1pcexqc-container:not(:focus):placeholder-shown + span {
       font-size: inherit;
       line-height: 68px;
     }
-    input:not(:focus):placeholder-shown + span::before, textarea:not(:focus):placeholder-shown + span::before,.css-1pcexqc-container:not(:focus):placeholder-shown + span::before ,  input:not(:focus):placeholder-shown + span::after, textarea:not(:focus):placeholder-shown + span::after , .css-1pcexqc-container:not(:focus):placeholder-shown + span::before {
+
+    input:not(:focus):placeholder-shown + span::before, textarea:not(:focus):placeholder-shown + span::before, .css-1pcexqc-container:not(:focus):placeholder-shown + span::before, input:not(:focus):placeholder-shown + span::after, textarea:not(:focus):placeholder-shown + span::after, .css-1pcexqc-container:not(:focus):placeholder-shown + span::before {
       border-top-color: transparent;
     }
+
     input:focus, textarea:focus {
       border-color: #4f2e90;
       border-top-color: transparent;
       //box-shadow: inset 1px 0 var(--pure-material-safari-helper1), inset -1px 0 var(--pure-material-safari-helper1), inset 0 -1px var(--pure-material-safari-helper1);
       outline: none;
     }
-    input:focus + span, textarea:focus + span , .css-1pcexqc-container:focus + span {
+
+    input:focus + span, textarea:focus + span, .css-1pcexqc-container:focus + span {
       color: #4f2e90;
     }
+
     input:focus + span {
       &::before, &::after {
         border-top-color: #4f2e90;
         box-shadow: none;
       }
     }
+
     textarea:focus + span {
       &::before, &::after {
         border-top-color: #4f2e90;
         box-shadow: none;
       }
     }
+
     .css-1pcexqc-container:focus + span {
       &::before, &::after {
         border-top-color: #4f2e90;
@@ -164,11 +182,12 @@
       }
     }
 
-    input:disabled, textarea:disabled ,.css-1pcexqc-container:disabled{
+    input:disabled, textarea:disabled, .css-1pcexqc-container:disabled {
       border-color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.38) !important;
       border-top-color: transparent !important;
       color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.38);
       pointer-events: none;
+
       + span {
         border-color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.38) !important;
         border-top-color: transparent !important;
@@ -176,11 +195,13 @@
         pointer-events: none;
       }
     }
+
     input:disabled + span {
       &::before, &::after {
         border-top-color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.38) !important;
       }
     }
+
     textarea:disabled + span {
       &::before, &::after {
         border-top-color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.38) !important;
@@ -192,22 +213,27 @@
         border-top-color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.38) !important;
       }
     }
-    input:disabled:placeholder-shown, textarea:disabled:placeholder-shown , .css-1pcexqc-container:disabled:placeholder-shown {
+
+    input:disabled:placeholder-shown, textarea:disabled:placeholder-shown, .css-1pcexqc-container:disabled:placeholder-shown {
       border-top-color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.38) !important;
+
       + span {
         border-top-color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.38) !important;
       }
     }
+
     input:disabled:placeholder-shown + span {
       &::before, &::after {
         border-top-color: transparent !important;
       }
     }
+
     textarea:disabled:placeholder-shown + span {
       &::before, &::after {
         border-top-color: transparent !important;
       }
     }
+
     .css-1pcexqc-container:disabled:placeholder-shown + span {
       &::before, &::after {
         border-top-color: transparent !important;
@@ -240,15 +266,18 @@ textarea {
     .pure-material-textfield-outlined > {
       input, textarea {
         transition-duration: 0.1s;
+
         + span {
           transition-duration: 0.1s;
         }
       }
+
       input + span {
         &::before, &::after {
           transition-duration: 0.1s;
         }
       }
+
       textarea + span {
         &::before, &::after {
           transition-duration: 0.1s;
@@ -256,4 +285,88 @@ textarea {
       }
     }
   }
+}
+
+
+
+///// From-to input
+
+.from-to-input {
+  //overflow: visible !important;
+}
+
+.from-to-input input {
+  padding-left: 75px !important;
+  border-color: #c9cfd3 !important;
+}
+
+.from-to-input input::placeholder {
+  color: $gray-500;
+}
+
+.from-to-input > input:focus, .from-to-input > textarea:focus {
+  border-color: #4f2e90 !important;
+}
+
+.from-to-input > .outside-label {
+  position: absolute;
+  top: -6px;
+  left: 14px;
+  z-index: 1;
+  background: white;
+  font-size: 12px;
+  color: #8c8f91;
+  margin-bottom: 0;
+  padding: 2px;
+}
+
+.from-to-input > .inside-label {
+  position: absolute;
+  top: 24px;
+  left: 16px;
+  font-size: 14px;
+  color: #8c8f91;
+}
+
+.from-to-input > .static-placeholder {
+  position: absolute;
+  top: 22px;
+  left: 56px;
+}
+
+
+///// Price  input
+
+.price-input > input:focus, .price-input > textarea:focus {
+  border-color: #4f2e90 !important;
+}
+
+.price-input input {
+  padding-right: 45px !important;
+  border-color: #c9cfd3 !important;
+}
+
+.price-input input::placeholder {
+  color: $gray-500;
+}
+
+
+.price-input > .outside-label {
+  position: absolute;
+  top: -6px;
+  left: 14px;
+  z-index: 1;
+  background: white;
+  font-size: 12px;
+  color: #8c8f91;
+  margin-bottom: 0;
+  padding: 2px;
+}
+
+.price-input > .static-placeholder {
+  position: absolute;
+  top: 22px;
+  right: 16px;
+  text-align: right;
+  font-size: 14px;
 }

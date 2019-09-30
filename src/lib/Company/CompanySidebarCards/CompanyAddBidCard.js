@@ -7,9 +7,11 @@ const CompanyAddBidCard = (props) => {
         <div className="companyAddBidCard">
             <CompanySidebarBaseCard {...props}>
 
-                {props.loading ? (<div className="placeholder-content">
-                &nbsp;
-                </div>) : (
+                {props.loading ? (
+                    <div className="placeholder-content companyAddBidCard--placeholder mb-4">
+                        &nbsp;
+                    </div>
+                ) : (
                     <h6 className="companyAddBidCard--interested">987 påmeldte!</h6>
                 )}
 
@@ -26,11 +28,9 @@ const CompanyAddBidCard = (props) => {
                         <h6 className="companyAddBidCard__price--sale--amount">23 550 Kr</h6>
                     </div>
                 </div>
-
-
             </CompanySidebarBaseCard>
         </div>
-    );
+    )
 };
 
 export default CompanyAddBidCard;

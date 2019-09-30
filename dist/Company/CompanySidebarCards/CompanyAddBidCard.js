@@ -11,10 +11,12 @@ var _CompanySidebarBaseCard = _interopRequireDefault(require("./CompanySidebarBa
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var CompanyAddBidCard = function CompanyAddBidCard() {
+var CompanyAddBidCard = function CompanyAddBidCard(props) {
   return _react.default.createElement("div", {
     className: "companyAddBidCard"
-  }, _react.default.createElement(_CompanySidebarBaseCard.default, null, _react.default.createElement("h6", {
+  }, _react.default.createElement(_CompanySidebarBaseCard.default, props, props.loading ? _react.default.createElement("div", {
+    className: "placeholder-content companyAddBidCard--placeholder mb-4"
+  }, "\xA0") : _react.default.createElement("h6", {
     className: "companyAddBidCard--interested"
   }, "987 p\xE5meldte!"), _react.default.createElement("div", {
     className: "companyAddBidCard__price"
