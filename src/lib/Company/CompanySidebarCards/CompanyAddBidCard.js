@@ -6,9 +6,7 @@ const CompanyAddBidCard = () => {
     return (
         <div className="companyAddBidCard">
             <CompanySidebarBaseCard>
-
                 <h6 className="companyAddBidCard--interested">987 påmeldte!</h6>
-
                 <div className="companyAddBidCard__price">
                     <div className="companyAddBidCard__price--cost">
                         <p className="companyAddBidCard__price--cost--label">Markedspris</p>
@@ -22,11 +20,9 @@ const CompanyAddBidCard = () => {
                         <h6 className="companyAddBidCard__price--sale--amount">23 550 Kr</h6>
                     </div>
                 </div>
-
-
             </CompanySidebarBaseCard>
         </div>
-    );
+    )
 };
 
 export default CompanyAddBidCard;

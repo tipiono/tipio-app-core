@@ -1,6 +1,6 @@
 import React from 'react';
 
-const CompanySidebarBaseCard = ({children}) => {
+const CompanySidebarBaseCard = ({ children }) => {
     return (
         <div className="companySidebarCard">
 
@@ -15,10 +15,8 @@ const CompanySidebarBaseCard = ({children}) => {
                     <h3 className="companySidebarCard__header__cost--price">23 243 850 Kr</h3>
                 </div>
             </div>
-
             {children}
         </div>
-    );
-};
-
+    )
+}
 export default CompanySidebarBaseCard;
