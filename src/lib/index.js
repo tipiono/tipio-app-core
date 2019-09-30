@@ -33,8 +33,9 @@ import TabContentItem from './UI/Tabs/TabContentItem';
 import PillTabs from './UI/PillTabs/PillTabs';
 import Avatar from './UI/Avatar/Avatar';
 import SubNav from './UI/SubNav/SubNav';
+import { DropDown, DropDownItem } from './UI/DdropDown/DropDown';
+import FromToInput from './UI/Forms/FromToInput';
 import ButtonXL from './UI/Buttons/ButtonXL';
-
 
 /*
 *   Customer/Private Components
@@ -174,5 +175,8 @@ export {
     ArrowDownIcon,
     CustomerCategories,
     ButtonXL,
-    CompanyAddBidCard
+    CompanyAddBidCard,
+    DropDown,
+    DropDownItem,
+    FromToInput
 };

@@ -25,7 +25,7 @@ var CompanySidebarBaseCard = function CompanySidebarBaseCard(_ref) {
     className: "companySidebarCard__header__cost"
   }, _react.default.createElement("p", {
     className: "companySidebarCard__header__cost--label"
-  }, "Omsetning"), _react.default.createElement("h3", {
+  }, "Potensiell omsetning"), _react.default.createElement("h3", {
     className: "companySidebarCard__header__cost--price"
   }, "23 243 850 Kr"))), children);
 };
