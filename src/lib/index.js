@@ -34,6 +34,7 @@ import PillTabs from './UI/PillTabs/PillTabs';
 import Avatar from './UI/Avatar/Avatar';
 import SubNav from './UI/SubNav/SubNav';
 import { DropDown, DropDownItem } from './UI/DdropDown/DropDown';
+import FromToInput from './UI/Forms/FromToInput';
 
 /*
 *   Customer/Private Components
@@ -172,5 +173,6 @@ export {
     ArrowDownIcon,
     CustomerCategories,
     DropDown,
-    DropDownItem
+    DropDownItem,
+    FromToInput
 };
