@@ -36,6 +36,7 @@ import SubNav from './UI/SubNav/SubNav';
 import { DropDown, DropDownItem } from './UI/DdropDown/DropDown';
 import FromToInput from './UI/Forms/FromToInput';
 import ButtonXL from './UI/Buttons/ButtonXL';
+import ShowMoreText from './UI/Text/ShowMoreText';
 
 /*
 *   Customer/Private Components
@@ -178,5 +179,6 @@ export {
     CompanyAddBidCard,
     DropDown,
     DropDownItem,
-    FromToInput
+    FromToInput,
+    ShowMoreText
 };
