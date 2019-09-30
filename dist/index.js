@@ -189,7 +189,6 @@ Object.defineProperty(exports, "SubNav", {
     return _SubNav.default;
   }
 });
-<<<<<<< HEAD
 Object.defineProperty(exports, "DropDown", {
   enumerable: true,
   get: function get() {
@@ -200,12 +199,18 @@ Object.defineProperty(exports, "DropDownItem", {
   enumerable: true,
   get: function get() {
     return _DropDown.DropDownItem;
-=======
+  }
+});
+Object.defineProperty(exports, "FromToInput", {
+  enumerable: true,
+  get: function get() {
+    return _FromToInput.default;
+  }
+});
 Object.defineProperty(exports, "ButtonXL", {
   enumerable: true,
   get: function get() {
     return _ButtonXL.default;
->>>>>>> 688efd3a4e58b1375d3e784ded5c09095370d004
   }
 });
 Object.defineProperty(exports, "TipioWithOffer", {
@@ -538,11 +543,11 @@ var _Avatar = _interopRequireDefault(require("./UI/Avatar/Avatar"));
 
 var _SubNav = _interopRequireDefault(require("./UI/SubNav/SubNav"));
 
-<<<<<<< HEAD
 var _DropDown = require("./UI/DdropDown/DropDown");
-=======
+
+var _FromToInput = _interopRequireDefault(require("./UI/Forms/FromToInput"));
+
 var _ButtonXL = _interopRequireDefault(require("./UI/Buttons/ButtonXL"));
->>>>>>> 688efd3a4e58b1375d3e784ded5c09095370d004
 
 var _TipioWithOffer = _interopRequireDefault(require("./Customer/Modals/TipioWithOffer/TipioWithOffer"));
 
