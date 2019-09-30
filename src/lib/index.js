@@ -35,6 +35,7 @@ import Avatar from './UI/Avatar/Avatar';
 import SubNav from './UI/SubNav/SubNav';
 import { DropDown, DropDownItem } from './UI/DdropDown/DropDown';
 import FromToInput from './UI/Forms/FromToInput';
+import ButtonXL from './UI/Buttons/ButtonXL';
 
 /*
 *   Customer/Private Components
@@ -82,7 +83,8 @@ import CustomerListCompanyCard from './Company/Cards/CustomerListCompanyCard/Cus
 import GiveOfferCompanyCard from './Company/Cards/GiveOfferCompanyCard/GiveOfferCompanyCard';
 import TipioWithOfferCompanyCard from './Company/Cards/TipioWithOfferCompanyCard/TipioWithOfferCompanyCard';
 import AdditionalSaleCompanyCard from './Company/Cards/AdditionalSaleCompanyCard/AdditionalSaleCompanyCard';
-import CompanySidebarBaseCard from './Company/CompanySidebarCards/CompanySidebarBaseCard'
+import CompanySidebarBaseCard from './Company/CompanySidebarCards/CompanySidebarBaseCard';
+import CompanyAddBidCard from   './Company/CompanySidebarCards/CompanyAddBidCard';
 
 /*
 *   Layout
@@ -172,6 +174,8 @@ export {
     CompanySidebarBaseCard,
     ArrowDownIcon,
     CustomerCategories,
+    ButtonXL,
+    CompanyAddBidCard,
     DropDown,
     DropDownItem,
     FromToInput

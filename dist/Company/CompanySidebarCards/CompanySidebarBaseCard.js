@@ -19,17 +19,15 @@ var CompanySidebarBaseCard = function CompanySidebarBaseCard(_ref) {
     className: "companySidebarCard__header__content"
   }, _react.default.createElement("h3", {
     className: "companySidebarCard__header__content--title"
-  }, "Samsung 65\" UHD Smart-\u2028TV UE65NU7105"), _react.default.createElement("p", {
+  }, "Samsung 65\" UHD Smart- TV UE65NU7105"), _react.default.createElement("p", {
     className: "companySidebarCard__header__content--subtitle"
   }, "Varekode: UE65NU7105XXC")), _react.default.createElement("div", {
     className: "companySidebarCard__header__cost"
   }, _react.default.createElement("p", {
     className: "companySidebarCard__header__cost--label"
-  }, "Omsetning"), _react.default.createElement("h4", {
+  }, "Omsetning"), _react.default.createElement("h3", {
     className: "companySidebarCard__header__cost--price"
-  }, "23 243 850 Kr"))), _react.default.createElement("div", {
-    className: "companySidebarCard__footer"
-  }, children));
+  }, "23 243 850 Kr"))), children);
 };
 
 var _default = CompanySidebarBaseCard;

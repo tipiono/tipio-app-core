@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { CompanySidebarBaseCard } from '../../../lib/index';
+import { CompanySidebarBaseCard, CompanyAddBidCard } from '../../../lib/index';
 
 
 storiesOf('Company/Components/Company Sidebar Cards', module)
@@ -8,6 +8,14 @@ storiesOf('Company/Components/Company Sidebar Cards', module)
         <>
             <div className="col-4 m-3">
                 <CompanySidebarBaseCard state=""/>
+            </div>
+        </>
+    )
+
+    .add('Add Bid Card', () =>
+        <>
+            <div className="col-4 m-3">
+                <CompanyAddBidCard state=""/>
             </div>
         </>
     )

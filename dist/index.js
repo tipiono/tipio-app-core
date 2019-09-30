@@ -189,6 +189,7 @@ Object.defineProperty(exports, "SubNav", {
     return _SubNav.default;
   }
 });
+<<<<<<< HEAD
 Object.defineProperty(exports, "DropDown", {
   enumerable: true,
   get: function get() {
@@ -199,6 +200,12 @@ Object.defineProperty(exports, "DropDownItem", {
   enumerable: true,
   get: function get() {
     return _DropDown.DropDownItem;
+=======
+Object.defineProperty(exports, "ButtonXL", {
+  enumerable: true,
+  get: function get() {
+    return _ButtonXL.default;
+>>>>>>> 688efd3a4e58b1375d3e784ded5c09095370d004
   }
 });
 Object.defineProperty(exports, "TipioWithOffer", {
@@ -441,6 +448,12 @@ Object.defineProperty(exports, "CompanySidebarBaseCard", {
     return _CompanySidebarBaseCard.default;
   }
 });
+Object.defineProperty(exports, "CompanyAddBidCard", {
+  enumerable: true,
+  get: function get() {
+    return _CompanyAddBidCard.default;
+  }
+});
 Object.defineProperty(exports, "PublicLayout", {
   enumerable: true,
   get: function get() {
@@ -525,7 +538,11 @@ var _Avatar = _interopRequireDefault(require("./UI/Avatar/Avatar"));
 
 var _SubNav = _interopRequireDefault(require("./UI/SubNav/SubNav"));
 
+<<<<<<< HEAD
 var _DropDown = require("./UI/DdropDown/DropDown");
+=======
+var _ButtonXL = _interopRequireDefault(require("./UI/Buttons/ButtonXL"));
+>>>>>>> 688efd3a4e58b1375d3e784ded5c09095370d004
 
 var _TipioWithOffer = _interopRequireDefault(require("./Customer/Modals/TipioWithOffer/TipioWithOffer"));
 
@@ -606,6 +623,8 @@ var _TipioWithOfferCompanyCard = _interopRequireDefault(require("./Company/Cards
 var _AdditionalSaleCompanyCard = _interopRequireDefault(require("./Company/Cards/AdditionalSaleCompanyCard/AdditionalSaleCompanyCard"));
 
 var _CompanySidebarBaseCard = _interopRequireDefault(require("./Company/CompanySidebarCards/CompanySidebarBaseCard"));
+
+var _CompanyAddBidCard = _interopRequireDefault(require("./Company/CompanySidebarCards/CompanyAddBidCard"));
 
 var _index = _interopRequireDefault(require("./UI/Layout/Public/index"));
 
