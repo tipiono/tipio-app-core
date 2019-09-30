@@ -1,6 +1,6 @@
 import React from 'react';
 
-const CompanySidebarBaseCard = ({children}) => {
+const CompanySidebarBaseCard = ({children, ...props}) => {
     return (
         <div className="companySidebarCard">
 
@@ -12,7 +12,11 @@ const CompanySidebarBaseCard = ({children}) => {
 
                 <div className="companySidebarCard__header__cost">
                     <p className="companySidebarCard__header__cost--label">Potensiell omsetning</p>
-                    <h3 className="companySidebarCard__header__cost--price">23 243 850 Kr</h3>
+                    {props.loading ? (<div className="placeholder-content">
+                            &nbsp;
+                    </div>) : (
+                        <h3 className="companySidebarCard__header__cost--price">23 243 850 Kr</h3>
+                    )}
                 </div>
             </div>
 

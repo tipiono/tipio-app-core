@@ -15,7 +15,14 @@ storiesOf('Company/Components/Company Sidebar Cards', module)
     .add('Add Bid Card', () =>
         <>
             <div className="col-4 m-3">
-                <CompanyAddBidCard state=""/>
+                <CompanyAddBidCard state="" />
+            </div>
+        </>
+    )
+    .add('Add Bid Card With Loading', () =>
+        <>
+            <div className="col-4 m-3">
+                <CompanyAddBidCard state="" loading={true} />
             </div>
         </>
     )
