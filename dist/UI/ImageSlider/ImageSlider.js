@@ -11,6 +11,7 @@ var _reactResponsiveCarousel = require("react-responsive-carousel");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+// import "react-responsive-carousel/lib/styles/carousel.min.css";
 function ImageSlider(_ref) {
   var images = _ref.images,
       showThumbs = _ref.showThumbs;
@@ -21,10 +22,11 @@ function ImageSlider(_ref) {
     showThumbs: showThumbs,
     showArrows: showThumbs
   }, images && images.map(function (item) {
-    return _react.default.createElement("div", null, _react.default.createElement("img", {
+    return _react.default.createElement("img", {
+      className: "img-fluid",
       src: item.blob_url,
       alt: "..."
-    }));
+    });
   }))));
 }
 

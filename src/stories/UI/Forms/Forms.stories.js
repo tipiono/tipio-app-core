@@ -95,7 +95,7 @@ storiesOf('UI/Forms/Radios', module)
     .add('Default', () =>
         <>
             <div className="col-3 m-5">
-                <FromToInput label={"Antall kjøpere"}/>
+                <FromToInput from={"1"} label={"Antall kjøpere"}/>
             </div>
         </>
     )
