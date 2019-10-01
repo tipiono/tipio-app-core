@@ -17,8 +17,8 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 
 var BaseCompanyCard = function BaseCompanyCard(_ref) {
   var children = _ref.children,
-      expiresIn = _ref.expiresIn,
-      props = _objectWithoutProperties(_ref, ["children", "expiresIn"]);
+      expires_in = _ref.expires_in,
+      props = _objectWithoutProperties(_ref, ["children", "expires_in"]);
 
   return _react.default.createElement("div", null, _react.default.createElement("div", {
     className: "baseCompanyCard"
@@ -34,14 +34,14 @@ var BaseCompanyCard = function BaseCompanyCard(_ref) {
     className: "baseCompanyCard__header--timeLeft"
   }, _react.default.createElement(_TipioCountdown.default, {
     className: "timer",
-    expires_in: expiresIn
+    expires_in: props.voting_expires_in
   }))), _react.default.createElement("div", {
     className: "baseCompanyCard__body"
   }, _react.default.createElement("h5", {
     className: "baseCompanyCard__body--title"
-  }, "GoPro Camera Ultra 4K"), _react.default.createElement("p", {
+  }, props.title), _react.default.createElement("p", {
     className: "baseCompanyCard__body--content--description"
-  }, "Beoplay H4"), _react.default.createElement("div", {
+  }, props.subtitle), _react.default.createElement("div", {
     className: "baseCompanyCard__body--cost"
   }, _react.default.createElement("h3", {
     className: "baseCompanyCard__body--cost--price"
