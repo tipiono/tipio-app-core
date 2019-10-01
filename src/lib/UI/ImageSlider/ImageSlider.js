@@ -1,23 +1,21 @@
 import React from 'react';
-import { Carousel } from 'react-responsive-carousel';
+import {Carousel} from 'react-responsive-carousel';
 
-function ImageSlider({
-    images,
-    showThumbs,
-}) {
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+
+function ImageSlider({images, showThumbs,}) {
     return <>
-        <div className="tipio-gallery">
+        <div className="imageSlider">
+
             <Carousel
-                showIndicators
+                showIndicators={false}
+                showArrows={false}
+                showStatus={false}
                 showThumbs={showThumbs}
-                showArrows={showThumbs}
             >
                 {images && images.map((item) => (
-                    <div>
-                        <img src={item.blob_url} alt="..." />
-                        {/* <div className="position-absolute"></div> */}
-                        {/* <TipioCountdown expires_in={tipio.expires_in} /> */}
-                    </div>
+
+                    <img src={item.blob_url} alt="..."/>
                 ))}
             </Carousel>
         </div>
