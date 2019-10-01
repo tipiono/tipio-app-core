@@ -1,14 +1,14 @@
 import React from 'react';
 import TipioCountdown from "../../../UI/TipioCountdown/TipioCountdown";
 
-const BaseCompanyCard = ({children, expiresIn}) => {
+const BaseCompanyCard = ({children, expiresIn, ...props}) => {
     return (
         <div>
             <div className="baseCompanyCard">
                 <div className="baseCompanyCard__header">
-                    <a href=""><img className="baseCompanyCard__header--image"
-                                    src="https://tipio.ams3.cdn.digitaloceanspaces.com/staging/15/tipios/130/1563779193973"
-                                    alt=""/></a>
+                    {props.images && props.images.length && <a href=""><img className="baseCompanyCard__header--image"
+                                    src={props.images[0].blob_url}
+                                    alt=""/></a>}
                     <div className="baseCompanyCard__header--timeLeft">
                         <TipioCountdown className="timer" expires_in={expiresIn}/>
                     </div>

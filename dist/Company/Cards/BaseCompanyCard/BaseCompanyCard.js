@@ -11,18 +11,24 @@ var _TipioCountdown = _interopRequireDefault(require("../../../UI/TipioCountdown
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
 var BaseCompanyCard = function BaseCompanyCard(_ref) {
   var children = _ref.children,
-      expiresIn = _ref.expiresIn;
+      expiresIn = _ref.expiresIn,
+      props = _objectWithoutProperties(_ref, ["children", "expiresIn"]);
+
   return _react.default.createElement("div", null, _react.default.createElement("div", {
     className: "baseCompanyCard"
   }, _react.default.createElement("div", {
     className: "baseCompanyCard__header"
-  }, _react.default.createElement("a", {
+  }, props.images && props.images.length && _react.default.createElement("a", {
     href: ""
   }, _react.default.createElement("img", {
     className: "baseCompanyCard__header--image",
-    src: "https://tipio.ams3.cdn.digitaloceanspaces.com/staging/15/tipios/130/1563779193973",
+    src: props.images[0].blob_url,
     alt: ""
   })), _react.default.createElement("div", {
     className: "baseCompanyCard__header--timeLeft"
