@@ -38,10 +38,8 @@ function ShowMoreText(_ref) {
       setShowMore = _useState2[1];
 
   return _react.default.createElement("div", {
-    className: "tipio-description d-none d-lg-block"
-  }, _react.default.createElement("div", {
-    className: "tipio-content"
-  }, _react.default.createElement("ul", null, textFormatted)), restFormatted && showMore && _react.default.createElement("div", {
+    className: "d-none d-lg-block"
+  }, _react.default.createElement("ul", null, textFormatted), restFormatted && showMore && _react.default.createElement("div", {
     className: "tipio-show-more"
   }, _react.default.createElement("div", {
     title: "Les mer",

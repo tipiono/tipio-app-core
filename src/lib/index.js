@@ -39,6 +39,7 @@ import ButtonXL from './UI/Buttons/ButtonXL';
 import ShowMoreText from './UI/Text/ShowMoreText';
 import PriceInput from './UI/Forms/PriceInput';
 import ContentSpinner from './UI/Spinner/ContentSpinner';
+import Table from './UI/Table';
 
 /*
 *   Customer/Private Components
@@ -184,5 +185,6 @@ export {
     FromToInput,
     ShowMoreText,
     PriceInput,
-    ContentSpinner
+    ContentSpinner,
+    Table
 };

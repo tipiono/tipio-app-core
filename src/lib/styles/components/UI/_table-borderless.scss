@@ -1,0 +1,10 @@
+.table-borderless {
+  .tableHead {
+    border-bottom: 1px solid $gray-200;
+
+    &--item {
+      font-family: 'Riposte-Medium', sans-serif;
+      font-weight: unset;
+    }
+  }
+}

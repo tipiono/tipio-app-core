@@ -231,6 +231,12 @@ Object.defineProperty(exports, "ContentSpinner", {
     return _ContentSpinner.default;
   }
 });
+Object.defineProperty(exports, "Table", {
+  enumerable: true,
+  get: function get() {
+    return _Table.default;
+  }
+});
 Object.defineProperty(exports, "TipioWithOffer", {
   enumerable: true,
   get: function get() {
@@ -572,6 +578,8 @@ var _ShowMoreText = _interopRequireDefault(require("./UI/Text/ShowMoreText"));
 var _PriceInput = _interopRequireDefault(require("./UI/Forms/PriceInput"));
 
 var _ContentSpinner = _interopRequireDefault(require("./UI/Spinner/ContentSpinner"));
+
+var _Table = _interopRequireDefault(require("./UI/Table"));
 
 var _TipioWithOffer = _interopRequireDefault(require("./Customer/Modals/TipioWithOffer/TipioWithOffer"));
 
