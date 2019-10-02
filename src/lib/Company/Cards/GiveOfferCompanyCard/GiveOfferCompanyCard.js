@@ -2,11 +2,11 @@ import React from 'react';
 import BaseCompanyCard from "../BaseCompanyCard/BaseCompanyCard";
 import {SecondaryButton} from "../../../index";
 
-const GiveOfferCompanyCard = () => {
+const GiveOfferCompanyCard = (props) => {
     return (
         <div>
-            <BaseCompanyCard>
-                <SecondaryButton text={'Gi tilbud'}/>
+            <BaseCompanyCard {...props}>
+                <SecondaryButton text={'Gi tilbud'} {...props} />
             </BaseCompanyCard>
         </div>
     );

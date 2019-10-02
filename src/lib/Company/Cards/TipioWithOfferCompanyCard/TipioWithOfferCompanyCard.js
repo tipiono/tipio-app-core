@@ -1,10 +1,10 @@
 import React from 'react';
 import BaseCompanyCard from "../BaseCompanyCard/BaseCompanyCard";
 
-const TipioWithOfferCompanyCard = () => {
+const TipioWithOfferCompanyCard = (props) => {
     return (
         <div>
-            <BaseCompanyCard />
+            <BaseCompanyCard {...props} />
         </div>
     );
 };

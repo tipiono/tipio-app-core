@@ -11,31 +11,37 @@ var _TipioCountdown = _interopRequireDefault(require("../../../UI/TipioCountdown
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
 var BaseCompanyCard = function BaseCompanyCard(_ref) {
   var children = _ref.children,
-      expiresIn = _ref.expiresIn;
+      expires_in = _ref.expires_in,
+      props = _objectWithoutProperties(_ref, ["children", "expires_in"]);
+
   return _react.default.createElement("div", null, _react.default.createElement("div", {
     className: "baseCompanyCard"
   }, _react.default.createElement("div", {
     className: "baseCompanyCard__header"
-  }, _react.default.createElement("a", {
+  }, props.images && props.images.length && _react.default.createElement("a", {
     href: ""
   }, _react.default.createElement("img", {
     className: "baseCompanyCard__header--image",
-    src: "https://tipio.ams3.cdn.digitaloceanspaces.com/staging/15/tipios/130/1563779193973",
+    src: props.images[0].blob_url,
     alt: ""
   })), _react.default.createElement("div", {
     className: "baseCompanyCard__header--timeLeft"
   }, _react.default.createElement(_TipioCountdown.default, {
     className: "timer",
-    expires_in: expiresIn
+    expires_in: props.voting_expires_in
   }))), _react.default.createElement("div", {
     className: "baseCompanyCard__body"
   }, _react.default.createElement("h5", {
     className: "baseCompanyCard__body--title"
-  }, "GoPro Camera Ultra 4K"), _react.default.createElement("p", {
+  }, props.title), _react.default.createElement("p", {
     className: "baseCompanyCard__body--content--description"
-  }, "Beoplay H4"), _react.default.createElement("div", {
+  }, props.subtitle), _react.default.createElement("div", {
     className: "baseCompanyCard__body--cost"
   }, _react.default.createElement("h3", {
     className: "baseCompanyCard__body--cost--price"

@@ -3,11 +3,12 @@ import PropTypes from 'prop-types';
 import ReactSelect from 'react-select';
 
 
-function Select({placeholder, options, label}) {
-    const [value, setValue] = useState(false);
+function Select({placeholder, options, label, onChange, defaultValue}) {
+    const [value, setValue] = useState({ value: defaultValue, label: defaultValue} || false);
 
     const _onChange = (v) => {
         setValue(v);
+        onChange(v);
     };
     return (
 

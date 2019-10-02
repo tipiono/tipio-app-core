@@ -15,10 +15,17 @@ var _SecondaryOutlineButton = _interopRequireDefault(require("../../../UI/Button
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
 function AddAdditionalSales(_ref) {
-  var image = _ref.image;
+  var image = _ref.image,
+      props = _objectWithoutProperties(_ref, ["image"]);
+
   return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_Modal.Modal, {
-    showCloseButton: true
+    showCloseButton: true,
+    onCloseButtonClick: props.cancel
   }, _react.default.createElement("div", {
     className: "addSales"
   }, _react.default.createElement("a", {
@@ -35,11 +42,13 @@ function AddAdditionalSales(_ref) {
   }, "Du kan n\xE5 legge ut tre eksklusive mersalgs tilbud ", _react.default.createElement("br", null), " til dine kunder"), _react.default.createElement("div", {
     className: "addSales--action mb-3"
   }, _react.default.createElement(_SecondaryButton.default, {
-    text: "Legg inn mersalg"
+    text: "Legg inn mersalg",
+    onClick: props.postAdditionalSales
   })), _react.default.createElement("div", {
     className: "addSales--action"
   }, _react.default.createElement(_SecondaryOutlineButton.default, {
-    text: "Ikke denne gangen"
+    text: "Ikke denne gangen",
+    onClick: props.cancel
   })))));
 }
 

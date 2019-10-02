@@ -3,10 +3,10 @@ import {Modal} from '../../../UI/Modal/Modal'
 import SecondaryButton from "../../../UI/Buttons/SecondaryButton";
 import SecondaryOutlineButton from "../../../UI/Buttons/SecondaryOutlineButton";
 
-function AddAdditionalSales({image}) {
+function AddAdditionalSales({image, ...props}) {
     return (
         <>
-            <Modal showCloseButton>
+            <Modal showCloseButton onCloseButtonClick={props.cancel}>
                 <div className="addSales">
                     <a href="">
                         <img className="addSales--image" src={image} width="310px" alt="Tipio with offer" />
@@ -16,10 +16,10 @@ function AddAdditionalSales({image}) {
                     <p className="addSales--description">Du kan nå legge ut tre eksklusive mersalgs tilbud <br/> til dine kunder</p>
 
                     <div className="addSales--action mb-3">
-                        <SecondaryButton text="Legg inn mersalg" />
+                        <SecondaryButton text="Legg inn mersalg" onClick={props.postAdditionalSales} />
                     </div>
                     <div className="addSales--action">
-                        <SecondaryOutlineButton text="Ikke denne gangen" />
+                        <SecondaryOutlineButton text="Ikke denne gangen" onClick={props.cancel}/>
                     </div>
                 </div>
             </Modal>
