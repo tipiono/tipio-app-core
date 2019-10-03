@@ -237,6 +237,12 @@ Object.defineProperty(exports, "Table", {
     return _Table.default;
   }
 });
+Object.defineProperty(exports, "SelectImages", {
+  enumerable: true,
+  get: function get() {
+    return _SelectImages.default;
+  }
+});
 Object.defineProperty(exports, "TipioWithOffer", {
   enumerable: true,
   get: function get() {
@@ -580,6 +586,8 @@ var _PriceInput = _interopRequireDefault(require("./UI/Forms/PriceInput"));
 var _ContentSpinner = _interopRequireDefault(require("./UI/Spinner/ContentSpinner"));
 
 var _Table = _interopRequireDefault(require("./UI/Table"));
+
+var _SelectImages = _interopRequireDefault(require("./UI/SelectImages"));
 
 var _TipioWithOffer = _interopRequireDefault(require("./Customer/Modals/TipioWithOffer/TipioWithOffer"));
 

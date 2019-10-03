@@ -40,6 +40,7 @@ import ShowMoreText from './UI/Text/ShowMoreText';
 import PriceInput from './UI/Forms/PriceInput';
 import ContentSpinner from './UI/Spinner/ContentSpinner';
 import Table from './UI/Table';
+import SelectImages from './UI/SelectImages';
 
 /*
 *   Customer/Private Components
@@ -186,5 +187,6 @@ export {
     ShowMoreText,
     PriceInput,
     ContentSpinner,
-    Table
+    Table,
+    SelectImages
 };
