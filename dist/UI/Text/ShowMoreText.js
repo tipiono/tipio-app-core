@@ -38,13 +38,14 @@ function ShowMoreText(_ref) {
       setShowMore = _useState2[1];
 
   return _react.default.createElement("div", {
-    className: "d-none d-lg-block"
+    className: "productDetails__description"
   }, _react.default.createElement("ul", null, textFormatted), restFormatted && showMore && _react.default.createElement("div", {
     className: "tipio-show-more"
   }, _react.default.createElement("div", {
     title: "Les mer",
     titleOnShow: "Read less"
   }, _react.default.createElement("ul", null, restFormatted))), restFormatted && _react.default.createElement("a", {
+    className: "productDetails__description--showMore",
     href: "#",
     onClick: function onClick(e) {
       e.preventDefault();

@@ -35,11 +35,13 @@ import Avatar from './UI/Avatar/Avatar';
 import SubNav from './UI/SubNav/SubNav';
 import { DropDown, DropDownItem } from './UI/DdropDown/DropDown';
 import FromToInput from './UI/Forms/FromToInput';
+import IconButton from './UI/Buttons/IconButton';
 import ButtonXL from './UI/Buttons/ButtonXL';
 import ShowMoreText from './UI/Text/ShowMoreText';
 import PriceInput from './UI/Forms/PriceInput';
 import ContentSpinner from './UI/Spinner/ContentSpinner';
 import Table from './UI/Table';
+import PublishedBy from './UI/PublishedBy/PublishedBy'
 
 /*
 *   Customer/Private Components
@@ -186,5 +188,7 @@ export {
     ShowMoreText,
     PriceInput,
     ContentSpinner,
-    Table
+    Table,
+    PublishedBy,
+    IconButton
 };

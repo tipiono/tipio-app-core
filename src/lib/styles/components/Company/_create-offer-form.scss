@@ -1,0 +1,43 @@
+.createOfferForm {
+  &__discount {
+    &--title {
+      color: $gray-700;
+      letter-spacing: -0.3px;
+      margin-bottom: 1rem;
+    }
+
+    &--description {
+      font-family: 'Riposte-Light', sans-serif;
+      line-height: 1.375rem;
+      margin-bottom: 2rem;
+    }
+
+    &--form {
+      display: flex;
+      flex-direction: row;
+
+      &--group {
+        width: 35%;
+        display: inline-block;
+      }
+
+      &--submit {
+        width: 72.5%;
+      }
+    }
+  }
+
+  &__sizes {
+
+
+    &--title {
+      border-top: 1px solid $gray-200;
+      color: $gray-700;
+      letter-spacing: -0.3px;
+
+      padding-top: 3rem;
+      margin-top: 3rem;
+      margin-bottom: 3rem;
+    }
+  }
+}

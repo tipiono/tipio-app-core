@@ -3,7 +3,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions/dist/index';
 import { text, boolean } from '@storybook/addon-knobs';
-import {SecondaryButton, SecondaryOutlineButton, DisabledButton, GrayButton, GrayOutlineButton} from '../../../lib';
+import {SecondaryButton, SecondaryOutlineButton, DisabledButton, GrayButton, GrayOutlineButton, IconButton} from '../../../lib';
 
 
 
@@ -88,6 +88,17 @@ storiesOf('UI/Buttons/Disabled Button', module)
         <>
             <div className="col-3 m-3">
                 <DisabledButton onClick={action('clicked')} text={text('Label', 'Dette er ikke bindene')} loading={boolean('Loading ', false)} />
+            </div>
+        </>
+    );
+
+
+storiesOf('UI/Buttons/Button with Icon', module)
+
+    .add('Button with Icon', () =>
+        <>
+            <div className="col-3 m-3">
+                <IconButton text={"Legg inn begrenset antall"} />
             </div>
         </>
     );
