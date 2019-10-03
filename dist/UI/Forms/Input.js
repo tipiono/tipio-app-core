@@ -21,9 +21,7 @@ var _default = _react.default.forwardRef(function (_ref, ref) {
       errors = _ref.errors,
       props = _objectWithoutProperties(_ref, ["placeholder", "name", "errors"]);
 
-  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("div", {
-    className: "form-group"
-  }, _react.default.createElement("label", {
+  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("label", {
     className: "pure-material-textfield-outlined"
   }, _react.default.createElement("input", _extends({
     placeholder: " ",
@@ -33,7 +31,7 @@ var _default = _react.default.forwardRef(function (_ref, ref) {
     ref: ref
   })), _react.default.createElement("span", {
     className: "label-sm"
-  }, placeholder)), errors && errors[name] && errors[name].message));
+  }, placeholder)), errors && errors[name] && errors[name].message);
 });
 
 exports.default = _default;

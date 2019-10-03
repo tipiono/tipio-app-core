@@ -191,6 +191,6 @@ export {
     ContentSpinner,
     Table,
     PublishedBy,
-    IconButton
+    IconButton,
     SelectImages
 };

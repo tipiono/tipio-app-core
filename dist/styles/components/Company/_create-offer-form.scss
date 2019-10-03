@@ -19,25 +19,47 @@
       &--group {
         width: 35%;
         display: inline-block;
+
+        .from-to-input, .price-input {
+          margin-bottom: 1rem;
+        }
       }
 
       &--submit {
         width: 72.5%;
+        margin-top: 3rem;
       }
     }
   }
 
   &__sizes {
-
-
     &--title {
       border-top: 1px solid $gray-200;
       color: $gray-700;
       letter-spacing: -0.3px;
 
-      padding-top: 3rem;
-      margin-top: 3rem;
+      padding-top: 2.5rem;
+      margin-top: 2rem;
       margin-bottom: 3rem;
+    }
+
+    &--form {
+      &--group {
+        display: flex;
+        flex-direction: row;
+
+        label {
+          width: 35%;
+          display: inline-block;
+          margin-bottom: 1rem;
+          margin-right: 1rem;
+        }
+      }
+    }
+
+    &--select {
+      width: 72.5%;
+      margin-bottom: 1rem;
     }
   }
 }
