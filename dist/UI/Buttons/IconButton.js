@@ -15,33 +15,24 @@ function _objectWithoutProperties(source, excluded) { if (source == null) return
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
-var _default = _react.default.forwardRef(function (_ref, ref) {
-  var from = _ref.from,
-      to = _ref.to,
-      label = _ref.label,
-      name = _ref.name,
-      errors = _ref.errors,
-      props = _objectWithoutProperties(_ref, ["from", "to", "label", "name", "errors"]);
+var IconButton = function IconButton(_ref) {
+  var text = _ref.text,
+      props = _objectWithoutProperties(_ref, ["text"]);
 
-  return _react.default.createElement(_react.default.Fragment, null, " ", console.log(props.paddingLeft), _react.default.createElement("label", {
-    className: "pure-material-textfield-outlined from-to-input"
-  }, _react.default.createElement("input", _extends({
-    placeholder: to,
-    type: "number",
-    name: name,
-    id: name
-  }, props, {
-    ref: ref,
-    style: {
-      paddingLeft: props.paddingLeft ? "".concat(props.paddingLeft + 55 + 8 + 5.328125, "px") : '75px'
-    }
-  })), _react.default.createElement("label", {
-    className: "outside-label"
-  }, label), _react.default.createElement("span", {
-    className: "inside-label"
-  }, "Fra"), _react.default.createElement("p", {
-    className: "static-placeholder"
-  }, from, " -")), errors && errors[name] && errors[name].message);
-});
+  return _react.default.createElement("a", _extends({
+    className: "iconButton",
+    href: ""
+  }, props), _react.default.createElement("svg", {
+    className: "iconButton--plus",
+    width: 24,
+    height: 24
+  }, _react.default.createElement("path", {
+    d: "M12 0a12 12 0 1012 12A12.035 12.035 0 0012 0zm6 13h-5v5h-2v-5H6v-2h5V6h2v5h5z",
+    fill: "#4abcac"
+  })), _react.default.createElement("span", {
+    className: "iconButton--text"
+  }, text));
+};
 
+var _default = IconButton;
 exports.default = _default;

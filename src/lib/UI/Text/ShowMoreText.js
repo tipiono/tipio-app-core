@@ -6,7 +6,7 @@ function ShowMoreText({text}) {
     const {textFormatted, restFormatted} = formatText(text, (item, key) => (<li key={key}>{item}</li>), <br/>);
     const [showMore, setShowMore] = useState(false);
     return (
-        <div className="d-none d-lg-block">
+        <div className="productDetails__description">
             <ul>
                 {textFormatted}
             </ul>
@@ -20,7 +20,7 @@ function ShowMoreText({text}) {
                     </div>
                 </div>
             )}
-            {restFormatted && <a href="#" onClick={(e) => {
+            {restFormatted && <a className="productDetails__description--showMore" href="#" onClick={(e) => {
                 e.preventDefault();
                 setShowMore(!showMore)
             }}> {showMore ? 'Show less' : 'Show more'} </a>}

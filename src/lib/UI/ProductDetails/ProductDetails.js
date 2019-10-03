@@ -1,10 +1,14 @@
 import React from 'react';
+import ShowMoreText from "../Text/ShowMoreText";
 
-function ProductDetails({}) {
+function ProductDetails({title, text}) {
     return (
         <>
-            <div>
-                ###
+            <div className="productDetails">
+                <h5 className="productDetails--title">{title}</h5>
+                <ShowMoreText
+                    text={text}
+                />
             </div>
         </>
     )
