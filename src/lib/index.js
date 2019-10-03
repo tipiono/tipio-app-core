@@ -42,6 +42,7 @@ import PriceInput from './UI/Forms/PriceInput';
 import ContentSpinner from './UI/Spinner/ContentSpinner';
 import Table from './UI/Table';
 import PublishedBy from './UI/PublishedBy/PublishedBy'
+import SelectImages from './UI/SelectImages';
 
 /*
 *   Customer/Private Components
@@ -191,4 +192,5 @@ export {
     Table,
     PublishedBy,
     IconButton
+    SelectImages
 };
