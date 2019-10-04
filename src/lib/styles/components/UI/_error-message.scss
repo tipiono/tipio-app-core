@@ -1,0 +1,21 @@
+.errorMessage {
+  font-size: 80%;
+  padding: 10px;
+  margin-bottom: .5rem;
+
+  &--title {
+    font-family: 'Riposte-Medium', sans-serif;
+  }
+
+  &.bg-yellow {
+    background-color: #fcf5bc;
+  }
+
+  &.bg-purple {
+    background-color: #ded8ec;
+  }
+
+  &.bg-red {
+    background-color: #fcd9d9;;
+  }
+}

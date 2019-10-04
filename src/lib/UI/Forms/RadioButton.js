@@ -1,11 +1,11 @@
 import React from 'react';
 
-function RadioButton({}) {
+function RadioButton({text}) {
     return (
         <>
             <div className="md-radio">
                 <input id="1" type="radio" name="g" checked/>
-                <label htmlFor="1">Option 1</label>
+                <label htmlFor="1">{text}</label>
             </div>
         </>
     )

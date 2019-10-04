@@ -242,6 +242,19 @@
   }
 }
 
+.pure-material-textfield-outlined.validationError {
+  input {
+    border-color: #da3021 !important;
+
+    &:hover, &:focus {
+      border-color: #da3021 !important;
+    }
+  }
+  .outside-label {
+    color: #da3021 !important;
+  }
+}
+
 textarea {
   resize: none;
 }

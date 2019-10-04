@@ -7,6 +7,8 @@ exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
+var _classnames = _interopRequireDefault(require("classnames"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
@@ -22,7 +24,9 @@ var _default = _react.default.forwardRef(function (_ref, ref) {
       props = _objectWithoutProperties(_ref, ["label", "name", "errors"]);
 
   return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("label", {
-    className: "pure-material-textfield-outlined price-input"
+    className: (0, _classnames.default)("pure-material-textfield-outlined price-input", {
+      'validationError': errors && errors[name]
+    })
   }, _react.default.createElement("input", _extends({
     placeholder: "50",
     type: "number",
@@ -34,7 +38,7 @@ var _default = _react.default.forwardRef(function (_ref, ref) {
     className: "outside-label"
   }, label), _react.default.createElement("p", {
     className: "static-placeholder"
-  }, "Kr")), errors && errors[name] && errors[name].message);
+  }, "Kr")));
 });
 
 exports.default = _default;

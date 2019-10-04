@@ -41,8 +41,9 @@ import ShowMoreText from './UI/Text/ShowMoreText';
 import PriceInput from './UI/Forms/PriceInput';
 import ContentSpinner from './UI/Spinner/ContentSpinner';
 import Table from './UI/Table';
-import PublishedBy from './UI/PublishedBy/PublishedBy'
+import PublishedBy from './UI/PublishedBy/PublishedBy';
 import SelectImages from './UI/SelectImages';
+import ErrorMessage from './UI/ErrorMessage/ErrorMessage';
 
 /*
 *   Customer/Private Components
@@ -192,5 +193,6 @@ export {
     Table,
     PublishedBy,
     IconButton,
-    SelectImages
+    SelectImages,
+    ErrorMessage
 };

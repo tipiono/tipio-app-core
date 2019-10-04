@@ -41,6 +41,7 @@
     'components/tipio-view-card',
 
     // 3.1 UI Components
+    'components/UI/custom-material-select',
     'components/UI/custom-modal',
     'components/UI/success-modal',
     'components/UI/modal-spinner',
@@ -49,7 +50,6 @@
     'components/UI/timetag',
     'components/UI/toggle-switch',
     'components/UI/radio-buttons',
-    'components/UI/custom-material-select',
     'components/UI/checkboxes',
     'components/UI/pagination',
     'components/UI/material-inputs',
@@ -65,6 +65,7 @@
     'components/UI/published-by',
     'components/UI/product-details',
     'components/UI/icon-btn',
+'components/UI/error-message',
 
 
     // 3.2 Company Components
@@ -116,7 +117,9 @@
     'pages/credit-cart',
     'pages/tipio-view',
     'pages/frontpage',
-    'pages/about-page';
+    'pages/parse-url',
+    'pages/about-page',
+    'pages/edit-add-sale';
 
 
 // 6. Themes
