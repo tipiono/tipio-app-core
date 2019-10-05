@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import Masonry from 'react-masonry-css'
 import Image from './Image';
 import initSelectedOrder from './utils/initSelectedOrder';
@@ -17,13 +17,13 @@ const imgCountClassName = {
     3: 'one-third'
 };
 
-function SelectImages({ images, title, ...props }) {
+function SelectImages({images, title, ...props}) {
 
     const [selectedMax, setSelectedMax] = useState(0);
     const [selectedOrder, setSelectedOrder] = useState(initSelectedOrder(images));
 
     const _onChange = (e) => {
-        const { checked } = e.target;
+        const {checked} = e.target;
         let currentOrder = selectedOrder[e.target.value];
         let sm = selectedMax;
         let so = selectedOrder;
@@ -46,25 +46,25 @@ function SelectImages({ images, title, ...props }) {
     };
     const _onSubmit = () => {
         const sorted = Object.keys(selectedOrder)
-        .map(x => ({ id: x, order: selectedOrder[x]}))
-        .filter(x=> x.order > 0)
-        .sort((p1, p2) => p1.order - p2.order);
-    const imgs = images;
-    const result = [];
-    for (let i = 0; i < sorted.length; i += 1) {
-        result.push(imgs[sorted[i].id])
-    }
+            .map(x => ({id: x, order: selectedOrder[x]}))
+            .filter(x => x.order > 0)
+            .sort((p1, p2) => p1.order - p2.order);
+        const imgs = images;
+        const result = [];
+        for (let i = 0; i < sorted.length; i += 1) {
+            result.push(imgs[sorted[i].id])
+        }
         if (props.onSubmit) {
             props.onSubmit(result)
         }
     };
 
     let v = imgCountClassName[images.length];
-    let selectImagesClass =  v ? v : 'one-quarter';
-    const imagesMapped = images.map((item, index) => ({ id: index, src: item }));
+    let selectImagesClass = v ? v : 'one-quarter';
+    const imagesMapped = images.map((item, index) => ({id: index, src: item}));
     return (<>
         <div className="select-images">
-            <h2 className="page-title">{title}</h2>
+            {/*<h2 className="page-title">{title}</h2>*/}
             <div className="layout-container">
                 <div className="container">
                     <Masonry
@@ -81,9 +81,11 @@ function SelectImages({ images, title, ...props }) {
                             />
                         ))}
                     </Masonry>
-                    
-                    <div className="w-100 text-center pb-6">
-                        <Button text='Neste' onClick={_onSubmit} disabled={selectedMax === 0} />
+
+                    <div className="row">
+                        <div className="col-sm-12 col-md-4 mx-auto">
+                            <Button text='Neste' onClick={_onSubmit} disabled={selectedMax === 0}/>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -108,7 +108,7 @@
 // 5. Page-specific styles
 @import
     'pages/login',
-    'pages/select-images',
+'components/UI/select-images',
     'pages/searchresult',
     'pages/your-tipios',
     'pages/userprofile',
@@ -119,7 +119,9 @@
     'pages/frontpage',
     'pages/parse-url',
     'pages/about-page',
-    'pages/edit-add-sale';
+    'pages/edit-add-sale',
+    'pages/select-image-page',
+    'pages/select-category-page';
 
 
 // 6. Themes

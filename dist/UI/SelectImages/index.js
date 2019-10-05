@@ -116,9 +116,7 @@ function SelectImages(_ref) {
   });
   return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("div", {
     className: "select-images"
-  }, _react.default.createElement("h2", {
-    className: "page-title"
-  }, title), _react.default.createElement("div", {
+  }, _react.default.createElement("div", {
     className: "layout-container"
   }, _react.default.createElement("div", {
     className: "container"
@@ -134,12 +132,14 @@ function SelectImages(_ref) {
       onChange: _onChange
     });
   })), _react.default.createElement("div", {
-    className: "w-100 text-center pb-6"
+    className: "row"
+  }, _react.default.createElement("div", {
+    className: "col-sm-12 col-md-4 mx-auto"
   }, _react.default.createElement(_SecondaryButton.default, {
     text: "Neste",
     onClick: _onSubmit,
     disabled: selectedMax === 0
-  }))))));
+  })))))));
 }
 
 var _default = SelectImages;

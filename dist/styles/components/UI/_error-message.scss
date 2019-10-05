@@ -7,6 +7,8 @@
     font-family: 'Riposte-Medium', sans-serif;
   }
 
+  /// Background Colors
+
   &.bg-yellow {
     background-color: #fcf5bc;
   }
@@ -17,5 +19,9 @@
 
   &.bg-red {
     background-color: #fcd9d9;;
+  }
+
+  &.bg-green {
+    background-color: #c2e7e2;
   }
 }
