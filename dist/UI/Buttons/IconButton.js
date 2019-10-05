@@ -24,12 +24,21 @@ var IconButton = function IconButton(_ref) {
     href: ""
   }, props), _react.default.createElement("svg", {
     className: "iconButton--plus",
-    width: 24,
-    height: 24
-  }, _react.default.createElement("path", {
-    d: "M12 0a12 12 0 1012 12A12.035 12.035 0 0012 0zm6 13h-5v5h-2v-5H6v-2h5V6h2v5h5z",
-    fill: "#4abcac"
-  })), _react.default.createElement("span", {
+    width: 30,
+    height: 30
+  }, _react.default.createElement("g", {
+    fill: "none",
+    fillRule: "evenodd"
+  }, _react.default.createElement("circle", {
+    fill: "#4ABCAC",
+    cx: 15,
+    cy: 15,
+    r: 15
+  }), _react.default.createElement("path", {
+    d: "M13.95 15.567H9.177a.805.805 0 010-1.61h4.773V9.184a.805.805 0 011.61 0v4.773h4.78a.805.805 0 010 1.61h-4.78v4.78a.805.805 0 01-1.61 0v-4.78z",
+    fill: "#381B81",
+    fillRule: "nonzero"
+  }))), _react.default.createElement("span", {
     className: "iconButton--text"
   }, text));
 };

@@ -1,14 +1,14 @@
 .select-images {
-    .page-title {
-        color: $dark;
-        text-align: center;
-        margin: 38px 0;
-        font-family: Riposte-Regular, sans-serif;
-
-        @include media-breakpoint-down(md) {
-            font-size: 24px;
-        }
-    }
+    //.page-title {
+    //    color: $dark;
+    //    text-align: center;
+    //    margin: 38px 0;
+    //    font-family: Riposte-Regular, sans-serif;
+    //
+    //    @include media-breakpoint-down(md) {
+    //        font-size: 24px;
+    //    }
+    //}
 
     .layout-container {
         background: $gray-100;
@@ -19,8 +19,7 @@
             flex-direction: row;
             justify-content: center;
             align-items: start;
-            padding-top: 40px;
-            padding-bottom: 60px;
+            padding: 40px 0;
 
             .layout-item {
                 display: flex;
@@ -46,6 +45,7 @@
                 .layout-img {
                     width: 100%;
                     height: auto;
+                    box-shadow: 0 1px 2px 0 rgba(181, 181, 181, 0.5);
                 }
 
                 .selected-number {

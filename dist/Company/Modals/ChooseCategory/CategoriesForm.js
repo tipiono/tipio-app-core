@@ -110,12 +110,6 @@ function CategoriesForm(_ref) {
   }
 
   return _react.default.createElement("div", {
-    className: "container"
-  }, _react.default.createElement("div", {
-    className: "row"
-  }, _react.default.createElement("div", {
-    className: "col-md-10 mx-auto"
-  }, _react.default.createElement("div", {
     className: "choose-category"
   }, _react.default.createElement(_CategoriesHeader.default, {
     data: navigation,
@@ -180,7 +174,7 @@ function CategoriesForm(_ref) {
     disabled: controlDisabledButton && disabledButton || !controlDisabledButton && !selectedOptionId,
     onClick: chooseCategoryOnClick,
     loading: isLoading
-  }))))));
+  })));
 }
 
 var _default = CategoriesForm;

@@ -255,6 +255,12 @@ Object.defineProperty(exports, "SelectImages", {
     return _SelectImages.default;
   }
 });
+Object.defineProperty(exports, "ErrorMessage", {
+  enumerable: true,
+  get: function get() {
+    return _ErrorMessage.default;
+  }
+});
 Object.defineProperty(exports, "TipioWithOffer", {
   enumerable: true,
   get: function get() {
@@ -604,6 +610,8 @@ var _Table = _interopRequireDefault(require("./UI/Table"));
 var _PublishedBy = _interopRequireDefault(require("./UI/PublishedBy/PublishedBy"));
 
 var _SelectImages = _interopRequireDefault(require("./UI/SelectImages"));
+
+var _ErrorMessage = _interopRequireDefault(require("./UI/ErrorMessage/ErrorMessage"));
 
 var _TipioWithOffer = _interopRequireDefault(require("./Customer/Modals/TipioWithOffer/TipioWithOffer"));
 
