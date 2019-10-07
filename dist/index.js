@@ -489,10 +489,10 @@ Object.defineProperty(exports, "TipioWithOfferCompanyCard", {
     return _TipioWithOfferCompanyCard.default;
   }
 });
-Object.defineProperty(exports, "AdditionalSaleCompanyCard", {
+Object.defineProperty(exports, "ChooseAddSaleCompanyCard", {
   enumerable: true,
   get: function get() {
-    return _AdditionalSaleCompanyCard.default;
+    return _ChooseAddSaleCompanyCard.default;
   }
 });
 Object.defineProperty(exports, "CompanySidebarBaseCard", {
@@ -505,6 +505,12 @@ Object.defineProperty(exports, "CompanyAddBidCard", {
   enumerable: true,
   get: function get() {
     return _CompanyAddBidCard.default;
+  }
+});
+Object.defineProperty(exports, "AddMoreSaleCompanyCard", {
+  enumerable: true,
+  get: function get() {
+    return _AddMoreSaleCompanyCard.default;
   }
 });
 Object.defineProperty(exports, "PublicLayout", {
@@ -689,11 +695,13 @@ var _GiveOfferCompanyCard = _interopRequireDefault(require("./Company/Cards/Give
 
 var _TipioWithOfferCompanyCard = _interopRequireDefault(require("./Company/Cards/TipioWithOfferCompanyCard/TipioWithOfferCompanyCard"));
 
-var _AdditionalSaleCompanyCard = _interopRequireDefault(require("./Company/Cards/AdditionalSaleCompanyCard/AdditionalSaleCompanyCard"));
+var _ChooseAddSaleCompanyCard = _interopRequireDefault(require("./Company/Cards/ChooseAddSaleCompanyCard/ChooseAddSaleCompanyCard"));
 
 var _CompanySidebarBaseCard = _interopRequireDefault(require("./Company/CompanySidebarCards/CompanySidebarBaseCard"));
 
 var _CompanyAddBidCard = _interopRequireDefault(require("./Company/CompanySidebarCards/CompanyAddBidCard"));
+
+var _AddMoreSaleCompanyCard = _interopRequireDefault(require("./Company/Cards/AddMoreSaleCompanyCard/AddMoreSaleCompanyCard"));
 
 var _index = _interopRequireDefault(require("./UI/Layout/Public/index"));
 

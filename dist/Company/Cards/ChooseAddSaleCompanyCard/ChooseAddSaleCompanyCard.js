@@ -11,7 +11,7 @@ var _Checkbox = _interopRequireDefault(require("../../../UI/Forms/Checkbox"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var AdditionalSaleCompanyCard = function AdditionalSaleCompanyCard(_ref) {
+var ChooseAddSaleCompanyCard = function ChooseAddSaleCompanyCard(_ref) {
   var image = _ref.image,
       title = _ref.title,
       salePrice = _ref.salePrice,
@@ -20,34 +20,34 @@ var AdditionalSaleCompanyCard = function AdditionalSaleCompanyCard(_ref) {
       children = _ref.children,
       defaultValue = _ref.defaultValue;
   return _react.default.createElement("div", null, _react.default.createElement("div", {
-    className: "additionalSaleCard"
+    className: "chooseAddSaleCard"
   }, _react.default.createElement("div", {
     className: "d-flex flex-row mb-5"
   }, _react.default.createElement("div", {
-    className: "additionalSaleCard__preview"
+    className: "chooseAddSaleCard__preview"
   }, _react.default.createElement("a", {
-    className: "additionalSaleCard__preview--image",
+    className: "chooseAddSaleCard__preview--image",
     href: ""
   }, _react.default.createElement("img", {
     className: "img-fluid",
     src: image,
     alt: ""
   }), _react.default.createElement("span", {
-    className: "additionalSaleCard__preview--discount"
+    className: "chooseAddSaleCard__preview--discount"
   }, saleDiscount))), _react.default.createElement("div", {
-    className: "additionalSaleCard__content"
+    className: "chooseAddSaleCard__content"
   }, _react.default.createElement("div", {
-    className: "additionalSaleCard__content--price"
+    className: "chooseAddSaleCard__content--price"
   }, _react.default.createElement("h6", {
-    className: "additionalSaleCard__content--price--sale"
+    className: "chooseAddSaleCard__content--price--sale"
   }, salePrice), _react.default.createElement("h6", {
-    className: "additionalSaleCard__content--price--cost"
+    className: "chooseAddSaleCard__content--price--cost"
   }, costPrice)), _react.default.createElement("h6", {
-    className: "additionalSaleCard__content--title"
+    className: "chooseAddSaleCard__content--title"
   }, title))), _react.default.createElement(_Checkbox.default, {
     label: "Legg til mersalg"
   })));
 };
 
-var _default = AdditionalSaleCompanyCard;
+var _default = ChooseAddSaleCompanyCard;
 exports.default = _default;
