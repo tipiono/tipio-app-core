@@ -11,11 +11,13 @@ var _uuid = _interopRequireDefault(require("uuid"));
 
 var _reactDropzone = _interopRequireDefault(require("react-dropzone"));
 
-var _ImageFormStyle = require("./ImageFormStyle");
-
 var _Placeholder = _interopRequireDefault(require("./Placeholder"));
 
 var _index = require("../../index");
+
+var _IconButton = _interopRequireDefault(require("../../UI/Buttons/IconButton"));
+
+var _RemoveImageIcon = _interopRequireDefault(require("../../UI/Icons/RemoveImageIcon"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -125,27 +127,18 @@ function ImageUploader() {
   if (files.length > 1) {
     thumbs = files.slice(1).map(function (file) {
       return _react.default.createElement("div", {
-        className: "thumbs-wrapper"
-      }, _react.default.createElement("div", {
-        style: _ImageFormStyle.thumb,
         key: file.name,
-        className: "thumb"
-      }, _react.default.createElement("div", {
-        style: _ImageFormStyle.thumbInner
+        className: "uploadViewer__thumbnail--item"
       }, _react.default.createElement("img", {
-        className: "img-fluid",
-        src: file.preview,
-        style: _ImageFormStyle.img
-      }))), _react.default.createElement("span", {
-        className: "remove-button-sm",
+        className: "uploadViewer__thumbnail--item--image",
+        src: file.preview
+      }), _react.default.createElement("span", {
+        className: "uploadViewer__thumbnail--item--remove",
         onClick: function onClick(e) {
           e.preventDefault();
           removeImageButtonOnClick(file);
         }
-      }, _react.default.createElement("img", {
-        className: "img-fluid",
-        alt: "Remove"
-      }), "Close "));
+      }, _react.default.createElement(_RemoveImageIcon.default, null)));
     });
   }
 
@@ -172,42 +165,36 @@ function ImageUploader() {
   }, function (_ref) {
     var getRootProps = _ref.getRootProps,
         getInputProps = _ref.getInputProps;
-    return _react.default.createElement("section", null, _react.default.createElement("div", getRootProps({
+    return _react.default.createElement("section", {
+      className: "uploadViewer"
+    }, _react.default.createElement("div", getRootProps({
       className: 'dropzone',
       onClick: function onClick(event) {
         return event.preventDefault();
       }
     }), _react.default.createElement("input", getInputProps()), files.length === 0 && _react.default.createElement(_Placeholder.default, null)), files.length > 0 && _react.default.createElement("div", {
-      className: "image-preview"
+      className: "uploadViewer__main"
     }, _react.default.createElement("img", {
-      className: "img-fluid",
+      className: "uploadViewer__main--image",
       src: files[0].preview
     }), _react.default.createElement("span", {
-      className: "remove-button-lg",
+      className: "uploadViewer__main--remove",
       onClick: function onClick(e) {
         e.preventDefault();
         removeImageButtonOnClick(files[0]);
       }
-    }, _react.default.createElement("img", {
-      className: "img-fluid",
-      src: "",
-      alt: ""
-    }), "Close")), _react.default.createElement("aside", {
-      style: _ImageFormStyle.thumbsContainer
+    }, _react.default.createElement(_RemoveImageIcon.default, null))), _react.default.createElement("aside", {
+      className: "uploadViewer__thumbnail"
     }, thumbs), _react.default.createElement("div", getRootProps({
       className: 'dropzone'
-    }), _react.default.createElement("input", getInputProps()), files.length > 0 && _react.default.createElement("a", {
-      className: "second-image-uploader",
-      href: "",
+    }), _react.default.createElement("input", getInputProps()), _react.default.createElement("div", {
+      className: "mt-3"
+    }, files.length > 0 && _react.default.createElement(_IconButton.default, {
+      text: "Last opp produktbilder",
       onClick: function onClick(e) {
         e.preventDefault();
       }
-    }, _react.default.createElement("img", {
-      src: "Add Tipio",
-      alt: ""
-    }), _react.default.createElement("p", {
-      className: "mb-0 text-primary"
-    }, "Last opp produktbilder qqq"))));
+    }))));
   }));
 }
 

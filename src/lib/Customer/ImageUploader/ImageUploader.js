@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import uuid from 'uuid';
 import Dropzone from 'react-dropzone';
-import { thumb, thumbInner, img, thumbsContainer } from './ImageFormStyle';
 import Placeholder from './Placeholder';
 
-import { ImageCropper } from '../../index';
+import {ImageCropper} from '../../index';
+import IconButton from "../../UI/Buttons/IconButton";
+import RemoveImageIcon from "../../UI/Icons/RemoveImageIcon";
 
 function ImageUploader() {
     const [showCropper, setShowCropper] = useState(false);
@@ -14,12 +15,14 @@ function ImageUploader() {
     const [files, setFiles] = useState([]);
 
     const onDrop = (droppedFiles) => {
-        if (droppedFiles.length === 0) { return; }
+        if (droppedFiles.length === 0) {
+            return;
+        }
         const acceptedFiles = droppedFiles.map(file => Object.assign(file, {
             id: uuid.v4(),
             preview: URL.createObjectURL(file)
         }));
-        
+
         const t = files.concat(acceptedFiles);
         setFiles(t);
         setInitialCropCompleted(false);
@@ -44,7 +47,7 @@ function ImageUploader() {
     };
 
     const cropperOnDone = (blob) => {
-        let croppedImageIndex = files.findIndex((x)=>(x.id === cropImage.id));
+        let croppedImageIndex = files.findIndex((x) => (x.id === cropImage.id));
         setCroppedImageIndex(croppedImageIndex + 2);
         let icc = !initialCropCompleted && croppedImageIndex === files.length - 1;
         if (icc) {
@@ -71,25 +74,28 @@ function ImageUploader() {
     let thumbs = null;
     if (files.length > 1) {
         thumbs = files.slice(1).map(file => (
-            <div className="thumbs-wrapper">
-                <div  style={thumb} key={file.name} className="thumb">
-                    <div style={thumbInner}>
-                        <img
-                            className="img-fluid"
-                            src={file.preview}
-                            style={img}
-                        />
-                    </div>
-                </div>
-                {/*<span className="crop-button-sm" onClick={(e)=>{e.preventDefault();cropButtonOnClick(file)}}><img className="img-fluid" src={Crop} alt="Crop"/></span>*/}
-                <span className="remove-button-sm" onClick={(e)=>{e.preventDefault();removeImageButtonOnClick(file)}}><img className="img-fluid" alt="Remove"/>Close </span>
+
+            <div key={file.name} className="uploadViewer__thumbnail--item">
+                <img
+                    className="uploadViewer__thumbnail--item--image"
+                    src={file.preview}
+                />
+
+                <span className="uploadViewer__thumbnail--item--remove"
+                      onClick={(e) => {
+                          e.preventDefault();
+                          removeImageButtonOnClick(file)
+                      }}>
+                      <RemoveImageIcon/>
+                </span>
             </div>
         ));
     }
 
     let indicator = null;
     if (!initialCropCompleted) {
-        indicator = <p className="label-sm mb-0 mt-3" style={{ textAlign: 'center' }}>{croppedImageIndex} av {files.length}</p>;
+        indicator =
+            <p className="label-sm mb-0 mt-3" style={{textAlign: 'center'}}>{croppedImageIndex} av {files.length}</p>;
     }
 
     return (
@@ -104,26 +110,41 @@ function ImageUploader() {
             )}
             <Dropzone accept="image/*" onDrop={onDrop}>
                 {({getRootProps, getInputProps}) => (
-                    <section>
-                        <div {...getRootProps({ className: 'dropzone', onClick: event => event.preventDefault() })}>
+
+                    <section className="uploadViewer">
+                        <div {...getRootProps({className: 'dropzone', onClick: event => event.preventDefault()})}>
                             <input {...getInputProps()} />
-                            {files.length === 0 && <Placeholder />}
+                            {files.length === 0 && <Placeholder/>}
                             {/*{props.files.length > 0 && <button>Add</button>}*/}
-                        </div >
-                        {files.length > 0 && <div className="image-preview">
-                            <img className="img-fluid" src={files[0].preview}/>
-                            <span className="remove-button-lg" onClick={(e)=>{e.preventDefault();removeImageButtonOnClick(files[0])}}><img className="img-fluid" src={""} alt=""/>Close</span>
+                        </div>
+
+                        {files.length > 0 && <div className="uploadViewer__main">
+                            <img className="uploadViewer__main--image" src={files[0].preview}/>
+
+                            <span className="uploadViewer__main--remove" onClick={(e) => {
+                                e.preventDefault();
+                                removeImageButtonOnClick(files[0])
+                            }}>
+                                <RemoveImageIcon/>
+                            </span>
                         </div>}
-                        <aside style={thumbsContainer}>
+
+                        <aside className="uploadViewer__thumbnail">
                             {thumbs}
                         </aside>
+
                         <div {...getRootProps({className: 'dropzone'})}>
                             <input {...getInputProps()} />
-                            {files.length > 0 && <a className="second-image-uploader" href="" onClick={(e)=>{e.preventDefault();}}>
-                                <img src={"Add Tipio"} alt=""/>
-                                <p className="mb-0 text-primary">Last opp produktbilder qqq</p>
-                            </a>}
-                        </div >
+
+                            <div className="mt-3">
+
+                                {files.length > 0 &&
+                                <IconButton text="Last opp produktbilder" onClick={(e) => {
+                                    e.preventDefault();
+                                }}/>
+                                }
+                            </div>
+                        </div>
                     </section>
                 )}
             </Dropzone>

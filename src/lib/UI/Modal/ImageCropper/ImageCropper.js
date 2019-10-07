@@ -3,6 +3,7 @@ import {Modal, ModalType} from '../Modal'
 import 'cropperjs/dist/cropper.css';
 import Cropper from 'cropperjs';
 import GrayOutlineButton from '../../Buttons/GrayOutlineButton';
+import SecondaryButton from "../../Buttons/SecondaryButton";
 
 class ImageCropper extends Component {
     constructor(props) {
@@ -64,17 +65,16 @@ class ImageCropper extends Component {
                                     <span className="sr-only">Loading...</span>
                                 </div>
                             </div>}
+
                             <div style={{opacity: this.state.cropperReady ? 100 : 0, width: "300px", height: "300px"}}>
                                 <img id="image" src={this.props.image.preview}/>
                             </div>
+
                             {this.props.indicator && this.props.indicator}
-                            {<GrayOutlineButton text="cancel" onClick={this.modalOnClose} />} 
-                            <button type="button" className="btn btn-secondary w-100 mt-4 mb-6" onClick={this.cropDoneOnClick} disabled={this.state.isSubmitting}>
-                                {!this.state.isSubmitting && 'Neste'}
-                                {this.state.isSubmitting && <span> <span
-                                    className="spinner-border spinner-border-sm" role="status"
-                                    aria-hidden="true"></span> Loading...</span>}
-                            </button>
+                            <ul className="d-flex mb-6 mt-5">
+                                <li className="w-50 mr-3"><GrayOutlineButton text={"Avbryt"} onClick={this.modalOnClose} disabled={this.state.isSubmitting} /></li>
+                                <li className="w-50"><SecondaryButton text={"Neste"} onClick={this.cropDoneOnClick} /></li>
+                            </ul>
                         </div>
                     </div>
                 </Modal>
