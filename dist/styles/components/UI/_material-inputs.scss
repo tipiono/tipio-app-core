@@ -153,7 +153,6 @@
     input:focus, textarea:focus {
       border-color: #4f2e90;
       border-top-color: transparent;
-      //box-shadow: inset 1px 0 var(--pure-material-safari-helper1), inset -1px 0 var(--pure-material-safari-helper1), inset 0 -1px var(--pure-material-safari-helper1);
       outline: none;
     }
 
@@ -242,35 +241,12 @@
   }
 }
 
-.pure-material-textfield-outlined.validationError {
-  input {
-    border-color: #da3021 !important;
-
-    &:hover, &:focus {
-      border-color: #da3021 !important;
-    }
-  }
-  .outside-label {
-    color: #da3021 !important;
-  }
-}
-
-textarea {
-  resize: none;
-}
-
 /* Input, Textarea */
-
 /* Span */
-
 /* Corners */
-
 /* Hover */
-
 /* Placeholder-shown */
-
 /* Focus */
-
 /* Disabled */
 
 /* Faster transition in Safari for less noticable fractional font-size issue */
@@ -300,14 +276,104 @@ textarea {
   }
 }
 
-///// From-to input
+////// Input Validation Error
 
-.from-to-input {
-  //overflow: visible !important;
+.pure-material-textfield-outlined.validationError {
+  > {
+    input, textarea, .css-1pcexqc-container {
+      border: 1px solid #da3021 !important;
+    }
+  }
+
+  > {
+    input:not(:focus):placeholder-shown, textarea:not(:focus):placeholder-shown, .css-1pcexqc-container:not(:focus):placeholder-shown {
+      border-top-color: #da3021 !important;;
+    }
+
+    input:not(:focus):placeholder-shown + span::before, textarea:not(:focus):placeholder-shown + span::before, .css-1pcexqc-container:not(:focus):placeholder-shown + span::before, input:not(:focus):placeholder-shown + span::after, textarea:not(:focus):placeholder-shown + span::after, .css-1pcexqc-container:not(:focus):placeholder-shown + span::before {
+      border-top-color: transparent !important;
+    }
+
+    input:focus, textarea:focus {
+      border-color: #da3021 !important;
+      border-top-color: transparent !important;
+    }
+
+    input:focus + span, textarea:focus + span, .css-1pcexqc-container:focus + span {
+      color: #da3021;
+    }
+
+    input:focus + span {
+      &::before, &::after {
+        border-top-color: #da3021 !important;;
+      }
+    }
+
+    textarea:focus + span {
+      &::before, &::after {
+        border-top-color: #da3021 !important;;
+      }
+    }
+  }
+
+  &:hover > {
+    input + span::before, textarea + span::before, .css-1pcexqc-container + span::before, input + span::after, textarea + span::after, .css-1pcexqc-container + span::after {
+      border-top-color: #da3021 !important;;
+    }
+
+    input:not(:focus):placeholder-shown, textarea:not(:focus):placeholder-shown, .css-1pcexqc-container:not(:focus):placeholder-shown {
+      border-color: #da3021 !important;;
+    }
+  }
+
+  > {
+    input:not(:focus):placeholder-shown, textarea:not(:focus):placeholder-shown, .css-1pcexqc-container:not(:focus):placeholder-shown {
+      border-top-color: #da3021 !important;;
+    }
+
+    input:not(:focus):placeholder-shown + span::before, textarea:not(:focus):placeholder-shown + span::before, .css-1pcexqc-container:not(:focus):placeholder-shown + span::before, input:not(:focus):placeholder-shown + span::after, textarea:not(:focus):placeholder-shown + span::after, .css-1pcexqc-container:not(:focus):placeholder-shown + span::before {
+      border-top-color: transparent !important;
+    }
+
+    input:focus, textarea:focus {
+      border-color: #da3021 !important;
+      border-top-color: transparent !important;
+    }
+
+    input:focus + span, textarea:focus + span, .css-1pcexqc-container:focus + span {
+      color: #da3021;
+    }
+
+    input:focus + span {
+      &::before, &::after {
+        border-top-color: #da3021 !important;;
+      }
+    }
+
+    textarea:focus + span {
+      &::before, &::after {
+        border-top-color: #da3021 !important;;
+      }
+    }
+
+    .css-1pcexqc-container:focus + span {
+      &::before, &::after {
+        border-top-color: #da3021 !important;;
+      }
+    }
+
+    input:disabled, textarea:disabled, .css-1pcexqc-container:disabled {
+      + span {
+        border-top-color: transparent !important;
+        color: #da3021;
+      }
+    }
+  }
 }
 
+///// From-to input
+
 .from-to-input input {
-  //padding-left: 95px !important;
   border-color: #c9cfd3 !important;
 }
 
@@ -346,6 +412,32 @@ textarea {
 }
 
 
+////// From-To Input Validation Error
+
+.from-to-input.validationError {
+  input {
+    border-color: #da3021 !important;
+  }
+  .outside-label {
+    color: #da3021 !important;
+  }
+
+  &:focus + span, textarea:focus + span, .css-1pcexqc-container:focus + span {
+    color: #4f2e90;
+  }
+
+  > {
+    input:not(:focus):placeholder-shown + span::before, textarea:not(:focus):placeholder-shown + span::before, .css-1pcexqc-container:not(:focus):placeholder-shown + span::before, input:not(:focus):placeholder-shown + span::after, textarea:not(:focus):placeholder-shown + span::after, .css-1pcexqc-container:not(:focus):placeholder-shown + span::before {
+      border-top-color: red !important;
+    }
+
+    input:focus, textarea:focus {
+      border-color: #da3021 !important;
+    }
+  }
+}
+
+
 ///// Price  input
 
 .price-input > input:focus, .price-input > textarea:focus {
@@ -360,7 +452,6 @@ textarea {
 .price-input input::placeholder {
   color: $gray-500;
 }
-
 
 .price-input > .outside-label {
   position: absolute;
@@ -380,4 +471,33 @@ textarea {
   right: 16px;
   text-align: right;
   font-size: 14px;
+}
+
+////// Price Input Validation Error
+
+.price-input.validationError {
+  input {
+    border-color: #da3021 !important;
+  }
+  .outside-label {
+    color: #da3021 !important;
+  }
+
+  &:focus + span, textarea:focus + span, .css-1pcexqc-container:focus + span {
+    color: #4f2e90;
+  }
+
+  > {
+    input:not(:focus):placeholder-shown + span::before, textarea:not(:focus):placeholder-shown + span::before, .css-1pcexqc-container:not(:focus):placeholder-shown + span::before, input:not(:focus):placeholder-shown + span::after, textarea:not(:focus):placeholder-shown + span::after, .css-1pcexqc-container:not(:focus):placeholder-shown + span::before {
+      border-top-color: red !important;
+    }
+
+    input:focus, textarea:focus {
+      border-color: #da3021 !important;
+    }
+  }
+}
+
+textarea {
+  resize: none;
 }

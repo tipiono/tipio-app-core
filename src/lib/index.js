@@ -106,6 +106,7 @@ import PublicLayout from './UI/Layout/Public/index';
 * */
 import InteriorIcon from './UI/Icons/InteriorIcon';
 import ArrowDownIcon from './UI/Icons/ArrowDownIcon';
+import RemoveImageIcon from './UI/Icons/RemoveImageIcon';
 
 export {
     styles,
@@ -196,5 +197,6 @@ export {
     IconButton,
     SelectImages,
     ErrorMessage,
-    AddMoreSaleCompanyCard
+    AddMoreSaleCompanyCard,
+    RemoveImageIcon
 };
