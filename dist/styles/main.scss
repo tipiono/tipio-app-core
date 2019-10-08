@@ -65,7 +65,8 @@
     'components/UI/published-by',
     'components/UI/product-details',
     'components/UI/icon-btn',
-'components/UI/error-message',
+    'components/UI/error-message',
+    'components/UI/select-images',
 
 
     // 3.2 Company Components
@@ -109,7 +110,6 @@
 // 5. Page-specific styles
 @import
     'pages/login',
-'components/UI/select-images',
     'pages/searchresult',
     'pages/your-tipios',
     'pages/userprofile',
@@ -122,7 +122,8 @@
     'pages/about-page',
     'pages/edit-add-sale',
     'pages/select-image-page',
-    'pages/select-category-page';
+    'pages/select-category-page',
+    'pages/company-settigns';
 
 
 // 6. Themes
