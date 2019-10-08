@@ -3,10 +3,7 @@
 
 .btn-secondary {
     color: $primary;
-<<<<<<< HEAD
-=======
     letter-spacing: .75px;
->>>>>>> remotes/origin/dev
 }
 
 .btn-secondary.disabled, .btn-secondary:disabled {
@@ -19,11 +16,6 @@
     color: $gray-800;
 }
 
-<<<<<<< HEAD
-.btn-outline-secondary {
-    color: $primary;
-    border: 2px solid $secondary;
-=======
 .btn-outline-gray-600 {
     border: 2px solid $gray-600;
 }
@@ -32,20 +24,16 @@
     color: $primary;
     border: 2px solid $secondary;
     letter-spacing: .75px;
->>>>>>> remotes/origin/dev
 
     &:hover {
         color: $primary;
     }
 }
 
-<<<<<<< HEAD
-=======
 .btn-link {
     padding: 0 !important;
 }
 
->>>>>>> remotes/origin/dev
 .btn-outline-primary {
     border: 2px solid $primary;
 }
@@ -101,11 +89,7 @@
 }
 
 .custom-select {
-<<<<<<< HEAD
-    //background: url("../../static/assets/images/down.svg") no-repeat right 8px center !important;
-=======
     background: url("/src/static/assets/images/down.svg") no-repeat right 8px center !important;
->>>>>>> remotes/origin/dev
 }
 
 ::-webkit-scrollbar {
@@ -213,19 +197,6 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
-<<<<<<< HEAD
-.image-uploader {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 24px;
-    border: 1px solid $gray-200;
-    height: 400px;
-}
-
-=======
->>>>>>> remotes/origin/dev
 .edit-profile {
     background: $gray-100;
     padding: 34px 0;
@@ -410,11 +381,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-<<<<<<< HEAD
-//// Button with icon
-=======
 //// SecondaryButton with icon
->>>>>>> remotes/origin/dev
 .btn-with-icon {
     display: flex;
     justify-content: space-between;
