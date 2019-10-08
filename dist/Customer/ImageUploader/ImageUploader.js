@@ -29,7 +29,9 @@ function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = 
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
-function ImageUploader() {
+function ImageUploader(_ref) {
+  var setFieldValue = _ref.setFieldValue;
+
   var _useState = (0, _react.useState)(false),
       _useState2 = _slicedToArray(_useState, 2),
       showCropper = _useState2[0],
@@ -68,6 +70,7 @@ function ImageUploader() {
     });
     var t = files.concat(acceptedFiles);
     setFiles(t);
+    setFieldValue('files', t);
     setInitialCropCompleted(false);
     openCropper(acceptedFiles);
     setCroppedImageIndex(files.length + 1);
@@ -84,6 +87,7 @@ function ImageUploader() {
     });
     URL.revokeObjectURL(file.preview);
     setFiles(f);
+    setFieldValue('files', f);
   };
 
   var cropperModalOnClose = function cropperModalOnClose() {
@@ -109,6 +113,7 @@ function ImageUploader() {
     file.preview = URL.createObjectURL(file);
     files[croppedImageIndex] = file;
     setFiles(files);
+    setFieldValue('files', files);
 
     if (!icc && !initialCropCompleted) {
       setCropImage(files[croppedImageIndex + 1]);
@@ -169,9 +174,9 @@ function ImageUploader() {
   }), _react.default.createElement(_reactDropzone.default, {
     accept: "image/*",
     onDrop: onDrop
-  }, function (_ref) {
-    var getRootProps = _ref.getRootProps,
-        getInputProps = _ref.getInputProps;
+  }, function (_ref2) {
+    var getRootProps = _ref2.getRootProps,
+        getInputProps = _ref2.getInputProps;
     return _react.default.createElement("section", null, _react.default.createElement("div", getRootProps({
       className: 'dropzone',
       onClick: function onClick(event) {

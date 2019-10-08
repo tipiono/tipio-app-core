@@ -6,7 +6,7 @@ import Placeholder from './Placeholder';
 
 import { ImageCropper } from '../../index';
 
-function ImageUploader() {
+function ImageUploader({ setFieldValue }) {
     const [showCropper, setShowCropper] = useState(false);
     const [cropImage, setCropImage] = useState(null);
     const [initialCropCompleted, setInitialCropCompleted] = useState(null);
@@ -22,6 +22,7 @@ function ImageUploader() {
         
         const t = files.concat(acceptedFiles);
         setFiles(t);
+        setFieldValue('files', t);
         setInitialCropCompleted(false);
         openCropper(acceptedFiles);
         setCroppedImageIndex(files.length + 1);
@@ -36,6 +37,7 @@ function ImageUploader() {
         const f = files.filter(x => x.id !== file.id);
         URL.revokeObjectURL(file.preview);
         setFiles(f);
+        setFieldValue('files', f);
     };
 
     const cropperModalOnClose = () => {
@@ -58,6 +60,7 @@ function ImageUploader() {
         file.preview = URL.createObjectURL(file);
         files[croppedImageIndex] = file;
         setFiles(files);
+        setFieldValue('files', files);
         if (!icc && !initialCropCompleted) {
             setCropImage(files[croppedImageIndex + 1]);
             setShowCropper(false);
@@ -123,7 +126,7 @@ function ImageUploader() {
                                 <img src={"Add Tipio"} alt=""/>
                                 <p className="mb-0 text-primary">Last opp produktbilder qqq</p>
                             </a>}
-                        </div >
+                        </div>
                     </section>
                 )}
             </Dropzone>
