@@ -167,19 +167,12 @@ function ImageUploader(_ref) {
   }), _react.default.createElement(_reactDropzone.default, {
     accept: "image/*",
     onDrop: onDrop
-<<<<<<< HEAD
   }, function (_ref2) {
     var getRootProps = _ref2.getRootProps,
         getInputProps = _ref2.getInputProps;
-    return _react.default.createElement("section", null, _react.default.createElement("div", getRootProps({
-=======
-  }, function (_ref) {
-    var getRootProps = _ref.getRootProps,
-        getInputProps = _ref.getInputProps;
     return _react.default.createElement("section", {
       className: "uploadViewer"
     }, _react.default.createElement("div", getRootProps({
->>>>>>> 99577812e1e5bac4679a0e12a17ff5d125fea075
       className: 'dropzone',
       onClick: function onClick(event) {
         return event.preventDefault();
