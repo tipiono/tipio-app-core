@@ -1,0 +1,70 @@
+.shopping-bag-special-card {
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    background: $white;
+    border-bottom: 1px solid $gray-200;
+
+    //&:last-child {
+    //    border: 0;
+    //}
+
+    .shopping-bag-special-card-header {
+        display: flex;
+        flex-direction: row;
+
+        .shopping-bag-special-card-thumbnail {
+            position: relative;
+            width: 50%;
+            display: inline-table;
+
+            .shopping-bag-special-card-img {
+                border: 1px solid #F5F5F5;
+                width: 90%;
+                height: 150px;
+                object-fit: cover;
+            }
+
+            .shopping-bag-special-card-sale {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 52px;
+                height: 24px;
+                font-size: 14px;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                color: $white;
+                background: #e74298;
+                border-radius: 0;
+            }
+        }
+
+        .shopping-bag-special-card-content {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            .shopping-bag-special-card-price {
+                margin-bottom: 0.25rem;
+            }
+
+            .shopping-bag-special-card-title {
+                font-size: 14px;
+                line-height: 18px;
+                font-family: 'Riposte-Regular', sans-serif;
+                margin-bottom: 1rem;
+                a {
+                    color: $gray-800;
+
+                    &:hover {
+                        color: $primary;
+                    }
+                }
+            }
+        }
+    }
+}

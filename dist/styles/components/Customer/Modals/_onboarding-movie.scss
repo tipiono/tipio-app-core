@@ -1,0 +1,14 @@
+.onboarding__movie {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $primary;
+
+  @include media-breakpoint-down(sm) {
+    height: 100vh;
+  }
+
+  &--iframe {
+    width: 100%;
+  }
+}

@@ -1,0 +1,32 @@
+.cart-details {
+    .credit-card-section {
+        .card-section-content {
+            position: relative;
+            border: 1px solid $gray-200;
+            padding: 14px 14px 44px 14px;
+
+            .edit-link {
+                position: absolute;
+                top: 8px;
+                right: 14px;
+                color: $secondary;
+            }
+            p {
+                margin-bottom: 0px !important;
+                font-weight: 300;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: 1.71;
+                letter-spacing: normal;
+                color: #505659;
+            }
+        }
+        .payment-method {
+            width: 75%;
+            margin-top: 24px;
+            @include media-breakpoint-down(md) {
+                width: 100% !important;
+            }
+        }
+    }
+}

@@ -1,0 +1,36 @@
+.tab {
+  display: flex;
+  flex-direction: row;
+
+  /// Link
+
+  &__item {
+    padding-left: 3.125rem;
+
+    &:first-child {
+      padding-left: 0;
+    }
+
+    /// Link
+
+    &--link {
+      font-family: 'Riposte-Light', sans-serif;
+      color: $gray-700;
+      padding: 6px 0;
+
+      &:hover {
+        text-decoration: none;
+        box-shadow: 0 1px 0 0 $gray-300;
+        color: $dark;
+      }
+
+      &.active {
+        font-family: 'Riposte-Regular', sans-serif;
+        box-shadow: 0 1px 0 0 $primary;
+        color: $dark;
+      }
+    }
+  }
+}
+
+

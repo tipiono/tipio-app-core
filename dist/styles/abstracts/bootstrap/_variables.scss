@@ -1,9 +1,17 @@
+<<<<<<< HEAD
+=======
+@import "functions";
+>>>>>>> remotes/origin/dev
 // Variables
 //
 // Variables should follow the `$component-state-property-size` formula for
 // consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
 
 // Color system
+<<<<<<< HEAD
+=======
+@import "functions";
+>>>>>>> remotes/origin/dev
 
 $white: #fff !default;
 $gray-100: #F5F5F5;
@@ -37,13 +45,21 @@ $grays: map-merge(
 $blue: #007bff !default;
 $indigo: #4F2E90;
 $purple: #6f42c1 !default;
+<<<<<<< HEAD
 $pink: #E54498 !default;
+=======
+$pink: #e74298 !default;
+>>>>>>> remotes/origin/dev
 $red: #dc3545 !default;
 $orange: #fd7e14 !default;
 $yellow: #ffc107 !default;
 $green: #28a745 !default;
 $teal: #4ABCAC;
+<<<<<<< HEAD
 $cyan: #17a2b8 !default;
+=======
+$cyan: #188576 !default;
+>>>>>>> remotes/origin/dev
 
 $colors: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
@@ -118,7 +134,11 @@ $body-color: $gray-800 !default;
 //
 // Style anchor elements.
 
+<<<<<<< HEAD
 $link-color: theme-color("gray-300") !default;
+=======
+$link-color: $cyan !default;
+>>>>>>> remotes/origin/dev
 $link-decoration: none !default;
 $link-hover-color: darken($link-color, 15%) !default;
 $link-hover-decoration: underline !default;

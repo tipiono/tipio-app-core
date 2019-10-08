@@ -1,0 +1,48 @@
+.saleCard {
+  box-shadow: 0 1px 1px 0 #e5e5e5;
+  padding: 1.125rem;
+
+  &__preview {
+    margin-right: 1.5rem;
+
+    &--image {
+      position: relative;
+      display: block;
+      width: 150px;
+      height: auto;
+      border: 1px solid $gray-100;
+    }
+
+    &--discount {
+      position: absolute;
+      top: 0;
+      left: 0;
+      font-size: 0.75rem;
+      font-family: 'Riposte-Medium', sans-serif;
+      color: $white;
+      background: #E74298;
+      padding: .1875rem;
+    }
+
+  }
+
+  &__content {
+    &--price {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      &--cost {
+        color: $gray-500;
+        text-decoration: line-through;
+        font-family: 'Riposte-Regular', sans-serif;
+        letter-spacing: .4px;
+      }
+    }
+
+    &--title {
+      font-family: 'Riposte-Light', sans-serif;
+      color: $gray-800;
+    }
+  }
+}

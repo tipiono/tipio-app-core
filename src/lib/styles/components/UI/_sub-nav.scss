@@ -1,0 +1,49 @@
+.subNav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  &__account {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    &--avatar {
+      width: 3.375rem;
+      height: 3.375rem;
+      margin-right: 1rem;
+    }
+
+    &--name {
+      font-family: 'Riposte-Light', sans-serif;
+      color: $gray-700;
+      margin-bottom: 0;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    &--item {
+      text-align: right;
+      margin-left: 3rem;
+
+      &--link {
+        font-size: 1.125rem;
+        font-family: 'Riposte-Light', sans-serif;
+        color: $gray-700;
+
+        &:hover {
+          text-decoration: none;
+        }
+
+        &.active {
+          font-family: 'Riposte-Regular', sans-serif;
+          border-bottom: 1px solid $primary;
+        }
+      }
+    }
+  }
+}

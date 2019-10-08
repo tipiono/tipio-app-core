@@ -1,0 +1,40 @@
+.companySidebarCard {
+  border: 1px solid $gray-200;
+  padding: 4.2rem;
+
+  &__header {
+    text-align: center;
+
+    &__content {
+      margin-bottom: 2rem;
+
+      &--title {
+        letter-spacing: -0.4px;
+      }
+
+      &--subtitle {
+        font-family: 'Riposte-Light', sans-serif;
+      }
+    }
+
+    &__cost {
+      margin-bottom: 2rem;
+
+      &--label {
+        font-size: .875rem;
+        color: $gray-500;
+        margin-bottom: .275rem;
+      }
+
+      &--price {
+        margin-bottom: 0;
+      }
+    }
+
+    &--placeholder {
+      height: 30px;
+      width: 200px;
+      margin: 0 auto;
+    }
+  }
+}

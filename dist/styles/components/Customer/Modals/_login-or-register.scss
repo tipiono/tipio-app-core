@@ -1,0 +1,20 @@
+.loginOrRegister {
+  padding: 7.625rem 0;
+  text-align: center;
+
+  &--title {
+    font-family: 'Riposte-Regular', sans-serif;
+    margin-bottom: 1rem;
+  }
+
+  &--description {
+    font-family: 'Riposte-Light', sans-serif;
+    font-size: 1.125rem;
+    margin-bottom: 4rem;
+  }
+
+  &--action {
+    width: 50%;
+    margin: 0 auto;
+  }
+}
