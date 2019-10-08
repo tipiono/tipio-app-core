@@ -90,9 +90,10 @@ import AddSaleCompanyCard from './Company/Cards/AddSaleCompanyCard/AddSaleCompan
 import CustomerListCompanyCard from './Company/Cards/CustomerListCompanyCard/CustomerListCompanyCard';
 import GiveOfferCompanyCard from './Company/Cards/GiveOfferCompanyCard/GiveOfferCompanyCard';
 import TipioWithOfferCompanyCard from './Company/Cards/TipioWithOfferCompanyCard/TipioWithOfferCompanyCard';
-import AdditionalSaleCompanyCard from './Company/Cards/AdditionalSaleCompanyCard/AdditionalSaleCompanyCard';
+import ChooseAddSaleCompanyCard from './Company/Cards/ChooseAddSaleCompanyCard/ChooseAddSaleCompanyCard';
 import CompanySidebarBaseCard from './Company/CompanySidebarCards/CompanySidebarBaseCard';
 import CompanyAddBidCard from   './Company/CompanySidebarCards/CompanyAddBidCard';
+import AddMoreSaleCompanyCard from './Company/Cards/AddMoreSaleCompanyCard/AddMoreSaleCompanyCard'
 
 /*
 *   Layout
@@ -105,6 +106,7 @@ import PublicLayout from './UI/Layout/Public/index';
 * */
 import InteriorIcon from './UI/Icons/InteriorIcon';
 import ArrowDownIcon from './UI/Icons/ArrowDownIcon';
+import RemoveImageIcon from './UI/Icons/RemoveImageIcon';
 
 export {
     styles,
@@ -176,7 +178,7 @@ export {
     CustomerListCompanyCard,
     GiveOfferCompanyCard,
     TipioWithOfferCompanyCard,
-    AdditionalSaleCompanyCard,
+    ChooseAddSaleCompanyCard,
     SubNav,
     InteriorIcon,
     CompanySidebarBaseCard,
@@ -194,5 +196,7 @@ export {
     PublishedBy,
     IconButton,
     SelectImages,
-    ErrorMessage
+    ErrorMessage,
+    AddMoreSaleCompanyCard,
+    RemoveImageIcon
 };

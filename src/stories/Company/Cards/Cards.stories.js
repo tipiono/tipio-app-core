@@ -7,7 +7,8 @@ import {
     CustomerListCompanyCard,
     GiveOfferCompanyCard,
     TipioWithOfferCompanyCard,
-    AdditionalSaleCompanyCard,
+    ChooseAddSaleCompanyCard,
+    AddMoreSaleCompanyCard,
 } from '../../../lib';
 
 
@@ -45,10 +46,10 @@ storiesOf('Company/Components/Cards', module)
         </>
     )
 
-    .add('Add additional sale', () =>
+    .add('Choose additional sale', () =>
         <>
             <div className="col-4 m-3">
-                <AdditionalSaleCompanyCard
+                <ChooseAddSaleCompanyCard
                     image={"https://tipio.ams3.cdn.digitaloceanspaces.com/staging/4/tipios/121/1562740066392"}
                     title={"Hakkebakkeskogen hettehåndkle 80x80 Bomullfrotte hvit"}
                     salePrice={"1 500 Kr"}
@@ -63,6 +64,14 @@ storiesOf('Company/Components/Cards', module)
         <>
             <div className="m-3">
                 <OrderItemCard />
+            </div>
+        </>
+    )
+
+    .add('Add more sale card', () =>
+        <>
+            <div className="col-3 m-3">
+                <AddMoreSaleCompanyCard />
             </div>
         </>
     )
