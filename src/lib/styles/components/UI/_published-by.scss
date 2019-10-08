@@ -1,0 +1,38 @@
+.publishedBy {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  &__user {
+    display: flex;
+    align-items: center;
+
+    &--avatar {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-right: .825rem;
+    }
+
+    &--name {
+      margin-bottom: 0;
+      font-size: 1.125rem;
+      font-family: 'Riposte-Regular', sans-serif;
+      color: $gray-800;
+    }
+
+    &--productFrom {
+      font-size: .75rem;
+      margin-bottom: 0;
+      color: $gray-500;
+    }
+  }
+
+  &--date {
+    font-size: .75rem;
+    margin-bottom: 0;
+    color: $gray-500;
+  }
+}

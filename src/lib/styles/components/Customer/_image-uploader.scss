@@ -1,0 +1,24 @@
+.imageUploader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  border: 1px solid $gray-200;
+  height: 25rem;
+  transition: all ease 200ms;
+
+  &--icon {
+    margin: 1rem;
+  }
+
+  &--label {
+    font-family: 'Riposte-Regular', sans-serif;
+  }
+
+  &:hover {
+    text-decoration: none;
+    border: 1px solid $secondary;
+    transition: all ease 200ms;
+  }
+}

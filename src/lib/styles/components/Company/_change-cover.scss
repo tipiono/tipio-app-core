@@ -1,0 +1,14 @@
+.changeCover {
+  position: relative;
+  width: 280px;
+  height: 122px;
+
+  border: 1px solid $gray-100;
+  //transition: all ease 200ms;
+
+  &--icon {
+    position: absolute;
+    bottom: -16px;
+    right: -16px;
+  }
+}

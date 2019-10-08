@@ -1,0 +1,21 @@
+.iconButton {
+  display: flex;
+  align-items: center;
+
+  &--plus {
+    margin-right: .625rem;
+    //transition: all ease 200ms;
+  }
+
+  &--text {
+    color: $primary;
+  }
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:hover > &--plus {
+    //transform: rotate(90deg);
+  }
+}

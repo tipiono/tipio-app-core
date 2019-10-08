@@ -1,0 +1,52 @@
+.votingCard {
+  box-shadow: 0 1px 1px 0 #e5e5e5;
+  text-align: center;
+
+  &__header {
+    position: relative;
+
+    &--image {
+      max-width: 100%;
+      height: auto;
+    }
+    &--timeLeft {
+      span {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+      }
+    }
+  }
+
+  &__body {
+    padding: 1.25rem;
+
+    &--interested {
+      margin-bottom: 1.6rem;
+
+      &--counter {
+        color: $cyan;
+        margin-bottom: 0rem;
+      }
+      &--label {
+        font-size: .75rem;
+        font-family: 'Riposte-Medium', sans-serif;
+        color: $cyan;
+        letter-spacing: .5px;
+      }
+    }
+
+    &--content {
+      margin-bottom: 1.6rem;
+
+      &--title {
+        font-family: 'Riposte-Regular', sans-serif;
+        color: $gray-700;
+        margin-bottom: .3rem;
+      }
+      &--description {
+        font-family: 'Riposte-Light', sans-serif;
+      }
+    }
+  }
+}

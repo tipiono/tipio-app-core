@@ -1,0 +1,11 @@
+.changeAvatar {
+  width: 122px;
+  height: 122px;
+  position: relative;
+
+  &--icon {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+}

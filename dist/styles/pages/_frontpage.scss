@@ -1,0 +1,154 @@
+.frontpage-header {
+    background: $primary;
+    padding: 110px 0 150px;
+
+    .frontpage-main-tipio {
+        .main-tipio-image-wrapper {
+            position: relative;
+
+            .main-tipio-image {
+                width: 100%;
+                height: 400px;
+                object-fit: cover;
+            }
+
+            .timer {
+                position: absolute;
+                right: 0;
+                bottom: 0;
+            }
+        }
+    }
+
+    .main-tipio-content {
+        .main-tipio-title {
+            color: $white;
+            font-family: Riposte-Regular, sans-serif;
+            margin-bottom: 22px;
+        }
+
+        .main-tipio-description {
+            color: $white;
+            font-size: 21px;
+            font-family: Riposte-Light, sans-serif;
+            line-height: 28px;
+            margin-bottom: 34px;
+        }
+    }
+}
+
+.frontpage-biddding-tipios {
+    background: linear-gradient(to bottom, #fbfbfb 0%, #f5f5f5 100%);
+    background-size: 100% 1262px;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    padding-bottom: 300px;
+
+    .frontpage-section-title {
+        color: $gray-700;
+        text-align: center;
+        padding: 60px 0;
+        font-family: Riposte-Regular, sans-serif;
+    }
+
+
+    .product-card {
+        .card-body {
+            box-shadow: 0 1px 2px 0 #e5e5e5;
+        }
+    }
+}
+
+.frontpage-centered-tipio {
+    margin-top: -220px;
+    text-align: center;
+    margin-bottom: 64px;
+
+    .centered-tipio-image-wrapper {
+        .centered-tipio-image {
+            width: 100%;
+            height: 448px;
+            object-fit: cover;
+            margin-bottom: 46px;
+        }
+    }
+
+    .centered-tipio-title {
+        margin-bottom: 14px;
+    }
+
+    .centered-tipio-description {
+        font-size: 24px;
+        color: $gray-700;
+        font-family: Riposte-Light, sans-serif;
+        line-height: 30px;
+        margin-bottom: 42px;
+    }
+}
+
+.frontpage-onboarding-movie {
+    background: #ece9f3;
+
+    .frontpage-onboarding-title {
+        text-align: center;
+        padding-top: 60px;
+    }
+
+    .frontpage-onboarding-iframe {
+        margin: 40px 0 60px;
+    }
+}
+
+.frontpage-timeleft {
+    padding: 64px 0;
+    background-image: linear-gradient(to top, #f5f5f5, #fbfbfb);
+
+    .frontpage-timeleft-wrapper {
+
+        .frontpage-timeleft-preview {
+            position: relative;
+
+            .frontpage-timeleft-image {
+                width: 100%;
+                height: 400px;
+                object-fit: cover;
+            }
+
+            .timer {
+                position: absolute;
+                right: 0;
+                bottom: 0;
+            }
+        }
+
+        .frontpage-timeleft-content {
+
+            .frontpage-timeleft-title {
+                margin-bottom: 22px;
+            }
+
+            .frontpage-timeleft-description {
+                font-size: 21px;
+                font-family: Riposte-Light, sans-serif;
+                line-height: 28px;
+                color: $primary;
+                margin-bottom: 34px;
+            }
+        }
+    }
+}
+
+.frontpage-voting-tipios {
+    background-image: linear-gradient(to bottom, #f7f6fa, #ece9f3);
+    background-size: 100% 1100px;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    padding-bottom: 300px;
+
+    .frontpage-section-title {
+        color: $gray-700;
+        text-align: center;
+        padding: 60px 0;
+        font-family: Riposte-Regular, sans-serif;
+    }
+}

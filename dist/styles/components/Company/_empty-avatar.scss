@@ -1,0 +1,35 @@
+.emptyAvatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  position: relative;
+  width: 122px;
+  height: 122px;
+
+  border-radius: 50%;
+  border: 1px solid $gray-300;
+  transition: all ease 200ms;
+
+  &:hover {
+    text-decoration: none;
+    border: 1px solid $secondary;
+    transition: all ease 200ms;
+  }
+
+  &--icon {
+    margin-bottom: .3rem;
+  }
+
+  &--text {
+    font-size: 10px;
+    color: $dark;
+  }
+
+  &--add {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+}

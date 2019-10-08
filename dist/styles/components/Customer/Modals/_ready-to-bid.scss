@@ -1,0 +1,27 @@
+.readyToBid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: $primary;
+  padding: 8rem 0;
+  text-align: center;
+
+  @include media-breakpoint-down(sm) {
+    height: 100vh;
+  }
+
+  &--icon {
+    margin-bottom: 2.25rem;
+  }
+
+  &--title {
+    font-family: 'Riposte-Regular', sans-serif;
+    color: $white;
+    margin-bottom: 2.25rem;
+  }
+
+  &--action {
+    width: 50%;
+  }
+}

@@ -1,0 +1,127 @@
+.customerSidebarCard {
+  border: 1px solid $gray-200;
+  padding: 4.2rem;
+
+  &__header {
+    text-align: center;
+
+    &__content {
+      margin-bottom: 2rem;
+
+      &--title {
+        letter-spacing: -0.4px;
+      }
+
+      &--subtitle {
+        font-family: 'Riposte-Light', sans-serif;
+      }
+    }
+
+    &__cost {
+      margin-bottom: 2.8rem;
+
+      &--label {
+        font-size: .875rem;
+        color: $gray-500;
+        margin-bottom: .275rem;
+      }
+
+      &--price {
+        color: $gray-700;
+        text-decoration: line-through;
+      }
+    }
+  }
+
+
+  &__footer {
+    &--action {
+      margin-bottom: 2rem;
+    }
+
+    &--alert {
+      font-size: .75rem;
+      color: $gray-400;
+      text-align: center;
+      margin-bottom: 1.2rem;
+    }
+
+    &--interestedCounter {
+      text-align: center;
+      color: $cyan;
+      margin-bottom: 0;
+      letter-spacing: .67px;
+      font-family: 'Riposte-Medium', sans-serif;
+    }
+
+    &__salePrice {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      &--minBuyers {
+        &--price {
+          display: flex;
+          align-items: center;
+          font-family: 'Riposte-Medium', sans-serif;
+          color: $gray-700;
+          margin-bottom: 0;
+
+          &:before {
+            content: '';
+            background: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg width='21px' height='22px' viewBox='0 0 21 22' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com --%3E%3Ctitle%3EPrice tag%3C/title%3E%3Cdesc%3ECreated with Sketch.%3C/desc%3E%3Cg id='Symbols' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='Tipio/Desktop/Binding/buy' transform='translate(-59.000000, -243.000000)' fill='%235C6265' stroke='%235C6265' stroke-width='0.55'%3E%3Cg id='Group-21' transform='translate(57.000000, 235.000000)'%3E%3Cg id='Group-20' transform='translate(0.100000, 0.000000)'%3E%3Cg id='Price-tag' transform='translate(0.000000, 6.600000)'%3E%3Cpath d='M14.8834083,10.1965917 C15.5003333,10.8135167 16.4997101,10.8135167 17.1166351,10.1965917 C17.732518,9.57966673 17.732518,8.5802899 17.1166351,7.96336489 C16.4997101,7.34748199 15.5003333,7.34748199 14.8834083,7.96336489 C14.2664833,8.5802899 14.2664833,9.57966673 14.8834083,10.1965917 L14.8834083,10.1965917 Z M14.1393467,10.9406533 C13.1118331,9.91418181 13.1118331,8.24681692 14.1393467,7.22034542 C15.1668603,6.1917897 16.8331831,6.1917897 17.8606967,7.22034542 C18.8882103,8.24681692 18.8882103,9.91418181 17.8606967,10.9406533 C16.8331831,11.9681669 15.1668603,11.9681669 14.1393467,10.9406533 L14.1393467,10.9406533 Z M20.725438,4.35560412 L13.4661481,3.69491078 C13.3108748,3.68032134 13.1566435,3.7365949 13.0461806,3.84601573 L4.46341982,12.4298186 C3.43590621,13.4573322 3.43590621,15.123655 4.46341982,16.1511686 L8.92883141,20.6165802 C9.95634502,21.6440938 11.6226678,21.6440938 12.6501814,20.6165802 L21.2329422,12.0338194 C21.3434051,11.9233565 21.3996787,11.7701674 21.3850892,11.6138519 L20.725438,4.35560412 Z M13.5609795,2.64655511 L21.2579526,3.34684836 C21.5101416,3.36873253 21.7112675,3.56985842 21.7341937,3.82308946 L22.4334449,11.5190205 C22.4761711,11.9858827 22.3083925,12.4464922 21.9780459,12.7789231 L13.3952851,21.3606418 C11.9561408,22.7997861 9.62391415,22.7997861 8.18476983,21.3606418 L3.71935824,16.8952302 C2.28021392,15.457128 2.28021392,13.1249013 3.71935824,11.685757 L12.302119,3.10195414 C12.6335078,2.77160748 13.0951594,2.60382888 13.5609795,2.64655511 L13.5609795,2.64655511 Z' id='Fill-1'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E") no-repeat;
+            width: 22px;
+            height: 22px;
+            display: block;
+            margin-right: 10px;
+          }
+        }
+
+        &--label {
+          font-size: .875rem;
+          color: $gray-500;
+        }
+      }
+
+      &--maxBuyers {
+        &--price {
+          display: flex;
+          align-items: center;
+          font-size: 1.625rem;
+          font-family: 'Riposte-Medium', sans-serif;
+          color: $primary;
+          margin-bottom: 0;
+
+          &:before {
+            content: '';
+            background: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg width='21px' height='22px' viewBox='0 0 21 22' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com --%3E%3Ctitle%3EPrice tag%3C/title%3E%3Cdesc%3ECreated with Sketch.%3C/desc%3E%3Cg id='Symbols' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='Tipio/Desktop/Binding/buy' transform='translate(-299.000000, -243.000000)' fill='%234F2E90' stroke='%234F2E90' stroke-width='0.55'%3E%3Cg id='Group-21-Copy' transform='translate(297.000000, 235.000000)'%3E%3Cg id='Group-20'%3E%3Cg id='Price-tag' transform='translate(0.000000, 6.600000)'%3E%3Cpath d='M14.8834083,10.1965917 C15.5003333,10.8135167 16.4997101,10.8135167 17.1166351,10.1965917 C17.732518,9.57966673 17.732518,8.5802899 17.1166351,7.96336489 C16.4997101,7.34748199 15.5003333,7.34748199 14.8834083,7.96336489 C14.2664833,8.5802899 14.2664833,9.57966673 14.8834083,10.1965917 L14.8834083,10.1965917 Z M14.1393467,10.9406533 C13.1118331,9.91418181 13.1118331,8.24681692 14.1393467,7.22034542 C15.1668603,6.1917897 16.8331831,6.1917897 17.8606967,7.22034542 C18.8882103,8.24681692 18.8882103,9.91418181 17.8606967,10.9406533 C16.8331831,11.9681669 15.1668603,11.9681669 14.1393467,10.9406533 L14.1393467,10.9406533 Z M20.725438,4.35560412 L13.4661481,3.69491078 C13.3108748,3.68032134 13.1566435,3.7365949 13.0461806,3.84601573 L4.46341982,12.4298186 C3.43590621,13.4573322 3.43590621,15.123655 4.46341982,16.1511686 L8.92883141,20.6165802 C9.95634502,21.6440938 11.6226678,21.6440938 12.6501814,20.6165802 L21.2329422,12.0338194 C21.3434051,11.9233565 21.3996787,11.7701674 21.3850892,11.6138519 L20.725438,4.35560412 Z M13.5609795,2.64655511 L21.2579526,3.34684836 C21.5101416,3.36873253 21.7112675,3.56985842 21.7341937,3.82308946 L22.4334449,11.5190205 C22.4761711,11.9858827 22.3083925,12.4464922 21.9780459,12.7789231 L13.3952851,21.3606418 C11.9561408,22.7997861 9.62391415,22.7997861 8.18476983,21.3606418 L3.71935824,16.8952302 C2.28021392,15.457128 2.28021392,13.1249013 3.71935824,11.685757 L12.302119,3.10195414 C12.6335078,2.77160748 13.0951594,2.60382888 13.5609795,2.64655511 L13.5609795,2.64655511 Z' id='Fill-1'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E") no-repeat;
+            width: 22px;
+            height: 22px;
+            display: block;
+            margin-right: 10px;
+          }
+        }
+
+        &--label {
+          font-size: .875rem;
+          color: $secondary;
+          text-align: right;
+          display: block;
+        }
+      }
+    }
+
+    &--progressBar {
+      margin-bottom: 2rem;
+    }
+
+    &--action {
+      margin-bottom: 2rem;
+    }
+
+    &--timeline {
+      padding-top: 1rem;
+      border-top: 1px solid $gray-200;
+    }
+  }
+}

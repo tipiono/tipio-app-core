@@ -1,0 +1,136 @@
+// 1. Abstracts, configuration and helpers
+@import
+    'abstracts/bootstrap/functions',
+    'abstracts/bootstrap/variables';
+
+// 2. Base stuff
+@import
+    'base/_fonts.css',
+    'base/font-sizes',
+    'base/view_port',
+    'base/base';
+
+@import '~bootstrap/scss/bootstrap';
+
+// 3. Components
+@import
+    'components/navigation',
+    'components/carousel-card',
+    'components/hamburger-button',
+    'components/special-card',
+    'components/shopping-bag-special-card',
+    'components/cart-item',
+    'components/order-item',
+    'components/_checkout',
+    'components/invite-friends',
+    'components/completed-tipio',
+    'components/login-register',
+    'components/add-tipio',
+    'components/custom-accordion',
+    'components/upload-viewer',
+    'components/UI/image-slider',
+    'components/main-categories',
+    'components/Customer/vertical-timeline',
+    'components/tipio-status',
+    'components/Customer/Modals/choose-category',
+    'components/_empty_interested',
+    'components/_empty-recived-offers.scss',
+    'components/_empty-orders.scss',
+    'components/tipio-posted-by',
+    'components/tipio-gallery',
+    'components/tipio-view-card',
+
+    // 3.1 UI Components
+    'components/UI/custom-material-select',
+    'components/UI/custom-modal',
+    'components/UI/success-modal',
+    'components/UI/modal-spinner',
+    'components/UI/pinky-countdown',
+    'components/UI/green-countdown',
+    'components/UI/timetag',
+    'components/UI/toggle-switch',
+    'components/UI/radio-buttons',
+    'components/UI/checkboxes',
+    'components/UI/pagination',
+    'components/UI/material-inputs',
+    'components/UI/onboarding-tooltip',
+    'components/UI/image-cropper',
+    'components/UI/tabs',
+    'components/UI/pill-tabs',
+    'components/UI/avatar',
+    'components/UI/sub-nav',
+    'components/UI/custom-btn-xl',
+    'components/placeholder-content',
+    'components/UI/table-borderless',
+    'components/UI/published-by',
+    'components/UI/product-details',
+    'components/UI/icon-btn',
+'components/UI/error-message',
+
+
+    // 3.2 Company Components
+    'components/Company/delete-account',
+    'components/Company/add-sales',
+    'components/Company/won-bidding-round',
+    'components/Company/empty-avatar',
+    'components/Company/empty-cover',
+    'components/Company/change-avatar',
+    'components/Company/change-cover',
+    'components/Company/cover',
+    'components/Company/Cards/order-item-card',
+    'components/Company/Cards/base-company-card',
+    'components/Company/Cards/choose-add-sale-card',
+    'components/Company/CompanySidebarCards/company-sidebar-card',
+    'components/Company/CompanySidebarCards/company-addBidCard',
+    'components/Company/create-offer-form',
+    'components/Company/Cards/add-more-sale-card',
+
+    // 3.3 Customer Components
+    'components/Customer/sales-progressbar',
+    'components/Customer/Modals/_tipio-with-offer.scss',
+    'components/Customer/Modals/_tipio-confirmation.scss',
+    'components/Customer/Modals/_onboarding-movie',
+    'components/Customer/Modals/_login-or-register.scss',
+    'components/Customer/Modals/_ready-to-bid.scss',
+    'components/Customer/Modals/_join-tipio-onboarding.scss',
+    'components/Customer/Cards/voting-card',
+    'components/Customer/Cards/bidding-card',
+    'components/Customer/Cards/sale-card',
+    'components/Customer/CustomerSidebarCards/customer-sidebar-card',
+    'components/Customer/image-uploader',
+    'components/Customer/horizontal-timeline';
+
+
+// 4. Layout-related sections
+@import
+    'layout/footer',
+    'layout/header';
+
+// 5. Page-specific styles
+@import
+    'pages/login',
+'components/UI/select-images',
+    'pages/searchresult',
+    'pages/your-tipios',
+    'pages/userprofile',
+    'pages/add-link',
+    'pages/tipio-publish',
+    'pages/credit-cart',
+    'pages/tipio-view',
+    'pages/frontpage',
+    'pages/parse-url',
+    'pages/about-page',
+    'pages/edit-add-sale',
+    'pages/select-image-page',
+    'pages/select-category-page';
+
+
+// 6. Themes
+@import
+    'themes/default';
+
+// 7. Vendors
+
+// . Custom
+@import
+    'custom-css';
