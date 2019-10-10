@@ -84,7 +84,8 @@ import ChangeAvatar from './Company/Avatar/ChangeAvatar';
 import EmptyCover from './Company/CoverImage/EmptyCover';
 import ChangeCover from './Company/CoverImage/ChangeCover';
 import Cover from './Company/CoverImage/Cover';
-import OrderItemCard from './Company/Cards/OrderItemCard';
+import OrderItemCard from './Company/Cards/OrderItemCard/OrderItemCard';
+import OrderFilters from './Company/Cards/OrderItemCard/OrderFilters';
 import BaseCompanyCard from './Company/Cards/BaseCompanyCard/BaseCompanyCard';
 import AddSaleCompanyCard from './Company/Cards/AddSaleCompanyCard/AddSaleCompanyCard';
 import CustomerListCompanyCard from './Company/Cards/CustomerListCompanyCard/CustomerListCompanyCard';
@@ -93,7 +94,8 @@ import TipioWithOfferCompanyCard from './Company/Cards/TipioWithOfferCompanyCard
 import ChooseAddSaleCompanyCard from './Company/Cards/ChooseAddSaleCompanyCard/ChooseAddSaleCompanyCard';
 import CompanySidebarBaseCard from './Company/CompanySidebarCards/CompanySidebarBaseCard';
 import CompanyAddBidCard from   './Company/CompanySidebarCards/CompanyAddBidCard';
-import AddMoreSaleCompanyCard from './Company/Cards/AddMoreSaleCompanyCard/AddMoreSaleCompanyCard'
+import AddMoreSaleCompanyCard from './Company/Cards/AddMoreSaleCompanyCard/AddMoreSaleCompanyCard';
+import MaterialSearch from './Company/MaterialSearch/MaterialSearch';
 
 /*
 *   Layout
@@ -107,6 +109,7 @@ import PublicLayout from './UI/Layout/Public/index';
 import InteriorIcon from './UI/Icons/InteriorIcon';
 import ArrowDownIcon from './UI/Icons/ArrowDownIcon';
 import RemoveImageIcon from './UI/Icons/RemoveImageIcon';
+import ExportIcon from './UI/Icons/ExportIcon';
 
 export {
     styles,
@@ -198,5 +201,8 @@ export {
     SelectImages,
     ErrorMessage,
     AddMoreSaleCompanyCard,
-    RemoveImageIcon
+    OrderFilters,
+    MaterialSearch,
+    ExportIcon,
+    RemoveImageIcon,
 };
