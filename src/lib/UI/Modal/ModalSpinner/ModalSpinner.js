@@ -1,7 +1,7 @@
 import React from "react";
 import {Modal} from '../Modal'
 
-function ModalSpinner({}) {
+function ModalSpinner({title}) {
     return (
         <>
             <Modal>
@@ -9,6 +9,7 @@ function ModalSpinner({}) {
                    <div className="modalSpinner--size spinner-border text-secondary" role="status">
                        <span className="sr-only">Loading...</span>
                    </div>
+                   <h3 className="modalSpinner--title">{title}</h3>
                 </div>
             </Modal>
         </>
