@@ -7,9 +7,11 @@ exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
+var _calculateDiscountPercentage = _interopRequireDefault(require("../../../Util/calculateDiscountPercentage"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var AddMoreSaleCompanyCard = function AddMoreSaleCompanyCard() {
+var AddMoreSaleCompanyCard = function AddMoreSaleCompanyCard(props) {
   return _react.default.createElement("div", {
     className: "addMoreSaleCard"
   }, _react.default.createElement("div", {
@@ -19,23 +21,23 @@ var AddMoreSaleCompanyCard = function AddMoreSaleCompanyCard() {
   }, _react.default.createElement("a", {
     className: "addMoreSaleCard__preview--image",
     href: ""
-  }, _react.default.createElement("img", {
+  }, props.tipio.images && props.tipio.images.length && _react.default.createElement("img", {
     className: "img-fluid",
-    src: "https://tipio.ams3.cdn.digitaloceanspaces.com/staging/4/tipios/93/1560161148875",
+    src: props.tipio.images[0].blob_url,
     alt: ""
   }), _react.default.createElement("span", {
     className: "addMoreSaleCard__preview--discount"
-  }, "-30%"))), _react.default.createElement("div", {
+  }, (0, _calculateDiscountPercentage.default)(props.first_price, props.company_price), "%"))), _react.default.createElement("div", {
     className: "addMoreSaleCard__content"
   }, _react.default.createElement("h5", {
     className: "addMoreSaleCard__content--title"
-  }, "Samsung 65\" UHD h\xF8ytaler UE65NU7105"), _react.default.createElement("div", {
+  }, props.tipio.title), _react.default.createElement("div", {
     className: "addMoreSaleCard__content__price"
   }, _react.default.createElement("h6", {
     className: "addMoreSaleCard__content__price--sale"
-  }, "8 499 Kr"), _react.default.createElement("h6", {
+  }, props.first_price, " Kr"), _react.default.createElement("h6", {
     className: "addMoreSaleCard__content__price--cost"
-  }, "7 499 Kr")))));
+  }, props.company_price, " Kr")))));
 };
 
 var _default = AddMoreSaleCompanyCard;
