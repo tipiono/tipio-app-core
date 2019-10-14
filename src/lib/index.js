@@ -44,6 +44,7 @@ import Table from './UI/Table';
 import PublishedBy from './UI/PublishedBy/PublishedBy';
 import SelectImages from './UI/SelectImages';
 import ErrorMessage from './UI/ErrorMessage/ErrorMessage';
+import CircleChart from './UI/CircleChart/CircleChart';
 
 /*
 *   Customer/Private Components
@@ -200,9 +201,10 @@ export {
     IconButton,
     SelectImages,
     ErrorMessage,
-    AddMoreSaleCompanyCard,
     OrderFilters,
+    AddMoreSaleCompanyCard,
     MaterialSearch,
     ExportIcon,
     RemoveImageIcon,
+    CircleChart,
 };

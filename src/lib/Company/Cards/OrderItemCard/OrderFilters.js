@@ -1,5 +1,6 @@
 import React from 'react';
-import {DropDown, DropDownItem} from 'tipio-app-core';
+import {DropDown, DropDownItem} from "../../..";
+
 
 const OrderFilters = () => {
     return (

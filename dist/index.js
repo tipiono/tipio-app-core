@@ -261,6 +261,12 @@ Object.defineProperty(exports, "ErrorMessage", {
     return _ErrorMessage.default;
   }
 });
+Object.defineProperty(exports, "CircleChart", {
+  enumerable: true,
+  get: function get() {
+    return _CircleChart.default;
+  }
+});
 Object.defineProperty(exports, "TipioWithOffer", {
   enumerable: true,
   get: function get() {
@@ -642,6 +648,8 @@ var _PublishedBy = _interopRequireDefault(require("./UI/PublishedBy/PublishedBy"
 var _SelectImages = _interopRequireDefault(require("./UI/SelectImages"));
 
 var _ErrorMessage = _interopRequireDefault(require("./UI/ErrorMessage/ErrorMessage"));
+
+var _CircleChart = _interopRequireDefault(require("./UI/CircleChart/CircleChart"));
 
 var _TipioWithOffer = _interopRequireDefault(require("./Customer/Modals/TipioWithOffer/TipioWithOffer"));
 
