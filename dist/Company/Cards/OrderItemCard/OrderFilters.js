@@ -7,7 +7,7 @@ exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
-var _tipioAppCore = require("tipio-app-core");
+var _ = require("../../..");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -26,11 +26,11 @@ var OrderFilters = function OrderFilters() {
     strokeWidth: 0.2,
     fill: "#5C6265",
     fillRule: "evenodd"
-  })), _react.default.createElement(_tipioAppCore.DropDown, {
+  })), _react.default.createElement(_.DropDown, {
     title: 'Leveringsstatus'
-  }, _react.default.createElement(_tipioAppCore.DropDownItem, null, _react.default.createElement("a", {
+  }, _react.default.createElement(_.DropDownItem, null, _react.default.createElement("a", {
     href: "/"
-  }, "Merk alle som levert")), _react.default.createElement(_tipioAppCore.DropDownItem, null, _react.default.createElement("a", {
+  }, "Merk alle som levert")), _react.default.createElement(_.DropDownItem, null, _react.default.createElement("a", {
     href: "/"
   }, "Merk alle som ikke levert")))), _react.default.createElement("th", null, _react.default.createElement("a", {
     className: "orderFilters--sort",
