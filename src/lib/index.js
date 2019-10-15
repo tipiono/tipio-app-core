@@ -9,6 +9,8 @@ import DisabledButton from "./UI/Buttons/DisabledButton";
 import GrayButton from "./UI/Buttons/GrayButton";
 import GrayOutlineButton from "./UI/Buttons/GrayOutlineButton";
 import LinkButton from "./UI/Buttons/LinkButton";
+import AddCategoryButton from "./UI/Buttons/AddCategoryButton";
+import SelectedCategoryButton from "./UI/Buttons/SelectedCategoryButton";
 import { Modal, ModalType } from "./UI/Modal/Modal";
 import OnboardingTooltip from './UI/OnboardingTooltip/OnboardingTooltip';
 import SuccessModal from './UI/Modal/SuccessModal/SuccessModal';
@@ -45,7 +47,6 @@ import PublishedBy from './UI/PublishedBy/PublishedBy';
 import SelectImages from './UI/SelectImages';
 import ErrorMessage from './UI/ErrorMessage/ErrorMessage';
 import CircleChart from './UI/CircleChart/CircleChart';
-
 /*
 *   Customer/Private Components
 * */
@@ -209,4 +210,6 @@ export {
     RemoveImageIcon,
     CircleChart,
     AddSaleSidebarCard,
+    AddCategoryButton,
+    SelectedCategoryButton
 };

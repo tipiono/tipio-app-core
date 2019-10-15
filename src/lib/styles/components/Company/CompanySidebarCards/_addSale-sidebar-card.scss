@@ -60,6 +60,8 @@
     }
 
     &--sale {
+      text-align: right;
+
       &--label {
         color: $gray-500;
         font-size: .875rem;
