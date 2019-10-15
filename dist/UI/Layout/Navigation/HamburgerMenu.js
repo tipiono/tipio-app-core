@@ -17,9 +17,7 @@ function HamburgerMenu(props) {
   var menuVisible = props.menuVisible,
       toggleMenu = props.toggleMenu,
       items = props.items;
-  return _react.default.createElement("ul", {
-    className: "nav-list ml-auto"
-  }, _react.default.createElement("li", {
+  return _react.default.createElement("li", {
     className: "nav-list-item"
   }, _react.default.createElement("span", null, _react.default.createElement("a", {
     href: "#",
@@ -51,7 +49,7 @@ function HamburgerMenu(props) {
         href: "/tipio/new"
       }, x.name));
     }
-  })))));
+  }))));
 }
 
 var _default = HamburgerMenu;
