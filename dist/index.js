@@ -525,6 +525,12 @@ Object.defineProperty(exports, "AddMoreSaleCompanyCard", {
     return _AddMoreSaleCompanyCard.default;
   }
 });
+Object.defineProperty(exports, "AddSaleSidebarCard", {
+  enumerable: true,
+  get: function get() {
+    return _AddSaleSidebarCard.default;
+  }
+});
 Object.defineProperty(exports, "MaterialSearch", {
   enumerable: true,
   get: function get() {
@@ -736,6 +742,8 @@ var _CompanySidebarBaseCard = _interopRequireDefault(require("./Company/CompanyS
 var _CompanyAddBidCard = _interopRequireDefault(require("./Company/CompanySidebarCards/CompanyAddBidCard"));
 
 var _AddMoreSaleCompanyCard = _interopRequireDefault(require("./Company/Cards/AddMoreSaleCompanyCard/AddMoreSaleCompanyCard"));
+
+var _AddSaleSidebarCard = _interopRequireDefault(require("./Company/CompanySidebarCards/AddSaleSidebarCard"));
 
 var _MaterialSearch = _interopRequireDefault(require("./Company/MaterialSearch/MaterialSearch"));
 

@@ -96,6 +96,7 @@ import ChooseAddSaleCompanyCard from './Company/Cards/ChooseAddSaleCompanyCard/C
 import CompanySidebarBaseCard from './Company/CompanySidebarCards/CompanySidebarBaseCard';
 import CompanyAddBidCard from   './Company/CompanySidebarCards/CompanyAddBidCard';
 import AddMoreSaleCompanyCard from './Company/Cards/AddMoreSaleCompanyCard/AddMoreSaleCompanyCard';
+import AddSaleSidebarCard from   './Company/CompanySidebarCards/AddSaleSidebarCard';
 import MaterialSearch from './Company/MaterialSearch/MaterialSearch';
 
 /*
@@ -207,4 +208,5 @@ export {
     ExportIcon,
     RemoveImageIcon,
     CircleChart,
+    AddSaleSidebarCard,
 };
