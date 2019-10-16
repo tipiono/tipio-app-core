@@ -114,7 +114,7 @@ storiesOf('UI/Buttons/Add Category Button', module)
     .add('Selected Category Button', () =>
         <>
             <div className="col-3 m-3">
-                <SelectedCategoryButton title={'OPPBEVARING'} />
+                <SelectedCategoryButton title={'Elektronikk'} />
             </div>
         </>
     );
