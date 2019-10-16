@@ -14,7 +14,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var AddSaleSidebarCard = function AddSaleSidebarCard(_ref) {
   var first_price = _ref.first_price,
       company_price = _ref.company_price,
-      tipio = _ref.tipio;
+      tipio = _ref.tipio,
+      editButtonOnClick = _ref.editButtonOnClick;
   var title = tipio.title,
       subtitle = tipio.subtitle;
   return _react.default.createElement("div", {
@@ -46,7 +47,8 @@ var AddSaleSidebarCard = function AddSaleSidebarCard(_ref) {
   }, _react.default.createElement("div", {
     className: "addSaleSidebarCard__footer--action"
   }, _react.default.createElement(_SecondaryOutlineButton.default, {
-    text: "Rediger"
+    text: "Rediger",
+    onClick: editButtonOnClick
   })), _react.default.createElement("p", {
     className: "addSaleSidebarCard__footer--interestedCounter"
   }, "Allerede 329 p\xE5meldte!")));
