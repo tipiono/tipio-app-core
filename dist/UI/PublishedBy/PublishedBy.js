@@ -26,9 +26,7 @@ var PublishedBy = function PublishedBy(_ref) {
     className: ""
   }, _react.default.createElement("h6", {
     className: "publishedBy__user--name"
-  }, username), _react.default.createElement("p", {
-    className: "publishedBy__user--productFrom"
-  }, "Photo from ", url))), _react.default.createElement("p", {
+  }, username))), _react.default.createElement("p", {
     className: "publishedBy--date"
   }, date));
 };
