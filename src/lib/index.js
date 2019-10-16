@@ -47,6 +47,7 @@ import PublishedBy from './UI/PublishedBy/PublishedBy';
 import SelectImages from './UI/SelectImages';
 import ErrorMessage from './UI/ErrorMessage/ErrorMessage';
 import CircleChart from './UI/CircleChart/CircleChart';
+import SearchInput from './UI/Layout/Navigation/SearchInput';
 /*
 *   Customer/Private Components
 * */
@@ -113,6 +114,9 @@ import InteriorIcon from './UI/Icons/InteriorIcon';
 import ArrowDownIcon from './UI/Icons/ArrowDownIcon';
 import RemoveImageIcon from './UI/Icons/RemoveImageIcon';
 import ExportIcon from './UI/Icons/ExportIcon';
+import SearchIcon from './UI/Icons/SearchIcon';
+import CloseIcon from './UI/Icons/CloseIcon';
+import FilterIcon from './UI/Icons/FilterIcon';
 
 export {
     styles,
@@ -211,5 +215,9 @@ export {
     CircleChart,
     AddSaleSidebarCard,
     AddCategoryButton,
-    SelectedCategoryButton
+    SelectedCategoryButton,
+    SearchInput,
+    SearchIcon,
+    CloseIcon,
+    FilterIcon,
 };
