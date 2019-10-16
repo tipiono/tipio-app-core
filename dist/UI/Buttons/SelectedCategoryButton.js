@@ -16,22 +16,20 @@ var SelectedCategoryButton = function SelectedCategoryButton(_ref) {
     className: "selected-category"
   }, _react.default.createElement("button", {
     type: "button",
-    className: "btn-with-icon",
+    className: "addCategoryButton",
     onClick: onClick
   }, _react.default.createElement("span", null, title), _react.default.createElement("svg", {
-    width: 20,
-    height: 20,
-    viewBox: "0 0 24 24"
+    width: 23,
+    height: 23
   }, _react.default.createElement("g", {
-    fill: "none",
-    stroke: "#4ABCAC"
+    fill: "#8C8F91",
+    fillRule: "nonzero",
+    stroke: "#8C8F91",
+    strokeWidth: 0.6
   }, _react.default.createElement("path", {
-    "data-color": "color-2",
-    d: "M6 12l4 4 8-8"
-  }), _react.default.createElement("circle", {
-    cx: 12,
-    cy: 12,
-    r: 11
+    d: "M11.5 2a9.5 9.5 0 100 19 9.5 9.5 0 000-19zm0-1C17.299 1 22 5.701 22 11.5S17.299 22 11.5 22 1 17.299 1 11.5 5.701 1 11.5 1z"
+  }), _react.default.createElement("path", {
+    d: "M12.026 10.974h3.68a.526.526 0 110 1.052h-3.68v3.68a.526.526 0 11-1.052 0v-3.68h-3.68a.526.526 0 110-1.052h3.68v-3.68a.526.526 0 111.052 0v3.68z"
   })))));
 };
 
