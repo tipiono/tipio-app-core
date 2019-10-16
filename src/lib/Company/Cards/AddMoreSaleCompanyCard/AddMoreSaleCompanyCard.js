@@ -13,9 +13,7 @@ const AddMoreSaleCompanyCard = (props) => {
                         }
                         <span className="addMoreSaleCard__preview--discount">{calculateDiscountPercentage(props.first_price, props.company_price)}%</span>
                     </a>
-
                 </div>
-
                 <div className="addMoreSaleCard__content">
                     <h5 className="addMoreSaleCard__content--title">{props.tipio.title}</h5>
 

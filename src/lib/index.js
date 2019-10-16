@@ -108,6 +108,11 @@ import InteriorIcon from './UI/Icons/InteriorIcon';
 import ArrowDownIcon from './UI/Icons/ArrowDownIcon';
 import RemoveImageIcon from './UI/Icons/RemoveImageIcon';
 
+/**
+ * UTILS
+ */
+import calculateDiscountPercentage from './Util/calculateDiscountPercentage';
+
 export {
     styles,
     SecondaryButton,
@@ -198,5 +203,6 @@ export {
     SelectImages,
     ErrorMessage,
     AddMoreSaleCompanyCard,
-    RemoveImageIcon
+    RemoveImageIcon,
+    calculateDiscountPercentage as _util_CalculateDiscountPercentage
 };

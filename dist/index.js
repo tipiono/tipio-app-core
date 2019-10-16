@@ -537,6 +537,12 @@ Object.defineProperty(exports, "RemoveImageIcon", {
     return _RemoveImageIcon.default;
   }
 });
+Object.defineProperty(exports, "_util_CalculateDiscountPercentage", {
+  enumerable: true,
+  get: function get() {
+    return _calculateDiscountPercentage.default;
+  }
+});
 exports.CountdownType = void 0;
 
 var _main = _interopRequireDefault(require("./styles/main.scss"));
@@ -716,6 +722,8 @@ var _InteriorIcon = _interopRequireDefault(require("./UI/Icons/InteriorIcon"));
 var _ArrowDownIcon = _interopRequireDefault(require("./UI/Icons/ArrowDownIcon"));
 
 var _RemoveImageIcon = _interopRequireDefault(require("./UI/Icons/RemoveImageIcon"));
+
+var _calculateDiscountPercentage = _interopRequireDefault(require("./Util/calculateDiscountPercentage"));
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
 
