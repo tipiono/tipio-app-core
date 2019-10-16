@@ -2,24 +2,28 @@ import React from 'react';
 import SecondaryOutlineButton from "../../UI/Buttons/SecondaryOutlineButton";
 
 
-const AddSaleSidebarCard = () => {
+const AddSaleSidebarCard = ({ first_price, company_price, tipio }) => {
+    const {
+        title,
+        subtitle,
+    } = tipio;
     return (
         <div className="addSaleSidebarCard">
             <div className="addSaleSidebarCard__header">
                 <div className="addSaleSidebarCard__header__content">
-                    <h3 className="addSaleSidebarCard__header__content--title">Samsung 65" UHD høytaler UE65NU7105</h3>
-                    <p className="addSaleSidebarCard__header__content--subtitle">Samsung</p>
+                    <h3 className="addSaleSidebarCard__header__content--title">{title}</h3>
+                    <p className="addSaleSidebarCard__header__content--subtitle">{subtitle}</p>
                 </div>
             </div>
 
             <div className="addSaleSidebarCard__price">
                 <div className="addSaleSidebarCard__price--cost">
                     <p className="addSaleSidebarCard__price--cost--label">Før pris</p>
-                    <h6 className="addSaleSidebarCard__price--cost--amount">8 499 Kr</h6>
+                    <h6 className="addSaleSidebarCard__price--cost--amount">{first_price} Kr</h6>
                 </div>
                 <div className="addSaleSidebarCard__price--sale">
                     <p className="addSaleSidebarCard__price--sale--label">Ny pris</p>
-                    <h6 className="addSaleSidebarCard__price--sale--amount">7 499 Kr</h6>
+                    <h6 className="addSaleSidebarCard__price--sale--amount">{company_price} Kr</h6>
                 </div>
             </div>
 

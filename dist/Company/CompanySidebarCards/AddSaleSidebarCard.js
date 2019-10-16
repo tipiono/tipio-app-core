@@ -11,7 +11,12 @@ var _SecondaryOutlineButton = _interopRequireDefault(require("../../UI/Buttons/S
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var AddSaleSidebarCard = function AddSaleSidebarCard() {
+var AddSaleSidebarCard = function AddSaleSidebarCard(_ref) {
+  var first_price = _ref.first_price,
+      company_price = _ref.company_price,
+      tipio = _ref.tipio;
+  var title = tipio.title,
+      subtitle = tipio.subtitle;
   return _react.default.createElement("div", {
     className: "addSaleSidebarCard"
   }, _react.default.createElement("div", {
@@ -20,9 +25,9 @@ var AddSaleSidebarCard = function AddSaleSidebarCard() {
     className: "addSaleSidebarCard__header__content"
   }, _react.default.createElement("h3", {
     className: "addSaleSidebarCard__header__content--title"
-  }, "Samsung 65\" UHD h\xF8ytaler UE65NU7105"), _react.default.createElement("p", {
+  }, title), _react.default.createElement("p", {
     className: "addSaleSidebarCard__header__content--subtitle"
-  }, "Samsung"))), _react.default.createElement("div", {
+  }, subtitle))), _react.default.createElement("div", {
     className: "addSaleSidebarCard__price"
   }, _react.default.createElement("div", {
     className: "addSaleSidebarCard__price--cost"
@@ -30,13 +35,13 @@ var AddSaleSidebarCard = function AddSaleSidebarCard() {
     className: "addSaleSidebarCard__price--cost--label"
   }, "F\xF8r pris"), _react.default.createElement("h6", {
     className: "addSaleSidebarCard__price--cost--amount"
-  }, "8 499 Kr")), _react.default.createElement("div", {
+  }, first_price, " Kr")), _react.default.createElement("div", {
     className: "addSaleSidebarCard__price--sale"
   }, _react.default.createElement("p", {
     className: "addSaleSidebarCard__price--sale--label"
   }, "Ny pris"), _react.default.createElement("h6", {
     className: "addSaleSidebarCard__price--sale--amount"
-  }, "7 499 Kr"))), _react.default.createElement("div", {
+  }, company_price, " Kr"))), _react.default.createElement("div", {
     className: "addSaleSidebarCard__footer"
   }, _react.default.createElement("div", {
     className: "addSaleSidebarCard__footer--action"
