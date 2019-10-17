@@ -15,8 +15,7 @@ const AddMoreSaleCompanyCard = (props) => {
                     </a>
                 </div>
                 <div className="addMoreSaleCard__content">
-                    <h5 className="addMoreSaleCard__content--title">{props.tipio.title}</h5>
-
+                    <h5 className="addMoreSaleCard__content--title"><a href="" onClick={(e)=>{e.preventDefault(); props.titleOnClick(props);}}>{props.tipio.title}</a></h5>
                     <div className="addMoreSaleCard__content__price">
                         <h6 className="addMoreSaleCard__content__price--sale">{props.first_price} Kr</h6>
                         <h6 className="addMoreSaleCard__content__price--cost">{props.company_price} Kr</h6>

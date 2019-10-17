@@ -31,7 +31,13 @@ var AddMoreSaleCompanyCard = function AddMoreSaleCompanyCard(props) {
     className: "addMoreSaleCard__content"
   }, _react.default.createElement("h5", {
     className: "addMoreSaleCard__content--title"
-  }, props.tipio.title), _react.default.createElement("div", {
+  }, _react.default.createElement("a", {
+    href: "",
+    onClick: function onClick(e) {
+      e.preventDefault();
+      props.titleOnClick(props);
+    }
+  }, props.tipio.title)), _react.default.createElement("div", {
     className: "addMoreSaleCard__content__price"
   }, _react.default.createElement("h6", {
     className: "addMoreSaleCard__content__price--sale"
