@@ -31,9 +31,7 @@ var SearchInput = function SearchInput() {
       show = _useState2[0],
       setShow = _useState2[1];
 
-  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("li", {
-    className: "nav-list-item position-relative d-flex align-items-center"
-  }, _react.default.createElement("a", {
+  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("a", {
     href: "#",
     className: (0, _classnames.default)("nav-list-link", {
       'd-none': show
@@ -59,7 +57,7 @@ var SearchInput = function SearchInput() {
     onClick: function onClick() {
       setShow(false);
     }
-  }, _react.default.createElement(_CloseIcon.default, null))))));
+  }, _react.default.createElement(_CloseIcon.default, null)))));
 };
 
 var _default = SearchInput;

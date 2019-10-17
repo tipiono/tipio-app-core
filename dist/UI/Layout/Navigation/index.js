@@ -39,7 +39,7 @@ function Navigation(_ref) {
   }, _react.default.createElement(_Logo.default, null)), _react.default.createElement(_BusinessPrivateNavigationItems.default, props), _react.default.createElement("ul", {
     className: "nav-list ml-auto"
   }, _react.default.createElement("li", {
-    className: "nav-list-item"
+    className: "nav-list-item d-flex align-items-center"
   }, _react.default.createElement(_SearchInput.default, null)), _react.default.createElement("li", {
     className: "nav-list-item"
   }, _react.default.createElement("a", {

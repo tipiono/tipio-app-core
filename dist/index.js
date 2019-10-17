@@ -285,6 +285,12 @@ Object.defineProperty(exports, "SearchInput", {
     return _SearchInput.default;
   }
 });
+Object.defineProperty(exports, "Overlay", {
+  enumerable: true,
+  get: function get() {
+    return _Overlay.default;
+  }
+});
 Object.defineProperty(exports, "TipioWithOffer", {
   enumerable: true,
   get: function get() {
@@ -698,6 +704,8 @@ var _ErrorMessage = _interopRequireDefault(require("./UI/ErrorMessage/ErrorMessa
 var _CircleChart = _interopRequireDefault(require("./UI/CircleChart/CircleChart"));
 
 var _SearchInput = _interopRequireDefault(require("./UI/Layout/Navigation/SearchInput"));
+
+var _Overlay = _interopRequireDefault(require("./UI/Overlay/Overlay"));
 
 var _TipioWithOffer = _interopRequireDefault(require("./Customer/Modals/TipioWithOffer/TipioWithOffer"));
 

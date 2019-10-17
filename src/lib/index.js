@@ -48,6 +48,8 @@ import SelectImages from './UI/SelectImages';
 import ErrorMessage from './UI/ErrorMessage/ErrorMessage';
 import CircleChart from './UI/CircleChart/CircleChart';
 import SearchInput from './UI/Layout/Navigation/SearchInput';
+import Overlay from './UI/Overlay/Overlay';
+
 /*
 *   Customer/Private Components
 * */
@@ -220,4 +222,5 @@ export {
     SearchIcon,
     CloseIcon,
     FilterIcon,
+    Overlay,
 };
