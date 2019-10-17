@@ -54,6 +54,7 @@ body.noscroll {
                 .nav-list-link {
                     position: relative;
                     z-index: 4;
+                    color: $gray-300;
 
                     &:hover {
                         text-decoration: none;
@@ -353,7 +354,7 @@ body.noscroll {
                     height: 36px;
                 }
             }
-            
+
             .special-offers-body {
                 .special-offers-by {
                     color: $gray-700;
