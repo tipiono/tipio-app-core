@@ -100,6 +100,7 @@ import ChooseAddSaleCompanyCard from './Company/Cards/ChooseAddSaleCompanyCard/C
 import CompanySidebarBaseCard from './Company/CompanySidebarCards/CompanySidebarBaseCard';
 import CompanyAddBidCard from   './Company/CompanySidebarCards/CompanyAddBidCard';
 import AddMoreSaleCompanyCard from './Company/Cards/AddMoreSaleCompanyCard/AddMoreSaleCompanyCard';
+import AddMoreSaleEndedCompanyCard from './Company/Cards/AddMoreSaleEndedCompanyCard/AddMoreSaleEndedCompanyCard';
 import AddSaleSidebarCard from   './Company/CompanySidebarCards/AddSaleSidebarCard';
 import MaterialSearch from './Company/MaterialSearch/MaterialSearch';
 
@@ -223,4 +224,5 @@ export {
     CloseIcon,
     FilterIcon,
     Overlay,
+    AddMoreSaleEndedCompanyCard,
 };
