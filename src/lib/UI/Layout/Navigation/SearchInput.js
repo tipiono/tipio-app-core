@@ -22,7 +22,7 @@ const SearchInput = () => {
                     {/*Input*/}
                     <input type="text"
                            className="searchInput__form--input"
-                           placeholder="Hva søker du etter?"
+                           placeholder="Søk produkt, navn merke..."
                     />
 
                     {/*Close Icon*/}
