@@ -5,9 +5,9 @@ import {SecondaryButton, SecondaryOutlineButton} from "../../../index";
 function AddSaleCompanyCard({children, ...props}) {
     return (
         <>
-            <BaseCompanyCard>
-                <SecondaryButton text={'Legg i handlekurv'}/>
-                <SecondaryOutlineButton text={'Se kundeliste'}/>
+            <BaseCompanyCard {...props}>
+                {props.showAddAdditionalSaleButton && <SecondaryButton text={'Legg i handlekurv'}/>}
+                {props.showSeeCustomerListButton ? (<SecondaryOutlineButton text={'Se kundeliste'}/>) : (null)}
             </BaseCompanyCard>
 
         </>

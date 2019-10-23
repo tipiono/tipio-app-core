@@ -2,7 +2,7 @@ import React from 'react';
 import cx from 'classnames';
 
 export default React.forwardRef(({ from, to, label, name, errors, ...props }, ref) => (
-    <> {console.log(props.paddingLeft)}
+    <>
         <label className={cx("pure-material-textfield-outlined from-to-input", { validationError: errors && errors[name] })}>
                 <input
                     placeholder={to}
