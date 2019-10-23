@@ -297,6 +297,12 @@ Object.defineProperty(exports, "Alert", {
     return _Alert.default;
   }
 });
+Object.defineProperty(exports, "Pagination", {
+  enumerable: true,
+  get: function get() {
+    return _Pagination.default;
+  }
+});
 Object.defineProperty(exports, "TipioWithOffer", {
   enumerable: true,
   get: function get() {
@@ -726,6 +732,8 @@ var _SearchInput = _interopRequireDefault(require("./UI/Layout/Navigation/Search
 var _Overlay = _interopRequireDefault(require("./UI/Overlay/Overlay"));
 
 var _Alert = _interopRequireDefault(require("./UI/Alert/Alert"));
+
+var _Pagination = _interopRequireDefault(require("./UI/Pagination/Pagination"));
 
 var _TipioWithOffer = _interopRequireDefault(require("./Customer/Modals/TipioWithOffer/TipioWithOffer"));
 
