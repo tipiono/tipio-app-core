@@ -9,7 +9,7 @@ const PublishedBy = ({avatar, username, date, url}) => {
 
                 <div className="">
                     <h6 className="publishedBy__user--name">{username}</h6>
-                    {/*<p className="publishedBy__user--productFrom">Photo from {url}</p>*/}
+                    <p className="publishedBy__user--productFrom">Photo from {url}</p>
                 </div>
             </div>
 

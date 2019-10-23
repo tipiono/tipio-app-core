@@ -18,7 +18,8 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 var BaseCompanyCard = function BaseCompanyCard(_ref) {
   var children = _ref.children,
       expires_in = _ref.expires_in,
-      props = _objectWithoutProperties(_ref, ["children", "expires_in"]);
+      binding_count = _ref.binding_count,
+      props = _objectWithoutProperties(_ref, ["children", "expires_in", "binding_count"]);
 
   return _react.default.createElement("div", null, _react.default.createElement("div", {
     className: "baseCompanyCard"
@@ -34,7 +35,7 @@ var BaseCompanyCard = function BaseCompanyCard(_ref) {
     className: "baseCompanyCard__header--timeLeft"
   }, _react.default.createElement(_TipioCountdown.default, {
     className: "timer",
-    expires_in: props.voting_expires_in
+    expires_in: expires_in
   }))), _react.default.createElement("div", {
     className: "baseCompanyCard__body"
   }, _react.default.createElement("h5", {
@@ -47,11 +48,11 @@ var BaseCompanyCard = function BaseCompanyCard(_ref) {
     className: "baseCompanyCard__body--cost--price"
   }, "1 199 000 Kr"), _react.default.createElement("span", {
     className: "baseCompanyCard__body--cost--label"
-  }, "Potensiell omsetning")), _react.default.createElement("div", {
+  }, "Potensiell omsetning")), binding_count > 0 ? _react.default.createElement("div", {
     className: "baseCompanyCard__body--interested"
   }, _react.default.createElement("h6", {
     className: "baseCompanyCard__body--interested--counter"
-  }, "220 p\xE5meldte!")), children)));
+  }, binding_count, " p\xE5meldte!")) : null, children)));
 };
 
 var _default = BaseCompanyCard;

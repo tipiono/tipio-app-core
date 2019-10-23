@@ -6,7 +6,7 @@ import HamburgerMenu from './HamburgerMenu';
 import SearchInput from "./SearchInput";
 import FilterIcon from "../../Icons/FilterIcon";
 
-function Navigation({children, ...props}) {
+function Navigation({children, filterOnClick, ...props}) {
     return (
         <>
             <nav className="navigation">
@@ -25,7 +25,7 @@ function Navigation({children, ...props}) {
 
                             <li className="nav-list-item">
                                 <a href="">
-                                    <FilterIcon/>
+                                    <FilterIcon onClick={filterOnClick} />
                                     <span className="text-white">Filters</span>
                                 </a>
                             </li>

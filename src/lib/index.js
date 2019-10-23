@@ -122,6 +122,11 @@ import SearchIcon from './UI/Icons/SearchIcon';
 import CloseIcon from './UI/Icons/CloseIcon';
 import FilterIcon from './UI/Icons/FilterIcon';
 
+/**
+ * UTILS
+ */
+import calculateDiscountPercentage from './Util/calculateDiscountPercentage';
+
 export {
     styles,
     SecondaryButton,
@@ -213,9 +218,10 @@ export {
     ErrorMessage,
     OrderFilters,
     AddMoreSaleCompanyCard,
+    RemoveImageIcon,
+    calculateDiscountPercentage as _util_CalculateDiscountPercentage,
     MaterialSearch,
     ExportIcon,
-    RemoveImageIcon,
     CircleChart,
     AddSaleSidebarCard,
     AddCategoryButton,

@@ -5,8 +5,9 @@ import cx from 'classnames';
 const SubNav = ({
     title,
     items,
-    active,
-    avatar
+    activeLink,
+    avatar,
+    onClick
 }) => {
     return (
         <div className="subNav">
@@ -24,7 +25,12 @@ const SubNav = ({
                 {
                     items.map((item) => (
                         <li className="subNav__list--item">
-                            <a className={cx("subNav__list--item--link", { active: item.title === active })}  href="">{item.title}</a>
+                            <a className={cx("subNav__list--item--link", { active: item.link === activeLink })}  href="" onClick={(e)=>{e.preventDefault(); onClick(item);}}>
+                                {item.title}
+                            </a>
+                            {item.badgeCount > 0 ? (<sup className="subNav__list--item--badge">
+                                {item.badgeCount}
+                            </sup>) : (null)}
                         </li>
                     ))
                 }

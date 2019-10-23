@@ -25,7 +25,8 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 
 function Navigation(_ref) {
   var children = _ref.children,
-      props = _objectWithoutProperties(_ref, ["children"]);
+      filterOnClick = _ref.filterOnClick,
+      props = _objectWithoutProperties(_ref, ["children", "filterOnClick"]);
 
   return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("nav", {
     className: "navigation"
@@ -44,7 +45,9 @@ function Navigation(_ref) {
     className: "nav-list-item"
   }, _react.default.createElement("a", {
     href: ""
-  }, _react.default.createElement(_FilterIcon.default, null), _react.default.createElement("span", {
+  }, _react.default.createElement(_FilterIcon.default, {
+    onClick: filterOnClick
+  }), _react.default.createElement("span", {
     className: "text-white"
   }, "Filters"))), _react.default.createElement(_HamburgerMenu.default, props))))));
 }

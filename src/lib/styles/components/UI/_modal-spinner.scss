@@ -9,5 +9,11 @@
   &--size {
     width: 4.75rem;
     height: 4.75rem;
+    margin-bottom: 3rem;
+  }
+  
+  &--title {
+    color: $white;
+    margin-bottom: 0;
   }
 }

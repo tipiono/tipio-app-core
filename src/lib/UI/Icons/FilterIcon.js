@@ -1,6 +1,6 @@
 import React from 'react';
 
-const FilterIcon = () => {
+const FilterIcon = ({ onClick }) => {
     return (
         <>
             <svg className="mr-3" width={25} height={20}>

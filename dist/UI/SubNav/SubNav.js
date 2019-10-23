@@ -16,8 +16,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var SubNav = function SubNav(_ref) {
   var title = _ref.title,
       items = _ref.items,
-      active = _ref.active,
-      avatar = _ref.avatar;
+      activeLink = _ref.activeLink,
+      avatar = _ref.avatar,
+      _onClick = _ref.onClick;
   return _react.default.createElement("div", {
     className: "subNav"
   }, _react.default.createElement("div", {
@@ -35,10 +36,17 @@ var SubNav = function SubNav(_ref) {
       className: "subNav__list--item"
     }, _react.default.createElement("a", {
       className: (0, _classnames.default)("subNav__list--item--link", {
-        active: item.title === active
+        active: item.link === activeLink
       }),
-      href: ""
-    }, item.title));
+      href: "",
+      onClick: function onClick(e) {
+        e.preventDefault();
+
+        _onClick(item);
+      }
+    }, item.title), item.badgeCount > 0 ? _react.default.createElement("sup", {
+      className: "subNav__list--item--badge"
+    }, item.badgeCount) : null);
   })));
 };
 

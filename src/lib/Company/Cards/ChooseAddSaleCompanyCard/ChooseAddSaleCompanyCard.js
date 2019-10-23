@@ -1,8 +1,21 @@
 import React from 'react';
 import Checkbox from "../../../UI/Forms/Checkbox";
 
-const ChooseAddSaleCompanyCard = ({image, title, salePrice, costPrice, saleDiscount, children, defaultValue}) => {
-    return (
+export default React.forwardRef(({
+    image,
+    title,
+    salePrice,
+    costPrice,
+    saleDiscount,
+    children,
+    defaultValue,
+    id,
+    label,
+    name,
+    errors,
+    ...props
+}, ref) => (
+    <>
         <div>
             <div className="chooseAddSaleCard">
                 <div className="d-flex flex-row mb-5">
@@ -17,16 +30,11 @@ const ChooseAddSaleCompanyCard = ({image, title, salePrice, costPrice, saleDisco
                             <h6 className="chooseAddSaleCard__content--price--sale">{salePrice}</h6>
                             <h6 className="chooseAddSaleCard__content--price--cost">{costPrice}</h6>
                         </div>
-
                         <h6 className="chooseAddSaleCard__content--title">{title}</h6>
                     </div>
                 </div>
-
-                <Checkbox label={"Legg til mersalg"} />
-
+                <Checkbox label={"Legg til mersalg"} label={label} id={id} name={name} {...props} ref={ref} />
             </div>
         </div>
-    );
-};
-
-export default ChooseAddSaleCompanyCard;
+    </>
+));
