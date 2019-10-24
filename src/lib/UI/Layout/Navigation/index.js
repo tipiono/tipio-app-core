@@ -20,7 +20,7 @@ function Navigation({children, filterOnClick, ...props}) {
                         <ul className="nav-list ml-auto">
 
                             <li className="nav-list-item d-flex align-items-center">
-                                <SearchInput/>
+                                <SearchInput {...props}/>
                             </li>
 
                             <li className="nav-list-item">

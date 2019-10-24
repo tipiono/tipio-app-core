@@ -77,6 +77,8 @@ import TipioSidebarVotingCard from './Customer/CustomerSidebarCards/VotingCard';
 import TipioSidebarBindingCard from './Customer/CustomerSidebarCards/BindingCard';
 import ImageUploader from './Customer/ImageUploader/ImageUploader';
 import CategoriesForm from './Company/Modals/ChooseCategory/CategoriesForm';
+import NoSearchResult from './Customer/Search/NoSearchResult';
+import TipioFeedWithWrapper from './Customer/TipioFeed/TipioFeedWithWrapper';
 
 /*
 *   Company Components
@@ -229,4 +231,6 @@ export {
     CloseIcon,
     FilterIcon,
     Overlay,
+    NoSearchResult,
+    TipioFeedWithWrapper
 };

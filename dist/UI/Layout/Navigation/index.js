@@ -41,7 +41,7 @@ function Navigation(_ref) {
     className: "nav-list ml-auto"
   }, _react.default.createElement("li", {
     className: "nav-list-item d-flex align-items-center"
-  }, _react.default.createElement(_SearchInput.default, null)), _react.default.createElement("li", {
+  }, _react.default.createElement(_SearchInput.default, props)), _react.default.createElement("li", {
     className: "nav-list-item"
   }, _react.default.createElement("a", {
     href: "",
