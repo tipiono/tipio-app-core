@@ -28,7 +28,6 @@ const SearchInput = (props) => {
 
     const _onKeyUp = (e) => {
         e.preventDefault();
-
         if (e.key === 'Enter') {
             props.searchFormOnSubmit(e.target.value);
         }

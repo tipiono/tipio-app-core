@@ -1,12 +1,11 @@
 import React from 'react';
 
-function ToggleSwitch({}) {
+function ToggleSwitch({ name, checked, onChange }) {
     return (
         <>
             <div className="material-toggle">
-                <input id="MaterialToggle1" name="MaterialToggleRed" type="checkbox"/>
-                <label htmlFor="MaterialToggle1" className="label-red"/>
-                {/*<span className="ml-3">Ja, gjerne!</span>*/}
+                <input id={name} name={name} type="checkbox" checked={checked} onChange={onChange} />
+                <label htmlFor={name} className="label-red"/>
             </div>
         </>
     )

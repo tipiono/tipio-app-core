@@ -83,7 +83,13 @@ var SearchInput = function SearchInput(props) {
     type: "text",
     className: "searchInput__form--input",
     placeholder: "Hva s\xF8ker du etter?"
-  }))));
+  }), _react.default.createElement("a", {
+    className: "searchInput__form--rightIcon",
+    href: "#",
+    onClick: function onClick() {
+      setShow(false);
+    }
+  }, _react.default.createElement(_CloseIcon.default, null)))));
 };
 
 var _default = SearchInput;

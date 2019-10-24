@@ -6,8 +6,9 @@ import Placeholder from './Placeholder';
 import {ImageCropper} from '../../index';
 import IconButton from "../../UI/Buttons/IconButton";
 import RemoveImageIcon from "../../UI/Icons/RemoveImageIcon";
+import ErrorMessage from '../../UI/ErrorMessage/ErrorMessage';
 
-function ImageUploader({ setFieldValue }) {
+function ImageUploader({ setFieldValue, name, errors, displayErrors }) {
     const [showCropper, setShowCropper] = useState(false);
     const [cropImage, setCropImage] = useState(null);
     const [initialCropCompleted, setInitialCropCompleted] = useState(null);
@@ -151,6 +152,11 @@ function ImageUploader({ setFieldValue }) {
                     </section>
                 )}
             </Dropzone>
+            {displayErrors && errors && errors[name] && 
+                <ErrorMessage
+                    content={errors[name].message}
+                    color={"bg-red"}
+            />}
         </>
     )
 }
