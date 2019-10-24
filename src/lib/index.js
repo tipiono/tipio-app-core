@@ -51,6 +51,7 @@ import SearchInput from './UI/Layout/Navigation/SearchInput';
 import Overlay from './UI/Overlay/Overlay';
 import Alert from './UI/Alert/Alert';
 import Pagination from './UI/Pagination/Pagination';
+import RoundedButton from './UI/Buttons/RoundedButton';
 
 /*
 *   Customer/Private Components
@@ -234,5 +235,6 @@ export {
     Overlay,
     AddMoreSaleEndedCompanyCard,
     Alert,
-    Pagination
+    Pagination,
+    RoundedButton
 };

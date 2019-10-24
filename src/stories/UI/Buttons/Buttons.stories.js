@@ -3,7 +3,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions/dist/index';
 import { text, boolean } from '@storybook/addon-knobs';
-import {SecondaryButton, SecondaryOutlineButton, DisabledButton, GrayButton, GrayOutlineButton, IconButton, AddCategoryButton, SelectedCategoryButton} from '../../../lib';
+import {SecondaryButton, SecondaryOutlineButton, DisabledButton, GrayButton, GrayOutlineButton, IconButton, AddCategoryButton, SelectedCategoryButton, RoundedButton} from '../../../lib';
 
 
 storiesOf('UI/Buttons/Secondary Button', module)
@@ -115,6 +115,24 @@ storiesOf('UI/Buttons/Add Category Button', module)
         <>
             <div className="col-3 m-3">
                 <SelectedCategoryButton title={'Elektronikk'} />
+            </div>
+        </>
+    );
+
+storiesOf('UI/Buttons/Rounded Button', module)
+
+    .add('Rounded Button with text', () =>
+        <>
+            <div className="col-3 m-3">
+                <RoundedButton onClick={action('clicked')} text={text('Label', 'Dette er ikke bindene')} loading={boolean('Loading ', false)} />
+            </div>
+        </>
+    )
+
+    .add('Rounded Button with loading', () =>
+        <>
+            <div className="col-3 m-3">
+                <RoundedButton onClick={action('clicked')} text={'Dette er ikke bindene'} loading={true}/>
             </div>
         </>
     );
