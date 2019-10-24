@@ -24,8 +24,8 @@ function Navigation({children, filterOnClick, ...props}) {
                             </li>
 
                             <li className="nav-list-item">
-                                <a href="">
-                                    <FilterIcon onClick={filterOnClick} />
+                                <a href="" onClick={filterOnClick}>
+                                    <FilterIcon/>
                                     <span className="text-white">Filters</span>
                                 </a>
                             </li>
