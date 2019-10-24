@@ -56,11 +56,11 @@ const SearchInput = (props) => {
                         placeholder="Hva søker du etter?"
                     />
                     {/*Close Icon*/}
-                    {/* <a className="searchInput__form--rightIcon" href="#" onClick={() => {
+                    <a className="searchInput__form--rightIcon" href="#" onClick={() => {
                         setShow(false);
                     }}>
                         <CloseIcon/>
-                    </a> */}
+                    </a>
 
                 </div>
             </div>
