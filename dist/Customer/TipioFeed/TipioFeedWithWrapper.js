@@ -71,13 +71,15 @@ var TipioFeedWithWrapper = function TipioFeedWithWrapper(props) {
     role: "status"
   }, _react.default.createElement("span", {
     className: "sr-only"
-  }, "Loading..."))))), props.tipios && props.tipios.length > 0 && props.page > 0 && _react.default.createElement(_Pagination.default, {
+  }, "Loading..."))))), props.tipios && props.tipios.length > 0 && props.page > 0 && _react.default.createElement("div", {
+    className: "d-flex justify-content-center my-4 pb-5"
+  }, _react.default.createElement(_Pagination.default, {
     page: props.page,
     pageCount: props.pageCount,
     showPrevButton: showPrevButton,
     showNextButton: showNextButton,
     handlePageClick: props.handlePageClick
-  }));
+  })));
 };
 
 TipioFeedWithWrapper.propTypes = {

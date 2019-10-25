@@ -238,5 +238,7 @@ export {
     AddMoreSaleEndedCompanyCard,
     Alert,
     Pagination,
-    RoundedButton
+    RoundedButton,
+    NoSearchResult,
+    TipioFeedWithWrapper
 };
