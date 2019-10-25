@@ -19,7 +19,7 @@ var ErrorMessage = function ErrorMessage(_ref) {
       paddingX = _ref.paddingX,
       textAlign = _ref.textAlign;
   return _react.default.createElement("div", {
-    className: (0, _classnames.default)("errorMessage mb-4", color, paddingY, paddingX, textAlign)
+    className: (0, _classnames.default)("errorMessage", color, paddingY, paddingX, textAlign)
   }, _react.default.createElement("span", {
     className: "errorMessage--title"
   }, title, " "), _react.default.createElement("span", {
