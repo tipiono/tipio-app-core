@@ -25,29 +25,61 @@ function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = 
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
-var SearchInput = function SearchInput() {
+var SearchInput = function SearchInput(props) {
+  /**
+   * State
+   */
   var _useState = (0, _react.useState)(false),
       _useState2 = _slicedToArray(_useState, 2),
       show = _useState2[0],
       setShow = _useState2[1];
+  /**
+   * Effects
+   */
+
+
+  var escFunction = (0, _react.useCallback)(function (event) {
+    if (event.keyCode === 27) {
+      setShow(false);
+    }
+  }, []);
+  (0, _react.useEffect)(function () {
+    document.addEventListener('keydown', escFunction, false);
+    return function () {
+      document.removeEventListener('keydown', escFunction, false);
+    };
+  }, []);
+
+  var _onKeyUp = function _onKeyUp(e) {
+    e.preventDefault();
+
+    if (e.key === 'Enter') {
+      props.searchFormOnSubmit(e.target.value);
+    }
+  };
 
   return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("a", {
     href: "#",
     className: (0, _classnames.default)("nav-list-link", {
       'd-none': show
     }),
-    onClick: function onClick() {
+    onClick: function onClick(e) {
+      e.preventDefault();
       setShow(true);
     }
   }, _react.default.createElement(_SearchIcon.default, null)), _react.default.createElement("div", {
     className: (0, _classnames.default)("searchInput", {
       show: show
     })
-  }, _react.default.createElement("form", {
+  }, _react.default.createElement("div", {
     className: "searchInput__form"
   }, _react.default.createElement("div", {
     className: "searchInput__form--leftIcon"
   }, _react.default.createElement(_SearchIcon.default, null)), _react.default.createElement("input", {
+    ref: function ref(input) {
+      return input && input.focus();
+    },
+    onKeyUp: _onKeyUp,
     type: "text",
     className: "searchInput__form--input",
     placeholder: "S\xF8k produkt, navn merke..."
