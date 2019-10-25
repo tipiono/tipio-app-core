@@ -1,12 +1,10 @@
 import React from 'react';
 import cx from 'classnames';
 
-const Alert = ({color, content}) => {
+const Alert = ({color, content, onTitleClick, onCloseClick}) => {
     return (
         <>
             <div className={cx("customAlert", color)}>
-
-
                 <div className="d-flex align-items-center">
                     <svg className="mr-2" width={23} height={23}>
                         <path
@@ -15,10 +13,10 @@ const Alert = ({color, content}) => {
                             fillRule="nonzero"
                         />
                     </svg>
-                    <p className="customAlert--content">{content}</p>
+                    <a href="" onClick={onTitleClick}><p className="customAlert--content">{content}</p></a>
                 </div>
 
-                <a href="">
+                <a href="" onClick={onCloseClick}>
                     <svg className="customAlert--icon" width={14} height={15}>
                         <path
                             d="M8.24 7.862l5.484-5.52a.885.885 0 00-1.248-1.25L6.992 6.588 1.508 1.091a.882.882 0 10-1.249 1.25l5.484 5.521-5.484 5.46a.882.882 0 00.625 1.51.88.88 0 00.624-.26l5.484-5.49 5.484 5.49a.903.903 0 00.628.26.888.888 0 00.62-1.533L8.24 7.862z"

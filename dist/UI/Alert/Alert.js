@@ -13,7 +13,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var Alert = function Alert(_ref) {
   var color = _ref.color,
-      content = _ref.content;
+      content = _ref.content,
+      onTitleClick = _ref.onTitleClick,
+      onCloseClick = _ref.onCloseClick;
   return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("div", {
     className: (0, _classnames.default)("customAlert", color)
   }, _react.default.createElement("div", {
@@ -26,10 +28,14 @@ var Alert = function Alert(_ref) {
     d: "M10.766 9.441h1.5v7.393h-1.5V9.44zm.745-3.22a1.03 1.03 0 110 2.059 1.03 1.03 0 010-2.059zm0-6.079C5.226.142.131 5.237.131 11.522c0 6.285 5.095 11.38 11.38 11.38 6.285 0 11.38-5.095 11.38-11.38C22.883 5.24 17.792.148 11.51.142zm0 21.588c-5.638 0-10.208-4.57-10.208-10.208S5.873 1.314 11.511 1.314c5.637 0 10.208 4.57 10.208 10.208-.006 5.635-4.573 10.201-10.208 10.208z",
     fill: "#4F2E90",
     fillRule: "nonzero"
-  })), _react.default.createElement("p", {
+  })), _react.default.createElement("a", {
+    href: "",
+    onClick: onTitleClick
+  }, _react.default.createElement("p", {
     className: "customAlert--content"
-  }, content)), _react.default.createElement("a", {
-    href: ""
+  }, content))), _react.default.createElement("a", {
+    href: "",
+    onClick: onCloseClick
   }, _react.default.createElement("svg", {
     className: "customAlert--icon",
     width: 14,

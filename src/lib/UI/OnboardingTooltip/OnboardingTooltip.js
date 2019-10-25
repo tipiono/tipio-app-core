@@ -3,10 +3,12 @@ import React from "react";
 function OnboardingTooltip({
                                continuous,
                                index,
+                               isLastStep,
                                step,
                                backProps,
                                closeProps,
                                primaryProps,
+                               skipProps,
                                tooltipProps
                            }) {
     return (
@@ -25,6 +27,23 @@ function OnboardingTooltip({
                     </svg>
                 </a>
             )}
+
+            {/* <div>
+            {!isLastStep && (
+                <button {...skipProps} spacer={true}>
+                    Skip
+                </button>
+                )}
+                {index > 0 && (
+                <button {...backProps}>
+                    Back
+                </button>
+                )}
+                <button {...primaryProps}>
+                    {continuous ? 'next' : 'close'}
+                </button>
+            </div> */}
+
         </div>
     )
 }

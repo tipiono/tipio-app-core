@@ -14,10 +14,12 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 function OnboardingTooltip(_ref) {
   var continuous = _ref.continuous,
       index = _ref.index,
+      isLastStep = _ref.isLastStep,
       step = _ref.step,
       backProps = _ref.backProps,
       closeProps = _ref.closeProps,
       primaryProps = _ref.primaryProps,
+      skipProps = _ref.skipProps,
       tooltipProps = _ref.tooltipProps;
   return _react.default.createElement("div", _extends({}, tooltipProps, {
     className: "onboarding__tooltip ".concat(step.placement)
