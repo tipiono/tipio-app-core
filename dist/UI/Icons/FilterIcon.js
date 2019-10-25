@@ -9,8 +9,7 @@ var _react = _interopRequireDefault(require("react"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var FilterIcon = function FilterIcon(_ref) {
-  var onClick = _ref.onClick;
+var FilterIcon = function FilterIcon() {
   return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("svg", {
     className: "mr-3",
     width: 25,

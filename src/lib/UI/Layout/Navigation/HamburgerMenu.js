@@ -23,19 +23,19 @@ function HamburgerMenu(props) {
                 <ul className="tab-content">
                     {items && items.map(x => {
                             if (x.sub_items) {
-                                return <li className="nav-item">
+                                return <li key={x.name} className="nav-item">
                                     <DropDown title={'Mine Tipioer'}>
                                         {x.sub_items.map(y =>
-                                            <DropDownItem>
-                                                <a to="/">{y.name}</a>
+                                            <DropDownItem key={y.name}>
+                                                <a to="/" onClick={(e) => { e.preventDefault(); props.menuItemOnClick(y) }}>{y.name}</a>
                                             </DropDownItem>
                                         )}
                                     </DropDown>
                                 </li>
                             } else {
                                 return (
-                                    <li className={cx({'nav-item': items.sub_items})}>
-                                        <a href="/tipio/new">
+                                    <li key={x.name} className={cx({'nav-item': items.sub_items})}>
+                                        <a href="/tipio/new" onClick={(e) => { e.preventDefault(); props.menuItemOnClick(x) }}>
                                             {x.name}
                                         </a>
                                     </li>
