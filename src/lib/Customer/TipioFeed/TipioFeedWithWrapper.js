@@ -63,13 +63,18 @@ const TipioFeedWithWrapper = props => {
                 </div>
             </div>
             {props.tipios && props.tipios.length > 0 && props.page > 0 &&
-                <Pagination
-                    page={props.page}
-                    pageCount={props.pageCount}
-                    showPrevButton={showPrevButton}
-                    showNextButton={showNextButton}
-                    handlePageClick={props.handlePageClick}
-                />
+
+                <div className="d-flex justify-content-center my-4 pb-5">
+                    {/* vendose pagination e ri ketu */}
+
+                    <Pagination
+                        page={props.page}
+                        pageCount={props.pageCount}
+                        showPrevButton={showPrevButton}
+                        showNextButton={showNextButton}
+                        handlePageClick={props.handlePageClick}
+                    />
+                </div>
             }
         </>
     );
