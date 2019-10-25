@@ -82,7 +82,7 @@ var SearchInput = function SearchInput(props) {
     onKeyUp: _onKeyUp,
     type: "text",
     className: "searchInput__form--input",
-    placeholder: "Hva s\xF8ker du etter?"
+    placeholder: "S\xF8k produkt, navn merke..."
   }), _react.default.createElement("a", {
     className: "searchInput__form--rightIcon",
     href: "#",

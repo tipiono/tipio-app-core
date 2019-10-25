@@ -49,6 +49,9 @@ import ErrorMessage from './UI/ErrorMessage/ErrorMessage';
 import CircleChart from './UI/CircleChart/CircleChart';
 import SearchInput from './UI/Layout/Navigation/SearchInput';
 import Overlay from './UI/Overlay/Overlay';
+import Alert from './UI/Alert/Alert';
+import Pagination from './UI/Pagination/Pagination';
+import RoundedButton from './UI/Buttons/RoundedButton';
 
 /*
 *   Customer/Private Components
@@ -102,6 +105,7 @@ import ChooseAddSaleCompanyCard from './Company/Cards/ChooseAddSaleCompanyCard/C
 import CompanySidebarBaseCard from './Company/CompanySidebarCards/CompanySidebarBaseCard';
 import CompanyAddBidCard from   './Company/CompanySidebarCards/CompanyAddBidCard';
 import AddMoreSaleCompanyCard from './Company/Cards/AddMoreSaleCompanyCard/AddMoreSaleCompanyCard';
+import AddMoreSaleEndedCompanyCard from './Company/Cards/AddMoreSaleEndedCompanyCard/AddMoreSaleEndedCompanyCard';
 import AddSaleSidebarCard from   './Company/CompanySidebarCards/AddSaleSidebarCard';
 import MaterialSearch from './Company/MaterialSearch/MaterialSearch';
 
@@ -231,6 +235,8 @@ export {
     CloseIcon,
     FilterIcon,
     Overlay,
-    NoSearchResult,
-    TipioFeedWithWrapper
+    AddMoreSaleEndedCompanyCard,
+    Alert,
+    Pagination,
+    RoundedButton
 };

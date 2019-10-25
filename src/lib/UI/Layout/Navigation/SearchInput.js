@@ -52,7 +52,7 @@ const SearchInput = (props) => {
                         onKeyUp={_onKeyUp}
                         type="text"
                         className="searchInput__form--input"
-                        placeholder="Hva søker du etter?"
+                        placeholder="Søk produkt, navn merke..."
                     />
                     {/*Close Icon*/}
                     <a className="searchInput__form--rightIcon" href="#" onClick={() => {

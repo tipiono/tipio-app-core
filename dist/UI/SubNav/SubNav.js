@@ -44,7 +44,9 @@ var SubNav = function SubNav(_ref) {
 
         _onClick(item);
       }
-    }, item.title));
+    }, item.title), item.badgeCount > 0 ? _react.default.createElement("sup", {
+      className: "subNav__list--item--badge"
+    }, item.badgeCount) : null);
   })));
 };
 

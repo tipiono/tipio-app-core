@@ -1,64 +1,124 @@
 .pagination {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 40px 0;
+  //display: flex;
+  //justify-content: center;
+  //align-items: center;
+  //margin: 40px 0;
 
-    .page-link-prev, .page-link-next {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border: 1px solid $gray-300;
-        border-radius: 25px;
-        padding: 8px;
-        margin: 12px;
+  .page-link-prev, .page-link-next {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid $gray-300;
+    border-radius: 25px;
+    padding: 8px;
+    margin: 12px;
+
+    &:hover {
+      border-color: $secondary;
+
+      .right-arrow *, .left-arrow * {
+        stroke: $secondary;
+      }
+    }
+
+    &:active {
+      border-color: $primary;
+
+      .right-arrow *, .left-arrow * {
+        stroke: $primary;
+      }
+    }
+  }
+
+  .pagination-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 0;
+
+    .page-item {
+      &.active .page-link {
+        &:after {
+          content: '';
+          display: inline-block;
+          position: absolute;
+          left: 0;
+          right: 0;
+          height: 22px;
+          width: 40%;
+          margin: 0 auto;
+          border-bottom: 1px solid;
+        }
 
         &:hover {
-            border-color: $secondary;
-            .right-arrow *, .left-arrow * {
-                stroke: $secondary;
-            }
+          color: $primary;
         }
-        &:active {
-            border-color: $primary;
-            .right-arrow *, .left-arrow * {
-                stroke: $primary;
-            }
-        }
-    }
-    .pagination-content {
-        display: flex;
-        flex-direction: row;
-        margin-bottom: 0;
+      }
 
-        .page-item {
-            &.active .page-link {
-                &:after {
-                    content: '';
-                    display: inline-block;
-                    position: absolute;
-                    left: 0;
-                    right: 0;
-                    height: 22px;
-                    width: 40%;
-                    margin: 0 auto;
-                    border-bottom: 1px solid;
-                }
-                &:hover {
-                    color: $primary;
-                }
-            }
-            .page-link {
-                padding: 14px;
-                cursor: pointer;
+      .page-link {
+        padding: 14px;
+        cursor: pointer;
 
-                &:focus {
-                    box-shadow: none;
-                }
-                &:hover {
-                    color: $secondary;
-                }
-            }
+        &:focus {
+          box-shadow: none;
         }
+
+        &:hover {
+          color: $secondary;
+        }
+      }
     }
+
+
+    .next {
+      margin-left: 24px;
+
+      a {
+        outline: none;
+
+        &:after {
+          content: "";
+          display: block;
+          width: 32px;
+          height: 32px;
+          background-repeat: no-repeat;
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='31' height='31' viewBox='0 0 31 31'%3E%3Cdefs%3E%3Cpath id='a' d='M1.156 11.524a.711.711 0 0 1-.49-.2.7.7 0 0 1 0-.983l4.446-4.495L.667 1.35a.697.697 0 1 1 1-.972l4.923 5a.7.7 0 0 1 0 .979l-4.923 4.962a.7.7 0 0 1-.511.205z'/%3E%3C/defs%3E%3Cg fill='none' fill-rule='evenodd' transform='translate(1 1)'%3E%3Cg transform='translate(11.49 9.268)'%3E%3Cmask id='b' fill='%23fff'%3E%3Cuse xlink:href='%23a'/%3E%3C/mask%3E%3Cuse fill='%238C8F91' fill-rule='nonzero' xlink:href='%23a'/%3E%3Cg fill='%238C8F91' mask='url(%23b)'%3E%3Cpath d='M-3.334-1.111h27.783v27.783H-3.334z'/%3E%3C/g%3E%3C/g%3E%3Ccircle cx='14.5' cy='14.5' r='14.5' stroke='%23C9CFD3' stroke-width='.926'/%3E%3C/g%3E%3C/svg%3E%0A");
+          cursor: pointer;
+
+        }
+
+        &:hover {
+          &:after {
+            background-repeat: no-repeat;
+            background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg width='31px' height='31px' viewBox='0 0 31 31' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com --%3E%3Ctitle%3Egroup-7%3C/title%3E%3Cdesc%3ECreated with Sketch.%3C/desc%3E%3Cdefs%3E%3Cpath d='M1.156,11.524 C0.973015564,11.5228722 0.797511043,11.4512377 0.666,11.324 C0.397233694,11.0514468 0.397233694,10.6135532 0.666,10.341 L5.112,5.846 L0.667,1.35 C0.398589612,1.07385763 0.404857625,0.632410388 0.681,0.364 C0.957142375,0.0955896116 1.39858961,0.101857625 1.667,0.378 L6.59,5.378 C6.8561472,5.65006801 6.8561472,6.08493199 6.59,6.357 L1.667,11.319 C1.53181956,11.4542649 1.34718461,11.5283357 1.156,11.524 Z' id='path-1'%3E%3C/path%3E%3C/defs%3E%3Cg id='Page-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='group-7' transform='translate(1.000000, 1.000000)'%3E%3Cg id='Group' transform='translate(11.490000, 9.268000)'%3E%3Cg id='a-link' fill='%233E2187' fill-rule='nonzero'%3E%3Cpath d='M1.156,11.524 C0.973015564,11.5228722 0.797511043,11.4512377 0.666,11.324 C0.397233694,11.0514468 0.397233694,10.6135532 0.666,10.341 L5.112,5.846 L0.667,1.35 C0.398589612,1.07385763 0.404857625,0.632410388 0.681,0.364 C0.957142375,0.0955896116 1.39858961,0.101857625 1.667,0.378 L6.59,5.378 C6.8561472,5.65006801 6.8561472,6.08493199 6.59,6.357 L1.667,11.319 C1.53181956,11.4542649 1.34718461,11.5283357 1.156,11.524 Z' id='a'%3E%3C/path%3E%3C/g%3E%3Cg id='Clipped'%3E%3Cmask id='mask-2' fill='white'%3E%3Cuse xlink:href='%23path-1'%3E%3C/use%3E%3C/mask%3E%3Cg id='a'%3E%3C/g%3E%3Cg id='Group' mask='url(%23mask-2)' fill='%233E2187' fill-rule='nonzero'%3E%3Cg transform='translate(-4.000000, -2.000000)' id='Path'%3E%3Cpolygon points='0.666 0.889 28.449 0.889 28.449 28.672 0.666 28.672'%3E%3C/polygon%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3Ccircle id='Oval' stroke='%233E2187' stroke-width='0.926' cx='14.5' cy='14.5' r='14.5'%3E%3C/circle%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+          }
+        }
+      }
+    }
+
+    .previous {
+      margin-right: 24px;
+
+      a {
+        outline: none;
+
+        &:after {
+          content: "";
+          display: block;
+          width: 32px;
+          height: 32px;
+          background-repeat: no-repeat;
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='31' height='31' viewBox='0 0 31 31'%3E%3Cdefs%3E%3Cpath id='a' d='M6.079 11.524a.717.717 0 0 1-.495-.205L.661 6.318a.7.7 0 0 1 0-.978L5.584.339a.695.695 0 0 1 .99.972L2.127 5.807l4.445 4.495a.695.695 0 0 1-.494 1.183v.04z'/%3E%3C/defs%3E%3Cg fill='none' fill-rule='evenodd' transform='translate(1 1)'%3E%3Cg transform='translate(10.584 9.268)'%3E%3Cmask id='b' fill='%23fff'%3E%3Cuse xlink:href='%23a'/%3E%3C/mask%3E%3Cuse fill='%238C8F91' fill-rule='nonzero' xlink:href='%23a'/%3E%3Cg fill='%238C8F91' mask='url(%23b)'%3E%3Cpath d='M-3.334-1.111h27.783v27.783H-3.334z'/%3E%3C/g%3E%3C/g%3E%3Ccircle cx='14.5' cy='14.5' r='14.5' stroke='%23C9CFD3' stroke-width='.926'/%3E%3C/g%3E%3C/svg%3E%0A");
+          cursor: pointer;
+        }
+
+        &:hover {
+          &:after {
+            background-repeat: no-repeat;
+            background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg width='31px' height='31px' viewBox='0 0 31 31' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com --%3E%3Ctitle%3Egroup-8%3C/title%3E%3Cdesc%3ECreated with Sketch.%3C/desc%3E%3Cdefs%3E%3Cpath d='M6.079,11.524 C5.8937091,11.5221972 5.71631122,11.4487294 5.584,11.319 L0.661,6.318 C0.395504305,6.04605519 0.395504305,5.61194481 0.661,5.34 L5.584,0.339 C5.8568955,0.0930945387 6.27403029,0.102023207 6.53615358,0.359380615 C6.79827686,0.616738023 6.81485723,1.03363878 6.574,1.311 L2.127,5.807 L6.572,10.302 C6.76864956,10.5014113 6.82639435,10.7993719 6.71847575,11.0578086 C6.61055716,11.3162452 6.35806392,11.4846559 6.078,11.485 L6.078,11.525 L6.079,11.524 Z' id='path-1'%3E%3C/path%3E%3C/defs%3E%3Cg id='Page-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='group-8' transform='translate(1.000000, 1.000000)'%3E%3Cg id='Group' transform='translate(10.584000, 9.268000)'%3E%3Cg id='a-link' fill='%238C8F91' fill-rule='nonzero'%3E%3Cpath d='M6.079,11.524 C5.8937091,11.5221972 5.71631122,11.4487294 5.584,11.319 L0.661,6.318 C0.395504305,6.04605519 0.395504305,5.61194481 0.661,5.34 L5.584,0.339 C5.8568955,0.0930945387 6.27403029,0.102023207 6.53615358,0.359380615 C6.79827686,0.616738023 6.81485723,1.03363878 6.574,1.311 L2.127,5.807 L6.572,10.302 C6.76864956,10.5014113 6.82639435,10.7993719 6.71847575,11.0578086 C6.61055716,11.3162452 6.35806392,11.4846559 6.078,11.485 L6.078,11.525 L6.079,11.524 Z' id='a'%3E%3C/path%3E%3C/g%3E%3Cg id='Clipped'%3E%3Cmask id='mask-2' fill='white'%3E%3Cuse xlink:href='%23path-1'%3E%3C/use%3E%3C/mask%3E%3Cg id='a'%3E%3C/g%3E%3Cg id='Group' mask='url(%23mask-2)' fill='%233E2187' fill-rule='nonzero'%3E%3Cg transform='translate(-4.000000, -2.000000)' id='Path'%3E%3Cpolygon points='0.666 0.889 28.449 0.889 28.449 28.672 0.666 28.672'%3E%3C/polygon%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3Ccircle id='Oval' stroke='%233E2187' stroke-width='0.926' cx='14.5' cy='14.5' r='14.5'%3E%3C/circle%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+          }
+        }
+      }
+    }
+  }
 }

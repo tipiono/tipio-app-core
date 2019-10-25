@@ -9,6 +9,7 @@ import {
     TipioWithOfferCompanyCard,
     ChooseAddSaleCompanyCard,
     AddMoreSaleCompanyCard,
+    AddMoreSaleEndedCompanyCard,
 } from '../../../lib';
 
 
@@ -66,12 +67,22 @@ storiesOf('Company/Components/Cards', module)
                 <OrderItemCard />
             </div>
         </>
-    )
+    );
+
+storiesOf('Company/Components/Cards/Add more sale card', module)
 
     .add('Add more sale card', () =>
         <>
             <div className="col-3 m-3">
                 <AddMoreSaleCompanyCard />
+            </div>
+        </>
+    )
+
+    .add('Add more sale ended', () =>
+        <>
+            <div className="col-4 m-3">
+                <AddMoreSaleEndedCompanyCard />
             </div>
         </>
     )
