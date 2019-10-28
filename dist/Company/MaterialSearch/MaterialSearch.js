@@ -9,7 +9,9 @@ var _react = _interopRequireDefault(require("react"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var MaterialSearch = function MaterialSearch() {
+var MaterialSearch = function MaterialSearch(_ref) {
+  var defaultValue = _ref.defaultValue,
+      onSubmit = _ref.onSubmit;
   return _react.default.createElement("div", {
     className: "materialSearch"
   }, _react.default.createElement("svg", {
@@ -21,9 +23,17 @@ var MaterialSearch = function MaterialSearch() {
     fill: "#3E2187",
     fillRule: "evenodd"
   })), _react.default.createElement("input", {
+    id: "material-search",
     className: "materialSearch--input",
     type: "text",
-    placeholder: "S\xF8k navn, poststed"
+    placeholder: "S\xF8k navn, poststed",
+    onKeyDown: function onKeyDown(e) {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        onSubmit(e.target.value);
+      }
+    },
+    defaultValue: defaultValue
   }));
 };
 

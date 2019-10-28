@@ -76,10 +76,11 @@ var SearchInput = function SearchInput(props) {
   }, _react.default.createElement("div", {
     className: "searchInput__form--leftIcon"
   }, _react.default.createElement(_SearchIcon.default, null)), _react.default.createElement("input", {
+    id: "search-layout",
     ref: function ref(input) {
       return input && input.focus();
-    },
-    onKeyUp: _onKeyUp,
+    } // onKeyUp={_onKeyUp}
+    ,
     type: "text",
     className: "searchInput__form--input",
     placeholder: "S\xF8k produkt, navn merke..."

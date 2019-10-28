@@ -1,35 +1,40 @@
 import React from 'react';
 import ToggleSwitch from "../../../UI/Forms/ToggleSwitch";
 
-const OrderItemCard = () => {
+const OrderItemCard = ({order}) => {
+    let [address] = order.order_addresses;
+    address = address || {};
     return (
         <>
-
             <tbody className="orderItemCard">
                 <tr className="orderItemCard__customerDetail">
                     <td>
                         <ToggleSwitch/>
                         <span>Levert</span>
                     </td>
-                    <td className="orderItemCard__customerDetail--name">Amalie Amtedalh</td>
-                    <td className="orderItemCard__customerDetail--address">Adresse:,Ostadalsveien 72</td>
-                    <td className="orderItemCard__customerDetail--address">Kristiansand, 0746</td>
+                    <td className="orderItemCard__customerDetail--name">{order.order_user.full_name}</td>
+                    <td className="orderItemCard__customerDetail--address">Adresse: {address.address}</td>
+                    <td className="orderItemCard__customerDetail--address">{address.city}, {address.zip_code}</td>
                     <td></td>
                 </tr>
                 <tr className="border-bottom-1">
                     <td></td>
-                    <td>E-post:,amalie.amtedalh@gmail.com</td>
+                    <td>E-post: {order.order_user.email}</td>
                     <td>Nummer:,987 67 890</td>
                     <td></td>
                     <td></td>
                 </tr>
-                <tr className="orderItemCard__orderDetail">
-                    <td></td>
-                    <td className="orderItemCard__orderDetail--productName">Samsung 65" UHD Smart-TV UE65NU7105</td>
-                    <td>Ordrenummer:,89674590</td>
-                    <td>Antall:,1</td>
-                    <td>Pris: 999 Kr</td>
-                </tr>
+                {
+                    order.order_products.map((order_product) => (
+                        <tr className="orderItemCard__orderDetail">
+                            <td></td>
+                            <td className="orderItemCard__orderDetail--productName">{order_product.title}</td>
+                            <td>Ordrenummer:,89674590</td>
+                            <td>Antall: {order_product.quantity} </td>
+                            <td>Pris: {order_product.price} Kr</td>
+                        </tr>
+                    ))
+                }
                 <tr className="border-bottom-2">
                     <td></td>
                     <td>30.06.2019 - 13:09</td>

@@ -1,18 +1,25 @@
 import React from 'react';
+import cx from 'classnames';
 
-function PillTabs({}) {
+function PillTabs({ items, activeIndex, onClick }) {
     return (
         <>
            <ul className="pillTab">
-               <li className="pillTab__item">
-                   <a href="" className="pillTab__item--link">Alle</a>
-               </li>
-               <li className="pillTab__item">
-                   <a href="" className="pillTab__item--link">Levert</a>
-               </li>
-               <li className="pillTab__item active">
-                   <a href="" className="pillTab__item--link">Ikke levert</a>
-               </li>
+               {
+                   items.map((item, i) => (
+                        <li key={item} className={cx("pillTab__item", { active: activeIndex === i } )}>
+                            <a
+                                href=""
+                                className="pillTab__item--link"
+                                onClick={onClick}
+                                data-item={item}
+                                data-index={i}
+                            >
+                                {item}
+                            </a>
+                        </li>
+                   ))
+               }
            </ul>
         </>
     )
