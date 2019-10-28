@@ -1,7 +1,7 @@
 import React from 'react';
 import ToggleSwitch from "../../../UI/Forms/ToggleSwitch";
 
-const OrderItemCard = ({order}) => {
+const OrderItemCard = ({ order, deliveredOnChange}) => {
     let [address] = order.order_addresses;
     address = address || {};
     return (
@@ -9,7 +9,12 @@ const OrderItemCard = ({order}) => {
             <tbody className="orderItemCard">
                 <tr className="orderItemCard__customerDetail">
                     <td>
-                        <ToggleSwitch/>
+                        <ToggleSwitch
+                            name={`delivered${order.id}`}
+                            id={`delivered${order.id}`}
+                            checked={order.delivered}
+                            onChange={deliveredOnChange}
+                        />
                         <span>Levert</span>
                     </td>
                     <td className="orderItemCard__customerDetail--name">{order.order_user.full_name}</td>

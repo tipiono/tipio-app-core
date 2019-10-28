@@ -20,7 +20,8 @@ function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 var OrderItemCard = function OrderItemCard(_ref) {
-  var order = _ref.order;
+  var order = _ref.order,
+      deliveredOnChange = _ref.deliveredOnChange;
 
   var _order$order_addresse = _slicedToArray(order.order_addresses, 1),
       address = _order$order_addresse[0];
@@ -30,7 +31,12 @@ var OrderItemCard = function OrderItemCard(_ref) {
     className: "orderItemCard"
   }, _react.default.createElement("tr", {
     className: "orderItemCard__customerDetail"
-  }, _react.default.createElement("td", null, _react.default.createElement(_ToggleSwitch.default, null), _react.default.createElement("span", null, "Levert")), _react.default.createElement("td", {
+  }, _react.default.createElement("td", null, _react.default.createElement(_ToggleSwitch.default, {
+    name: "delivered".concat(order.id),
+    id: "delivered".concat(order.id),
+    checked: order.delivered,
+    onChange: deliveredOnChange
+  }), _react.default.createElement("span", null, "Levert")), _react.default.createElement("td", {
     className: "orderItemCard__customerDetail--name"
   }, order.order_user.full_name), _react.default.createElement("td", {
     className: "orderItemCard__customerDetail--address"
