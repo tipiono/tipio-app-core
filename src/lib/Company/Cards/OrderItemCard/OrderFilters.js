@@ -1,8 +1,8 @@
 import React from 'react';
-import {DropDown, DropDownItem} from "../../..";
+import { DropDown, DropDownItem } from "../../..";
 
 
-const OrderFilters = () => {
+const OrderFilters = (props) => {
     return (
         <>
             <thead className="orderFilters">
@@ -17,12 +17,12 @@ const OrderFilters = () => {
                             fillRule="evenodd"
                         />
                     </svg>
-                    <DropDown title={'Leveringsstatus'}>
+                    <DropDown title={'Leveringsstatus'} {...props}>
                         <DropDownItem>
-                            <a href="/">Merk alle som levert</a>
+                            <a href="/" onClick={(e) => {e.preventDefault(); props.onClick(1); }}>Merk alle som levert</a>
                         </DropDownItem>
                         <DropDownItem>
-                            <a href="/">Merk alle som ikke levert</a>
+                            <a href="/" onClick={(e) => {e.preventDefault(); props.onClick(2); }}>Merk alle som ikke levert</a>
                         </DropDownItem>
                     </DropDown>
                 </th>

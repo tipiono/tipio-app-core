@@ -11,7 +11,9 @@ var _ = require("../../..");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var OrderFilters = function OrderFilters() {
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+var OrderFilters = function OrderFilters(props) {
   return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("thead", {
     className: "orderFilters"
   }, _react.default.createElement("tr", null, _react.default.createElement("th", {
@@ -26,12 +28,20 @@ var OrderFilters = function OrderFilters() {
     strokeWidth: 0.2,
     fill: "#5C6265",
     fillRule: "evenodd"
-  })), _react.default.createElement(_.DropDown, {
+  })), _react.default.createElement(_.DropDown, _extends({
     title: 'Leveringsstatus'
-  }, _react.default.createElement(_.DropDownItem, null, _react.default.createElement("a", {
-    href: "/"
+  }, props), _react.default.createElement(_.DropDownItem, null, _react.default.createElement("a", {
+    href: "/",
+    onClick: function onClick(e) {
+      e.preventDefault();
+      props.onClick(1);
+    }
   }, "Merk alle som levert")), _react.default.createElement(_.DropDownItem, null, _react.default.createElement("a", {
-    href: "/"
+    href: "/",
+    onClick: function onClick(e) {
+      e.preventDefault();
+      props.onClick(2);
+    }
   }, "Merk alle som ikke levert")))), _react.default.createElement("th", null, _react.default.createElement("a", {
     className: "orderFilters--sort",
     href: ""
