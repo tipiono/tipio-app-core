@@ -9,9 +9,26 @@ var _react = _interopRequireDefault(require("react"));
 
 var _ = require("../../..");
 
+var _classnames = _interopRequireDefault(require("classnames"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+var SortIcon = function SortIcon() {
+  return _react.default.createElement("svg", {
+    width: 13,
+    height: 9
+  }, _react.default.createElement("path", {
+    d: "M0 1.96L1.023 1 6.5 6.09 11.977 1 13 1.96 6.5 8z",
+    fill: "#5C6265",
+    stroke: "#5C6265",
+    strokeWidth: 0.788,
+    fillRule: "evenodd",
+    strokeLinecap: "round",
+    strokeLinejoin: "round"
+  }));
+};
 
 var OrderFilters = function OrderFilters(props) {
   return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("thead", {
@@ -43,38 +60,28 @@ var OrderFilters = function OrderFilters(props) {
       props.onClick(2);
     }
   }, "Merk alle som ikke levert")))), _react.default.createElement("th", null, _react.default.createElement("a", {
-    className: "orderFilters--sort",
-    href: ""
+    className: (0, _classnames.default)('orderFilters--sort', {
+      active: props.order_by === 'full_name'
+    }),
+    href: "",
+    onClick: function onClick(e) {
+      e.preventDefault();
+      props.orderByOnClick('full_name');
+    }
   }, _react.default.createElement("span", {
     className: "mr-2"
-  }, "Navn"), _react.default.createElement("svg", {
-    width: 13,
-    height: 9
-  }, _react.default.createElement("path", {
-    d: "M0 1.96L1.023 1 6.5 6.09 11.977 1 13 1.96 6.5 8z",
-    fill: "#5C6265",
-    stroke: "#5C6265",
-    strokeWidth: 0.788,
-    fillRule: "evenodd",
-    strokeLinecap: "round",
-    strokeLinejoin: "round"
-  })))), _react.default.createElement("th", null, "Adresse"), _react.default.createElement("th", null, _react.default.createElement("a", {
-    className: "orderFilters--sort active",
-    href: ""
+  }, "Navn"), _react.default.createElement(SortIcon, null))), _react.default.createElement("th", null, "Adresse"), _react.default.createElement("th", null, _react.default.createElement("a", {
+    className: (0, _classnames.default)('orderFilters--sort', {
+      active: props.order_by === 'zip_code'
+    }),
+    href: "",
+    onClick: function onClick(e) {
+      e.preventDefault();
+      props.orderByOnClick('zip_code');
+    }
   }, _react.default.createElement("span", {
     className: "mr-2"
-  }, "Post sted"), _react.default.createElement("svg", {
-    width: 13,
-    height: 9
-  }, _react.default.createElement("path", {
-    d: "M0 1.96L1.023 1 6.5 6.09 11.977 1 13 1.96 6.5 8z",
-    fill: "#5C6265",
-    stroke: "#5C6265",
-    strokeWidth: 0.788,
-    fillRule: "evenodd",
-    strokeLinecap: "round",
-    strokeLinejoin: "round"
-  })))), _react.default.createElement("th", null, _react.default.createElement("br", null)))));
+  }, "Post sted"), _react.default.createElement(SortIcon, null))), _react.default.createElement("th", null, _react.default.createElement("br", null)))));
 };
 
 var _default = OrderFilters;

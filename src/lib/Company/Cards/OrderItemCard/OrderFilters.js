@@ -1,6 +1,20 @@
 import React from 'react';
 import { DropDown, DropDownItem } from "../../..";
+import cx from 'classnames';
 
+const SortIcon = () => (
+    <svg width={13} height={9}>
+        <path
+            d="M0 1.96L1.023 1 6.5 6.09 11.977 1 13 1.96 6.5 8z"
+            fill="#5C6265"
+            stroke="#5C6265"
+            strokeWidth={0.788}
+            fillRule="evenodd"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+    </svg>
+);
 
 const OrderFilters = (props) => {
     return (
@@ -28,38 +42,24 @@ const OrderFilters = (props) => {
                 </th>
 
                 <th>
-                    <a className="orderFilters--sort" href="">
+                    <a
+                        className={cx('orderFilters--sort', { active: props.order_by === 'full_name' })}
+                        href=""
+                        onClick={(e) => {e.preventDefault(); props.orderByOnClick('full_name'); }}
+                    >
                         <span className="mr-2">Navn</span>
-                        <svg width={13} height={9}>
-                            <path
-                                d="M0 1.96L1.023 1 6.5 6.09 11.977 1 13 1.96 6.5 8z"
-                                fill="#5C6265"
-                                stroke="#5C6265"
-                                strokeWidth={0.788}
-                                fillRule="evenodd"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                            />
-                        </svg>
+                        <SortIcon />
                     </a>
                 </th>
                 <th>Adresse</th>
                 <th>
-                    <a className="orderFilters--sort active" href="">
+                    <a className={cx('orderFilters--sort', { active: props.order_by === 'zip_code' })}
+                    href=""
+                    onClick={(e) => {e.preventDefault(); props.orderByOnClick('zip_code'); }}
+                    >
                         <span className="mr-2">Post sted</span>
-                        <svg width={13} height={9}>
-                            <path
-                                d="M0 1.96L1.023 1 6.5 6.09 11.977 1 13 1.96 6.5 8z"
-                                fill="#5C6265"
-                                stroke="#5C6265"
-                                strokeWidth={0.788}
-                                fillRule="evenodd"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                            />
-                        </svg>
+                        <SortIcon />
                     </a>
-
                 </th>
                 <th><br/></th>
             </tr>
