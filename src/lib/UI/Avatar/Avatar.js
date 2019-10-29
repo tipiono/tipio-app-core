@@ -1,9 +1,15 @@
 import React from "react";
 
-function Avatar({src}) {
+function Avatar({src, loading}) {
     return (
         <>
-            <img className="avatar" src={src} alt=""/>
+            {src && <img className="avatar" src={src} alt=""/>}
+
+            {loading ? (
+                <div className="spinner-grow" role="status">
+                    <span className="sr-only">Loading...</span>
+                </div>
+            ): (null)}
         </>
     )
 }
