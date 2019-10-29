@@ -14,6 +14,7 @@ const OrderItemCard = ({ order, deliveredOnChange}) => {
                             id={`delivered${order.id}`}
                             checked={order.delivered}
                             onChange={deliveredOnChange}
+                            data-order_id={order.id}
                         />
                         <span>Levert</span>
                     </td>
