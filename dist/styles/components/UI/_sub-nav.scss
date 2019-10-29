@@ -43,7 +43,7 @@
 
         &.active {
           font-family: 'Riposte-Regular', sans-serif;
-          border-bottom: 2px solid $primary;
+          border-bottom: 1px solid $primary;
           padding-bottom: 3px;
         }
       }
@@ -56,6 +56,30 @@
         font-size: 12px;
         font-family: 'Riposte-Medium', sans-serif;
         top: -.9em;
+      }
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    flex-direction: column;
+
+    &__account {
+      &--name {
+        font-size: 1.5rem;
+      }
+    }
+
+    &__list {
+      margin-top: 1rem;
+
+      &--item {
+        &:first-child {
+          margin-left: 0;
+        }
+
+        &--link {
+          font-size: 1rem;
+        }
       }
     }
   }

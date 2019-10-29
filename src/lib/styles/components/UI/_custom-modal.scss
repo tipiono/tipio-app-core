@@ -5,7 +5,8 @@
         right: 1.5rem;
     }
 
-    @include media-breakpoint-down(sm) {
+
+    @include media-breakpoint-down(xs) {
         &--content {
             height: 100vh;
         }
