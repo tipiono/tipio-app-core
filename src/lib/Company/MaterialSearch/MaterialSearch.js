@@ -1,6 +1,6 @@
 import React from 'react';
 
-const MaterialSearch = () => {
+const MaterialSearch = ({ defaultValue, onSubmit }) => {
     return (
         <div className="materialSearch">
             <svg className="materialSearch--icon" width={21} height={21}>
@@ -10,7 +10,19 @@ const MaterialSearch = () => {
                     fillRule="evenodd"
                 />
             </svg>
-            <input className="materialSearch--input" type="text" placeholder="Søk navn, poststed"/>
+            <input
+                id="material-search"
+                className="materialSearch--input"
+                type="text"
+                placeholder="Søk navn, poststed"
+                onKeyDown={(e) => {
+                    if (e.key === 'Enter') {
+                        e.preventDefault();
+                        onSubmit(e.target.value);
+                    }
+                }}
+                defaultValue={defaultValue}
+            />
         </div>
     );
 };

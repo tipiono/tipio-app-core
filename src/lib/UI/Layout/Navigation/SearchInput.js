@@ -48,8 +48,9 @@ const SearchInput = (props) => {
 
                     {/*Input*/}
                     <input
+                        id="search-layout"
                         ref={input => input && input.focus()}
-                        onKeyUp={_onKeyUp}
+                        // onKeyUp={_onKeyUp}
                         type="text"
                         className="searchInput__form--input"
                         placeholder="Søk produkt, navn merke..."
