@@ -125,6 +125,7 @@ import ExportIcon from './UI/Icons/ExportIcon';
 import SearchIcon from './UI/Icons/SearchIcon';
 import CloseIcon from './UI/Icons/CloseIcon';
 import FilterIcon from './UI/Icons/FilterIcon';
+import FilterIconCyan from './UI/Icons/FilterIconCyan';
 
 /**
  * UTILS
@@ -240,5 +241,6 @@ export {
     Pagination,
     RoundedButton,
     NoSearchResult,
-    TipioFeedWithWrapper
+    TipioFeedWithWrapper,
+    FilterIconCyan
 };
