@@ -6,7 +6,7 @@ function AddSaleCompanyCard({children, ...props}) {
     return (
         <>
             <BaseCompanyCard {...props}>
-                {props.showAddAdditionalSaleButton && <SecondaryButton text={'Legg i handlekurv'}/>}
+                {props.showAddAdditionalSaleButton && <SecondaryButton text={'Legg til mersalg'}/>}
                 {props.showSeeCustomerListButton ? (<SecondaryOutlineButton text={'Se kundeliste'}/>) : (null)}
             </BaseCompanyCard>
 

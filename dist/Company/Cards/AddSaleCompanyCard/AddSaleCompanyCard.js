@@ -22,7 +22,7 @@ function AddSaleCompanyCard(_ref) {
       props = _objectWithoutProperties(_ref, ["children"]);
 
   return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_BaseCompanyCard.default, props, props.showAddAdditionalSaleButton && _react.default.createElement(_index.SecondaryButton, {
-    text: 'Legg i handlekurv'
+    text: 'Legg til mersalg'
   }), props.showSeeCustomerListButton ? _react.default.createElement(_index.SecondaryOutlineButton, {
     text: 'Se kundeliste'
   }) : null));

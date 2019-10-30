@@ -2,6 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import SearchIcon from "../../Icons/SearchIcon";
 import CloseIcon from "../../Icons/CloseIcon";
 import cx from 'classnames';
+import Overlay from '../../Overlay/Overlay';
 
 const SearchInput = (props) => {
     /**
@@ -32,8 +33,13 @@ const SearchInput = (props) => {
             props.searchFormOnSubmit(e.target.value);
         }
     }
+    const _onClick = () => {
+        setShow(false);
+    }
+
     return (
         <>
+            {show && <Overlay onClick={_onClick} />}
             <a href="#" className={cx("nav-list-link", {'d-none': show})} onClick={(e) => {e.preventDefault();setShow(true);}}>
                 <SearchIcon/>
             </a>

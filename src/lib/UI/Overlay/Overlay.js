@@ -1,8 +1,10 @@
 import React from 'react';
 
-const Overlay = () => {
+const Overlay = ({ onClick }) => {
     return (
-        <div className="overlay show" />
+        <a onClick={(e)=>{e.preventDefault(); onClick();}}>
+            <div className="overlay show" />
+        </a>
     );
 };
 
