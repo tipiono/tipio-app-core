@@ -35,9 +35,9 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 var breakpointColumnsObj = {
   default: 2,
-  1100: 3,
-  700: 2,
-  500: 2
+  1100: 1,
+  700: 1,
+  500: 1
 };
 
 function CategoriesForm(_ref) {

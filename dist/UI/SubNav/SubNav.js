@@ -18,15 +18,19 @@ var SubNav = function SubNav(_ref) {
       items = _ref.items,
       activeLink = _ref.activeLink,
       avatar = _ref.avatar,
-      _onClick = _ref.onClick;
+      _onClick = _ref.onClick,
+      loading = _ref.loading,
+      _ref$showAvatar = _ref.showAvatar,
+      showAvatar = _ref$showAvatar === void 0 ? true : _ref$showAvatar;
   return _react.default.createElement("div", {
     className: "subNav"
   }, _react.default.createElement("div", {
     className: "subNav__account"
-  }, avatar && _react.default.createElement("div", {
+  }, showAvatar && _react.default.createElement("div", {
     className: "subNav__account--avatar"
   }, _react.default.createElement(_Avatar.default, {
-    src: avatar
+    src: avatar,
+    loading: loading
   })), _react.default.createElement("h3", {
     className: "subNav__account--name"
   }, title)), _react.default.createElement("ul", {

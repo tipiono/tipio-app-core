@@ -70,6 +70,14 @@
       //}
     }
   }
+
+  @include media-breakpoint-down(md) {
+    .carousel {
+      .thumbs-wrapper {
+        display: none;
+      }
+    }
+  }
 }
 
 

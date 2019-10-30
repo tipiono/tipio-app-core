@@ -12,6 +12,7 @@
 
     &__notification {
       margin-bottom: 3rem;
+
       &--title {
         color: $gray-700;
         margin-bottom: .6rem;
@@ -30,6 +31,12 @@
 
     &__categories {
       margin-bottom: 3rem;
+
+      &--link {
+        display: flex;
+        align-items: center;
+        font-size: 1.125rem;
+      }
     }
   }
 }

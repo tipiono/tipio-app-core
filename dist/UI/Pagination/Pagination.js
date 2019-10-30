@@ -18,7 +18,7 @@ function Pagination(_ref) {
       showNextButton = _ref.showNextButton,
       handlePageClick = _ref.handlePageClick;
   return _react.default.createElement("nav", {
-    className: "pagination",
+    className: "custom-pagination",
     "aria-label": "Page navigation"
   }, _react.default.createElement(_reactPaginate.default, {
     previousLabel: '',
