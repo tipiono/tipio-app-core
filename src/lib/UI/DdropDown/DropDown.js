@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 
 export function DropDown(props) {
     const [dropDownVisibility, setDropDownVisibility] = useState(false);
+    const visible = props.controlled ? props.visible : dropDownVisibility;
     return (
         <>
             <a className="dropdown-toggle mb-2" href="#"
@@ -9,7 +10,11 @@ export function DropDown(props) {
                role="button" data-toggle="dropdown" aria-haspopup="true"
                aria-expanded="false" onClick={(e) => {
                 e.preventDefault();
-                setDropDownVisibility(!dropDownVisibility)
+                if (props.controlled) {
+                    props.setDropDownVisibility(!props.visible);
+                } else {
+                    setDropDownVisibility(!dropDownVisibility);
+                }
             }}>
                 {props.title}
                 {props.afterTitle && props.afterTitle()}
@@ -24,7 +29,7 @@ export function DropDown(props) {
                     </g>
                 </svg>
             </a>
-            <ul className={`dropdown-list ${dropDownVisibility ? 'show' : 'd-none'}`}>
+            <ul className={`dropdown-list ${visible ? 'show' : 'd-none'}`}>
                 {
                     React.Children.map(props.children, (child) => {
                         return child;
