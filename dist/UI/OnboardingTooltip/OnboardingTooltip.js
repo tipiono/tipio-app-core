@@ -7,6 +7,8 @@ exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
+var _classnames = _interopRequireDefault(require("classnames"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
@@ -22,7 +24,7 @@ function OnboardingTooltip(_ref) {
       skipProps = _ref.skipProps,
       tooltipProps = _ref.tooltipProps;
   return _react.default.createElement("div", _extends({}, tooltipProps, {
-    className: "onboarding__tooltip ".concat(step.placement)
+    className: (0, _classnames.default)('onboarding__tooltip', step.placement)
   }), step.title && _react.default.createElement("h6", {
     className: "onboarding__tooltip--title"
   }, step.title), _react.default.createElement("p", {

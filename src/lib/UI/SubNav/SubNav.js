@@ -8,18 +8,21 @@ const SubNav = ({
     activeLink,
     avatar,
     onClick,
-    loading
+    loading,
+    showAvatar = true
 }) => {
     return (
         <div className="subNav">
             <div className="subNav__account">
 
-                <div className="subNav__account--avatar">
-                    <Avatar
-                        src={avatar}
-                        loading={loading}
-                    />
-                </div>
+                {showAvatar &&
+                    <div className="subNav__account--avatar">
+                        <Avatar
+                            src={avatar}
+                            loading={loading}
+                        />
+                    </div>
+                }
 
                 <h3 className="subNav__account--name">{title}</h3>
 

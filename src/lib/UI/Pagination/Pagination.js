@@ -4,7 +4,7 @@ import ReactPaginate from 'react-paginate';
 
 function Pagination({page, pageCount, showPrevButton, showNextButton, handlePageClick}) {
     return (
-        <nav className="pagination" aria-label="Page navigation">
+        <nav className="custom-pagination" aria-label="Page navigation">
             <ReactPaginate
                 previousLabel={''}
                 nextLabel={''}
