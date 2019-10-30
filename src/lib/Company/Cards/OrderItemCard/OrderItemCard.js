@@ -53,7 +53,7 @@ const OrderItemCard = ({ order, deliveredOnChange}) => {
                     <td className="orderItemCard__orderAmount--label">Totalsum</td>
                     <td></td>
                     <td></td>
-                    <td className="orderItemCard__orderAmount--price">1 998 Kr</td>
+                    <td className="orderItemCard__orderAmount--price">{order.total_price} Kr</td>
                 </tr>
             </tbody>
 

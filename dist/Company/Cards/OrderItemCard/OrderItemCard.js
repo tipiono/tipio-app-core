@@ -59,7 +59,7 @@ var OrderItemCard = function OrderItemCard(_ref) {
     className: "orderItemCard__orderAmount--label"
   }, "Totalsum"), _react.default.createElement("td", null), _react.default.createElement("td", null), _react.default.createElement("td", {
     className: "orderItemCard__orderAmount--price"
-  }, "1 998 Kr"))), _react.default.createElement("br", null));
+  }, order.total_price, " Kr"))), _react.default.createElement("br", null));
 };
 
 var _default = OrderItemCard;

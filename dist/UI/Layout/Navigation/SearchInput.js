@@ -13,6 +13,8 @@ var _CloseIcon = _interopRequireDefault(require("../../Icons/CloseIcon"));
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
+var _Overlay = _interopRequireDefault(require("../../Overlay/Overlay"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
@@ -58,7 +60,13 @@ var SearchInput = function SearchInput(props) {
     }
   };
 
-  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("a", {
+  var _onClick = function _onClick() {
+    setShow(false);
+  };
+
+  return _react.default.createElement(_react.default.Fragment, null, show && _react.default.createElement(_Overlay.default, {
+    onClick: _onClick
+  }), _react.default.createElement("a", {
     href: "#",
     className: (0, _classnames.default)("nav-list-link", {
       'd-none': show
