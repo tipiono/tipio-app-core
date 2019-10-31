@@ -53,9 +53,10 @@ var SearchInput = function SearchInput(props) {
   }, []);
 
   var _onKeyUp = function _onKeyUp(e) {
-    e.preventDefault();
-
     if (e.key === 'Enter') {
+      e.preventDefault();
+      e.stopPropagation(); //alert("search nav enter")
+
       props.searchFormOnSubmit(e.target.value);
     }
   };
@@ -87,8 +88,8 @@ var SearchInput = function SearchInput(props) {
     id: "search-layout",
     ref: function ref(input) {
       return input && input.focus();
-    } // onKeyUp={_onKeyUp}
-    ,
+    },
+    onKeyUp: _onKeyUp,
     type: "text",
     className: "searchInput__form--input",
     placeholder: "S\xF8k produkt, navn merke..."

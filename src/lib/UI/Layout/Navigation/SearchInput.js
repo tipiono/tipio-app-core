@@ -28,8 +28,10 @@ const SearchInput = (props) => {
       }, []);
 
     const _onKeyUp = (e) => {
-        e.preventDefault();
         if (e.key === 'Enter') {
+            e.preventDefault();
+            e.stopPropagation();
+            //alert("search nav enter")
             props.searchFormOnSubmit(e.target.value);
         }
     }
@@ -56,7 +58,7 @@ const SearchInput = (props) => {
                     <input
                         id="search-layout"
                         ref={input => input && input.focus()}
-                        // onKeyUp={_onKeyUp}
+                        onKeyUp={_onKeyUp}
                         type="text"
                         className="searchInput__form--input"
                         placeholder="Søk produkt, navn merke..."

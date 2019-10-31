@@ -15,9 +15,11 @@ const MaterialSearch = ({ defaultValue, onSubmit }) => {
                 className="materialSearch--input"
                 type="text"
                 placeholder="Søk navn, poststed"
-                onKeyDown={(e) => {
+                onKeyUp={(e) => {
                     if (e.key === 'Enter') {
+                        // alert("enter")
                         e.preventDefault();
+                        e.stopPropagation();
                         onSubmit(e.target.value);
                     }
                 }}
