@@ -5,7 +5,7 @@ const BaseCompanyCard = ({children, expires_in, binding_count, ...props}) => {
     return (
         <div>
             <div className="baseCompanyCard">
-                <a href="#" onClick={() => {props.onClick()}}>
+                <a href="#" onClick={(e) => {e.preventDefault();props.onClick()}}>
                     <div className="baseCompanyCard__header">
                         {props.images && props.images.length && <a href=""><img className="baseCompanyCard__header--image"
                                         src={props.images[0].blob_url}

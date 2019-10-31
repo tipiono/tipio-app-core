@@ -25,7 +25,8 @@ var BaseCompanyCard = function BaseCompanyCard(_ref) {
     className: "baseCompanyCard"
   }, _react.default.createElement("a", {
     href: "#",
-    onClick: function onClick() {
+    onClick: function onClick(e) {
+      e.preventDefault();
       props.onClick();
     }
   }, _react.default.createElement("div", {
