@@ -37,7 +37,7 @@ var OrderItemCard = function OrderItemCard(_ref) {
     checked: order.delivered,
     onChange: deliveredOnChange,
     "data-order_id": order.id
-  }), _react.default.createElement("span", null, "Levert")), _react.default.createElement("td", {
+  }), _react.default.createElement("span", null, order.delivered ? 'Levert' : 'Ikke levert')), _react.default.createElement("td", {
     className: "orderItemCard__customerDetail--name"
   }, order.order_user.full_name), _react.default.createElement("td", {
     className: "orderItemCard__customerDetail--address"

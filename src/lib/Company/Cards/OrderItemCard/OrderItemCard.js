@@ -16,7 +16,7 @@ const OrderItemCard = ({ order, deliveredOnChange}) => {
                             onChange={deliveredOnChange}
                             data-order_id={order.id}
                         />
-                        <span>Levert</span>
+                        <span>{order.delivered ? 'Levert' : 'Ikke levert'}</span>
                     </td>
                     <td className="orderItemCard__customerDetail--name">{order.order_user.full_name}</td>
                     <td className="orderItemCard__customerDetail--address">Adresse: {address.address}</td>
