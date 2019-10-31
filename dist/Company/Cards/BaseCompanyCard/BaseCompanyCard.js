@@ -23,6 +23,11 @@ var BaseCompanyCard = function BaseCompanyCard(_ref) {
 
   return _react.default.createElement("div", null, _react.default.createElement("div", {
     className: "baseCompanyCard"
+  }, _react.default.createElement("a", {
+    href: "#",
+    onClick: function onClick() {
+      props.onClick();
+    }
   }, _react.default.createElement("div", {
     className: "baseCompanyCard__header"
   }, props.images && props.images.length && _react.default.createElement("a", {
@@ -36,11 +41,16 @@ var BaseCompanyCard = function BaseCompanyCard(_ref) {
   }, _react.default.createElement(_TipioCountdown.default, {
     className: "timer",
     expires_in: expires_in
-  }))), _react.default.createElement("div", {
+  })))), _react.default.createElement("div", {
     className: "baseCompanyCard__body"
+  }, _react.default.createElement("a", {
+    href: "#",
+    onClick: function onClick() {
+      props.onClick();
+    }
   }, _react.default.createElement("h5", {
     className: "baseCompanyCard__body--title"
-  }, props.title), _react.default.createElement("p", {
+  }, props.title)), _react.default.createElement("p", {
     className: "baseCompanyCard__body--content--description"
   }, props.subtitle), _react.default.createElement("div", {
     className: "baseCompanyCard__body--cost"
