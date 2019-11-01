@@ -25,7 +25,7 @@ const CompanyAddBidCard = (props) => {
                     <span className="border-right" />
 
                     <div className="companyAddBidCard__price--sale">
-                        <p className="companyAddBidCard__price--sale--label">Minimumpris</p>
+                        <p className="companyAddBidCard__price--sale--label" id="markedspris-label">Minimumpris</p>
                         <h6 className="companyAddBidCard__price--sale--amount">{tipio.wanted_price} Kr</h6>
                     </div>
                 </div>

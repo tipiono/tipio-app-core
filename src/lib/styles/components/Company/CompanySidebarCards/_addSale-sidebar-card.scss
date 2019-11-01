@@ -1,0 +1,93 @@
+.addSaleSidebarCard {
+  border: 1px solid $gray-200;
+  padding: 4.2rem;
+
+  &__header {
+    text-align: center;
+
+    &__content {
+      margin-bottom: 2rem;
+
+      &--title {
+        letter-spacing: -0.4px;
+      }
+
+      &--subtitle {
+        font-family: 'Riposte-Light', sans-serif;
+      }
+    }
+
+    &__cost {
+      margin-bottom: 2rem;
+
+      &--label {
+        font-size: .875rem;
+        color: $gray-500;
+        margin-bottom: .275rem;
+      }
+
+      &--price {
+        margin-bottom: 0;
+      }
+    }
+
+    &--placeholder {
+      height: 30px;
+      width: 200px;
+      margin: 0 auto;
+    }
+  }
+
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+
+    &--cost {
+      &--label {
+        font-size: .875rem;
+        color: $gray-500;
+        margin-bottom: .4rem;
+      }
+
+      &--amount {
+        font-size: 1.625rem;
+        color: $gray-700;
+        text-decoration: line-through;
+        margin-bottom: 0;
+      }
+    }
+
+    &--sale {
+      text-align: right;
+
+      &--label {
+        color: $gray-500;
+        font-size: .875rem;
+        margin-bottom: .4rem;
+      }
+
+      &--amount {
+        font-size: 1.625rem;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__footer {
+    margin-top: 2.8rem;
+
+    &--action {
+      margin-bottom: 2rem;
+    }
+
+    &--interestedCounter {
+      text-align: center;
+      color: $cyan;
+      margin-bottom: 0;
+      letter-spacing: .67px;
+      font-family: 'Riposte-Medium', sans-serif;
+    }
+  }
+}

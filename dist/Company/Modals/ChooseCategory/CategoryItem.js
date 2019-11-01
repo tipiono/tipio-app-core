@@ -34,7 +34,8 @@ var CategoryItem = function CategoryItem(_ref) {
   }, withCheckbox && _react.default.createElement(_Checkbox.default, {
     id: id,
     onChange: onChange,
-    value: id
+    value: id,
+    checked: selectedMap[id]
   }), _react.default.createElement("a", {
     className: 'category-link ' + (selected ? 'selected' : ''),
     href: "#",

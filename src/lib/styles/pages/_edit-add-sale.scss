@@ -1,5 +1,6 @@
 .editAddSale {
-  padding: 3rem 0;
+  padding-top: 3rem;
+  padding-bottom: 6rem;
 
 
   /// Product title and SKU number
@@ -41,8 +42,8 @@
   &__addPrice {
     display: flex;
     flex-direction: row;
-    align-items: center;
-    margin-bottom: 2rem;
+    //align-items: center;
+    margin-bottom: 1rem;
 
     &--cost {
       width: 30%;

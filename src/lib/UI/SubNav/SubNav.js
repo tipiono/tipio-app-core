@@ -1,26 +1,46 @@
 import React from 'react';
 import Avatar from "../Avatar/Avatar";
+import cx from 'classnames';
 
-const SubNav = () => {
+const SubNav = ({
+    title,
+    items,
+    activeLink,
+    avatar,
+    onClick,
+    loading,
+    showAvatar = true
+}) => {
     return (
         <div className="subNav">
             <div className="subNav__account">
-                <div className="subNav__account--avatar">
-                    <Avatar
-                        src={"https://media.licdn.com/dms/image/C4E0BAQH68IJX_M94XA/company-logo_400_400/0?e=1577318400&v=beta&t=lCBG1Ra3mD0X0XNoqfARizY-hi4I1V1PQJGx6vhpcRI"}/>
-                </div>
 
-                <h3 className="subNav__account--name">Elkjøp - Sandvika</h3>
+                {showAvatar &&
+                    <div className="subNav__account--avatar">
+                        <Avatar
+                            src={avatar}
+                            loading={loading}
+                        />
+                    </div>
+                }
+
+                <h3 className="subNav__account--name">{title}</h3>
 
             </div>
 
             <ul className="subNav__list">
-                <li className="subNav__list--item">
-                    <a className="subNav__list--item--link active" href="">Min profil</a>
-                </li>
-                <li className="subNav__list--item">
-                    <a className="subNav__list--item--link" href=""> Dashboard</a>
-                </li>
+                {
+                    items.map((item) => (
+                        <li className="subNav__list--item">
+                            <a className={cx("subNav__list--item--link", { active: item.link === activeLink })}  href="" onClick={(e)=>{e.preventDefault(); onClick(item);}}>
+                                {item.title}
+                            </a>
+                            {item.badgeCount > 0 ? (<sup className="subNav__list--item--badge">
+                                {item.badgeCount}
+                            </sup>) : (null)}
+                        </li>
+                    ))
+                }
             </ul>
         </div>
     );

@@ -8,7 +8,14 @@ let svgUrl = "https://tipio.ams3.digitaloceanspaces.com/dev/test/test/icon.svg";
 
 const CategoryItem = ({ id, title, icon, onSelect, selected, sub_categories, withCheckbox, onChange, selectedMap }) => (
     <div className='category-item select'>
-            {withCheckbox &&(<Checkbox id={id} onChange={onChange} value={id} />)}
+        {}
+            {withCheckbox &&(
+                <Checkbox
+                    id={id}
+                    onChange={onChange}
+                    value={id}
+                    checked={selectedMap[id]}
+                />)}
 
         <a className={'category-link ' + (selected ? 'selected' : '')} href="#" onClick={onSelect}>
 

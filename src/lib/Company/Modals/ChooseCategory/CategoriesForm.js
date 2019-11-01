@@ -10,9 +10,9 @@ import SecondaryButton from '../../../UI/Buttons/SecondaryButton';
 
 const breakpointColumnsObj = {
     default: 2,
-    1100: 3,
-    700: 2,
-    500: 2
+    1100: 1,
+    700: 1,
+    500: 1
 };
 
 function CategoriesForm({

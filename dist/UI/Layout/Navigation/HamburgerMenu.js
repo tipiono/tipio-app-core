@@ -17,9 +17,7 @@ function HamburgerMenu(props) {
   var menuVisible = props.menuVisible,
       toggleMenu = props.toggleMenu,
       items = props.items;
-  return _react.default.createElement("ul", {
-    className: "nav-list ml-auto"
-  }, _react.default.createElement("li", {
+  return _react.default.createElement("li", {
     className: "nav-list-item"
   }, _react.default.createElement("span", null, _react.default.createElement("a", {
     href: "#",
@@ -34,24 +32,36 @@ function HamburgerMenu(props) {
   }, items && items.map(function (x) {
     if (x.sub_items) {
       return _react.default.createElement("li", {
+        key: x.name,
         className: "nav-item"
       }, _react.default.createElement(_DropDown.DropDown, {
         title: 'Mine Tipioer'
       }, x.sub_items.map(function (y) {
-        return _react.default.createElement(_DropDown.DropDownItem, null, _react.default.createElement("a", {
-          to: "/"
+        return _react.default.createElement(_DropDown.DropDownItem, {
+          key: y.name
+        }, _react.default.createElement("a", {
+          to: "/",
+          onClick: function onClick(e) {
+            e.preventDefault();
+            props.menuItemOnClick(y);
+          }
         }, y.name));
       })));
     } else {
       return _react.default.createElement("li", {
+        key: x.name,
         className: (0, _classnames.default)({
           'nav-item': items.sub_items
         })
       }, _react.default.createElement("a", {
-        href: "/tipio/new"
+        href: "/tipio/new",
+        onClick: function onClick(e) {
+          e.preventDefault();
+          props.menuItemOnClick(x);
+        }
       }, x.name));
     }
-  })))));
+  }))));
 }
 
 var _default = HamburgerMenu;

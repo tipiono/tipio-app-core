@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  padding: 34px 0;
 
   &__account {
     display: flex;
@@ -15,7 +16,7 @@
     }
 
     &--name {
-      font-family: 'Riposte-Light', sans-serif;
+      font-family: 'Riposte-Regular', sans-serif;
       color: $gray-700;
       margin-bottom: 0;
     }
@@ -25,6 +26,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    margin-bottom: 0;
 
     &--item {
       text-align: right;
@@ -42,6 +44,41 @@
         &.active {
           font-family: 'Riposte-Regular', sans-serif;
           border-bottom: 1px solid $primary;
+          padding-bottom: 3px;
+        }
+      }
+
+      &--badge {
+        background-color: $secondary;
+        padding: 1px 4px;
+        margin-left: 4px;
+        border-radius: 25px;
+        font-size: 12px;
+        font-family: 'Riposte-Medium', sans-serif;
+        top: -.9em;
+      }
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    flex-direction: column;
+
+    &__account {
+      &--name {
+        font-size: 1.5rem;
+      }
+    }
+
+    &__list {
+      margin-top: 1rem;
+
+      &--item {
+        &:first-child {
+          margin-left: 0;
+        }
+
+        &--link {
+          font-size: 1rem;
         }
       }
     }

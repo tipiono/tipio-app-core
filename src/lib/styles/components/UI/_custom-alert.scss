@@ -1,0 +1,40 @@
+.customAlert {
+  position: relative;
+  background-color: #ece9f3;
+  padding: 1rem;
+
+  &--content {
+    margin-bottom: 0;
+    padding-right: 2rem;
+    line-height: 1.125rem;
+    color: $gray-700;
+  }
+  &--icon {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+
+    &:hover {
+      * {
+        fill: $dark;
+        transition: all ease 200ms;
+      }
+    }
+  }
+
+  &.bg-yellow {
+    background-color: #fcf5bc;
+  }
+
+  &.bg-purple {
+    background-color: #ded8ec;
+  }
+
+  &.bg-red {
+    background-color: #fcd9d9;;
+  }
+
+  &.bg-green {
+    background-color: #c2e7e2;
+  }
+}

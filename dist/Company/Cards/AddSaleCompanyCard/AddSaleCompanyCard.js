@@ -21,11 +21,11 @@ function AddSaleCompanyCard(_ref) {
   var children = _ref.children,
       props = _objectWithoutProperties(_ref, ["children"]);
 
-  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_BaseCompanyCard.default, null, _react.default.createElement(_index.SecondaryButton, {
-    text: 'Legg i handlekurv'
-  }), _react.default.createElement(_index.SecondaryOutlineButton, {
+  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_BaseCompanyCard.default, props, props.showAddAdditionalSaleButton && _react.default.createElement(_index.SecondaryButton, {
+    text: 'Legg til mersalg'
+  }), props.showSeeCustomerListButton ? _react.default.createElement(_index.SecondaryOutlineButton, {
     text: 'Se kundeliste'
-  })));
+  }) : null));
 }
 
 var _default = AddSaleCompanyCard;

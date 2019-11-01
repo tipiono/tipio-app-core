@@ -9,6 +9,8 @@ import DisabledButton from "./UI/Buttons/DisabledButton";
 import GrayButton from "./UI/Buttons/GrayButton";
 import GrayOutlineButton from "./UI/Buttons/GrayOutlineButton";
 import LinkButton from "./UI/Buttons/LinkButton";
+import AddCategoryButton from "./UI/Buttons/AddCategoryButton";
+import SelectedCategoryButton from "./UI/Buttons/SelectedCategoryButton";
 import { Modal, ModalType } from "./UI/Modal/Modal";
 import OnboardingTooltip from './UI/OnboardingTooltip/OnboardingTooltip';
 import SuccessModal from './UI/Modal/SuccessModal/SuccessModal';
@@ -44,6 +46,12 @@ import Table from './UI/Table';
 import PublishedBy from './UI/PublishedBy/PublishedBy';
 import SelectImages from './UI/SelectImages';
 import ErrorMessage from './UI/ErrorMessage/ErrorMessage';
+import CircleChart from './UI/CircleChart/CircleChart';
+import SearchInput from './UI/Layout/Navigation/SearchInput';
+import Overlay from './UI/Overlay/Overlay';
+import Alert from './UI/Alert/Alert';
+import Pagination from './UI/Pagination/Pagination';
+import RoundedButton from './UI/Buttons/RoundedButton';
 
 /*
 *   Customer/Private Components
@@ -72,6 +80,8 @@ import TipioSidebarVotingCard from './Customer/CustomerSidebarCards/VotingCard';
 import TipioSidebarBindingCard from './Customer/CustomerSidebarCards/BindingCard';
 import ImageUploader from './Customer/ImageUploader/ImageUploader';
 import CategoriesForm from './Company/Modals/ChooseCategory/CategoriesForm';
+import NoSearchResult from './Customer/Search/NoSearchResult';
+import TipioFeedWithWrapper from './Customer/TipioFeed/TipioFeedWithWrapper';
 
 /*
 *   Company Components
@@ -84,7 +94,8 @@ import ChangeAvatar from './Company/Avatar/ChangeAvatar';
 import EmptyCover from './Company/CoverImage/EmptyCover';
 import ChangeCover from './Company/CoverImage/ChangeCover';
 import Cover from './Company/CoverImage/Cover';
-import OrderItemCard from './Company/Cards/OrderItemCard';
+import OrderItemCard from './Company/Cards/OrderItemCard/OrderItemCard';
+import OrderFilters from './Company/Cards/OrderItemCard/OrderFilters';
 import BaseCompanyCard from './Company/Cards/BaseCompanyCard/BaseCompanyCard';
 import AddSaleCompanyCard from './Company/Cards/AddSaleCompanyCard/AddSaleCompanyCard';
 import CustomerListCompanyCard from './Company/Cards/CustomerListCompanyCard/CustomerListCompanyCard';
@@ -93,7 +104,10 @@ import TipioWithOfferCompanyCard from './Company/Cards/TipioWithOfferCompanyCard
 import ChooseAddSaleCompanyCard from './Company/Cards/ChooseAddSaleCompanyCard/ChooseAddSaleCompanyCard';
 import CompanySidebarBaseCard from './Company/CompanySidebarCards/CompanySidebarBaseCard';
 import CompanyAddBidCard from   './Company/CompanySidebarCards/CompanyAddBidCard';
-import AddMoreSaleCompanyCard from './Company/Cards/AddMoreSaleCompanyCard/AddMoreSaleCompanyCard'
+import AddMoreSaleCompanyCard from './Company/Cards/AddMoreSaleCompanyCard/AddMoreSaleCompanyCard';
+import AddMoreSaleEndedCompanyCard from './Company/Cards/AddMoreSaleEndedCompanyCard/AddMoreSaleEndedCompanyCard';
+import AddSaleSidebarCard from   './Company/CompanySidebarCards/AddSaleSidebarCard';
+import MaterialSearch from './Company/MaterialSearch/MaterialSearch';
 
 /*
 *   Layout
@@ -107,6 +121,16 @@ import PublicLayout from './UI/Layout/Public/index';
 import InteriorIcon from './UI/Icons/InteriorIcon';
 import ArrowDownIcon from './UI/Icons/ArrowDownIcon';
 import RemoveImageIcon from './UI/Icons/RemoveImageIcon';
+import ExportIcon from './UI/Icons/ExportIcon';
+import SearchIcon from './UI/Icons/SearchIcon';
+import CloseIcon from './UI/Icons/CloseIcon';
+import FilterIcon from './UI/Icons/FilterIcon';
+import FilterIconCyan from './UI/Icons/FilterIconCyan';
+
+/**
+ * UTILS
+ */
+import calculateDiscountPercentage from './Util/calculateDiscountPercentage';
 
 export {
     styles,
@@ -197,6 +221,26 @@ export {
     IconButton,
     SelectImages,
     ErrorMessage,
+    OrderFilters,
     AddMoreSaleCompanyCard,
-    RemoveImageIcon
+    RemoveImageIcon,
+    calculateDiscountPercentage as _util_CalculateDiscountPercentage,
+    MaterialSearch,
+    ExportIcon,
+    CircleChart,
+    AddSaleSidebarCard,
+    AddCategoryButton,
+    SelectedCategoryButton,
+    SearchInput,
+    SearchIcon,
+    CloseIcon,
+    FilterIcon,
+    Overlay,
+    AddMoreSaleEndedCompanyCard,
+    Alert,
+    Pagination,
+    RoundedButton,
+    NoSearchResult,
+    TipioFeedWithWrapper,
+    FilterIconCyan
 };

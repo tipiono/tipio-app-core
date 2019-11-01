@@ -33,7 +33,8 @@ var CompanyAddBidCard = function CompanyAddBidCard(props) {
   }), _react.default.createElement("div", {
     className: "companyAddBidCard__price--sale"
   }, _react.default.createElement("p", {
-    className: "companyAddBidCard__price--sale--label"
+    className: "companyAddBidCard__price--sale--label",
+    id: "markedspris-label"
   }, "Minimumpris"), _react.default.createElement("h6", {
     className: "companyAddBidCard__price--sale--amount"
   }, tipio.wanted_price, " Kr")))));

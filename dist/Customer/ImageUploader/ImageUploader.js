@@ -19,6 +19,8 @@ var _IconButton = _interopRequireDefault(require("../../UI/Buttons/IconButton"))
 
 var _RemoveImageIcon = _interopRequireDefault(require("../../UI/Icons/RemoveImageIcon"));
 
+var _ErrorMessage = _interopRequireDefault(require("../../UI/ErrorMessage/ErrorMessage"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
@@ -31,7 +33,12 @@ function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = 
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
-function ImageUploader() {
+function ImageUploader(_ref) {
+  var setFieldValue = _ref.setFieldValue,
+      name = _ref.name,
+      errors = _ref.errors,
+      displayErrors = _ref.displayErrors;
+
   var _useState = (0, _react.useState)(false),
       _useState2 = _slicedToArray(_useState, 2),
       showCropper = _useState2[0],
@@ -70,6 +77,7 @@ function ImageUploader() {
     });
     var t = files.concat(acceptedFiles);
     setFiles(t);
+    setFieldValue('files', t);
     setInitialCropCompleted(false);
     openCropper(acceptedFiles);
     setCroppedImageIndex(files.length + 1);
@@ -86,6 +94,7 @@ function ImageUploader() {
     });
     URL.revokeObjectURL(file.preview);
     setFiles(f);
+    setFieldValue('files', f);
   };
 
   var cropperModalOnClose = function cropperModalOnClose() {
@@ -111,6 +120,7 @@ function ImageUploader() {
     file.preview = URL.createObjectURL(file);
     files[croppedImageIndex] = file;
     setFiles(files);
+    setFieldValue('files', files);
 
     if (!icc && !initialCropCompleted) {
       setCropImage(files[croppedImageIndex + 1]);
@@ -162,9 +172,9 @@ function ImageUploader() {
   }), _react.default.createElement(_reactDropzone.default, {
     accept: "image/*",
     onDrop: onDrop
-  }, function (_ref) {
-    var getRootProps = _ref.getRootProps,
-        getInputProps = _ref.getInputProps;
+  }, function (_ref2) {
+    var getRootProps = _ref2.getRootProps,
+        getInputProps = _ref2.getInputProps;
     return _react.default.createElement("section", {
       className: "uploadViewer"
     }, _react.default.createElement("div", getRootProps({
@@ -195,6 +205,9 @@ function ImageUploader() {
         e.preventDefault();
       }
     }))));
+  }), displayErrors && errors && errors[name] && _react.default.createElement(_ErrorMessage.default, {
+    content: errors[name].message,
+    color: "bg-red"
   }));
 }
 

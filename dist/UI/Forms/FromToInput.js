@@ -25,7 +25,7 @@ var _default = _react.default.forwardRef(function (_ref, ref) {
       errors = _ref.errors,
       props = _objectWithoutProperties(_ref, ["from", "to", "label", "name", "errors"]);
 
-  return _react.default.createElement(_react.default.Fragment, null, " ", console.log(props.paddingLeft), _react.default.createElement("label", {
+  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("label", {
     className: (0, _classnames.default)("pure-material-textfield-outlined from-to-input", {
       validationError: errors && errors[name]
     })

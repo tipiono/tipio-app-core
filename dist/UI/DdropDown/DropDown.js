@@ -24,6 +24,7 @@ function DropDown(props) {
       dropDownVisibility = _useState2[0],
       setDropDownVisibility = _useState2[1];
 
+  var visible = props.controlled ? props.visible : dropDownVisibility;
   return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("a", {
     className: "dropdown-toggle mb-2",
     href: "#",
@@ -34,7 +35,12 @@ function DropDown(props) {
     "aria-expanded": "false",
     onClick: function onClick(e) {
       e.preventDefault();
-      setDropDownVisibility(!dropDownVisibility);
+
+      if (props.controlled) {
+        props.setDropDownVisibility(!props.visible);
+      } else {
+        setDropDownVisibility(!dropDownVisibility);
+      }
     }
   }, props.title, props.afterTitle && props.afterTitle(), _react.default.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
@@ -55,7 +61,7 @@ function DropDown(props) {
     points: "2,7 12,17 22,7 ",
     transform: "translate(0, 0)"
   })))), _react.default.createElement("ul", {
-    className: "dropdown-list ".concat(dropDownVisibility ? 'show' : 'd-none')
+    className: "dropdown-list ".concat(visible ? 'show' : 'd-none')
   }, _react.default.Children.map(props.children, function (child) {
     return child;
   })));

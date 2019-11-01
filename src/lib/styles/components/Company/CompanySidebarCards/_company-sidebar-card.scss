@@ -37,4 +37,11 @@
       margin: 0 auto;
     }
   }
+
+
+  @include media-breakpoint-down(md) {
+    padding: 0 0 2rem;
+    border: none;
+    border-bottom: 10px solid $gray-100;
+  }
 }

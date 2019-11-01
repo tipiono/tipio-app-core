@@ -49,7 +49,7 @@ storiesOf('UI/Components/Modal', module)
     .add('Modal Spinner', () =>
         <>
             <div className="col-3 m-3">
-                <ModalSpinner />
+                <ModalSpinner title="Loading..." />
             </div>
         </>
     )
