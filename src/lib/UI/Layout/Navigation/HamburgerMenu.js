@@ -18,7 +18,7 @@ function HamburgerMenu(props) {
                     <span>
                     <a href="#"
                     className={cx('hamburger-button', {'show': menuVisible})}
-                    onClick={toggleMenu}>Menu</a>
+                    onClick={(e) => { e.preventDefault(); toggleMenu(); }}>Menu</a>
                     </span>
                 {menuVisible &&
                 <div className="menu-content show">

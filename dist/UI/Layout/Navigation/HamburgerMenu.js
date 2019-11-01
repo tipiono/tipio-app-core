@@ -30,7 +30,10 @@ function HamburgerMenu(props) {
     className: (0, _classnames.default)('hamburger-button', {
       'show': menuVisible
     }),
-    onClick: toggleMenu
+    onClick: function onClick(e) {
+      e.preventDefault();
+      toggleMenu();
+    }
   }, "Menu")), menuVisible && _react.default.createElement("div", {
     className: "menu-content show"
   }, _react.default.createElement("ul", {
