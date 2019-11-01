@@ -6,7 +6,7 @@ import HamburgerMenu from './HamburgerMenu';
 import SearchInput from "./SearchInput";
 import FilterIcon from "../../Icons/FilterIcon";
 
-function Navigation({children, filterOnClick, ...props}) {
+function Navigation({ children, filterOnClick, ...props }) {
     return (
         <>
             <nav className="navigation">

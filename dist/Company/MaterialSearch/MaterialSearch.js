@@ -27,9 +27,11 @@ var MaterialSearch = function MaterialSearch(_ref) {
     className: "materialSearch--input",
     type: "text",
     placeholder: "S\xF8k navn, poststed",
-    onKeyDown: function onKeyDown(e) {
+    onKeyUp: function onKeyUp(e) {
       if (e.key === 'Enter') {
+        // alert("enter")
         e.preventDefault();
+        e.stopPropagation();
         onSubmit(e.target.value);
       }
     },
