@@ -1,38 +1,38 @@
-.tipio-gallery {
-    .carousel {
-        .control-dots {
-            position: unset;
-            margin: 4px 0 20px 0;
-
-            .dot {
-                background: $gray-700;
-                box-shadow: none;
-                margin: 0 5px;
-                width: 7px;
-                height: 7px;
-            }
-        }
-    }
-
-    @include media-breakpoint-down(md) {
-        .carousel {
-            .control-dots {
-                display: block;
-            }
-            .thumbs-wrapper, .control-arrow {
-                display: none;
-            }
-        }
-    }
-
-    @include media-breakpoint-up(lg) {
-        .carousel {
-            .control-dots {
-                display: none;
-            }
-            .thumbs-wrapper, .control-arrow {
-                display: block;
-            }
-        }
-    }
-}
+//.tipio-gallery {
+//    .carousel {
+//        .control-dots {
+//            position: unset;
+//            margin: 4px 0 20px 0;
+//
+//            .dot {
+//                background: $gray-700;
+//                box-shadow: none;
+//                margin: 0 5px;
+//                width: 7px;
+//                height: 7px;
+//            }
+//        }
+//    }
+//
+//    @include media-breakpoint-down(md) {
+//        .carousel {
+//            .control-dots {
+//                display: block;
+//            }
+//            .thumbs-wrapper, .control-arrow {
+//                display: none;
+//            }
+//        }
+//    }
+//
+//    @include media-breakpoint-up(lg) {
+//        .carousel {
+//            .control-dots {
+//                display: none;
+//            }
+//            .thumbs-wrapper, .control-arrow {
+//                display: block;
+//            }
+//        }
+//    }
+//}

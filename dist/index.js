@@ -45,6 +45,18 @@ Object.defineProperty(exports, "LinkButton", {
     return _LinkButton.default;
   }
 });
+Object.defineProperty(exports, "AddCategoryButton", {
+  enumerable: true,
+  get: function get() {
+    return _AddCategoryButton.default;
+  }
+});
+Object.defineProperty(exports, "SelectedCategoryButton", {
+  enumerable: true,
+  get: function get() {
+    return _SelectedCategoryButton.default;
+  }
+});
 Object.defineProperty(exports, "Modal", {
   enumerable: true,
   get: function get() {
@@ -183,6 +195,120 @@ Object.defineProperty(exports, "Avatar", {
     return _Avatar.default;
   }
 });
+Object.defineProperty(exports, "SubNav", {
+  enumerable: true,
+  get: function get() {
+    return _SubNav.default;
+  }
+});
+Object.defineProperty(exports, "DropDown", {
+  enumerable: true,
+  get: function get() {
+    return _DropDown.DropDown;
+  }
+});
+Object.defineProperty(exports, "DropDownItem", {
+  enumerable: true,
+  get: function get() {
+    return _DropDown.DropDownItem;
+  }
+});
+Object.defineProperty(exports, "FromToInput", {
+  enumerable: true,
+  get: function get() {
+    return _FromToInput.default;
+  }
+});
+Object.defineProperty(exports, "IconButton", {
+  enumerable: true,
+  get: function get() {
+    return _IconButton.default;
+  }
+});
+Object.defineProperty(exports, "ButtonXL", {
+  enumerable: true,
+  get: function get() {
+    return _ButtonXL.default;
+  }
+});
+Object.defineProperty(exports, "ShowMoreText", {
+  enumerable: true,
+  get: function get() {
+    return _ShowMoreText.default;
+  }
+});
+Object.defineProperty(exports, "PriceInput", {
+  enumerable: true,
+  get: function get() {
+    return _PriceInput.default;
+  }
+});
+Object.defineProperty(exports, "ContentSpinner", {
+  enumerable: true,
+  get: function get() {
+    return _ContentSpinner.default;
+  }
+});
+Object.defineProperty(exports, "Table", {
+  enumerable: true,
+  get: function get() {
+    return _Table.default;
+  }
+});
+Object.defineProperty(exports, "PublishedBy", {
+  enumerable: true,
+  get: function get() {
+    return _PublishedBy.default;
+  }
+});
+Object.defineProperty(exports, "SelectImages", {
+  enumerable: true,
+  get: function get() {
+    return _SelectImages.default;
+  }
+});
+Object.defineProperty(exports, "ErrorMessage", {
+  enumerable: true,
+  get: function get() {
+    return _ErrorMessage.default;
+  }
+});
+Object.defineProperty(exports, "CircleChart", {
+  enumerable: true,
+  get: function get() {
+    return _CircleChart.default;
+  }
+});
+Object.defineProperty(exports, "SearchInput", {
+  enumerable: true,
+  get: function get() {
+    return _SearchInput.default;
+  }
+});
+Object.defineProperty(exports, "Overlay", {
+  enumerable: true,
+  get: function get() {
+    return _Overlay.default;
+  }
+});
+Object.defineProperty(exports, "Alert", {
+  enumerable: true,
+  get: function get() {
+    return _Alert.default;
+  }
+});
+Object.defineProperty(exports, "Pagination", {
+  enumerable: true,
+  get: function get() {
+    return _Pagination.default;
+  }
+});
+Object.defineProperty(exports, "RoundedButton", {
+  enumerable: true,
+  get: function get() {
+    return _RoundedButton.default;
+  }
+});
 Object.defineProperty(exports, "TipioWithOffer", {
   enumerable: true,
   get: function get() {
@@ -297,6 +423,12 @@ Object.defineProperty(exports, "Categories", {
     return _Categories.default;
   }
 });
+Object.defineProperty(exports, "CustomerCategories", {
+  enumerable: true,
+  get: function get() {
+    return _Categories2.default;
+  }
+});
 Object.defineProperty(exports, "TipioSidebarVotingCard", {
   enumerable: true,
   get: function get() {
@@ -319,6 +451,18 @@ Object.defineProperty(exports, "CategoriesForm", {
   enumerable: true,
   get: function get() {
     return _CategoriesForm.default;
+  }
+});
+Object.defineProperty(exports, "NoSearchResult", {
+  enumerable: true,
+  get: function get() {
+    return _NoSearchResult.default;
+  }
+});
+Object.defineProperty(exports, "TipioFeedWithWrapper", {
+  enumerable: true,
+  get: function get() {
+    return _TipioFeedWithWrapper.default;
   }
 });
 Object.defineProperty(exports, "DeleteAccount", {
@@ -375,6 +519,12 @@ Object.defineProperty(exports, "OrderItemCard", {
     return _OrderItemCard.default;
   }
 });
+Object.defineProperty(exports, "OrderFilters", {
+  enumerable: true,
+  get: function get() {
+    return _OrderFilters.default;
+  }
+});
 Object.defineProperty(exports, "BaseCompanyCard", {
   enumerable: true,
   get: function get() {
@@ -387,10 +537,124 @@ Object.defineProperty(exports, "AddSaleCompanyCard", {
     return _AddSaleCompanyCard.default;
   }
 });
+Object.defineProperty(exports, "CustomerListCompanyCard", {
+  enumerable: true,
+  get: function get() {
+    return _CustomerListCompanyCard.default;
+  }
+});
+Object.defineProperty(exports, "GiveOfferCompanyCard", {
+  enumerable: true,
+  get: function get() {
+    return _GiveOfferCompanyCard.default;
+  }
+});
+Object.defineProperty(exports, "TipioWithOfferCompanyCard", {
+  enumerable: true,
+  get: function get() {
+    return _TipioWithOfferCompanyCard.default;
+  }
+});
+Object.defineProperty(exports, "ChooseAddSaleCompanyCard", {
+  enumerable: true,
+  get: function get() {
+    return _ChooseAddSaleCompanyCard.default;
+  }
+});
+Object.defineProperty(exports, "CompanySidebarBaseCard", {
+  enumerable: true,
+  get: function get() {
+    return _CompanySidebarBaseCard.default;
+  }
+});
+Object.defineProperty(exports, "CompanyAddBidCard", {
+  enumerable: true,
+  get: function get() {
+    return _CompanyAddBidCard.default;
+  }
+});
+Object.defineProperty(exports, "AddMoreSaleCompanyCard", {
+  enumerable: true,
+  get: function get() {
+    return _AddMoreSaleCompanyCard.default;
+  }
+});
+Object.defineProperty(exports, "AddMoreSaleEndedCompanyCard", {
+  enumerable: true,
+  get: function get() {
+    return _AddMoreSaleEndedCompanyCard.default;
+  }
+});
+Object.defineProperty(exports, "AddSaleSidebarCard", {
+  enumerable: true,
+  get: function get() {
+    return _AddSaleSidebarCard.default;
+  }
+});
+Object.defineProperty(exports, "MaterialSearch", {
+  enumerable: true,
+  get: function get() {
+    return _MaterialSearch.default;
+  }
+});
 Object.defineProperty(exports, "PublicLayout", {
   enumerable: true,
   get: function get() {
     return _index.default;
+  }
+});
+Object.defineProperty(exports, "InteriorIcon", {
+  enumerable: true,
+  get: function get() {
+    return _InteriorIcon.default;
+  }
+});
+Object.defineProperty(exports, "ArrowDownIcon", {
+  enumerable: true,
+  get: function get() {
+    return _ArrowDownIcon.default;
+  }
+});
+Object.defineProperty(exports, "RemoveImageIcon", {
+  enumerable: true,
+  get: function get() {
+    return _RemoveImageIcon.default;
+  }
+});
+Object.defineProperty(exports, "ExportIcon", {
+  enumerable: true,
+  get: function get() {
+    return _ExportIcon.default;
+  }
+});
+Object.defineProperty(exports, "SearchIcon", {
+  enumerable: true,
+  get: function get() {
+    return _SearchIcon.default;
+  }
+});
+Object.defineProperty(exports, "CloseIcon", {
+  enumerable: true,
+  get: function get() {
+    return _CloseIcon.default;
+  }
+});
+Object.defineProperty(exports, "FilterIcon", {
+  enumerable: true,
+  get: function get() {
+    return _FilterIcon.default;
+  }
+});
+Object.defineProperty(exports, "FilterIconCyan", {
+  enumerable: true,
+  get: function get() {
+    return _FilterIconCyan.default;
+  }
+});
+Object.defineProperty(exports, "_util_CalculateDiscountPercentage", {
+  enumerable: true,
+  get: function get() {
+    return _calculateDiscountPercentage.default;
   }
 });
 exports.CountdownType = void 0;
@@ -408,6 +672,10 @@ var _GrayButton = _interopRequireDefault(require("./UI/Buttons/GrayButton"));
 var _GrayOutlineButton = _interopRequireDefault(require("./UI/Buttons/GrayOutlineButton"));
 
 var _LinkButton = _interopRequireDefault(require("./UI/Buttons/LinkButton"));
+
+var _AddCategoryButton = _interopRequireDefault(require("./UI/Buttons/AddCategoryButton"));
+
+var _SelectedCategoryButton = _interopRequireDefault(require("./UI/Buttons/SelectedCategoryButton"));
 
 var _Modal = require("./UI/Modal/Modal");
 
@@ -457,6 +725,42 @@ var _PillTabs = _interopRequireDefault(require("./UI/PillTabs/PillTabs"));
 
 var _Avatar = _interopRequireDefault(require("./UI/Avatar/Avatar"));
 
+var _SubNav = _interopRequireDefault(require("./UI/SubNav/SubNav"));
+
+var _DropDown = require("./UI/DdropDown/DropDown");
+
+var _FromToInput = _interopRequireDefault(require("./UI/Forms/FromToInput"));
+
+var _IconButton = _interopRequireDefault(require("./UI/Buttons/IconButton"));
+
+var _ButtonXL = _interopRequireDefault(require("./UI/Buttons/ButtonXL"));
+
+var _ShowMoreText = _interopRequireDefault(require("./UI/Text/ShowMoreText"));
+
+var _PriceInput = _interopRequireDefault(require("./UI/Forms/PriceInput"));
+
+var _ContentSpinner = _interopRequireDefault(require("./UI/Spinner/ContentSpinner"));
+
+var _Table = _interopRequireDefault(require("./UI/Table"));
+
+var _PublishedBy = _interopRequireDefault(require("./UI/PublishedBy/PublishedBy"));
+
+var _SelectImages = _interopRequireDefault(require("./UI/SelectImages"));
+
+var _ErrorMessage = _interopRequireDefault(require("./UI/ErrorMessage/ErrorMessage"));
+
+var _CircleChart = _interopRequireDefault(require("./UI/CircleChart/CircleChart"));
+
+var _SearchInput = _interopRequireDefault(require("./UI/Layout/Navigation/SearchInput"));
+
+var _Overlay = _interopRequireDefault(require("./UI/Overlay/Overlay"));
+
+var _Alert = _interopRequireDefault(require("./UI/Alert/Alert"));
+
+var _Pagination = _interopRequireDefault(require("./UI/Pagination/Pagination"));
+
+var _RoundedButton = _interopRequireDefault(require("./UI/Buttons/RoundedButton"));
+
 var _TipioWithOffer = _interopRequireDefault(require("./Customer/Modals/TipioWithOffer/TipioWithOffer"));
 
 var _TipioConfirmation = _interopRequireDefault(require("./Customer/Modals/TipioConfirmation/TipioConfirmation"));
@@ -475,7 +779,7 @@ var _OnboardingMovie = _interopRequireDefault(require("./Customer/Modals/Onboard
 
 var _ReadyToBid = _interopRequireDefault(require("./Customer/Modals/ReadyToBid/ReadyToBid"));
 
-var _ChooseCategory = _interopRequireDefault(require("./Customer/Modals/ChooseCategory/ChooseCategory"));
+var _ChooseCategory = _interopRequireDefault(require("./Company/Modals/ChooseCategory/ChooseCategory"));
 
 var _VotingCard = _interopRequireDefault(require("./Customer/Cards/VotingCard/VotingCard"));
 
@@ -493,15 +797,21 @@ var _SaleCardAddToCartButton = _interopRequireDefault(require("./Customer/Cards/
 
 var _Onboarding = _interopRequireDefault(require("./Customer/Modals/Onboarding/Onboarding"));
 
-var _Categories = _interopRequireDefault(require("./Customer/Modals/ChooseCategory/Categories"));
+var _Categories = _interopRequireDefault(require("./Company/Modals/ChooseCategory/Categories"));
 
-var _VotingCard2 = _interopRequireDefault(require("./Customer/TipioSidebarCards/VotingCard"));
+var _Categories2 = _interopRequireDefault(require("./Customer/Modals/ChooseCategory/Categories"));
 
-var _BindingCard = _interopRequireDefault(require("./Customer/TipioSidebarCards/BindingCard"));
+var _VotingCard2 = _interopRequireDefault(require("./Customer/CustomerSidebarCards/VotingCard"));
+
+var _BindingCard = _interopRequireDefault(require("./Customer/CustomerSidebarCards/BindingCard"));
 
 var _ImageUploader = _interopRequireDefault(require("./Customer/ImageUploader/ImageUploader"));
 
-var _CategoriesForm = _interopRequireDefault(require("./Customer/Modals/ChooseCategory/CategoriesForm"));
+var _CategoriesForm = _interopRequireDefault(require("./Company/Modals/ChooseCategory/CategoriesForm"));
+
+var _NoSearchResult = _interopRequireDefault(require("./Customer/Search/NoSearchResult"));
+
+var _TipioFeedWithWrapper = _interopRequireDefault(require("./Customer/TipioFeed/TipioFeedWithWrapper"));
 
 var _DeleteAccount = _interopRequireDefault(require("./Company/Modals/DeleteAccount/DeleteAccount"));
 
@@ -519,13 +829,53 @@ var _ChangeCover = _interopRequireDefault(require("./Company/CoverImage/ChangeCo
 
 var _Cover = _interopRequireDefault(require("./Company/CoverImage/Cover"));
 
-var _OrderItemCard = _interopRequireDefault(require("./Company/Cards/OrderItemCard"));
+var _OrderItemCard = _interopRequireDefault(require("./Company/Cards/OrderItemCard/OrderItemCard"));
+
+var _OrderFilters = _interopRequireDefault(require("./Company/Cards/OrderItemCard/OrderFilters"));
 
 var _BaseCompanyCard = _interopRequireDefault(require("./Company/Cards/BaseCompanyCard/BaseCompanyCard"));
 
 var _AddSaleCompanyCard = _interopRequireDefault(require("./Company/Cards/AddSaleCompanyCard/AddSaleCompanyCard"));
 
+var _CustomerListCompanyCard = _interopRequireDefault(require("./Company/Cards/CustomerListCompanyCard/CustomerListCompanyCard"));
+
+var _GiveOfferCompanyCard = _interopRequireDefault(require("./Company/Cards/GiveOfferCompanyCard/GiveOfferCompanyCard"));
+
+var _TipioWithOfferCompanyCard = _interopRequireDefault(require("./Company/Cards/TipioWithOfferCompanyCard/TipioWithOfferCompanyCard"));
+
+var _ChooseAddSaleCompanyCard = _interopRequireDefault(require("./Company/Cards/ChooseAddSaleCompanyCard/ChooseAddSaleCompanyCard"));
+
+var _CompanySidebarBaseCard = _interopRequireDefault(require("./Company/CompanySidebarCards/CompanySidebarBaseCard"));
+
+var _CompanyAddBidCard = _interopRequireDefault(require("./Company/CompanySidebarCards/CompanyAddBidCard"));
+
+var _AddMoreSaleCompanyCard = _interopRequireDefault(require("./Company/Cards/AddMoreSaleCompanyCard/AddMoreSaleCompanyCard"));
+
+var _AddMoreSaleEndedCompanyCard = _interopRequireDefault(require("./Company/Cards/AddMoreSaleEndedCompanyCard/AddMoreSaleEndedCompanyCard"));
+
+var _AddSaleSidebarCard = _interopRequireDefault(require("./Company/CompanySidebarCards/AddSaleSidebarCard"));
+
+var _MaterialSearch = _interopRequireDefault(require("./Company/MaterialSearch/MaterialSearch"));
+
 var _index = _interopRequireDefault(require("./UI/Layout/Public/index"));
+
+var _InteriorIcon = _interopRequireDefault(require("./UI/Icons/InteriorIcon"));
+
+var _ArrowDownIcon = _interopRequireDefault(require("./UI/Icons/ArrowDownIcon"));
+
+var _RemoveImageIcon = _interopRequireDefault(require("./UI/Icons/RemoveImageIcon"));
+
+var _ExportIcon = _interopRequireDefault(require("./UI/Icons/ExportIcon"));
+
+var _SearchIcon = _interopRequireDefault(require("./UI/Icons/SearchIcon"));
+
+var _CloseIcon = _interopRequireDefault(require("./UI/Icons/CloseIcon"));
+
+var _FilterIcon = _interopRequireDefault(require("./UI/Icons/FilterIcon"));
+
+var _FilterIconCyan = _interopRequireDefault(require("./UI/Icons/FilterIconCyan"));
+
+var _calculateDiscountPercentage = _interopRequireDefault(require("./Util/calculateDiscountPercentage"));
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
 

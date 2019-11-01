@@ -31,13 +31,3 @@ ul, li {
 .fade {
     background-color: rgba(0, 0, 0, 0.30);
 }
-
-.icon-button {
-    color: $primary;
-    display: block;
-
-    &:hover, &:focus {
-        text-decoration: none;
-        color: $secondary;
-    }
-}

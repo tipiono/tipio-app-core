@@ -28,7 +28,7 @@
     'components/add-tipio',
     'components/custom-accordion',
     'components/upload-viewer',
-    'components/_carouse.scss',
+    'components/UI/image-slider',
     'components/main-categories',
     'components/Customer/vertical-timeline',
     'components/tipio-status',
@@ -41,6 +41,7 @@
     'components/tipio-view-card',
 
     // 3.1 UI Components
+    'components/UI/custom-material-select',
     'components/UI/custom-modal',
     'components/UI/success-modal',
     'components/UI/modal-spinner',
@@ -49,7 +50,6 @@
     'components/UI/timetag',
     'components/UI/toggle-switch',
     'components/UI/radio-buttons',
-    'components/UI/custom-material-select',
     'components/UI/checkboxes',
     'components/UI/pagination',
     'components/UI/material-inputs',
@@ -58,6 +58,22 @@
     'components/UI/tabs',
     'components/UI/pill-tabs',
     'components/UI/avatar',
+    'components/UI/sub-nav',
+    'components/UI/custom-btn-xl',
+    'components/placeholder-content',
+    'components/UI/table-borderless',
+    'components/UI/published-by',
+    'components/UI/product-details',
+    'components/UI/icon-btn',
+    'components/UI/error-message',
+    'components/UI/select-images',
+    'components/UI/circle',
+    'components/UI/selected-category-button',
+    'components/UI/add-category-button',
+    'components/UI/search-input',
+    'components/UI/overlay',
+    'components/UI/custom-alert',
+
 
     // 3.2 Company Components
     'components/Company/delete-account',
@@ -69,7 +85,15 @@
     'components/Company/change-cover',
     'components/Company/cover',
     'components/Company/Cards/order-item-card',
-'components/Company/Cards/base-company-card',
+    'components/Company/Cards/base-company-card',
+    'components/Company/Cards/choose-add-sale-card',
+    'components/Company/CompanySidebarCards/company-sidebar-card',
+    'components/Company/CompanySidebarCards/company-addBidCard',
+    'components/Company/create-offer-form',
+    'components/Company/Cards/add-more-sale-card',
+    'components/Company/Cards/add-more-sale-ended-card',
+    'components/Company/material-search',
+    'components/Company/CompanySidebarCards/addSale-sidebar-card',
 
     // 3.3 Customer Components
     'components/Customer/sales-progressbar',
@@ -82,7 +106,7 @@
     'components/Customer/Cards/voting-card',
     'components/Customer/Cards/bidding-card',
     'components/Customer/Cards/sale-card',
-    'components/Customer/TipioSidebarCards/sidebar-card',
+    'components/Customer/CustomerSidebarCards/customer-sidebar-card',
     'components/Customer/image-uploader',
     'components/Customer/horizontal-timeline';
 
@@ -95,7 +119,6 @@
 // 5. Page-specific styles
 @import
     'pages/login',
-    'pages/select-images',
     'pages/searchresult',
     'pages/your-tipios',
     'pages/userprofile',
@@ -104,7 +127,12 @@
     'pages/credit-cart',
     'pages/tipio-view',
     'pages/frontpage',
-    'pages/about-page';
+    'pages/parse-url',
+    'pages/about-page',
+    'pages/edit-add-sale',
+    'pages/select-image-page',
+    'pages/select-category-page',
+    'pages/company-settigns';
 
 
 // 6. Themes

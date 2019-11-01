@@ -1,6 +1,5 @@
 import React from "react";
 import {Modal} from '../../../UI/Modal/Modal'
-// import {date} from "@storybook/addon-knobs";
 import {CountdownType, PinkyCountdownSM} from "../../../index";
 import SecondaryButton from "../../../UI/Buttons/SecondaryButton";
 
@@ -34,7 +33,7 @@ function ReadyToBid({joined, defaultValue}) {
                     <h3 className="readyToBid--title">Dere var {joined} som kjøpte! Nå kan <br/>leverandørene by på orderen.</h3>
 
                     <div className="mb-5">
-                        <PinkyCountdownSM expires_in={date(defaultValue)} type={CountdownType.GREEN}/>
+                        {/*<PinkyCountdownSM expires_in={date(defaultValue)} type={CountdownType.GREEN}/>*/}
                     </div>
 
                     <div className="readyToBid--action">

@@ -7,7 +7,7 @@ exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
-var _CategoriesForm = _interopRequireDefault(require("./CategoriesForm"));
+var _CategoriesForm = _interopRequireDefault(require("../../../Company/Modals/ChooseCategory/CategoriesForm"));
 
 var _Modal = require("../../../UI/Modal/Modal");
 

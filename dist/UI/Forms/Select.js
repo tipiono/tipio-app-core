@@ -26,15 +26,21 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 function Select(_ref) {
   var placeholder = _ref.placeholder,
       options = _ref.options,
-      label = _ref.label;
+      label = _ref.label,
+      onChange = _ref.onChange,
+      defaultValue = _ref.defaultValue;
 
-  var _useState = (0, _react.useState)(false),
+  var _useState = (0, _react.useState)({
+    value: defaultValue,
+    label: defaultValue
+  } || false),
       _useState2 = _slicedToArray(_useState, 2),
       value = _useState2[0],
       setValue = _useState2[1];
 
   var _onChange = function _onChange(v) {
     setValue(v);
+    onChange(v);
   };
 
   return _react.default.createElement("div", {

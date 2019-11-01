@@ -1,22 +1,36 @@
 import React from 'react';
 import Logo from './Logo';
 
-function Navigation({ children }) {
+import BusinessPrivateNavigationItems from './BusinessPrivateNavigationItems';
+import HamburgerMenu from './HamburgerMenu';
+import SearchInput from "./SearchInput";
+import FilterIcon from "../../Icons/FilterIcon";
+
+function Navigation({ children, filterOnClick, ...props }) {
     return (
         <>
             <nav className="navigation">
                 <div className="container">
-                    <div className="nav-wrapper"><a className="logo mr-5" href="/">
-                        <Logo />
+                    <div className="nav-wrapper">
+                        <a className="logo mr-5" href="/">
+                            <Logo/>
                         </a>
-                        {/*Visible only on lg*/}
-                        <ul className="nav-list d-none d-md-block">
-                            <li className="nav-list-item">
-                                <a className="nav-list-link" href="#">Privat</a>
+                        <BusinessPrivateNavigationItems {...props} />
+
+                        <ul className="nav-list ml-auto">
+
+                            <li className="nav-list-item d-flex align-items-center">
+                                <SearchInput {...props}/>
                             </li>
+
                             <li className="nav-list-item">
-                                <a className="nav-list-link active" href="#">Bedrift</a>
+                                <a href="" onClick={filterOnClick}>
+                                    <FilterIcon/>
+                                    <span className="text-white">Filters</span>
+                                </a>
                             </li>
+
+                            <HamburgerMenu {...props} />
                         </ul>
                     </div>
                 </div>

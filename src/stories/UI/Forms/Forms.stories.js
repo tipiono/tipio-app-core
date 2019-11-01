@@ -1,6 +1,6 @@
 import React from 'react';
 import {storiesOf} from '@storybook/react';
-import {Input, Textarea, Select, Checkbox, RadioButton, ToggleSwitch} from '../../../lib'
+import {Input, Textarea, Select, Checkbox, RadioButton, ToggleSwitch, FromToInput, PriceInput } from '../../../lib'
 
 storiesOf('UI/Forms', module)
     .add('Input', () =>
@@ -27,7 +27,7 @@ storiesOf('UI/Forms', module)
         <div className="col-3 m-3">
             <Select
                 label={"Select"}
-                options={['Miremengjesi', 'Yo all']}
+                options={['Miremengjesi', 'Yo all', 'Hello world']}
             />
         </div>
     )
@@ -70,24 +70,42 @@ storiesOf('UI/Forms/Radios', module)
     .add('Checked', () =>
         <>
             <div className="col-3 m-3">
-                <RadioButton />
+                <RadioButton text={"Option 1"} />
             </div>
         </>
     )
     .add('Unchecked', () =>
         <>
             <div className="col-3 m-3">
-                <RadioButton />
+                <RadioButton text={"Option 1"} />
             </div>
         </>
     )
     .add('Disabled', () =>
         <>
             <div className="col-3 m-3">
-                <RadioButton />
+                <RadioButton text={"Option 1"} />
             </div>
         </>
     )
 
 
+    storiesOf('UI/Forms/FromToInput', module)
 
+    .add('Default', () =>
+        <>
+            <div className="col-3 m-5">
+                <FromToInput from={"1"} label={"Antall kjøpere"}/>
+            </div>
+        </>
+    )
+
+    storiesOf('UI/Forms/PriceInput', module)
+
+        .add('Default', () =>
+            <>
+                <div className="col-3 m-5">
+                    <PriceInput placeholder={"50"} label={"Ditt tilbud"}/>
+                </div>
+            </>
+        )

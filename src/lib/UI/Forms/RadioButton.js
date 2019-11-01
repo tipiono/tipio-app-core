@@ -1,14 +1,11 @@
 import React from 'react';
 
-function RadioButton({}) {
-    return (
-        <>
-            <div className="md-radio">
-                <input id="1" type="radio" name="g" checked/>
-                <label htmlFor="1">Option 1</label>
-            </div>
-        </>
-    )
-}
-
-export default RadioButton;
+export default React.forwardRef(({id, text, name, errors, ...props}, ref) => (
+    <>
+        <div className="md-radio">
+            <input id={id} type="radio" name={name} {...props} ref={ref}/>
+            <label htmlFor={id}>{text}</label>
+        </div>
+        {errors && errors[name] && errors[name].message}
+    </>
+));

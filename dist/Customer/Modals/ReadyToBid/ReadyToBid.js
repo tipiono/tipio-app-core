@@ -15,7 +15,6 @@ var _SecondaryButton = _interopRequireDefault(require("../../../UI/Buttons/Secon
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// import {date} from "@storybook/addon-knobs";
 function ReadyToBid(_ref) {
   var joined = _ref.joined,
       defaultValue = _ref.defaultValue;
@@ -45,10 +44,7 @@ function ReadyToBid(_ref) {
     className: "readyToBid--title"
   }, "Dere var ", joined, " som kj\xF8pte! N\xE5 kan ", _react.default.createElement("br", null), "leverand\xF8rene\u2028by p\xE5 orderen."), _react.default.createElement("div", {
     className: "mb-5"
-  }, _react.default.createElement(_index.PinkyCountdownSM, {
-    expires_in: date(defaultValue),
-    type: _index.CountdownType.GREEN
-  })), _react.default.createElement("div", {
+  }), _react.default.createElement("div", {
     className: "readyToBid--action"
   }, _react.default.createElement(_SecondaryButton.default, {
     text: "Sjekk status"
