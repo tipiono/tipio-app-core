@@ -9,6 +9,8 @@ var _react = _interopRequireDefault(require("react"));
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
+var _Overlay = _interopRequireDefault(require("../../Overlay/Overlay"));
+
 var _DropDown = require("../../DdropDown/DropDown");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -17,7 +19,11 @@ function HamburgerMenu(props) {
   var menuVisible = props.menuVisible,
       toggleMenu = props.toggleMenu,
       items = props.items;
-  return _react.default.createElement("li", {
+  return _react.default.createElement(_react.default.Fragment, null, menuVisible && _react.default.createElement(_Overlay.default, {
+    onClick: toggleMenu,
+    opacity: 0.5,
+    top: "88px"
+  }), _react.default.createElement("li", {
     className: "nav-list-item"
   }, _react.default.createElement("span", null, _react.default.createElement("a", {
     href: "#",
@@ -61,7 +67,7 @@ function HamburgerMenu(props) {
         }
       }, x.name));
     }
-  }))));
+  })))));
 }
 
 var _default = HamburgerMenu;
