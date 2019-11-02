@@ -169,8 +169,8 @@ function CategoriesForm(_ref) {
   }))), _react.default.createElement("div", {
     className: "choose-category-footer"
   }, _react.default.createElement(_SecondaryButton.default, {
-    className: "btn btn-lg btn-secondary w-50",
-    text: buttonTitle || 'Legg til kategori',
+    className: "choose-category-footer--btn btn btn-lg btn-secondary",
+    text: buttonTitle || 'Lagre',
     disabled: controlDisabledButton && disabledButton || !controlDisabledButton && !selectedOptionId,
     onClick: chooseCategoryOnClick,
     loading: isLoading
