@@ -225,6 +225,7 @@
 .company-main-categories {
   .category-item {
     border-bottom: 1px solid $gray-200;
+    width: 80%;
 
     .category-link {
       display: flex;
@@ -287,7 +288,7 @@
     }
 
     .sub-categories {
-      margin-left: 46px;
+      margin-left: 90px;
       padding-bottom: 24px;
 
       .sub-category-item {
@@ -312,6 +313,12 @@
           color: $gray-800;
         }
       }
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    .category-item {
+      width: 100%;
     }
   }
 }
