@@ -11,6 +11,13 @@
   &__body {
     background-color: $gray-100;
     padding-bottom: 8rem;
-    height: 100vh;
+    //height: 100vh;
+  }
+
+  @include media-breakpoint-down(sm) {
+    &--title {
+      font-size: 1.5rem;
+      font-family: 'Riposte-Medium', sans-serif;
+    }
   }
 }

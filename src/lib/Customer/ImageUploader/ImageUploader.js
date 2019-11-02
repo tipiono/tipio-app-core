@@ -140,8 +140,7 @@ function ImageUploader({ setFieldValue, name, errors, displayErrors }) {
                         <div {...getRootProps({className: 'dropzone'})}>
                             <input {...getInputProps()} />
 
-                            <div className="mt-3">
-
+                            <div className="mt-3 mb-5">
                                 {files.length > 0 &&
                                 <IconButton text="Last opp produktbilder" onClick={(e) => {
                                     e.preventDefault();
@@ -152,7 +151,7 @@ function ImageUploader({ setFieldValue, name, errors, displayErrors }) {
                     </section>
                 )}
             </Dropzone>
-            {displayErrors && errors && errors[name] && 
+            {displayErrors && errors && errors[name] &&
                 <ErrorMessage
                     content={errors[name].message}
                     color={"bg-red"}

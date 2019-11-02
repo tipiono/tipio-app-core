@@ -19,7 +19,11 @@ const CategoryItem = (props) => (
 
         )}
         <a className={'category-link '} href="#" onClick={props.onClick}>
-            {props.item.file_store &&  <div className="category-left-icon"><InteriorIcon/></div>}
+            {props.item.file_store &&
+            <div className="category-left-icon">
+                <InteriorIcon/>
+            </div>
+            }
             <span>{props.item.title}</span>
 
             <div className="category-right-icon">
