@@ -1,4 +1,12 @@
 .customer-main-categories {
+  .category-item {
+    width: 90%;
+
+    .category-link {
+      width: 100%;
+    }
+  }
+
   .category-item.dropdown {
     padding-top: 24px;
     border-bottom: 1px solid $gray-200;
@@ -218,6 +226,11 @@
       }
     }
 
+  }
+  @include media-breakpoint-down(sm) {
+    .category-item {
+      width: 100%;
+    }
   }
 }
 
