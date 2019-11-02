@@ -8,7 +8,7 @@ function ImageSlider({images, showThumbs,}) {
         <div className="imageSlider">
 
             <Carousel
-                showIndicators={false}
+                showIndicators={true}
                 showArrows={false}
                 showStatus={false}
                 showThumbs={showThumbs}

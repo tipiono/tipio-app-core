@@ -82,4 +82,48 @@
       width: 48%;
     }
   }
+
+  @include media-breakpoint-down(sm) {
+    padding-top: 1rem;
+
+    /// Product title and SKU number
+    &__content {
+      &--title {
+        font-size: 1.125rem;
+      }
+
+      &--sku {
+        font-size: .875rem;
+      }
+    }
+
+    /// Market price displayed
+    &__price {
+      &--cost {
+        &--amount {
+          font-size: 1.5rem;
+        }
+      }
+    }
+
+    /// Show offer as percentage or NOK
+    &__showAs {
+      &--title {
+        font-size: 1rem;
+      }
+    }
+    /// Post or Edit
+    &__CTA {
+      flex-direction: column;
+
+      &--post {
+        width: 100%;
+        margin-bottom: 1.4rem;
+      }
+
+      &--edit {
+        width: 100%;
+      }
+    }
+  }
 }

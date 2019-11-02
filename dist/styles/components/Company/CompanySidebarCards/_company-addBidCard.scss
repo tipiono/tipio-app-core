@@ -47,4 +47,20 @@
     width: 200px;
     margin: 0 auto;
   }
+
+  @include media-breakpoint-down(md) {
+    &--interested {
+      font-size: 1rem;
+    }
+
+    &__price {
+      padding: 1rem 0 0;
+
+      &--cost {
+        &--label {
+          font-size: .75rem;
+        }
+      }
+    }
+  }
 }

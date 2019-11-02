@@ -35,4 +35,16 @@
     margin-bottom: 0;
     color: $gray-500;
   }
+
+  @include media-breakpoint-down(md) {
+    &__user {
+      &--avatar {
+        width: 30px;
+        height: 30px;
+      }
+      &--name {
+        font-size: 0.875rem;
+      }
+    }
+  }
 }

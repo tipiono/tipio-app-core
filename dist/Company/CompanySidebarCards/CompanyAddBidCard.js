@@ -29,7 +29,7 @@ var CompanyAddBidCard = function CompanyAddBidCard(props) {
   }, "Markedspris"), _react.default.createElement("h6", {
     className: "companyAddBidCard__price--cost--amount"
   }, tipio.market_price, " Kr")), _react.default.createElement("span", {
-    className: "border-right"
+    className: "border-right d-none d-md-block"
   }), _react.default.createElement("div", {
     className: "companyAddBidCard__price--sale"
   }, _react.default.createElement("p", {
