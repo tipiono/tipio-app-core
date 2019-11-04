@@ -50,7 +50,9 @@ function CategoriesForm(_ref) {
       disabledButton = _ref.disabledButton,
       selectedMap = _ref.selectedMap,
       onComplete = _ref.onComplete,
-      isLoading = _ref.isLoading;
+      isLoading = _ref.isLoading,
+      setActiveCategory = _ref.setActiveCategory,
+      goBack = _ref.goBack;
 
   var _useState = (0, _react.useState)(0),
       _useState2 = _slicedToArray(_useState, 2),
@@ -96,17 +98,20 @@ function CategoriesForm(_ref) {
   }
 
   function navigatorOnSelect(id) {
-    setSelectedCategoryId(0);
+    setSelectedCategoryId(id);
     setSelectedOptionId(0);
-    setSelectedOption(null); // setActiveCategory(id);
+    setSelectedOption(null);
+    setActiveCategory(id);
   }
 
   function subCategoriesOnClick(item) {
-    if (item.height === 1) {// setActiveCategory(item.id);
+    if (item.height === 1) {
+      setActiveCategory(item.id);
     }
   }
 
-  function backButtonOnClick() {// goBack();
+  function backButtonOnClick() {
+    goBack();
   }
 
   return _react.default.createElement("div", {
