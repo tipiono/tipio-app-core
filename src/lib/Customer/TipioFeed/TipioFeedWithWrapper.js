@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Masonry from 'react-masonry-css'
 
 import TipioCard from './TipioCard';
-import Pagination from "./Pagination";
+import Pagination from "../../UI/Pagination/Pagination";
 
 const breakpointColumnsObj = (max = 4) => {
     return {
