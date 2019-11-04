@@ -13,7 +13,7 @@ var _reactMasonryCss = _interopRequireDefault(require("react-masonry-css"));
 
 var _TipioCard = _interopRequireDefault(require("./TipioCard"));
 
-var _Pagination = _interopRequireDefault(require("./Pagination"));
+var _Pagination = _interopRequireDefault(require("../../UI/Pagination/Pagination"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 

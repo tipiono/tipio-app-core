@@ -1,17 +1,17 @@
 .custom__modal {
-    &--close {
-        position: absolute;
-        top: 1.5rem;
-        right: 1.5rem;
-    }
+  &--close {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+  }
 
-
-    @include media-breakpoint-down(xs) {
-        &--content {
-            height: 100vh;
-        }
-        &--dialog {
-            margin: 0;
-        }
+  @include media-breakpoint-down(xs) {
+    &--content {
+      height: 100vh;
+      max-height: 100vh !important;
     }
+    &--dialog {
+      margin: 0;
+    }
+  }
 }
