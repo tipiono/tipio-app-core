@@ -89,6 +89,7 @@ import TipioFeedWithWrapper from './Customer/TipioFeed/TipioFeedWithWrapper';
 import DeleteAccount from './Company/Modals/DeleteAccount/DeleteAccount';
 import AddAdditionalSales from './Company/Modals/AddAdditionalSales/AddAdditionalSales';
 import WonBiddingRound from './Company/Modals/WonBiddingRound/WonBiddingRound';
+import AlreadyHasBid from './Company/Modals/AlreadyHasBid/AlreadyHasBid';
 import EmptyAvatar from './Company/Avatar/EmptyAvatar';
 import ChangeAvatar from './Company/Avatar/ChangeAvatar';
 import EmptyCover from './Company/CoverImage/EmptyCover';
@@ -242,5 +243,6 @@ export {
     RoundedButton,
     NoSearchResult,
     TipioFeedWithWrapper,
-    FilterIconCyan
+    FilterIconCyan,
+    AlreadyHasBid
 };
