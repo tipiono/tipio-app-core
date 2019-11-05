@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import {SuccessModal, DeleteAccount, AddAdditionalSales, WonBiddingRound} from '../../../lib/index';
+import {SuccessModal, DeleteAccount, AddAdditionalSales, WonBiddingRound, AlreadyHasBid} from '../../../lib/index';
 
 
 storiesOf('Company/Components/Modals', module)
@@ -72,6 +72,15 @@ storiesOf('Company/Components/Modals', module)
             </div>
         </>
     )
+
+    .add('Already has bid', () =>
+        <>
+            <div className="col-3 m-3">
+                <AlreadyHasBid/>
+            </div>
+        </>
+    )
+
 
 
 

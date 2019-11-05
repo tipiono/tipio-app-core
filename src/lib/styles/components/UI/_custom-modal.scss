@@ -12,6 +12,7 @@
     }
     &--dialog {
       margin: 0;
+      min-height: calc(100% - 0rem) !important;
     }
   }
 }

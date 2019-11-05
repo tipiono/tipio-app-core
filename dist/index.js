@@ -483,6 +483,12 @@ Object.defineProperty(exports, "WonBiddingRound", {
     return _WonBiddingRound.default;
   }
 });
+Object.defineProperty(exports, "AlreadyHasBid", {
+  enumerable: true,
+  get: function get() {
+    return _AlreadyHasBid.default;
+  }
+});
 Object.defineProperty(exports, "EmptyAvatar", {
   enumerable: true,
   get: function get() {
@@ -818,6 +824,8 @@ var _DeleteAccount = _interopRequireDefault(require("./Company/Modals/DeleteAcco
 var _AddAdditionalSales = _interopRequireDefault(require("./Company/Modals/AddAdditionalSales/AddAdditionalSales"));
 
 var _WonBiddingRound = _interopRequireDefault(require("./Company/Modals/WonBiddingRound/WonBiddingRound"));
+
+var _AlreadyHasBid = _interopRequireDefault(require("./Company/Modals/AlreadyHasBid/AlreadyHasBid"));
 
 var _EmptyAvatar = _interopRequireDefault(require("./Company/Avatar/EmptyAvatar"));
 
