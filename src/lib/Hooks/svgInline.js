@@ -1,5 +1,10 @@
 import React, { useEffect, useState } from 'react';
 
+const Spinner = () => (
+    <div class="spinner-grow" role="status">
+        <span class="sr-only"></span>
+    </div>
+)
 const SvgInline = props => {
     const [svg, setSvg] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
@@ -15,10 +20,14 @@ const SvgInline = props => {
     }, [props.url]);
 
     return (
-        <div 
-            className={`svgInline svgInline--${isLoaded ? 'loaded' : 'loading'} ${isErrored ? 'svgInline--errored' : ''}`}
-            dangerouslySetInnerHTML={{ __html: svg }}
-        />
+        <>
+            {isLoaded ? (
+                <div 
+                    className={`svgInline svgInline--${isLoaded ? 'loaded' : 'loading'} ${isErrored ? 'svgInline--errored' : ''}`}
+                    dangerouslySetInnerHTML={{ __html: svg }}
+                />
+            ) : (<Spinner />)}
+        </>
     );
 }
 

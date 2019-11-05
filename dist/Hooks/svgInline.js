@@ -17,6 +17,15 @@ function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = 
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
+var Spinner = function Spinner() {
+  return _react.default.createElement("div", {
+    class: "spinner-grow",
+    role: "status"
+  }, _react.default.createElement("span", {
+    class: "sr-only"
+  }));
+};
+
 var SvgInline = function SvgInline(props) {
   var _useState = (0, _react.useState)(null),
       _useState2 = _slicedToArray(_useState, 2),
@@ -41,12 +50,12 @@ var SvgInline = function SvgInline(props) {
       return setIsLoaded(true);
     });
   }, [props.url]);
-  return _react.default.createElement("div", {
+  return _react.default.createElement(_react.default.Fragment, null, isLoaded ? _react.default.createElement("div", {
     className: "svgInline svgInline--".concat(isLoaded ? 'loaded' : 'loading', " ").concat(isErrored ? 'svgInline--errored' : ''),
     dangerouslySetInnerHTML: {
       __html: svg
     }
-  });
+  }) : _react.default.createElement(Spinner, null));
 };
 
 var _default = SvgInline;
