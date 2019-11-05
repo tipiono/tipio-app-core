@@ -25,7 +25,9 @@ function CategoriesForm({
                             disabledButton,
                             selectedMap,
                             onComplete,
-                            isLoading
+                            isLoading,
+                            setActiveCategory,
+                            goBack
                         }) {
     const [selectedOptionId, setSelectedOptionId] = useState(0);
     const [selectedOption, setSelectedOption] = useState(null);
@@ -56,20 +58,20 @@ function CategoriesForm({
     }
 
     function navigatorOnSelect(id) {
-        setSelectedCategoryId(0);
+        setSelectedCategoryId(id);
         setSelectedOptionId(0);
         setSelectedOption(null);
-        // setActiveCategory(id);
+        setActiveCategory(id);
     }
 
     function subCategoriesOnClick(item) {
         if (item.height === 1) {
-            // setActiveCategory(item.id);
+            setActiveCategory(item.id);
         }
     }
 
     function backButtonOnClick() {
-        // goBack();
+        goBack();
     }
 
     return (

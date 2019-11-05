@@ -1,10 +1,7 @@
 import React from 'react';
 import PropTypes from "prop-types";
 import Checkbox from '../../../UI/Forms/Checkbox';
-import InteriorIcon from "../../../UI/Icons/InteriorIcon";
-import ReactSVG from 'react-svg/dist/index'
-
-let svgUrl = "https://tipio.ams3.digitaloceanspaces.com/dev/test/test/icon.svg";
+import SvgInline from '../../../Hooks/svgInline';
 
 const CategoryItem = ({ id, title, icon, onSelect, selected, sub_categories, withCheckbox, onChange, selectedMap }) => (
     <div className='category-item select'>
@@ -18,13 +15,10 @@ const CategoryItem = ({ id, title, icon, onSelect, selected, sub_categories, wit
                 />)}
 
         <a className={'category-link ' + (selected ? 'selected' : '')} href="#" onClick={onSelect}>
-
             <div className="category-left-icon">
-                <InteriorIcon />
+                <SvgInline url={icon} />
             </div>
-
             <span>{title}</span>
-
             <svg className="category-right-icon" width="20" height="20" viewBox="0 0 24 24">
                 <g className="nc-icon-wrapper" strokeLinecap="round" strokeLinejoin="round"
                    strokeWidth="2" fill="#371e1e" stroke="#371e1e">
