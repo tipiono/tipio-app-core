@@ -18,6 +18,7 @@ const breakpointColumnsObj = {
 function CategoriesForm({
                             active,
                             navigation,
+                            parent,
                             buttonTitle,
                             withCheckbox,
                             onChange,
@@ -27,7 +28,8 @@ function CategoriesForm({
                             onComplete,
                             isLoading,
                             setActiveCategory,
-                            goBack
+                            goBack,
+                            path
                         }) {
     const [selectedOptionId, setSelectedOptionId] = useState(0);
     const [selectedOption, setSelectedOption] = useState(null);
@@ -70,6 +72,11 @@ function CategoriesForm({
         }
     }
 
+    function headerSubOnClick(item) {
+        setSelectedCategoryId(item.id);
+        setActiveCategory(item.id);
+    }
+
     function backButtonOnClick() {
         goBack();
     }
@@ -77,7 +84,7 @@ function CategoriesForm({
     return (
 
         <div className="choose-category">
-            <CategoriesHeader data={navigation} backButtonOnClick={backButtonOnClick}/>
+            <CategoriesHeader data={navigation} parent={parent} backButtonOnClick={backButtonOnClick} subCategoriesOnClick={headerSubOnClick} path={path}/>
             <div className="choose-category-body">
                 <Masonry
                     breakpointCols={breakpointColumnsObj}
@@ -92,7 +99,7 @@ function CategoriesForm({
                             return <CategoryItemNavigator
                                 item={item}
                                 onClick={(e) => {
-                                    navigatorOnSelect(item.id)
+                                    navigatorOnSelect(item.id);
                                 }}
                                 withCheckbox={withCheckbox}
                                 onChange={onChange}

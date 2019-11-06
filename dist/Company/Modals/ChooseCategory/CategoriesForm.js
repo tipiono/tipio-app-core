@@ -43,6 +43,7 @@ var breakpointColumnsObj = {
 function CategoriesForm(_ref) {
   var active = _ref.active,
       navigation = _ref.navigation,
+      parent = _ref.parent,
       buttonTitle = _ref.buttonTitle,
       withCheckbox = _ref.withCheckbox,
       onChange = _ref.onChange,
@@ -52,7 +53,8 @@ function CategoriesForm(_ref) {
       onComplete = _ref.onComplete,
       isLoading = _ref.isLoading,
       setActiveCategory = _ref.setActiveCategory,
-      goBack = _ref.goBack;
+      goBack = _ref.goBack,
+      path = _ref.path;
 
   var _useState = (0, _react.useState)(0),
       _useState2 = _slicedToArray(_useState, 2),
@@ -110,6 +112,11 @@ function CategoriesForm(_ref) {
     }
   }
 
+  function headerSubOnClick(item) {
+    setSelectedCategoryId(item.id);
+    setActiveCategory(item.id);
+  }
+
   function backButtonOnClick() {
     goBack();
   }
@@ -118,7 +125,10 @@ function CategoriesForm(_ref) {
     className: "choose-category"
   }, _react.default.createElement(_CategoriesHeader.default, {
     data: navigation,
-    backButtonOnClick: backButtonOnClick
+    parent: parent,
+    backButtonOnClick: backButtonOnClick,
+    subCategoriesOnClick: headerSubOnClick,
+    path: path
   }), _react.default.createElement("div", {
     className: "choose-category-body"
   }, _react.default.createElement(_reactMasonryCss.default, {
