@@ -2,7 +2,7 @@
   padding: 80px;
 
   .choose-category-header {
-    padding-bottom: 50px;
+    padding-bottom: 20px;
 
     .category-header-title {
       display: flex;
@@ -10,8 +10,7 @@
       margin-bottom: 20px;
 
       .backward {
-        margin-left: -40px;
-        margin-right: 16px;
+        margin-left: 16px;
 
         &:hover {
           svg * {
@@ -49,6 +48,10 @@
       width: 44% !important;
       padding: 0;
     }
+  }
+
+  .my-masonry-grid_column {
+    padding: 0;
   }
 
   @include media-breakpoint-down(sm) {
