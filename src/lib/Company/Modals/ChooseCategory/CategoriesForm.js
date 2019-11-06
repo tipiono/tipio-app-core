@@ -72,6 +72,11 @@ function CategoriesForm({
         }
     }
 
+    function headerSubOnClick(item) {
+        setSelectedCategoryId(item.id);
+        setActiveCategory(item.id);
+    }
+
     function backButtonOnClick() {
         goBack();
     }
@@ -79,7 +84,7 @@ function CategoriesForm({
     return (
 
         <div className="choose-category">
-            <CategoriesHeader data={navigation} parent={parent} backButtonOnClick={backButtonOnClick} path={path}/>
+            <CategoriesHeader data={navigation} parent={parent} backButtonOnClick={backButtonOnClick} subCategoriesOnClick={headerSubOnClick} path={path}/>
             <div className="choose-category-body">
                 <Masonry
                     breakpointCols={breakpointColumnsObj}
@@ -94,7 +99,7 @@ function CategoriesForm({
                             return <CategoryItemNavigator
                                 item={item}
                                 onClick={(e) => {
-                                    navigatorOnSelect(item.id)
+                                    navigatorOnSelect(item.id);
                                 }}
                                 withCheckbox={withCheckbox}
                                 onChange={onChange}

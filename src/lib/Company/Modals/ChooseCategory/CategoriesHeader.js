@@ -1,10 +1,9 @@
 import React from 'react';
 import cx from 'classnames';
 
-function CategoriesHeader({ data, parent, path, backButtonOnClick }) {
+function CategoriesHeader({ data, parent, path, backButtonOnClick, subCategoriesOnClick }) {
     // const mainTitle = data && data.length !== 0 && data[0].title;
     const mainTitle = parent && parent.title;
-    debugger
     const currentCat = path && path.length > 0 ? path[path.length - 1] : { id : 0 };
     return <>
         {mainTitle &&
@@ -25,7 +24,10 @@ function CategoriesHeader({ data, parent, path, backButtonOnClick }) {
 
                 <ul className="category-types">
                     {data.map((navigation) => {
-                        return <li className="category-type-item"><a  className={cx("category-type-item-link", {selected: navigation.id === currentCat.id})} href="">{navigation.title}</a></li>
+                        return <li className="category-type-item"><a onClick={(e) => {
+                            e.preventDefault();
+                            subCategoriesOnClick(navigation);
+                        }} className={cx("category-type-item-link", {selected: navigation.id === currentCat.id})} href="">{navigation.title}</a></li>
                     })}
                 </ul>
 

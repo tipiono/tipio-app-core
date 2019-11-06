@@ -22,11 +22,11 @@ const SvgInline = props => {
     return (
         <>
             {isLoaded ? (
-                <div 
+                <div
                     className={`svgInline svgInline--${isLoaded ? 'loaded' : 'loading'} ${isErrored ? 'svgInline--errored' : ''}`}
                     dangerouslySetInnerHTML={{ __html: svg }}
                 />
-            ) : (<Spinner />)}
+            ) : (<p className="category-left-icon-loading" />)}
         </>
     );
 }

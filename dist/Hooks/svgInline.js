@@ -55,7 +55,9 @@ var SvgInline = function SvgInline(props) {
     dangerouslySetInnerHTML: {
       __html: svg
     }
-  }) : _react.default.createElement(Spinner, null));
+  }) : _react.default.createElement("p", {
+    className: "category-left-icon-loading"
+  }));
 };
 
 var _default = SvgInline;

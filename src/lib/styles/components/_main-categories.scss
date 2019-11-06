@@ -255,6 +255,14 @@
       .category-left-icon {
         margin-right: 22px;
         margin-left: 22px;
+
+        .category-left-icon-loading {
+          display: block;
+          width: 24px;
+          height: 24px;
+          background-color: $gray-100;
+          margin-bottom: 0;
+        }
       }
 
       .category-right-icon {

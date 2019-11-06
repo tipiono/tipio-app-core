@@ -112,6 +112,11 @@ function CategoriesForm(_ref) {
     }
   }
 
+  function headerSubOnClick(item) {
+    setSelectedCategoryId(item.id);
+    setActiveCategory(item.id);
+  }
+
   function backButtonOnClick() {
     goBack();
   }
@@ -122,6 +127,7 @@ function CategoriesForm(_ref) {
     data: navigation,
     parent: parent,
     backButtonOnClick: backButtonOnClick,
+    subCategoriesOnClick: headerSubOnClick,
     path: path
   }), _react.default.createElement("div", {
     className: "choose-category-body"

@@ -15,10 +15,10 @@ function CategoriesHeader(_ref) {
   var data = _ref.data,
       parent = _ref.parent,
       path = _ref.path,
-      backButtonOnClick = _ref.backButtonOnClick;
+      backButtonOnClick = _ref.backButtonOnClick,
+      subCategoriesOnClick = _ref.subCategoriesOnClick;
   // const mainTitle = data && data.length !== 0 && data[0].title;
   var mainTitle = parent && parent.title;
-  debugger;
   var currentCat = path && path.length > 0 ? path[path.length - 1] : {
     id: 0
   };
@@ -45,7 +45,10 @@ function CategoriesHeader(_ref) {
     return _react.default.createElement("li", {
       className: "category-type-item"
     }, _react.default.createElement("a", {
-      onClick: backButtonOnClick,
+      onClick: function onClick(e) {
+        e.preventDefault();
+        subCategoriesOnClick(navigation);
+      },
       className: (0, _classnames.default)("category-type-item-link", {
         selected: navigation.id === currentCat.id
       }),
