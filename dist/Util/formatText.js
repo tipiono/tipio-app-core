@@ -11,6 +11,7 @@ function formatText(input, formatter, separator) {
   var rest;
 
   if (input) {
+    debugger;
     text = input.substr(0, maxLength);
     text = text.substr(0, Math.min(text.length, text.lastIndexOf(" ")));
     rest = input.substr(text.length);
@@ -18,7 +19,7 @@ function formatText(input, formatter, separator) {
      * Format first [maxLength] characters
      */
 
-    text = input.split("\n").map(function (item, key) {
+    text = text.split("\n").map(function (item, key) {
       if (item) {
         return formatter(item, key);
       } else {
