@@ -7,19 +7,28 @@ exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
+var _classnames = _interopRequireDefault(require("classnames"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function CategoriesHeader(_ref) {
   var data = _ref.data,
+      parent = _ref.parent,
+      path = _ref.path,
       backButtonOnClick = _ref.backButtonOnClick;
-  var mainTitle = data && data.length !== 0 && data[0].title;
+  // const mainTitle = data && data.length !== 0 && data[0].title;
+  var mainTitle = parent && parent.title;
+  debugger;
+  var currentCat = path && path.length > 0 ? path[path.length - 1] : {
+    id: 0
+  };
   return _react.default.createElement(_react.default.Fragment, null, mainTitle && _react.default.createElement("div", {
     className: "choose-category-header"
   }, _react.default.createElement("div", {
     className: "category-header-title"
   }, _react.default.createElement("h3", {
     className: "mb-0"
-  }, mainTitle), data.length > 0 && _react.default.createElement("a", {
+  }, mainTitle), parent && _react.default.createElement("a", {
     className: "backward",
     href: "#",
     onClick: backButtonOnClick
@@ -32,10 +41,16 @@ function CategoriesHeader(_ref) {
     fillRule: "nonzero"
   })))), _react.default.createElement("ul", {
     className: "category-types"
-  }, data.slice(1).map(function (navigation) {
+  }, data.map(function (navigation) {
     return _react.default.createElement("li", {
       className: "category-type-item"
-    }, navigation.title);
+    }, _react.default.createElement("a", {
+      onClick: backButtonOnClick,
+      className: (0, _classnames.default)("category-type-item-link", {
+        selected: navigation.id === currentCat.id
+      }),
+      href: ""
+    }, navigation.title));
   }))));
 }
 

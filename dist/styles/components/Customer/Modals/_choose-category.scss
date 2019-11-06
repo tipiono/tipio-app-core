@@ -27,6 +27,19 @@
 
       .category-type-item {
         margin-right: 24px;
+
+        .category-type-item-link {
+          color: $dark;
+
+          &:hover {
+            text-decoration: none;
+            box-shadow: 0 1px 0 0 $primary;
+          }
+
+          &.selected {
+            box-shadow: 0 1px 0 0 $primary;
+          }
+        }
       }
     }
   }
