@@ -11,8 +11,6 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _reactMasonryCss = _interopRequireDefault(require("react-masonry-css"));
 
-var _TipioCard = _interopRequireDefault(require("./TipioCard"));
-
 var _Pagination = _interopRequireDefault(require("../../UI/Pagination/Pagination"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -37,12 +35,9 @@ var TipioFeedWithWrapper = function TipioFeedWithWrapper(props) {
       // }
 
       if (props.card) {
-        items.push(props.card(item));
-      } else {
-        items.push(_react.default.createElement(_TipioCard.default, {
-          key: item.id,
-          tipio: item
-        }));
+        items.push(_react.default.createElement("div", {
+          className: "mb-4"
+        }, props.card(item)));
       }
     }
   }

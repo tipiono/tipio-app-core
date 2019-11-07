@@ -1,7 +1,9 @@
 // 1. Abstracts, configuration and helpers
 @import
     'abstracts/bootstrap/functions',
-    'abstracts/bootstrap/variables';
+    'abstracts/bootstrap/variables',
+    'abstracts/_lazy-image-loading',
+    'abstracts/_lazy-card-loading';
 
 // 2. Base stuff
 @import
