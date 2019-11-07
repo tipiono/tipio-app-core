@@ -7,8 +7,8 @@ const BaseCompanyCard = ({children, expires_in, binding_count, potential_earning
             <div className="baseCompanyCard">
                 <a href="#" onClick={(e) => {e.preventDefault();props.onClick()}}>
                     <div className="baseCompanyCard__header">
-                        {props.images && props.images.length && <a href=""><img className="baseCompanyCard__header--image"
-                                        src={props.images[0].blob_url}
+                        {props.images && props.images.length && <a href="" className="lazy-image"><img className="lazyload baseCompanyCard__header--image"
+                                        data-src={props.images[0].blob_url}
                                         alt=""/></a>}
                         <div className="baseCompanyCard__header--timeLeft">
                             <TipioCountdown className="timer" expires_in={expires_in}/>

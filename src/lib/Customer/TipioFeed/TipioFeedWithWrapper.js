@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Masonry from 'react-masonry-css'
 
-import TipioCard from './TipioCard';
 import Pagination from "../../UI/Pagination/Pagination";
 
 const breakpointColumnsObj = (max = 4) => {
@@ -23,13 +22,7 @@ const TipioFeedWithWrapper = props => {
             //     items.push("<AddTipioButton />");
             // }
             if (props.card) {
-                items.push(props.card(item));
-            } else {
-                items.push(
-                    <TipioCard
-                        key={item.id}
-                        tipio={item}
-                    />);
+                items.push(<div className="mb-4">{props.card(item)}</div>);
             }
         }
     }
