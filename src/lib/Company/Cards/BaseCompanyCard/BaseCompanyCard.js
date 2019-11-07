@@ -1,7 +1,7 @@
 import React from 'react';
 import TipioCountdown from "../../../UI/TipioCountdown/TipioCountdown";
 
-const BaseCompanyCard = ({children, expires_in, binding_count, potential_earning, ...props}) => {
+const BaseCompanyCard = ({children, expires_in, binding_count, potential_earning, showBindingCount, ...props}) => {
     return (
         <div>
             <div className="baseCompanyCard">
@@ -26,7 +26,7 @@ const BaseCompanyCard = ({children, expires_in, binding_count, potential_earning
                     </div>) : (null)}
 
                     {binding_count > 0 ? (<div className="baseCompanyCard__body--interested">
-                        <h6 className="baseCompanyCard__body--interested--counter">{binding_count} påmeldte!</h6>
+                        <h6 className="baseCompanyCard__body--interested--counter">{binding_count} {showBindingCount ? 'kjøpte' : 'påmeldte'} ! </h6>
                     </div>): (null)}
 
                     {children}
