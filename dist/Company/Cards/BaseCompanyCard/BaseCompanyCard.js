@@ -20,7 +20,8 @@ var BaseCompanyCard = function BaseCompanyCard(_ref) {
       expires_in = _ref.expires_in,
       binding_count = _ref.binding_count,
       potential_earning = _ref.potential_earning,
-      props = _objectWithoutProperties(_ref, ["children", "expires_in", "binding_count", "potential_earning"]);
+      showBindingCount = _ref.showBindingCount,
+      props = _objectWithoutProperties(_ref, ["children", "expires_in", "binding_count", "potential_earning", "showBindingCount"]);
 
   return _react.default.createElement("div", null, _react.default.createElement("div", {
     className: "baseCompanyCard"
@@ -64,7 +65,7 @@ var BaseCompanyCard = function BaseCompanyCard(_ref) {
     className: "baseCompanyCard__body--interested"
   }, _react.default.createElement("h6", {
     className: "baseCompanyCard__body--interested--counter"
-  }, binding_count, " p\xE5meldte!")) : null, children)));
+  }, binding_count, " ", showBindingCount ? 'kjøpte' : 'påmeldte', " ! ")) : null, children)));
 };
 
 var _default = BaseCompanyCard;
