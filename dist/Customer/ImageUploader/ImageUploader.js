@@ -198,7 +198,7 @@ function ImageUploader(_ref) {
     }, thumbs), _react.default.createElement("div", getRootProps({
       className: 'dropzone'
     }), _react.default.createElement("input", getInputProps()), _react.default.createElement("div", {
-      className: "mt-3"
+      className: "mt-3 mb-5"
     }, files.length > 0 && _react.default.createElement(_IconButton.default, {
       text: "Last opp produktbilder",
       onClick: function onClick(e) {

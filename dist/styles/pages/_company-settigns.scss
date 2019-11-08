@@ -39,4 +39,10 @@
       }
     }
   }
+
+  @include media-breakpoint-down(md) {
+    &__body {
+      padding: 2rem 1rem;
+    }
+  }
 }

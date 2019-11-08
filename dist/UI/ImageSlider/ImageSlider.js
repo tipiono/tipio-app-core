@@ -19,7 +19,7 @@ function ImageSlider(_ref) {
   return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("div", {
     className: "imageSlider"
   }, _react.default.createElement(_reactResponsiveCarousel.Carousel, {
-    showIndicators: false,
+    showIndicators: true,
     showArrows: false,
     showStatus: false,
     showThumbs: showThumbs

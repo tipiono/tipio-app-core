@@ -1,0 +1,30 @@
+.alreadyHasBid {
+  padding: 8rem 0;
+  text-align: center;
+
+  &--icon {
+    margin-bottom: 2rem;
+  }
+
+  &--title {
+    margin-bottom: .8rem;
+  }
+
+  &--description {
+    font-family: 'Riposte-Regular', sans-serif;
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+    margin-bottom: 2.75rem;
+  }
+
+  &--action {
+    margin: 0 auto;
+    width: 40%;
+
+    @include media-breakpoint-down(sm) {
+      &--action {
+        width: 90%;
+      }
+    }
+  }
+}

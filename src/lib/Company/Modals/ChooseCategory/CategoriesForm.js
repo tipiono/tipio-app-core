@@ -18,6 +18,7 @@ const breakpointColumnsObj = {
 function CategoriesForm({
                             active,
                             navigation,
+                            parent,
                             buttonTitle,
                             withCheckbox,
                             onChange,
@@ -25,7 +26,10 @@ function CategoriesForm({
                             disabledButton,
                             selectedMap,
                             onComplete,
-                            isLoading
+                            isLoading,
+                            setActiveCategory,
+                            goBack,
+                            path
                         }) {
     const [selectedOptionId, setSelectedOptionId] = useState(0);
     const [selectedOption, setSelectedOption] = useState(null);
@@ -56,26 +60,31 @@ function CategoriesForm({
     }
 
     function navigatorOnSelect(id) {
-        setSelectedCategoryId(0);
+        setSelectedCategoryId(id);
         setSelectedOptionId(0);
         setSelectedOption(null);
-        // setActiveCategory(id);
+        setActiveCategory(id);
     }
 
     function subCategoriesOnClick(item) {
         if (item.height === 1) {
-            // setActiveCategory(item.id);
+            setActiveCategory(item.id);
         }
     }
 
+    function headerSubOnClick(item) {
+        setSelectedCategoryId(item.id);
+        setActiveCategory(item.id);
+    }
+
     function backButtonOnClick() {
-        // goBack();
+        goBack();
     }
 
     return (
 
         <div className="choose-category">
-            <CategoriesHeader data={navigation} backButtonOnClick={backButtonOnClick}/>
+            <CategoriesHeader data={navigation} parent={parent} backButtonOnClick={backButtonOnClick} subCategoriesOnClick={headerSubOnClick} path={path}/>
             <div className="choose-category-body">
                 <Masonry
                     breakpointCols={breakpointColumnsObj}
@@ -90,7 +99,7 @@ function CategoriesForm({
                             return <CategoryItemNavigator
                                 item={item}
                                 onClick={(e) => {
-                                    navigatorOnSelect(item.id)
+                                    navigatorOnSelect(item.id);
                                 }}
                                 withCheckbox={withCheckbox}
                                 onChange={onChange}
@@ -131,8 +140,8 @@ function CategoriesForm({
             </div>
             <div className="choose-category-footer">
                 <SecondaryButton
-                    className="btn btn-lg btn-secondary w-50"
-                    text={buttonTitle || 'Legg til kategori'}
+                    className="choose-category-footer--btn btn btn-lg btn-secondary"
+                    text={buttonTitle || 'Lagre'}
                     disabled={(controlDisabledButton && disabledButton) || (!controlDisabledButton && !selectedOptionId)}
                     onClick={chooseCategoryOnClick}
                     loading={isLoading}

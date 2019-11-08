@@ -55,8 +55,8 @@ var SearchInput = function SearchInput(props) {
   var _onKeyUp = function _onKeyUp(e) {
     if (e.key === 'Enter') {
       e.preventDefault();
-      e.stopPropagation(); //alert("search nav enter")
-
+      e.stopPropagation();
+      setShow(false);
       props.searchFormOnSubmit(e.target.value);
     }
   };
@@ -75,6 +75,7 @@ var SearchInput = function SearchInput(props) {
     onClick: function onClick(e) {
       e.preventDefault();
       setShow(true);
+      props.searchFormOnShow();
     }
   }, _react.default.createElement(_SearchIcon.default, null)), _react.default.createElement("div", {
     className: (0, _classnames.default)("searchInput", {

@@ -3,7 +3,7 @@ import CompanySidebarBaseCard from "./CompanySidebarBaseCard";
 
 
 const CompanyAddBidCard = (props) => {
-    const { tipio, meta } = props;
+    const { tipio, meta, showMinimumPrice, showNewPrice } = props;
     return (
         <div className="companyAddBidCard">
             <CompanySidebarBaseCard {...props}>
@@ -22,11 +22,17 @@ const CompanyAddBidCard = (props) => {
                         <h6 className="companyAddBidCard__price--cost--amount">{tipio.market_price} Kr</h6>
                     </div>
 
-                    <span className="border-right" />
+                    <span className="border-right d-none d-md-block" />
 
                     <div className="companyAddBidCard__price--sale">
-                        <p className="companyAddBidCard__price--sale--label" id="markedspris-label">Minimumpris</p>
-                        <h6 className="companyAddBidCard__price--sale--amount">{tipio.wanted_price} Kr</h6>
+                        {showMinimumPrice && (<>
+                            <p className="companyAddBidCard__price--sale--label" id={props.__onboardingMinimumPriceId || 'priceSale' }>Minimumpris</p>
+                            <h6 className="companyAddBidCard__price--sale--amount">{tipio.wanted_price} Kr</h6>
+                        </>)}
+                        {showNewPrice && (<>
+                            <p className="companyAddBidCard__price--sale--label" id={props.__onboardingMinimumPriceId || 'priceSale' }>Ny pris</p>
+                            <h6 className="companyAddBidCard__price--sale--amount">{tipio.new_price} Kr</h6>
+                        </>)}
                     </div>
                 </div>
             </CompanySidebarBaseCard>

@@ -15,14 +15,32 @@ const initialState = {
     navigation: [],
     withCheckbox: true,
     selectedMap: {},
-    controlDisabledButton: true
+    controlDisabledButton: true,
+    setActiveCategory: setActiveCategory,
+    goBack: goBack
 };
+
+function setActiveCategory() {
+    console.log(this)
+    // path = [];
+    // const t = findCategory(state.allCategories, action.data.category_id);
+    // return { ...state, active: t.sub_categories, navigation: path, loading: false };
+}
+
+function goBack() {
+    // return { ...state, active: state.allCategories, navigation: [] };
+    console.log(this)
+}
 
 storiesOf('Company/Components/Modals', module)
     .add('Choose Category', () =>
         <>
             <div className="col-3 m-3">
-                <Categories {...initialState}/>
+                <Categories
+                    {...initialState}
+                    setActiveCategory={()=>{initialState.setActiveCategory()}}
+                    goBack={()=>{initialState.goBack()}}
+                />
             </div>
         </>
     )

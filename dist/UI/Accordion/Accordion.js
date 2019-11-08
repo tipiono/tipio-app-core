@@ -99,6 +99,7 @@ function (_Component) {
   _createClass(Accordion, [{
     key: "headerOnClick",
     value: function headerOnClick(e) {
+      e.preventDefault();
       var active = parseInt(e.target.id);
       active = active === this.state.active ? 0 : active;
       this.setState({

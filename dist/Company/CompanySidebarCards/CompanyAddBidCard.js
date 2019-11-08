@@ -13,7 +13,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var CompanyAddBidCard = function CompanyAddBidCard(props) {
   var tipio = props.tipio,
-      meta = props.meta;
+      meta = props.meta,
+      showMinimumPrice = props.showMinimumPrice,
+      showNewPrice = props.showNewPrice;
   return _react.default.createElement("div", {
     className: "companyAddBidCard"
   }, _react.default.createElement(_CompanySidebarBaseCard.default, props, props.loading ? _react.default.createElement("div", {
@@ -29,15 +31,20 @@ var CompanyAddBidCard = function CompanyAddBidCard(props) {
   }, "Markedspris"), _react.default.createElement("h6", {
     className: "companyAddBidCard__price--cost--amount"
   }, tipio.market_price, " Kr")), _react.default.createElement("span", {
-    className: "border-right"
+    className: "border-right d-none d-md-block"
   }), _react.default.createElement("div", {
     className: "companyAddBidCard__price--sale"
-  }, _react.default.createElement("p", {
+  }, showMinimumPrice && _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("p", {
     className: "companyAddBidCard__price--sale--label",
-    id: "markedspris-label"
+    id: props.__onboardingMinimumPriceId || 'priceSale'
   }, "Minimumpris"), _react.default.createElement("h6", {
     className: "companyAddBidCard__price--sale--amount"
-  }, tipio.wanted_price, " Kr")))));
+  }, tipio.wanted_price, " Kr")), showNewPrice && _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("p", {
+    className: "companyAddBidCard__price--sale--label",
+    id: props.__onboardingMinimumPriceId || 'priceSale'
+  }, "Ny pris"), _react.default.createElement("h6", {
+    className: "companyAddBidCard__price--sale--amount"
+  }, tipio.new_price, " Kr"))))));
 };
 
 var _default = CompanyAddBidCard;

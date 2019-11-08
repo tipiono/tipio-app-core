@@ -18,10 +18,10 @@ const SearchInput = (props) => {
             setShow(false);
         }
       }, []);
-    
+
       useEffect(() => {
         document.addEventListener('keydown', escFunction, false);
-    
+
         return () => {
           document.removeEventListener('keydown', escFunction, false);
         };
@@ -31,7 +31,7 @@ const SearchInput = (props) => {
         if (e.key === 'Enter') {
             e.preventDefault();
             e.stopPropagation();
-            //alert("search nav enter")
+            setShow(false);
             props.searchFormOnSubmit(e.target.value);
         }
     }
@@ -42,7 +42,11 @@ const SearchInput = (props) => {
     return (
         <>
             {show && <Overlay onClick={_onClick} />}
-            <a href="#" className={cx("nav-list-link", {'d-none': show})} onClick={(e) => {e.preventDefault();setShow(true);}}>
+            <a href="#" className={cx("nav-list-link", {'d-none': show})} onClick={(e) => {
+                e.preventDefault();
+                setShow(true);
+                props.searchFormOnShow();
+            }}>
                 <SearchIcon/>
             </a>
 

@@ -1,7 +1,9 @@
 // 1. Abstracts, configuration and helpers
 @import
     'abstracts/bootstrap/functions',
-    'abstracts/bootstrap/variables';
+    'abstracts/bootstrap/variables',
+    'abstracts/_lazy-image-loading',
+    'abstracts/_lazy-card-loading';
 
 // 2. Base stuff
 @import
@@ -79,6 +81,7 @@
     'components/Company/delete-account',
     'components/Company/add-sales',
     'components/Company/won-bidding-round',
+    'components/Company/already-has-bid',
     'components/Company/empty-avatar',
     'components/Company/empty-cover',
     'components/Company/change-avatar',
@@ -114,6 +117,7 @@
 // 4. Layout-related sections
 @import
     'layout/footer',
+    'layout/masonry-grid',
     'layout/header';
 
 // 5. Page-specific styles
