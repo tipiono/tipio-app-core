@@ -6,10 +6,10 @@ const AddMoreSaleCompanyCard = (props) => {
         <div className="addMoreSaleCard">
             <div className="d-flex flex-row">
                 <div className="addMoreSaleCard__preview">
-                    <a className="addMoreSaleCard__preview--image" href="" onClick={(e)=>{e.preventDefault(); props.titleOnClick(props);}}>
+                    <a className="addMoreSaleCard__preview--image lazy-image" href="" onClick={(e)=>{e.preventDefault(); props.titleOnClick(props);}}>
                         {props.tipio.images
                             && props.tipio.images.length
-                            && <img className="img-fluid" src={props.tipio.images[0].blob_url} alt=""/>
+                            && <img className="lazyload img-fluid" src={props.tipio.images[0].blob_url} alt=""/>
                         }
                         <span className="addMoreSaleCard__preview--discount">{calculateDiscountPercentage(props.first_price, props.company_price)}%</span>
                     </a>

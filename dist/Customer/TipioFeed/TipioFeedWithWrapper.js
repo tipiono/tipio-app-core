@@ -13,6 +13,8 @@ var _reactMasonryCss = _interopRequireDefault(require("react-masonry-css"));
 
 var _Pagination = _interopRequireDefault(require("../../UI/Pagination/Pagination"));
 
+var _withAnimation = _interopRequireDefault(require("effects/withAnimation"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var breakpointColumnsObj = function breakpointColumnsObj() {
@@ -36,8 +38,8 @@ var TipioFeedWithWrapper = function TipioFeedWithWrapper(props) {
 
       if (props.card) {
         items.push(_react.default.createElement("div", {
-          className: "mb-4"
-        }, props.card(item)));
+          className: "mb-3 mb-md-4"
+        }, _react.default.createElement(_withAnimation.default, null, props.card(item))));
       }
     }
   }

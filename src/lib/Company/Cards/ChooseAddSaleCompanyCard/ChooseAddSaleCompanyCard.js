@@ -20,8 +20,8 @@ export default React.forwardRef(({
             <div className="chooseAddSaleCard">
                 <div className="d-flex flex-row mb-4 mb-md-5">
                     <div className="chooseAddSaleCard__preview">
-                        <a className="chooseAddSaleCard__preview--image" href="">
-                            <img className="img-fluid" src={image} alt=""/>
+                        <a className="chooseAddSaleCard__preview--image lazy-image" href="">
+                            <img className="lazyload img-fluid" src={image} alt=""/>
                             <span className="chooseAddSaleCard__preview--discount">{saleDiscount}%</span>
                         </a>
                     </div>
