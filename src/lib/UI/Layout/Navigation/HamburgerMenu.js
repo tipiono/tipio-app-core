@@ -8,7 +8,8 @@ function HamburgerMenu(props) {
     const {
         menuVisible,
         toggleMenu,
-        items
+        items,
+        logedIn
     } = props;
 
     return (
@@ -24,6 +25,9 @@ function HamburgerMenu(props) {
                 <div className="menu-content show">
                     <ul className="tab-content">
                         {items && items.map(x => {
+                                if (x.shouldDisplay && !x.shouldDisplay({ logedIn })) {
+                                    return (null);
+                                }
                                 if (x.sub_items) {
                                     return <li key={x.name} className="nav-item">
                                         <DropDown title={'Mine Tipioer'}>
