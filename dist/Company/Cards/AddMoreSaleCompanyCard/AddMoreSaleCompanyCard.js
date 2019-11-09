@@ -19,14 +19,14 @@ var AddMoreSaleCompanyCard = function AddMoreSaleCompanyCard(props) {
   }, _react.default.createElement("div", {
     className: "addMoreSaleCard__preview"
   }, _react.default.createElement("a", {
-    className: "addMoreSaleCard__preview--image",
+    className: "addMoreSaleCard__preview--image lazy-image",
     href: "",
     onClick: function onClick(e) {
       e.preventDefault();
       props.titleOnClick(props);
     }
   }, props.tipio.images && props.tipio.images.length && _react.default.createElement("img", {
-    className: "img-fluid",
+    className: "lazyload img-fluid",
     src: props.tipio.images[0].blob_url,
     alt: ""
   }), _react.default.createElement("span", {
