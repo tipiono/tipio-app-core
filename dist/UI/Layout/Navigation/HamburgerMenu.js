@@ -18,7 +18,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function HamburgerMenu(props) {
   var menuVisible = props.menuVisible,
       toggleMenu = props.toggleMenu,
-      items = props.items;
+      items = props.items,
+      logedIn = props.logedIn;
   return _react.default.createElement(_react.default.Fragment, null, menuVisible && _react.default.createElement(_Overlay.default, {
     onClick: toggleMenu,
     opacity: 0.5,
@@ -39,6 +40,12 @@ function HamburgerMenu(props) {
   }, _react.default.createElement("ul", {
     className: "tab-content"
   }, items && items.map(function (x) {
+    if (x.shouldDisplay && !x.shouldDisplay({
+      logedIn: logedIn
+    })) {
+      return null;
+    }
+
     if (x.sub_items) {
       return _react.default.createElement("li", {
         key: x.name,
