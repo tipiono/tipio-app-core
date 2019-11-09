@@ -38,10 +38,10 @@ var _default = _react.default.forwardRef(function (_ref, ref) {
   }, _react.default.createElement("div", {
     className: "chooseAddSaleCard__preview"
   }, _react.default.createElement("a", {
-    className: "chooseAddSaleCard__preview--image",
+    className: "chooseAddSaleCard__preview--image lazy-image",
     href: ""
   }, _react.default.createElement("img", {
-    className: "img-fluid",
+    className: "lazyload img-fluid",
     src: image,
     alt: ""
   }), _react.default.createElement("span", {
