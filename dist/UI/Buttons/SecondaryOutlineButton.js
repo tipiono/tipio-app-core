@@ -27,7 +27,7 @@ var SecondaryOutlineButton = function SecondaryOutlineButton(_ref) {
     id: "tipio-join-button",
     type: "button",
     disabled: loading,
-    className: "btn btn-outline-secondary btn-block btn-lg",
+    className: "btn btn-outline-secondary btn-block btn-lg btn-sm-md",
     onClick: onClick
   }, props), !loading && text, loading && _react.default.createElement("span", null, ' ', _react.default.createElement("span", {
     className: "spinner-border spinner-border-sm",
