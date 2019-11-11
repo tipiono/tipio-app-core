@@ -38,6 +38,7 @@ var BaseCompanyCard = function BaseCompanyCard(_ref) {
     className: "lazy-image"
   }, _react.default.createElement("img", {
     className: "lazyload baseCompanyCard__header--image",
+    src: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCAzIDInPjwvc3ZnPg==",
     "data-src": props.images[0].blob_url,
     alt: ""
   })), _react.default.createElement("div", {
