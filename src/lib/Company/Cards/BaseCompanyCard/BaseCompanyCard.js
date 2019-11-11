@@ -18,7 +18,7 @@ const BaseCompanyCard = ({children, expires_in, binding_count, potential_earning
 
                 <div className="baseCompanyCard__body">
                     <a href="#" onClick={() => {props.onClick()}}><h5 className="baseCompanyCard__body--title">{props.title}</h5></a>
-                    <p className="baseCompanyCard__body--content--description">{props.subtitle}</p>
+                    <p className="baseCompanyCard__body--description">{props.subtitle}</p>
 
                     {potential_earning ? (<div className="baseCompanyCard__body--cost">
                         <h3 className="baseCompanyCard__body--cost--price">{potential_earning} Kr</h3>

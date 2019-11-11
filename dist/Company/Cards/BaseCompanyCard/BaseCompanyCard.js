@@ -55,7 +55,7 @@ var BaseCompanyCard = function BaseCompanyCard(_ref) {
   }, _react.default.createElement("h5", {
     className: "baseCompanyCard__body--title"
   }, props.title)), _react.default.createElement("p", {
-    className: "baseCompanyCard__body--content--description"
+    className: "baseCompanyCard__body--description"
   }, props.subtitle), potential_earning ? _react.default.createElement("div", {
     className: "baseCompanyCard__body--cost"
   }, _react.default.createElement("h3", {
