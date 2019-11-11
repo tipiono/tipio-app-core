@@ -29,9 +29,10 @@ var _default = _react.default.forwardRef(function (_ref, ref) {
       label = _ref.label,
       name = _ref.name,
       errors = _ref.errors,
-      props = _objectWithoutProperties(_ref, ["image", "title", "salePrice", "costPrice", "saleDiscount", "children", "defaultValue", "id", "label", "name", "errors"]);
+      onClick = _ref.onClick,
+      props = _objectWithoutProperties(_ref, ["image", "title", "salePrice", "costPrice", "saleDiscount", "children", "defaultValue", "id", "label", "name", "errors", "onClick"]);
 
-  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("div", null, _react.default.createElement("div", {
+  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("div", {
     className: "chooseAddSaleCard"
   }, _react.default.createElement("div", {
     className: "d-flex flex-row mb-4 mb-md-5"
@@ -39,7 +40,8 @@ var _default = _react.default.forwardRef(function (_ref, ref) {
     className: "chooseAddSaleCard__preview"
   }, _react.default.createElement("a", {
     className: "chooseAddSaleCard__preview--image lazy-image",
-    href: ""
+    href: "",
+    onClick: onClick
   }, _react.default.createElement("img", {
     className: "lazyload img-fluid",
     src: image,
@@ -55,14 +57,15 @@ var _default = _react.default.forwardRef(function (_ref, ref) {
   }, salePrice, " Kr"), _react.default.createElement("h6", {
     className: "chooseAddSaleCard__content--price--cost"
   }, costPrice, " Kr")), _react.default.createElement("h6", {
-    className: "chooseAddSaleCard__content--title"
+    className: "chooseAddSaleCard__content--title",
+    onClick: onClick
   }, title))), _react.default.createElement(_Checkbox.default, _extends({
     label: "Legg til mersalg",
     id: id,
     name: name
   }, props, {
     ref: ref
-  })))));
+  }))));
 });
 
 exports.default = _default;
