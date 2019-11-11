@@ -156,7 +156,8 @@ function (_Component) {
         className: "imageCropper__content__action--next"
       }, _react.default.createElement(_SecondaryButton.default, {
         text: "Neste",
-        onClick: this.cropDoneOnClick
+        onClick: this.cropDoneOnClick,
+        loading: this.state.isSubmitting
       })))))));
     }
   }]);
