@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Masonry from 'react-masonry-css'
 
 import Pagination from "../../UI/Pagination/Pagination";
-import WithAnimation from 'effects/withAnimation';
+import WithAnimation from '../../effects/withAnimation';
 
 const breakpointColumnsObj = (max = 4) => {
     return {
