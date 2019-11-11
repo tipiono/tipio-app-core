@@ -49,6 +49,9 @@ function ImageUploader({ setFieldValue, name, errors, displayErrors }) {
         setCropImage(null);
     };
 
+    const cropperSetLoading = () => {
+    }
+
     const cropperOnDone = (blob) => {
         let croppedImageIndex = files.findIndex((x) => (x.id === cropImage.id));
         setCroppedImageIndex(croppedImageIndex + 2);
@@ -110,7 +113,9 @@ function ImageUploader({ setFieldValue, name, errors, displayErrors }) {
                     onDone={cropperOnDone}
                     onClose={cropperModalOnClose}
                     showCloseButton={initialCropCompleted}
-                    indicator={indicator}/>
+                    indicator={indicator}
+                    setLoading={cropperSetLoading}
+                />
             )}
             <Dropzone accept="image/*" onDrop={onDrop}>
                 {({getRootProps, getInputProps}) => (
