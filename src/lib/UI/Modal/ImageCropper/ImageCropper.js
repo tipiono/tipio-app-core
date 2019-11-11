@@ -73,7 +73,7 @@ class ImageCropper extends Component {
                             {this.props.indicator && this.props.indicator}
                             <ul className="imageCropper__content__action">
                                 <li className="imageCropper__content__action--cancel"><GrayOutlineButton text={"Avbryt"} onClick={this.modalOnClose} disabled={this.state.isSubmitting} /></li>
-                                <li className="imageCropper__content__action--next"><SecondaryButton text={"Neste"} onClick={this.cropDoneOnClick} /></li>
+                                <li className="imageCropper__content__action--next"><SecondaryButton text={"Neste"} onClick={this.cropDoneOnClick} loading={this.state.isSubmitting} /></li>
                             </ul>
                         </div>
                     </div>
