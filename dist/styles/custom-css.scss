@@ -42,6 +42,13 @@
     color: $primary;
 }
 
+.btn-sm-md {
+    @include media-breakpoint-down(sm){
+        padding: 0.35rem 1rem !important;
+        font-size: 0.875rem !important;
+    }
+}
+
 .form-control {
     border-bottom: 1px solid $gray-900;
 }

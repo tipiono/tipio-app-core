@@ -13,7 +13,7 @@ var _reactMasonryCss = _interopRequireDefault(require("react-masonry-css"));
 
 var _Pagination = _interopRequireDefault(require("../../UI/Pagination/Pagination"));
 
-var _withAnimation = _interopRequireDefault(require("effects/withAnimation"));
+var _withAnimation = _interopRequireDefault(require("../../effects/withAnimation"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 

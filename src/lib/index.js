@@ -87,6 +87,8 @@ import TipioFeedWithWrapper from './Customer/TipioFeed/TipioFeedWithWrapper';
 *   Company Components
 * */
 import DeleteAccount from './Company/Modals/DeleteAccount/DeleteAccount';
+import OrderDelivered from './Company/Modals/OrderDelivered/OrderDelivered';
+import OrderNotDelivered from './Company/Modals/OrderNotDelivered/OrderNotDelivered';
 import AddAdditionalSales from './Company/Modals/AddAdditionalSales/AddAdditionalSales';
 import WonBiddingRound from './Company/Modals/WonBiddingRound/WonBiddingRound';
 import AlreadyHasBid from './Company/Modals/AlreadyHasBid/AlreadyHasBid';
@@ -244,5 +246,7 @@ export {
     NoSearchResult,
     TipioFeedWithWrapper,
     FilterIconCyan,
-    AlreadyHasBid
+    AlreadyHasBid,
+    OrderDelivered,
+    OrderNotDelivered
 };
