@@ -12,6 +12,21 @@
       width: 150px;
       height: auto;
       border: 1px solid $gray-100;
+      overflow: hidden;
+
+      img {
+        transition: all 0.3s;
+        -webkit-transform: translateZ(0) scale(1.01, 1.01);
+        transform: translateZ(0) scale(1.01, 1.01);
+      }
+
+      &:hover {
+        img {
+          -webkit-backface-visibility: hidden;
+          -webkit-transform: translateZ(0) scale(1.04, 1.04);
+          transform: translateZ(0) scale(1.04, 1.04);
+        }
+      }
     }
 
     &--discount {
