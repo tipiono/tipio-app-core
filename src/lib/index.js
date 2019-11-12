@@ -89,6 +89,7 @@ import TipioFeedWithWrapper from './Customer/TipioFeed/TipioFeedWithWrapper';
 import DeleteAccount from './Company/Modals/DeleteAccount/DeleteAccount';
 import OrderDelivered from './Company/Modals/OrderDelivered/OrderDelivered';
 import OrderNotDelivered from './Company/Modals/OrderNotDelivered/OrderNotDelivered';
+import ExportAs from './Company/Modals/ExportAs/ExportAs';
 import AddAdditionalSales from './Company/Modals/AddAdditionalSales/AddAdditionalSales';
 import WonBiddingRound from './Company/Modals/WonBiddingRound/WonBiddingRound';
 import AlreadyHasBid from './Company/Modals/AlreadyHasBid/AlreadyHasBid';
@@ -248,5 +249,6 @@ export {
     FilterIconCyan,
     AlreadyHasBid,
     OrderDelivered,
-    OrderNotDelivered
+    OrderNotDelivered,
+    ExportAs
 };
