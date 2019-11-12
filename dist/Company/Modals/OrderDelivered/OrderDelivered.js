@@ -15,9 +15,13 @@ var _SecondaryOutlineButton = _interopRequireDefault(require("../../../UI/Button
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var OrderDelivered = function OrderDelivered() {
+var OrderDelivered = function OrderDelivered(_ref) {
+  var loading = _ref.loading,
+      onClick = _ref.onClick,
+      onCancel = _ref.onCancel;
   return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_Modal.Modal, {
-    showCloseButton: true
+    showCloseButton: true,
+    onCloseButtonClick: onCancel
   }, _react.default.createElement("div", {
     className: "orderDelivered"
   }, _react.default.createElement("svg", {
@@ -45,11 +49,15 @@ var OrderDelivered = function OrderDelivered() {
   }, "Er du sikker p\xE5 at du vil markere ", _react.default.createElement("br", null), " alle som levert?"), _react.default.createElement("div", {
     className: "orderDelivered--action mb-3"
   }, _react.default.createElement(_SecondaryButton.default, {
-    text: "Merk alle som levert"
+    text: "Merk alle som levert",
+    onClick: onClick,
+    loading: loading
   })), _react.default.createElement("div", {
     className: "orderDelivered--action"
   }, _react.default.createElement(_SecondaryOutlineButton.default, {
-    text: "Avbryt"
+    text: "Avbryt",
+    onClick: onCancel,
+    disabled: loading
   })))));
 };
 

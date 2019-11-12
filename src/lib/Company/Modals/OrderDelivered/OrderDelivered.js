@@ -3,10 +3,10 @@ import {Modal} from '../../../UI/Modal/Modal'
 import SecondaryButton from "../../../UI/Buttons/SecondaryButton";
 import SecondaryOutlineButton from "../../../UI/Buttons/SecondaryOutlineButton";
 
-const OrderDelivered = () => {
+const OrderDelivered = ({ loading, onClick, onCancel }) => {
     return (
         <>
-            <Modal showCloseButton>
+            <Modal showCloseButton onCloseButtonClick={onCancel}>
                 <div className="orderDelivered">
                     <svg className="orderDelivered--icon" width={76} height={69}>
                         <defs>
@@ -28,10 +28,10 @@ const OrderDelivered = () => {
                     <h4 className="orderDelivered--title">Er du sikker på at du vil markere <br/> alle som levert?</h4>
 
                     <div className="orderDelivered--action mb-3">
-                        <SecondaryButton text="Merk alle som levert" />
+                        <SecondaryButton text="Merk alle som levert" onClick={onClick} loading={loading}/>
                     </div>
                     <div className="orderDelivered--action">
-                        <SecondaryOutlineButton text="Avbryt"/>
+                        <SecondaryOutlineButton text="Avbryt" onClick={onCancel} disabled={loading} />
                     </div>
                 </div>
             </Modal>
