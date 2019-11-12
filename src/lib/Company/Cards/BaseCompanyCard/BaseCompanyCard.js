@@ -7,7 +7,7 @@ const BaseCompanyCard = ({children, expires_in, binding_count, potential_earning
             <div className="baseCompanyCard">
                 <a href="#" onClick={(e) => {e.preventDefault();props.onClick()}}>
                     <div className="baseCompanyCard__header">
-                        {props.images && props.images.length && <a href="" className="lazy-image"><img className="lazyload baseCompanyCard__header--image"
+                        {props.images && props.images.length && <a href="" className="lazy-image baseCompanyCard__header--preview"><img className="lazyload baseCompanyCard__header--preview--image"
                                         data-src={props.images[0].blob_url}
                                         alt=""/></a>}
                         <div className="baseCompanyCard__header--timeLeft">

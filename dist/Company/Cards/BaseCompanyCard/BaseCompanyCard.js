@@ -35,9 +35,9 @@ var BaseCompanyCard = function BaseCompanyCard(_ref) {
     className: "baseCompanyCard__header"
   }, props.images && props.images.length && _react.default.createElement("a", {
     href: "",
-    className: "lazy-image"
+    className: "lazy-image baseCompanyCard__header--preview"
   }, _react.default.createElement("img", {
-    className: "lazyload baseCompanyCard__header--image",
+    className: "lazyload baseCompanyCard__header--preview--image",
     "data-src": props.images[0].blob_url,
     alt: ""
   })), _react.default.createElement("div", {
