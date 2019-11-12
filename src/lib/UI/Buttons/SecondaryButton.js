@@ -6,7 +6,7 @@ const SecondaryButton = ({ loading, text, onClick, ...props }) => (
         id="tipio-join-button"
         type="button"
         disabled={loading}
-        className="btn btn-secondary btn-block btn-lg btn-sm-md"
+        className="btn btn-secondary btn-block btn-lg"
         onClick={onClick}
         {...props}
     >
