@@ -7,6 +7,7 @@
 
     &--preview {
       overflow: hidden;
+
       &--image {
         max-width: 100%;
         height: auto;
@@ -93,5 +94,10 @@
         }
       }
     }
+  }
+
+  button {
+    padding: .35rem 1rem !important;
+    font-size: .875rem !important;
   }
 }
