@@ -39,7 +39,7 @@ var CompanyAddBidCard = function CompanyAddBidCard(props) {
     id: props.__onboardingMinimumPriceId || 'priceSale'
   }, "Minimumpris"), _react.default.createElement("h6", {
     className: "companyAddBidCard__price--sale--amount"
-  }, tipio.wanted_price, " Kr")), showNewPrice && _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("p", {
+  }, meta.minimum_price, " Kr")), showNewPrice && _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("p", {
     className: "companyAddBidCard__price--sale--label",
     id: props.__onboardingMinimumPriceId || 'priceSale'
   }, "Ny pris"), _react.default.createElement("h6", {

@@ -102,6 +102,8 @@ function ImageUploader(_ref) {
     setCropImage(null);
   };
 
+  var cropperSetLoading = function cropperSetLoading() {};
+
   var cropperOnDone = function cropperOnDone(blob) {
     var croppedImageIndex = files.findIndex(function (x) {
       return x.id === cropImage.id;
@@ -168,7 +170,8 @@ function ImageUploader(_ref) {
     onDone: cropperOnDone,
     onClose: cropperModalOnClose,
     showCloseButton: initialCropCompleted,
-    indicator: indicator
+    indicator: indicator,
+    setLoading: cropperSetLoading
   }), _react.default.createElement(_reactDropzone.default, {
     accept: "image/*",
     onDrop: onDrop

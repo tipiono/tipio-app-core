@@ -105,6 +105,7 @@ function (_Component) {
       this.setState({
         isSubmitting: true
       });
+      this.props.setLoading(true);
       this.state.cropperInstance.getCroppedCanvas().toBlob(function (blob) {
         _this3.props.onDone(blob);
       });
@@ -151,12 +152,13 @@ function (_Component) {
       }, _react.default.createElement(_GrayOutlineButton.default, {
         text: "Avbryt",
         onClick: this.modalOnClose,
-        disabled: this.state.isSubmitting
+        disabled: this.props.isSubmitting
       })), _react.default.createElement("li", {
         className: "imageCropper__content__action--next"
       }, _react.default.createElement(_SecondaryButton.default, {
         text: "Neste",
-        onClick: this.cropDoneOnClick
+        onClick: this.cropDoneOnClick,
+        loading: this.props.isSubmitting
       })))))));
     }
   }]);

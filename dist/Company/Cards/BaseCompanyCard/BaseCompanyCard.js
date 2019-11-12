@@ -39,6 +39,7 @@ var BaseCompanyCard = function BaseCompanyCard(_ref) {
   }, _react.default.createElement("img", {
     className: "lazyload baseCompanyCard__header--preview--image",
     "data-src": props.images[0].blob_url,
+    src: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 2'%3E%3C/svg%3E",
     alt: ""
   })), _react.default.createElement("div", {
     className: "baseCompanyCard__header--timeLeft"

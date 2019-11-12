@@ -27,7 +27,7 @@ const CompanyAddBidCard = (props) => {
                     <div className="companyAddBidCard__price--sale">
                         {showMinimumPrice && (<>
                             <p className="companyAddBidCard__price--sale--label" id={props.__onboardingMinimumPriceId || 'priceSale' }>Minimumpris</p>
-                            <h6 className="companyAddBidCard__price--sale--amount">{tipio.wanted_price} Kr</h6>
+                            <h6 className="companyAddBidCard__price--sale--amount">{meta.minimum_price} Kr</h6>
                         </>)}
                         {showNewPrice && (<>
                             <p className="companyAddBidCard__price--sale--label" id={props.__onboardingMinimumPriceId || 'priceSale' }>Ny pris</p>

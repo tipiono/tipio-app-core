@@ -23,12 +23,12 @@ function Navigation({ children, filterOnClick, ...props }) {
                                 <SearchInput {...props}/>
                             </li>
 
-                            <li className="nav-list-item">
+                            {props.filterButtonVisible && <li className="nav-list-item">
                                 <a href="" onClick={filterOnClick}>
                                     <FilterIcon/>
                                     <span className="text-white">Filters</span>
                                 </a>
-                            </li>
+                            </li>}
 
                             <HamburgerMenu {...props} />
                         </ul>
