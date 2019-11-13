@@ -13,7 +13,8 @@ var PublishedBy = function PublishedBy(_ref) {
   var avatar = _ref.avatar,
       username = _ref.username,
       date = _ref.date,
-      url = _ref.url;
+      url = _ref.url,
+      children = _ref.children;
   return _react.default.createElement("div", {
     className: "publishedBy"
   }, _react.default.createElement("div", {
@@ -26,9 +27,7 @@ var PublishedBy = function PublishedBy(_ref) {
     className: ""
   }, _react.default.createElement("h6", {
     className: "publishedBy__user--name"
-  }, username))), _react.default.createElement("p", {
-    className: "publishedBy--date"
-  }, date));
+  }, username))), children);
 };
 
 var _default = PublishedBy;

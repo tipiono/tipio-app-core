@@ -1,6 +1,6 @@
 import React from 'react';
 
-const PublishedBy = ({avatar, username, date, url}) => {
+const PublishedBy = ({avatar, username, date, url, children}) => {
     return (
         <div className="publishedBy">
 
@@ -12,8 +12,7 @@ const PublishedBy = ({avatar, username, date, url}) => {
                     {/*<p className="publishedBy__user--productFrom">Photo from {url}</p>*/}
                 </div>
             </div>
-
-            <p className="publishedBy--date">{date}</p>
+            {children}
         </div>
     );
 };

@@ -36,6 +36,14 @@
     color: $gray-500;
   }
 
+  &__dropdown {
+    .dropdown-toggle {
+      &:after {
+        display: none;
+      }
+    }
+  }
+
   @include media-breakpoint-down(md) {
     &__user {
       &--avatar {

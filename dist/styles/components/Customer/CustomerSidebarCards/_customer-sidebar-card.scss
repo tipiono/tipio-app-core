@@ -124,4 +124,29 @@
       border-top: 1px solid $gray-200;
     }
   }
+
+  @include media-breakpoint-down(sm) {
+    padding: 0 0 2rem;
+    border: none;
+
+    &__header {
+      &__content {
+        &--title {
+          font-size: 1.125rem;
+        }
+        &--subtitle {
+          font-size: .875rem;
+        }
+      }
+
+      &__cost {
+        &--label {
+          font-size: .75rem;
+        }
+        &--price {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
 }
