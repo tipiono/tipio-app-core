@@ -23,11 +23,25 @@ var PublishedByWithDropDown = function PublishedByWithDropDown(props) {
     aligned: "dropdown-menu-right"
   }, _react.default.createElement(_NewDropdown.NewDropdownItem, {
     key: '1'
-  }, "Del p\xE5 facebook"), _react.default.createElement(_NewDropdown.NewDropdownItem, {
+  }, "Del p\xE5 Facebook"), _react.default.createElement(_NewDropdown.NewDropdownItem, {
     key: '2'
-  }, "Del p\xE5 facebook"), _react.default.createElement(_NewDropdown.NewDropdownItem, {
+  }, "Del p\xE5 Messanger"), _react.default.createElement(_NewDropdown.NewDropdownItem, {
     key: '3'
-  }, "Del p\xE5 facebook"))));
+  }, "Del p\xE5 Twitter"), _react.default.createElement(_NewDropdown.NewDropdownItem, {
+    key: '4'
+  }, "Del p\xE5 mail"), _react.default.createElement(_NewDropdown.NewDropdownItem, {
+    key: '5'
+  }, "Kopier lenke"), _react.default.createElement("br", null), _react.default.createElement(_NewDropdown.NewDropdownItem, {
+    key: '6'
+  }, "Meld av interesse"), _react.default.createElement(_NewDropdown.NewDropdownItem, {
+    key: '7'
+  }, "Rapport\xE9r ", _react.default.createElement("small", {
+    className: "d-block text-gray-600"
+  }, "Dette bryter med Tipio\u2019s rettningslinjer")), _react.default.createElement(_NewDropdown.NewDropdownItem, {
+    key: '7'
+  }, "Del p\xE5 mail ", _react.default.createElement("small", {
+    className: "d-block text-gray-600"
+  }, "Se f\xE6rre slike Tipioer")))));
 };
 
 var _default = PublishedByWithDropDown;

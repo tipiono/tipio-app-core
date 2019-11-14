@@ -64,7 +64,6 @@ function SelectImages({images, title, ...props}) {
     const imagesMapped = images.map((item, index) => ({id: index, src: item}));
     return (<>
         <div className="select-images">
-            {/*<h2 className="page-title">{title}</h2>*/}
             <div className="layout-container">
                 <div className="container">
                     <Masonry
