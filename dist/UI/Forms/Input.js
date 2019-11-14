@@ -39,7 +39,7 @@ var _default = _react.default.forwardRef(function (_ref, ref) {
   })), _react.default.createElement("span", {
     className: "label-sm"
   }, placeholder)), displayErrors && errors && errors[name] && _react.default.createElement(_ErrorMessage.default, {
-    content: errors[name].message,
+    content: errors[name].message || errors[name],
     color: "bg-red"
   }));
 });
