@@ -21,4 +21,8 @@
     border: 1px solid $secondary;
     transition: all ease 200ms;
   }
+
+  @include media-breakpoint-down(sm) {
+    background-color: $gray-100;
+  }
 }
