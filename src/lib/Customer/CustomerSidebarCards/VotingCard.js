@@ -3,26 +3,28 @@ import BaseCard from './BaseCard';
 import ShareButton from './ShareButton';
 import SecondaryOutlineButton from '../../UI/Buttons/SecondaryOutlineButton';
 
-const VotingCard = ({children, state}) => {
+const VotingCard = ({ state, ...props }) => {
     return (
-        <BaseCard>
-            {
-                state !== 'interested' && (
+        <BaseCard {...props}>
+            {state === 'display_interested_button' && (
                     <>
                         <div className="customerSidebarCard__footer--action">
-                            <SecondaryOutlineButton text={'Meld interesse'}/>
+                            <SecondaryOutlineButton
+                                text={'Meld interesse'}
+                                onClick={props.voteOnClick}
+                                loading={props.voteLoading}
+                            />
                         </div>
                         <p className="customerSidebarCard__footer--alert">Dette er ikke bindende</p>
-
                     </>
                 )
             }
             {state === 'interested' &&
             <div className="customerSidebarCard__footer--action">
-                <ShareButton/>
+                <ShareButton onClick={props.shareOnClick} />
             </div>}
 
-            <p className="customerSidebarCard__footer--interestedCounter">Allerede 221 Interesserte!</p>
+            <p className="customerSidebarCard__footer--interestedCounter">Allerede {props.meta.joined_count} Interesserte!</p>
 
         </BaseCard>
     )
