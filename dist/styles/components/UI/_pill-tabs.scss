@@ -1,12 +1,16 @@
 .pillTab {
-  display: inline-block;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 0;
   border: 1px solid $gray-300;
   border-radius: 25px;
 
   // Item
 
   &__item {
-    display: inline-block;
+    width: 100%;
+    text-align: center;
 
     &:hover {
       text-decoration: none;
@@ -45,7 +49,7 @@
       display: block;
       height: 100%;
       color: $gray-700;
-      padding: 9px 32px;
+      padding: 9px 4px;
       font-family: 'Riposte-Light', sans-serif;
       position: relative;
 

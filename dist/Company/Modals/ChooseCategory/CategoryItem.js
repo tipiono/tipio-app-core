@@ -11,13 +11,9 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _Checkbox = _interopRequireDefault(require("../../../UI/Forms/Checkbox"));
 
-var _InteriorIcon = _interopRequireDefault(require("../../../UI/Icons/InteriorIcon"));
-
-var _index = _interopRequireDefault(require("react-svg/dist/index"));
+var _svgInline = _interopRequireDefault(require("../../../Hooks/svgInline"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var svgUrl = "https://tipio.ams3.digitaloceanspaces.com/dev/test/test/icon.svg";
 
 var CategoryItem = function CategoryItem(_ref) {
   var id = _ref.id,
@@ -34,14 +30,17 @@ var CategoryItem = function CategoryItem(_ref) {
   }, withCheckbox && _react.default.createElement(_Checkbox.default, {
     id: id,
     onChange: onChange,
-    value: id
+    value: id,
+    checked: selectedMap[id]
   }), _react.default.createElement("a", {
     className: 'category-link ' + (selected ? 'selected' : ''),
     href: "#",
     onClick: onSelect
   }, _react.default.createElement("div", {
     className: "category-left-icon"
-  }, _react.default.createElement(_InteriorIcon.default, null)), _react.default.createElement("span", null, title), _react.default.createElement("svg", {
+  }, _react.default.createElement(_svgInline.default, {
+    url: icon
+  })), _react.default.createElement("span", null, title), _react.default.createElement("svg", {
     className: "category-right-icon",
     width: "20",
     height: "20",

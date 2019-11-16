@@ -42,6 +42,13 @@
     color: $primary;
 }
 
+.btn-sm-md {
+    @include media-breakpoint-down(sm){
+        padding: 0.35rem 1rem !important;
+        font-size: 0.875rem !important;
+    }
+}
+
 .form-control {
     border-bottom: 1px solid $gray-900;
 }
@@ -279,25 +286,6 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
-
-.my-masonry-grid {
-    display: -webkit-box; /* Not needed if autoprefixing */
-    display: -ms-flexbox; /* Not needed if autoprefixing */
-    display: flex;
-    margin-left: 0; /* gutter size offset */
-    width: auto;
-}
-
-.my-masonry-grid_column {
-    padding: 0 12px;
-    background-clip: padding-box;
-}
-
-//.my-masonry-grid_column > div { /* change div to reference your elements you put in <Masonry> */
-//    margin-bottom: 24px;
-//}
-
-
 .panel-group {
     .panel-item {
         display: flex;
@@ -324,13 +312,6 @@ h1, h2, h3, h4, h5, h6 {
 .sticky-card {
     position: sticky;
     top: 120px;
-}
-
-
-.cropper-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 .two-column {
@@ -378,55 +359,4 @@ h1, h2, h3, h4, h5, h6 {
     color: #188576;
     font-family: 'Riposte-Medium', sans-serif !important;
     font-size: 14px;
-}
-
-
-//// SecondaryButton with icon
-.btn-with-icon {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-    width: 100%;
-    height: 58px;
-    background: 0;
-    box-shadow: none;
-    border: 1px solid $gray-300;
-    font-size: 18px;
-    color: $gray-500;
-
-    &:hover {
-        color: $primary;
-
-        svg * {
-            fill: $primary;
-        }
-    }
-    &:focus {
-        color: $primary;
-        border: 1px solid $primary;
-        outline: none;
-
-        svg * {
-            fill: $primary;
-        }
-    }
-}
-
-.selected-category {
-    .btn-with-icon {
-        color: $dark;
-
-        &:hover {
-            svg * {
-                fill: none;
-                stroke: $secondary;
-            }
-        }
-        &:focus {
-            svg * {
-                fill: none;
-            }
-        }
-    }
 }

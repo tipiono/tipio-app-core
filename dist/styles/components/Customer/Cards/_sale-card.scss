@@ -1,6 +1,8 @@
 .saleCard {
+  border: 1px solid $gray-100;
   box-shadow: 0 1px 1px 0 #e5e5e5;
   padding: 1.125rem;
+  background-color: $white;
 
   &__preview {
     margin-right: 1.5rem;

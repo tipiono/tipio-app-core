@@ -18,40 +18,56 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 var BaseCompanyCard = function BaseCompanyCard(_ref) {
   var children = _ref.children,
       expires_in = _ref.expires_in,
-      props = _objectWithoutProperties(_ref, ["children", "expires_in"]);
+      binding_count = _ref.binding_count,
+      potential_earning = _ref.potential_earning,
+      showBindingCount = _ref.showBindingCount,
+      props = _objectWithoutProperties(_ref, ["children", "expires_in", "binding_count", "potential_earning", "showBindingCount"]);
 
   return _react.default.createElement("div", null, _react.default.createElement("div", {
     className: "baseCompanyCard"
+  }, _react.default.createElement("a", {
+    href: "#",
+    onClick: function onClick(e) {
+      e.preventDefault();
+      props.onClick();
+    }
   }, _react.default.createElement("div", {
     className: "baseCompanyCard__header"
   }, props.images && props.images.length && _react.default.createElement("a", {
-    href: ""
+    href: "",
+    className: "lazy-image baseCompanyCard__header--preview"
   }, _react.default.createElement("img", {
-    className: "baseCompanyCard__header--image",
-    src: props.images[0].blob_url,
+    className: "lazyload baseCompanyCard__header--preview--image",
+    "data-src": props.images[0].blob_url,
+    src: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 2'%3E%3C/svg%3E",
     alt: ""
   })), _react.default.createElement("div", {
     className: "baseCompanyCard__header--timeLeft"
   }, _react.default.createElement(_TipioCountdown.default, {
     className: "timer",
-    expires_in: props.voting_expires_in
-  }))), _react.default.createElement("div", {
+    expires_in: expires_in
+  })))), _react.default.createElement("div", {
     className: "baseCompanyCard__body"
+  }, _react.default.createElement("a", {
+    href: "#",
+    onClick: function onClick() {
+      props.onClick();
+    }
   }, _react.default.createElement("h5", {
     className: "baseCompanyCard__body--title"
-  }, props.title), _react.default.createElement("p", {
-    className: "baseCompanyCard__body--content--description"
-  }, props.subtitle), _react.default.createElement("div", {
+  }, props.title)), _react.default.createElement("p", {
+    className: "baseCompanyCard__body--description"
+  }, props.subtitle), potential_earning ? _react.default.createElement("div", {
     className: "baseCompanyCard__body--cost"
   }, _react.default.createElement("h3", {
     className: "baseCompanyCard__body--cost--price"
-  }, "1 199 000 Kr"), _react.default.createElement("span", {
+  }, potential_earning, " Kr"), _react.default.createElement("span", {
     className: "baseCompanyCard__body--cost--label"
-  }, "Potensiell omsetning")), _react.default.createElement("div", {
+  }, "Potensiell omsetning")) : null, binding_count > 0 ? _react.default.createElement("div", {
     className: "baseCompanyCard__body--interested"
   }, _react.default.createElement("h6", {
     className: "baseCompanyCard__body--interested--counter"
-  }, "220 p\xE5meldte!")), children)));
+  }, binding_count, " ", showBindingCount ? 'kjøpte' : 'påmeldte', " ! ")) : null, children)));
 };
 
 var _default = BaseCompanyCard;

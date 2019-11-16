@@ -4,10 +4,20 @@
   align-items: center;
   justify-content: center;
   background-color: $primary;
-  height: 80vh;
+  padding: 12rem 0;
+
+  @include media-breakpoint-down(sm) {
+    height: 100vh;
+  }
 
   &--size {
     width: 4.75rem;
     height: 4.75rem;
+    margin-bottom: 3rem;
+  }
+
+  &--title {
+    color: $white;
+    margin-bottom: 0;
   }
 }

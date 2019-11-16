@@ -1,0 +1,28 @@
+.orderDelivered {
+  padding: 5.625rem 0;
+  text-align: center;
+
+  &--icon {
+    margin-bottom: 2rem;
+  }
+
+  &--title {
+    margin-bottom: 5.625rem;
+  }
+
+  &--action {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    button {
+      width: 40%;
+    }
+
+    @include media-breakpoint-down(sm) {
+      button {
+        width: 90%;
+      }
+    }
+  }
+}

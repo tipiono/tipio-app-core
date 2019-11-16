@@ -6,7 +6,11 @@ const GiveOfferCompanyCard = (props) => {
     return (
         <div>
             <BaseCompanyCard {...props}>
-                <SecondaryButton text={'Gi tilbud'} {...props} />
+                <SecondaryButton 
+                    text={'Gi tilbud'}
+                    loading={props.loading}
+                    onClick={props.onClick}
+                />
             </BaseCompanyCard>
         </div>
     );

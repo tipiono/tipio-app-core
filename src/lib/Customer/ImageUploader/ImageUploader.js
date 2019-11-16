@@ -6,8 +6,9 @@ import Placeholder from './Placeholder';
 import {ImageCropper} from '../../index';
 import IconButton from "../../UI/Buttons/IconButton";
 import RemoveImageIcon from "../../UI/Icons/RemoveImageIcon";
+import ErrorMessage from '../../UI/ErrorMessage/ErrorMessage';
 
-function ImageUploader() {
+function ImageUploader({setFieldValue, name, errors, displayErrors}) {
     const [showCropper, setShowCropper] = useState(false);
     const [cropImage, setCropImage] = useState(null);
     const [initialCropCompleted, setInitialCropCompleted] = useState(null);
@@ -25,6 +26,7 @@ function ImageUploader() {
 
         const t = files.concat(acceptedFiles);
         setFiles(t);
+        setFieldValue('files', t);
         setInitialCropCompleted(false);
         openCropper(acceptedFiles);
         setCroppedImageIndex(files.length + 1);
@@ -39,12 +41,16 @@ function ImageUploader() {
         const f = files.filter(x => x.id !== file.id);
         URL.revokeObjectURL(file.preview);
         setFiles(f);
+        setFieldValue('files', f);
     };
 
     const cropperModalOnClose = () => {
         setShowCropper(false);
         setCropImage(null);
     };
+
+    const cropperSetLoading = () => {
+    }
 
     const cropperOnDone = (blob) => {
         let croppedImageIndex = files.findIndex((x) => (x.id === cropImage.id));
@@ -61,6 +67,7 @@ function ImageUploader() {
         file.preview = URL.createObjectURL(file);
         files[croppedImageIndex] = file;
         setFiles(files);
+        setFieldValue('files', files);
         if (!icc && !initialCropCompleted) {
             setCropImage(files[croppedImageIndex + 1]);
             setShowCropper(false);
@@ -106,7 +113,9 @@ function ImageUploader() {
                     onDone={cropperOnDone}
                     onClose={cropperModalOnClose}
                     showCloseButton={initialCropCompleted}
-                    indicator={indicator}/>
+                    indicator={indicator}
+                    setLoading={cropperSetLoading}
+                />
             )}
             <Dropzone accept="image/*" onDrop={onDrop}>
                 {({getRootProps, getInputProps}) => (
@@ -136,18 +145,22 @@ function ImageUploader() {
                         <div {...getRootProps({className: 'dropzone'})}>
                             <input {...getInputProps()} />
 
-                            <div className="mt-3">
-
-                                {files.length > 0 &&
+                            {files.length > 0 &&
+                            <div className="mt-3 mb-5">
                                 <IconButton text="Last opp produktbilder" onClick={(e) => {
                                     e.preventDefault();
                                 }}/>
-                                }
                             </div>
+                            }
                         </div>
                     </section>
                 )}
             </Dropzone>
+            {displayErrors && errors && errors[name] &&
+            <ErrorMessage
+                content={errors[name].message}
+                color={"bg-red"}
+            />}
         </>
     )
 }

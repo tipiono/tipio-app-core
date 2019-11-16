@@ -12,7 +12,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function Table(props) {
   var rows = props.rows,
       columns = props.columns;
-  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("table", {
+  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("div", {
+    className: "table-responsive"
+  }, _react.default.createElement("table", {
     className: "table table-borderless"
   }, _react.default.createElement("thead", {
     className: "tableHead"
@@ -26,7 +28,7 @@ function Table(props) {
     return _react.default.createElement("tr", null, row && row.map(function (data) {
       return _react.default.createElement("td", null, data);
     }));
-  }))));
+  })))));
 }
 
 var _default = Table;

@@ -1,51 +1,82 @@
 .choose-category {
-    padding: 80px 0;
+  padding: 80px;
 
-    .choose-category-header {
-        padding-bottom: 50px;
+  .choose-category-header {
+    padding-bottom: 20px;
 
-        .category-header-title {
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
+    .category-header-title {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
 
-            .backward {
-                margin-left: -40px;
-                margin-right: 16px;
+      .backward {
+        margin-left: 16px;
 
-                &:hover {
-                    svg * {
-                        fill: $secondary;
-                    }
-                }
-            }
+        &:hover {
+          svg * {
+            fill: $secondary;
+          }
         }
-
-        .category-types {
-            display: flex;
-            flex-direction: row;
-            margin-bottom: 0;
-
-            .category-type-item {
-                margin-right: 24px;
-            }
-        }
+      }
     }
 
+    .category-types {
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 0;
+
+      .category-type-item {
+        margin-right: 24px;
+
+        .category-type-item-link {
+          color: $dark;
+
+          &:hover {
+            text-decoration: none;
+            box-shadow: 0 1px 0 0 $primary;
+          }
+
+          &.selected {
+            box-shadow: 0 1px 0 0 $primary;
+          }
+        }
+      }
+    }
+  }
+
+  .choose-category-footer {
+    padding-top: 50px;
+    width: 50%;
+
+    &--btn {
+      width: 80%;
+    }
+  }
+
+  .browse-categories {
+    justify-content: space-between;
+    margin-left: 0 !important;
+
+    .main-categories {
+      width: 44% !important;
+      padding: 0;
+    }
+  }
+
+  .my-masonry-grid_column {
+    padding: 0;
+  }
+
+  @include media-breakpoint-down(sm) {
+
+    padding: 80px 24px;
     .choose-category-footer {
-        padding-top: 50px;
+      width: 100%;
+
+      &--btn {
+        width: 100%;
+      }
     }
-
-    .browse-categories {
-        //padding: 100px 0;
-        justify-content: space-between;
-        margin-left: 0 !important;
-
-        .main-categories {
-            width: 44% !important;
-            padding: 0;
-        }
-    }
-
+  }
 }
 

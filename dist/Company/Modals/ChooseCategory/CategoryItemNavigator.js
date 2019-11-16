@@ -11,7 +11,7 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _Checkbox = _interopRequireDefault(require("../../../UI/Forms/Checkbox"));
 
-var _InteriorIcon = _interopRequireDefault(require("../../../UI/Icons/InteriorIcon"));
+var _svgInline = _interopRequireDefault(require("../../../Hooks/svgInline"));
 
 var _ArrowDownIcon = _interopRequireDefault(require("../../../UI/Icons/ArrowDownIcon"));
 
@@ -31,9 +31,11 @@ var CategoryItem = function CategoryItem(props) {
     className: 'category-link ',
     href: "#",
     onClick: props.onClick
-  }, props.item.file_store && _react.default.createElement("div", {
+  }, _react.default.createElement("div", {
     className: "category-left-icon"
-  }, _react.default.createElement(_InteriorIcon.default, null)), _react.default.createElement("span", null, props.item.title), _react.default.createElement("div", {
+  }, props.item.file_store && _react.default.createElement(_svgInline.default, {
+    url: props.item.file_store.blob_url
+  })), _react.default.createElement("span", null, props.item.title), _react.default.createElement("div", {
     className: "category-right-icon"
   }, _react.default.createElement(_ArrowDownIcon.default, null)))));
 };

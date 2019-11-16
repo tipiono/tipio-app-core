@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import {SuccessModal, DeleteAccount, AddAdditionalSales, WonBiddingRound} from '../../../lib/index';
+import {SuccessModal, DeleteAccount, AddAdditionalSales, WonBiddingRound, AlreadyHasBid, OrderDelivered, OrderNotDelivered, ExportAs} from '../../../lib/index';
 
 
 storiesOf('Company/Components/Modals', module)
@@ -69,6 +69,40 @@ storiesOf('Company/Components/Modals', module)
                 <WonBiddingRound
                     image={"https://tipio.ams3.cdn.digitaloceanspaces.com/staging/4/tipios/111/1562311855626"}
                 />
+            </div>
+        </>
+    )
+
+    .add('Already has bid', () =>
+        <>
+            <div className="col-3 m-3">
+                <AlreadyHasBid/>
+            </div>
+        </>
+    )
+
+    .add('Order delivered?', () =>
+        <>
+            <div className="col-3 m-3">
+                <OrderDelivered />
+            </div>
+        </>
+    )
+
+
+    .add('Order not delivered?', () =>
+        <>
+            <div className="col-3 m-3">
+                <OrderNotDelivered />
+            </div>
+        </>
+    )
+
+
+    .add('Export As', () =>
+        <>
+            <div className="col-3 m-3">
+                <ExportAs />
             </div>
         </>
     )

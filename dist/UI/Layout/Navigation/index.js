@@ -13,6 +13,10 @@ var _BusinessPrivateNavigationItems = _interopRequireDefault(require("./Business
 
 var _HamburgerMenu = _interopRequireDefault(require("./HamburgerMenu"));
 
+var _SearchInput = _interopRequireDefault(require("./SearchInput"));
+
+var _FilterIcon = _interopRequireDefault(require("../../Icons/FilterIcon"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
@@ -21,7 +25,8 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 
 function Navigation(_ref) {
   var children = _ref.children,
-      props = _objectWithoutProperties(_ref, ["children"]);
+      filterOnClick = _ref.filterOnClick,
+      props = _objectWithoutProperties(_ref, ["children", "filterOnClick"]);
 
   return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("nav", {
     className: "navigation"
@@ -32,7 +37,18 @@ function Navigation(_ref) {
   }, _react.default.createElement("a", {
     className: "logo mr-5",
     href: "/"
-  }, _react.default.createElement(_Logo.default, null)), _react.default.createElement(_BusinessPrivateNavigationItems.default, props), _react.default.createElement(_HamburgerMenu.default, props)))));
+  }, _react.default.createElement(_Logo.default, null)), _react.default.createElement(_BusinessPrivateNavigationItems.default, props), _react.default.createElement("ul", {
+    className: "nav-list ml-auto"
+  }, _react.default.createElement("li", {
+    className: "nav-list-item d-flex align-items-center"
+  }, _react.default.createElement(_SearchInput.default, props)), props.filterButtonVisible && _react.default.createElement("li", {
+    className: "nav-list-item"
+  }, _react.default.createElement("a", {
+    href: "",
+    onClick: filterOnClick
+  }, _react.default.createElement(_FilterIcon.default, null), _react.default.createElement("span", {
+    className: "text-white"
+  }, "Filters"))), _react.default.createElement(_HamburgerMenu.default, props))))));
 }
 
 var _default = Navigation;

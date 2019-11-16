@@ -5,4 +5,10 @@
   font-size: 24px;
   color: $primary;
   width: 100%;
+
+  @include media-breakpoint-down(sm) {
+    height: 52px;
+    font-size: 1rem;
+    border: 1px solid $primary;
+  }
 }

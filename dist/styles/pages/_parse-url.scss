@@ -1,11 +1,41 @@
 .addSales__parseUrl {
-  &--input {
-    margin-bottom: 1.8rem;
+padding: 8rem 0;
+
+  &--title {
+    color: $dark;
+    text-align: center;
+    font-family: 'Riposte-Regular', sans-serif;
+    padding-bottom: 2rem;
   }
 
-  &--submit {
-    width: 75%;
-    margin: 0 auto;
+  &__form {
+    padding-bottom: 4rem;
+
+    &--input {
+      margin-bottom: 1.8rem;
+    }
+
+    &--submit {
+      width: 75%;
+      margin: 0 auto;
+    }
+  }
+
+
+  @include media-breakpoint-down(sm) {
+    padding-top: 6rem;
+
+    &--title {
+     font-size: 1.5rem;
+    }
+
+    &__form {
+      padding-bottom: 1rem;
+
+      &--submit {
+        width: 100%;
+      }
+    }
   }
 }
 

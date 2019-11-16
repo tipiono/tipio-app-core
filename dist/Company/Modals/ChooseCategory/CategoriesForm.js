@@ -35,14 +35,15 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 var breakpointColumnsObj = {
   default: 2,
-  1100: 3,
-  700: 2,
-  500: 2
+  1100: 1,
+  700: 1,
+  500: 1
 };
 
 function CategoriesForm(_ref) {
   var active = _ref.active,
       navigation = _ref.navigation,
+      parent = _ref.parent,
       buttonTitle = _ref.buttonTitle,
       withCheckbox = _ref.withCheckbox,
       onChange = _ref.onChange,
@@ -50,7 +51,10 @@ function CategoriesForm(_ref) {
       disabledButton = _ref.disabledButton,
       selectedMap = _ref.selectedMap,
       onComplete = _ref.onComplete,
-      isLoading = _ref.isLoading;
+      isLoading = _ref.isLoading,
+      setActiveCategory = _ref.setActiveCategory,
+      goBack = _ref.goBack,
+      path = _ref.path;
 
   var _useState = (0, _react.useState)(0),
       _useState2 = _slicedToArray(_useState, 2),
@@ -96,24 +100,35 @@ function CategoriesForm(_ref) {
   }
 
   function navigatorOnSelect(id) {
-    setSelectedCategoryId(0);
+    setSelectedCategoryId(id);
     setSelectedOptionId(0);
-    setSelectedOption(null); // setActiveCategory(id);
+    setSelectedOption(null);
+    setActiveCategory(id);
   }
 
   function subCategoriesOnClick(item) {
-    if (item.height === 1) {// setActiveCategory(item.id);
+    if (item.height === 1) {
+      setActiveCategory(item.id);
     }
   }
 
-  function backButtonOnClick() {// goBack();
+  function headerSubOnClick(item) {
+    setSelectedCategoryId(item.id);
+    setActiveCategory(item.id);
+  }
+
+  function backButtonOnClick() {
+    goBack();
   }
 
   return _react.default.createElement("div", {
     className: "choose-category"
   }, _react.default.createElement(_CategoriesHeader.default, {
     data: navigation,
-    backButtonOnClick: backButtonOnClick
+    parent: parent,
+    backButtonOnClick: backButtonOnClick,
+    subCategoriesOnClick: headerSubOnClick,
+    path: path
   }), _react.default.createElement("div", {
     className: "choose-category-body"
   }, _react.default.createElement(_reactMasonryCss.default, {
@@ -169,8 +184,8 @@ function CategoriesForm(_ref) {
   }))), _react.default.createElement("div", {
     className: "choose-category-footer"
   }, _react.default.createElement(_SecondaryButton.default, {
-    className: "btn btn-lg btn-secondary w-50",
-    text: buttonTitle || 'Legg til kategori',
+    className: "choose-category-footer--btn btn btn-lg btn-secondary",
+    text: buttonTitle || 'Lagre',
     disabled: controlDisabledButton && disabledButton || !controlDisabledButton && !selectedOptionId,
     onClick: chooseCategoryOnClick,
     loading: isLoading
