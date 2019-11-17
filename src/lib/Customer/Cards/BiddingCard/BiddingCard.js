@@ -10,7 +10,8 @@ function BiddingCard({
     salePrice,
     costPrice,
     children,
-    salesProgressBarPercentage
+    salesProgressBarPercentage,
+    bindingCount
 }) {
     return (
         <>
@@ -34,7 +35,7 @@ function BiddingCard({
                     </div>
 
                     <div className="biddingCard__body--salesbar">
-                        <SalesProgressBar percentage={salesProgressBarPercentage}/>
+                        <SalesProgressBar percentage={salesProgressBarPercentage} bindingCount={bindingCount} />
                     </div>
                     <div className="biddingCard__body--share">
                         {children}
