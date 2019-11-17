@@ -2,7 +2,16 @@ import React from "react";
 import TipioCountdown from "../../../UI/TipioCountdown/TipioCountdown";
 import SalesProgressBar from "../../SalesProgressBar/SalesProgressBar";
 
-function BiddingCard({image, title, description, expiresIn, salePrice, costPrice, children}) {
+function BiddingCard({
+    image,
+    title,
+    description,
+    expiresIn,
+    salePrice,
+    costPrice,
+    children,
+    salesProgressBarPercentage
+}) {
     return (
         <>
             <div className="biddingCard">
@@ -25,7 +34,7 @@ function BiddingCard({image, title, description, expiresIn, salePrice, costPrice
                     </div>
 
                     <div className="biddingCard__body--salesbar">
-                        <SalesProgressBar percentage={25}/>
+                        <SalesProgressBar percentage={salesProgressBarPercentage}/>
                     </div>
                     <div className="biddingCard__body--share">
                         {children}
