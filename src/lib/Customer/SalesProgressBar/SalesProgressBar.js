@@ -1,7 +1,8 @@
 import React from "react";
 
 function SalesProgressBar ({
-    percentage
+    percentage,
+    bindingCount
 }) {
     return (
         <>
@@ -11,7 +12,7 @@ function SalesProgressBar ({
                          aria-valuemin="0"
                          aria-valuemax="100"/>
                 </div>
-                <span className="sales__progress--label">Allerede 30 har kjøpt</span>
+                <span className="sales__progress--label">Allerede {bindingCount} har kjøpt</span>
             </div>
 
         </>
