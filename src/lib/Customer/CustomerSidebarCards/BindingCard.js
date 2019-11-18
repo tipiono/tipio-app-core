@@ -5,26 +5,30 @@ import SalesProgressBarTooltip from "../SalesProgressBarTooltip/SalesProgressBar
 import ShareButton from './ShareButton';
 import HorizontalTimeline from "../Timelines/HorizontalTimeline";
 
-const BindingCard = ({children, state, ...props}) => {
+const BindingCard = ({children, state, firstRange, secondRange, ...props}) => {
     return (
         <BaseCard {...props}>
-
             <ul className="customerSidebarCard__footer__salePrice">
-                <li className="customerSidebarCard__footer__salePrice--minBuyers">
-                    <h3 className="customerSidebarCard__footer__salePrice--minBuyers--price">2 490 Kr</h3>
-                    <span className="customerSidebarCard__footer__salePrice--minBuyers--label">Pris fra 1-50 kjøp</span>
-                </li>
-                <li className="customerSidebarCard__footer__salePrice--maxBuyers">
-                    <h3 className="customerSidebarCard__footer__salePrice--maxBuyers--price"> 1 990 Kr</h3>
-                    <span className="customerSidebarCard__footer__salePrice--maxBuyers--label">Pris fra 51 kjøp</span>
-                </li>
+                {
+                    firstRange ? (
+                        <li className="customerSidebarCard__footer__salePrice--minBuyers">
+                            <h3 className="customerSidebarCard__footer__salePrice--minBuyers--price">{firstRange.price} Kr</h3>
+                            <span className="customerSidebarCard__footer__salePrice--minBuyers--label">Pris fra {firstRange.from}-{firstRange.to} kjøp</span>
+                        </li>
+                    ) : (null)
+                }
+                {
+                    secondRange ? (
+                        <li className="customerSidebarCard__footer__salePrice--maxBuyers">
+                        <h3 className="customerSidebarCard__footer__salePrice--maxBuyers--price"> {secondRange.price} Kr</h3>
+                        <span className="customerSidebarCard__footer__salePrice--maxBuyers--label">Pris fra {secondRange.to} kjøp</span>
+                    </li>
+                    ) : (null)
+                }
             </ul>
-
             <div className="customerSidebarCard__footer--progressBar">
-                <SalesProgressBarTooltip percentage={50}/>
+                <SalesProgressBarTooltip bindCount={props.bindCount} percentage={50}/>
             </div>
-
-
             {state !== 'bought' && <>
                 <SecondaryButton text={'Legg i handlekurv'}/>
             </>}
@@ -37,8 +41,6 @@ const BindingCard = ({children, state, ...props}) => {
                 <div className="customerSidebarCard__footer--timeline">
                     <HorizontalTimeline/>
                 </div>
-
-
             </>}
         </BaseCard>
     )

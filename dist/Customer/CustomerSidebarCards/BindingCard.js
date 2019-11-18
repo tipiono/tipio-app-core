@@ -26,25 +26,28 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 var BindingCard = function BindingCard(_ref) {
   var children = _ref.children,
       state = _ref.state,
-      props = _objectWithoutProperties(_ref, ["children", "state"]);
+      firstRange = _ref.firstRange,
+      secondRange = _ref.secondRange,
+      props = _objectWithoutProperties(_ref, ["children", "state", "firstRange", "secondRange"]);
 
   return _react.default.createElement(_BaseCard.default, props, _react.default.createElement("ul", {
     className: "customerSidebarCard__footer__salePrice"
-  }, _react.default.createElement("li", {
+  }, firstRange ? _react.default.createElement("li", {
     className: "customerSidebarCard__footer__salePrice--minBuyers"
   }, _react.default.createElement("h3", {
     className: "customerSidebarCard__footer__salePrice--minBuyers--price"
-  }, "2 490 Kr"), _react.default.createElement("span", {
+  }, firstRange.price, " Kr"), _react.default.createElement("span", {
     className: "customerSidebarCard__footer__salePrice--minBuyers--label"
-  }, "Pris fra 1-50 kj\xF8p")), _react.default.createElement("li", {
+  }, "Pris fra ", firstRange.from, "-", firstRange.to, " kj\xF8p")) : null, secondRange ? _react.default.createElement("li", {
     className: "customerSidebarCard__footer__salePrice--maxBuyers"
   }, _react.default.createElement("h3", {
     className: "customerSidebarCard__footer__salePrice--maxBuyers--price"
-  }, " 1 990 Kr"), _react.default.createElement("span", {
+  }, " ", secondRange.price, " Kr"), _react.default.createElement("span", {
     className: "customerSidebarCard__footer__salePrice--maxBuyers--label"
-  }, "Pris fra 51 kj\xF8p"))), _react.default.createElement("div", {
+  }, "Pris fra ", secondRange.to, " kj\xF8p")) : null), _react.default.createElement("div", {
     className: "customerSidebarCard__footer--progressBar"
   }, _react.default.createElement(_SalesProgressBarTooltip.default, {
+    bindCount: props.bindCount,
     percentage: 50
   })), state !== 'bought' && _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_SecondaryButton.default, {
     text: 'Legg i handlekurv'
