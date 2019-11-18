@@ -8,7 +8,7 @@ import IconButton from "../../UI/Buttons/IconButton";
 import RemoveImageIcon from "../../UI/Icons/RemoveImageIcon";
 import ErrorMessage from '../../UI/ErrorMessage/ErrorMessage';
 
-function ImageUploader({ setFieldValue, name, errors, displayErrors }) {
+function ImageUploader({setFieldValue, name, errors, displayErrors}) {
     const [showCropper, setShowCropper] = useState(false);
     const [cropImage, setCropImage] = useState(null);
     const [initialCropCompleted, setInitialCropCompleted] = useState(null);
@@ -145,21 +145,21 @@ function ImageUploader({ setFieldValue, name, errors, displayErrors }) {
                         <div {...getRootProps({className: 'dropzone'})}>
                             <input {...getInputProps()} />
 
+                            {files.length > 0 &&
                             <div className="mt-3 mb-5">
-                                {files.length > 0 &&
                                 <IconButton text="Last opp produktbilder" onClick={(e) => {
                                     e.preventDefault();
                                 }}/>
-                                }
                             </div>
+                            }
                         </div>
                     </section>
                 )}
             </Dropzone>
             {displayErrors && errors && errors[name] &&
-                <ErrorMessage
-                    content={errors[name].message}
-                    color={"bg-red"}
+            <ErrorMessage
+                content={errors[name].message}
+                color={"bg-red"}
             />}
         </>
     )

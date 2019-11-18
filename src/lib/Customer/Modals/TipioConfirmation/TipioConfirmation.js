@@ -2,10 +2,10 @@ import React from "react";
 import {Modal} from '../../../UI/Modal/Modal'
 import TipioCountdown from "../../../UI/TipioCountdown/TipioCountdown";
 
-function TipioConfirmation({image, expiresIn}) {
+function TipioConfirmation({ image, expiresIn, ...props }) {
     return (
         <>
-            <Modal showCloseButton>
+            <Modal showCloseButton {...props}>
                 <div className="tipio__confirmation">
 
                     <a className="tipio__confirmation--image" href="">

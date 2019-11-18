@@ -36,6 +36,7 @@ import PillTabs from './UI/PillTabs/PillTabs';
 import Avatar from './UI/Avatar/Avatar';
 import SubNav from './UI/SubNav/SubNav';
 import { DropDown, DropDownItem } from './UI/DdropDown/DropDown';
+import { NewDropdown, NewDropdownItem } from './UI/NewDropdown/NewDropdown';
 import FromToInput from './UI/Forms/FromToInput';
 import IconButton from './UI/Buttons/IconButton';
 import ButtonXL from './UI/Buttons/ButtonXL';
@@ -43,7 +44,8 @@ import ShowMoreText from './UI/Text/ShowMoreText';
 import PriceInput from './UI/Forms/PriceInput';
 import ContentSpinner from './UI/Spinner/ContentSpinner';
 import Table from './UI/Table';
-import PublishedBy from './UI/PublishedBy/PublishedBy';
+import PublishedByWithDate from './UI/PublishedBy/PublishedByWithDate';
+import PublishedByWithDropdown from './UI/PublishedBy/PublishedByWithDropdown';
 import SelectImages from './UI/SelectImages';
 import ErrorMessage from './UI/ErrorMessage/ErrorMessage';
 import CircleChart from './UI/CircleChart/CircleChart';
@@ -216,12 +218,15 @@ export {
     CompanyAddBidCard,
     DropDown,
     DropDownItem,
+    NewDropdown,
+    NewDropdownItem,
     FromToInput,
     ShowMoreText,
     PriceInput,
     ContentSpinner,
     Table,
-    PublishedBy,
+    PublishedByWithDate,
+    PublishedByWithDropdown,
     IconButton,
     SelectImages,
     ErrorMessage,

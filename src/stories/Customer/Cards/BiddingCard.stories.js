@@ -26,6 +26,7 @@ storiesOf('Customer/Components/Cards/BiddingCard', module)
                     description={"Sub heading"}
                     salePrice={"800 Kr"}
                     costPrice={"1299 Kr"}
+                    salesProgressBarPercentage={35}
                 >
                     <BiddingCardShareButton />
                 </BiddingCard>

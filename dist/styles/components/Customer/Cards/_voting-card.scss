@@ -9,6 +9,7 @@
       max-width: 100%;
       height: auto;
     }
+
     &--timeLeft {
       span {
         position: absolute;
@@ -20,14 +21,16 @@
 
   &__body {
     padding: 1.25rem;
+    background-color: $white;
 
     &--interested {
       margin-bottom: 1.6rem;
 
       &--counter {
         color: $cyan;
-        margin-bottom: 0rem;
+        margin-bottom: 0;
       }
+
       &--label {
         font-size: .75rem;
         font-family: 'Riposte-Medium', sans-serif;
@@ -44,6 +47,7 @@
         color: $gray-700;
         margin-bottom: .3rem;
       }
+
       &--description {
         font-family: 'Riposte-Light', sans-serif;
       }

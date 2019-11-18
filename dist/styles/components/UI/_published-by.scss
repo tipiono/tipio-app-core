@@ -36,6 +36,21 @@
     color: $gray-500;
   }
 
+  &__dropdown {
+    .dropdown-toggle {
+      &:after {
+        display: none;
+      }
+    }
+
+    .dropdown-menu {
+      .dropdown-item {
+        padding: .75rem 2.5rem .75rem 2.5rem;
+        color: $gray-700;
+      }
+    }
+  }
+
   @include media-breakpoint-down(md) {
     &__user {
       &--avatar {
