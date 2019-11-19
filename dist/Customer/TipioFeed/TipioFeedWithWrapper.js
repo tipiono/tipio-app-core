@@ -32,9 +32,11 @@ var TipioFeedWithWrapper = function TipioFeedWithWrapper(props) {
 
   if (props.tipios) {
     for (var i = 0; i < props.tipios.length; i += 1) {
-      var item = props.tipios[i]; // if (i === 0 && showAddTipioButton) {
-      //     items.push("<AddTipioButton />");
-      // }
+      var item = props.tipios[i];
+
+      if (i === 0 && props.AddTipioButton) {
+        items.push(_react.default.createElement(props.AddTipioButton, null));
+      }
 
       if (props.card) {
         items.push(_react.default.createElement("div", {

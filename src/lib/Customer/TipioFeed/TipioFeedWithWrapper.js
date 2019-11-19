@@ -19,9 +19,9 @@ const TipioFeedWithWrapper = props => {
     if (props.tipios) {
         for (let i = 0; i < props.tipios.length; i += 1) {
             const item = props.tipios[i];
-            // if (i === 0 && showAddTipioButton) {
-            //     items.push("<AddTipioButton />");
-            // }
+            if (i === 0 && props.AddTipioButton) {
+                items.push(<props.AddTipioButton />);
+            }
             if (props.card) {
                 items.push(<div className="mb-3 mb-md-4">
                     <WithAnimation>
