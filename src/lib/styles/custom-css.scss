@@ -85,16 +85,6 @@
     padding: .75rem 1.25rem;
 }
 
-.badge-light {
-    color: $gray-600;
-    font-family: 'Riposte-Light', sans-serif;
-}
-
-.badge-outline {
-    background-color: transparent;
-    border: 1px solid $gray-200;
-}
-
 .custom-select {
     background: url("/src/static/assets/images/down.svg") no-repeat right 8px center !important;
 }
@@ -169,20 +159,6 @@ h1, h2, h3, h4, h5, h6 {
             color: $gray-400;
         }
     }
-}
-
-//Shoping bagde
-.badge-light {
-    width: 15.6px;
-    height: 10.8px;
-    border-radius: 9.6px;
-    line-height: 0.1;
-    position: absolute;
-    top: 0px !important;
-    z-index: 9;
-    BACKGROUND: #4abcac;
-    left: 13px;
-    color: #3e2187 !important;
 }
 
 .Toastify__toast-container {
