@@ -16,7 +16,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function TipioWithOffer(_ref) {
   var image = _ref.image,
       sale = _ref.sale,
-      joined = _ref.joined;
+      joined = _ref.joined,
+      nextOnClick = _ref.nextOnClick;
   return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_Modal.Modal, {
     showCloseButton: true
   }, _react.default.createElement("div", {
@@ -37,7 +38,8 @@ function TipioWithOffer(_ref) {
   }, sale), _react.default.createElement("div", {
     className: "tipio__withOffer--action"
   }, _react.default.createElement(_SecondaryButton.default, {
-    text: "Neste"
+    text: "Neste",
+    onClick: nextOnClick
   })))));
 }
 

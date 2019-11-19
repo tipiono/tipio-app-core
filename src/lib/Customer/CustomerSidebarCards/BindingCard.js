@@ -1,11 +1,18 @@
 import React from 'react';
 import BaseCard from './BaseCard';
-import SecondaryButton from "../../UI/Buttons/SecondaryButton";
+import SecondaryOutlineButton from "../../UI/Buttons/SecondaryOutlineButton";
 import SalesProgressBarTooltip from "../SalesProgressBarTooltip/SalesProgressBarTooltip";
 import ShareButton from './ShareButton';
 import HorizontalTimeline from "../Timelines/HorizontalTimeline";
 
-const BindingCard = ({children, state, firstRange, secondRange, ...props}) => {
+const BindingCard = ({
+    children,
+    state, 
+    firstRange,
+    secondRange,
+    onShareClick,
+    onBindClick,
+...props}) => {
     return (
         <BaseCard {...props}>
             <ul className="customerSidebarCard__footer__salePrice">
@@ -30,16 +37,16 @@ const BindingCard = ({children, state, firstRange, secondRange, ...props}) => {
                 <SalesProgressBarTooltip bindCount={props.bindCount} percentage={50}/>
             </div>
             {state !== 'bought' && <>
-                <SecondaryButton text={'Legg i handlekurv'}/>
+                <SecondaryOutlineButton text={'Legg i handlekurv'} onClick={onBindClick} />
             </>}
 
             {state === 'bought' && <>
                 <div className="customerSidebarCard__footer--action">
-                    <ShareButton/>
+                    <ShareButton onClick={onShareClick} />
                 </div>
 
                 <div className="customerSidebarCard__footer--timeline">
-                    <HorizontalTimeline/>
+                    <HorizontalTimeline />
                 </div>
             </>}
         </BaseCard>

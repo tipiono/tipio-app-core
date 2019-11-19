@@ -9,7 +9,7 @@ var _react = _interopRequireDefault(require("react"));
 
 var _BaseCard = _interopRequireDefault(require("./BaseCard"));
 
-var _SecondaryButton = _interopRequireDefault(require("../../UI/Buttons/SecondaryButton"));
+var _SecondaryOutlineButton = _interopRequireDefault(require("../../UI/Buttons/SecondaryOutlineButton"));
 
 var _SalesProgressBarTooltip = _interopRequireDefault(require("../SalesProgressBarTooltip/SalesProgressBarTooltip"));
 
@@ -28,7 +28,9 @@ var BindingCard = function BindingCard(_ref) {
       state = _ref.state,
       firstRange = _ref.firstRange,
       secondRange = _ref.secondRange,
-      props = _objectWithoutProperties(_ref, ["children", "state", "firstRange", "secondRange"]);
+      onShareClick = _ref.onShareClick,
+      onBindClick = _ref.onBindClick,
+      props = _objectWithoutProperties(_ref, ["children", "state", "firstRange", "secondRange", "onShareClick", "onBindClick"]);
 
   return _react.default.createElement(_BaseCard.default, props, _react.default.createElement("ul", {
     className: "customerSidebarCard__footer__salePrice"
@@ -49,11 +51,14 @@ var BindingCard = function BindingCard(_ref) {
   }, _react.default.createElement(_SalesProgressBarTooltip.default, {
     bindCount: props.bindCount,
     percentage: 50
-  })), state !== 'bought' && _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_SecondaryButton.default, {
-    text: 'Legg i handlekurv'
+  })), state !== 'bought' && _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_SecondaryOutlineButton.default, {
+    text: 'Legg i handlekurv',
+    onClick: onBindClick
   })), state === 'bought' && _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("div", {
     className: "customerSidebarCard__footer--action"
-  }, _react.default.createElement(_ShareButton.default, null)), _react.default.createElement("div", {
+  }, _react.default.createElement(_ShareButton.default, {
+    onClick: onShareClick
+  })), _react.default.createElement("div", {
     className: "customerSidebarCard__footer--timeline"
   }, _react.default.createElement(_HorizontalTimeline.default, null))));
 };
