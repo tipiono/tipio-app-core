@@ -1,6 +1,5 @@
 import React from "react";
 import LinkButton from "../../UI/Buttons/LinkButton";
-import { Link } from 'react-router-dom';
 
 function HorizontalTimeline({}) {
     return (
@@ -14,7 +13,8 @@ function HorizontalTimeline({}) {
 
                 <div className="horizontal-timeline-content">
                     <h4 className="timeline-item-title">Påmelding pågår</h4>
-                    <LinkButton text="Sjekk status" to="/" />
+                    {/* <LinkButton text="Sjekk status" to="/" /> */}
+                    <a href="#">Sjekk status</a>
                 </div>
 
             </div>
