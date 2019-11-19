@@ -23,9 +23,10 @@ function VotingCard(_ref) {
   }, _react.default.createElement("div", {
     className: "votingCard__header"
   }, _react.default.createElement("a", {
+    className: "votingCard__header--preview lazy-image",
     href: ""
   }, _react.default.createElement("img", {
-    className: "votingCard__header--image",
+    className: "votingCard__header--preview--image lazyload",
     src: image,
     alt: ""
   })), _react.default.createElement("div", {

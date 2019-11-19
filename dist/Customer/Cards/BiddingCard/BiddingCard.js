@@ -28,9 +28,10 @@ function BiddingCard(_ref) {
   }, _react.default.createElement("div", {
     className: "biddingCard__header"
   }, _react.default.createElement("a", {
+    className: "biddingCard__header--preview lazy-image",
     href: ""
   }, _react.default.createElement("img", {
-    className: "biddingCard__header--image",
+    className: "biddingCard__header--preview--image lazyload",
     src: image,
     alt: ""
   })), _react.default.createElement("div", {

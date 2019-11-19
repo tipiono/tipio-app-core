@@ -17,7 +17,7 @@ function BiddingCard({
         <>
             <div className="biddingCard">
                 <div className="biddingCard__header">
-                    <a href=""><img className="biddingCard__header--image" src={image} alt=""/></a>
+                    <a className="biddingCard__header--preview lazy-image" href=""><img className="biddingCard__header--preview--image lazyload" src={image} alt=""/></a>
                     <div className="biddingCard__header--timeLeft">
                         <TipioCountdown className="timer" expires_in={expiresIn}/>
                     </div>
