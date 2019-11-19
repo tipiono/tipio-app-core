@@ -27,10 +27,10 @@ function SaleCard(_ref) {
   }, _react.default.createElement("div", {
     className: "saleCard__preview"
   }, _react.default.createElement("a", {
-    className: "saleCard__preview--image",
+    className: "saleCard__preview--image lazy-image",
     href: ""
   }, _react.default.createElement("img", {
-    className: "img-fluid",
+    className: "img-fluid lazyload",
     src: image,
     alt: ""
   }), _react.default.createElement("span", {

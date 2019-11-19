@@ -20,15 +20,18 @@ function BiddingCard(_ref) {
       expiresIn = _ref.expiresIn,
       salePrice = _ref.salePrice,
       costPrice = _ref.costPrice,
-      children = _ref.children;
+      children = _ref.children,
+      salesProgressBarPercentage = _ref.salesProgressBarPercentage,
+      bindingCount = _ref.bindingCount;
   return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("div", {
     className: "biddingCard"
   }, _react.default.createElement("div", {
     className: "biddingCard__header"
   }, _react.default.createElement("a", {
+    className: "biddingCard__header--preview lazy-image",
     href: ""
   }, _react.default.createElement("img", {
-    className: "biddingCard__header--image",
+    className: "biddingCard__header--preview--image lazyload",
     src: image,
     alt: ""
   })), _react.default.createElement("div", {
@@ -53,7 +56,8 @@ function BiddingCard(_ref) {
   }, description)), _react.default.createElement("div", {
     className: "biddingCard__body--salesbar"
   }, _react.default.createElement(_SalesProgressBar.default, {
-    percentage: 25
+    percentage: salesProgressBarPercentage,
+    bindingCount: bindingCount
   })), _react.default.createElement("div", {
     className: "biddingCard__body--share"
   }, children))));

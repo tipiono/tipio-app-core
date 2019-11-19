@@ -1,7 +1,8 @@
 import React from "react";
 
 function SalesProgressBarTooltip ({
-                              percentage
+                              percentage,
+                              bindCount
                           }) {
     return (
         <>
@@ -21,7 +22,7 @@ function SalesProgressBarTooltip ({
                     </svg>
 
 
-                    <span>36 har allerede kjøpt!</span>
+                    <span>{bindCount} har allerede kjøpt!</span>
                 </div>
             </div>
 

@@ -1,10 +1,10 @@
 import React from "react";
 import {Modal} from '../Modal'
 
-function SuccessModal({successTitle, successDescription}) {
+function SuccessModal({successTitle, successDescription, ...props}) {
     return (
         <>
-            <Modal>
+            <Modal {...props}>
                 <div className="successModal">
                     <svg className="successModal--icon" width={75} height={75}>
                         <g fill="none" fillRule="evenodd" strokeWidth={4}>

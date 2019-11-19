@@ -2,12 +2,22 @@ import React from "react";
 import TipioCountdown from "../../../UI/TipioCountdown/TipioCountdown";
 import SalesProgressBar from "../../SalesProgressBar/SalesProgressBar";
 
-function BiddingCard({image, title, description, expiresIn, salePrice, costPrice, children}) {
+function BiddingCard({
+    image,
+    title,
+    description,
+    expiresIn,
+    salePrice,
+    costPrice,
+    children,
+    salesProgressBarPercentage,
+    bindingCount
+}) {
     return (
         <>
             <div className="biddingCard">
                 <div className="biddingCard__header">
-                    <a href=""><img className="biddingCard__header--image" src={image} alt=""/></a>
+                    <a className="biddingCard__header--preview lazy-image" href=""><img className="biddingCard__header--preview--image lazyload" src={image} alt=""/></a>
                     <div className="biddingCard__header--timeLeft">
                         <TipioCountdown className="timer" expires_in={expiresIn}/>
                     </div>
@@ -25,7 +35,7 @@ function BiddingCard({image, title, description, expiresIn, salePrice, costPrice
                     </div>
 
                     <div className="biddingCard__body--salesbar">
-                        <SalesProgressBar percentage={25}/>
+                        <SalesProgressBar percentage={salesProgressBarPercentage} bindingCount={bindingCount} />
                     </div>
                     <div className="biddingCard__body--share">
                         {children}

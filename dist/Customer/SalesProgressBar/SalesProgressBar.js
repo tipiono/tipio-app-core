@@ -10,7 +10,8 @@ var _react = _interopRequireDefault(require("react"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function SalesProgressBar(_ref) {
-  var percentage = _ref.percentage;
+  var percentage = _ref.percentage,
+      bindingCount = _ref.bindingCount;
   return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("div", {
     className: "sales__progress my-3"
   }, _react.default.createElement("div", {
@@ -23,7 +24,7 @@ function SalesProgressBar(_ref) {
     "aria-valuemax": "100"
   })), _react.default.createElement("span", {
     className: "sales__progress--label"
-  }, "Allerede 30 har kj\xF8pt")));
+  }, "Allerede ", bindingCount, " har kj\xF8pt")));
 }
 
 var _default = SalesProgressBar;

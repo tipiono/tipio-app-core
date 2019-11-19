@@ -10,7 +10,7 @@ export default React.forwardRef(({placeholder, name, errors, displayErrors, ...p
         </label>
         {displayErrors && errors && errors[name] && 
         <ErrorMessage
-            content={errors[name].message}
+            content={errors[name].message || errors[name]}
             color={"bg-red"}
         />}
     </>

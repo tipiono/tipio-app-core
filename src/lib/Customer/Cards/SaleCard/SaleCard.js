@@ -8,8 +8,8 @@ function SaleCard({image, title, salePrice, costPrice, saleDiscount, children, d
             <div className="saleCard">
                 <div className="d-flex flex-row mb-4">
                     <div className="saleCard__preview">
-                        <a className="saleCard__preview--image" href="">
-                            <img className="img-fluid" src={image} alt=""/>
+                        <a className="saleCard__preview--image lazy-image" href="">
+                            <img className="img-fluid lazyload" src={image} alt=""/>
                             <span className="saleCard__preview--discount">{saleDiscount}</span>
                         </a>
                     </div>
