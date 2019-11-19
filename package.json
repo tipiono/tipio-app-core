@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "main": "dist/index.js",
   "module": "dist/index.js",
+  "repository": "/tipio-app-core",
   "files": [
     "dist"
   ],
