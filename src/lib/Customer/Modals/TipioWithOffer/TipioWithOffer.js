@@ -3,7 +3,7 @@ import {Modal} from '../../../UI/Modal/Modal'
 import SecondaryButton from "../../../UI/Buttons/SecondaryButton";
 
 
-function TipioWithOffer({image, sale, joined}) {
+function TipioWithOffer({ image, sale, joined, nextOnClick }) {
     return (
         <>
             <Modal showCloseButton>
@@ -20,7 +20,7 @@ function TipioWithOffer({image, sale, joined}) {
                     <h4 className="tipio__withOffer--salePrice">{sale}</h4>
 
                     <div className="tipio__withOffer--action">
-                        <SecondaryButton text="Neste"/>
+                        <SecondaryButton text="Neste" onClick={nextOnClick} />
                     </div>
                 </div>
             </Modal>
