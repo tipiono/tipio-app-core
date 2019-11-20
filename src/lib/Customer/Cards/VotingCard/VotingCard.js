@@ -6,7 +6,14 @@ function VotingCard({image, interestedCounter, title, description, expiresIn, ch
         <>
             <div className="votingCard">
                 <div className="votingCard__header">
-                    <a className="votingCard__header--preview lazy-image" href=""><img className="votingCard__header--preview--image lazyload" src={image} alt=""/></a>
+                    <a className="lazy-image votingCard__header--preview" href="">
+                        <img className="lazyload votingCard__header--preview--image"
+                             src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 2'%3E%3C/svg%3E"
+                             data-src={image}
+                             alt=""
+                        />
+                    </a>
+
                     <div className="votingCard__header--timeLeft">
                         <TipioCountdown className="timer" expires_in={expiresIn}/>
                     </div>
