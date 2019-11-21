@@ -24,7 +24,6 @@ var SecondaryButton = function SecondaryButton(_ref) {
       props = _objectWithoutProperties(_ref, ["loading", "text", "onClick"]);
 
   return _react.default.createElement("button", _extends({
-    id: "tipio-join-button",
     type: "button",
     disabled: loading,
     className: "btn btn-secondary btn-block btn-lg",
