@@ -8,7 +8,6 @@ import SecondaryOutlineButton from "./UI/Buttons/SecondaryOutlineButton";
 import DisabledButton from "./UI/Buttons/DisabledButton";
 import GrayButton from "./UI/Buttons/GrayButton";
 import GrayOutlineButton from "./UI/Buttons/GrayOutlineButton";
-import LinkButton from "./UI/Buttons/LinkButton";
 import AddCategoryButton from "./UI/Buttons/AddCategoryButton";
 import SelectedCategoryButton from "./UI/Buttons/SelectedCategoryButton";
 import { Modal, ModalType } from "./UI/Modal/Modal";
@@ -142,7 +141,6 @@ export {
     SecondaryButton,
     SecondaryOutlineButton,
     DisabledButton,
-    LinkButton,
     GrayButton,
     Modal,
     ModalType,
@@ -253,5 +251,5 @@ export {
     AlreadyHasBid,
     OrderDelivered,
     OrderNotDelivered,
-    ExportAs
+    ExportAs,
 };

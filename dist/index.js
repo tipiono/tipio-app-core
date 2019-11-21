@@ -39,12 +39,6 @@ Object.defineProperty(exports, "GrayOutlineButton", {
     return _GrayOutlineButton.default;
   }
 });
-Object.defineProperty(exports, "LinkButton", {
-  enumerable: true,
-  get: function get() {
-    return _LinkButton.default;
-  }
-});
 Object.defineProperty(exports, "AddCategoryButton", {
   enumerable: true,
   get: function get() {
@@ -706,8 +700,6 @@ var _DisabledButton = _interopRequireDefault(require("./UI/Buttons/DisabledButto
 var _GrayButton = _interopRequireDefault(require("./UI/Buttons/GrayButton"));
 
 var _GrayOutlineButton = _interopRequireDefault(require("./UI/Buttons/GrayOutlineButton"));
-
-var _LinkButton = _interopRequireDefault(require("./UI/Buttons/LinkButton"));
 
 var _AddCategoryButton = _interopRequireDefault(require("./UI/Buttons/AddCategoryButton"));
 
