@@ -35,7 +35,6 @@
     'components/tipio-status',
     'components/Customer/Modals/choose-category',
     'components/_empty_interested',
-    'components/_empty-recived-offers.scss',
     'components/_empty-orders.scss',
     'components/tipio-posted-by',
     'components/tipio-gallery',
@@ -124,7 +123,6 @@
 
 // 5. Page-specific styles
 @import
-    'pages/your-tipios',
     'pages/credit-cart',
     'pages/tipio-view',
     'pages/select-category-page';

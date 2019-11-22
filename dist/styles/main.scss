@@ -21,7 +21,7 @@
     'components/hamburger-button',
     'components/special-card',
     'components/shopping-bag-special-card',
-    'components/cart-item',
+    'components/Customer/Cards/cart-product',
     'components/order-item',
     'components/invite-friends',
     'components/completed-tipio',
@@ -35,7 +35,6 @@
     'components/tipio-status',
     'components/Customer/Modals/choose-category',
     'components/_empty_interested',
-    'components/_empty-recived-offers.scss',
     'components/_empty-orders.scss',
     'components/tipio-posted-by',
     'components/tipio-gallery',
@@ -110,6 +109,7 @@
     'components/Customer/Cards/voting-card',
     'components/Customer/Cards/bidding-card',
     'components/Customer/Cards/sale-card',
+    'components/Customer/Cards/shopping-bag-item',
     'components/Customer/CustomerSidebarCards/customer-sidebar-card',
     'components/Customer/image-uploader',
     'components/Customer/horizontal-timeline';
@@ -123,7 +123,6 @@
 
 // 5. Page-specific styles
 @import
-    'pages/your-tipios',
     'pages/credit-cart',
     'pages/tipio-view',
     'pages/select-category-page';
