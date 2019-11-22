@@ -316,7 +316,7 @@ body.noscroll {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 30px 40px;
+    padding: 24px 40px;
     border-bottom: 10px solid $gray-100;
 
     .shoppingbag-action-item {
@@ -408,14 +408,6 @@ body.noscroll {
     .shoppingbag-action {
       order: 3;
       border-bottom: none;
-    }
-
-    .cart-item {
-      &:last-child {
-        border-bottom: none;
-        margin-bottom: 0;
-        padding-bottom: 0;
-      }
     }
   }
 }
