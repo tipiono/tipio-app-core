@@ -687,6 +687,12 @@ Object.defineProperty(exports, "_util_CalculateDiscountPercentage", {
     return _calculateDiscountPercentage.default;
   }
 });
+Object.defineProperty(exports, "_util_FormatText", {
+  enumerable: true,
+  get: function get() {
+    return _formatText.default;
+  }
+});
 exports.CountdownType = void 0;
 
 var _main = _interopRequireDefault(require("./styles/main.scss"));
@@ -914,6 +920,8 @@ var _FilterIcon = _interopRequireDefault(require("./UI/Icons/FilterIcon"));
 var _FilterIconCyan = _interopRequireDefault(require("./UI/Icons/FilterIconCyan"));
 
 var _calculateDiscountPercentage = _interopRequireDefault(require("./Util/calculateDiscountPercentage"));
+
+var _formatText = _interopRequireDefault(require("./Util/formatText"));
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
 

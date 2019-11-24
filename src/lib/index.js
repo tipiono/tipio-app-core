@@ -135,6 +135,7 @@ import FilterIconCyan from './UI/Icons/FilterIconCyan';
  * UTILS
  */
 import calculateDiscountPercentage from './Util/calculateDiscountPercentage';
+import formatText from './Util/formatText';
 
 export {
     styles,
@@ -231,6 +232,7 @@ export {
     AddMoreSaleCompanyCard,
     RemoveImageIcon,
     calculateDiscountPercentage as _util_CalculateDiscountPercentage,
+    formatText as _util_FormatText,
     MaterialSearch,
     ExportIcon,
     CircleChart,
