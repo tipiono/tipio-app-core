@@ -130,6 +130,7 @@ import SearchIcon from './UI/Icons/SearchIcon';
 import CloseIcon from './UI/Icons/CloseIcon';
 import FilterIcon from './UI/Icons/FilterIcon';
 import FilterIconCyan from './UI/Icons/FilterIconCyan';
+import EmptyBagIcon from './UI/Icons/EmptyBagIcon';
 
 /**
  * UTILS
@@ -252,4 +253,5 @@ export {
     OrderDelivered,
     OrderNotDelivered,
     ExportAs,
+    EmptyBagIcon,
 };

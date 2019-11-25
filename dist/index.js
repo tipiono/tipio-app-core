@@ -681,6 +681,12 @@ Object.defineProperty(exports, "FilterIconCyan", {
     return _FilterIconCyan.default;
   }
 });
+Object.defineProperty(exports, "EmptyBagIcon", {
+  enumerable: true,
+  get: function get() {
+    return _EmptyBagIcon.default;
+  }
+});
 Object.defineProperty(exports, "_util_CalculateDiscountPercentage", {
   enumerable: true,
   get: function get() {
@@ -912,6 +918,8 @@ var _CloseIcon = _interopRequireDefault(require("./UI/Icons/CloseIcon"));
 var _FilterIcon = _interopRequireDefault(require("./UI/Icons/FilterIcon"));
 
 var _FilterIconCyan = _interopRequireDefault(require("./UI/Icons/FilterIconCyan"));
+
+var _EmptyBagIcon = _interopRequireDefault(require("./UI/Icons/EmptyBagIcon"));
 
 var _calculateDiscountPercentage = _interopRequireDefault(require("./Util/calculateDiscountPercentage"));
 
