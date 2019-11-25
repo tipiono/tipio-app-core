@@ -316,7 +316,7 @@ body.noscroll {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 30px 40px;
+    padding: 24px 40px;
     border-bottom: 10px solid $gray-100;
 
     .shoppingbag-action-item {
@@ -369,6 +369,18 @@ body.noscroll {
         border-bottom: none;
       }
     }
+
+    .shoppingbag-body-empty {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+
+      .shoppingbag-body-empty-icon {
+        margin-bottom: 1rem;
+      }
+    }
   }
 
   @include media-breakpoint-down(sm) {
@@ -408,14 +420,6 @@ body.noscroll {
     .shoppingbag-action {
       order: 3;
       border-bottom: none;
-    }
-
-    .cart-item {
-      &:last-child {
-        border-bottom: none;
-        margin-bottom: 0;
-        padding-bottom: 0;
-      }
     }
   }
 }

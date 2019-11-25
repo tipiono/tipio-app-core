@@ -17,7 +17,10 @@ function SalesProgressBar(_ref) {
   }, _react.default.createElement("div", {
     className: "sales__progress--bar progress"
   }, _react.default.createElement("div", {
-    className: "progress-bar w-".concat(percentage, " bg-secondary"),
+    className: "progress-bar bg-secondary",
+    style: {
+      width: "".concat(percentage, "%")
+    },
     role: "progressbar",
     "aria-valuenow": "25",
     "aria-valuemin": "0",

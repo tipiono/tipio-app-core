@@ -123,31 +123,6 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
-////
-
-.order-details {
-    background: $gray-100;
-    padding: 34px 0;
-
-    .order-details-content, .order-details-sidebar {
-        background: white;
-        padding: 60px 80px;
-    }
-
-    @include media-breakpoint-down(md) {
-        .reverse {
-            flex-direction: column-reverse;
-        }
-        .order-details-content, .order-details-sidebar {
-            padding: 30px;
-        }
-    }
-    .card-header {
-        background: transparent;
-        padding: 0;
-    }
-}
-
 .panel-group {
     .panel-item {
         display: flex;
@@ -175,11 +150,4 @@ h1, h2, h3, h4, h5, h6 {
     border-color: #ccece8 !important;
     box-shadow: none !important;
     font-family: 'Riposte-Medium', sans-serif !important;
-}
-
-//Date Test style
-.date-text {
-    color: #188576;
-    font-family: 'Riposte-Medium', sans-serif !important;
-    font-size: 14px;
 }

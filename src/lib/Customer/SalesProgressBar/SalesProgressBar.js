@@ -8,7 +8,7 @@ function SalesProgressBar ({
         <>
             <div className="sales__progress my-3">
                 <div className="sales__progress--bar progress">
-                    <div className={`progress-bar w-${percentage} bg-secondary`} role="progressbar" aria-valuenow="25"
+                    <div className={`progress-bar bg-secondary`} style={{ width: `${percentage}%`}} role="progressbar" aria-valuenow="25"
                          aria-valuemin="0"
                          aria-valuemax="100"/>
                 </div>
