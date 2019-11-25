@@ -7,38 +7,53 @@ exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
+var _classnames = _interopRequireDefault(require("classnames"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function CategoriesHeader(_ref) {
   var data = _ref.data,
-      backButtonOnClick = _ref.backButtonOnClick;
-  var mainTitle = data && data.length !== 0 && data[0].title;
+      parent = _ref.parent,
+      path = _ref.path,
+      backButtonOnClick = _ref.backButtonOnClick,
+      subCategoriesOnClick = _ref.subCategoriesOnClick;
+  // const mainTitle = data && data.length !== 0 && data[0].title;
+  var mainTitle = parent && parent.title;
+  var currentCat = path && path.length > 0 ? path[path.length - 1] : {
+    id: 0
+  };
   return _react.default.createElement(_react.default.Fragment, null, mainTitle && _react.default.createElement("div", {
     className: "choose-category-header"
   }, _react.default.createElement("div", {
     className: "category-header-title"
-  }, data.length > 0 && _react.default.createElement("a", {
+  }, _react.default.createElement("h3", {
+    className: "mb-0"
+  }, mainTitle), parent && _react.default.createElement("a", {
     className: "backward",
     href: "#",
     onClick: backButtonOnClick
   }, _react.default.createElement("svg", {
-    width: "24",
-    height: "24",
-    viewBox: "0 0 24 24"
-  }, _react.default.createElement("g", {
-    className: "nc-icon-wrapper",
-    fill: "#8c8f91"
-  }, _react.default.createElement("path", {
-    fill: "#8c8f91",
-    d: "M1.293,11.293L9,3.586L10.414,5l-6,6H22c0.553,0,1,0.448,1,1s-0.447,1-1,1H4.414l6,6L9,20.414l-7.707-7.707 C0.902,12.316,0.902,11.684,1.293,11.293z"
-  })))), _react.default.createElement("h3", {
-    className: "mb-0"
-  }, mainTitle)), _react.default.createElement("ul", {
+    width: 15,
+    height: 9
+  }, _react.default.createElement("title", null, 'Mask'), _react.default.createElement("path", {
+    d: "M7.243.26c.23 0 .451.09.616.252L14.131 6.7a.879.879 0 11-1.225 1.26l-5.663-5.6-5.663 5.6A.881.881 0 01.348 6.7l6.3-6.202A.868.868 0 017.243.26z",
+    fill: "#4F2E90",
+    fillRule: "nonzero"
+  })))), _react.default.createElement("ul", {
     className: "category-types"
-  }, data.slice(1).map(function (navigation) {
+  }, data.map(function (navigation) {
     return _react.default.createElement("li", {
       className: "category-type-item"
-    }, navigation.title);
+    }, _react.default.createElement("a", {
+      onClick: function onClick(e) {
+        e.preventDefault();
+        subCategoriesOnClick(navigation);
+      },
+      className: (0, _classnames.default)("category-type-item-link", {
+        selected: navigation.id === currentCat.id
+      }),
+      href: ""
+    }, navigation.title));
   }))));
 }
 

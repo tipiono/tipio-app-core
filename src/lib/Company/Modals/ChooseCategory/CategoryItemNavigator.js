@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from "prop-types";
 import Checkbox from '../../../UI/Forms/Checkbox';
-import InteriorIcon from "../../../UI/Icons/InteriorIcon";
+import SvgInline from '../../../Hooks/svgInline';
 import ArrowDownIcon from "../../../UI/Icons/ArrowDownIcon";
 
 const CategoryItem = (props) => (
@@ -19,7 +19,11 @@ const CategoryItem = (props) => (
 
         )}
         <a className={'category-link '} href="#" onClick={props.onClick}>
-            {props.item.file_store &&  <div className="category-left-icon"><InteriorIcon/></div>}
+            <div className="category-left-icon">
+                {props.item.file_store &&
+                    <SvgInline url={props.item.file_store.blob_url} />
+                }
+            </div>
             <span>{props.item.title}</span>
 
             <div className="category-right-icon">

@@ -102,6 +102,8 @@ function ImageUploader(_ref) {
     setCropImage(null);
   };
 
+  var cropperSetLoading = function cropperSetLoading() {};
+
   var cropperOnDone = function cropperOnDone(blob) {
     var croppedImageIndex = files.findIndex(function (x) {
       return x.id === cropImage.id;
@@ -168,7 +170,8 @@ function ImageUploader(_ref) {
     onDone: cropperOnDone,
     onClose: cropperModalOnClose,
     showCloseButton: initialCropCompleted,
-    indicator: indicator
+    indicator: indicator,
+    setLoading: cropperSetLoading
   }), _react.default.createElement(_reactDropzone.default, {
     accept: "image/*",
     onDrop: onDrop
@@ -197,9 +200,9 @@ function ImageUploader(_ref) {
       className: "uploadViewer__thumbnail"
     }, thumbs), _react.default.createElement("div", getRootProps({
       className: 'dropzone'
-    }), _react.default.createElement("input", getInputProps()), _react.default.createElement("div", {
-      className: "mt-3"
-    }, files.length > 0 && _react.default.createElement(_IconButton.default, {
+    }), _react.default.createElement("input", getInputProps()), files.length > 0 && _react.default.createElement("div", {
+      className: "mt-3 mb-5"
+    }, _react.default.createElement(_IconButton.default, {
       text: "Last opp produktbilder",
       onClick: function onClick(e) {
         e.preventDefault();

@@ -105,6 +105,7 @@ function (_Component) {
       this.setState({
         isSubmitting: true
       });
+      this.props.setLoading(true);
       this.state.cropperInstance.getCroppedCanvas().toBlob(function (blob) {
         _this3.props.onDone(blob);
       });
@@ -119,14 +120,16 @@ function (_Component) {
         modalOnClose = function modalOnClose() {};
       }
 
-      return _react.default.createElement("div", null, _react.default.createElement(_Modal.Modal, {
+      return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_Modal.Modal, {
         showCloseButton: true,
         onCloseButtonClick: this.modalOnClose
       }, _react.default.createElement("div", {
-        className: "cropper-wrapper"
+        className: "imageCropper"
       }, _react.default.createElement("div", {
-        className: "cropper-content"
-      }, _react.default.createElement("h3", null, "Tilpass bilde for mobil"), !this.state.cropperReady && _react.default.createElement("div", {
+        className: "imageCropper__content"
+      }, _react.default.createElement("h3", {
+        className: "imageCropper__content--title"
+      }, "Beskj\xE6r bilde av logo"), !this.state.cropperReady && _react.default.createElement("div", {
         className: "d-flex justify-content-center"
       }, _react.default.createElement("div", {
         className: "spinner-border",
@@ -136,25 +139,26 @@ function (_Component) {
       }, "Loading..."))), _react.default.createElement("div", {
         style: {
           opacity: this.state.cropperReady ? 100 : 0,
-          width: "300px",
-          height: "300px"
+          width: "350px",
+          height: "350px"
         }
       }, _react.default.createElement("img", {
         id: "image",
         src: this.props.image.preview
       })), this.props.indicator && this.props.indicator, _react.default.createElement("ul", {
-        className: "d-flex mb-6 mt-5"
+        className: "imageCropper__content__action"
       }, _react.default.createElement("li", {
-        className: "w-50 mr-3"
+        className: "imageCropper__content__action--cancel"
       }, _react.default.createElement(_GrayOutlineButton.default, {
         text: "Avbryt",
         onClick: this.modalOnClose,
-        disabled: this.state.isSubmitting
+        disabled: this.props.isSubmitting
       })), _react.default.createElement("li", {
-        className: "w-50"
+        className: "imageCropper__content__action--next"
       }, _react.default.createElement(_SecondaryButton.default, {
         text: "Neste",
-        onClick: this.cropDoneOnClick
+        onClick: this.cropDoneOnClick,
+        loading: this.props.isSubmitting
       })))))));
     }
   }]);

@@ -44,6 +44,7 @@ class ImageCropper extends Component {
     cropDoneOnClick(e) {
         e.preventDefault();
         this.setState({ isSubmitting: true })
+        this.props.setLoading(true);
         this.state.cropperInstance.getCroppedCanvas().toBlob((blob) => {
             this.props.onDone(blob);
         })
@@ -55,30 +56,30 @@ class ImageCropper extends Component {
             modalOnClose = ()=>{};
         }
         return (
-            <div>
+            <>
                 <Modal showCloseButton onCloseButtonClick={this.modalOnClose}>
-                    <div className="cropper-wrapper">
-                        <div className="cropper-content">
-                            <h3>Tilpass bilde for mobil</h3>
+                    <div className="imageCropper">
+                        <div className="imageCropper__content">
+                            <h3 className="imageCropper__content--title">Beskjær bilde av logo</h3>
                             {!this.state.cropperReady && <div className="d-flex justify-content-center" >
                                 <div className="spinner-border" role="status">
                                     <span className="sr-only">Loading...</span>
                                 </div>
                             </div>}
 
-                            <div style={{opacity: this.state.cropperReady ? 100 : 0, width: "300px", height: "300px"}}>
+                            <div style={{opacity: this.state.cropperReady ? 100 : 0, width: "350px", height: "350px"}}>
                                 <img id="image" src={this.props.image.preview}/>
                             </div>
 
                             {this.props.indicator && this.props.indicator}
-                            <ul className="d-flex mb-6 mt-5">
-                                <li className="w-50 mr-3"><GrayOutlineButton text={"Avbryt"} onClick={this.modalOnClose} disabled={this.state.isSubmitting} /></li>
-                                <li className="w-50"><SecondaryButton text={"Neste"} onClick={this.cropDoneOnClick} /></li>
+                            <ul className="imageCropper__content__action">
+                                <li className="imageCropper__content__action--cancel"><GrayOutlineButton text={"Avbryt"} onClick={this.modalOnClose} disabled={this.props.isSubmitting} /></li>
+                                <li className="imageCropper__content__action--next"><SecondaryButton text={"Neste"} onClick={this.cropDoneOnClick} loading={this.props.isSubmitting} /></li>
                             </ul>
                         </div>
                     </div>
                 </Modal>
-            </div>
+            </>
         );
     }
 }

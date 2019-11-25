@@ -11,9 +11,9 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _reactMasonryCss = _interopRequireDefault(require("react-masonry-css"));
 
-var _TipioCard = _interopRequireDefault(require("./TipioCard"));
+var _Pagination = _interopRequireDefault(require("../../UI/Pagination/Pagination"));
 
-var _Pagination = _interopRequireDefault(require("./Pagination"));
+var _withAnimation = _interopRequireDefault(require("../../effects/withAnimation"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -32,17 +32,16 @@ var TipioFeedWithWrapper = function TipioFeedWithWrapper(props) {
 
   if (props.tipios) {
     for (var i = 0; i < props.tipios.length; i += 1) {
-      var item = props.tipios[i]; // if (i === 0 && showAddTipioButton) {
-      //     items.push("<AddTipioButton />");
-      // }
+      var item = props.tipios[i];
+
+      if (i === 0 && props.AddTipioButton) {
+        items.push(_react.default.createElement(props.AddTipioButton, null));
+      }
 
       if (props.card) {
-        items.push(props.card(item));
-      } else {
-        items.push(_react.default.createElement(_TipioCard.default, {
-          key: item.id,
-          tipio: item
-        }));
+        items.push(_react.default.createElement("div", {
+          className: "mb-3 mb-md-4"
+        }, _react.default.createElement(_withAnimation.default, null, props.card(item))));
       }
     }
   }

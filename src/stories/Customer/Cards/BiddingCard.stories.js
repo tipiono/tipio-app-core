@@ -1,6 +1,7 @@
 import React from 'react';
 import {storiesOf} from '@storybook/react';
 import {BiddingCard, BiddingCardShareButton,} from '../../../lib/index';
+import { number } from '@storybook/addon-knobs';
 
 storiesOf('Customer/Components/Cards/BiddingCard', module)
     .add('Enroll interest', () =>
@@ -12,6 +13,7 @@ storiesOf('Customer/Components/Cards/BiddingCard', module)
                     description={"Sub heading"}
                     salePrice={"800 Kr"}
                     costPrice={"1299 Kr"}
+                    salesProgressBarPercentage={number()}
                 >
                 </BiddingCard>
             </div>
@@ -26,6 +28,7 @@ storiesOf('Customer/Components/Cards/BiddingCard', module)
                     description={"Sub heading"}
                     salePrice={"800 Kr"}
                     costPrice={"1299 Kr"}
+                    salesProgressBarPercentage={35}
                 >
                     <BiddingCardShareButton />
                 </BiddingCard>

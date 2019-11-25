@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 
 const SecondaryButton = ({ loading, text, onClick, ...props }) => (
     <button
-        id="tipio-join-button"
         type="button"
         disabled={loading}
         className="btn btn-secondary btn-block btn-lg"

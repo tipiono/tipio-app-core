@@ -42,6 +42,13 @@
     color: $primary;
 }
 
+.btn-sm-md {
+    @include media-breakpoint-down(sm){
+        padding: 0.35rem 1rem !important;
+        font-size: 0.875rem !important;
+    }
+}
+
 .form-control {
     border-bottom: 1px solid $gray-900;
 }
@@ -76,16 +83,6 @@
 
 .alert-dismissible {
     padding: .75rem 1.25rem;
-}
-
-.badge-light {
-    color: $gray-600;
-    font-family: 'Riposte-Light', sans-serif;
-}
-
-.badge-outline {
-    background-color: transparent;
-    border: 1px solid $gray-200;
 }
 
 .custom-select {
@@ -126,178 +123,6 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
-////
-
-
-
-.settings {
-    background: $gray-100;
-    padding: 34px 0;
-
-    .settings-content {
-        background: white;
-        padding: 60px 80px;
-    }
-
-    @include media-breakpoint-down(md) {
-        .settings-content {
-            padding: 30px;
-        }
-    }
-}
-
-.my-orders {
-    background: $gray-100;
-    padding: 34px 0;
-
-    .my-orders-content {
-        background: white;
-        padding: 60px 80px;
-
-        .order {
-            border: 1px solid $gray-200;
-            padding: 24px;
-            margin-bottom: 14px;
-        }
-    }
-
-    @include media-breakpoint-down(md) {
-        .my-orders-content {
-            padding: 30px;
-
-            .order {
-                border: none;
-                border-bottom: 1px solid $gray-200;
-                padding: 24px 0;
-            }
-        }
-    }
-}
-
-.order-details {
-    background: $gray-100;
-    padding: 34px 0;
-
-    .order-details-content, .order-details-sidebar {
-        background: white;
-        padding: 60px 80px;
-    }
-
-    @include media-breakpoint-down(md) {
-        .reverse {
-            flex-direction: column-reverse;
-        }
-        .order-details-content, .order-details-sidebar {
-            padding: 30px;
-        }
-    }
-    .card-header {
-        background: transparent;
-        padding: 0;
-    }
-}
-
-.edit-profile {
-    background: $gray-100;
-    padding: 34px 0;
-
-    .edit-profile-content {
-        background: white;
-        padding: 60px 80px;
-
-        .upload-profile-picture {
-            position: relative;
-            width: 120px;
-            height: 120px;
-            margin-bottom: 3rem;
-
-            img {
-                object-fit: cover;
-                border-radius: 50%;
-            }
-
-            .avatar-uploader {
-                position: absolute;
-                bottom: 0;
-                right: 0;
-            }
-
-            .avatar-uploader-btn {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-
-                width: 34px;
-                height: 34px;
-                background: #fff;
-                border: 1px solid #dfe3e5;
-                border-radius: 100%;
-
-                input {
-                    cursor: pointer;
-                    opacity: 0; /* Hide the button */
-                    z-index: 3;
-                    width: 132px;
-                    position: absolute;
-                    right: 0;
-                }
-
-                svg {
-                    position: absolute;
-                    z-index: 2;
-                }
-
-                &:hover {
-                    svg * {
-                        stroke: $secondary;
-                    }
-                }
-            }
-        }
-
-        .edit-profile-actions {
-            display: flex;
-            justify-content: flex-end;
-            flex-direction: column-reverse;
-            width: 50%;
-        }
-    }
-
-    @include media-breakpoint-down(sm) {
-        .edit-profile-content {
-            padding: 30px;
-
-            .upload-profile-picture {
-                margin: 0 auto;
-                margin-bottom: 3rem;
-            }
-
-            .edit-profile-actions {
-                width: 100%;
-            }
-        }
-    }
-}
-
-
-.my-masonry-grid {
-    display: -webkit-box; /* Not needed if autoprefixing */
-    display: -ms-flexbox; /* Not needed if autoprefixing */
-    display: flex;
-    margin-left: 0; /* gutter size offset */
-    width: auto;
-}
-
-.my-masonry-grid_column {
-    padding: 0 12px;
-    background-clip: padding-box;
-}
-
-//.my-masonry-grid_column > div { /* change div to reference your elements you put in <Masonry> */
-//    margin-bottom: 24px;
-//}
-
-
 .panel-group {
     .panel-item {
         display: flex;
@@ -309,52 +134,6 @@ h1, h2, h3, h4, h5, h6 {
             color: $gray-400;
         }
     }
-}
-
-.join-tipio-footer {
-    padding-top: 39px;
-    padding-bottom: 29px;
-
-    h3 {
-        font-family: 'Riposte-Light', sans-serif;
-
-    }
-}
-
-.sticky-card {
-    position: sticky;
-    top: 120px;
-}
-
-
-.cropper-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.two-column {
-    display: flex;
-    justify-content: space-between;
-
-    .special-inputs {
-        width: 48% !important;
-    }
-}
-
-
-//Shoping bagde
-.badge-light {
-    width: 15.6px;
-    height: 10.8px;
-    border-radius: 9.6px;
-    line-height: 0.1;
-    position: absolute;
-    top: 0px !important;
-    z-index: 9;
-    BACKGROUND: #4abcac;
-    left: 13px;
-    color: #3e2187 !important;
 }
 
 .Toastify__toast-container {
@@ -371,11 +150,4 @@ h1, h2, h3, h4, h5, h6 {
     border-color: #ccece8 !important;
     box-shadow: none !important;
     font-family: 'Riposte-Medium', sans-serif !important;
-}
-
-//Date Test style
-.date-text {
-    color: #188576;
-    font-family: 'Riposte-Medium', sans-serif !important;
-    font-size: 14px;
 }

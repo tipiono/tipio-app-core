@@ -19,20 +19,23 @@ var AddMoreSaleCompanyCard = function AddMoreSaleCompanyCard(props) {
   }, _react.default.createElement("div", {
     className: "addMoreSaleCard__preview"
   }, _react.default.createElement("a", {
-    className: "addMoreSaleCard__preview--image",
-    href: ""
+    className: "addMoreSaleCard__preview--image lazy-image",
+    href: "",
+    onClick: function onClick(e) {
+      e.preventDefault();
+      props.titleOnClick(props);
+    }
   }, props.tipio.images && props.tipio.images.length && _react.default.createElement("img", {
-    className: "img-fluid",
+    className: "lazyload img-fluid",
     src: props.tipio.images[0].blob_url,
     alt: ""
   }), _react.default.createElement("span", {
     className: "addMoreSaleCard__preview--discount"
   }, (0, _calculateDiscountPercentage.default)(props.first_price, props.company_price), "%"))), _react.default.createElement("div", {
     className: "addMoreSaleCard__content"
-  }, _react.default.createElement("h5", {
-    className: "addMoreSaleCard__content--title"
-  }, _react.default.createElement("a", {
+  }, _react.default.createElement("h5", null, _react.default.createElement("a", {
     href: "",
+    className: "addMoreSaleCard__content--title",
     onClick: function onClick(e) {
       e.preventDefault();
       props.titleOnClick(props);

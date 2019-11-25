@@ -1,0 +1,63 @@
+.shoppingBagItem {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid $gray-100;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+
+    &:last-child {
+        border-bottom: none;
+    }
+
+    &__preview {
+        width: 38%;
+        overflow: hidden;
+        border: 1px solid $gray-100;
+
+        &--image {
+            max-width: 100%;
+            height: auto;
+            -webkit-transform: translateZ(0) scale(1.01, 1.01);
+            transform: translateZ(0) scale(1.01, 1.01);
+
+        }
+
+        &:hover {
+            img {
+                -webkit-backface-visibility: hidden;
+                -webkit-transform: translateZ(0) scale(1.04, 1.04);
+                transform: translateZ(0) scale(1.04, 1.04);
+            }
+        }
+    }
+
+    &__content {
+        width: 56%;
+        margin-top: 1rem;
+
+        &__title {
+            color: $gray-700;
+            font-size: 0.875rem;
+
+            &:hover {
+                color: $primary;
+            }
+        }
+
+        &__price {
+            display: flex;
+            justify-content: space-between;
+
+            &--sale {
+                letter-spacing: .4px;
+            }
+
+            &--cost {
+                color: $gray-500;
+                text-decoration: line-through;
+                font-family: 'Riposte-Regular', sans-serif;
+                letter-spacing: .4px;
+            }
+        }
+    }
+}

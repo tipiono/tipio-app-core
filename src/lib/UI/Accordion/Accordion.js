@@ -53,6 +53,7 @@ class Accordion extends Component {
     }
 
     headerOnClick(e) {
+        e.preventDefault();
         let active = parseInt(e.target.id);
         active = active === this.state.active ? 0 : active;
         this.setState({active})

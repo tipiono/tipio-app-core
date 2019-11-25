@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Masonry from 'react-masonry-css'
 
-import TipioCard from './TipioCard';
-import Pagination from "./Pagination";
+import Pagination from "../../UI/Pagination/Pagination";
+import WithAnimation from '../../effects/withAnimation';
 
 const breakpointColumnsObj = (max = 4) => {
     return {
@@ -19,17 +19,15 @@ const TipioFeedWithWrapper = props => {
     if (props.tipios) {
         for (let i = 0; i < props.tipios.length; i += 1) {
             const item = props.tipios[i];
-            // if (i === 0 && showAddTipioButton) {
-            //     items.push("<AddTipioButton />");
-            // }
+            if (i === 0 && props.AddTipioButton) {
+                items.push(<props.AddTipioButton />);
+            }
             if (props.card) {
-                items.push(props.card(item));
-            } else {
-                items.push(
-                    <TipioCard
-                        key={item.id}
-                        tipio={item}
-                    />);
+                items.push(<div className="mb-3 mb-md-4">
+                    <WithAnimation>
+                        {props.card(item)}
+                    </WithAnimation>
+                </div>);
             }
         }
     }
@@ -48,33 +46,31 @@ const TipioFeedWithWrapper = props => {
         <>
             <div className={props.rootContainerClass}>
                 <div className="container">
-                <Masonry
-                    breakpointCols={breakpointColumnsObj(props.itemsPerRow || 4)}
-                    className={'my-masonry-grid ' + selectImagesClass}
-                    columnClassName="my-masonry-grid_column"
-                >
-                    {items}
-                </Masonry>
-                {props.loading && <div className="d-flex justify-content-center">
-                    <div className="spinner-border" role="status">
-                        <span className="sr-only">Loading...</span>
-                    </div>
-                </div>}
+                    <Masonry
+                        breakpointCols={breakpointColumnsObj(props.itemsPerRow || 4)}
+                        className={'my-masonry-grid ' + selectImagesClass}
+                        columnClassName="my-masonry-grid_column"
+                    >
+                        {items}
+                    </Masonry>
+                    {props.loading && <div className="d-flex justify-content-center">
+                        <div className="spinner-border" role="status">
+                            <span className="sr-only">Loading...</span>
+                        </div>
+                    </div>}
                 </div>
             </div>
             {props.tipios && props.tipios.length > 0 && props.page > 0 &&
 
-                <div className="d-flex justify-content-center my-4 pb-5">
-                    {/* vendose pagination e ri ketu */}
-
-                    <Pagination
-                        page={props.page}
-                        pageCount={props.pageCount}
-                        showPrevButton={showPrevButton}
-                        showNextButton={showNextButton}
-                        handlePageClick={props.handlePageClick}
-                    />
-                </div>
+            <div className="d-flex justify-content-center my-4 pb-5">
+                <Pagination
+                    page={props.page}
+                    pageCount={props.pageCount}
+                    showPrevButton={showPrevButton}
+                    showNextButton={showNextButton}
+                    handlePageClick={props.handlePageClick}
+                />
+            </div>
             }
         </>
     );

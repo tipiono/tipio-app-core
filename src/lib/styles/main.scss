@@ -1,7 +1,9 @@
 // 1. Abstracts, configuration and helpers
 @import
     'abstracts/bootstrap/functions',
-    'abstracts/bootstrap/variables';
+    'abstracts/bootstrap/variables',
+    'abstracts/_lazy-image-loading',
+    'abstracts/_lazy-card-loading';
 
 // 2. Base stuff
 @import
@@ -19,9 +21,9 @@
     'components/hamburger-button',
     'components/special-card',
     'components/shopping-bag-special-card',
-    'components/cart-item',
-    'components/order-item',
-    'components/_checkout',
+    'components/Customer/Cards/cart-product',
+    'components/Customer/Cards/order-card',
+'components/Customer/Cards/ordered-item-card',
     'components/invite-friends',
     'components/completed-tipio',
     'components/login-register',
@@ -34,7 +36,6 @@
     'components/tipio-status',
     'components/Customer/Modals/choose-category',
     'components/_empty_interested',
-    'components/_empty-recived-offers.scss',
     'components/_empty-orders.scss',
     'components/tipio-posted-by',
     'components/tipio-gallery',
@@ -79,7 +80,10 @@
     'components/Company/delete-account',
     'components/Company/add-sales',
     'components/Company/won-bidding-round',
+    'components/Company/already-has-bid',
     'components/Company/empty-avatar',
+    'components/Company/order-delivered',
+    'components/Company/export-as',
     'components/Company/empty-cover',
     'components/Company/change-avatar',
     'components/Company/change-cover',
@@ -106,33 +110,24 @@
     'components/Customer/Cards/voting-card',
     'components/Customer/Cards/bidding-card',
     'components/Customer/Cards/sale-card',
+    'components/Customer/Cards/shopping-bag-item',
     'components/Customer/CustomerSidebarCards/customer-sidebar-card',
     'components/Customer/image-uploader',
     'components/Customer/horizontal-timeline';
 
 
+
 // 4. Layout-related sections
 @import
     'layout/footer',
+    'layout/masonry-grid',
     'layout/header';
 
 // 5. Page-specific styles
 @import
-    'pages/login',
-    'pages/searchresult',
-    'pages/your-tipios',
-    'pages/userprofile',
-    'pages/add-link',
-    'pages/tipio-publish',
     'pages/credit-cart',
     'pages/tipio-view',
-    'pages/frontpage',
-    'pages/parse-url',
-    'pages/about-page',
-    'pages/edit-add-sale',
-    'pages/select-image-page',
-    'pages/select-category-page',
-    'pages/company-settigns';
+    'pages/select-category-page';
 
 
 // 6. Themes

@@ -8,7 +8,6 @@ import SecondaryOutlineButton from "./UI/Buttons/SecondaryOutlineButton";
 import DisabledButton from "./UI/Buttons/DisabledButton";
 import GrayButton from "./UI/Buttons/GrayButton";
 import GrayOutlineButton from "./UI/Buttons/GrayOutlineButton";
-import LinkButton from "./UI/Buttons/LinkButton";
 import AddCategoryButton from "./UI/Buttons/AddCategoryButton";
 import SelectedCategoryButton from "./UI/Buttons/SelectedCategoryButton";
 import { Modal, ModalType } from "./UI/Modal/Modal";
@@ -36,6 +35,7 @@ import PillTabs from './UI/PillTabs/PillTabs';
 import Avatar from './UI/Avatar/Avatar';
 import SubNav from './UI/SubNav/SubNav';
 import { DropDown, DropDownItem } from './UI/DdropDown/DropDown';
+import { NewDropdown, NewDropdownItem } from './UI/NewDropdown/NewDropdown';
 import FromToInput from './UI/Forms/FromToInput';
 import IconButton from './UI/Buttons/IconButton';
 import ButtonXL from './UI/Buttons/ButtonXL';
@@ -43,7 +43,8 @@ import ShowMoreText from './UI/Text/ShowMoreText';
 import PriceInput from './UI/Forms/PriceInput';
 import ContentSpinner from './UI/Spinner/ContentSpinner';
 import Table from './UI/Table';
-import PublishedBy from './UI/PublishedBy/PublishedBy';
+import PublishedByWithDate from './UI/PublishedBy/PublishedByWithDate';
+import PublishedByWithDropdown from './UI/PublishedBy/PublishedByWithDropdown';
 import SelectImages from './UI/SelectImages';
 import ErrorMessage from './UI/ErrorMessage/ErrorMessage';
 import CircleChart from './UI/CircleChart/CircleChart';
@@ -52,6 +53,7 @@ import Overlay from './UI/Overlay/Overlay';
 import Alert from './UI/Alert/Alert';
 import Pagination from './UI/Pagination/Pagination';
 import RoundedButton from './UI/Buttons/RoundedButton';
+import TipioViewDescriptionMobile from './UI/TipioViewDescriptionMobile/TipioViewDescriptionMobile';
 
 /*
 *   Customer/Private Components
@@ -80,15 +82,18 @@ import TipioSidebarVotingCard from './Customer/CustomerSidebarCards/VotingCard';
 import TipioSidebarBindingCard from './Customer/CustomerSidebarCards/BindingCard';
 import ImageUploader from './Customer/ImageUploader/ImageUploader';
 import CategoriesForm from './Company/Modals/ChooseCategory/CategoriesForm';
-import NoSearchResult from './Customer/Search/NoSearchResult';
 import TipioFeedWithWrapper from './Customer/TipioFeed/TipioFeedWithWrapper';
 
 /*
 *   Company Components
 * */
 import DeleteAccount from './Company/Modals/DeleteAccount/DeleteAccount';
+import OrderDelivered from './Company/Modals/OrderDelivered/OrderDelivered';
+import OrderNotDelivered from './Company/Modals/OrderNotDelivered/OrderNotDelivered';
+import ExportAs from './Company/Modals/ExportAs/ExportAs';
 import AddAdditionalSales from './Company/Modals/AddAdditionalSales/AddAdditionalSales';
 import WonBiddingRound from './Company/Modals/WonBiddingRound/WonBiddingRound';
+import AlreadyHasBid from './Company/Modals/AlreadyHasBid/AlreadyHasBid';
 import EmptyAvatar from './Company/Avatar/EmptyAvatar';
 import ChangeAvatar from './Company/Avatar/ChangeAvatar';
 import EmptyCover from './Company/CoverImage/EmptyCover';
@@ -126,18 +131,18 @@ import SearchIcon from './UI/Icons/SearchIcon';
 import CloseIcon from './UI/Icons/CloseIcon';
 import FilterIcon from './UI/Icons/FilterIcon';
 import FilterIconCyan from './UI/Icons/FilterIconCyan';
+import EmptyBagIcon from './UI/Icons/EmptyBagIcon';
 
 /**
  * UTILS
  */
 import calculateDiscountPercentage from './Util/calculateDiscountPercentage';
-
+import formatText from './Util/formatText';
 export {
     styles,
     SecondaryButton,
     SecondaryOutlineButton,
     DisabledButton,
-    LinkButton,
     GrayButton,
     Modal,
     ModalType,
@@ -212,12 +217,15 @@ export {
     CompanyAddBidCard,
     DropDown,
     DropDownItem,
+    NewDropdown,
+    NewDropdownItem,
     FromToInput,
     ShowMoreText,
     PriceInput,
     ContentSpinner,
     Table,
-    PublishedBy,
+    PublishedByWithDate,
+    PublishedByWithDropdown,
     IconButton,
     SelectImages,
     ErrorMessage,
@@ -225,6 +233,7 @@ export {
     AddMoreSaleCompanyCard,
     RemoveImageIcon,
     calculateDiscountPercentage as _util_CalculateDiscountPercentage,
+    formatText as _util_FormatText,
     MaterialSearch,
     ExportIcon,
     CircleChart,
@@ -240,7 +249,12 @@ export {
     Alert,
     Pagination,
     RoundedButton,
-    NoSearchResult,
     TipioFeedWithWrapper,
-    FilterIconCyan
+    FilterIconCyan,
+    AlreadyHasBid,
+    OrderDelivered,
+    OrderNotDelivered,
+    ExportAs,
+    EmptyBagIcon,
+    TipioViewDescriptionMobile
 };

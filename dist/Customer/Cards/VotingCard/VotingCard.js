@@ -23,10 +23,12 @@ function VotingCard(_ref) {
   }, _react.default.createElement("div", {
     className: "votingCard__header"
   }, _react.default.createElement("a", {
+    className: "lazy-image votingCard__header--preview",
     href: ""
   }, _react.default.createElement("img", {
-    className: "votingCard__header--image",
-    src: image,
+    className: "lazyload votingCard__header--preview--image",
+    src: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 2'%3E%3C/svg%3E",
+    "data-src": image,
     alt: ""
   })), _react.default.createElement("div", {
     className: "votingCard__header--timeLeft"

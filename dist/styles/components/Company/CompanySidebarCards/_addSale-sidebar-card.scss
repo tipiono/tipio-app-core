@@ -90,4 +90,37 @@
       font-family: 'Riposte-Medium', sans-serif;
     }
   }
+
+  @include media-breakpoint-down(sm) {
+    border: none;
+    border-bottom: 1px solid $gray-200;
+    padding: 0 0 2rem;
+
+    &__header {
+      &__content {
+        &--title {
+          font-size: 1.125rem;
+        }
+
+        &--subtitle {
+          font-size: 0.875rem;
+          padding: 0 3rem;
+        }
+      }
+    }
+
+    &__price {
+      &--cost {
+        &--amount {
+          font-size: 1.125rem;
+        }
+      }
+
+      &--sale {
+        &--amount {
+          font-size: 1.125rem;
+        }
+      }
+    }
+  }
 }

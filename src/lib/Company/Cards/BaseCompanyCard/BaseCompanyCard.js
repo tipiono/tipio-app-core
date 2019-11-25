@@ -1,15 +1,21 @@
 import React from 'react';
 import TipioCountdown from "../../../UI/TipioCountdown/TipioCountdown";
 
-const BaseCompanyCard = ({children, expires_in, binding_count, ...props}) => {
+const BaseCompanyCard = ({children, expires_in, binding_count, potential_earning, showBindingCount, ...props}) => {
     return (
         <div>
             <div className="baseCompanyCard">
-                <a href="#" onClick={(e) => {e.preventDefault();props.onClick()}}>
+                <a href="#" onClick={(e) => {
+                    e.preventDefault();
+                    props.onClick()
+                }}>
                     <div className="baseCompanyCard__header">
-                        {props.images && props.images.length && <a href=""><img className="baseCompanyCard__header--image"
-                                        src={props.images[0].blob_url}
-                                        alt=""/></a>}
+                        {props.images && props.images.length &&
+                        <a href="" className="lazy-image baseCompanyCard__header--preview">
+                            <img className="lazyload baseCompanyCard__header--preview--image"
+                            data-src={props.images[0].blob_url}
+                            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 2'%3E%3C/svg%3E"
+                            alt=""/></a>}
                         <div className="baseCompanyCard__header--timeLeft">
                             <TipioCountdown className="timer" expires_in={expires_in}/>
                         </div>
@@ -17,17 +23,19 @@ const BaseCompanyCard = ({children, expires_in, binding_count, ...props}) => {
                 </a>
 
                 <div className="baseCompanyCard__body">
-                    <a href="#" onClick={() => {props.onClick()}}><h5 className="baseCompanyCard__body--title">{props.title}</h5></a>
-                    <p className="baseCompanyCard__body--content--description">{props.subtitle}</p>
+                    <a href="#" onClick={() => {
+                        props.onClick()
+                    }}><h5 className="baseCompanyCard__body--title">{props.title}</h5></a>
+                    <p className="baseCompanyCard__body--description">{props.subtitle}</p>
 
-                    <div className="baseCompanyCard__body--cost">
-                        <h3 className="baseCompanyCard__body--cost--price">1 199 000 Kr</h3>
+                    {potential_earning ? (<div className="baseCompanyCard__body--cost">
+                        <h3 className="baseCompanyCard__body--cost--price">{potential_earning} Kr</h3>
                         <span className="baseCompanyCard__body--cost--label">Potensiell omsetning</span>
-                    </div>
+                    </div>) : (null)}
 
                     {binding_count > 0 ? (<div className="baseCompanyCard__body--interested">
-                        <h6 className="baseCompanyCard__body--interested--counter">{binding_count} påmeldte!</h6>
-                    </div>): (null)}
+                        <h6 className="baseCompanyCard__body--interested--counter">{binding_count} {showBindingCount ? 'kjøpte' : 'påmeldte'} ! </h6>
+                    </div>) : (null)}
 
                     {children}
 

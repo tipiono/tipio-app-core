@@ -1,4 +1,12 @@
 .customer-main-categories {
+  .category-item {
+    width: 90%;
+
+    .category-link {
+      width: 100%;
+    }
+  }
+
   .category-item.dropdown {
     padding-top: 24px;
     border-bottom: 1px solid $gray-200;
@@ -219,12 +227,18 @@
     }
 
   }
+  @include media-breakpoint-down(sm) {
+    .category-item {
+      width: 100%;
+    }
+  }
 }
 
 
 .company-main-categories {
   .category-item {
     border-bottom: 1px solid $gray-200;
+    width: 80%;
 
     .category-link {
       display: flex;
@@ -241,6 +255,14 @@
       .category-left-icon {
         margin-right: 22px;
         margin-left: 22px;
+
+        .category-left-icon-loading {
+          display: block;
+          width: 24px;
+          height: 24px;
+          background-color: $gray-100;
+          margin-bottom: 0;
+        }
       }
 
       .category-right-icon {
@@ -287,7 +309,7 @@
     }
 
     .sub-categories {
-      margin-left: 46px;
+      margin-left: 90px;
       padding-bottom: 24px;
 
       .sub-category-item {
@@ -312,6 +334,12 @@
           color: $gray-800;
         }
       }
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    .category-item {
+      width: 100%;
     }
   }
 }

@@ -1,10 +1,8 @@
 import React, {useState} from 'react';
 import PropTypes from "prop-types";
-import CategoryItemWithDropdown from "./Categories";
 import Checkbox from '../../../UI/Forms/Checkbox';
-import InteriorIcon from "../../../UI/Icons/InteriorIcon";
 import ArrowDownIcon from "../../../UI/Icons/ArrowDownIcon";
-
+import SvgInline from '../../../Hooks/svgInline';
 function dropdown() {
 }
 
@@ -64,7 +62,7 @@ const CategoryItem = ({id, title, icon, onSelect, active, sub_categories, onClic
                    }}>
 
                     <div className="category-left-icon">
-                        <InteriorIcon/>
+                        <SvgInline url={icon} />
                     </div>
 
                     <span>{title}</span>

@@ -37,7 +37,7 @@ var CompanySidebarBaseCard = function CompanySidebarBaseCard(_ref) {
     className: "placeholder-content companySidebarCard__header--placeholder"
   }, "\xA0") : _react.default.createElement("h3", {
     className: "companySidebarCard__header__cost--price"
-  }, meta.potntial_earning, " Kr"))), children);
+  }, meta.potential_earning, " Kr"))), children);
 };
 
 var _default = CompanySidebarBaseCard;

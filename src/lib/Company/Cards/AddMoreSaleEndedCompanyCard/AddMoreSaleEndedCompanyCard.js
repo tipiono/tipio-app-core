@@ -1,19 +1,23 @@
 import React from 'react';
+import CalculateDiscountPercentage from '../../../Util/calculateDiscountPercentage';
 
-const AddMoreSaleEndedCompanyCard = () => {
+const AddMoreSaleEndedCompanyCard = (props) => {
+    const saleDiscount = CalculateDiscountPercentage(props.first_price, props.company_price)
     return (
-        <div className="addMoreSaleEndedCard">
+        <div className="addMoreSaleEndedCard mb-3">
             <div className="d-flex flex-row">
                 <div className="addMoreSaleEndedCard__preview">
                     <a className="addMoreSaleEndedCard__preview--image" href="">
-                        <img className="img-fluid" src="https://tipio.ams3.cdn.digitaloceanspaces.com/staging/4/tipios/93/1560161148875" alt=""/>
-                        <span className="addMoreSaleEndedCard__preview--discount">-30%</span>
+                    {props.tipio.images && props.tipio.images.length && <a href=""><img className="img-fluid"
+                                        src={props.tipio.images[0].blob_url}
+                                        alt=""/></a>}
+                        <span className="addMoreSaleEndedCard__preview--discount">{saleDiscount}%</span>
                     </a>
 
                 </div>
 
                 <div className="addMoreSaleEndedCard__content">
-                    <h5 className="addMoreSaleEndedCard__content--title">5.1-kanals 4K Ultra HD lydplanke med True Wireless surround høyttalere</h5>
+                    <h5 className="addMoreSaleEndedCard__content--title">{props.tipio.title}</h5>
 
                     <ul className="addMoreSaleEndedCard__content__stats">
                         <li className="addMoreSaleEndedCard__content__stats--customers">
@@ -22,7 +26,7 @@ const AddMoreSaleEndedCompanyCard = () => {
                                     <path d="M9 14.487a.5.5 0 01.5-.5h1a.5.5 0 00.5-.5v-1.993A2.494 2.494 0 008.506 9H4.494A2.493 2.493 0 002 11.494v1.993a.5.5 0 00.5.5h1a.5.5 0 01.5.5V20h5v-5.513zM6.5 7a2.5 2.5 0 100-5 2.5 2.5 0 000 5h0zM3 14.987h-.5a1.5 1.5 0 01-1.5-1.5v-1.993A3.494 3.494 0 014.494 8h4.012A3.494 3.494 0 0112 11.494v1.993a1.5 1.5 0 01-1.5 1.5H10V20.5a.5.5 0 01-.5.5h-6a.5.5 0 01-.5-.5v-5.513zM6.5 8A3.5 3.5 0 116.501 1a3.5 3.5 0 010 7.001h0zM21 14.487a.5.5 0 01.5-.5h1a.5.5 0 00.5-.5v-1.993A2.494 2.494 0 0020.506 9h-4.012A2.493 2.493 0 0014 11.494v1.993a.5.5 0 00.5.5h1a.5.5 0 01.5.5V20h5v-5.513zM18.5 7a2.5 2.5 0 100-5 2.5 2.5 0 000 5h0zM15 14.987h-.5a1.5 1.5 0 01-1.5-1.5v-1.993A3.494 3.494 0 0116.494 8h4.012A3.494 3.494 0 0124 11.494v1.993a1.5 1.5 0 01-1.5 1.5H22V20.5a.5.5 0 01-.5.5h-6a.5.5 0 01-.5-.5v-5.513zM18.5 8A3.5 3.5 0 1118.501 1a3.5 3.5 0 010 7.001h0z" />
                                 </g>
                             </svg>
-                            <span className="addMoreSaleEndedCard__content__stats--customers--label">1 789</span>
+                            <span className="addMoreSaleEndedCard__content__stats--customers--label">{props.company_price}</span>
                         </li>
 
                         <li className="addMoreSaleEndedCard__content__stats--earned">

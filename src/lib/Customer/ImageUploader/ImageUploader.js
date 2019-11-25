@@ -8,7 +8,7 @@ import IconButton from "../../UI/Buttons/IconButton";
 import RemoveImageIcon from "../../UI/Icons/RemoveImageIcon";
 import ErrorMessage from '../../UI/ErrorMessage/ErrorMessage';
 
-function ImageUploader({ setFieldValue, name, errors, displayErrors }) {
+function ImageUploader({setFieldValue, name, errors, displayErrors}) {
     const [showCropper, setShowCropper] = useState(false);
     const [cropImage, setCropImage] = useState(null);
     const [initialCropCompleted, setInitialCropCompleted] = useState(null);
@@ -48,6 +48,9 @@ function ImageUploader({ setFieldValue, name, errors, displayErrors }) {
         setShowCropper(false);
         setCropImage(null);
     };
+
+    const cropperSetLoading = () => {
+    }
 
     const cropperOnDone = (blob) => {
         let croppedImageIndex = files.findIndex((x) => (x.id === cropImage.id));
@@ -110,7 +113,9 @@ function ImageUploader({ setFieldValue, name, errors, displayErrors }) {
                     onDone={cropperOnDone}
                     onClose={cropperModalOnClose}
                     showCloseButton={initialCropCompleted}
-                    indicator={indicator}/>
+                    indicator={indicator}
+                    setLoading={cropperSetLoading}
+                />
             )}
             <Dropzone accept="image/*" onDrop={onDrop}>
                 {({getRootProps, getInputProps}) => (
@@ -140,22 +145,21 @@ function ImageUploader({ setFieldValue, name, errors, displayErrors }) {
                         <div {...getRootProps({className: 'dropzone'})}>
                             <input {...getInputProps()} />
 
-                            <div className="mt-3">
-
-                                {files.length > 0 &&
+                            {files.length > 0 &&
+                            <div className="mt-3 mb-5">
                                 <IconButton text="Last opp produktbilder" onClick={(e) => {
                                     e.preventDefault();
                                 }}/>
-                                }
                             </div>
+                            }
                         </div>
                     </section>
                 )}
             </Dropzone>
-            {displayErrors && errors && errors[name] && 
-                <ErrorMessage
-                    content={errors[name].message}
-                    color={"bg-red"}
+            {displayErrors && errors && errors[name] &&
+            <ErrorMessage
+                content={errors[name].message}
+                color={"bg-red"}
             />}
         </>
     )
