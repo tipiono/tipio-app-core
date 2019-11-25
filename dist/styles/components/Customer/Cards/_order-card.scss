@@ -1,0 +1,51 @@
+.orderCard {
+  border: 1px solid $gray-200;
+  padding: 24px;
+  margin-bottom: 14px;
+
+  &__header {
+    display: flex;
+    flex-direction: row;
+
+    &--label {
+      margin-right: 2rem;
+      margin-bottom: .3rem;
+    }
+
+    &--price {
+      margin-bottom: .3rem;
+    }
+  }
+
+  &__date {
+    color: $cyan;
+    font-size: 0.875rem;
+    font-family: 'Riposte-Medium', sans-serif;
+  }
+
+  &__footer {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+
+    &--orderNumber {
+      color: $gray-700;
+      font-family: 'Riposte-Regular', sans-serif;
+    }
+
+    &__link {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    &__footer {
+      &__link {
+        &--text {
+          display: none;
+        }
+      }
+    }
+  }
+}
