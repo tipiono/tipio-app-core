@@ -53,6 +53,7 @@ import Overlay from './UI/Overlay/Overlay';
 import Alert from './UI/Alert/Alert';
 import Pagination from './UI/Pagination/Pagination';
 import RoundedButton from './UI/Buttons/RoundedButton';
+import TipioViewDescriptionMobile from './UI/TipioViewDescriptionMobile/TipioViewDescriptionMobile';
 
 /*
 *   Customer/Private Components
@@ -136,7 +137,6 @@ import FilterIconCyan from './UI/Icons/FilterIconCyan';
  */
 import calculateDiscountPercentage from './Util/calculateDiscountPercentage';
 import formatText from './Util/formatText';
-
 export {
     styles,
     SecondaryButton,
@@ -254,4 +254,5 @@ export {
     OrderDelivered,
     OrderNotDelivered,
     ExportAs,
+    TipioViewDescriptionMobile
 };
