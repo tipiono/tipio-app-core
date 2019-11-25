@@ -53,6 +53,7 @@ import Overlay from './UI/Overlay/Overlay';
 import Alert from './UI/Alert/Alert';
 import Pagination from './UI/Pagination/Pagination';
 import RoundedButton from './UI/Buttons/RoundedButton';
+import TipioViewDescriptionMobile from './UI/TipioViewDescriptionMobile/TipioViewDescriptionMobile';
 
 /*
 *   Customer/Private Components
@@ -137,7 +138,6 @@ import EmptyBagIcon from './UI/Icons/EmptyBagIcon';
  */
 import calculateDiscountPercentage from './Util/calculateDiscountPercentage';
 import formatText from './Util/formatText';
-
 export {
     styles,
     SecondaryButton,
@@ -256,4 +256,5 @@ export {
     OrderNotDelivered,
     ExportAs,
     EmptyBagIcon,
+    TipioViewDescriptionMobile
 };
