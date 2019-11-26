@@ -1,9 +1,9 @@
 import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import ReactSelect from 'react-select';
+import ErrorMessage from '../ErrorMessage/ErrorMessage';
 
-
-function Select({placeholder, options, label, onChange, defaultValue}) {
+function Select({placeholder, options, label, onChange, defaultValue, displayErrors, errors}) {
     const [value, setValue] = useState({ value: defaultValue, label: defaultValue} || false);
 
     const _onChange = (v) => {
@@ -21,6 +21,12 @@ function Select({placeholder, options, label, onChange, defaultValue}) {
                 placeholder={placeholder || '-'}
                 isClearable={false}
             />
+            {displayErrors && errors && errors[name] && 
+                <ErrorMessage
+                    content={errors[name].message || errors[name]}
+                    color={"bg-red"}
+                />
+            }
         </div>
     )
 }
