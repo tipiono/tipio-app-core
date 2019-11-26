@@ -1,12 +1,12 @@
 import React from "react";
 import PropTypes from 'prop-types';
+import cx from 'classnames';
 
-const SecondaryOutlineButton = ({ loading, text, onClick, ...props }) => (
+const SecondaryOutlineButton = ({ loading, text, onClick, textColor, ...props }) => (
     <button
-        id="tipio-join-button"
         type="button"
         disabled={loading}
-        className="btn btn-outline-secondary btn-block btn-lg"
+        className={cx('btn btn-outline-secondary btn-lg', textColor)}
         onClick={onClick}
         {...props}
     >
