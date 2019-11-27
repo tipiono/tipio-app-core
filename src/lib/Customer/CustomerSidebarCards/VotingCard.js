@@ -13,6 +13,7 @@ const VotingCard = ({ state, ...props }) => {
                                 text={'Meld interesse'}
                                 onClick={props.voteOnClick}
                                 loading={props.voteLoading}
+                                id={props.id}
                             />
                         </div>
                         <p className="customerSidebarCard__footer--alert">Dette er ikke bindende</p>
