@@ -65,6 +65,18 @@ body.noscroll {
           border-bottom: 2px solid $secondary;
         }
 
+        .nav-list-link-menu-badge {
+          position: absolute;
+          right: 0;
+          top: -2px;
+          z-index: 7;
+        }
+        .nav-list-link-bag-badge {
+          position: absolute;
+          right: -10px;
+          top: -8px;
+          z-index: 7;
+        }
       }
     }
   }
@@ -448,4 +460,11 @@ body.noscroll {
   }
 }
 
-
+.navBadge {
+  background: #4abcac;
+  color: $primary;
+  font-size: 0.75rem;
+  font-family: 'Riposte-Bold', sans-serif;
+  padding: 0px 6px;
+  border-radius: 25px;
+}
