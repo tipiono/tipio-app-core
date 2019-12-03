@@ -62,7 +62,7 @@ var BindingCard = function BindingCard(_ref) {
     onClick: onShareClick
   })), _react.default.createElement("div", {
     className: "customerSidebarCard__footer--timeline"
-  }, _react.default.createElement(_HorizontalTimeline.default, null))));
+  }, _react.default.createElement(_HorizontalTimeline.default, props))));
 };
 
 var _default = BindingCard;

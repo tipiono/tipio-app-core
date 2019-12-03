@@ -48,7 +48,7 @@ const BindingCard = ({
                 </div>
 
                 <div className="customerSidebarCard__footer--timeline">
-                    <HorizontalTimeline />
+                    <HorizontalTimeline {...props}/>
                 </div>
             </>}
         </BaseCard>
