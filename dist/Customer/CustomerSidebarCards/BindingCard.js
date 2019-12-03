@@ -30,7 +30,8 @@ var BindingCard = function BindingCard(_ref) {
       secondRange = _ref.secondRange,
       onShareClick = _ref.onShareClick,
       onBindClick = _ref.onBindClick,
-      props = _objectWithoutProperties(_ref, ["children", "state", "firstRange", "secondRange", "onShareClick", "onBindClick"]);
+      bindingPercentage = _ref.bindingPercentage,
+      props = _objectWithoutProperties(_ref, ["children", "state", "firstRange", "secondRange", "onShareClick", "onBindClick", "bindingPercentage"]);
 
   return _react.default.createElement(_BaseCard.default, props, _react.default.createElement("ul", {
     className: "customerSidebarCard__footer__salePrice"
@@ -51,7 +52,7 @@ var BindingCard = function BindingCard(_ref) {
     className: "customerSidebarCard__footer--progressBar"
   }, _react.default.createElement(_SalesProgressBarTooltip.default, {
     bindCount: props.bindCount,
-    percentage: 50
+    percentage: bindingPercentage
   })), state !== 'bought' && _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_SecondaryOutlineButton.default, {
     text: 'Legg i handlekurv',
     onClick: onBindClick
