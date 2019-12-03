@@ -107,6 +107,7 @@ function (_Component2) {
     key: "onCloseButtonClick",
     value: function onCloseButtonClick(e) {
       // this.toggleNoScroll();
+      e.preventDefault();
       this.removeNoScrollClass();
       this.props.onCloseButtonClick();
     }

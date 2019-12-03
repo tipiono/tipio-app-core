@@ -5,7 +5,7 @@ import VerticalTimeline from '../../Timelines/VerticalTimeline';
 function VerticalTimelineModal(props) {
     return (
         <>
-            <Modal showCloseButton>
+            <Modal showCloseButton onCloseButtonClick={props.onClose}>
                 <div className="">
                     <VerticalTimeline {...props} />
                 </div>
