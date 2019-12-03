@@ -32,7 +32,8 @@ function Select(_ref) {
       onChange = _ref.onChange,
       defaultValue = _ref.defaultValue,
       displayErrors = _ref.displayErrors,
-      errors = _ref.errors;
+      errors = _ref.errors,
+      name = _ref.name;
 
   var _useState = (0, _react.useState)({
     value: defaultValue,

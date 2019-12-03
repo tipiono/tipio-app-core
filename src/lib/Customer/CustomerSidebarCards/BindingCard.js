@@ -18,7 +18,7 @@ const BindingCard = ({
             <ul className="customerSidebarCard__footer__salePrice">
                 {
                     firstRange ? (
-                        <li className="customerSidebarCard__footer__salePrice--minBuyers">
+                        <li className="customerSidebarCard__footer__salePrice--minBuyers" id={props.minimumByersId}>
                             <h3 className="customerSidebarCard__footer__salePrice--minBuyers--price">{firstRange.price} Kr</h3>
                             <span className="customerSidebarCard__footer__salePrice--minBuyers--label">Pris fra {firstRange.from}-{firstRange.to} kjøp</span>
                         </li>

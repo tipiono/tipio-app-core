@@ -35,7 +35,8 @@ var BindingCard = function BindingCard(_ref) {
   return _react.default.createElement(_BaseCard.default, props, _react.default.createElement("ul", {
     className: "customerSidebarCard__footer__salePrice"
   }, firstRange ? _react.default.createElement("li", {
-    className: "customerSidebarCard__footer__salePrice--minBuyers"
+    className: "customerSidebarCard__footer__salePrice--minBuyers",
+    id: props.minimumByersId
   }, _react.default.createElement("h3", {
     className: "customerSidebarCard__footer__salePrice--minBuyers--price"
   }, firstRange.price, " Kr"), _react.default.createElement("span", {
