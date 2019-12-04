@@ -59,7 +59,7 @@ var VerticalTimeline = function VerticalTimeline(_ref) {
     className: "left-text"
   }, tipio.meta.binding_count, " har kj\xF8pt!"), _react.default.createElement("div", {
     className: "tooltip-divider"
-  }), tipio.expires_in)), _react.default.createElement("div", {
+  }), tipio.meta.binding_expires_in)), _react.default.createElement("div", {
     className: "timeline-item-content"
   }, _react.default.createElement("h6", {
     className: "content-title"
@@ -83,7 +83,7 @@ var VerticalTimeline = function VerticalTimeline(_ref) {
     className: "left-text"
   }, tipio.meta.bidCount, " bud mottat"), _react.default.createElement("div", {
     className: "tooltip-divider"
-  }), tipio.meta.bidExpiresIn)), _react.default.createElement("div", {
+  }), tipio.meta.binding_expires_in)), _react.default.createElement("div", {
     className: "timeline-item-content"
   }, _react.default.createElement("h6", {
     className: "content-title"

@@ -23,6 +23,7 @@
     "cropperjs": "^1.5.5",
     "eslint": "5",
     "react-countdown-now": "^2.1.1",
+    "react-device-detect": "^1.11.14",
     "react-dropzone": "^10.1.10",
     "react-masonry-css": "^1.0.12",
     "react-onclickoutside": "^6.9.0",

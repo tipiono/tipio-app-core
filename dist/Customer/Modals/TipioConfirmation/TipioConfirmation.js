@@ -5,13 +5,21 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
-var _react = _interopRequireDefault(require("react"));
+var _react = _interopRequireWildcard(require("react"));
 
 var _Modal = require("../../../UI/Modal/Modal");
 
+var _reactDeviceDetect = require("react-device-detect");
+
 var _TipioCountdown = _interopRequireDefault(require("../../../UI/TipioCountdown/TipioCountdown"));
 
+var _fbShare = require("../../../Util/fbShare");
+
+var _reactShare = require("react-share");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
 
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
@@ -22,8 +30,12 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 function TipioConfirmation(_ref) {
   var image = _ref.image,
       expiresIn = _ref.expiresIn,
-      props = _objectWithoutProperties(_ref, ["image", "expiresIn"]);
+      share = _ref.share,
+      props = _objectWithoutProperties(_ref, ["image", "expiresIn", "share"]);
 
+  (0, _react.useEffect)(function () {
+    (0, _fbShare.loadFbSDK)();
+  }, []);
   return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_Modal.Modal, _extends({
     showCloseButton: true
   }, props), _react.default.createElement("div", {
@@ -47,6 +59,10 @@ function TipioConfirmation(_ref) {
     className: "tipio__confirmation--description"
   }, "For \xE5 \xF8ke sjansen til at Tipio skal g\xE5 igjennom kan du ", _react.default.createElement("br", null), " invitere venner som kan v\xE6re  interessert i det samme.\u2028"), _react.default.createElement("ul", {
     className: "tipio__confirmation__share"
+  }, _react.default.createElement(_reactShare.FacebookShareButton, {
+    url: share.link,
+    quote: share.title,
+    className: "Demo__some-network__share-button"
   }, _react.default.createElement("li", {
     className: "tipio__confirmation__share--item"
   }, _react.default.createElement("a", {
@@ -63,7 +79,11 @@ function TipioConfirmation(_ref) {
   }), _react.default.createElement("path", {
     d: "M16.274 24.14v-7.437h2.451l.46-2.928h-2.911V11.57s.081-1.062 1.223-1.062h1.784V7.901s-1.403-.194-2.935-.107c-1.694.097-3.001 1.726-3.033 3.334v2.646h-2.509v2.928h2.487v7.437h2.983z",
     fill: "#FEFEFE"
-  }))))), _react.default.createElement("li", {
+  })))))), _react.default.createElement(_reactShare.TwitterShareButton, {
+    url: share.link,
+    title: share.title,
+    className: "Demo__some-network__share-button"
+  }, _react.default.createElement("li", {
     className: "tipio__confirmation__share--item"
   }, _react.default.createElement("a", {
     href: ""
@@ -79,10 +99,16 @@ function TipioConfirmation(_ref) {
   }), _react.default.createElement("path", {
     d: "M6.837 21.397s2.744.437 5.184-1.48c0 0-1.673 0-2.71-1.39-.581-.823-.56-1.086-.56-1.086s.649.186 1.563-.049c-.249-.055-2.633-.519-2.821-3.504.493.189.575.353 1.573.436-.62-.479-2.383-2.164-1.077-4.702 0 0 2.463 3.368 7.255 3.667 0-.489-.489-2.675 1.982-4.005 1.005-.516 2.743-.543 4.046.773.258-.054.95-.04 2.227-.828-.15.53-.353 1.141-1.467 1.915.706-.082 1.046-.123 1.982-.517-.583.72-.502.802-1.738 1.806 0 .761.075 5.429-3.894 8.45-3.968 3.021-8.743 2.344-11.545.514",
     fill: "#FEFEFE"
-  }))))), _react.default.createElement("li", {
+  })))))), _react.default.createElement("li", {
     className: "tipio__confirmation__share--item"
   }, _react.default.createElement("a", {
-    href: ""
+    href: (0, _fbShare.messengerShareUrlMobile)(share.url),
+    onClick: function onClick(e) {
+      if (!_reactDeviceDetect.isMobile) {
+        e.preventDefault();
+        (0, _fbShare.shareOnMessengerWeb)(share.url);
+      }
+    }
   }, _react.default.createElement("svg", {
     width: 31,
     height: 31
@@ -95,7 +121,12 @@ function TipioConfirmation(_ref) {
   }), _react.default.createElement("path", {
     fill: "#FEFEFE",
     d: "M17.277 20.192l-3.69-3.953-7.227 3.953 7.943-8.47 3.802 3.99 7.152-3.99z"
-  }))))), _react.default.createElement("li", {
+  }))))), _react.default.createElement(_reactShare.EmailShareButton, {
+    url: share.link,
+    subject: share.title,
+    body: share.title,
+    className: "Demo__some-network__share-button"
+  }, _react.default.createElement("li", {
     className: "tipio__confirmation__share--item"
   }, _react.default.createElement("a", {
     href: "tipio__confirmation__share--item--link"
@@ -123,7 +154,7 @@ function TipioConfirmation(_ref) {
   }), _react.default.createElement("path", {
     fill: "#FEFEFE",
     d: "M23.879 11.827v9.196H8.085v-9.196l7.91 5.875z"
-  })))))))));
+  }))))))))));
 }
 
 var _default = TipioConfirmation;
