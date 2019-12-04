@@ -1,7 +1,6 @@
 import { isMobile } from "react-device-detect";
 
 let appId = process.env.REACT_APP_FB_APP_ID;
-alert("appId", appId)
 export function loadFbSDK() {
     window.fbAsyncInit = function() {
         window.FB.init({
