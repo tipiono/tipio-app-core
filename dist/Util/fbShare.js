@@ -10,7 +10,6 @@ exports.messengerShareUrlMobile = messengerShareUrlMobile;
 var _reactDeviceDetect = require("react-device-detect");
 
 var appId = process.env.REACT_APP_FB_APP_ID;
-alert("appId", appId);
 
 function loadFbSDK() {
   window.fbAsyncInit = function () {
