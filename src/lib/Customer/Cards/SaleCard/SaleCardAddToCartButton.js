@@ -1,5 +1,5 @@
 import React from "react";
 import SecondaryOutlineButton from '../../../UI/Buttons/SecondaryOutlineButton'
-export default function SaleCardAddToCartButton() {
-    return <SecondaryOutlineButton text="Legg i handlekurv"/>;
+export default function SaleCardAddToCartButton(props) {
+    return <SecondaryOutlineButton {...props} text="Legg i handlekurv"/>;
 }
