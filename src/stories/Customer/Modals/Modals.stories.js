@@ -47,6 +47,7 @@ storiesOf('Customer/Components/Modals', module)
         <>
             <div className="col-3 m-3">
                 <SuccessModal
+                    animationURL="https://tipio.ams3.digitaloceanspaces.com/staging/public/020s0040_1280x1280_wAlpha.gif"
                     successTitle={"Du har nå opprettet en Tipio!"}
                 />
             </div>
@@ -57,6 +58,7 @@ storiesOf('Customer/Components/Modals', module)
         <>
             <div className="col-3 m-3">
                 <SuccessModal
+                    animationURL="https://ams3.digitaloceanspaces.com/tipio/staging/public/ezgif.com-optimize-background.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=N6JIDO3RJ64JLOKLVNAO%2F20191216%2Fams3%2Fs3%2Faws4_request&X-Amz-Date=20191216T113324Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=ab7a9b645970ddd71478396eaed35b990eebd1a168e16b023c70efe9dc11ea6c"
                     successTitle={"Takk for din bestilling!"}
                     successDescription={"Du vil motta ordrebekreftelse på mail."}
                 />
