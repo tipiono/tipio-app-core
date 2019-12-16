@@ -18,13 +18,14 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 function SuccessModal(_ref) {
   var successTitle = _ref.successTitle,
       successDescription = _ref.successDescription,
-      props = _objectWithoutProperties(_ref, ["successTitle", "successDescription"]);
+      animationURL = _ref.animationURL,
+      props = _objectWithoutProperties(_ref, ["successTitle", "successDescription", "animationURL"]);
 
   return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_Modal.Modal, props, _react.default.createElement("div", {
     className: "successModal"
   }, _react.default.createElement("img", {
     className: "successModal--animation",
-    src: "https://tipio.ams3.digitaloceanspaces.com/staging/public/020s0040_1280x1280_wAlpha.gif",
+    src: animationURL,
     alt: ""
   }), _react.default.createElement("h3", {
     className: "successModal--title"
