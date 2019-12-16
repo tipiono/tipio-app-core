@@ -18,7 +18,7 @@ const VerticalTimeline = ({
                         <div className="tipio-status-header">
                             <a className="tipio-status-header-image" href="/">
                                 <img
-                                    src={tipio.mainImageUrl}
+                                    src={tipio.images && tipio.images[0].blob_url}
                                     alt=""/>
                             </a>
                             <div>
@@ -35,9 +35,9 @@ const VerticalTimeline = ({
                                     {!(stepStatus[2] === 'completed') && <>
                                         <div className="timeline-tooltip">
                                             <div className="timeline-tooltip-inner">
-                                                <span className="left-text">{tipio.meta.joinedCount} har kjøpt!</span>
+                                                <span className="left-text">{tipio.meta.binding_count} har kjøpt!</span>
                                                 <div className="tooltip-divider"/>
-                                                {tipio.expires_in}
+                                                {tipio.meta.binding_expires_in}
                                             </div>
                                         </div>
                                         <div className="timeline-item-content">
@@ -45,7 +45,7 @@ const VerticalTimeline = ({
                                             <p className="content-description">Jo flere som er med jo bedre pris.  </p>
                                             <button className="btn btn-secondary btn-sm">Husk å del Tipioen!</button>
                                         </div></>}
-                                    {(stepStatus[2] === 'completed') && <span className="timeline-item-title">{tipio.meta.joinedCount} kjøpte!</span>}
+                                    {(stepStatus[2] === 'completed') && <span className="timeline-item-title">{tipio.meta.binding_count} kjøpte!</span>}
                                 </li>
                                 <li className={"vertical-timeline-item step-3 " + (stepStatus[3] !== 'failed' ? stepStatus[3] : 'ongoing')}>
                                     {(stepStatus[3] === 'coming' || stepStatus[3] === 'completed') && <span className="timeline-item-title">Budgiving</span>}
@@ -55,7 +55,7 @@ const VerticalTimeline = ({
                                                 {tipio.meta.bidCount === 0 && <span className="left-text">Venter på bud</span>}
                                                 {tipio.meta.bidCount > 0 && <span className="left-text">{tipio.meta.bidCount} bud mottat</span>}
                                                 <div className="tooltip-divider"/>
-                                                {tipio.meta.bidExpiresIn}
+                                                {tipio.meta.binding_expires_in}
                                             </div>
                                         </div>
                                         <div className="timeline-item-content">
@@ -86,7 +86,7 @@ const VerticalTimeline = ({
                                         <>
                                             <div className="timeline-tooltip">
                                                 <div className="timeline-tooltip-inner">
-                                                    <span className="left-text">{tipio.meta.tipioOfferPrice} Kr</span>
+                                                    <span className="left-text">{tipio.meta.tipio_offer_price} Kr</span>
                                                 </div>
                                             </div>
 
@@ -105,7 +105,7 @@ const VerticalTimeline = ({
                                                 <div className="timeline-tooltip-inner">
                                                     <span className="left-text">Levering</span>
                                                     <div className="tooltip-divider"/>
-                                                    <span className="left-text">{tipio.meta.tipioOfferCompanyName}</span>
+                                                    <span className="left-text">{tipio.meta.tipo_offer_company_name}</span>
                                                 </div>
                                             </div>
 
@@ -139,15 +139,16 @@ VerticalTimeline.propTypes = {
         title: PropTypes.string.isRequired,
         subheading: PropTypes.string.isRequired,
     })).isRequired,
-    meta: {
-      joinedCount: PropTypes.number.isRequired,
-      bidCount: PropTypes.number.isRequired,
-      bidExpiresIn: PropTypes.object.isRequired,
-      tipioOfferPrice: PropTypes.number.isRequired,
-      tipioOfferCompanyName:  PropTypes.string.isRequired,
-    },
     stepStatus: PropTypes.object.isRequired,
     onClose: PropTypes.func.isRequired
+    // meta: {
+    //   joinedCount: PropTypes.number.isRequired,
+    //   bidCount: PropTypes.number.isRequired,
+    //   bidExpiresIn: PropTypes.object.isRequired,
+    //   tipioOfferPrice: PropTypes.number.isRequired,
+    //   tipioOfferCompanyName:  PropTypes.string.isRequired,
+    // }
+    // ,
 }
 
 export default VerticalTimeline;

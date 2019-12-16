@@ -16,10 +16,11 @@ const breakpointColumnsObj = (max = 4) => {
 
 const TipioFeedWithWrapper = props => {
     const items = [];
+    const showAddTipioButton = props.showAddTipioButton !== undefined ? props.showAddTipioButton : true;
     if (props.tipios) {
         for (let i = 0; i < props.tipios.length; i += 1) {
             const item = props.tipios[i];
-            if (i === 0 && props.AddTipioButton) {
+            if (showAddTipioButton && i === 0 && props.AddTipioButton) {
                 items.push(<props.AddTipioButton />);
             }
             if (props.card) {

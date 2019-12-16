@@ -11,7 +11,7 @@ const BaseCard = ({ children, ...props }) => {
                 </div>
 
                 <div className="customerSidebarCard__header__cost">
-                    <p className="customerSidebarCard__header__cost--label">Markedspris</p>
+                    <p className="customerSidebarCard__header__cost--label" id={props.marketPriceId}>Markedspris</p>
                     <h4 className="customerSidebarCard__header__cost--price">{props.market_price} Kr</h4>
                 </div>
             </div>

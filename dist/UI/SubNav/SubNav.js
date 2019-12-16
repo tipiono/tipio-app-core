@@ -18,12 +18,15 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var SubNav = function SubNav(_ref) {
   var title = _ref.title,
       items = _ref.items,
-      activeLink = _ref.activeLink,
       avatar = _ref.avatar,
       _onClick = _ref.onClick,
       loading = _ref.loading,
       _ref$showAvatar = _ref.showAvatar,
-      showAvatar = _ref$showAvatar === void 0 ? true : _ref$showAvatar;
+      showAvatar = _ref$showAvatar === void 0 ? true : _ref$showAvatar,
+      _ref$activeId = _ref.activeId,
+      activeId = _ref$activeId === void 0 ? -1 : _ref$activeId,
+      _ref$activeLink = _ref.activeLink,
+      activeLink = _ref$activeLink === void 0 ? '/-1' : _ref$activeLink;
   return _react.default.createElement("div", {
     className: "subNav"
   }, _react.default.createElement("div", {
@@ -54,7 +57,7 @@ var SubNav = function SubNav(_ref) {
       className: "subNav__list--item"
     }, _react.default.createElement("a", {
       className: (0, _classnames.default)("subNav__list--item--link", {
-        active: item.link === activeLink
+        active: item.link === activeLink || item.id === activeId
       }),
       href: "",
       onClick: function onClick(e) {

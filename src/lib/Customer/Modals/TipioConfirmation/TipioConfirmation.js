@@ -8,8 +8,8 @@ function TipioConfirmation({ image, expiresIn, ...props }) {
             <Modal showCloseButton {...props}>
                 <div className="tipio__confirmation">
 
-                    <a className="tipio__confirmation--image" href="">
-                        <img className="img-fluid" src={image} width="310px" alt="Tipio with offer"/>
+                    <a className="tipio__confirmation--image lazy-image" href="">
+                        <img className="img-fluid lazyload" src={image} width="310px" alt="Tipio with offer"/>
 
                         <div className="tipio__confirmation--timeLeft">
                             <TipioCountdown className="timer" expires_in={expiresIn}/>

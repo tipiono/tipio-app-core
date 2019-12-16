@@ -4,10 +4,26 @@
 
   &__header {
     position: relative;
+    background: $white;
 
-    &--image {
-      max-width: 100%;
-      height: auto;
+    &--preview {
+      overflow: hidden;
+
+      &--image {
+        max-width: 100%;
+        height: auto;
+        //transition: all 0.3s;
+        -webkit-transform: translateZ(0) scale(1.01, 1.01);
+        transform: translateZ(0) scale(1.01, 1.01);
+      }
+
+      &:hover {
+        img {
+          -webkit-backface-visibility: hidden;
+          -webkit-transform: translateZ(0) scale(1.04, 1.04);
+          transform: translateZ(0) scale(1.04, 1.04);
+        }
+      }
     }
 
     &--timeLeft {

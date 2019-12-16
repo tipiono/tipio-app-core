@@ -8,7 +8,6 @@ import SecondaryOutlineButton from "./UI/Buttons/SecondaryOutlineButton";
 import DisabledButton from "./UI/Buttons/DisabledButton";
 import GrayButton from "./UI/Buttons/GrayButton";
 import GrayOutlineButton from "./UI/Buttons/GrayOutlineButton";
-import LinkButton from "./UI/Buttons/LinkButton";
 import AddCategoryButton from "./UI/Buttons/AddCategoryButton";
 import SelectedCategoryButton from "./UI/Buttons/SelectedCategoryButton";
 import { Modal, ModalType } from "./UI/Modal/Modal";
@@ -54,6 +53,8 @@ import Overlay from './UI/Overlay/Overlay';
 import Alert from './UI/Alert/Alert';
 import Pagination from './UI/Pagination/Pagination';
 import RoundedButton from './UI/Buttons/RoundedButton';
+import TipioViewDescriptionMobile from './UI/TipioViewDescriptionMobile/TipioViewDescriptionMobile';
+import NavBadge from './UI/NavBadge/NavBadge';
 
 /*
 *   Customer/Private Components
@@ -82,7 +83,6 @@ import TipioSidebarVotingCard from './Customer/CustomerSidebarCards/VotingCard';
 import TipioSidebarBindingCard from './Customer/CustomerSidebarCards/BindingCard';
 import ImageUploader from './Customer/ImageUploader/ImageUploader';
 import CategoriesForm from './Company/Modals/ChooseCategory/CategoriesForm';
-import NoSearchResult from './Customer/Search/NoSearchResult';
 import TipioFeedWithWrapper from './Customer/TipioFeed/TipioFeedWithWrapper';
 
 /*
@@ -132,18 +132,18 @@ import SearchIcon from './UI/Icons/SearchIcon';
 import CloseIcon from './UI/Icons/CloseIcon';
 import FilterIcon from './UI/Icons/FilterIcon';
 import FilterIconCyan from './UI/Icons/FilterIconCyan';
+import EmptyBagIcon from './UI/Icons/EmptyBagIcon';
 
 /**
  * UTILS
  */
 import calculateDiscountPercentage from './Util/calculateDiscountPercentage';
-
+import formatText from './Util/formatText';
 export {
     styles,
     SecondaryButton,
     SecondaryOutlineButton,
     DisabledButton,
-    LinkButton,
     GrayButton,
     Modal,
     ModalType,
@@ -234,6 +234,7 @@ export {
     AddMoreSaleCompanyCard,
     RemoveImageIcon,
     calculateDiscountPercentage as _util_CalculateDiscountPercentage,
+    formatText as _util_FormatText,
     MaterialSearch,
     ExportIcon,
     CircleChart,
@@ -249,11 +250,13 @@ export {
     Alert,
     Pagination,
     RoundedButton,
-    NoSearchResult,
     TipioFeedWithWrapper,
     FilterIconCyan,
     AlreadyHasBid,
     OrderDelivered,
     OrderNotDelivered,
-    ExportAs
+    ExportAs,
+    EmptyBagIcon,
+    TipioViewDescriptionMobile,
+    NavBadge
 };

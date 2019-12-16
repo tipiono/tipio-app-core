@@ -39,12 +39,6 @@ Object.defineProperty(exports, "GrayOutlineButton", {
     return _GrayOutlineButton.default;
   }
 });
-Object.defineProperty(exports, "LinkButton", {
-  enumerable: true,
-  get: function get() {
-    return _LinkButton.default;
-  }
-});
 Object.defineProperty(exports, "AddCategoryButton", {
   enumerable: true,
   get: function get() {
@@ -327,6 +321,18 @@ Object.defineProperty(exports, "RoundedButton", {
     return _RoundedButton.default;
   }
 });
+Object.defineProperty(exports, "TipioViewDescriptionMobile", {
+  enumerable: true,
+  get: function get() {
+    return _TipioViewDescriptionMobile.default;
+  }
+});
+Object.defineProperty(exports, "NavBadge", {
+  enumerable: true,
+  get: function get() {
+    return _NavBadge.default;
+  }
+});
 Object.defineProperty(exports, "TipioWithOffer", {
   enumerable: true,
   get: function get() {
@@ -469,12 +475,6 @@ Object.defineProperty(exports, "CategoriesForm", {
   enumerable: true,
   get: function get() {
     return _CategoriesForm.default;
-  }
-});
-Object.defineProperty(exports, "NoSearchResult", {
-  enumerable: true,
-  get: function get() {
-    return _NoSearchResult.default;
   }
 });
 Object.defineProperty(exports, "TipioFeedWithWrapper", {
@@ -693,10 +693,22 @@ Object.defineProperty(exports, "FilterIconCyan", {
     return _FilterIconCyan.default;
   }
 });
+Object.defineProperty(exports, "EmptyBagIcon", {
+  enumerable: true,
+  get: function get() {
+    return _EmptyBagIcon.default;
+  }
+});
 Object.defineProperty(exports, "_util_CalculateDiscountPercentage", {
   enumerable: true,
   get: function get() {
     return _calculateDiscountPercentage.default;
+  }
+});
+Object.defineProperty(exports, "_util_FormatText", {
+  enumerable: true,
+  get: function get() {
+    return _formatText.default;
   }
 });
 exports.CountdownType = void 0;
@@ -712,8 +724,6 @@ var _DisabledButton = _interopRequireDefault(require("./UI/Buttons/DisabledButto
 var _GrayButton = _interopRequireDefault(require("./UI/Buttons/GrayButton"));
 
 var _GrayOutlineButton = _interopRequireDefault(require("./UI/Buttons/GrayOutlineButton"));
-
-var _LinkButton = _interopRequireDefault(require("./UI/Buttons/LinkButton"));
 
 var _AddCategoryButton = _interopRequireDefault(require("./UI/Buttons/AddCategoryButton"));
 
@@ -807,6 +817,10 @@ var _Pagination = _interopRequireDefault(require("./UI/Pagination/Pagination"));
 
 var _RoundedButton = _interopRequireDefault(require("./UI/Buttons/RoundedButton"));
 
+var _TipioViewDescriptionMobile = _interopRequireDefault(require("./UI/TipioViewDescriptionMobile/TipioViewDescriptionMobile"));
+
+var _NavBadge = _interopRequireDefault(require("./UI/NavBadge/NavBadge"));
+
 var _TipioWithOffer = _interopRequireDefault(require("./Customer/Modals/TipioWithOffer/TipioWithOffer"));
 
 var _TipioConfirmation = _interopRequireDefault(require("./Customer/Modals/TipioConfirmation/TipioConfirmation"));
@@ -854,8 +868,6 @@ var _BindingCard = _interopRequireDefault(require("./Customer/CustomerSidebarCar
 var _ImageUploader = _interopRequireDefault(require("./Customer/ImageUploader/ImageUploader"));
 
 var _CategoriesForm = _interopRequireDefault(require("./Company/Modals/ChooseCategory/CategoriesForm"));
-
-var _NoSearchResult = _interopRequireDefault(require("./Customer/Search/NoSearchResult"));
 
 var _TipioFeedWithWrapper = _interopRequireDefault(require("./Customer/TipioFeed/TipioFeedWithWrapper"));
 
@@ -929,7 +941,11 @@ var _FilterIcon = _interopRequireDefault(require("./UI/Icons/FilterIcon"));
 
 var _FilterIconCyan = _interopRequireDefault(require("./UI/Icons/FilterIconCyan"));
 
+var _EmptyBagIcon = _interopRequireDefault(require("./UI/Icons/EmptyBagIcon"));
+
 var _calculateDiscountPercentage = _interopRequireDefault(require("./Util/calculateDiscountPercentage"));
+
+var _formatText = _interopRequireDefault(require("./Util/formatText"));
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
 

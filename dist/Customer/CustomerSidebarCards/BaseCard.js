@@ -30,7 +30,8 @@ var BaseCard = function BaseCard(_ref) {
   }, props.subtitle)), _react.default.createElement("div", {
     className: "customerSidebarCard__header__cost"
   }, _react.default.createElement("p", {
-    className: "customerSidebarCard__header__cost--label"
+    className: "customerSidebarCard__header__cost--label",
+    id: props.marketPriceId
   }, "Markedspris"), _react.default.createElement("h4", {
     className: "customerSidebarCard__header__cost--price"
   }, props.market_price, " Kr"))), _react.default.createElement("div", {

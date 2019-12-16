@@ -1,17 +1,18 @@
 import React from "react";
 
 function SalesProgressBarTooltip ({
-                              percentage
+                              percentage,
+                              bindCount
                           }) {
     return (
         <>
             <div className="sales__progress my-3">
                 <div className="sales__progress--bar progress">
-                    <div className={`progress-bar w-${percentage} bg-secondary`} role="progressbar" aria-valuenow="25"
+                    <div className={`progress-bar bg-secondary`} style={{'width': `${percentage}%`}} role="progressbar" aria-valuenow="25"
                          aria-valuemin="0"
                          aria-valuemax="100"/>
                 </div>
-                <div className="sales__progress--tooltip middle">
+                {/* <div className="sales__progress--tooltip middle" style={{'margin-left': `${percentage}%`}}>
                     <svg className="sales__progress--tooltip--icon" width="17px" height="15px" viewBox="0 0 17 15">
                         <g id="Symbols" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
                             <path
@@ -19,12 +20,10 @@ function SalesProgressBarTooltip ({
                                 id="Combined-Shape" fill="#5C6265"/>
                         </g>
                     </svg>
-
-
-                    <span>36 har allerede kjøpt!</span>
-                </div>
+                    <span>{bindCount} har allerede kjøpt!</span>
+                </div> */}
+                {/* </div> */}
             </div>
-
         </>
     )
 }

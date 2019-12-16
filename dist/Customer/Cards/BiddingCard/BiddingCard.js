@@ -28,10 +28,12 @@ function BiddingCard(_ref) {
   }, _react.default.createElement("div", {
     className: "biddingCard__header"
   }, _react.default.createElement("a", {
-    href: ""
+    href: "",
+    className: "lazy-image biddingCard__header--preview"
   }, _react.default.createElement("img", {
-    className: "biddingCard__header--image",
-    src: image,
+    className: "lazyload biddingCard__header--preview--image",
+    "data-src": image,
+    src: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 2'%3E%3C/svg%3E",
     alt: ""
   })), _react.default.createElement("div", {
     className: "biddingCard__header--timeLeft"
