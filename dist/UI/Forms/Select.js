@@ -62,9 +62,6 @@ function Select(_ref) {
     }),
     placeholder: placeholder || '-',
     isClearable: false
-  }), displayErrors && errors && errors[name] && _react.default.createElement(_ErrorMessage.default, {
-    content: errors[name].message || errors[name],
-    color: "bg-red"
   }));
 }
 
