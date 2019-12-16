@@ -22,12 +22,12 @@ function Select({placeholder, options, label, onChange, defaultValue, displayErr
                 isClearable={false}
             />
 
-            {displayErrors && errors && errors[name] &&
-            <ErrorMessage
-                content={errors[name].message || errors[name]}
-                color={"bg-red"}
-            />
-            }
+            {/*{displayErrors && errors && errors[name] &&*/}
+            {/*<ErrorMessage*/}
+            {/*    content={errors[name].message || errors[name]}*/}
+            {/*    color={"bg-red"}*/}
+            {/*/>*/}
+            {/*}*/}
 
         </div>
     )
