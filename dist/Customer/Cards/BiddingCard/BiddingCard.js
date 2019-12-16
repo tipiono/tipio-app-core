@@ -52,9 +52,7 @@ function BiddingCard(_ref) {
     className: "biddingCard__body--content"
   }, _react.default.createElement("h4", {
     className: "biddingCard__body--content--title"
-  }, title), _react.default.createElement("p", {
-    className: "biddingCard__body--content--description"
-  }, description)), _react.default.createElement("div", {
+  }, title)), _react.default.createElement("div", {
     className: "biddingCard__body--salesbar"
   }, _react.default.createElement(_SalesProgressBar.default, {
     percentage: salesProgressBarPercentage,

@@ -47,9 +47,7 @@ function VotingCard(_ref) {
     className: "votingCard__body--content"
   }, _react.default.createElement("h5", {
     className: "votingCard__body--content--title"
-  }, title), _react.default.createElement("p", {
-    className: "votingCard__body--content--description"
-  }, description)), children)));
+  }, title)), children)));
 }
 
 var _default = VotingCard;

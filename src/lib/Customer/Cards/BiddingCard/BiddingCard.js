@@ -38,7 +38,7 @@ function BiddingCard({
 
                     <div className="biddingCard__body--content">
                         <h4 className="biddingCard__body--content--title">{title}</h4>
-                        <p className="biddingCard__body--content--description">{description}</p>
+                        {/* <p className="biddingCard__body--content--description">{description}</p> */}
                     </div>
 
                     <div className="biddingCard__body--salesbar">

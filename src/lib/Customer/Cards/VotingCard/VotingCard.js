@@ -27,7 +27,7 @@ function VotingCard({image, interestedCounter, title, description, expiresIn, ch
 
                     <div className="votingCard__body--content">
                         <h5 className="votingCard__body--content--title">{title}</h5>
-                        <p className="votingCard__body--content--description">{description}</p>
+                        {/* <p className="votingCard__body--content--description">{description}</p> */}
                     </div>
                     {children}
                 </div>
