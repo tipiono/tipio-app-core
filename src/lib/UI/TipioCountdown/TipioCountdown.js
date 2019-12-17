@@ -13,13 +13,11 @@ const renderer = ({hours, minutes, seconds, completed}) => {
 
 class TipioCountdown extends React.Component {
     render() {
-        if (this.props.showIfLessThanHours) {
-            const substractN = new Date(this.props.expires_in);
-            substractN.setHours(substractN.getHours() - this.props.showIfLessThanHours);
+        const substractN = new Date(this.props.expires_in);
+        substractN.setHours(substractN.getHours() - 72);
 
-            if (substractN > new Date()) {
-                return null
-            }
+        if (substractN > new Date()) {
+            return null
         }
 
         return <Countdown

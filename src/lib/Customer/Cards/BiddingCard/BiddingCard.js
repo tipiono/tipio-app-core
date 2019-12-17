@@ -11,13 +11,14 @@ function BiddingCard({
     costPrice,
     children,
     salesProgressBarPercentage,
-    bindingCount
+    bindingCount,
+    onClick
 }) {
     return (
         <>
             <div className="biddingCard">
                 <div className="biddingCard__header">
-                    <a href="" className="lazy-image biddingCard__header--preview">
+                    <a href="" className="lazy-image biddingCard__header--preview" onClick={onClick}>
                         <img className="lazyload biddingCard__header--preview--image"
                              data-src={image}
                              src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 2'%3E%3C/svg%3E"
@@ -37,7 +38,7 @@ function BiddingCard({
                     </div>
 
                     <div className="biddingCard__body--content">
-                        <h4 className="biddingCard__body--content--title">{title}</h4>
+                        <a onClick={onClick} href="#"><h4 className="biddingCard__body--content--title">{title}</h4></a>
                         {/* <p className="biddingCard__body--content--description">{description}</p> */}
                     </div>
 
