@@ -19,7 +19,9 @@ function HamburgerMenu(props) {
   var menuVisible = props.menuVisible,
       toggleMenu = props.toggleMenu,
       items = props.items,
-      logedIn = props.logedIn;
+      logedIn = props.logedIn; // console.log(items);
+  // console.log(logedIn);
+
   return _react.default.createElement(_react.default.Fragment, null, menuVisible && _react.default.createElement(_Overlay.default, {
     onClick: toggleMenu,
     opacity: 0.5,
@@ -28,8 +30,8 @@ function HamburgerMenu(props) {
     className: "nav-list-item"
   }, _react.default.createElement("span", null, _react.default.createElement("a", {
     href: "#",
-    className: (0, _classnames.default)('hamburger-button', {
-      'show': menuVisible
+    className: (0, _classnames.default)("hamburger-button", {
+      show: menuVisible
     }),
     onClick: function onClick(e) {
       e.preventDefault();
@@ -51,7 +53,7 @@ function HamburgerMenu(props) {
         key: x.name,
         className: "nav-item"
       }, _react.default.createElement(_DropDown.DropDown, {
-        title: 'Mine Tipioer'
+        title: "Mine Tipioer"
       }, x.sub_items.map(function (y) {
         return _react.default.createElement(_DropDown.DropDownItem, {
           key: y.name
@@ -64,10 +66,12 @@ function HamburgerMenu(props) {
         }, y.name));
       })));
     } else {
+      var logoutItem = x.name === "Logg ut";
       return _react.default.createElement("li", {
         key: x.name,
         className: (0, _classnames.default)({
-          'nav-item': items.sub_items
+          "nav-item": items.sub_items,
+          "nav-item-logout": logoutItem
         })
       }, _react.default.createElement("a", {
         href: "/tipio/new",
