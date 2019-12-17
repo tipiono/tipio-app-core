@@ -34,7 +34,8 @@ function VotingCard(_ref) {
     className: "votingCard__header--timeLeft"
   }, _react.default.createElement(_TipioCountdown.default, {
     className: "timer",
-    expires_in: expiresIn
+    expires_in: expiresIn,
+    showIfLessThanHours: 72
   }))), _react.default.createElement("div", {
     className: "votingCard__body"
   }, _react.default.createElement("div", {

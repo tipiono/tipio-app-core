@@ -15,7 +15,7 @@ function VotingCard({image, interestedCounter, title, description, expiresIn, ch
                     </a>
 
                     <div className="votingCard__header--timeLeft">
-                        <TipioCountdown className="timer" expires_in={expiresIn}/>
+                        <TipioCountdown className="timer" expires_in={expiresIn} showIfLessThanHours={72} />
                     </div>
                 </div>
 
