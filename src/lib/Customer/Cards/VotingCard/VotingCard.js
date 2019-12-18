@@ -1,7 +1,7 @@
 import React from "react";
 import TipioCountdown from "../../../UI/TipioCountdown/TipioCountdown";
 
-function VotingCard({image, interestedCounter, title, description, expiresIn, children}) {
+function VotingCard({image, interestedCounter, title, brand, expiresIn, children}) {
     return (
         <>
             <div className="votingCard">
@@ -27,7 +27,7 @@ function VotingCard({image, interestedCounter, title, description, expiresIn, ch
 
                     <div className="votingCard__body--content">
                         <h5 className="votingCard__body--content--title">{title}</h5>
-                        {/* <p className="votingCard__body--content--description">{description}</p> */}
+                        {brand && <p className="votingCard__body--content--description">{brand.toUpperCase()}</p>}
                     </div>
                     {children}
                 </div>

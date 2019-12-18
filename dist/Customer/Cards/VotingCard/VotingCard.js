@@ -15,7 +15,7 @@ function VotingCard(_ref) {
   var image = _ref.image,
       interestedCounter = _ref.interestedCounter,
       title = _ref.title,
-      description = _ref.description,
+      brand = _ref.brand,
       expiresIn = _ref.expiresIn,
       children = _ref.children;
   return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("div", {
@@ -47,7 +47,9 @@ function VotingCard(_ref) {
     className: "votingCard__body--content"
   }, _react.default.createElement("h5", {
     className: "votingCard__body--content--title"
-  }, title)), children)));
+  }, title), brand && _react.default.createElement("p", {
+    className: "votingCard__body--content--description"
+  }, brand.toUpperCase())), children)));
 }
 
 var _default = VotingCard;

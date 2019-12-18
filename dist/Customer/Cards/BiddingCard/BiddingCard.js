@@ -16,7 +16,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function BiddingCard(_ref) {
   var image = _ref.image,
       title = _ref.title,
-      description = _ref.description,
+      brand = _ref.brand,
       expiresIn = _ref.expiresIn,
       salePrice = _ref.salePrice,
       costPrice = _ref.costPrice,
@@ -57,7 +57,9 @@ function BiddingCard(_ref) {
     href: "#"
   }, _react.default.createElement("h4", {
     className: "biddingCard__body--content--title"
-  }, title))), _react.default.createElement("div", {
+  }, title)), brand && _react.default.createElement("p", {
+    className: "biddingCard__body--content--description"
+  }, brand.toUpperCase())), _react.default.createElement("div", {
     className: "biddingCard__body--salesbar"
   }, _react.default.createElement(_SalesProgressBar.default, {
     percentage: salesProgressBarPercentage,

@@ -5,7 +5,7 @@ import SalesProgressBar from "../../SalesProgressBar/SalesProgressBar";
 function BiddingCard({
     image,
     title,
-    description,
+    brand,
     expiresIn,
     salePrice,
     costPrice,
@@ -39,7 +39,7 @@ function BiddingCard({
 
                     <div className="biddingCard__body--content">
                         <a onClick={onClick} href="#"><h4 className="biddingCard__body--content--title">{title}</h4></a>
-                        {/* <p className="biddingCard__body--content--description">{description}</p> */}
+                        {brand && <p className="biddingCard__body--content--description">{brand.toUpperCase()}</p>}
                     </div>
 
                     <div className="biddingCard__body--salesbar">
