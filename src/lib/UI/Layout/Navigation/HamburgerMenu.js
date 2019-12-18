@@ -27,7 +27,7 @@ function HamburgerMenu(props) {
                 </span>
                 {menuVisible && (
                     <div className="menu-content show">
-                        <ul className="tab-content">
+                        <ul className="tab-content company-menu-content">
                             {items &&
                                 items.map(x => {
                                     if (
@@ -62,13 +62,16 @@ function HamburgerMenu(props) {
                                             </li>
                                         );
                                     } else {
-                                        const logoutItem = x.name === "Logg ut";
+                                        {
+                                            /* const logoutItem = x.name === "Logg ut"; */
+                                        }
                                         return (
                                             <li
                                                 key={x.name}
+                                                id="nav-item"
                                                 className={cx({
-                                                    "nav-item": items.sub_items,
-                                                    "nav-item-logout": logoutItem
+                                                    "nav-item": items.sub_items
+                                                    // "nav-item-logout": logoutItem
                                                 })}>
                                                 <a
                                                     href="/tipio/new"

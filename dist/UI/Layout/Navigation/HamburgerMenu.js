@@ -19,9 +19,7 @@ function HamburgerMenu(props) {
   var menuVisible = props.menuVisible,
       toggleMenu = props.toggleMenu,
       items = props.items,
-      logedIn = props.logedIn; // console.log(items);
-  // console.log(logedIn);
-
+      logedIn = props.logedIn;
   return _react.default.createElement(_react.default.Fragment, null, menuVisible && _react.default.createElement(_Overlay.default, {
     onClick: toggleMenu,
     opacity: 0.5,
@@ -40,7 +38,7 @@ function HamburgerMenu(props) {
   }, "Menu")), menuVisible && _react.default.createElement("div", {
     className: "menu-content show"
   }, _react.default.createElement("ul", {
-    className: "tab-content"
+    className: "tab-content company-menu-content"
   }, items && items.map(function (x) {
     if (x.shouldDisplay && !x.shouldDisplay({
       logedIn: logedIn
@@ -66,12 +64,15 @@ function HamburgerMenu(props) {
         }, y.name));
       })));
     } else {
-      var logoutItem = x.name === "Logg ut";
+      {
+        /* const logoutItem = x.name === "Logg ut"; */
+      }
       return _react.default.createElement("li", {
         key: x.name,
+        id: "nav-item",
         className: (0, _classnames.default)({
-          "nav-item": items.sub_items,
-          "nav-item-logout": logoutItem
+          "nav-item": items.sub_items // "nav-item-logout": logoutItem
+
         })
       }, _react.default.createElement("a", {
         href: "/tipio/new",

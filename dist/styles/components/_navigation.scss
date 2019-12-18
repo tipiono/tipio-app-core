@@ -7,6 +7,12 @@ body.noscroll {
     height: 100%;
 }
 
+.company-menu-content {
+    #nav-item:last-child {
+        margin-top: 3rem;
+    }
+}
+
 .navigation {
     background: $primary;
     padding: 20px 0;
@@ -196,6 +202,7 @@ body.noscroll {
                 a {
                     color: $gray-300;
                     cursor: pointer;
+                    font-size: 14px;
                 }
             }
         }

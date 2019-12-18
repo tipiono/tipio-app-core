@@ -7,23 +7,30 @@
     height: 3em;
     width: 2.5em;
     transition: background 800ms;
-    background: linear-gradient(transparent 0%, transparent 46%, #f9f6ff 46%, #f9f6ff 54%, transparent 54%, transparent 100%);
+    background: linear-gradient(
+        transparent 0%,
+        transparent 46%,
+        #f9f6ff 46%,
+        #f9f6ff 54%,
+        transparent 54%,
+        transparent 100%
+    );
     z-index: 6;
     &:after,
     &:before {
         transition: all ease 200ms;
         position: absolute;
-        content: 'a';
+        content: "a";
         background-color: $white;
-        height: .25em;
+        height: 0.25em;
         width: 2.5em;
     }
     &:before {
-        top: .6em;
+        top: 0.6em;
         right: 0;
     }
     &:after {
-        bottom: .6em;
+        bottom: 0.6em;
         right: 0;
     }
     // Active
@@ -49,16 +56,19 @@
     }
     // Hover Styles
     &:hover {
-        background: linear-gradient(transparent 0%, transparent 46%, #4abcac 46%, #4abcac 54%, transparent 54%, transparent 100%);
-        &:after,
+        // background: linear-gradient(
+        //     transparent 0%,
+        //     transparent 46%,
+        //     #4abcac 46%,
+        //     #4abcac 54%,
+        //     transparent 54%,
+        //     transparent 100%
+        // );
         &:before {
-            background-color: $secondary;
-        }
-        &:before {
-            top: .6em;
+            top: 0.4em;
         }
         &:after {
-            bottom: .6em;
+            bottom: 0.4em;
         }
     }
 }
