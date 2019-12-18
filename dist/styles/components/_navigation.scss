@@ -161,6 +161,9 @@ body.noscroll {
 
       li {
         padding: .75em 1em;
+        &:last-child{
+          margin-top: 4rem;
+        }
       }
 
       a {
@@ -190,7 +193,13 @@ body.noscroll {
       }
 
       .dropdown-list {
+        li{
+          &:last-child{
+            margin-top: 0;
+          }
+        }
         a {
+          font-size: 14px;
           color: $gray-300;
           cursor: pointer;
         }
