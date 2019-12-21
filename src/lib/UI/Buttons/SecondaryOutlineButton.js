@@ -6,7 +6,7 @@ const SecondaryOutlineButton = ({ loading, text, onClick, textColor, ...props })
     <button
         type="button"
         disabled={loading}
-        className={cx('btn btn-outline-secondary btn-lg', textColor)}
+        className={cx('btn btn-outline-secondary btn-block btn-lg', textColor)}
         onClick={onClick}
         {...props}
     >

@@ -30,12 +30,14 @@ var BindingCard = function BindingCard(_ref) {
       secondRange = _ref.secondRange,
       onShareClick = _ref.onShareClick,
       onBindClick = _ref.onBindClick,
-      props = _objectWithoutProperties(_ref, ["children", "state", "firstRange", "secondRange", "onShareClick", "onBindClick"]);
+      bindingPercentage = _ref.bindingPercentage,
+      props = _objectWithoutProperties(_ref, ["children", "state", "firstRange", "secondRange", "onShareClick", "onBindClick", "bindingPercentage"]);
 
   return _react.default.createElement(_BaseCard.default, props, _react.default.createElement("ul", {
     className: "customerSidebarCard__footer__salePrice"
   }, firstRange ? _react.default.createElement("li", {
-    className: "customerSidebarCard__footer__salePrice--minBuyers"
+    className: "customerSidebarCard__footer__salePrice--minBuyers",
+    id: props.minimumByersId
   }, _react.default.createElement("h3", {
     className: "customerSidebarCard__footer__salePrice--minBuyers--price"
   }, firstRange.price, " Kr"), _react.default.createElement("span", {
@@ -50,7 +52,7 @@ var BindingCard = function BindingCard(_ref) {
     className: "customerSidebarCard__footer--progressBar"
   }, _react.default.createElement(_SalesProgressBarTooltip.default, {
     bindCount: props.bindCount,
-    percentage: 50
+    percentage: bindingPercentage
   })), state !== 'bought' && _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_SecondaryOutlineButton.default, {
     text: 'Legg i handlekurv',
     onClick: onBindClick
@@ -60,7 +62,7 @@ var BindingCard = function BindingCard(_ref) {
     onClick: onShareClick
   })), _react.default.createElement("div", {
     className: "customerSidebarCard__footer--timeline"
-  }, _react.default.createElement(_HorizontalTimeline.default, null))));
+  }, _react.default.createElement(_HorizontalTimeline.default, props))));
 };
 
 var _default = BindingCard;

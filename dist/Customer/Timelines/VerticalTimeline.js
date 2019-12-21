@@ -33,7 +33,7 @@ var VerticalTimeline = function VerticalTimeline(_ref) {
     className: "tipio-status-header-image",
     href: "/"
   }, _react.default.createElement("img", {
-    src: tipio.mainImageUrl,
+    src: tipio.images && tipio.images[0].blob_url,
     alt: ""
   })), _react.default.createElement("div", null, _react.default.createElement("h5", {
     className: "tipio-status-header-title"
@@ -57,9 +57,9 @@ var VerticalTimeline = function VerticalTimeline(_ref) {
     className: "timeline-tooltip-inner"
   }, _react.default.createElement("span", {
     className: "left-text"
-  }, tipio.meta.joinedCount, " har kj\xF8pt!"), _react.default.createElement("div", {
+  }, tipio.meta.binding_count, " har kj\xF8pt!"), _react.default.createElement("div", {
     className: "tooltip-divider"
-  }), tipio.expires_in)), _react.default.createElement("div", {
+  }), tipio.meta.binding_expires_in)), _react.default.createElement("div", {
     className: "timeline-item-content"
   }, _react.default.createElement("h6", {
     className: "content-title"
@@ -69,7 +69,7 @@ var VerticalTimeline = function VerticalTimeline(_ref) {
     className: "btn btn-secondary btn-sm"
   }, "Husk \xE5 del Tipioen!"))), stepStatus[2] === 'completed' && _react.default.createElement("span", {
     className: "timeline-item-title"
-  }, tipio.meta.joinedCount, " kj\xF8pte!")), _react.default.createElement("li", {
+  }, tipio.meta.binding_count, " kj\xF8pte!")), _react.default.createElement("li", {
     className: "vertical-timeline-item step-3 " + (stepStatus[3] !== 'failed' ? stepStatus[3] : 'ongoing')
   }, (stepStatus[3] === 'coming' || stepStatus[3] === 'completed') && _react.default.createElement("span", {
     className: "timeline-item-title"
@@ -83,7 +83,7 @@ var VerticalTimeline = function VerticalTimeline(_ref) {
     className: "left-text"
   }, tipio.meta.bidCount, " bud mottat"), _react.default.createElement("div", {
     className: "tooltip-divider"
-  }), tipio.meta.bidExpiresIn)), _react.default.createElement("div", {
+  }), tipio.meta.binding_expires_in)), _react.default.createElement("div", {
     className: "timeline-item-content"
   }, _react.default.createElement("h6", {
     className: "content-title"
@@ -118,7 +118,7 @@ var VerticalTimeline = function VerticalTimeline(_ref) {
     className: "timeline-tooltip-inner"
   }, _react.default.createElement("span", {
     className: "left-text"
-  }, tipio.meta.tipioOfferPrice, " Kr"))), _react.default.createElement("div", {
+  }, tipio.meta.tipio_offer_price, " Kr"))), _react.default.createElement("div", {
     className: "timeline-item-content"
   }, _react.default.createElement("h6", {
     className: "content-title"
@@ -138,7 +138,7 @@ var VerticalTimeline = function VerticalTimeline(_ref) {
     className: "tooltip-divider"
   }), _react.default.createElement("span", {
     className: "left-text"
-  }, tipio.meta.tipioOfferCompanyName))), _react.default.createElement("div", {
+  }, tipio.meta.tipo_offer_company_name))), _react.default.createElement("div", {
     className: "timeline-item-content"
   }, _react.default.createElement("h6", {
     className: "content-title"
@@ -159,15 +159,16 @@ VerticalTimeline.propTypes = {
     title: _propTypes.default.string.isRequired,
     subheading: _propTypes.default.string.isRequired
   })).isRequired,
-  meta: {
-    joinedCount: _propTypes.default.number.isRequired,
-    bidCount: _propTypes.default.number.isRequired,
-    bidExpiresIn: _propTypes.default.object.isRequired,
-    tipioOfferPrice: _propTypes.default.number.isRequired,
-    tipioOfferCompanyName: _propTypes.default.string.isRequired
-  },
   stepStatus: _propTypes.default.object.isRequired,
-  onClose: _propTypes.default.func.isRequired
+  onClose: _propTypes.default.func.isRequired // meta: {
+  //   joinedCount: PropTypes.number.isRequired,
+  //   bidCount: PropTypes.number.isRequired,
+  //   bidExpiresIn: PropTypes.object.isRequired,
+  //   tipioOfferPrice: PropTypes.number.isRequired,
+  //   tipioOfferCompanyName:  PropTypes.string.isRequired,
+  // }
+  // ,
+
 };
 var _default = VerticalTimeline;
 exports.default = _default;

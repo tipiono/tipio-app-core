@@ -12,13 +12,15 @@ const BindingCard = ({
     secondRange,
     onShareClick,
     onBindClick,
-...props}) => {
+    bindingPercentage,
+    ...props
+}) => {
     return (
         <BaseCard {...props}>
             <ul className="customerSidebarCard__footer__salePrice">
                 {
                     firstRange ? (
-                        <li className="customerSidebarCard__footer__salePrice--minBuyers">
+                        <li className="customerSidebarCard__footer__salePrice--minBuyers" id={props.minimumByersId}>
                             <h3 className="customerSidebarCard__footer__salePrice--minBuyers--price">{firstRange.price} Kr</h3>
                             <span className="customerSidebarCard__footer__salePrice--minBuyers--label">Pris fra {firstRange.from}-{firstRange.to} kjøp</span>
                         </li>
@@ -34,7 +36,7 @@ const BindingCard = ({
                 }
             </ul>
             <div className="customerSidebarCard__footer--progressBar">
-                <SalesProgressBarTooltip bindCount={props.bindCount} percentage={50}/>
+                <SalesProgressBarTooltip bindCount={props.bindCount} percentage={bindingPercentage}/>
             </div>
             {state !== 'bought' && <>
                 <SecondaryOutlineButton text={'Legg i handlekurv'} onClick={onBindClick} />
@@ -46,7 +48,7 @@ const BindingCard = ({
                 </div>
 
                 <div className="customerSidebarCard__footer--timeline">
-                    <HorizontalTimeline />
+                    <HorizontalTimeline {...props}/>
                 </div>
             </>}
         </BaseCard>

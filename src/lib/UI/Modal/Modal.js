@@ -43,6 +43,7 @@ class Modal extends Component {
 
     onCloseButtonClick(e) {
         // this.toggleNoScroll();
+        e.preventDefault();
         this.removeNoScrollClass();
         this.props.onCloseButtonClick();
     }

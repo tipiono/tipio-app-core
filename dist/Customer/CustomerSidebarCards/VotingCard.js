@@ -30,7 +30,8 @@ var VotingCard = function VotingCard(_ref) {
   }, _react.default.createElement(_SecondaryOutlineButton.default, {
     text: 'Meld interesse',
     onClick: props.voteOnClick,
-    loading: props.voteLoading
+    loading: props.voteLoading,
+    id: props.id
   })), _react.default.createElement("p", {
     className: "customerSidebarCard__footer--alert"
   }, "Dette er ikke bindende")), state === 'interested' && _react.default.createElement("div", {

@@ -1,10 +1,10 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback } from "react";
 import SearchIcon from "../../Icons/SearchIcon";
 import CloseIcon from "../../Icons/CloseIcon";
-import cx from 'classnames';
-import Overlay from '../../Overlay/Overlay';
+import cx from "classnames";
+import Overlay from "../../Overlay/Overlay";
 
-const SearchInput = (props) => {
+const SearchInput = props => {
     /**
      * State
      */
@@ -13,49 +13,51 @@ const SearchInput = (props) => {
     /**
      * Effects
      */
-    const escFunction = useCallback((event) => {
-        if(event.keyCode === 27) {
+    const escFunction = useCallback(event => {
+        if (event.keyCode === 27) {
             setShow(false);
         }
-      }, []);
+    }, []);
 
-      useEffect(() => {
-        document.addEventListener('keydown', escFunction, false);
+    useEffect(() => {
+        document.addEventListener("keydown", escFunction, false);
 
         return () => {
-          document.removeEventListener('keydown', escFunction, false);
+            document.removeEventListener("keydown", escFunction, false);
         };
-      }, []);
+    }, []);
 
-    const _onKeyUp = (e) => {
-        if (e.key === 'Enter') {
+    const _onKeyUp = e => {
+        if (e.key === "Enter") {
             e.preventDefault();
             e.stopPropagation();
             setShow(false);
             props.searchFormOnSubmit(e.target.value);
         }
-    }
+    };
     const _onClick = () => {
         setShow(false);
-    }
+    };
 
     return (
         <>
             {show && <Overlay onClick={_onClick} />}
-            <a href="#" className={cx("nav-list-link", {'d-none': show})} onClick={(e) => {
-                e.preventDefault();
-                setShow(true);
-                props.searchFormOnShow();
-            }}>
-                <SearchIcon/>
+            <a
+                href="#"
+                className={cx("nav-list-link", { "d-none": show })}
+                onClick={e => {
+                    e.preventDefault();
+                    setShow(true);
+                    props.searchFormOnShow();
+                }}>
+                <SearchIcon />
             </a>
 
-            <div className={cx("searchInput", {show: show})}>
+            <div className={cx("searchInput", { show: show })}>
                 <div className="searchInput__form">
-
                     {/*Search Icon*/}
                     <div className="searchInput__form--leftIcon">
-                        <SearchIcon/>
+                        <SearchIcon />
                     </div>
 
                     {/*Input*/}
@@ -65,15 +67,17 @@ const SearchInput = (props) => {
                         onKeyUp={_onKeyUp}
                         type="text"
                         className="searchInput__form--input"
-                        placeholder="Søk produkt, navn merke..."
+                        placeholder="Søk produkt, navn, merke"
                     />
                     {/*Close Icon*/}
-                    <a className="searchInput__form--rightIcon" href="#" onClick={() => {
-                        setShow(false);
-                    }}>
-                        <CloseIcon/>
+                    <a
+                        className="searchInput__form--rightIcon"
+                        href="#"
+                        onClick={() => {
+                            setShow(false);
+                        }}>
+                        <CloseIcon />
                     </a>
-
                 </div>
             </div>
         </>

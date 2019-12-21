@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import ReactSelect from 'react-select';
 import ErrorMessage from '../ErrorMessage/ErrorMessage';
 
-function Select({placeholder, options, label, onChange, defaultValue, displayErrors, errors}) {
+function Select({ placeholder, options, label, onChange, defaultValue, displayErrors, errors, name }) {
     const [value, setValue] = useState({ value: defaultValue, label: defaultValue} || false);
 
     const _onChange = (v) => {
@@ -21,12 +21,14 @@ function Select({placeholder, options, label, onChange, defaultValue, displayErr
                 placeholder={placeholder || '-'}
                 isClearable={false}
             />
-            {displayErrors && errors && errors[name] && 
-                <ErrorMessage
-                    content={errors[name].message || errors[name]}
-                    color={"bg-red"}
-                />
-            }
+
+            {/*{displayErrors && errors && errors[name] &&*/}
+            {/*<ErrorMessage*/}
+            {/*    content={errors[name].message || errors[name]}*/}
+            {/*    color={"bg-red"}*/}
+            {/*/>*/}
+            {/*}*/}
+
         </div>
     )
 }

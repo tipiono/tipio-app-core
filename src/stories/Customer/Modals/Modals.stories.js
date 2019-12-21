@@ -47,6 +47,7 @@ storiesOf('Customer/Components/Modals', module)
         <>
             <div className="col-3 m-3">
                 <SuccessModal
+                    animationURL="/assets/images/animations/Awsome_LillaAlpha_442x441.gif"
                     successTitle={"Du har nå opprettet en Tipio!"}
                 />
             </div>
@@ -57,11 +58,25 @@ storiesOf('Customer/Components/Modals', module)
         <>
             <div className="col-3 m-3">
                 <SuccessModal
+                    animationURL="/assets/images/animations/Awsome_Alpha_300x300.png"
                     successTitle={"Takk for din bestilling!"}
                     successDescription={"Du vil motta ordrebekreftelse på mail."}
                 />
             </div>
         </>
+    )
+
+    .add('Thank you for your order with video!', () =>
+      <>
+        <div className="col-3 m-3">
+          <SuccessModal
+            videoURL={"/assets/images/animations/Awsome_lillaBG_441x441.mp4"}
+            animationURL="/assets/images/animations/Awsome_Alpha_300x300.png"
+            successTitle={"Takk for din bestilling!"}
+            successDescription={"Du vil motta ordrebekreftelse på mail."}
+          />
+        </div>
+      </>
     )
 
     .add('Suppliers ready to bid', () =>

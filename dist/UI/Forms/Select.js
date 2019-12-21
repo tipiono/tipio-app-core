@@ -32,7 +32,8 @@ function Select(_ref) {
       onChange = _ref.onChange,
       defaultValue = _ref.defaultValue,
       displayErrors = _ref.displayErrors,
-      errors = _ref.errors;
+      errors = _ref.errors,
+      name = _ref.name;
 
   var _useState = (0, _react.useState)({
     value: defaultValue,
@@ -62,9 +63,6 @@ function Select(_ref) {
     }),
     placeholder: placeholder || '-',
     isClearable: false
-  }), displayErrors && errors && errors[name] && _react.default.createElement(_ErrorMessage.default, {
-    content: errors[name].message || errors[name],
-    color: "bg-red"
   }));
 }
 

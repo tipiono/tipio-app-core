@@ -15,7 +15,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function VerticalTimelineModal(props) {
   return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_Modal.Modal, {
-    showCloseButton: true
+    showCloseButton: true,
+    onCloseButtonClick: props.onClose
   }, _react.default.createElement("div", {
     className: ""
   }, _react.default.createElement(_VerticalTimeline.default, props))));

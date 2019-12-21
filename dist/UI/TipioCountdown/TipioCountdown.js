@@ -75,6 +75,13 @@ function (_React$Component) {
     value: function render() {
       var _this = this;
 
+      var substractN = new Date(this.props.expires_in);
+      substractN.setHours(substractN.getHours() - 72);
+
+      if (substractN > new Date()) {
+        return null;
+      }
+
       return _react.default.createElement(_index.default, {
         date: this.props.expires_in,
         renderer: function renderer(_ref2) {
