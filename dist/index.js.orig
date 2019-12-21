@@ -10,13 +10,9 @@ import { Modal, ModalType } from "./UI/Modal/Modal";
 import OnboardingTooltip from './UI/OnboardingTooltip/OnboardingTooltip';
 import SuccessModal from './UI/Modal/SuccessModal/SuccessModal';
 import ModalSpinner from './UI/Modal/ModalSpinner/ModalSpinner';
-<<<<<<< HEAD
-import { Accordion } from './UI/Accordion/Accordion';
-=======
 import PinkyCountdownSM from './UI/Countdown/PinkyCountdownSM';
 import TipioCountdown from './UI/TipioCountdown/TipioCountdown';
 import * as CountdownType from "./UI/Countdown/CountdownType";
->>>>>>> f4941be4a80306006521b283085fdd152e11081c
 
 /*
 *   Customer/Private Components

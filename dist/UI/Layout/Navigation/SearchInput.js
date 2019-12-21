@@ -46,14 +46,14 @@ var SearchInput = function SearchInput(props) {
     }
   }, []);
   (0, _react.useEffect)(function () {
-    document.addEventListener('keydown', escFunction, false);
+    document.addEventListener("keydown", escFunction, false);
     return function () {
-      document.removeEventListener('keydown', escFunction, false);
+      document.removeEventListener("keydown", escFunction, false);
     };
   }, []);
 
   var _onKeyUp = function _onKeyUp(e) {
-    if (e.key === 'Enter') {
+    if (e.key === "Enter") {
       e.preventDefault();
       e.stopPropagation();
       setShow(false);
@@ -70,7 +70,7 @@ var SearchInput = function SearchInput(props) {
   }), _react.default.createElement("a", {
     href: "#",
     className: (0, _classnames.default)("nav-list-link", {
-      'd-none': show
+      "d-none": show
     }),
     onClick: function onClick(e) {
       e.preventDefault();
@@ -93,7 +93,7 @@ var SearchInput = function SearchInput(props) {
     onKeyUp: _onKeyUp,
     type: "text",
     className: "searchInput__form--input",
-    placeholder: "S\xF8k produkt, navn merke..."
+    placeholder: "S\xF8k produkt, navn, merke"
   }), _react.default.createElement("a", {
     className: "searchInput__form--rightIcon",
     href: "#",

@@ -9,10 +9,11 @@ var _react = _interopRequireDefault(require("react"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var NavBadge = function NavBadge() {
+var NavBadge = function NavBadge(_ref) {
+  var count = _ref.count;
   return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("span", {
     className: "navBadge"
-  }, "8"));
+  }, count));
 };
 
 var _default = NavBadge;
