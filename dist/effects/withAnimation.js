@@ -5,9 +5,9 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
-var _react = _interopRequireDefault(require("react"));
+var _react = _interopRequireWildcard(require("react"));
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
 
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
 
@@ -18,24 +18,32 @@ function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 function FadeInSection(props) {
-  var _React$useState = _react.default.useState(false),
-      _React$useState2 = _slicedToArray(_React$useState, 2),
-      isVisible = _React$useState2[0],
-      setVisible = _React$useState2[1];
+  var _useState = (0, _react.useState)(false),
+      _useState2 = _slicedToArray(_useState, 2),
+      isVisible = _useState2[0],
+      setVisible = _useState2[1];
 
-  var domRef = _react.default.useRef();
-
-  _react.default.useEffect(function () {
-    var observer = new IntersectionObserver(function (entries) {
+  var domRef = (0, _react.useRef)();
+  var observer;
+  (0, _react.useEffect)(function () {
+    observer = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
-        return setVisible(entry.isIntersecting);
+        setVisible(entry.isIntersecting);
+
+        if (entry.isIntersecting) {
+          disconnectObserver();
+        }
       });
     });
     observer.observe(domRef.current);
-  }, []);
+  }, [observer]);
+
+  var disconnectObserver = function disconnectObserver() {
+    observer.unobserve(domRef.current);
+  };
 
   return _react.default.createElement("div", {
-    className: "fade-in-section ".concat(isVisible ? 'is-visible' : ''),
+    className: "fade-in-section ".concat(isVisible ? "is-visible" : ""),
     ref: domRef
   }, props.children);
 }

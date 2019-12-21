@@ -19,15 +19,33 @@ function SuccessModal(_ref) {
   var successTitle = _ref.successTitle,
       successDescription = _ref.successDescription,
       animationURL = _ref.animationURL,
-      props = _objectWithoutProperties(_ref, ["successTitle", "successDescription", "animationURL"]);
+      videoURL = _ref.videoURL,
+      props = _objectWithoutProperties(_ref, ["successTitle", "successDescription", "animationURL", "videoURL"]);
+
+  var renderVideo = function renderVideo() {
+    return _react.default.createElement("video", {
+      poster: animationURL,
+      playsinline: "",
+      autoPlay: "",
+      muted: "",
+      loop: ""
+    }, _react.default.createElement("source", {
+      src: videoURL,
+      type: "video/mp4"
+    }));
+  };
+
+  var renderImage = function renderImage() {
+    return _react.default.createElement("img", {
+      className: "successModal--animation",
+      src: animationURL,
+      alt: ""
+    });
+  };
 
   return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_Modal.Modal, props, _react.default.createElement("div", {
     className: "successModal"
-  }, _react.default.createElement("img", {
-    className: "successModal--animation",
-    src: animationURL,
-    alt: ""
-  }), _react.default.createElement("h3", {
+  }, videoURL ? renderVideo() : renderImage(), _react.default.createElement("h3", {
     className: "successModal--title"
   }, successTitle), _react.default.createElement("p", {
     className: "successModal--description"
