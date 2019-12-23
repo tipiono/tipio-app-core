@@ -9,6 +9,10 @@ var _react = _interopRequireDefault(require("react"));
 
 var _TipioCountdown = _interopRequireDefault(require("../../../UI/TipioCountdown/TipioCountdown"));
 
+var _VotingCardShareButton = _interopRequireDefault(require("./VotingCardShareButton"));
+
+var _VotingCardShowInterestButton = _interopRequireDefault(require("./VotingCardShowInterestButton"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function VotingCard(_ref) {
