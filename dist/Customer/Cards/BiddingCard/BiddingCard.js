@@ -16,20 +16,22 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function BiddingCard(_ref) {
   var image = _ref.image,
       title = _ref.title,
-      description = _ref.description,
+      brand = _ref.brand,
       expiresIn = _ref.expiresIn,
       salePrice = _ref.salePrice,
       costPrice = _ref.costPrice,
       children = _ref.children,
       salesProgressBarPercentage = _ref.salesProgressBarPercentage,
-      bindingCount = _ref.bindingCount;
+      bindingCount = _ref.bindingCount,
+      onClick = _ref.onClick;
   return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("div", {
     className: "biddingCard"
   }, _react.default.createElement("div", {
     className: "biddingCard__header"
   }, _react.default.createElement("a", {
     href: "",
-    className: "lazy-image biddingCard__header--preview"
+    className: "lazy-image biddingCard__header--preview",
+    onClick: onClick
   }, _react.default.createElement("img", {
     className: "lazyload biddingCard__header--preview--image",
     "data-src": image,
@@ -50,11 +52,14 @@ function BiddingCard(_ref) {
     className: "biddingCard__body--price--cost"
   }, costPrice)), _react.default.createElement("div", {
     className: "biddingCard__body--content"
+  }, _react.default.createElement("a", {
+    onClick: onClick,
+    href: "#"
   }, _react.default.createElement("h4", {
     className: "biddingCard__body--content--title"
-  }, title), _react.default.createElement("p", {
+  }, title)), brand && _react.default.createElement("p", {
     className: "biddingCard__body--content--description"
-  }, description)), _react.default.createElement("div", {
+  }, brand.toUpperCase())), _react.default.createElement("div", {
     className: "biddingCard__body--salesbar"
   }, _react.default.createElement(_SalesProgressBar.default, {
     percentage: salesProgressBarPercentage,

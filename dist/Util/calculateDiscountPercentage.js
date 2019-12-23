@@ -12,6 +12,5 @@ function calculateDiscountPercentage(price, salePrice) {
   return Math.floor(diff / priceNumber * 100);
 }
 
-;
 var _default = calculateDiscountPercentage;
 exports.default = _default;

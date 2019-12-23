@@ -1,9 +1,9 @@
 import React from 'react';
 
-const NavBadge = () => {
+const NavBadge = ({count}) => {
     return (
         <>
-            <span className="navBadge">8</span>
+            <span className="navBadge">{count}</span>
         </>
     );
 };

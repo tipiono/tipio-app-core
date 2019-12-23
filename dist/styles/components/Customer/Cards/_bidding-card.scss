@@ -1,77 +1,78 @@
 .biddingCard {
-  box-shadow: 0 1px 1px 0 #e5e5e5;
+    box-shadow: 0 1px 1px 0 #e5e5e5;
 
-  &__header {
-    position: relative;
+    &__header {
+        position: relative;
 
-    &--preview {
-      overflow: hidden;
+        &--preview {
+            overflow: hidden;
 
-      &--image {
-        max-width: 100%;
-        height: auto;
-        -webkit-transform: translateZ(0) scale(1.01, 1.01);
-        transform: translateZ(0) scale(1.01, 1.01);
-      }
+            &--image {
+                max-width: 100%;
+                height: auto;
+                -webkit-transform: translateZ(0) scale(1.01, 1.01);
+                transform: translateZ(0) scale(1.01, 1.01);
+            }
 
-      &:hover {
-        img {
-          -webkit-backface-visibility: hidden;
-          -webkit-transform: translateZ(0) scale(1.04, 1.04);
-          transform: translateZ(0) scale(1.04, 1.04);
+            &:hover {
+                img {
+                    -webkit-backface-visibility: hidden;
+                    -webkit-transform: translateZ(0) scale(1.04, 1.04);
+                    transform: translateZ(0) scale(1.04, 1.04);
+                }
+            }
         }
-      }
+
+        &--timeLeft {
+            span {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+            }
+        }
     }
 
-    &--timeLeft {
-      span {
-        position: absolute;
-        bottom: 0;
-        right: 0;
-      }
+    &__body {
+        padding: 1.5rem;
+        background: $white;
+
+        &--price {
+            margin-bottom: 1.4rem;
+
+            &--sale {
+                letter-spacing: 0.4px;
+            }
+
+            &--cost {
+                color: $gray-500;
+                text-decoration: line-through;
+                font-family: "Riposte-Regular", sans-serif;
+                letter-spacing: 0.4px;
+            }
+        }
+
+        &--content {
+            margin-bottom: 1.6rem;
+
+            &--title {
+                font-family: "Riposte-Regular", sans-serif;
+                color: $gray-700;
+                margin-bottom: 0.3rem;
+            }
+
+            &--description {
+                font-family: "Riposte-Light", sans-serif;
+                font-size: 0.875rem;
+            }
+        }
+
+        &--salesbar {
+            width: 60%;
+            margin-bottom: 2rem;
+        }
+
+        &--share {
+            width: 60%;
+        }
     }
-  }
-
-  &__body {
-    padding: 1.5rem;
-    background: $white;
-
-    &--price {
-      margin-bottom: 1.4rem;
-
-      &--sale {
-        letter-spacing: .4px;
-      }
-
-      &--cost {
-        color: $gray-500;
-        text-decoration: line-through;
-        font-family: 'Riposte-Regular', sans-serif;
-        letter-spacing: .4px;
-      }
-    }
-
-    &--content {
-      margin-bottom: 1.6rem;
-
-      &--title {
-        font-family: 'Riposte-Regular', sans-serif;
-        color: $gray-700;
-        margin-bottom: .3rem;
-      }
-
-      &--description {
-        font-family: 'Riposte-Light', sans-serif;
-      }
-    }
-
-    &--salesbar {
-      width: 60%;
-      margin-bottom: 2rem;
-    }
-
-    &--share {
-      width: 60%;
-    }
-  }
 }
