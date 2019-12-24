@@ -57,6 +57,14 @@
             border-color: #c9cfd3;
             width: 100%;
             max-height: 100%;
+            color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.6);
+            font-size: 75%;
+            line-height: 15px;
+            cursor: text;
+            transition: color 0.2s, font-size 0.2s, line-height 0.2s;
+        }
+
+        textarea + span {
             background-image: linear-gradient(
                 to right,
                 transparent 0%,
@@ -66,11 +74,6 @@
                 transparent 99%,
                 transparent 1%
             );
-            color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.6);
-            font-size: 75%;
-            line-height: 15px;
-            cursor: text;
-            transition: color 0.2s, font-size 0.2s, line-height 0.2s;
         }
 
         input + span {
