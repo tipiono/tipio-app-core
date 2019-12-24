@@ -203,10 +203,12 @@ body.noscroll {
             }
 
             .dropdown-list {
+                margin-bottom:44px;
                 a {
                     color: $gray-300;
                     cursor: pointer;
                     font-size: 14px;
+                    font-family: "Riposte-Lazer", sans-serif;
                 }
             }
         }
