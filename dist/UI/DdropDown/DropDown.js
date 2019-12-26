@@ -42,7 +42,7 @@ function DropDown(props) {
         setDropDownVisibility(!dropDownVisibility);
       }
     }
-  }, props.title, props.afterTitle && props.afterTitle(), _react.default.createElement("svg", {
+  }, _react.default.createElement("span", null, props.title), props.afterTitle && props.afterTitle(), _react.default.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
     width: "20",
     height: "20",
