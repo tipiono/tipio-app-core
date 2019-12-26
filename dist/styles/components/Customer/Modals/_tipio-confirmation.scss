@@ -8,8 +8,19 @@
     height: 100%;
     width: 19.375rem;
     margin: 0 auto;
-    border: 1px solid $gray-100;
+
+    .img-fluid {
+      max-height: 22rem;
+      max-width: 100%;
+      width: auto;
+    }
   }
+
+
+  .lazy-image {
+    background: none;
+  }
+
 
   &--timeLeft {
     span {
@@ -41,4 +52,3 @@
     }
   }
 }
-
