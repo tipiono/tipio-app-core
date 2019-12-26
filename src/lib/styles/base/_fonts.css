@@ -24,6 +24,11 @@
 }
 
 @font-face {
+    font-family: 'Riposte-Lazer';
+    src: url('../../static/assets/fonts/Riposte-Lazer.otf');
+}
+
+@font-face {
     font-family: 'DroidSansMono';
     src: url('../../static/assets/fonts/DroidSansMono.ttf');
 }

@@ -176,33 +176,38 @@ body.noscroll {
                 color: $white;
                 font-size: 18px;
                 font-family: "Riposte-Light", sans-serif;
+                padding-bottom:5px;
+                border-bottom:solid 1px transparent;
 
                 &:hover {
+                    border-bottom:solid 1px #a794cb;
                     text-decoration: none;
-                    //margin-left: 2px;
                 }
+              
             }
 
             .dropdown-toggle {
                 display: flex;
                 justify-content: space-between;
 
-                &:after {
-                    content: none;
+                &:hover{
+                    border-bottom: none;
+                    span{
+                        border-bottom: 1px solid #a794cb;
+                    }
                 }
 
-                &:hover {
-                    svg * {
-                        stroke: $secondary;
-                    }
+                &:after {
+                    content: none;
                 }
             }
 
             .dropdown-list {
+                margin-bottom:44px;
                 a {
-                    color: $gray-300;
                     cursor: pointer;
                     font-size: 14px;
+                    font-family: "Riposte-Lazer", sans-serif;
                 }
             }
         }
