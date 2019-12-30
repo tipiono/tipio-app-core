@@ -27,19 +27,12 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
-var Card = function Card(_ref) {
-  var children = _ref.children;
-  return {
-    children: children
-  };
-};
-
-var CardHeader = function CardHeader(_ref2) {
-  var title = _ref2.title,
-      titleOnShow = _ref2.titleOnShow,
-      id = _ref2.id,
-      onClick = _ref2.onClick,
-      show = _ref2.show;
+var CardHeader = function CardHeader(_ref) {
+  var title = _ref.title,
+      titleOnShow = _ref.titleOnShow,
+      id = _ref.id,
+      onClick = _ref.onClick,
+      show = _ref.show;
   var titleLabel = title;
 
   if (titleOnShow && show) {
@@ -53,7 +46,12 @@ var CardHeader = function CardHeader(_ref2) {
     id: id,
     className: "customAccordion__item--button",
     onClick: onClick
-  }, titleLabel, _react.default.createElement("svg", {
+  }, _react.default.createElement("a", {
+    id: id,
+    onClick: onClick
+  }, titleLabel), _react.default.createElement("svg", {
+    id: id,
+    onClick: onClick,
     width: 19,
     height: 11
   }, _react.default.createElement("path", {
@@ -67,10 +65,10 @@ var CardHeader = function CardHeader(_ref2) {
   }))));
 };
 
-var CardBody = function CardBody(_ref3) {
-  var children = _ref3.children,
-      id = _ref3.id,
-      show = _ref3.show;
+var CardBody = function CardBody(_ref2) {
+  var children = _ref2.children,
+      id = _ref2.id,
+      show = _ref2.show;
   return _react.default.createElement("div", {
     id: id,
     className: "customAccordion__item--content " + (show ? 'show' : ''),
