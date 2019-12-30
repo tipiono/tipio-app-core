@@ -30,7 +30,7 @@ const BindingCard = ({
                     secondRange ? (
                         <li className="customerSidebarCard__footer__salePrice--maxBuyers">
                         <h3 className="customerSidebarCard__footer__salePrice--maxBuyers--price"> {secondRange.price} Kr</h3>
-                        <span className="customerSidebarCard__footer__salePrice--maxBuyers--label">Pris fra {secondRange.to} kjøp</span>
+                        <span className="customerSidebarCard__footer__salePrice--maxBuyers--label">Pris fra {secondRange.from}-{secondRange.to} kjøp</span>
                     </li>
                     ) : (null)
                 }
