@@ -48,7 +48,7 @@ var BindingCard = function BindingCard(_ref) {
     className: "customerSidebarCard__footer__salePrice--maxBuyers--price"
   }, " ", secondRange.price, " Kr"), _react.default.createElement("span", {
     className: "customerSidebarCard__footer__salePrice--maxBuyers--label"
-  }, "Pris fra ", secondRange.to, " kj\xF8p")) : null), _react.default.createElement("div", {
+  }, "Pris fra ", secondRange.from, "-", secondRange.to, " kj\xF8p")) : null), _react.default.createElement("div", {
     className: "customerSidebarCard__footer--progressBar"
   }, _react.default.createElement(_SalesProgressBarTooltip.default, {
     bindCount: props.bindCount,
