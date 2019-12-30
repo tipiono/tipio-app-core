@@ -1,11 +1,5 @@
 import React, {Component} from 'react';
 
-const Card = ({children}) => {
-    return (
-        {children}
-    );
-};
-
 const CardHeader = ({title, titleOnShow, id, onClick, show}) => {
     let titleLabel = title;
     if (titleOnShow && show) {
@@ -14,9 +8,8 @@ const CardHeader = ({title, titleOnShow, id, onClick, show}) => {
     return (
         <div className={"customAccordion__item " + (show ? "show" : "")} id={id}>
             <button id={id} className="customAccordion__item--button" onClick={onClick}>
-                {titleLabel}
-
-                <svg width={19} height={11}>
+                <a id={id} onClick={onClick}>{titleLabel}</a>
+                <svg id={id} onClick={onClick} width={19} height={11}>
                     <path
                         d="M18 1l-8.464 9L1 1"
                         stroke="#8C8F91"
@@ -27,7 +20,6 @@ const CardHeader = ({title, titleOnShow, id, onClick, show}) => {
                         strokeLinejoin="round"
                     />
                 </svg>
-
             </button>
         </div>
     );
