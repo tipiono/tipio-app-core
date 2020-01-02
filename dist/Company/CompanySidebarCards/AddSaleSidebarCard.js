@@ -15,7 +15,12 @@ var AddSaleSidebarCard = function AddSaleSidebarCard(_ref) {
   var first_price = _ref.first_price,
       company_price = _ref.company_price,
       tipio = _ref.tipio,
-      editButtonOnClick = _ref.editButtonOnClick;
+      editButtonOnClick = _ref.editButtonOnClick,
+      addToCartOnClick = _ref.addToCartOnClick,
+      _ref$showEditButton = _ref.showEditButton,
+      showEditButton = _ref$showEditButton === void 0 ? true : _ref$showEditButton,
+      _ref$showAddToCartBut = _ref.showAddToCartButton,
+      showAddToCartButton = _ref$showAddToCartBut === void 0 ? false : _ref$showAddToCartBut;
   var title = tipio.title,
       subtitle = tipio.subtitle;
   return _react.default.createElement("div", {
@@ -44,11 +49,16 @@ var AddSaleSidebarCard = function AddSaleSidebarCard(_ref) {
     className: "addSaleSidebarCard__price--sale--amount"
   }, company_price, " Kr"))), _react.default.createElement("div", {
     className: "addSaleSidebarCard__footer"
-  }, _react.default.createElement("div", {
+  }, showEditButton && _react.default.createElement("div", {
     className: "addSaleSidebarCard__footer--action"
   }, _react.default.createElement(_SecondaryOutlineButton.default, {
     text: "Rediger",
     onClick: editButtonOnClick
+  })), showAddToCartButton && _react.default.createElement("div", {
+    className: "addSaleSidebarCard__footer--action"
+  }, _react.default.createElement(_SecondaryOutlineButton.default, {
+    text: "Legg i handlekurv",
+    onClick: addToCartOnClick
   })), _react.default.createElement("p", {
     className: "addSaleSidebarCard__footer--interestedCounter"
   }, "Allerede 329 p\xE5meldte!")));

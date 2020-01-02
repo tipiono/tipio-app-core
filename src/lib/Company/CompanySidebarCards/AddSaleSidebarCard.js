@@ -2,7 +2,15 @@ import React from 'react';
 import SecondaryOutlineButton from "../../UI/Buttons/SecondaryOutlineButton";
 
 
-const AddSaleSidebarCard = ({ first_price, company_price, tipio, editButtonOnClick }) => {
+const AddSaleSidebarCard = ({
+    first_price,
+    company_price,
+    tipio,
+    editButtonOnClick,
+    addToCartOnClick,
+    showEditButton = true,
+    showAddToCartButton = false
+}) => {
     const {
         title,
         subtitle,
@@ -28,14 +36,14 @@ const AddSaleSidebarCard = ({ first_price, company_price, tipio, editButtonOnCli
             </div>
 
             <div className="addSaleSidebarCard__footer">
-                <div className="addSaleSidebarCard__footer--action">
+                {showEditButton && <div className="addSaleSidebarCard__footer--action">
                   <SecondaryOutlineButton text="Rediger" onClick={editButtonOnClick}/>
-                </div>
+                </div>}
+                {showAddToCartButton && <div className="addSaleSidebarCard__footer--action">
+                  <SecondaryOutlineButton text="Legg i handlekurv" onClick={addToCartOnClick}/>
+                </div>}
                 <p className="addSaleSidebarCard__footer--interestedCounter">Allerede 329 påmeldte!</p>
             </div>
-
-
-
         </div>
     );
 };
