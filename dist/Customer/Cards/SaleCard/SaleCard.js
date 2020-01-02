@@ -51,7 +51,7 @@ function SaleCard(_ref) {
   }, title)), _react.default.createElement("div", {
     className: "saleCard__content--timeLeft"
   }, _react.default.createElement(_index.PinkyCountdownSM, {
-    expires_in: expiresIn || new Date(),
+    expires_in: expiresIn,
     type: _index.CountdownType.PINK
   })))), children));
 }

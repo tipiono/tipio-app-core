@@ -30,7 +30,7 @@ function SaleCard({
                         <a onClick={onClick}><h6 className="saleCard__content--title">{title}</h6></a>
 
                         <div className="saleCard__content--timeLeft">
-                            <PinkyCountdownSM expires_in={expiresIn || new Date()} type={CountdownType.PINK}/>
+                            <PinkyCountdownSM expires_in={expiresIn} type={CountdownType.PINK}/>
                         </div>
                     </div>
                 </div>
