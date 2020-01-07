@@ -24,7 +24,6 @@ const SubNav = ({
                             src={avatar}
                             loading={loading}
                         />) : (
-
                             <div className="subNav__account--avatar--empty">
                                 <svg width={33} height={26}>
                                     <g fill="#C9CFD3" fillRule="evenodd">
