@@ -102,6 +102,7 @@
         text-decoration: none;
 
         svg * {
+          fill: $danger;
           stroke: $danger;
         }
         .cartProduct__action__delete--text {
