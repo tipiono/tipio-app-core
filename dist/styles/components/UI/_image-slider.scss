@@ -106,4 +106,15 @@
   }
 }
 
-
+.showIndicators {
+  .carousel {
+    .thumbs-wrapper {
+      .control-disabled {
+        opacity: .4;
+        cursor: inherit;
+        display: inline;
+        pointer-events: none;
+      }
+    }
+  }
+}
