@@ -2,6 +2,15 @@ import React from 'react';
 import calculateDiscountPercentage from '../../../Util/calculateDiscountPercentage';
 
 const AddMoreSaleCompanyCard = (props) => {
+    let saleDiscount = 0;
+    if (props.show_offer_as_percentage) {
+        saleDiscount = `${calculateDiscountPercentage(
+            props.first_price,
+            props.company_price
+        )}%`
+    } else {
+        saleDiscount = `${props.company_price - props.first_price} kr`;
+    }
     return (
         <div className="addMoreSaleCard">
             <div className="d-flex flex-row">
@@ -11,7 +20,7 @@ const AddMoreSaleCompanyCard = (props) => {
                             && props.tipio.images.length
                             && <img className="lazyload img-fluid" src={props.tipio.images[0].blob_url} alt=""/>
                         }
-                        <span className="addMoreSaleCard__preview--discount">{calculateDiscountPercentage(props.first_price, props.company_price)}%</span>
+                        <span className="addMoreSaleCard__preview--discount">{saleDiscount}</span>
                     </a>
                 </div>
                 <div className="addMoreSaleCard__content">
