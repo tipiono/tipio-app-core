@@ -12,6 +12,14 @@ var _calculateDiscountPercentage = _interopRequireDefault(require("../../../Util
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var AddMoreSaleCompanyCard = function AddMoreSaleCompanyCard(props) {
+  var saleDiscount = 0;
+
+  if (props.show_offer_as_percentage) {
+    saleDiscount = "".concat((0, _calculateDiscountPercentage.default)(props.first_price, props.company_price), "%");
+  } else {
+    saleDiscount = "".concat(props.company_price - props.first_price, " kr");
+  }
+
   return _react.default.createElement("div", {
     className: "addMoreSaleCard"
   }, _react.default.createElement("div", {
@@ -31,7 +39,7 @@ var AddMoreSaleCompanyCard = function AddMoreSaleCompanyCard(props) {
     alt: ""
   }), _react.default.createElement("span", {
     className: "addMoreSaleCard__preview--discount"
-  }, (0, _calculateDiscountPercentage.default)(props.first_price, props.company_price), "%"))), _react.default.createElement("div", {
+  }, saleDiscount))), _react.default.createElement("div", {
     className: "addMoreSaleCard__content"
   }, _react.default.createElement("h5", null, _react.default.createElement("a", {
     href: "",
