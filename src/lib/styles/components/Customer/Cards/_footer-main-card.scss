@@ -1,0 +1,58 @@
+.footerMainCard {
+  &__title {
+    color: $gray-700;
+    font-family: 'Riposte-Light', sans-serif;
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 5rem;
+
+    &__priceLabel {
+      display: flex;
+      flex-direction: column;
+      font-family: 'Riposte-Regular', sans-serif;
+      margin-right: 1rem;
+
+      &__new {
+        color: $cyan;
+      }
+      &__first {
+        color: $gray-500;
+        margin-bottom: 0;
+        font-family: 'Riposte-Regular', sans-serif;
+      }
+    }
+
+    &__priceValue {
+      display: flex;
+      flex-direction: column;
+      text-align: right;
+
+      &__first {
+        color: $gray-500;
+        text-decoration: line-through;
+        margin-bottom: 0;
+        font-family: 'Riposte-Regular', sans-serif;
+      }
+    }
+  }
+
+  h6 {
+    font-size: 0.75rem;
+  }
+
+  @include media-breakpoint-down(sm) {
+    &__content {
+      justify-content: flex-start;
+      margin-bottom: 1rem;
+      padding-right: 0;
+    }
+    .btn {
+      padding: .35rem 1rem !important;
+      font-size: .875rem !important;
+    }
+  }
+}

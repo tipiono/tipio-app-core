@@ -4,10 +4,10 @@ function BusinessPrivateNavigationItems() {
     return (
        <ul className="nav-list d-none d-md-block">
            <li className="nav-list-item">
-               <a className="nav-list-link" href="#">Privat</a>
+               <a className="nav-list-link nav-list-lg-link" href="#">Privat</a>
            </li>
            <li className="nav-list-item">
-               <a className="nav-list-link active" href="#">Bedrift</a>
+               <a className="nav-list-link nav-list-lg-link active" href="#">Bedrift</a>
            </li>
        </ul>
     )
