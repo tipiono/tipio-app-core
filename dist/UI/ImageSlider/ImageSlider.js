@@ -9,6 +9,8 @@ var _react = _interopRequireDefault(require("react"));
 
 var _reactResponsiveCarousel = require("react-responsive-carousel");
 
+var _classnames = _interopRequireDefault(require("classnames"));
+
 require("react-responsive-carousel/lib/styles/carousel.min.css");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -17,7 +19,9 @@ function ImageSlider(_ref) {
   var images = _ref.images,
       showThumbs = _ref.showThumbs;
   return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("div", {
-    className: "imageSlider"
+    className: (0, _classnames.default)('imageSlider', images && {
+      showIndicators: images.length >= 4
+    })
   }, _react.default.createElement(_reactResponsiveCarousel.Carousel, {
     showIndicators: true,
     showArrows: false,
