@@ -24,19 +24,17 @@ function SaleCard(_ref) {
     className: "saleCard"
   }, _react.default.createElement("div", {
     className: "d-flex flex-row mb-4"
-  }, _react.default.createElement("div", {
-    className: "saleCard__preview"
   }, _react.default.createElement("a", {
-    className: "saleCard__preview--image lazy-image",
+    className: "saleCard__preview lazy-image",
     href: "",
     onClick: onClick
   }, _react.default.createElement("img", {
-    className: "img-fluid lazyload",
+    className: "saleCard__preview--image lazyload",
     src: image,
     alt: ""
   }), _react.default.createElement("span", {
     className: "saleCard__preview--discount"
-  }, saleDiscount))), _react.default.createElement("div", {
+  }, saleDiscount)), _react.default.createElement("div", {
     className: "saleCard__content"
   }, _react.default.createElement("div", {
     className: "saleCard__content--price"
