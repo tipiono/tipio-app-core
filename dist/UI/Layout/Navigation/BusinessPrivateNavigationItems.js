@@ -15,12 +15,12 @@ function BusinessPrivateNavigationItems() {
   }, _react.default.createElement("li", {
     className: "nav-list-item"
   }, _react.default.createElement("a", {
-    className: "nav-list-link",
+    className: "nav-list-link nav-list-lg-link",
     href: "#"
   }, "Privat")), _react.default.createElement("li", {
     className: "nav-list-item"
   }, _react.default.createElement("a", {
-    className: "nav-list-link active",
+    className: "nav-list-link nav-list-lg-link active",
     href: "#"
   }, "Bedrift")));
 }
