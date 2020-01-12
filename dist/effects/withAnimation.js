@@ -7,6 +7,8 @@ exports.default = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
 
+var _useScrollPosition = require("../Hooks/useScrollPosition");
+
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
 
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
@@ -24,26 +26,25 @@ function FadeInSection(props) {
       setVisible = _useState2[1];
 
   var domRef = (0, _react.useRef)();
+  var transition = 'opacity 900ms ease-out, visibility 300ms ease-out, -webkit-transform 600ms ease-out';
   var observer;
   (0, _react.useEffect)(function () {
     observer = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
         setVisible(entry.isIntersecting);
-
-        if (entry.isIntersecting) {
-          disconnectObserver();
-        }
       });
     });
     observer.observe(domRef.current);
   }, [observer]);
-
-  var disconnectObserver = function disconnectObserver() {
-    observer.unobserve(domRef.current);
-  };
-
+  (0, _useScrollPosition.useScrollPosition)(function (_ref) {
+    var prevPos = _ref.prevPos,
+        currPos = _ref.currPos;
+    var newTransition;
+    currPos.y < prevPos.y ? newTransition = transition : newTransition = 'none';
+    domRef.current.style['transition'] = newTransition;
+  }, [isVisible], false, false, 0);
   return _react.default.createElement("div", {
-    className: "fade-in-section ".concat(isVisible ? "is-visible" : ""),
+    className: "fade-in-section ".concat(isVisible ? 'is-visible' : ''),
     ref: domRef
   }, props.children);
 }
