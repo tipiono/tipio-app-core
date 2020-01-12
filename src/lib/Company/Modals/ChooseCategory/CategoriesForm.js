@@ -70,6 +70,9 @@ function CategoriesForm({
         if (item.height === 1) {
             setActiveCategory(item.id);
         }
+        if (item.height === 2) {
+            setActiveCategory(item.id);
+        }
     }
 
     function headerSubOnClick(item) {
