@@ -1,12 +1,11 @@
 import React from 'react';
-import {Carousel} from 'react-responsive-carousel';
-
+import { Carousel } from 'react-responsive-carousel';
+import cx from 'classnames';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 function ImageSlider({images, showThumbs,}) {
     return <>
-        <div className="imageSlider">
-
+        <div className={cx('imageSlider', images && { showIndicators: images.length >= 4 })}>
             <Carousel
                 showIndicators={true}
                 showArrows={false}
@@ -14,7 +13,6 @@ function ImageSlider({images, showThumbs,}) {
                 showThumbs={showThumbs}
             >
                 {images && images.map((item) => (
-
                     <img src={item.blob_url} alt="..."/>
                 ))}
             </Carousel>

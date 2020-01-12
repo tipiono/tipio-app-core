@@ -48,7 +48,7 @@ var _default = _react.default.forwardRef(function (_ref, ref) {
     alt: ""
   }), _react.default.createElement("span", {
     className: "chooseAddSaleCard__preview--discount"
-  }, saleDiscount, "%"))), _react.default.createElement("div", {
+  }, saleDiscount))), _react.default.createElement("div", {
     className: "chooseAddSaleCard__content"
   }, _react.default.createElement("div", {
     className: "chooseAddSaleCard__content--price"
