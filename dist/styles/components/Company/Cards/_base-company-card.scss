@@ -4,10 +4,10 @@
   &__header {
     position: relative;
     background-color: $white;
+    box-shadow: 0 1px 2px 0 #e5e5e5;
 
     &--preview {
       overflow: hidden;
-      box-shadow: 0 1px 2px 0 #e5e5e5;
 
       &--image {
         max-width: 100%;
