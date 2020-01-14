@@ -79,13 +79,13 @@ body.noscroll {
                 .nav-list-link-menu-badge {
                     position: absolute;
                     right: 0;
-                    top: -2px;
-                    z-index: 7;
+                    top: 0;
+                    z-index: 6;
                 }
                 .nav-list-link-bag-badge {
                     position: absolute;
                     right: -10px;
-                    top: -8px;
+                    top: -10px;
                     z-index: 7;
                 }
             }
@@ -201,11 +201,12 @@ body.noscroll {
             .dropdown-toggle {
                 display: flex;
                 justify-content: space-between;
+                box-shadow: none !important;
+
 
                 &:hover{
-                    border-bottom: none;
                     span{
-                        border-bottom: 1px solid #a794cb;
+                        box-shadow: 0 1px 0 0 rgba(167,148,203,1);
                     }
                 }
 
@@ -338,7 +339,7 @@ body.noscroll {
 .shoppingbag {
     position: absolute;
     width: 490px;
-    height: 65vh;
+    max-height: 80vh;
     right: -60px;
     top: 57px;
     z-index: 7;
@@ -378,7 +379,7 @@ body.noscroll {
 
     .shoppingbag-body {
         background: $white;
-        padding: 30px 40px;
+        padding: 30px 40px 0;
         height: 100%;
         overflow-y: scroll;
 
@@ -424,10 +425,14 @@ body.noscroll {
     @include media-breakpoint-down(sm) {
         left: 0;
         width: 100%;
-        height: calc(100vh - 112px);
+        //height: calc(100vh - 112px);
 
         .shoppingbag-action {
             padding: 20px 16px;
+
+            .btn {
+                font-size: 0.875rem;
+            }
         }
 
         .custom-alert {

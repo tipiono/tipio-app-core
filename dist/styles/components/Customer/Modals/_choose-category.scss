@@ -23,10 +23,12 @@
     .category-types {
       display: flex;
       flex-direction: row;
+      flex-wrap: wrap;
       margin-bottom: 0;
 
       .category-type-item {
         margin-right: 24px;
+        margin-bottom: 12px;
 
         .category-type-item-link {
           color: $dark;
