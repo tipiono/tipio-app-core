@@ -24,7 +24,7 @@ function Navigation({ children, filterOnClick, ...props }) {
                             </li>
 
                             {props.filterButtonVisible && <li className="nav-list-item">
-                                <a href="" onClick={filterOnClick}>
+                                <a className="nav-list-link" href="" onClick={filterOnClick}>
                                     <FilterIcon/>
                                     <span className="text-white">Filters</span>
                                 </a>
