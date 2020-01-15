@@ -10,7 +10,8 @@ var _react = _interopRequireDefault(require("react"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function EmptyAvatar(_ref) {
-  var children = _ref.children;
+  var children = _ref.children,
+      text = _ref.text;
   return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("a", {
     className: "emptyAvatar",
     href: ""
@@ -27,7 +28,7 @@ function EmptyAvatar(_ref) {
     d: "M39.015 21.383a2.308 2.308 0 01-2.3-2.31 2.307 2.307 0 012.3-2.311c1.268 0 2.3 1.036 2.3 2.311a2.308 2.308 0 01-2.3 2.31m0-6.187c-2.128 0-3.858 1.74-3.858 3.877 0 2.137 1.73 3.877 3.858 3.877 2.129 0 3.859-1.74 3.859-3.877 0-2.138-1.73-3.877-3.859-3.877M14.847 32.108L11.736 33.5a.779.779 0 01-1.03-.396l-.286-.647-.94-2.117-7.254-16.355a.786.786 0 01.395-1.034L27.902 1.634a.78.78 0 011.03.396l4.016 9.448 1.832-.141-4.425-9.944a2.336 2.336 0 00-3.087-1.19L1.986 11.522a2.356 2.356 0 00-1.184 3.102l.79 1.78.634 1.43L9.283 33.74a2.336 2.336 0 003.087 1.19l2.779-1.232-.302-1.591z"
   }))), _react.default.createElement("span", {
     className: "emptyAvatar--text"
-  }, "Last opp logo"), _react.default.createElement("svg", {
+  }, text), _react.default.createElement("svg", {
     className: "emptyAvatar--add",
     width: 32,
     height: 32
