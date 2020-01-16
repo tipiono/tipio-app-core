@@ -52,6 +52,14 @@
             }
         }
     }
+
+    @include media-breakpoint-down(sm) {
+        .layout-container {
+            .layout-content {
+                padding: 1rem 0;
+            }
+        }
+    }
 }
 
 .one-half {

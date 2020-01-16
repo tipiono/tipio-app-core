@@ -54,4 +54,12 @@
       }
     }
   }
+
+  @include media-breakpoint-down(sm) {
+    &__main {
+      &__preview {
+        width: 40%;
+      }
+    }
+  }
 }
