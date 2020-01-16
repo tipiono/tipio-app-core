@@ -105,9 +105,28 @@
           fill: $danger;
           stroke: $danger;
         }
+
         .cartProduct__action__delete--text {
           color: $danger;
         }
+      }
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    &__main {
+      &__preview {
+        width: 40%;
+      }
+    }
+
+    &__action {
+      &__quantity {
+        width: 40%;
+      }
+
+      &__delete {
+        width: 55%;
       }
     }
   }
