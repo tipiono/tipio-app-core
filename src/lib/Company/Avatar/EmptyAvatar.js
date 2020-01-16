@@ -1,6 +1,6 @@
 import React from "react";
 
-function EmptyAvatar({ children }) {
+function EmptyAvatar({ children, text }) {
     return (
         <>
             <a className="emptyAvatar" href="" >
@@ -14,7 +14,7 @@ function EmptyAvatar({ children }) {
                     </g>
                 </svg>
 
-                <span className="emptyAvatar--text">Last opp logo</span>
+                <span className="emptyAvatar--text">{text}</span>
 
                 <svg className="emptyAvatar--add" width={32} height={32}>
                     <defs>

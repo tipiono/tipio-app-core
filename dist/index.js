@@ -485,6 +485,12 @@ Object.defineProperty(exports, "TipioFeedWithWrapper", {
     return _TipioFeedWithWrapper.default;
   }
 });
+Object.defineProperty(exports, "FooterMainCard", {
+  enumerable: true,
+  get: function get() {
+    return _FooterMainCard.default;
+  }
+});
 Object.defineProperty(exports, "DeleteAccount", {
   enumerable: true,
   get: function get() {
@@ -884,6 +890,8 @@ var _ImageUploader = _interopRequireDefault(require("./Customer/ImageUploader/Im
 var _CategoriesForm = _interopRequireDefault(require("./Company/Modals/ChooseCategory/CategoriesForm"));
 
 var _TipioFeedWithWrapper = _interopRequireDefault(require("./Customer/TipioFeed/TipioFeedWithWrapper"));
+
+var _FooterMainCard = _interopRequireDefault(require("./Customer/Cards/FooterMainCard/FooterMainCard"));
 
 var _DeleteAccount = _interopRequireDefault(require("./Company/Modals/DeleteAccount/DeleteAccount"));
 

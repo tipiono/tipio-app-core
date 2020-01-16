@@ -22,7 +22,7 @@ export default React.forwardRef(({
                     <div className="chooseAddSaleCard__preview">
                         <a className="chooseAddSaleCard__preview--image lazy-image" href="" onClick={onClick}>
                             <img className="lazyload img-fluid" src={image} alt=""/>
-                            <span className="chooseAddSaleCard__preview--discount">{saleDiscount}%</span>
+                            <span className="chooseAddSaleCard__preview--discount">{saleDiscount}</span>
                         </a>
                     </div>
                     <div className="chooseAddSaleCard__content">
