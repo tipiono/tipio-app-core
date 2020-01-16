@@ -1,0 +1,43 @@
+.customFooter {
+  padding-top: 90px;
+  padding-bottom: 130px;
+  background: $gray-700;
+
+  &__list {
+    &__title {
+      font-family: 'Riposte-Bold', sans-serif;
+      font-size: 1.125rem;
+      color: $white;
+      margin-bottom: 20px;
+    }
+
+    &__content {
+      line-height: 1.88;
+
+      &__link {
+        color: $white;
+        font-family: 'Riposte-Light', sans-serif;
+
+        &:hover {
+          color: $white;
+          box-shadow: 0 1px 0 0 $gray-400;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  &__description {
+    font-family: 'Riposte-Light', sans-serif;
+    color: $white;
+  }
+
+  @include media-breakpoint-down(sm) {
+    padding-top: 50px;
+    padding-bottom: 100px;
+
+    &__list {
+      margin-bottom: 3rem;
+    }
+  }
+}

@@ -38,14 +38,14 @@ body.noscroll {
 
             .nav-list-item {
                 display: inline-block;
-                margin: 0 14px;
+                //padding: 0 14px;
 
                 @include media-breakpoint-up(md) {
                     position: relative;
                 }
 
                 &:last-child {
-                    margin-right: 0;
+                    //padding-right: 0;
                     position: inherit;
                 }
 
@@ -56,9 +56,11 @@ body.noscroll {
                 }
 
                 .nav-list-link {
+                    display: block;
                     position: relative;
                     z-index: 4;
                     color: $gray-300;
+                    padding: 0 14px;
 
                     &:hover {
                         text-decoration: none;
@@ -66,11 +68,13 @@ body.noscroll {
                 }
 
                 .nav-list-lg-link {
+                   margin: 0 14px;
+                    padding: 0;
+
                     &:hover {
                         border-bottom: 2px solid $gray-400;
                     }
                 }
-
                 .active {
                     color: $white;
                     border-bottom: 2px solid $secondary;
@@ -79,151 +83,20 @@ body.noscroll {
                 .nav-list-link-menu-badge {
                     position: absolute;
                     right: 0;
-                    top: -2px;
-                    z-index: 7;
+                    top: 0;
+                    z-index: 6;
                 }
                 .nav-list-link-bag-badge {
                     position: absolute;
-                    right: -10px;
-                    top: -8px;
+                    right: 4px;
+                    top: -9px;
                     z-index: 7;
                 }
             }
         }
     }
 
-    .menu-content {
-        position: absolute;
-        width: 641px;
-        background-color: $primary;
-        opacity: 0;
-        left: auto;
-        right: 0;
-        top: 88px;
 
-        @include media-breakpoint-down(md) {
-            display: flex;
-            flex-direction: column-reverse;
-            justify-content: space-between;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            width: auto;
-            overflow: hidden;
-        }
-
-        &.show {
-            left: auto;
-            right: 0;
-            z-index: 5;
-            opacity: 1;
-            height: 80vh;
-
-            @include media-breakpoint-down(md) {
-                left: 0;
-                right: 0;
-                height: calc(100vh - 56px);
-            }
-        }
-
-        li {
-            color: $white;
-            font-weight: 300;
-
-            &:hover {
-                color: white;
-            }
-        }
-
-        .menu-tabs {
-            position: absolute;
-            width: 100%;
-            @include media-breakpoint-up(md) {
-                display: none;
-            }
-
-            li {
-                width: 50%;
-                text-align: center;
-                line-height: 42px;
-                background: $primary;
-            }
-        }
-
-        .tab-content {
-            width: 60%;
-            height: 100%;
-            overflow-y: scroll;
-            padding: 50px;
-
-            @include media-breakpoint-down(sm) {
-                width: 100%;
-                padding: 60px 30px 30px 30px;
-            }
-
-            .add-new {
-                display: flex;
-                align-items: center;
-                font-size: 22px;
-                font-family: "Riposte-Regular", sans-serif;
-                margin-bottom: 30px;
-            }
-
-            .nav-item-logout {
-                margin-top: 3rem;
-            }
-
-            li {
-                padding: 0.75em 1em;
-            }
-
-            a {
-                color: $white;
-                font-size: 18px;
-                font-family: "Riposte-Light", sans-serif;
-                padding-bottom:5px;
-                //border-bottom: solid 1px transparent;
-
-                &:hover {
-                    box-shadow: 0 1px 0 0 rgba(167,148,203,1);
-                    text-decoration: none;
-                }
-              
-            }
-
-            .add-new {
-                &:hover {
-                    box-shadow: none;
-                }
-            }
-
-            .dropdown-toggle {
-                display: flex;
-                justify-content: space-between;
-
-                &:hover{
-                    border-bottom: none;
-                    span{
-                        border-bottom: 1px solid #a794cb;
-                    }
-                }
-
-                &:after {
-                    content: none;
-                }
-            }
-
-            .dropdown-list {
-                margin-bottom:44px;
-                a {
-                    cursor: pointer;
-                    font-size: 14px;
-                    font-family: "Riposte-Lazer", sans-serif;
-                }
-            }
-        }
-    }
 
     .logo {
         z-index: 4;
@@ -236,10 +109,178 @@ body.noscroll {
     }
 }
 
+.menu-content {
+    position: absolute;
+    width: 641px;
+    background-color: $primary;
+    opacity: 0;
+    left: auto;
+    right: 0;
+    top: 88px;
+
+    @include media-breakpoint-down(md) {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: auto;
+        overflow: hidden;
+    }
+
+    &.show {
+        left: auto;
+        right: 0;
+        z-index: 5;
+        opacity: 1;
+        height: 80vh;
+
+        @include media-breakpoint-down(md) {
+            left: 0;
+            right: 0;
+            height: calc(100vh);
+        }
+
+        li {
+            position: relative;
+            -webkit-transform-origin: 100% 50%;
+            -ms-transform-origin: 100% 50%;
+            transform-origin: 100% 50%;
+            -webkit-animation: fadeUp 200ms both ease-out;
+            animation: fadeUp 200ms both ease-out;
+
+            // Loop from 1-12.
+            @for $i from 1 through 12 {
+                &:nth-child(#{$i}) {
+                    animation-delay: $i * (.02s);
+                }
+            }
+        }
+    }
+
+    li {
+        color: $white;
+        font-weight: 300;
+
+        &:hover {
+            color: white;
+        }
+    }
+
+    .menu-tabs {
+        position: absolute;
+        width: 100%;
+        @include media-breakpoint-up(md) {
+            display: none;
+        }
+
+        li {
+            width: 50%;
+            text-align: center;
+            line-height: 42px;
+            background: $primary;
+        }
+    }
+
+    .tab-content {
+        width: 60%;
+        height: 100%;
+        overflow-y: scroll;
+        padding: 50px;
+
+        @include media-breakpoint-down(sm) {
+            width: 100%;
+            padding: 50px 30px;
+        }
+
+        .add-new {
+            display: flex;
+            align-items: center;
+            font-size: 22px;
+            font-family: "Riposte-Regular", sans-serif;
+            margin-bottom: 30px;
+        }
+
+        .nav-item-logout {
+            margin-top: 3rem;
+        }
+
+        li {
+            padding: 0.75em 1em;
+
+            @include media-breakpoint-down(sm) {
+               &:last-child {
+                   padding-bottom: 80px;
+               }
+
+                .dropdown-list {
+                   li {
+                       &:last-child {
+                           padding-bottom: 0;
+                       }
+                   }
+                }
+            }
+        }
+
+        a {
+            color: $white;
+            font-size: 18px;
+            font-family: "Riposte-Light", sans-serif;
+            padding-bottom:5px;
+
+            &:hover {
+                box-shadow: 0 1px 0 0 rgba(167,148,203,1);
+                text-decoration: none;
+            }
+
+        }
+
+        .add-new {
+            &:hover {
+                box-shadow: none;
+            }
+        }
+
+        .dropdown-toggle {
+            display: flex;
+            justify-content: space-between;
+            box-shadow: none !important;
+            margin-bottom: 0 !important;
+
+            &:hover{
+                span{
+                    box-shadow: 0 1px 0 0 rgba(167,148,203,1);
+                }
+            }
+
+            &:after {
+                content: none;
+            }
+        }
+
+        .dropdown-list {
+            margin-bottom: 22px;
+            a {
+                cursor: pointer;
+                font-size: 1rem;
+                font-family: "Riposte-Lazer", sans-serif;
+            }
+
+            @include media-breakpoint-down(sm) {
+                a {
+                    font-size: 0.875rem;
+                }
+            }
+        }
+    }
+}
+
 .search {
     position: absolute;
     width: 438px;
-    //height: auto;
     z-index: 7;
     opacity: 0;
 
@@ -256,11 +297,12 @@ body.noscroll {
         opacity: 1;
         transition: visibility 0s linear 0s, opacity 300ms;
         margin: 0;
-        right: 0;
+        right: 14px;
         top: -30px;
 
         @include media-breakpoint-down(sm) {
             top: 0;
+            right: 0px;
         }
     }
 
@@ -322,9 +364,21 @@ body.noscroll {
 
         li {
             padding: 8px 0;
+            -webkit-transform-origin: 100% 50%;
+            -ms-transform-origin: 100% 50%;
+            transform-origin: 100% 50%;
+            -webkit-animation: fadeUp 200ms both ease-out;
+            animation: fadeUp 200ms both ease-out;
 
             a {
                 color: $gray-700;
+            }
+
+            // Loop from 1-12.
+            @for $i from 1 through 12 {
+                &:nth-child(#{$i}) {
+                    animation-delay: $i * (.02s);
+                }
             }
         }
 
@@ -338,7 +392,7 @@ body.noscroll {
 .shoppingbag {
     position: absolute;
     width: 490px;
-    height: 65vh;
+    max-height: 80vh;
     right: -60px;
     top: 57px;
     z-index: 7;
@@ -378,7 +432,7 @@ body.noscroll {
 
     .shoppingbag-body {
         background: $white;
-        padding: 30px 40px;
+        padding: 30px 40px 0;
         height: 100%;
         overflow-y: scroll;
 
@@ -424,10 +478,13 @@ body.noscroll {
     @include media-breakpoint-down(sm) {
         left: 0;
         width: 100%;
-        height: calc(100vh - 112px);
 
         .shoppingbag-action {
             padding: 20px 16px;
+
+            .btn {
+                font-size: 0.875rem;
+            }
         }
 
         .custom-alert {
@@ -492,4 +549,23 @@ body.noscroll {
     font-family: "Riposte-Bold", sans-serif;
     padding: 0px 6px;
     border-radius: 25px;
+}
+
+
+
+/// Fade Up Keyframe
+
+@keyframes fadeUp {
+    0% {
+        opacity: .3;
+        -webkit-transform: translateY(20px);
+        -ms-transform: translateY(20px);
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0px);
+        -ms-transform: translateY(0px);
+        transform: translateY(0px);
+    }
 }

@@ -7,7 +7,7 @@ import HorizontalTimeline from "../Timelines/HorizontalTimeline";
 
 const BindingCard = ({
     children,
-    state, 
+    state,
     firstRange,
     secondRange,
     onShareClick,
@@ -29,14 +29,14 @@ const BindingCard = ({
                 {
                     secondRange ? (
                         <li className="customerSidebarCard__footer__salePrice--maxBuyers">
-                        <h3 className="customerSidebarCard__footer__salePrice--maxBuyers--price"> {secondRange.price} Kr</h3>
-                        <span className="customerSidebarCard__footer__salePrice--maxBuyers--label">Pris fra {secondRange.from}-{secondRange.to} kjøp</span>
-                    </li>
+                            <h3 className="customerSidebarCard__footer__salePrice--maxBuyers--price"> {secondRange.price} Kr</h3>
+                            <span className="customerSidebarCard__footer__salePrice--maxBuyers--label">Pris fra {secondRange.from}-{secondRange.to} kjøp</span>
+                        </li>
                     ) : (null)
                 }
             </ul>
             <div className="customerSidebarCard__footer--progressBar">
-                <SalesProgressBarTooltip bindCount={props.bindCount} percentage={bindingPercentage}/>
+                <SalesProgressBarTooltip bindCount={props.bindCount} percentage={bindingPercentage} />
             </div>
             {state !== 'bought' && <>
                 <SecondaryOutlineButton text={'Legg i handlekurv'} onClick={onBindClick} />
@@ -48,7 +48,7 @@ const BindingCard = ({
                 </div>
 
                 <div className="customerSidebarCard__footer--timeline">
-                    <HorizontalTimeline {...props}/>
+                    <HorizontalTimeline {...props} />
                 </div>
             </>}
         </BaseCard>

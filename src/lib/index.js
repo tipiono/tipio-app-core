@@ -84,6 +84,7 @@ import TipioSidebarBindingCard from "./Customer/CustomerSidebarCards/BindingCard
 import ImageUploader from "./Customer/ImageUploader/ImageUploader";
 import CategoriesForm from "./Company/Modals/ChooseCategory/CategoriesForm";
 import TipioFeedWithWrapper from "./Customer/TipioFeed/TipioFeedWithWrapper";
+import FooterMainCard from './Customer/Cards/FooterMainCard/FooterMainCard';
 
 /*
  *   Company Components
@@ -266,5 +267,6 @@ export {
     TipioViewDescriptionMobile,
     NavBadge,
     WithAnimation,
-    limitTipios
+    limitTipios,
+    FooterMainCard
 };
