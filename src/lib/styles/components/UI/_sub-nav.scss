@@ -72,6 +72,7 @@
   }
 
   @include media-breakpoint-down(sm) {
+    padding: 20px 0;
     flex-direction: column;
 
     &__account {
@@ -84,12 +85,15 @@
       margin-top: 1rem;
 
       &--item {
+        margin-left: 1.5rem;
+        text-align: left;
+
         &:first-child {
           margin-left: 0;
         }
 
         &--link {
-          font-size: 1rem;
+          font-size: 0.875rem;
         }
       }
     }

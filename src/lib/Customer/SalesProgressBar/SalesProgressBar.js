@@ -6,7 +6,7 @@ function SalesProgressBar ({
 }) {
     return (
         <>
-            <div className="sales__progress my-3">
+            <div className="sales__progress">
                 <div className="sales__progress--bar progress">
                     <div className={`progress-bar bg-secondary`} style={{ width: `${percentage}%`}} role="progressbar" aria-valuenow="25"
                          aria-valuemin="0"

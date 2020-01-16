@@ -13,7 +13,7 @@ function SalesProgressBar(_ref) {
   var percentage = _ref.percentage,
       bindingCount = _ref.bindingCount;
   return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("div", {
-    className: "sales__progress my-3"
+    className: "sales__progress"
   }, _react.default.createElement("div", {
     className: "sales__progress--bar progress"
   }, _react.default.createElement("div", {

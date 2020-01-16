@@ -44,6 +44,7 @@ function Navigation(_ref) {
   }, _react.default.createElement(_SearchInput.default, props)), props.filterButtonVisible && _react.default.createElement("li", {
     className: "nav-list-item"
   }, _react.default.createElement("a", {
+    className: "nav-list-link",
     href: "",
     onClick: filterOnClick
   }, _react.default.createElement(_FilterIcon.default, null), _react.default.createElement("span", {
