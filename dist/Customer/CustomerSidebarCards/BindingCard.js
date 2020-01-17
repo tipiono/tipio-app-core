@@ -9,13 +9,13 @@ var _react = _interopRequireDefault(require("react"));
 
 var _BaseCard = _interopRequireDefault(require("./BaseCard"));
 
-var _SecondaryOutlineButton = _interopRequireDefault(require("../../UI/Buttons/SecondaryOutlineButton"));
-
 var _SalesProgressBarTooltip = _interopRequireDefault(require("../SalesProgressBarTooltip/SalesProgressBarTooltip"));
 
 var _ShareButton = _interopRequireDefault(require("./ShareButton"));
 
 var _HorizontalTimeline = _interopRequireDefault(require("../Timelines/HorizontalTimeline"));
+
+var _SecondaryButton = _interopRequireDefault(require("../../UI/Buttons/SecondaryButton"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -53,7 +53,7 @@ var BindingCard = function BindingCard(_ref) {
   }, _react.default.createElement(_SalesProgressBarTooltip.default, {
     bindCount: props.bindCount,
     percentage: bindingPercentage
-  })), state !== 'bought' && _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_SecondaryOutlineButton.default, {
+  })), state !== 'bought' && _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_SecondaryButton.default, {
     text: 'Legg i handlekurv',
     onClick: onBindClick
   })), state === 'bought' && _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("div", {
