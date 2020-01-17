@@ -1,9 +1,9 @@
 import React from 'react';
 import BaseCard from './BaseCard';
-import SecondaryOutlineButton from "../../UI/Buttons/SecondaryOutlineButton";
 import SalesProgressBarTooltip from "../SalesProgressBarTooltip/SalesProgressBarTooltip";
 import ShareButton from './ShareButton';
 import HorizontalTimeline from "../Timelines/HorizontalTimeline";
+import SecondaryButton from "../../UI/Buttons/SecondaryButton";
 
 const BindingCard = ({
     children,
@@ -39,7 +39,7 @@ const BindingCard = ({
                 <SalesProgressBarTooltip bindCount={props.bindCount} percentage={bindingPercentage} />
             </div>
             {state !== 'bought' && <>
-                <SecondaryOutlineButton text={'Legg i handlekurv'} onClick={onBindClick} />
+                <SecondaryButton text={'Legg i handlekurv'} onClick={onBindClick} />
             </>}
 
             {state === 'bought' && <>
