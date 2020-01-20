@@ -78,6 +78,10 @@ body.noscroll {
                 .active {
                     color: $white;
                     border-bottom: 2px solid $secondary;
+
+                    &:hover {
+                        border-bottom: 2px solid $secondary;
+                    }
                 }
 
                 .nav-list-link-menu-badge {
@@ -408,7 +412,7 @@ body.noscroll {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        padding: 24px 40px;
+        padding: 24px 40px 40px;
         border-bottom: 10px solid $gray-100;
 
         .shoppingbag-action-item {
@@ -421,7 +425,7 @@ body.noscroll {
 
         &:before {
             position: absolute;
-            right: 60px;
+            right: 74px;
             top: -12px;
             border-left: 10px solid transparent;
             border-right: 10px solid transparent;

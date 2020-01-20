@@ -9,17 +9,20 @@ const CardHeader = ({title, titleOnShow, id, onClick, show}) => {
         <div className={"customAccordion__item " + (show ? "show" : "")} id={id}>
             <button id={id} className="customAccordion__item--button" onClick={onClick}>
                 <a id={id} onClick={onClick}>{titleLabel}</a>
-                <svg id={id} onClick={onClick} width={19} height={11}>
-                    <path
-                        d="M18 1l-8.464 9L1 1"
-                        stroke="#8C8F91"
-                        strokeWidth={2}
-                        fill="none"
-                        fillRule="evenodd"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                    />
-                </svg>
+
+                <a id={id} onClick={onClick} className="customAccordion__item--button--icon" />
+
+                    {/*<svg width={19} height={11}>*/}
+                    {/*    <path*/}
+                    {/*        d="M18 1l-8.464 9L1 1"*/}
+                    {/*        stroke="#8C8F91"*/}
+                    {/*        strokeWidth={2}*/}
+                    {/*        fill="none"*/}
+                    {/*        fillRule="evenodd"*/}
+                    {/*        strokeLinecap="round"*/}
+                    {/*        strokeLinejoin="round"*/}
+                    {/*    />*/}
+                    {/*</svg>*/}
             </button>
         </div>
     );
