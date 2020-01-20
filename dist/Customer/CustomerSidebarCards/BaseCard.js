@@ -18,7 +18,8 @@ var BaseCard = function BaseCard(_ref) {
       props = _objectWithoutProperties(_ref, ["children"]);
 
   return _react.default.createElement("div", {
-    className: "customerSidebarCard"
+    className: "customerSidebarCard",
+    id: props.id
   }, _react.default.createElement("div", {
     className: "customerSidebarCard__header"
   }, _react.default.createElement("div", {
