@@ -146,6 +146,8 @@ import calculateDiscountPercentage from "./Util/calculateDiscountPercentage";
 import formatText from "./Util/formatText";
 import limitTipios from "./Util/limitTipios";
 
+import useLockBodyScroll from './Hooks/useLockBodyScroll';
+
 export {
     styles,
     SecondaryButton,
@@ -268,5 +270,6 @@ export {
     NavBadge,
     WithAnimation,
     limitTipios,
-    FooterMainCard
+    FooterMainCard,
+    useLockBodyScroll
 };

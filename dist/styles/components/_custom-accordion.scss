@@ -21,16 +21,25 @@
         color: $primary;
         transition: all ease 200ms;
 
-        svg * {
-          transition: all ease 200ms;
-          stroke: $primary;
+        .customAccordion__item--button--icon {
+          background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg width='19px' height='11px' viewBox='0 0 19 11' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cg id='Desktop---Customer' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd' stroke-linecap='round' stroke-linejoin='round'%3E%3Cg id='Privat_Join-Tipio_Shoes_See-more_Timeline_DESKTOP' transform='translate(-598.000000, -1221.000000)' stroke='%234F2E90' stroke-width='2'%3E%3Cg id='Group-6' transform='translate(229.000000, 856.000000)'%3E%3Cg id='Group-5' transform='translate(0.000000, 85.000000)'%3E%3Cpolyline id='Path-2-Copy' points='387 281 378.536404 290 370 281'%3E%3C/polyline%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+
         }
+      }
+
+      &--icon {
+        display: block;
+        width: 19px;
+        height: 12px;
+        background-repeat: no-repeat;
+        background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg width='19px' height='11px' viewBox='0 0 19 11' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cg id='Desktop---Customer' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd' stroke-linecap='round' stroke-linejoin='round'%3E%3Cg id='Privat_Join-Tipio_Shoes_See-more_Timeline_DESKTOP' transform='translate(-598.000000, -1221.000000)' stroke='%238C8F91' stroke-width='2'%3E%3Cg id='Group-6' transform='translate(229.000000, 856.000000)'%3E%3Cg id='Group-5' transform='translate(0.000000, 85.000000)'%3E%3Cpolyline id='Path-2-Copy' points='387 281 378.536404 290 370 281'%3E%3C/polyline%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
       }
     }
 
-    &.show svg {
+    &.show .customAccordion__item--button--icon {
       transform: rotate(180deg);
     }
+
     &.show {
       border-bottom: none;
     }
@@ -43,6 +52,7 @@
       &:not(.show) {
         display: none;
       }
+
       border-bottom: 1px solid $gray-300;
     }
   }

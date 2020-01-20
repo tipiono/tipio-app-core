@@ -1,0 +1,41 @@
+.tipioAlreadyExists {
+  margin-top: 5rem;
+  text-align: center;
+
+  &__preview {
+    display: block;
+    position: relative;
+    width: 305px;
+    height: 305px;
+    margin: 0 auto 1.5rem;
+
+    &__image {
+      width: 100%;
+      height: 100%;
+      border: 1px solid $gray-100;
+    }
+
+    &__timeleft {
+      position: absolute;
+      bottom: 1px;
+      right: 1px;
+    }
+  }
+
+  &__title {
+    font-family: 'Riposte-Regular', sans-serif;
+    margin-bottom: 18px;
+  }
+
+  &__description {
+    font-size: 18px;
+    color: $gray-800;
+    margin-bottom: 42px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    &__description {
+      font-size: 16px;
+    }
+  }
+}
