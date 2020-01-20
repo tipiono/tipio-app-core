@@ -49,20 +49,11 @@ var CardHeader = function CardHeader(_ref) {
   }, _react.default.createElement("a", {
     id: id,
     onClick: onClick
-  }, titleLabel), _react.default.createElement("svg", {
+  }, titleLabel), _react.default.createElement("a", {
     id: id,
     onClick: onClick,
-    width: 19,
-    height: 11
-  }, _react.default.createElement("path", {
-    d: "M18 1l-8.464 9L1 1",
-    stroke: "#8C8F91",
-    strokeWidth: 2,
-    fill: "none",
-    fillRule: "evenodd",
-    strokeLinecap: "round",
-    strokeLinejoin: "round"
-  }))));
+    className: "customAccordion__item--button--icon"
+  })));
 };
 
 var CardBody = function CardBody(_ref2) {

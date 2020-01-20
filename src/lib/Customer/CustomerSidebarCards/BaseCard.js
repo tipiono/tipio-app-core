@@ -2,7 +2,7 @@ import React from 'react';
 
 const BaseCard = ({ children, ...props }) => {
     return (
-        <div className="customerSidebarCard">
+        <div className="customerSidebarCard" id={props.id}>
 
             <div className="customerSidebarCard__header">
                 <div className="customerSidebarCard__header__content">

@@ -9,10 +9,6 @@ var _react = _interopRequireDefault(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
-var _addonActions = require("@storybook/addon-actions");
-
-var _addonKnobs = require("@storybook/addon-knobs");
-
 var _SecondaryButton = _interopRequireDefault(require("../../../UI/Buttons/SecondaryButton"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -57,8 +53,8 @@ var FooterMainCard = function FooterMainCard(_ref) {
     className: "col-4 col-md-3"
   }, _react.default.createElement(_SecondaryButton.default, {
     onClick: onBindClick,
-    text: (0, _addonKnobs.text)('Label', 'Legg i handlekurv'),
-    loading: (0, _addonKnobs.boolean)('Loading ', false)
+    text: 'Legg i handlekurv',
+    loading: false
   }))));
 };
 
