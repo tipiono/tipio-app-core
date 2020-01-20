@@ -729,6 +729,12 @@ Object.defineProperty(exports, "limitTipios", {
     return _limitTipios.default;
   }
 });
+Object.defineProperty(exports, "useLockBodyScroll", {
+  enumerable: true,
+  get: function get() {
+    return _useLockBodyScroll.default;
+  }
+});
 exports.CountdownType = void 0;
 
 var _main = _interopRequireDefault(require("./styles/main.scss"));
@@ -970,6 +976,8 @@ var _calculateDiscountPercentage = _interopRequireDefault(require("./Util/calcul
 var _formatText = _interopRequireDefault(require("./Util/formatText"));
 
 var _limitTipios = _interopRequireDefault(require("./Util/limitTipios"));
+
+var _useLockBodyScroll = _interopRequireDefault(require("./Hooks/useLockBodyScroll"));
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
 
