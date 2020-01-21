@@ -29,7 +29,7 @@ function TipioConfirmation({ image, expiresIn, share, ...props }) {
                     </a>
 
                     <h3 className="tipio__confirmation--title">Dere er sterkere sammen!!</h3>
-                    <p className="tipio__confirmation--description">For å øke sjansen til at Tipio skal gå igjennom kan du <br/> invitere venner som kan være  interessert i det samme. </p>
+                    <p className="tipio__confirmation--description">For å øke sjansen til at Tipio skal gå igjennom kan du invitere venner som kan være  interessert i det samme. </p>
                     <ul className="tipio__confirmation__share">
                         <FacebookShareButton
                             url={share.link}
