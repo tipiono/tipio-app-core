@@ -61,7 +61,7 @@ function TipioConfirmation(_ref) {
     className: "tipio__confirmation--title"
   }, "Dere er sterkere sammen!!"), _react.default.createElement("p", {
     className: "tipio__confirmation--description"
-  }, "For \xE5 \xF8ke sjansen til at Tipio skal g\xE5 igjennom kan du ", _react.default.createElement("br", null), " invitere venner som kan v\xE6re  interessert i det samme.\u2028"), _react.default.createElement("ul", {
+  }, "For \xE5 \xF8ke sjansen til at Tipio skal g\xE5 igjennom kan du invitere venner som kan v\xE6re  interessert i det samme.\u2028"), _react.default.createElement("ul", {
     className: "tipio__confirmation__share"
   }, _react.default.createElement(_reactShare.FacebookShareButton, {
     url: share.link,

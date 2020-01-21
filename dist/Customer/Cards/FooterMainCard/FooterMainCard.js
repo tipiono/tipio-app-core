@@ -34,11 +34,11 @@ var FooterMainCard = function FooterMainCard(_ref) {
   }, _react.default.createElement("div", {
     className: "row align-items-center"
   }, _react.default.createElement("div", {
-    className: "col-5 d-none d-md-block"
+    className: "col-6 col-lg-5"
   }, _react.default.createElement("h3", {
     className: "footerMainCard__title"
   }, title)), _react.default.createElement("div", {
-    className: "col-8 col-md-4"
+    className: "col-8 col-md-4 d-none d-lg-block"
   }, _react.default.createElement("div", {
     className: "footerMainCard__content"
   }, _react.default.createElement("div", {
@@ -54,7 +54,7 @@ var FooterMainCard = function FooterMainCard(_ref) {
   }, generateNewPrice(), " Kr"), _react.default.createElement("h6", {
     className: "footerMainCard__content__priceValue__first"
   }, marketPrice, " Kr")))), _react.default.createElement("div", {
-    className: "col-4 col-md-3"
+    className: "col-5 col-md-5 col-lg-3 ml-auto"
   }, _react.default.createElement(_SecondaryButton.default, {
     onClick: onBindClick,
     text: (0, _addonKnobs.text)('Label', 'Legg i handlekurv'),
