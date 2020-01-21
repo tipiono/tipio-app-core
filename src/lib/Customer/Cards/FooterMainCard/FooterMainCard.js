@@ -1,7 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { action } from "@storybook/addon-actions";
-import { boolean, text } from "@storybook/addon-knobs";
 import SecondaryButton from "../../../UI/Buttons/SecondaryButton";
 
 const FooterMainCard = ({ title, marketPrice, firstRange, secondRange, bindCount, onBindClick }) => {
@@ -30,9 +28,8 @@ const FooterMainCard = ({ title, marketPrice, firstRange, secondRange, bindCount
                     </div>
                 </div>
 
-                <div className="col-5 col-md-5 col-lg-3 ml-auto">
-                    <SecondaryButton onClick={onBindClick} text={text('Label', 'Legg i handlekurv')}
-                        loading={boolean('Loading ', false)} />
+                <div className="col-4 col-md-3">
+                    <SecondaryButton onClick={onBindClick} text={'Legg i handlekurv'} loading={false} />
                 </div>
             </div>
         </div>

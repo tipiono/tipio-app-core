@@ -1,5 +1,8 @@
-.imageSlider {
+.removeMargin .carousel .thumbs-wrapper {
+  margin: 0 !important;
+}
 
+.imageSlider {
   /// Slider Images
   .carousel-slider {
     .slider-wrapper {
