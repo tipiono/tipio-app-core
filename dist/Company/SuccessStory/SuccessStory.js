@@ -22,7 +22,7 @@ function SuccessStory(_ref) {
     onClick: onClick
   }, _react.default.createElement("img", {
     className: "successStory__preview--image lazyload",
-    "data-src": "https://tipio.ams3.cdn.digitaloceanspaces.com/staging/6/tipios/71/1579615001435",
+    "data-src": image,
     src: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 2'%3E%3C/svg%3E",
     alt: ""
   })), _react.default.createElement("div", {
@@ -32,9 +32,9 @@ function SuccessStory(_ref) {
     onClick: onClick
   }, _react.default.createElement("h1", {
     className: "successStory__content--title"
-  }, "Example heading")), _react.default.createElement("p", {
+  }, title)), _react.default.createElement("p", {
     className: "successStory__content--description"
-  }, "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Non pugnem cum homine, cur tantum habeat in natura boni")));
+  }, subtitle)));
 }
 
 ;
