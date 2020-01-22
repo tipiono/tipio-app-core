@@ -50,7 +50,7 @@ var FooterMainCard = function FooterMainCard(_ref) {
   }, generateNewPrice(), " Kr"), _react.default.createElement("h6", {
     className: "footerMainCard__content__priceValue__first"
   }, marketPrice, " Kr")))), _react.default.createElement("div", {
-    className: "col-5 col-md-5 col-lg-3 ml-auto"
+    className: "col-4 col-md-3"
   }, _react.default.createElement(_SecondaryButton.default, {
     onClick: onBindClick,
     text: 'Legg i handlekurv',

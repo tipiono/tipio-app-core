@@ -23,7 +23,7 @@ var AddMoreSaleCompanyCard = function AddMoreSaleCompanyCard(props) {
   return _react.default.createElement("div", {
     className: "addMoreSaleCard"
   }, _react.default.createElement("div", {
-    className: "d-flex flex-row"
+    className: "d-flex flex-row align-items-center"
   }, _react.default.createElement("div", {
     className: "addMoreSaleCard__preview"
   }, _react.default.createElement("a", {
@@ -54,7 +54,10 @@ var AddMoreSaleCompanyCard = function AddMoreSaleCompanyCard(props) {
     className: "addMoreSaleCard__content__price--sale"
   }, props.first_price, " Kr"), _react.default.createElement("h6", {
     className: "addMoreSaleCard__content__price--cost"
-  }, props.company_price, " Kr")))));
+  }, props.company_price, " Kr"))), _react.default.createElement("a", {
+    href: "",
+    className: "addMoreSaleCard__remove"
+  })));
 };
 
 var _default = AddMoreSaleCompanyCard;
