@@ -11,10 +11,10 @@ const FooterMainCard = ({ title, marketPrice, firstRange, secondRange, bindCount
     return (
         <div className="footerMainCard">
             <div className="row align-items-center">
-                <div className="col-5 d-none d-md-block">
+                <div className="col-6 col-lg-5">
                     <h3 className="footerMainCard__title">{title}</h3>
                 </div>
-                <div className="col-8 col-md-4">
+                <div className="col-8 col-md-4 d-none d-lg-block">
                     <div className="footerMainCard__content">
                         <div className="footerMainCard__content__priceLabel">
                             <h6 className="footerMainCard__content__priceLabel__new">Pris nå</h6>

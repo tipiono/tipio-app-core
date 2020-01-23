@@ -1,6 +1,7 @@
 .shoppingBagItem {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     border-bottom: 1px solid $gray-100;
     margin-bottom: 1.5rem;
     padding-bottom: 1.5rem;
@@ -35,7 +36,7 @@
 
     &__content {
         width: 56%;
-        margin-top: 1rem;
+        //margin-top: 1rem;
 
         &__title {
             color: $gray-700;
@@ -48,10 +49,11 @@
 
         &__price {
             display: flex;
-            justify-content: space-between;
+            //justify-content: space-between;
 
             &--sale {
                 letter-spacing: .4px;
+                margin-right: 2rem;
             }
 
             &--cost {

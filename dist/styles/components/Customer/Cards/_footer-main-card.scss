@@ -49,6 +49,11 @@
   }
 
   @include media-breakpoint-down(sm) {
+
+    &__title {
+      font-size: 12px;
+    }
+
     &__content {
       justify-content: flex-start;
       margin-bottom: 1rem;
