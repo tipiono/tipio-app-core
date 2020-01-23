@@ -13,7 +13,7 @@ const AddMoreSaleCompanyCard = (props) => {
     }
     return (
         <div className="addMoreSaleCard">
-            <div className="d-flex flex-row">
+            <div className="d-flex flex-row align-items-center">
                 <div className="addMoreSaleCard__preview">
                     <a className="addMoreSaleCard__preview--image lazy-image" href="" onClick={(e)=>{e.preventDefault(); props.titleOnClick(props);}}>
                         {props.tipio.images
@@ -30,6 +30,8 @@ const AddMoreSaleCompanyCard = (props) => {
                         <h6 className="addMoreSaleCard__content__price--cost">{props.company_price} Kr</h6>
                     </div>
                 </div>
+
+                <a href="" className="addMoreSaleCard__remove" />
             </div>
         </div>
     );

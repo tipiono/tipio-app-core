@@ -115,6 +115,7 @@ import AddMoreSaleCompanyCard from "./Company/Cards/AddMoreSaleCompanyCard/AddMo
 import AddMoreSaleEndedCompanyCard from "./Company/Cards/AddMoreSaleEndedCompanyCard/AddMoreSaleEndedCompanyCard";
 import AddSaleSidebarCard from "./Company/CompanySidebarCards/AddSaleSidebarCard";
 import MaterialSearch from "./Company/MaterialSearch/MaterialSearch";
+import SuccessStory from "./Company/SuccessStory/SuccessStory";
 
 /*
  *   Layout
@@ -271,5 +272,6 @@ export {
     WithAnimation,
     limitTipios,
     FooterMainCard,
-    useLockBodyScroll
+    useLockBodyScroll,
+    SuccessStory
 };
