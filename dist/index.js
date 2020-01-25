@@ -647,6 +647,12 @@ Object.defineProperty(exports, "MaterialSearch", {
     return _MaterialSearch.default;
   }
 });
+Object.defineProperty(exports, "SuccessStory", {
+  enumerable: true,
+  get: function get() {
+    return _SuccessStory.default;
+  }
+});
 Object.defineProperty(exports, "PublicLayout", {
   enumerable: true,
   get: function get() {
@@ -950,6 +956,8 @@ var _AddMoreSaleEndedCompanyCard = _interopRequireDefault(require("./Company/Car
 var _AddSaleSidebarCard = _interopRequireDefault(require("./Company/CompanySidebarCards/AddSaleSidebarCard"));
 
 var _MaterialSearch = _interopRequireDefault(require("./Company/MaterialSearch/MaterialSearch"));
+
+var _SuccessStory = _interopRequireDefault(require("./Company/SuccessStory/SuccessStory"));
 
 var _index = _interopRequireDefault(require("./UI/Layout/Public/index"));
 
