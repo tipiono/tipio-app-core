@@ -18,10 +18,18 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 var BaseCompanyCard = function BaseCompanyCard(_ref) {
   var children = _ref.children,
       expires_in = _ref.expires_in,
+      brand = _ref.brand,
       binding_count = _ref.binding_count,
       potential_earning = _ref.potential_earning,
       showBindingCount = _ref.showBindingCount,
-      props = _objectWithoutProperties(_ref, ["children", "expires_in", "binding_count", "potential_earning", "showBindingCount"]);
+      props = _objectWithoutProperties(_ref, ["children", "expires_in", "brand", "binding_count", "potential_earning", "showBindingCount"]);
+
+  var showBrand = props.showBrand || false;
+
+  var showLabel = function showLabel() {
+    if (props.showVotingCount) return 'votes';
+    return showBindingCount ? 'kjøpte' : 'påmeldte';
+  };
 
   return _react.default.createElement("div", null, _react.default.createElement("div", {
     className: "baseCompanyCard"
@@ -57,7 +65,7 @@ var BaseCompanyCard = function BaseCompanyCard(_ref) {
     className: "baseCompanyCard__body--title"
   }, props.title)), _react.default.createElement("p", {
     className: "baseCompanyCard__body--description"
-  }, props.subtitle), potential_earning ? _react.default.createElement("div", {
+  }, !showBrand ? props.subtitle : brand), potential_earning ? _react.default.createElement("div", {
     className: "baseCompanyCard__body--cost"
   }, _react.default.createElement("h3", {
     className: "baseCompanyCard__body--cost--price"
@@ -67,7 +75,7 @@ var BaseCompanyCard = function BaseCompanyCard(_ref) {
     className: "baseCompanyCard__body--interested"
   }, _react.default.createElement("h6", {
     className: "baseCompanyCard__body--interested--counter"
-  }, binding_count, " ", showBindingCount ? 'kjøpte' : 'påmeldte', " ! ")) : null, children)));
+  }, binding_count, " ", showLabel(), " ! ")) : null, children)));
 };
 
 var _default = BaseCompanyCard;
