@@ -15,20 +15,6 @@
     overflow: hidden;
     width: 100%;
 
-    //Added for date input in edit profile
-    input{
-        ::placeholder{
-            visibility: hidden;
-        }
-    }
-
-    input:focus{
-        ::placeholder{
-            visibility: visible;
-        }
-    }
-    //End of style for date input
-
     > {
         input,
         textarea,
