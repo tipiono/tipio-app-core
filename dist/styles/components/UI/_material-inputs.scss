@@ -394,6 +394,16 @@
             border-top-color: transparent !important;
         }
 
+        //Used for input birthday in Edit profile 
+        input::placeholder{
+            visibility: hidden;
+        }
+
+        input:focus::placeholder{
+            visibility: visibile;
+        }
+          //End style for input birthday in Edit profile 
+
         input:focus + span,
         textarea:focus + span,
         .css-1pcexqc-container:focus + span {

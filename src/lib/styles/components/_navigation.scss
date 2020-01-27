@@ -263,6 +263,10 @@ body.noscroll {
             &:after {
                 content: none;
             }
+
+            .downArrow {
+                transform: rotate(180deg);
+            }
         }
 
         .dropdown-list {
