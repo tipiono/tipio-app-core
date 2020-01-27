@@ -115,6 +115,7 @@ import AddMoreSaleCompanyCard from "./Company/Cards/AddMoreSaleCompanyCard/AddMo
 import AddMoreSaleEndedCompanyCard from "./Company/Cards/AddMoreSaleEndedCompanyCard/AddMoreSaleEndedCompanyCard";
 import AddSaleSidebarCard from "./Company/CompanySidebarCards/AddSaleSidebarCard";
 import MaterialSearch from "./Company/MaterialSearch/MaterialSearch";
+import SuccessStory from "./Company/SuccessStory/SuccessStory";
 
 /*
  *   Layout
@@ -145,6 +146,8 @@ import WithAnimation from "./effects/withAnimation";
 import calculateDiscountPercentage from "./Util/calculateDiscountPercentage";
 import formatText from "./Util/formatText";
 import limitTipios from "./Util/limitTipios";
+
+import useLockBodyScroll from './Hooks/useLockBodyScroll';
 
 export {
     styles,
@@ -268,5 +271,7 @@ export {
     NavBadge,
     WithAnimation,
     limitTipios,
-    FooterMainCard
+    FooterMainCard,
+    useLockBodyScroll,
+    SuccessStory
 };

@@ -1,7 +1,5 @@
 "use strict";
 
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -647,6 +645,12 @@ Object.defineProperty(exports, "MaterialSearch", {
     return _MaterialSearch.default;
   }
 });
+Object.defineProperty(exports, "SuccessStory", {
+  enumerable: true,
+  get: function get() {
+    return _SuccessStory.default;
+  }
+});
 Object.defineProperty(exports, "PublicLayout", {
   enumerable: true,
   get: function get() {
@@ -729,6 +733,12 @@ Object.defineProperty(exports, "limitTipios", {
   enumerable: true,
   get: function get() {
     return _limitTipios.default;
+  }
+});
+Object.defineProperty(exports, "useLockBodyScroll", {
+  enumerable: true,
+  get: function get() {
+    return _useLockBodyScroll.default;
   }
 });
 exports.CountdownType = void 0;
@@ -945,6 +955,8 @@ var _AddSaleSidebarCard = _interopRequireDefault(require("./Company/CompanySideb
 
 var _MaterialSearch = _interopRequireDefault(require("./Company/MaterialSearch/MaterialSearch"));
 
+var _SuccessStory = _interopRequireDefault(require("./Company/SuccessStory/SuccessStory"));
+
 var _index = _interopRequireDefault(require("./UI/Layout/Public/index"));
 
 var _InteriorIcon = _interopRequireDefault(require("./UI/Icons/InteriorIcon"));
@@ -973,8 +985,8 @@ var _formatText = _interopRequireDefault(require("./Util/formatText"));
 
 var _limitTipios = _interopRequireDefault(require("./Util/limitTipios"));
 
-function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
+var _useLockBodyScroll = _interopRequireDefault(require("./Hooks/useLockBodyScroll"));
 
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }

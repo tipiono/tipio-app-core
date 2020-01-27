@@ -78,6 +78,10 @@ body.noscroll {
                 .active {
                     color: $white;
                     border-bottom: 2px solid $secondary;
+
+                    &:hover {
+                        border-bottom: 2px solid $secondary;
+                    }
                 }
 
                 .nav-list-link-menu-badge {
@@ -142,6 +146,22 @@ body.noscroll {
             right: 0;
             height: calc(100vh);
         }
+
+        li {
+            position: relative;
+            -webkit-transform-origin: 100% 50%;
+            -ms-transform-origin: 100% 50%;
+            transform-origin: 100% 50%;
+            -webkit-animation: fadeUp 200ms both ease-out;
+            animation: fadeUp 200ms both ease-out;
+
+            // Loop from 1-12.
+            @for $i from 1 through 12 {
+                &:nth-child(#{$i}) {
+                    animation-delay: $i * (.02s);
+                }
+            }
+        }
     }
 
     li {
@@ -176,7 +196,7 @@ body.noscroll {
 
         @include media-breakpoint-down(sm) {
             width: 100%;
-            padding: 60px 30px 30px 30px;
+            padding: 50px 30px;
         }
 
         .add-new {
@@ -193,6 +213,20 @@ body.noscroll {
 
         li {
             padding: 0.75em 1em;
+
+            @include media-breakpoint-down(sm) {
+               &:last-child {
+                   padding-bottom: 80px;
+               }
+
+                .dropdown-list {
+                   li {
+                       &:last-child {
+                           padding-bottom: 0;
+                       }
+                   }
+                }
+            }
         }
 
         a {
@@ -334,9 +368,21 @@ body.noscroll {
 
         li {
             padding: 8px 0;
+            -webkit-transform-origin: 100% 50%;
+            -ms-transform-origin: 100% 50%;
+            transform-origin: 100% 50%;
+            -webkit-animation: fadeUp 200ms both ease-out;
+            animation: fadeUp 200ms both ease-out;
 
             a {
                 color: $gray-700;
+            }
+
+            // Loop from 1-12.
+            @for $i from 1 through 12 {
+                &:nth-child(#{$i}) {
+                    animation-delay: $i * (.02s);
+                }
             }
         }
 
@@ -366,7 +412,7 @@ body.noscroll {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        padding: 24px 40px;
+        padding: 24px 40px 40px;
         border-bottom: 10px solid $gray-100;
 
         .shoppingbag-action-item {
@@ -379,7 +425,7 @@ body.noscroll {
 
         &:before {
             position: absolute;
-            right: 60px;
+            right: 74px;
             top: -12px;
             border-left: 10px solid transparent;
             border-right: 10px solid transparent;
@@ -436,10 +482,9 @@ body.noscroll {
     @include media-breakpoint-down(sm) {
         left: 0;
         width: 100%;
-        //height: calc(100vh - 112px);
 
         .shoppingbag-action {
-            padding: 20px 16px;
+            padding: 20px 16px 40px;
 
             .btn {
                 font-size: 0.875rem;
@@ -508,4 +553,23 @@ body.noscroll {
     font-family: "Riposte-Bold", sans-serif;
     padding: 0px 6px;
     border-radius: 25px;
+}
+
+
+
+/// Fade Up Keyframe
+
+@keyframes fadeUp {
+    0% {
+        opacity: .3;
+        -webkit-transform: translateY(20px);
+        -ms-transform: translateY(20px);
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0px);
+        -ms-transform: translateY(0px);
+        transform: translateY(0px);
+    }
 }
