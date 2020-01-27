@@ -15,6 +15,20 @@
     overflow: hidden;
     width: 100%;
 
+    //Added for date input in edit profile
+    input{
+        ::placeholder{
+            visibility: hidden;
+        }
+    }
+
+    input:focus{
+        ::placeholder{
+            visibility: visible;
+        }
+    }
+    //End of style for date input
+
     > {
         input,
         textarea,
@@ -393,6 +407,16 @@
             border-color: #da3021 !important;
             border-top-color: transparent !important;
         }
+
+        //Used for input birthday in Edit profile 
+        input::placeholder{
+            visibility: hidden;
+        }
+
+        input:focus::placeholder{
+            visibility: visibile;
+        }
+          //End style for input birthday in Edit profile 
 
         input:focus + span,
         textarea:focus + span,
