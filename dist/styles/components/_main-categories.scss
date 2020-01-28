@@ -227,6 +227,7 @@
     }
 
   }
+
   @include media-breakpoint-down(sm) {
     .category-item {
       width: 100%;
@@ -239,6 +240,23 @@
   .category-item {
     border-bottom: 1px solid $gray-200;
     width: 80%;
+
+    &:hover {
+      border-bottom: 1px solid $primary;
+
+      .category-link {
+        color: $primary;
+      }
+      .md-checkbox label:before {
+        border-width: 1.8px;
+      }
+
+      .category-right-icon {
+        svg * {
+          fill: $primary;
+        }
+      }
+    }
 
     .category-link {
       display: flex;

@@ -28,8 +28,8 @@ const FooterMainCard = ({ title, marketPrice, firstRange, secondRange, bindCount
                     </div>
                 </div>
 
-                <div className="col-4 col-md-3">
-                    <SecondaryButton onClick={onBindClick} text={'Legg i handlekurv'} loading={false} />
+                <div className="col-4 col-md-3 ml-auto">
+                    <SecondaryButton onClick={onBindClick} text={'Kjøp'} loading={false} />
                 </div>
             </div>
         </div>

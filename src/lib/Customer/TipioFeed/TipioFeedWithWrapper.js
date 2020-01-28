@@ -63,7 +63,7 @@ const TipioFeedWithWrapper = props => {
             </div>
             {props.tipios && props.tipios.length > 0 && props.page > 0 &&
 
-            <div className="d-flex justify-content-center my-4 pb-5">
+            <div className="d-flex justify-content-center pb-5">
                 <Pagination
                     page={props.page}
                     pageCount={props.pageCount}
