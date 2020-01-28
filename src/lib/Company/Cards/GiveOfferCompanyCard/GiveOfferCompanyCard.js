@@ -7,7 +7,7 @@ const GiveOfferCompanyCard = (props) => {
         <div>
             <BaseCompanyCard {...props}>
                 <SecondaryButton 
-                    text={'Gi tilbud'}
+                    text={'Git tilbud'}
                     loading={props.loading}
                     onClick={props.onClick}
                 />

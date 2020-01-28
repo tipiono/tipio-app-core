@@ -1,12 +1,17 @@
 function formatText(input, formatter, separator) {
-    const maxLength = 280;
+    const maxLength = 160;
     let text;
     let rest;
-    
+
+
     if (input) {
         text = input.substr(0, maxLength);
-        text = text.substr(0, Math.min(text.length, text.lastIndexOf(" ")));
-        rest = input.substr(text.length);
+
+        if (input.length >= maxLength) {
+            text = text.substr(0, Math.min(text.length, text.lastIndexOf(" ")));
+            rest = input.substr(text.length);
+        }
+
 
         /**
          * Format first [maxLength] characters
