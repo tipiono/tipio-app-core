@@ -2,8 +2,6 @@ import React from 'react';
 import TipioCountdown from "../../../UI/TipioCountdown/TipioCountdown";
 
 const BaseCompanyCard = ({ children, expires_in, binding_count, potential_earning, showBindingCount, ...props }) => {
-    console.log('potential_earning: ' + potential_earning);
-    console.log('binding_count ' + binding_count);
     return (
         <div>
             <div className="baseCompanyCard">

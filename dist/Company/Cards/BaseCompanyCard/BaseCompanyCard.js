@@ -23,8 +23,6 @@ var BaseCompanyCard = function BaseCompanyCard(_ref) {
       showBindingCount = _ref.showBindingCount,
       props = _objectWithoutProperties(_ref, ["children", "expires_in", "binding_count", "potential_earning", "showBindingCount"]);
 
-  console.log('potential_earning: ' + potential_earning);
-  console.log('binding_count ' + binding_count);
   return _react.default.createElement("div", null, _react.default.createElement("div", {
     className: "baseCompanyCard"
   }, _react.default.createElement("a", {
