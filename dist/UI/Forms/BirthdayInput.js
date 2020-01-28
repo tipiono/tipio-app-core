@@ -27,11 +27,11 @@ var _default = _react.default.forwardRef(function (_ref, ref) {
       props = _objectWithoutProperties(_ref, ["placeholder", "name", "errors", "displayErrors"]);
 
   return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("label", {
-    className: (0, _classnames.default)("pure-material-textfield-outlined ", {
+    className: (0, _classnames.default)("pure-material-textfield-outlined birthdayInput", {
       'validationError': errors && errors[name]
     })
   }, _react.default.createElement("input", _extends({
-    placeholder: " ",
+    placeholder: props.value ? " " : "DD-MM-YYYY",
     id: props.id || name,
     name: name
   }, props, {

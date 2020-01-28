@@ -12,6 +12,7 @@ ul, li {
 
 .main {
     padding-top: 88px;
+    min-height: calc(100vh);
 
     @media (max-width: 767.98px) {
         padding-top: 60px;

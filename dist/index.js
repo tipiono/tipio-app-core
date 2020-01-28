@@ -113,6 +113,12 @@ Object.defineProperty(exports, "Input", {
     return _Input.default;
   }
 });
+Object.defineProperty(exports, "BirthdayInput", {
+  enumerable: true,
+  get: function get() {
+    return _BirthdayInput.default;
+  }
+});
 Object.defineProperty(exports, "Textarea", {
   enumerable: true,
   get: function get() {
@@ -782,6 +788,8 @@ var CountdownType = _interopRequireWildcard(require("./UI/Countdown/CountdownTyp
 exports.CountdownType = CountdownType;
 
 var _Input = _interopRequireDefault(require("./UI/Forms/Input"));
+
+var _BirthdayInput = _interopRequireDefault(require("./UI/Forms/BirthdayInput"));
 
 var _Textarea = _interopRequireDefault(require("./UI/Forms/Textarea"));
 
