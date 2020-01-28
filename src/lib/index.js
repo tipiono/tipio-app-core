@@ -20,6 +20,7 @@ import TipioCountdown from "./UI/TipioCountdown/TipioCountdown";
 import Select from "./UI/Forms/Select";
 import * as CountdownType from "./UI/Countdown/CountdownType";
 import Input from "./UI/Forms/Input";
+import BirthdayInput from "./UI/Forms/BirthdayInput";
 import Textarea from "./UI/Forms/Textarea";
 import Checkbox from "./UI/Forms/Checkbox";
 import RadioButton from "./UI/Forms/RadioButton";
@@ -189,6 +190,7 @@ export {
     TipioCountdown,
     CountdownType,
     Input,
+    BirthdayInput,
     Textarea,
     Select,
     Checkbox,

@@ -23,6 +23,8 @@ var BaseCompanyCard = function BaseCompanyCard(_ref) {
       showBindingCount = _ref.showBindingCount,
       props = _objectWithoutProperties(_ref, ["children", "expires_in", "binding_count", "potential_earning", "showBindingCount"]);
 
+  console.log('potential_earning: ' + potential_earning);
+  console.log('binding_count ' + binding_count);
   return _react.default.createElement("div", null, _react.default.createElement("div", {
     className: "baseCompanyCard"
   }, _react.default.createElement("a", {
@@ -57,17 +59,17 @@ var BaseCompanyCard = function BaseCompanyCard(_ref) {
     className: "baseCompanyCard__body--title"
   }, props.title)), _react.default.createElement("p", {
     className: "baseCompanyCard__body--description"
-  }, props.subtitle), potential_earning ? _react.default.createElement("div", {
+  }, props.subtitle), _react.default.createElement("div", {
     className: "baseCompanyCard__body--cost"
   }, _react.default.createElement("h3", {
     className: "baseCompanyCard__body--cost--price"
   }, potential_earning, " Kr"), _react.default.createElement("span", {
     className: "baseCompanyCard__body--cost--label"
-  }, "Potensiell omsetning")) : null, binding_count > 0 ? _react.default.createElement("div", {
+  }, "Potensiell omsetning")), _react.default.createElement("div", {
     className: "baseCompanyCard__body--interested"
   }, _react.default.createElement("h6", {
     className: "baseCompanyCard__body--interested--counter"
-  }, binding_count, " ", showBindingCount ? 'kjøpte' : 'påmeldte', " ! ")) : null, children)));
+  }, binding_count, " ", showBindingCount ? 'kjøpte' : 'påmeldte', " ! ")), children)));
 };
 
 var _default = BaseCompanyCard;
