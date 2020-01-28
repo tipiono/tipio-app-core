@@ -24,8 +24,55 @@ function PublicLayout(_ref) {
   }, _react.default.createElement(_index.default, props)), _react.default.createElement("main", {
     className: "main"
   }, children), _react.default.createElement("footer", {
-    className: "footer"
-  }));
+    className: "customFooter"
+  }, _react.default.createElement("div", {
+    className: "container"
+  }, _react.default.createElement("div", {
+    className: "row"
+  }, _react.default.createElement("div", {
+    className: "col-sm-12 col-md-11 mx-auto"
+  }, _react.default.createElement("div", {
+    className: "row"
+  }, _react.default.createElement("div", {
+    className: "col-sm-12 col-md-3"
+  }, _react.default.createElement("div", {
+    className: "customFooter__list"
+  }, _react.default.createElement("h5", {
+    className: "customFooter__list__title"
+  }, "Kontakt oss"), _react.default.createElement("ul", {
+    className: "customFooter__list__content"
+  }, _react.default.createElement("li", null, _react.default.createElement("a", {
+    className: "customFooter__list__content__link",
+    href: "https://goo.gl/maps/UdKQacRovy4guaYW9",
+    target: "_blank"
+  }, "M\xF8llergata 4, 0179 Oslo")), _react.default.createElement("li", null, _react.default.createElement("a", {
+    className: "customFooter__list__content__link",
+    href: "tel:+47 987 65 456"
+  }, "+47 987 65 456")), _react.default.createElement("li", null, _react.default.createElement("a", {
+    className: "customFooter__list__content__link",
+    href: "mailto:post@tipio.no"
+  }, "post@tipio.no"))))), _react.default.createElement("div", {
+    className: "col-sm-12 col-md-3"
+  }, _react.default.createElement("div", {
+    className: "customFooter__list"
+  }, _react.default.createElement("h5", {
+    className: "customFooter__list__title"
+  }, "F\xF8lg Tipio"), _react.default.createElement("ul", {
+    className: "customFooter__list__content"
+  }, _react.default.createElement("li", null, _react.default.createElement("a", {
+    className: "customFooter__list__content__link",
+    href: "https://www.facebook.com/"
+  }, "Facebook")), _react.default.createElement("li", null, _react.default.createElement("a", {
+    className: "customFooter__list__content__link",
+    href: "https://instagram.com/"
+  }, "Instagram")), _react.default.createElement("li", null, _react.default.createElement("a", {
+    className: "customFooter__list__content__link",
+    href: "https://www.linkedin.com/"
+  }, "Linkedin"))))), _react.default.createElement("div", {
+    className: "col-sm-12 col-md-6"
+  }, _react.default.createElement("p", {
+    className: "customFooter__description"
+  }, "Hvorfor kj\xF8pe dyrt alene n\xE5r vi kan handle billig sammen?", _react.default.createElement("br", null), _react.default.createElement("p", null), "I Tipio kan du fortelle butikkene hva du \xF8nsker \xE5 f\xE5 en bedre pris p\xE5."))))))));
 }
 
 var _default = PublicLayout;
