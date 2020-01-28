@@ -114,10 +114,20 @@
     }
   }
 
-  @include media-breakpoint-down(sm) {
+  @include media-breakpoint-down(md) {
     &__main {
       &__preview {
         width: 40%;
+      }
+
+      &__content {
+        &__price {
+          justify-content: unset;
+
+          &--cost {
+            margin-right: 2rem;
+          }
+        }
       }
     }
 

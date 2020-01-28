@@ -98,6 +98,8 @@
 
     &__header {
       &__content {
+        margin-bottom: 1.2rem;
+
         &--title {
           font-size: 1.125rem;
         }
@@ -121,6 +123,10 @@
           font-size: 1.125rem;
         }
       }
+    }
+
+    &__footer {
+      margin-top: 1.5rem;
     }
   }
 }
