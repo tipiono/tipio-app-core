@@ -99,7 +99,7 @@
   &__countDown{
     position: absolute;
     bottom: 132px;
-    right: 0;
+    right: 1px;
   }
 
   @include media-breakpoint-down(sm) {
