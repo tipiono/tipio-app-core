@@ -341,6 +341,12 @@ Object.defineProperty(exports, "NavBadge", {
     return _NavBadge.default;
   }
 });
+Object.defineProperty(exports, "Logo", {
+  enumerable: true,
+  get: function get() {
+    return _Logo.default;
+  }
+});
 Object.defineProperty(exports, "TipioWithOffer", {
   enumerable: true,
   get: function get() {
@@ -860,6 +866,8 @@ var _RoundedButton = _interopRequireDefault(require("./UI/Buttons/RoundedButton"
 var _TipioViewDescriptionMobile = _interopRequireDefault(require("./UI/TipioViewDescriptionMobile/TipioViewDescriptionMobile"));
 
 var _NavBadge = _interopRequireDefault(require("./UI/NavBadge/NavBadge"));
+
+var _Logo = _interopRequireDefault(require("./UI/Logo/Logo"));
 
 var _TipioWithOffer = _interopRequireDefault(require("./Customer/Modals/TipioWithOffer/TipioWithOffer"));
 
