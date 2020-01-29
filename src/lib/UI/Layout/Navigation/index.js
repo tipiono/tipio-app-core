@@ -1,5 +1,5 @@
 import React from 'react';
-import Logo from './Logo';
+import { Logo } from 'tipio-app-core';
 
 import BusinessPrivateNavigationItems from './BusinessPrivateNavigationItems';
 import HamburgerMenu from './HamburgerMenu';

@@ -56,6 +56,7 @@ import Pagination from "./UI/Pagination/Pagination";
 import RoundedButton from "./UI/Buttons/RoundedButton";
 import TipioViewDescriptionMobile from "./UI/TipioViewDescriptionMobile/TipioViewDescriptionMobile";
 import NavBadge from "./UI/NavBadge/NavBadge";
+import Logo from "./UI/Logo/Logo";
 
 /*
  *   Customer/Private Components
@@ -275,5 +276,6 @@ export {
     limitTipios,
     FooterMainCard,
     useLockBodyScroll,
-    SuccessStory
+    SuccessStory,
+    Logo
 };

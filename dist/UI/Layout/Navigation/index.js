@@ -7,7 +7,7 @@ exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
-var _Logo = _interopRequireDefault(require("./Logo"));
+var _tipioAppCore = require("tipio-app-core");
 
 var _BusinessPrivateNavigationItems = _interopRequireDefault(require("./BusinessPrivateNavigationItems"));
 
@@ -37,7 +37,7 @@ function Navigation(_ref) {
   }, _react.default.createElement("a", {
     className: "logo mr-5",
     href: "/"
-  }, _react.default.createElement(_Logo.default, null)), _react.default.createElement(_BusinessPrivateNavigationItems.default, props), _react.default.createElement("ul", {
+  }, _react.default.createElement(_tipioAppCore.Logo, null)), _react.default.createElement(_BusinessPrivateNavigationItems.default, props), _react.default.createElement("ul", {
     className: "nav-list ml-auto"
   }, _react.default.createElement("li", {
     className: "nav-list-item d-flex align-items-center"

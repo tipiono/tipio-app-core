@@ -6,7 +6,7 @@ import TipioCountdown from '../TipioCountdown/TipioCountdown';
 
 function ImageSlider({ images, showThumbs, showTimer, tipio_expires_in }) {
     return <>
-        <div className={cx('imageSlider', images && { showIndicators: images.length >= 4 }, { removeMargin: images.length < 4 })}>
+        <div className={cx('imageSlider', images && { showIndicators: images.length >= 5 }, { removeMargin: images.length < 5 })}>
             <Carousel
                 showIndicators={true}
                 showArrows={false}
