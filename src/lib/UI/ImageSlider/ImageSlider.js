@@ -5,7 +5,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 function ImageSlider({ images, showThumbs, }) {
     return <>
-        <div className={cx('imageSlider', images && { showIndicators: images.length >= 4 }, { removeMargin: images.length < 4 })}>
+        <div className={cx('imageSlider', images && { showIndicators: images.length >= 5 }, { removeMargin: images.length < 5 })}>
             <Carousel
                 showIndicators={true}
                 showArrows={false}
