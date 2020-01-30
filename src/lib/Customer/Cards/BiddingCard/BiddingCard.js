@@ -43,7 +43,10 @@ function BiddingCard({
                     </div>
 
                     <div className="biddingCard__body--salesbar">
-                        <SalesProgressBar percentage={salesProgressBarPercentage} bindingCount={bindingCount} />
+                        {
+                            bindingCount>0 ? ( <SalesProgressBar percentage={salesProgressBarPercentage} bindingCount={bindingCount} />) :''
+                        }
+                       
                     </div>
                     <div className="biddingCard__body--share">
                         {children}
