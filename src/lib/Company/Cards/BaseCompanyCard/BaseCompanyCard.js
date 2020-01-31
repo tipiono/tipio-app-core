@@ -1,7 +1,7 @@
 import React from 'react';
 import TipioCountdown from "../../../UI/TipioCountdown/TipioCountdown";
 
-const BaseCompanyCard = ({ children, expires_in, brand, binding_count, potential_earning, showBindingCount, ...props }) => {
+const BaseCompanyCard = ({ children, expires_in, brand, binding_count, potential_earning, showBindingCount, forceLoad = false, ...props }) => {
     const showBrand = props.showBrand || false;
     const showLabel = () => {
         if (props.showVotingCount) return 'votes';
@@ -19,7 +19,7 @@ const BaseCompanyCard = ({ children, expires_in, brand, binding_count, potential
                             <a href="" className="lazy-image baseCompanyCard__header--preview">
                                 <img className="lazyload baseCompanyCard__header--preview--image"
                                     data-src={props.images[0].blob_url}
-                                    src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 2'%3E%3C/svg%3E"
+                                    src={!forceLoad ? "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 2'%3E%3C/svg%3E" : props.images[0].blob_url}
                                     alt="" /></a>}
                         <div className="baseCompanyCard__header--timeLeft">
                             <TipioCountdown className="timer" expires_in={expires_in} />
