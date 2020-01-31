@@ -20,14 +20,14 @@ function BiddingCard({
                 <div className="biddingCard__header">
                     <a href="" className="lazy-image biddingCard__header--preview" onClick={onClick}>
                         <img className="lazyload biddingCard__header--preview--image"
-                             data-src={image}
-                             src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 2'%3E%3C/svg%3E"
-                             alt=""
+                            data-src={image}
+                            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 2'%3E%3C/svg%3E"
+                            alt=""
                         />
                     </a>
 
                     <div className="biddingCard__header--timeLeft">
-                        <TipioCountdown className="timer" expires_in={expiresIn}/>
+                        <TipioCountdown className="timer" expires_in={expiresIn} />
                     </div>
                 </div>
 

@@ -72,7 +72,7 @@ var TipioFeedWithWrapper = function TipioFeedWithWrapper(props) {
   }, _react.default.createElement("span", {
     className: "sr-only"
   }, "Loading..."))))), props.tipios && props.tipios.length > 0 && props.page > 0 && _react.default.createElement("div", {
-    className: "d-flex justify-content-center my-4 pb-5"
+    className: "d-flex justify-content-center py-5"
   }, _react.default.createElement(_Pagination.default, {
     page: props.page,
     pageCount: props.pageCount,

@@ -9,13 +9,12 @@ var _react = _interopRequireDefault(require("react"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
-
 var Logo = function Logo(props) {
-  return _react.default.createElement("svg", _extends({
+  return _react.default.createElement("svg", {
     width: 74,
-    height: 32
-  }, props), _react.default.createElement("title", null, '1DC25E78-9DF2-40B5-9DD2-1AD944025DE7'), _react.default.createElement("g", {
+    height: 32,
+    viewBox: "0 0 74 32"
+  }, _react.default.createElement("g", {
     fill: "#FFF",
     fillRule: "evenodd"
   }, _react.default.createElement("path", {
