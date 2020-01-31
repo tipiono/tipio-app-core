@@ -22,7 +22,9 @@ var BaseCompanyCard = function BaseCompanyCard(_ref) {
       binding_count = _ref.binding_count,
       potential_earning = _ref.potential_earning,
       showBindingCount = _ref.showBindingCount,
-      props = _objectWithoutProperties(_ref, ["children", "expires_in", "brand", "binding_count", "potential_earning", "showBindingCount"]);
+      _ref$forceLoad = _ref.forceLoad,
+      forceLoad = _ref$forceLoad === void 0 ? false : _ref$forceLoad,
+      props = _objectWithoutProperties(_ref, ["children", "expires_in", "brand", "binding_count", "potential_earning", "showBindingCount", "forceLoad"]);
 
   var showBrand = props.showBrand || false;
 
@@ -47,7 +49,7 @@ var BaseCompanyCard = function BaseCompanyCard(_ref) {
   }, _react.default.createElement("img", {
     className: "lazyload baseCompanyCard__header--preview--image",
     "data-src": props.images[0].blob_url,
-    src: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 2'%3E%3C/svg%3E",
+    src: !forceLoad ? "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 2'%3E%3C/svg%3E" : props.images[0].blob_url,
     alt: ""
   })), _react.default.createElement("div", {
     className: "baseCompanyCard__header--timeLeft"

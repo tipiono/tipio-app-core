@@ -4,10 +4,10 @@ import cx from 'classnames';
 function PillTabs({ items, activeIndex, onClick }) {
     return (
         <>
-           <ul className="pillTab">
-               {
-                   items.map((item, i) => (
-                        <li key={item} className={cx("pillTab__item", { active: activeIndex === i } )}>
+            <ul className="pillTab">
+                {
+                    items.map((item, i) => (
+                        <li key={item} className={cx("pillTab__item", { active: activeIndex === i })}>
                             <a
                                 href=""
                                 className="pillTab__item--link"
@@ -18,9 +18,9 @@ function PillTabs({ items, activeIndex, onClick }) {
                                 {item}
                             </a>
                         </li>
-                   ))
-               }
-           </ul>
+                    ))
+                }
+            </ul>
         </>
     )
 }
