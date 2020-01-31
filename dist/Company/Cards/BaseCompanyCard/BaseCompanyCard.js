@@ -17,14 +17,14 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 
 var BaseCompanyCard = function BaseCompanyCard(_ref) {
   var children = _ref.children,
-    expires_in = _ref.expires_in,
-    brand = _ref.brand,
-    binding_count = _ref.binding_count,
-    potential_earning = _ref.potential_earning,
-    showBindingCount = _ref.showBindingCount,
-    _ref$forceLoad = _ref.forceLoad,
-    forceLoad = _ref$forceLoad === void 0 ? false : _ref$forceLoad,
-    props = _objectWithoutProperties(_ref, ["children", "expires_in", "brand", "binding_count", "potential_earning", "showBindingCount", "forceLoad"]);
+      expires_in = _ref.expires_in,
+      brand = _ref.brand,
+      binding_count = _ref.binding_count,
+      potential_earning = _ref.potential_earning,
+      showBindingCount = _ref.showBindingCount,
+      _ref$forceLoad = _ref.forceLoad,
+      forceLoad = _ref$forceLoad === void 0 ? false : _ref$forceLoad,
+      props = _objectWithoutProperties(_ref, ["children", "expires_in", "brand", "binding_count", "potential_earning", "showBindingCount", "forceLoad"]);
 
   var showBrand = props.showBrand || false;
 
