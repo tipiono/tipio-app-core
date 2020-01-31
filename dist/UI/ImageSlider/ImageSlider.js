@@ -20,9 +20,9 @@ function ImageSlider(_ref) {
       showThumbs = _ref.showThumbs;
   return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("div", {
     className: (0, _classnames.default)('imageSlider', images && {
-      showIndicators: images.length >= 4
+      showIndicators: images.length >= 5
     }, {
-      removeMargin: images.length < 4
+      removeMargin: images.length < 5
     })
   }, _react.default.createElement(_reactResponsiveCarousel.Carousel, {
     showIndicators: true,

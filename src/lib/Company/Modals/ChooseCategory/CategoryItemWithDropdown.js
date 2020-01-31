@@ -68,7 +68,13 @@ const CategoryItem = ({id, title, icon, onSelect, active, sub_categories, onClic
                     <span>{title}</span>
 
                     <div className="category-right-icon">
-                        <ArrowDownIcon/>
+                        <svg width={16} height={10} viewBox="0 0 16 10">
+                            <path
+                                d="M8.007 9.104a.907.907 0 01-.633-.26L.922 2.48a.904.904 0 011.26-1.296l5.825 5.76 5.825-5.76a.906.906 0 111.267 1.296L8.62 8.86a.893.893 0 01-.612.244z"
+                                fill="#8C8F91"
+                                fillRule="nonzero"
+                            />
+                        </svg>
                     </div>
                 </a>
             </div>

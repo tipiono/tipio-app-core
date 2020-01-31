@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import cx from 'classnames';
 
 export function DropDown(props) {
     const [dropDownVisibility, setDropDownVisibility] = useState(false);
@@ -19,7 +20,7 @@ export function DropDown(props) {
             }}>
                 <span>{props.title}</span>
                 {props.afterTitle && props.afterTitle()}
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                <svg className={cx({downArrow: dropDownVisibility})} xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                      viewBox="0 0 24 24">
                     <g className="nc-icon-wrapper" strokeLinecap="round"
                        strokeLinejoin="round" strokeWidth="2" fill="#ffffff"

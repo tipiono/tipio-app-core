@@ -67,13 +67,13 @@ var BaseCompanyCard = function BaseCompanyCard(_ref) {
     className: "baseCompanyCard__body--title"
   }, props.title)), _react.default.createElement("p", {
     className: "baseCompanyCard__body--description"
-  }, !showBrand ? props.subtitle : brand), potential_earning ? _react.default.createElement("div", {
+  }, !showBrand ? props.subtitle : brand), _react.default.createElement("div", {
     className: "baseCompanyCard__body--cost"
   }, _react.default.createElement("h3", {
     className: "baseCompanyCard__body--cost--price"
   }, potential_earning, " Kr"), _react.default.createElement("span", {
     className: "baseCompanyCard__body--cost--label"
-  }, "Potensiell omsetning")) : null, binding_count > 0 ? _react.default.createElement("div", {
+  }, "Potensiell omsetning")), binding_count > 0 ? _react.default.createElement("div", {
     className: "baseCompanyCard__body--interested"
   }, _react.default.createElement("h6", {
     className: "baseCompanyCard__body--interested--counter"

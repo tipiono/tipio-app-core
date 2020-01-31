@@ -113,6 +113,12 @@ Object.defineProperty(exports, "Input", {
     return _Input.default;
   }
 });
+Object.defineProperty(exports, "BirthdayInput", {
+  enumerable: true,
+  get: function get() {
+    return _BirthdayInput.default;
+  }
+});
 Object.defineProperty(exports, "Textarea", {
   enumerable: true,
   get: function get() {
@@ -333,6 +339,12 @@ Object.defineProperty(exports, "NavBadge", {
   enumerable: true,
   get: function get() {
     return _NavBadge.default;
+  }
+});
+Object.defineProperty(exports, "Logo", {
+  enumerable: true,
+  get: function get() {
+    return _Logo.default;
   }
 });
 Object.defineProperty(exports, "TipioWithOffer", {
@@ -783,6 +795,8 @@ exports.CountdownType = CountdownType;
 
 var _Input = _interopRequireDefault(require("./UI/Forms/Input"));
 
+var _BirthdayInput = _interopRequireDefault(require("./UI/Forms/BirthdayInput"));
+
 var _Textarea = _interopRequireDefault(require("./UI/Forms/Textarea"));
 
 var _Checkbox = _interopRequireDefault(require("./UI/Forms/Checkbox"));
@@ -852,6 +866,8 @@ var _RoundedButton = _interopRequireDefault(require("./UI/Buttons/RoundedButton"
 var _TipioViewDescriptionMobile = _interopRequireDefault(require("./UI/TipioViewDescriptionMobile/TipioViewDescriptionMobile"));
 
 var _NavBadge = _interopRequireDefault(require("./UI/NavBadge/NavBadge"));
+
+var _Logo = _interopRequireDefault(require("./UI/Logo/Logo"));
 
 var _TipioWithOffer = _interopRequireDefault(require("./Customer/Modals/TipioWithOffer/TipioWithOffer"));
 
