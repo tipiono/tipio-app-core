@@ -14,6 +14,11 @@
           display: flex;
           align-items: center;
           justify-content: center;
+
+          img {
+            max-height: 570px;
+            object-fit: contain;
+          }
         }
       }
     }
@@ -90,11 +95,22 @@
   }
 
   @include media-breakpoint-down(sm) {
-
     .carousel-slider {
       .slider-wrapper {
         margin-bottom: 2rem;
+
+        .slider {
+          .slide {
+            border-top: 1px solid #F5F5F5;
+            border-bottom: 1px solid #F5F5F5;
+
+            img {
+              max-height: 400px;
+            }
+          }
+        }
       }
+
       /// Dot Indicatiors
       .control-dots {
         display: block;
