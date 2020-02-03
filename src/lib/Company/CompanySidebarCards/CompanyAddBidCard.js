@@ -3,7 +3,9 @@ import CompanySidebarBaseCard from "./CompanySidebarBaseCard";
 
 
 const CompanyAddBidCard = (props) => {
-    const { tipio, meta, showMinimumPrice, showNewPrice } = props;
+
+    const { tipio, meta, showMinimumPrice, showNewPrice, showBindingCount } = props;
+
     return (
         <div className="companyAddBidCard">
             <CompanySidebarBaseCard {...props}>
@@ -13,7 +15,7 @@ const CompanyAddBidCard = (props) => {
                         &nbsp;
                     </div>
                 ) : (
-                    <h6 className="companyAddBidCard--interested">{meta.joined_count} påmeldte!</h6>
+                    <h6 className="companyAddBidCard--interested">{meta.joined_count} {showBindingCount ? 'kjøpte' : 'påmeldte'}</h6>
                 )}
 
                 <div className="companyAddBidCard__price">
