@@ -23,7 +23,7 @@ function PublicLayout(_ref) {
     className: "header"
   }, _react.default.createElement(_index.default, props)), _react.default.createElement("main", {
     className: "main"
-  }, children), _react.default.createElement("footer", {
+  }, children), props.showFooter && _react.default.createElement("footer", {
     className: "customFooter"
   }, _react.default.createElement("div", {
     className: "container"
@@ -45,10 +45,10 @@ function PublicLayout(_ref) {
     className: "customFooter__list__content__link",
     href: "https://goo.gl/maps/UdKQacRovy4guaYW9",
     target: "_blank"
-  }, "M\xF8llergata 4, 0179 Oslo")), _react.default.createElement("li", null, _react.default.createElement("a", {
+  }, "M\xF8llergata 4,0179 Oslo")), _react.default.createElement("li", null, _react.default.createElement("a", {
     className: "customFooter__list__content__link",
     href: "tel:+47 987 65 456"
-  }, "+47 987 65 456")), _react.default.createElement("li", null, _react.default.createElement("a", {
+  }, "+47987 65 456")), _react.default.createElement("li", null, _react.default.createElement("a", {
     className: "customFooter__list__content__link",
     href: "mailto:post@tipio.no"
   }, "post@tipio.no"))))), _react.default.createElement("div", {
