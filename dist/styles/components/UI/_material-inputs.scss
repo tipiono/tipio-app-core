@@ -638,3 +638,14 @@
 textarea {
     resize: none;
 }
+
+
+.birthdayInput{
+    input::placeholder{
+        visibility: hidden;
+    }
+
+    input:focus::placeholder{
+        visibility: visible;
+    }
+}

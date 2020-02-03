@@ -26,7 +26,9 @@ var SubNav = function SubNav(_ref) {
       _ref$activeId = _ref.activeId,
       activeId = _ref$activeId === void 0 ? -1 : _ref$activeId,
       _ref$activeLink = _ref.activeLink,
-      activeLink = _ref$activeLink === void 0 ? '/-1' : _ref$activeLink;
+      activeLink = _ref$activeLink === void 0 ? '/-1' : _ref$activeLink,
+      _ref$admin = _ref.admin,
+      admin = _ref$admin === void 0 ? false : _ref$admin;
   return _react.default.createElement("div", {
     className: "subNav"
   }, _react.default.createElement("div", {
@@ -62,8 +64,7 @@ var SubNav = function SubNav(_ref) {
       href: "",
       onClick: function onClick(e) {
         e.preventDefault();
-
-        _onClick(item);
+        !admin ? _onClick(item) : item.onClick();
       }
     }, item.title), item.badgeCount > 0 ? _react.default.createElement("sup", {
       className: "subNav__list--item--badge"

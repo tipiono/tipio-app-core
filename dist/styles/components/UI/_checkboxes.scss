@@ -1,12 +1,12 @@
-$md-checkbox-checked-color: $secondary;
-$md-checkbox-border-color: $secondary;
+$md-checkbox-checked-color: #188576;
+$md-checkbox-border-color: #188576;
 $md-checkbox-border-color-disabled: rgba(0, 0, 0, 0.26);
 $md-checkbox-checked-color-disabled: rgba(0, 0, 0, 0.26);
 
 $md-checkbox-margin: 1em 0;
 $md-checkbox-size: 1.25em;
 $md-checkbox-padding: .25em;
-$md-checkbox-border-width: 2px;
+$md-checkbox-border-width: 1.2px;
 $md-checkbox-border-radius: 0.125em;
 $md-checkmark-width: 0.125em;
 $md-checkmark-color: #fff;
@@ -54,6 +54,12 @@ $md-checkbox-label-padding: .75em;
 
         &:after {
             // checkmark
+        }
+
+        &:hover {
+            &:before {
+                border-width: 1.8px;
+            }
         }
     }
 

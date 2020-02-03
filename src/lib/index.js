@@ -20,6 +20,7 @@ import TipioCountdown from "./UI/TipioCountdown/TipioCountdown";
 import Select from "./UI/Forms/Select";
 import * as CountdownType from "./UI/Countdown/CountdownType";
 import Input from "./UI/Forms/Input";
+import BirthdayInput from "./UI/Forms/BirthdayInput";
 import Textarea from "./UI/Forms/Textarea";
 import Checkbox from "./UI/Forms/Checkbox";
 import RadioButton from "./UI/Forms/RadioButton";
@@ -55,6 +56,7 @@ import Pagination from "./UI/Pagination/Pagination";
 import RoundedButton from "./UI/Buttons/RoundedButton";
 import TipioViewDescriptionMobile from "./UI/TipioViewDescriptionMobile/TipioViewDescriptionMobile";
 import NavBadge from "./UI/NavBadge/NavBadge";
+import Logo from "./UI/Logo/Logo";
 
 /*
  *   Customer/Private Components
@@ -188,6 +190,7 @@ export {
     TipioCountdown,
     CountdownType,
     Input,
+    BirthdayInput,
     Textarea,
     Select,
     Checkbox,
@@ -273,5 +276,6 @@ export {
     limitTipios,
     FooterMainCard,
     useLockBodyScroll,
-    SuccessStory
+    SuccessStory,
+    Logo
 };

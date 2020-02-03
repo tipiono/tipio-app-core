@@ -15,7 +15,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var GiveOfferCompanyCard = function GiveOfferCompanyCard(props) {
   return _react.default.createElement("div", null, _react.default.createElement(_BaseCompanyCard.default, props, _react.default.createElement(_index.SecondaryButton, {
-    text: 'Gi tilbud',
+    text: 'Git tilbud',
     loading: props.loading,
     onClick: props.onClick
   })));

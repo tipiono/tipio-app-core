@@ -19,7 +19,7 @@ var Alert = function Alert(_ref) {
   return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("div", {
     className: (0, _classnames.default)("customAlert", color)
   }, _react.default.createElement("div", {
-    className: "d-flex align-items-center"
+    className: "d-flex justify-content-center align-items-center"
   }, _react.default.createElement("svg", {
     className: "mr-2",
     width: 23,

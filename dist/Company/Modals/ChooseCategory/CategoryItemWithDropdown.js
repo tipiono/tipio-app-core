@@ -122,7 +122,15 @@ var CategoryItem = function CategoryItem(_ref2) {
     url: icon
   })), _react.default.createElement("span", null, title), _react.default.createElement("div", {
     className: "category-right-icon"
-  }, _react.default.createElement(_ArrowDownIcon.default, null)))), active && _react.default.createElement(SubCategories, {
+  }, _react.default.createElement("svg", {
+    width: 16,
+    height: 10,
+    viewBox: "0 0 16 10"
+  }, _react.default.createElement("path", {
+    d: "M8.007 9.104a.907.907 0 01-.633-.26L.922 2.48a.904.904 0 011.26-1.296l5.825 5.76 5.825-5.76a.906.906 0 111.267 1.296L8.62 8.86a.893.893 0 01-.612.244z",
+    fill: "#8C8F91",
+    fillRule: "nonzero"
+  }))))), active && _react.default.createElement(SubCategories, {
     sub_categories: sub_categories,
     onClick: function onClick(item) {
       subCategoriesOnClick(item);

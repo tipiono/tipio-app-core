@@ -15,14 +15,15 @@ var CompanyAddBidCard = function CompanyAddBidCard(props) {
   var tipio = props.tipio,
       meta = props.meta,
       showMinimumPrice = props.showMinimumPrice,
-      showNewPrice = props.showNewPrice;
+      showNewPrice = props.showNewPrice,
+      showBindingCount = props.showBindingCount;
   return _react.default.createElement("div", {
     className: "companyAddBidCard"
   }, _react.default.createElement(_CompanySidebarBaseCard.default, props, props.loading ? _react.default.createElement("div", {
     className: "placeholder-content companyAddBidCard--placeholder mb-4"
   }, "\xA0") : _react.default.createElement("h6", {
     className: "companyAddBidCard--interested"
-  }, meta.joined_count, " p\xE5meldte!"), _react.default.createElement("div", {
+  }, meta.joined_count, " ", showBindingCount ? 'kjøpte' : 'påmeldte'), _react.default.createElement("div", {
     className: "companyAddBidCard__price"
   }, _react.default.createElement("div", {
     className: "companyAddBidCard__price--cost"

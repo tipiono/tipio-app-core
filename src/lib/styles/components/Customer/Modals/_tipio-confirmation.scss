@@ -5,22 +5,20 @@
   &--image {
     display: block;
     position: relative;
-    height: 100%;
-    width: 19.375rem;
+    width: 680px;
+    height: 435px;
     margin: 0 auto;
 
     .img-fluid {
-      max-height: 22rem;
-      max-width: 100%;
-      width: auto;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
   }
-
 
   .lazy-image {
     background: none;
   }
-
 
   &--timeLeft {
     span {
@@ -55,6 +53,11 @@
   }
 
   @include media-breakpoint-down(sm) {
+    &--image {
+      width: 340px;
+      height: 270px;
+    }
+
     &--title {
       font-size: 1.5rem;
       padding-left: 1rem;
