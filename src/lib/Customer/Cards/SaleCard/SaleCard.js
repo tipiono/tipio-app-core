@@ -17,7 +17,7 @@ function SaleCard({
                 <div className="d-flex flex-row mb-4">
                         <a className="saleCard__preview lazy-image" href="" onClick={onClick}>
                             <img className="saleCard__preview--image lazyload" src={image} alt=""/>
-                            <span className="saleCard__preview--discount">{saleDiscount}</span>
+                            <span className="saleCard__preview--discount">{saleDiscount} %</span>
                         </a>
                     <div className="saleCard__content">
                         <div className="saleCard__content--price">

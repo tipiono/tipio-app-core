@@ -38,9 +38,9 @@ const BaseCompanyCard = ({ children, expires_in, brand, binding_count, potential
                         <span className="baseCompanyCard__body--cost--label">Potensiell omsetning</span>
                     </div>
 
-                    {binding_count > 0 ? (<div className="baseCompanyCard__body--interested">
+                    <div className="baseCompanyCard__body--interested">
                         <h6 className="baseCompanyCard__body--interested--counter">{binding_count} {showLabel()} ! </h6>
-                    </div>) : (null)}
+                    </div>
 
                     {children}
 

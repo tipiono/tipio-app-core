@@ -73,11 +73,11 @@ var BaseCompanyCard = function BaseCompanyCard(_ref) {
     className: "baseCompanyCard__body--cost--price"
   }, potential_earning, " Kr"), _react.default.createElement("span", {
     className: "baseCompanyCard__body--cost--label"
-  }, "Potensiell omsetning")), binding_count > 0 ? _react.default.createElement("div", {
+  }, "Potensiell omsetning")), _react.default.createElement("div", {
     className: "baseCompanyCard__body--interested"
   }, _react.default.createElement("h6", {
     className: "baseCompanyCard__body--interested--counter"
-  }, binding_count, " ", showLabel(), " ! ")) : null, children)));
+  }, binding_count, " ", showLabel(), " ! ")), children)));
 };
 
 var _default = BaseCompanyCard;
