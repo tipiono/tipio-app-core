@@ -34,7 +34,7 @@ function SaleCard(_ref) {
     alt: ""
   }), _react.default.createElement("span", {
     className: "saleCard__preview--discount"
-  }, saleDiscount)), _react.default.createElement("div", {
+  }, saleDiscount, " %")), _react.default.createElement("div", {
     className: "saleCard__content"
   }, _react.default.createElement("div", {
     className: "saleCard__content--price"

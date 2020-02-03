@@ -4,21 +4,28 @@
 
 .imageSlider {
   /// Slider Images
+  position: relative;
   .carousel-slider {
     .slider-wrapper {
       margin-bottom: 1rem;
 
       .slider {
+        border: 1px solid #f5f5f5;
+
         .slide {
           background: $white;
           display: flex;
           align-items: center;
           justify-content: center;
+          margin: 0 1px;
 
           img {
             max-height: 570px;
             object-fit: contain;
           }
+        }
+        .selected {
+          margin: 0;
         }
       }
     }
@@ -94,7 +101,14 @@
     }
   }
 
+  &__countDown{
+    position: absolute;
+    bottom: 132px;
+    right: 1px;
+  }
+
   @include media-breakpoint-down(sm) {
+
     .carousel-slider {
       .slider-wrapper {
         margin-bottom: 2rem;
@@ -121,6 +135,9 @@
       .thumbs-wrapper {
         display: none;
       }
+    }
+    &__countDown{
+      bottom:32px;
     }
   }
 }
