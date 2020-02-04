@@ -347,6 +347,24 @@ Object.defineProperty(exports, "Logo", {
     return _Logo.default;
   }
 });
+Object.defineProperty(exports, "DeliveryTimeForm", {
+  enumerable: true,
+  get: function get() {
+    return _DeliveryTimeForm.default;
+  }
+});
+Object.defineProperty(exports, "DeliveryTime", {
+  enumerable: true,
+  get: function get() {
+    return _DeliveryTime.default;
+  }
+});
+Object.defineProperty(exports, "ShippingReturns", {
+  enumerable: true,
+  get: function get() {
+    return _ShippingReturns.default;
+  }
+});
 Object.defineProperty(exports, "TipioWithOffer", {
   enumerable: true,
   get: function get() {
@@ -868,6 +886,12 @@ var _TipioViewDescriptionMobile = _interopRequireDefault(require("./UI/TipioView
 var _NavBadge = _interopRequireDefault(require("./UI/NavBadge/NavBadge"));
 
 var _Logo = _interopRequireDefault(require("./UI/Logo/Logo"));
+
+var _DeliveryTimeForm = _interopRequireDefault(require("./UI/DeliveryTimeForm/DeliveryTimeForm"));
+
+var _DeliveryTime = _interopRequireDefault(require("./UI/DeliveryTime/DeliveryTime"));
+
+var _ShippingReturns = _interopRequireDefault(require("./UI/ShippingReturns/ShippingReturns"));
 
 var _TipioWithOffer = _interopRequireDefault(require("./Customer/Modals/TipioWithOffer/TipioWithOffer"));
 

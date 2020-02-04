@@ -55,7 +55,8 @@
     }
 
     .dropdown-menu {
-      padding:1.43rem 0 3.875rem 0;
+      padding: 1.43rem 0 3.875rem 0;
+
       .dropdown-item {
         padding: .75rem 2.5rem .75rem 2.5rem;
         color: $gray-700;
@@ -68,8 +69,8 @@
       right: 1rem;
     }
 
-    &--right{
-      top:-0.625rem;
+    &--right {
+      top: -0.625rem;
       right: 0;
       left: auto;
       z-index: 2;
@@ -81,6 +82,16 @@
       &--avatar {
         width: 30px;
         height: 30px;
+
+        &--empty {
+          width: 30px;
+          height: 30px;
+
+          svg {
+            width: 20px;
+            height: 20px;
+          }
+        }
       }
 
       &--name {
@@ -88,4 +99,5 @@
       }
     }
   }
+
 }
