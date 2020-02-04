@@ -57,6 +57,9 @@ import RoundedButton from "./UI/Buttons/RoundedButton";
 import TipioViewDescriptionMobile from "./UI/TipioViewDescriptionMobile/TipioViewDescriptionMobile";
 import NavBadge from "./UI/NavBadge/NavBadge";
 import Logo from "./UI/Logo/Logo";
+import DeliveryTimeForm from "./UI/DeliveryTimeForm/DeliveryTimeForm";
+import DeliveryTime from "./UI/DeliveryTime/DeliveryTime";
+import ShippingReturns from "./UI/ShippingReturns/ShippingReturns";
 
 /*
  *   Customer/Private Components
@@ -277,5 +280,8 @@ export {
     FooterMainCard,
     useLockBodyScroll,
     SuccessStory,
-    Logo
+    Logo,
+    DeliveryTimeForm,
+    ShippingReturns,
+    DeliveryTime
 };

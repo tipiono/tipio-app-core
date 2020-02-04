@@ -26,7 +26,7 @@ const OrderItemCard = ({ order, deliveredOnChange}) => {
                 <tr className="border-bottom-1">
                     <td></td>
                     <td>E-post: {order.order_user.email}</td>
-                    <td>Nummer:,987 67 890</td>
+                    <td>Nummer: 987 67 890</td>
                     <td></td>
                     <td></td>
                 </tr>
@@ -35,7 +35,7 @@ const OrderItemCard = ({ order, deliveredOnChange}) => {
                         <tr className="orderItemCard__orderDetail">
                             <td></td>
                             <td className="orderItemCard__orderDetail--productName">{order_product.title}</td>
-                            <td>Ordrenummer:,89674590</td>
+                            <td>Ordrenummer: 89674590</td>
                             <td>Antall: {order_product.quantity} </td>
                             <td>Pris: {order_product.price} Kr</td>
                         </tr>
@@ -44,8 +44,8 @@ const OrderItemCard = ({ order, deliveredOnChange}) => {
                 <tr className="border-bottom-2">
                     <td></td>
                     <td>30.06.2019 - 13:09</td>
-                    <td>Betalingsmåte:,Kort</td>
-                    <td>Størrelse:,46</td>
+                    <td>Betalingsmåte: Kort</td>
+                    <td>Størrelse: 46</td>
                     <td></td>
                 </tr>
                 <tr className="orderItemCard__orderAmount">

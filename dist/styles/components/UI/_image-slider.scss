@@ -18,6 +18,11 @@
           align-items: center;
           justify-content: center;
           margin: 0 1px;
+
+          img {
+            max-height: 570px;
+            object-fit: contain;
+          }
         }
         .selected {
           margin: 0;
@@ -107,7 +112,19 @@
     .carousel-slider {
       .slider-wrapper {
         margin-bottom: 2rem;
+
+        .slider {
+          .slide {
+            border-top: 1px solid #F5F5F5;
+            border-bottom: 1px solid #F5F5F5;
+
+            img {
+              max-height: 400px;
+            }
+          }
+        }
       }
+
       /// Dot Indicatiors
       .control-dots {
         display: block;

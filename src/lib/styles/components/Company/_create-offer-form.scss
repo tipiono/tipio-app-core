@@ -93,6 +93,11 @@
     }
   }
 
+  &__deliveryTimeForm {
+    margin-top: 3rem;
+    width: 72.5%;
+  }
+
   @include media-breakpoint-down(md) {
     &__discount {
       &--title {
@@ -143,6 +148,10 @@
       &--input {
         width: 48%;
       }
+    }
+
+    &__deliveryTimeForm {
+      width: 100%;
     }
   }
 }

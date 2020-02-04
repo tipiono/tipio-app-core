@@ -1,0 +1,44 @@
+.deliveryTimeForm {
+
+  // Header
+  &__header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.6rem;
+
+    &__icon {
+      margin-right: 10px;
+    }
+
+    &__title {
+      color: $dark;
+      margin-bottom: 0;
+      font-family: 'Riposte-Bold', sans-serif;
+    }
+  }
+
+  &__row {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 25px;
+
+    // From Input
+    &__from {
+      display: flex;
+      flex: 1;
+    }
+
+    // To Input
+    &__to {
+      display: flex;
+      flex: 1;
+      padding: 0 1.25rem;
+    }
+
+    // Period Select
+    &__period {
+      display: flex;
+      flex: 2;
+    }
+  }
+}
