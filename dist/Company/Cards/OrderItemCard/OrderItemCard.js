@@ -45,15 +45,15 @@ var OrderItemCard = function OrderItemCard(_ref) {
     className: "orderItemCard__customerDetail--address"
   }, address.city, ", ", address.zip_code), _react.default.createElement("td", null)), _react.default.createElement("tr", {
     className: "border-bottom-1"
-  }, _react.default.createElement("td", null), _react.default.createElement("td", null, "E-post: ", order.order_user.email), _react.default.createElement("td", null, "Nummer:,987 67 890"), _react.default.createElement("td", null), _react.default.createElement("td", null)), order.order_products.map(function (order_product) {
+  }, _react.default.createElement("td", null), _react.default.createElement("td", null, "E-post: ", order.order_user.email), _react.default.createElement("td", null, "Nummer: 987 67 890"), _react.default.createElement("td", null), _react.default.createElement("td", null)), order.order_products.map(function (order_product) {
     return _react.default.createElement("tr", {
       className: "orderItemCard__orderDetail"
     }, _react.default.createElement("td", null), _react.default.createElement("td", {
       className: "orderItemCard__orderDetail--productName"
-    }, order_product.title), _react.default.createElement("td", null, "Ordrenummer:,89674590"), _react.default.createElement("td", null, "Antall: ", order_product.quantity, " "), _react.default.createElement("td", null, "Pris: ", order_product.price, " Kr"));
+    }, order_product.title), _react.default.createElement("td", null, "Ordrenummer: 89674590"), _react.default.createElement("td", null, "Antall: ", order_product.quantity, " "), _react.default.createElement("td", null, "Pris: ", order_product.price, " Kr"));
   }), _react.default.createElement("tr", {
     className: "border-bottom-2"
-  }, _react.default.createElement("td", null), _react.default.createElement("td", null, "30.06.2019 - 13:09"), _react.default.createElement("td", null, "Betalingsm\xE5te:,Kort"), _react.default.createElement("td", null, "St\xF8rrelse:,46"), _react.default.createElement("td", null)), _react.default.createElement("tr", {
+  }, _react.default.createElement("td", null), _react.default.createElement("td", null, "30.06.2019 - 13:09"), _react.default.createElement("td", null, "Betalingsm\xE5te: Kort"), _react.default.createElement("td", null, "St\xF8rrelse: 46"), _react.default.createElement("td", null)), _react.default.createElement("tr", {
     className: "orderItemCard__orderAmount"
   }, _react.default.createElement("td", null), _react.default.createElement("td", {
     className: "orderItemCard__orderAmount--label"

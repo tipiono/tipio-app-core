@@ -9,11 +9,11 @@
     &--preview {
       overflow: hidden;
       border-bottom: solid 1px #f5f5f5;
+      text-align: center;
 
       &--image {
         max-width: 100%;
-        height: auto;
-        //transition: all 0.3s;
+        max-height: 390px;
         -webkit-transform: translateZ(0) scale(1.01, 1.01);
         transform: translateZ(0) scale(1.01, 1.01);
       }
@@ -74,6 +74,14 @@
   }
 
   @include media-breakpoint-down(sm) {
+    &__header {
+      &--preview {
+        &--image {
+          max-height: 240px;
+        }
+      }
+    }
+
     &__body {
       &--title {
         font-family: 'Riposte-Regular', sans-serif;
