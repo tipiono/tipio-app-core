@@ -75,4 +75,30 @@
       }
     }
   }
+
+  @include media-breakpoint-down(sm) {
+    &__preview {
+      margin-right: 1rem;
+
+      &--image {
+        width: 130px;
+      }
+    }
+
+    &__content {
+      margin-top: 0;
+
+      &--title {
+        font-size: 0.875rem;
+      }
+
+      &__stats {
+        flex-direction: column;
+
+        &--customers {
+          margin-bottom: .5rem;
+        }
+      }
+    }
+  }
 }
