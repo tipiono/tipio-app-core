@@ -5,7 +5,7 @@ const AddMoreSaleEndedCompanyCard = (props) => {
     const saleDiscount = CalculateDiscountPercentage(props.first_price, props.company_price)
     return (
         <div className="addMoreSaleEndedCard mb-3">
-            <div className="d-flex flex-row">
+            <div className="d-flex flex-row align-items-center">
                 <div className="addMoreSaleEndedCard__preview">
                     <a className="addMoreSaleEndedCard__preview--image" href="">
                     {props.tipio.images && props.tipio.images.length && <a href=""><img className="img-fluid"

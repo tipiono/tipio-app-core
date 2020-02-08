@@ -27,9 +27,6 @@
 .lazy-image {
   position: relative;
   display: block;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(66%, rgb(242, 242, 242)), to(rgba(242, 242, 242, 0)));
-  background: -o-linear-gradient(rgb(242, 242, 242) 66%, rgba(242, 242, 242, 0));
-  background: linear-gradient(rgb(242, 242, 242) 66%, rgba(242, 242, 242, 0));
 }
 
 .loading:before {
@@ -62,4 +59,8 @@
   -webkit-transition: 1s cubic-bezier(0.215, 0.61, 0.355, 1);
   -o-transition: 1s cubic-bezier(0.215, 0.61, 0.355, 1);
   transition: .5s cubic-bezier(0.215, 0.61, 0.355, 1);
+
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(66%, rgb(242, 242, 242)), to(rgba(242, 242, 242, 0)));
+  background: -o-linear-gradient(rgb(242, 242, 242) 66%, rgba(242, 242, 242, 0));
+  background: linear-gradient(rgb(242, 242, 242) 66%, rgba(242, 242, 242, 0));
 }
