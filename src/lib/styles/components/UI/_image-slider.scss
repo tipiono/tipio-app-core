@@ -121,8 +121,8 @@
 
   &__countDown {
     position: absolute;
-    bottom: 132px;
-    right: 1px;
+    bottom: 133px;
+    right: 0;
   }
 
   @include media-breakpoint-down(sm) {
