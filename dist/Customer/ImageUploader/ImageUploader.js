@@ -41,7 +41,8 @@ function ImageUploader(_ref) {
   var setFieldValue = _ref.setFieldValue,
       name = _ref.name,
       errors = _ref.errors,
-      displayErrors = _ref.displayErrors;
+      displayErrors = _ref.displayErrors,
+      title = _ref.title;
 
   var _useState = (0, _react.useState)(false),
       _useState2 = _slicedToArray(_useState, 2),
@@ -170,6 +171,7 @@ function ImageUploader(_ref) {
   }
 
   return _react.default.createElement(_react.default.Fragment, null, showCropper && _react.default.createElement(_index.ImageCropper, {
+    title: title,
     image: cropImage,
     onDone: cropperOnDone,
     onClose: cropperModalOnClose,
