@@ -115,6 +115,7 @@ function (_Component) {
   }, {
     key: "render",
     value: function render() {
+      console.log(this.props);
       var showCloseButton = this.props.showCloseButton;
       var modalOnClose = this.modalOnClose;
 
@@ -131,7 +132,7 @@ function (_Component) {
         className: "imageCropper__content"
       }, _react.default.createElement("h3", {
         className: "imageCropper__content--title"
-      }, "Beskj\xE6r bilde av logo"), !this.state.cropperReady && _react.default.createElement("div", {
+      }, this.props.title), !this.state.cropperReady && _react.default.createElement("div", {
         className: "d-flex justify-content-center"
       }, _react.default.createElement("div", {
         className: "spinner-border",
