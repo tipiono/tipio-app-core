@@ -50,6 +50,7 @@ class ImageCropper extends Component {
         })
     }
     render() {
+        console.log(this.props);
         let showCloseButton = this.props.showCloseButton;
         let modalOnClose = this.modalOnClose;
         if (!showCloseButton){
@@ -60,7 +61,7 @@ class ImageCropper extends Component {
                 <Modal showCloseButton onCloseButtonClick={this.modalOnClose}>
                     <div className="imageCropper">
                         <div className="imageCropper__content">
-                            <h3 className="imageCropper__content--title">Beskjær bilde av logo</h3>
+                            <h3 className="imageCropper__content--title">{this.props.title}</h3>
                             {!this.state.cropperReady && <div className="d-flex justify-content-center" >
                                 <div className="spinner-border" role="status">
                                     <span className="sr-only">Loading...</span>
