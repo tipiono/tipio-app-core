@@ -45,10 +45,10 @@ function TipioConfirmation(_ref) {
   }, props), _react.default.createElement("div", {
     className: "tipio__confirmation"
   }, _react.default.createElement("a", {
-    className: "tipio__confirmation--image lazy-image",
+    className: "tipio__confirmation--image",
     href: ""
   }, _react.default.createElement("img", {
-    className: "img-fluid lazyload",
+    className: "img-fluid",
     src: image,
     width: "310px",
     alt: "Tipio with offer"
