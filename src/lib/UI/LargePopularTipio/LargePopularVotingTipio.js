@@ -9,7 +9,7 @@ const LargePopularVotingTipio = (props) => {
 
     return (
         <LargePopularTipio {...props}>
-            <h6 className="largePopularTipio__content--interested">2 789 interesserte!</h6>
+            <h6 className="largePopularTipio__content--interested">{props.join_count} interesserte!</h6>
 
             <div className="largePopularTipio__content__submit">
                 {props.joined ? (
@@ -18,11 +18,11 @@ const LargePopularVotingTipio = (props) => {
                         onClick={props.shareOnClick}
                     />
                 ) : (
-                    <SecondaryOutlineButton
-                        text="Meld interesse"
-                        onClick={props.voteOnClick}
-                    />
-                )}
+                        <SecondaryOutlineButton
+                            text="Meld interesse"
+                            onClick={props.voteOnClick}
+                        />
+                    )}
             </div>
         </LargePopularTipio>
     );

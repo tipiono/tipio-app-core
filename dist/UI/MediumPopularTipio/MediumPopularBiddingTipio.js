@@ -19,16 +19,23 @@ var MediumPopularBiddingTipio = function MediumPopularBiddingTipio(props) {
   var _useTranslation = (0, _reactI18next.useTranslation)(),
       t = _useTranslation.t;
 
+  var rangeList = props.tipio_offer && props.tipio_offer.offer_price_ranges || [];
+  var firstRange = rangeList.length > 0 && rangeList[0]; // const secondRange = rangeList.length > 1 && parseInt(rangeList[1].price, 10) && rangeList[1];
+
   return _react.default.createElement(_MediumPopularTipio.default, props, _react.default.createElement("div", {
     className: "mediumPopularTipio__content__price"
   }, _react.default.createElement("h6", {
     className: "mediumPopularTipio__content__price--marketprice"
-  }, "4 500 Kr"), _react.default.createElement("h6", {
+  }, props.market_price, " Kr"), _react.default.createElement("h6", {
     className: "mediumPopularTipio__content__price--saleprice"
-  }, "2 500 Kr")), _react.default.createElement("div", {
+  }, firstRange.price, " Kr")), _react.default.createElement("div", {
     className: "mediumPopularTipio__content__submit"
-  }, _react.default.createElement(_SecondaryButton.default, {
-    text: "Legg i handlekurv"
+  }, props.binded ? _react.default.createElement(_SecondaryButton.default, {
+    text: "Del n\xE5",
+    onClick: props.shareOnClick
+  }) : _react.default.createElement(_SecondaryButton.default, {
+    text: "Legg i handlekurv",
+    onClick: props.bindOnClick
   })));
 };
 
