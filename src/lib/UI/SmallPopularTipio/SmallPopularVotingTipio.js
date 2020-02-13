@@ -18,11 +18,11 @@ const SmallPopularVotingTipio = (props) => {
                         onClick={props.shareOnClick}
                     />
                 ) : (
-                    <SecondaryOutlineButton
-                        text="Meld interesse"
-                        onClick={props.voteOnClick}
-                    />
-                )}
+                        <SecondaryOutlineButton
+                            text="Meld interesse"
+                            onClick={props.voteOnClick}
+                        />
+                    )}
             </div>
         </SmallPopularTipio>
     );
