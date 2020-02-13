@@ -10,11 +10,8 @@
     .img-fluid {
       max-height: 270px;
       object-fit: contain;
+      background: $white;
     }
-  }
-
-  .lazy-image {
-    background: none;
   }
 
   &--timeLeft {
