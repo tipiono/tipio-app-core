@@ -1,0 +1,113 @@
+.largePopularTipio {
+  &__preview {
+    overflow: hidden;
+    margin-bottom: 2.5rem;
+    position: relative;
+
+    &.lazy-image {
+      background: linear-gradient(rgba(41, 44, 49, .05) 50%, rgba(41, 44, 49, 0.20));
+    }
+
+    &--image {
+      max-width: 100%;
+      height: auto;
+      -webkit-transform: translateZ(0) scale(1.01, 1.01);
+      transform: translateZ(0) scale(1.01, 1.01);
+    }
+
+    &:hover {
+      img {
+        -webkit-backface-visibility: hidden;
+        -webkit-transform: translateZ(0) scale(1.04, 1.04);
+        transform: translateZ(0) scale(1.04, 1.04);
+      }
+    }
+
+    &--timeLeft {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    &--title {
+      font-size: 3.5rem;
+      font-family: 'Riposte-Regular', sans-serif;
+    }
+
+    &--description {
+      display: block;
+      font-size: 2.25rem;
+      margin-bottom: 1rem;
+      font-family: 'Riposte-Light', sans-serif;
+      color: $gray-700;
+
+      &:hover {
+        text-decoration: none;
+        color: $dark;
+      }
+    }
+
+
+    &__price {
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 2.25rem;
+
+      &--marketprice {
+        font-size: 1.5rem;
+        color: $gray-700;
+        text-decoration: line-through;
+        margin-right: 2rem;
+        margin-bottom: 0;
+      }
+
+      &--saleprice {
+        font-size: 1.5rem;
+        margin-bottom: 0;
+        color: $cyan;
+      }
+    }
+
+    &__submit {
+      width: 50%;
+    }
+
+    &--interested {
+      color: $cyan;
+      font-size: 1.5rem;
+      font-family: 'Riposte-Regular', sans-serif;
+      margin-bottom: 2rem;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    &__content {
+      &--title {
+        font-size: 2.25rem;
+      }
+      &--description {
+        font-size: 1.5rem;
+      }
+
+      &__price {
+        &--marketprice {
+          font-size: 1.125rem;
+        }
+        &--saleprice {
+          font-size: 1.125rem;
+        }
+      }
+
+      &--interested {
+        font-size: 1rem;
+      }
+    }
+  }
+}
