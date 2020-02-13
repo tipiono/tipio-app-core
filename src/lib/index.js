@@ -60,6 +60,22 @@ import Logo from "./UI/Logo/Logo";
 import DeliveryTimeForm from "./UI/DeliveryTimeForm/DeliveryTimeForm";
 import DeliveryTime from "./UI/DeliveryTime/DeliveryTime";
 import ShippingReturns from "./UI/ShippingReturns/ShippingReturns";
+import TipioOfTheDay from "./UI/TipioOfTheDay/TipioOfTheDay";
+import TipioOfTheDayEdit from "./UI/TipioOfTheDay/TipioOfTheDayEdit";
+import TipioOfTheDayPrivate from "./UI/TipioOfTheDay/TipioOfTheDayPrivate";
+import LargePopularTipio from "./UI/LargePopularTipio/LargePopularTipio";
+import LargePopularBidingTipio from "./UI/LargePopularTipio/LargePopularBidingTipio";
+import LargePopularBidingTipioEdit from "./UI/LargePopularTipio/LargePopularBidingTipioEdit";
+import LargePopularVotingTipio from "./UI/LargePopularTipio/LargePopularVotingTipio";
+import LargePopularVotingTipioEdit from "./UI/LargePopularTipio/LargePopularVotingTipioEdit";
+import SmallPopularTipio from "./UI/SmallPopularTipio/SmallPopularTipio";
+import SmallPopularBiddingTipio from "./UI/SmallPopularTipio/SmallPopularBiddingTipio";
+import SmallPopularBiddingTipioEdit from "./UI/SmallPopularTipio/SmallPopularBiddingTipioEdit";
+import SmallPopularVotingTipio from "./UI/SmallPopularTipio/SmallPopularVotingTipio";
+import SmallPopularVotingTipioEdit from "./UI/SmallPopularTipio/SmallPopularVotingTipioEdit";
+
+
+
 
 /*
  *   Customer/Private Components
@@ -283,5 +299,18 @@ export {
     Logo,
     DeliveryTimeForm,
     ShippingReturns,
-    DeliveryTime
+    DeliveryTime,
+    TipioOfTheDay,
+    TipioOfTheDayEdit,
+    TipioOfTheDayPrivate,
+    LargePopularTipio,
+    LargePopularBidingTipio,
+    LargePopularBidingTipioEdit,
+    LargePopularVotingTipio,
+    LargePopularVotingTipioEdit,
+    SmallPopularTipio,
+    SmallPopularBiddingTipio,
+    SmallPopularBiddingTipioEdit,
+    SmallPopularVotingTipio,
+    SmallPopularVotingTipioEdit
 };
