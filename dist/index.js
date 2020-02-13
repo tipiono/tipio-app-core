@@ -365,6 +365,84 @@ Object.defineProperty(exports, "ShippingReturns", {
     return _ShippingReturns.default;
   }
 });
+Object.defineProperty(exports, "TipioOfTheDay", {
+  enumerable: true,
+  get: function get() {
+    return _TipioOfTheDay.default;
+  }
+});
+Object.defineProperty(exports, "TipioOfTheDayEdit", {
+  enumerable: true,
+  get: function get() {
+    return _TipioOfTheDayEdit.default;
+  }
+});
+Object.defineProperty(exports, "TipioOfTheDayPrivate", {
+  enumerable: true,
+  get: function get() {
+    return _TipioOfTheDayPrivate.default;
+  }
+});
+Object.defineProperty(exports, "LargePopularTipio", {
+  enumerable: true,
+  get: function get() {
+    return _LargePopularTipio.default;
+  }
+});
+Object.defineProperty(exports, "LargePopularBidingTipio", {
+  enumerable: true,
+  get: function get() {
+    return _LargePopularBidingTipio.default;
+  }
+});
+Object.defineProperty(exports, "LargePopularBidingTipioEdit", {
+  enumerable: true,
+  get: function get() {
+    return _LargePopularBidingTipioEdit.default;
+  }
+});
+Object.defineProperty(exports, "LargePopularVotingTipio", {
+  enumerable: true,
+  get: function get() {
+    return _LargePopularVotingTipio.default;
+  }
+});
+Object.defineProperty(exports, "LargePopularVotingTipioEdit", {
+  enumerable: true,
+  get: function get() {
+    return _LargePopularVotingTipioEdit.default;
+  }
+});
+Object.defineProperty(exports, "SmallPopularTipio", {
+  enumerable: true,
+  get: function get() {
+    return _SmallPopularTipio.default;
+  }
+});
+Object.defineProperty(exports, "SmallPopularBiddingTipio", {
+  enumerable: true,
+  get: function get() {
+    return _SmallPopularBiddingTipio.default;
+  }
+});
+Object.defineProperty(exports, "SmallPopularBiddingTipioEdit", {
+  enumerable: true,
+  get: function get() {
+    return _SmallPopularBiddingTipioEdit.default;
+  }
+});
+Object.defineProperty(exports, "SmallPopularVotingTipio", {
+  enumerable: true,
+  get: function get() {
+    return _SmallPopularVotingTipio.default;
+  }
+});
+Object.defineProperty(exports, "SmallPopularVotingTipioEdit", {
+  enumerable: true,
+  get: function get() {
+    return _SmallPopularVotingTipioEdit.default;
+  }
+});
 Object.defineProperty(exports, "TipioWithOffer", {
   enumerable: true,
   get: function get() {
@@ -892,6 +970,32 @@ var _DeliveryTimeForm = _interopRequireDefault(require("./UI/DeliveryTimeForm/De
 var _DeliveryTime = _interopRequireDefault(require("./UI/DeliveryTime/DeliveryTime"));
 
 var _ShippingReturns = _interopRequireDefault(require("./UI/ShippingReturns/ShippingReturns"));
+
+var _TipioOfTheDay = _interopRequireDefault(require("./UI/TipioOfTheDay/TipioOfTheDay"));
+
+var _TipioOfTheDayEdit = _interopRequireDefault(require("./UI/TipioOfTheDay/TipioOfTheDayEdit"));
+
+var _TipioOfTheDayPrivate = _interopRequireDefault(require("./UI/TipioOfTheDay/TipioOfTheDayPrivate"));
+
+var _LargePopularTipio = _interopRequireDefault(require("./UI/LargePopularTipio/LargePopularTipio"));
+
+var _LargePopularBidingTipio = _interopRequireDefault(require("./UI/LargePopularTipio/LargePopularBidingTipio"));
+
+var _LargePopularBidingTipioEdit = _interopRequireDefault(require("./UI/LargePopularTipio/LargePopularBidingTipioEdit"));
+
+var _LargePopularVotingTipio = _interopRequireDefault(require("./UI/LargePopularTipio/LargePopularVotingTipio"));
+
+var _LargePopularVotingTipioEdit = _interopRequireDefault(require("./UI/LargePopularTipio/LargePopularVotingTipioEdit"));
+
+var _SmallPopularTipio = _interopRequireDefault(require("./UI/SmallPopularTipio/SmallPopularTipio"));
+
+var _SmallPopularBiddingTipio = _interopRequireDefault(require("./UI/SmallPopularTipio/SmallPopularBiddingTipio"));
+
+var _SmallPopularBiddingTipioEdit = _interopRequireDefault(require("./UI/SmallPopularTipio/SmallPopularBiddingTipioEdit"));
+
+var _SmallPopularVotingTipio = _interopRequireDefault(require("./UI/SmallPopularTipio/SmallPopularVotingTipio"));
+
+var _SmallPopularVotingTipioEdit = _interopRequireDefault(require("./UI/SmallPopularTipio/SmallPopularVotingTipioEdit"));
 
 var _TipioWithOffer = _interopRequireDefault(require("./Customer/Modals/TipioWithOffer/TipioWithOffer"));
 
