@@ -62,7 +62,8 @@ import DeliveryTime from "./UI/DeliveryTime/DeliveryTime";
 import ShippingReturns from "./UI/ShippingReturns/ShippingReturns";
 import TipioOfTheDay from "./UI/TipioOfTheDay/TipioOfTheDay";
 import TipioOfTheDayEdit from "./UI/TipioOfTheDay/TipioOfTheDayEdit";
-import TipioOfTheDayPrivate from "./UI/TipioOfTheDay/TipioOfTheDayPrivate";
+import TipioOfTheDayVoting from "./UI/TipioOfTheDay/TipioOfTheDayVoting";
+import TipioOfTheDayBidding from "./UI/TipioOfTheDay/TipioOfTheDayBidding";
 import LargePopularTipio from "./UI/LargePopularTipio/LargePopularTipio";
 import LargePopularBidingTipio from "./UI/LargePopularTipio/LargePopularBidingTipio";
 import LargePopularBidingTipioEdit from "./UI/LargePopularTipio/LargePopularBidingTipioEdit";
@@ -73,6 +74,11 @@ import SmallPopularBiddingTipio from "./UI/SmallPopularTipio/SmallPopularBidding
 import SmallPopularBiddingTipioEdit from "./UI/SmallPopularTipio/SmallPopularBiddingTipioEdit";
 import SmallPopularVotingTipio from "./UI/SmallPopularTipio/SmallPopularVotingTipio";
 import SmallPopularVotingTipioEdit from "./UI/SmallPopularTipio/SmallPopularVotingTipioEdit";
+import MediumPopularTipio from "./UI/MediumPopularTipio/MediumPopularTipio";
+import MediumPopularBiddingTipio from "./UI/MediumPopularTipio/MediumPopularBiddingTipio";
+import MediumPopularBiddingTipioEdit from "./UI/MediumPopularTipio/MediumPopularBiddingTipioEdit";
+import MediumPopularVotingTipio from "./UI/MediumPopularTipio/MediumPopularVotingTipio";
+import MediumPopularVotingTipioEdit from "./UI/MediumPopularTipio/MediumPopularVotingTipioEdit";
 
 
 
@@ -302,7 +308,7 @@ export {
     DeliveryTime,
     TipioOfTheDay,
     TipioOfTheDayEdit,
-    TipioOfTheDayPrivate,
+    TipioOfTheDayVoting,
     LargePopularTipio,
     LargePopularBidingTipio,
     LargePopularBidingTipioEdit,
@@ -312,5 +318,11 @@ export {
     SmallPopularBiddingTipio,
     SmallPopularBiddingTipioEdit,
     SmallPopularVotingTipio,
-    SmallPopularVotingTipioEdit
+    SmallPopularVotingTipioEdit,
+    MediumPopularTipio,
+    MediumPopularBiddingTipio,
+    MediumPopularBiddingTipioEdit,
+    MediumPopularVotingTipio,
+    MediumPopularVotingTipioEdit,
+    TipioOfTheDayBidding
 };

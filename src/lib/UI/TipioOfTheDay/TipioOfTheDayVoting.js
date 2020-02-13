@@ -2,9 +2,12 @@ import React from 'react';
 import TipioOfTheDay from "./TipioOfTheDay";
 import SecondaryButton from "../Buttons/SecondaryButton";
 import SecondaryOutlineButton from "../Buttons/SecondaryOutlineButton";
+import {useTranslation} from 'react-i18next';
 
 
-const TipioOfTheDayPrivate  = (props) => {
+const TipioOfTheDayVoting  = (props) => {
+    const { t } = useTranslation();
+
     return (
         <TipioOfTheDay {...props}>
             <div className="tipioOfTheDay__content--submit">
@@ -25,4 +28,4 @@ const TipioOfTheDayPrivate  = (props) => {
     );
 };
 
-export default TipioOfTheDayPrivate;
+export default TipioOfTheDayVoting;

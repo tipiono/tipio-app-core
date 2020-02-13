@@ -377,10 +377,16 @@ Object.defineProperty(exports, "TipioOfTheDayEdit", {
     return _TipioOfTheDayEdit.default;
   }
 });
-Object.defineProperty(exports, "TipioOfTheDayPrivate", {
+Object.defineProperty(exports, "TipioOfTheDayVoting", {
   enumerable: true,
   get: function get() {
-    return _TipioOfTheDayPrivate.default;
+    return _TipioOfTheDayVoting.default;
+  }
+});
+Object.defineProperty(exports, "TipioOfTheDayBidding", {
+  enumerable: true,
+  get: function get() {
+    return _TipioOfTheDayBidding.default;
   }
 });
 Object.defineProperty(exports, "LargePopularTipio", {
@@ -441,6 +447,36 @@ Object.defineProperty(exports, "SmallPopularVotingTipioEdit", {
   enumerable: true,
   get: function get() {
     return _SmallPopularVotingTipioEdit.default;
+  }
+});
+Object.defineProperty(exports, "MediumPopularTipio", {
+  enumerable: true,
+  get: function get() {
+    return _MediumPopularTipio.default;
+  }
+});
+Object.defineProperty(exports, "MediumPopularBiddingTipio", {
+  enumerable: true,
+  get: function get() {
+    return _MediumPopularBiddingTipio.default;
+  }
+});
+Object.defineProperty(exports, "MediumPopularBiddingTipioEdit", {
+  enumerable: true,
+  get: function get() {
+    return _MediumPopularBiddingTipioEdit.default;
+  }
+});
+Object.defineProperty(exports, "MediumPopularVotingTipio", {
+  enumerable: true,
+  get: function get() {
+    return _MediumPopularVotingTipio.default;
+  }
+});
+Object.defineProperty(exports, "MediumPopularVotingTipioEdit", {
+  enumerable: true,
+  get: function get() {
+    return _MediumPopularVotingTipioEdit.default;
   }
 });
 Object.defineProperty(exports, "TipioWithOffer", {
@@ -975,7 +1011,9 @@ var _TipioOfTheDay = _interopRequireDefault(require("./UI/TipioOfTheDay/TipioOfT
 
 var _TipioOfTheDayEdit = _interopRequireDefault(require("./UI/TipioOfTheDay/TipioOfTheDayEdit"));
 
-var _TipioOfTheDayPrivate = _interopRequireDefault(require("./UI/TipioOfTheDay/TipioOfTheDayPrivate"));
+var _TipioOfTheDayVoting = _interopRequireDefault(require("./UI/TipioOfTheDay/TipioOfTheDayVoting"));
+
+var _TipioOfTheDayBidding = _interopRequireDefault(require("./UI/TipioOfTheDay/TipioOfTheDayBidding"));
 
 var _LargePopularTipio = _interopRequireDefault(require("./UI/LargePopularTipio/LargePopularTipio"));
 
@@ -996,6 +1034,16 @@ var _SmallPopularBiddingTipioEdit = _interopRequireDefault(require("./UI/SmallPo
 var _SmallPopularVotingTipio = _interopRequireDefault(require("./UI/SmallPopularTipio/SmallPopularVotingTipio"));
 
 var _SmallPopularVotingTipioEdit = _interopRequireDefault(require("./UI/SmallPopularTipio/SmallPopularVotingTipioEdit"));
+
+var _MediumPopularTipio = _interopRequireDefault(require("./UI/MediumPopularTipio/MediumPopularTipio"));
+
+var _MediumPopularBiddingTipio = _interopRequireDefault(require("./UI/MediumPopularTipio/MediumPopularBiddingTipio"));
+
+var _MediumPopularBiddingTipioEdit = _interopRequireDefault(require("./UI/MediumPopularTipio/MediumPopularBiddingTipioEdit"));
+
+var _MediumPopularVotingTipio = _interopRequireDefault(require("./UI/MediumPopularTipio/MediumPopularVotingTipio"));
+
+var _MediumPopularVotingTipioEdit = _interopRequireDefault(require("./UI/MediumPopularTipio/MediumPopularVotingTipioEdit"));
 
 var _TipioWithOffer = _interopRequireDefault(require("./Customer/Modals/TipioWithOffer/TipioWithOffer"));
 
