@@ -22,6 +22,7 @@ var SmallPopularTipio = function SmallPopularTipio(_ref) {
       type = _ref.type,
       market_price = _ref.market_price,
       new_price = _ref.new_price,
+      has_offer = _ref.has_offer,
       onClick = _ref.onClick;
 
   var _useTranslation = (0, _reactI18next.useTranslation)(),
@@ -34,9 +35,9 @@ var SmallPopularTipio = function SmallPopularTipio(_ref) {
     onClick: onClick
   }, _react.default.createElement("img", {
     className: "smallPopularTipio__preview--image lazyload",
-    src: "https://tipio.ams3.cdn.digitaloceanspaces.com/staging/6/tipios/132/1581260110329",
+    src: images && images.length && images[0].blob_url,
     alt: ""
-  }), _react.default.createElement("div", {
+  }), has_offer && _react.default.createElement("div", {
     className: "smallPopularTipio__preview--timeLeft"
   }, _react.default.createElement(_tipioAppCore.TipioCountdown, {
     className: "timer",
@@ -48,9 +49,9 @@ var SmallPopularTipio = function SmallPopularTipio(_ref) {
     onClick: onClick
   }, _react.default.createElement("h2", {
     className: "smallPopularTipio__content--title"
-  }, "Productname")), _react.default.createElement("p", {
+  }, title)), _react.default.createElement("p", {
     className: "smallPopularTipio__content--description"
-  }, "Brandname"), children));
+  }, brand), children));
 };
 
 var _default = SmallPopularTipio;
