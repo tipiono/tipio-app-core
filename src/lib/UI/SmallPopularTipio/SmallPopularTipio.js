@@ -1,9 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import {
-    SecondaryOutlineButton,
-    TipioCountdown
-}
+    TipioCountdown }
     from 'tipio-app-core';
 
 const SmallPopularTipio = ({

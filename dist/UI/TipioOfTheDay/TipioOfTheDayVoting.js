@@ -13,9 +13,14 @@ var _SecondaryButton = _interopRequireDefault(require("../Buttons/SecondaryButto
 
 var _SecondaryOutlineButton = _interopRequireDefault(require("../Buttons/SecondaryOutlineButton"));
 
+var _reactI18next = require("react-i18next");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var TipioOfTheDayPrivate = function TipioOfTheDayPrivate(props) {
+var TipioOfTheDayVoting = function TipioOfTheDayVoting(props) {
+  var _useTranslation = (0, _reactI18next.useTranslation)(),
+      t = _useTranslation.t;
+
   return _react.default.createElement(_TipioOfTheDay.default, props, _react.default.createElement("div", {
     className: "tipioOfTheDay__content--submit"
   }, props.joined ? _react.default.createElement(_SecondaryButton.default, {
@@ -28,5 +33,5 @@ var TipioOfTheDayPrivate = function TipioOfTheDayPrivate(props) {
   })));
 };
 
-var _default = TipioOfTheDayPrivate;
+var _default = TipioOfTheDayVoting;
 exports.default = _default;
