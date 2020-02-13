@@ -20,6 +20,7 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 var Overlay = function Overlay(_ref) {
   var _onClick = _ref.onClick,
       opacity = _ref.opacity,
+      onMouseEnter = _ref.onMouseEnter,
       top = _ref.top;
   (0, _useLockBodyScroll.default)();
   return _react.default.createElement("a", {
@@ -27,7 +28,8 @@ var Overlay = function Overlay(_ref) {
       e.preventDefault();
 
       _onClick();
-    }
+    },
+    onMouseEnter: onMouseEnter
   }, _react.default.createElement("div", {
     className: "overlay show",
     style: {
