@@ -21,8 +21,8 @@ function SaleCard({
                         </a>
                     <div className="saleCard__content">
                         <div className="saleCard__content--price">
-                            <h6 className="saleCard__content--price--sale">{salePrice}</h6>
-                            <h6 className="saleCard__content--price--cost">{costPrice}</h6>
+                            <h6 className="saleCard__content--price--sale">{salePrice} Kr</h6>
+                            <h6 className="saleCard__content--price--cost">{costPrice} Kr</h6>
                         </div>
 
                         <a onClick={onClick}><h6 className="saleCard__content--title">{title}</h6></a>
