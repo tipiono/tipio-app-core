@@ -11,7 +11,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function ContentSpinner() {
   return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("div", {
-    className: "text-center pt-6 vh-100"
+    className: "text-center pt-6"
   }, _react.default.createElement("span", {
     className: "spinner-border text-primary",
     role: "status",
