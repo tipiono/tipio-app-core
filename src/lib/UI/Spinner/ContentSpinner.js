@@ -2,7 +2,7 @@ import React from 'react';
 
 function ContentSpinner() {
     return (<>
-        <div className="text-center pt-6 vh-100">
+        <div className="text-center pt-6">
                 <span
                     className="spinner-border text-primary"
                     role="status"
