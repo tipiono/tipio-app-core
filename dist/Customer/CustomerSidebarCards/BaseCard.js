@@ -28,7 +28,9 @@ var BaseCard = function BaseCard(_ref) {
     className: "customerSidebarCard__header__content--title"
   }, props.title), _react.default.createElement("p", {
     className: "customerSidebarCard__header__content--subtitle"
-  }, props.brand)), _react.default.createElement("div", {
+  }, props.brand)), props.inventory && _react.default.createElement("p", {
+    className: "customerSidebarCard__header__stock"
+  }, "Kun ", props.inventory, " igjen "), _react.default.createElement("div", {
     className: "customerSidebarCard__header__cost"
   }, _react.default.createElement("p", {
     className: "customerSidebarCard__header__cost--label",
