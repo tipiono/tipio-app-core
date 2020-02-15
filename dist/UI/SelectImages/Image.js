@@ -9,6 +9,8 @@ var _react = _interopRequireDefault(require("react"));
 
 var _reactShimmer = _interopRequireDefault(require("react-shimmer"));
 
+var _ContentSpinner = _interopRequireDefault(require("../Spinner/ContentSpinner"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function Image(_ref) {
@@ -25,8 +27,7 @@ function Image(_ref) {
   }), _react.default.createElement(_reactShimmer.default, {
     className: "layout-img",
     src: image.src,
-    width: "200px",
-    height: "400px"
+    fallback: _react.default.createElement(_ContentSpinner.default, null)
   }), selectedIndex > 0 && _react.default.createElement("span", {
     className: "selected-number"
   }, selectedIndex));

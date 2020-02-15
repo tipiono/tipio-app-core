@@ -3,8 +3,9 @@
   text-align: center;
 
   &--image {
-    max-width: 100%;
-    height: auto;
+    max-height: 270px;
+    object-fit: contain;
+    background: #fff;
     border: 1px solid $gray-100;
     margin-bottom: 1.5rem;
   }

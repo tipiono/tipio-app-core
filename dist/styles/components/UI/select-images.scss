@@ -33,7 +33,9 @@
 
                 .layout-img {
                     width: 100%;
-                    height: auto;
+                    max-height: 450px;
+                    object-fit: contain;
+                    background: white;
                     box-shadow: 0 1px 2px 0 rgba(181, 181, 181, 0.5);
                 }
 
@@ -57,6 +59,12 @@
         .layout-container {
             .layout-content {
                 padding: 1rem 0;
+
+                .layout-item {
+                    .layout-img {
+                        max-height: 240px;
+                    }
+                }
             }
         }
     }
