@@ -9,17 +9,19 @@
     &:last-child {
         border-bottom: none;
         margin-bottom: 0;
-        padding-bottom: 0;
+        padding-bottom: 1.5rem;
     }
 
     &__preview {
         width: 38%;
         overflow: hidden;
         border: 1px solid $gray-100;
+        background: $white;
+        text-align: center;
 
         &--image {
             max-width: 100%;
-            height: auto;
+            max-height: 176px;
             -webkit-transform: translateZ(0) scale(1.01, 1.01);
             transform: translateZ(0) scale(1.01, 1.01);
 
