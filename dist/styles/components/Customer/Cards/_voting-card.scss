@@ -9,10 +9,11 @@
     &--preview {
       overflow: hidden;
       border-bottom: solid 2px #f5f5f5;
+      background: $white;
 
       &--image {
         max-width: 100%;
-        height: auto;
+        max-height: 390px;
         -webkit-transform: translateZ(0) scale(1.01, 1.01);
         transform: translateZ(0) scale(1.01, 1.01);
       }
@@ -72,6 +73,14 @@
   }
 
   @include media-breakpoint-down(md) {
+    &__header {
+      &--preview {
+        &--image {
+          max-height: 240px;
+        }
+      }
+    }
+
     &__body {
       &--interested {
         &--counter {

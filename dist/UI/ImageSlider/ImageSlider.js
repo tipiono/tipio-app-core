@@ -30,9 +30,10 @@ function ImageSlider(_ref) {
     })
   }, _react.default.createElement(_reactResponsiveCarousel.Carousel, {
     showIndicators: true,
-    showArrows: false,
+    showArrows: images.length >= 5,
     showStatus: false,
-    showThumbs: showThumbs
+    showThumbs: showThumbs,
+    infiniteLoop: true
   }, images && images.map(function (item) {
     return _react.default.createElement("img", {
       src: item.blob_url,

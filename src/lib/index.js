@@ -57,6 +57,31 @@ import RoundedButton from "./UI/Buttons/RoundedButton";
 import TipioViewDescriptionMobile from "./UI/TipioViewDescriptionMobile/TipioViewDescriptionMobile";
 import NavBadge from "./UI/NavBadge/NavBadge";
 import Logo from "./UI/Logo/Logo";
+import DeliveryTimeForm from "./UI/DeliveryTimeForm/DeliveryTimeForm";
+import DeliveryTime from "./UI/DeliveryTime/DeliveryTime";
+import ShippingReturns from "./UI/ShippingReturns/ShippingReturns";
+import TipioOfTheDay from "./UI/TipioOfTheDay/TipioOfTheDay";
+import TipioOfTheDayEdit from "./UI/TipioOfTheDay/TipioOfTheDayEdit";
+import TipioOfTheDayVoting from "./UI/TipioOfTheDay/TipioOfTheDayVoting";
+import TipioOfTheDayBidding from "./UI/TipioOfTheDay/TipioOfTheDayBidding";
+import LargePopularTipio from "./UI/LargePopularTipio/LargePopularTipio";
+import LargePopularBidingTipio from "./UI/LargePopularTipio/LargePopularBidingTipio";
+import LargePopularBidingTipioEdit from "./UI/LargePopularTipio/LargePopularBidingTipioEdit";
+import LargePopularVotingTipio from "./UI/LargePopularTipio/LargePopularVotingTipio";
+import LargePopularVotingTipioEdit from "./UI/LargePopularTipio/LargePopularVotingTipioEdit";
+import SmallPopularTipio from "./UI/SmallPopularTipio/SmallPopularTipio";
+import SmallPopularBiddingTipio from "./UI/SmallPopularTipio/SmallPopularBiddingTipio";
+import SmallPopularBiddingTipioEdit from "./UI/SmallPopularTipio/SmallPopularBiddingTipioEdit";
+import SmallPopularVotingTipio from "./UI/SmallPopularTipio/SmallPopularVotingTipio";
+import SmallPopularVotingTipioEdit from "./UI/SmallPopularTipio/SmallPopularVotingTipioEdit";
+import MediumPopularTipio from "./UI/MediumPopularTipio/MediumPopularTipio";
+import MediumPopularBiddingTipio from "./UI/MediumPopularTipio/MediumPopularBiddingTipio";
+import MediumPopularBiddingTipioEdit from "./UI/MediumPopularTipio/MediumPopularBiddingTipioEdit";
+import MediumPopularVotingTipio from "./UI/MediumPopularTipio/MediumPopularVotingTipio";
+import MediumPopularVotingTipioEdit from "./UI/MediumPopularTipio/MediumPopularVotingTipioEdit";
+
+
+
 
 /*
  *   Customer/Private Components
@@ -277,5 +302,27 @@ export {
     FooterMainCard,
     useLockBodyScroll,
     SuccessStory,
-    Logo
+    Logo,
+    DeliveryTimeForm,
+    ShippingReturns,
+    DeliveryTime,
+    TipioOfTheDay,
+    TipioOfTheDayEdit,
+    TipioOfTheDayVoting,
+    LargePopularTipio,
+    LargePopularBidingTipio,
+    LargePopularBidingTipioEdit,
+    LargePopularVotingTipio,
+    LargePopularVotingTipioEdit,
+    SmallPopularTipio,
+    SmallPopularBiddingTipio,
+    SmallPopularBiddingTipioEdit,
+    SmallPopularVotingTipio,
+    SmallPopularVotingTipioEdit,
+    MediumPopularTipio,
+    MediumPopularBiddingTipio,
+    MediumPopularBiddingTipioEdit,
+    MediumPopularVotingTipio,
+    MediumPopularVotingTipioEdit,
+    TipioOfTheDayBidding
 };

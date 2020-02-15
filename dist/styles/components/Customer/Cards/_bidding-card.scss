@@ -7,9 +7,12 @@
     &--preview {
       overflow: hidden;
       border-bottom: solid 2px #f5f5f5;
+      text-align: center;
+      background: $white;
 
       &--image {
         max-width: 100%;
+        max-height: 390px;
         height: auto;
         -webkit-transform: translateZ(0) scale(1.01, 1.01);
         transform: translateZ(0) scale(1.01, 1.01);
@@ -81,6 +84,14 @@
   }
 
   @include media-breakpoint-down(md) {
+    &__header {
+      &--preview {
+        &--image {
+          max-height: 240px;
+        }
+      }
+    }
+
     &__body {
       padding: 1.25rem 0.625rem 2rem;
 

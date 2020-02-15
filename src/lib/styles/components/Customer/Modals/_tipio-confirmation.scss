@@ -5,19 +5,13 @@
   &--image {
     display: block;
     position: relative;
-    width: 680px;
-    height: 435px;
     margin: 0 auto;
 
     .img-fluid {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+      max-height: 270px;
+      object-fit: contain;
+      background: $white;
     }
-  }
-
-  .lazy-image {
-    background: none;
   }
 
   &--timeLeft {
@@ -54,8 +48,9 @@
 
   @include media-breakpoint-down(sm) {
     &--image {
-      width: 340px;
-      height: 270px;
+      .img-fluid {
+        max-height: 200px;
+      }
     }
 
     &--title {

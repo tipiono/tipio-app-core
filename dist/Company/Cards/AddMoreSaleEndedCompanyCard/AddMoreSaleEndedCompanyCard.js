@@ -16,7 +16,7 @@ var AddMoreSaleEndedCompanyCard = function AddMoreSaleEndedCompanyCard(props) {
   return _react.default.createElement("div", {
     className: "addMoreSaleEndedCard mb-3"
   }, _react.default.createElement("div", {
-    className: "d-flex flex-row"
+    className: "d-flex flex-row align-items-center"
   }, _react.default.createElement("div", {
     className: "addMoreSaleEndedCard__preview"
   }, _react.default.createElement("a", {
