@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import BaseCard from './BaseCard';
 import ShareButton from './ShareButton';
 import SecondaryOutlineButton from '../../UI/Buttons/SecondaryOutlineButton';
+import GrayOutlineButton from '../../UI/Buttons/GrayOutlineButton';
 
 const VotingCard = ({ state, ...props }) => {
     return (
@@ -23,6 +24,7 @@ const VotingCard = ({ state, ...props }) => {
             {state === 'interested' &&
             <div className="customerSidebarCard__footer--action">
                 <ShareButton onClick={props.shareOnClick} />
+                <GrayOutlineButton text="Meldt av interesse" onClick={props.notInterestedOnClick} />
             </div>}
 
             <p className="customerSidebarCard__footer--interestedCounter">Allerede {props.meta.joined_count} Interesserte!</p>
