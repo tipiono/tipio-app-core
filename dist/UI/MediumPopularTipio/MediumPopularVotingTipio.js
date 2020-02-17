@@ -23,7 +23,7 @@ var MediumPopularVotingTipio = function MediumPopularVotingTipio(props) {
 
   return _react.default.createElement(_MediumPopularTipio.default, props, _react.default.createElement("h6", {
     className: "mediumPopularTipio__content--interested"
-  }, "2 789 interesserte!"), _react.default.createElement("div", {
+  }, props.join_count, " interesserte!"), _react.default.createElement("div", {
     className: "mediumPopularTipio__content__submit"
   }, props.joined ? _react.default.createElement(_SecondaryButton.default, {
     text: "Del n\xE5",

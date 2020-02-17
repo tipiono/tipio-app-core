@@ -9,7 +9,7 @@ const SmallPopularVotingTipio = (props) => {
 
     return (
         <SmallPopularTipio {...props}>
-            <h6 className="smallPopularTipio__content--interested">2 789 interesserte!</h6>
+            <h6 className="smallPopularTipio__content--interested">{props.join_count} interesserte!</h6>
 
             <div className="smallPopularTipio__content__submit">
                 {props.joined ? (
