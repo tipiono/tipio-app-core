@@ -34,7 +34,7 @@ var MediumPopularTipio = function MediumPopularTipio(_ref) {
     onClick: onClick
   }, _react.default.createElement("img", {
     className: "mediumPopularTipio__preview--image lazyload",
-    src: "https://tipio.ams3.cdn.digitaloceanspaces.com/staging/6/tipios/132/1581260110329",
+    src: images && images.length && images[0].blob_url,
     alt: ""
   }), _react.default.createElement("div", {
     className: "mediumPopularTipio__preview--timeLeft"
@@ -48,9 +48,9 @@ var MediumPopularTipio = function MediumPopularTipio(_ref) {
     onClick: onClick
   }, _react.default.createElement("h2", {
     className: "mediumPopularTipio__content--title"
-  }, "Productname")), _react.default.createElement("p", {
+  }, title)), _react.default.createElement("p", {
     className: "mediumPopularTipio__content--description"
-  }, "Brandname"), children));
+  }, brand), children));
 };
 
 var _default = MediumPopularTipio;

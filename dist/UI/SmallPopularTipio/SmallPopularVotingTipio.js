@@ -23,7 +23,7 @@ var SmallPopularVotingTipio = function SmallPopularVotingTipio(props) {
 
   return _react.default.createElement(_SmallPopularTipio.default, props, _react.default.createElement("h6", {
     className: "smallPopularTipio__content--interested"
-  }, "2 789 interesserte!"), _react.default.createElement("div", {
+  }, props.join_count, " interesserte!"), _react.default.createElement("div", {
     className: "smallPopularTipio__content__submit"
   }, props.joined ? _react.default.createElement(_SecondaryButton.default, {
     text: "Del n\xE5",
