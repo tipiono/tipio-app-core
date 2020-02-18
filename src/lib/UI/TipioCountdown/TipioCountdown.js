@@ -2,6 +2,7 @@ import React from 'react';
 import Countdown, {calcTimeDelta, formatTimeDelta} from "react-countdown-now/dist/index";
 
 const Completionist = () => <span className="inactive timer">Ikke aktiv</span>;
+
 const renderer = ({hours, minutes, seconds, completed}) => {
     let cn = hours < 24 ? 'purple' : 'turquoise';
     if (completed) {
