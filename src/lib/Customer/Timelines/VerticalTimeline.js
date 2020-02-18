@@ -11,7 +11,6 @@ const renderer = ({ hours, minutes, seconds, completed }) => {
   );
 };
 const VerticalTimeline = ({ isLoading, tipio, stepStatus, onClose }) => {
-  console.log("hej stepStatus", stepStatus);
   return (
     <div className="container">
       {isLoading && <p>Loading...</p>}

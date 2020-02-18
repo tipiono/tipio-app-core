@@ -42,7 +42,6 @@ var VerticalTimeline = function VerticalTimeline(_ref2) {
       tipio = _ref2.tipio,
       stepStatus = _ref2.stepStatus,
       onClose = _ref2.onClose;
-  console.log("hej stepStatus", stepStatus);
   return _react.default.createElement("div", {
     className: "container"
   }, isLoading && _react.default.createElement("p", null, "Loading..."), !isLoading && _react.default.createElement("div", {
