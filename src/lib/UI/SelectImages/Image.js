@@ -1,5 +1,6 @@
 import React from "react";
-import ImageShimmer from 'react-shimmer'
+import ImageShimmer from 'react-shimmer';
+import ContentSpinner from '../Spinner/ContentSpinner';
 
 function Image({image, selectedIndex, onChange}) {
     return <label className="layout-item">
@@ -7,9 +8,10 @@ function Image({image, selectedIndex, onChange}) {
         <ImageShimmer
             className="layout-img"
             src={image.src}
-            width={"200px"} height={"400px"}
+            fallback={<ContentSpinner />}
         />
         {selectedIndex > 0 && <span className="selected-number">{selectedIndex}</span>}
-    </label>
+    </label>;
+
 }
 export default Image;

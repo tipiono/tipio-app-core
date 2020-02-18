@@ -7,13 +7,13 @@ const BaseCard = ({ children, ...props }) => {
             <div className="customerSidebarCard__header">
                 <div className="customerSidebarCard__header__content">
                     <h3 className="customerSidebarCard__header__content--title">{props.title}</h3>
-                    <p className="customerSidebarCard__header__content--subtitle">{props.subtitle}</p>
+                    <p className="customerSidebarCard__header__content--subtitle">{props.brand}</p>
                 </div>
                 {/* add limited stock */}
 
                 {
                     props.inventory && (
-                        <p className="customerSidebarCard__header__stock">Kun {props.inventory} igjen </p>
+                        <p className="customerSidebarCard__header__stock">Kun {props.inventory} igjen</p>
                     )
                 }
 
