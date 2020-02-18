@@ -97,10 +97,12 @@ import OnboardingMovie from "./Customer/Modals/OnboardingMovie/OnboardingMovie";
 import ReadyToBid from "./Customer/Modals/ReadyToBid/ReadyToBid";
 import ChooseCategory from "./Company/Modals/ChooseCategory/ChooseCategory";
 import VotingCard from "./Customer/Cards/VotingCard/VotingCard";
+import SingleVotingCard from "./Customer/Cards/VotingCard/SingleVotingCard";
 import VotingCardShowInterestButton from "./Customer/Cards/VotingCard/VotingCardShowInterestButton";
 import VotingCardShareButton from "./Customer/Cards/VotingCard/VotingCardShareButton";
 import BiddingCard from "./Customer/Cards/BiddingCard/BiddingCard";
 import BiddingCardShareButton from "./Customer/Cards/BiddingCard/BiddingCardShareButton";
+import SingleBiddingCard from "./Customer/Cards/BiddingCard/SingleBiddingCard";
 import SaleCard from "./Customer/Cards/SaleCard/SaleCard";
 import SaleCardAddToCartButton from "./Customer/Cards/SaleCard/SaleCardAddToCartButton";
 import Onboarding from "./Customer/Modals/Onboarding/Onboarding";
@@ -324,5 +326,7 @@ export {
     MediumPopularBiddingTipioEdit,
     MediumPopularVotingTipio,
     MediumPopularVotingTipioEdit,
-    TipioOfTheDayBidding
+    TipioOfTheDayBidding,
+    SingleBiddingCard,
+    SingleVotingCard
 };
