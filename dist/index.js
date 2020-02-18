@@ -545,6 +545,12 @@ Object.defineProperty(exports, "VotingCard", {
     return _VotingCard.default;
   }
 });
+Object.defineProperty(exports, "SingleVotingCard", {
+  enumerable: true,
+  get: function get() {
+    return _SingleVotingCard.default;
+  }
+});
 Object.defineProperty(exports, "VotingCardShowInterestButton", {
   enumerable: true,
   get: function get() {
@@ -567,6 +573,12 @@ Object.defineProperty(exports, "BiddingCardShareButton", {
   enumerable: true,
   get: function get() {
     return _BiddingCardShareButton.default;
+  }
+});
+Object.defineProperty(exports, "SingleBiddingCard", {
+  enumerable: true,
+  get: function get() {
+    return _SingleBiddingCard.default;
   }
 });
 Object.defineProperty(exports, "SaleCard", {
@@ -1067,6 +1079,8 @@ var _ChooseCategory = _interopRequireDefault(require("./Company/Modals/ChooseCat
 
 var _VotingCard = _interopRequireDefault(require("./Customer/Cards/VotingCard/VotingCard"));
 
+var _SingleVotingCard = _interopRequireDefault(require("./Customer/Cards/VotingCard/SingleVotingCard"));
+
 var _VotingCardShowInterestButton = _interopRequireDefault(require("./Customer/Cards/VotingCard/VotingCardShowInterestButton"));
 
 var _VotingCardShareButton = _interopRequireDefault(require("./Customer/Cards/VotingCard/VotingCardShareButton"));
@@ -1074,6 +1088,8 @@ var _VotingCardShareButton = _interopRequireDefault(require("./Customer/Cards/Vo
 var _BiddingCard = _interopRequireDefault(require("./Customer/Cards/BiddingCard/BiddingCard"));
 
 var _BiddingCardShareButton = _interopRequireDefault(require("./Customer/Cards/BiddingCard/BiddingCardShareButton"));
+
+var _SingleBiddingCard = _interopRequireDefault(require("./Customer/Cards/BiddingCard/SingleBiddingCard"));
 
 var _SaleCard = _interopRequireDefault(require("./Customer/Cards/SaleCard/SaleCard"));
 
