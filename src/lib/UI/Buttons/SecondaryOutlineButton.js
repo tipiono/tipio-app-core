@@ -32,7 +32,6 @@ SecondaryOutlineButton.defaultProps = {
 SecondaryOutlineButton.propTypes = {
     loading: PropTypes.bool,
     text: PropTypes.string.isRequired,
-    children: PropTypes.instanceOf(Array).isRequired
 };
 
 export default SecondaryOutlineButton;

@@ -40,9 +40,9 @@ function SaleCard(_ref) {
     className: "saleCard__content--price"
   }, _react.default.createElement("h6", {
     className: "saleCard__content--price--sale"
-  }, salePrice), _react.default.createElement("h6", {
+  }, salePrice, " Kr"), _react.default.createElement("h6", {
     className: "saleCard__content--price--cost"
-  }, costPrice)), _react.default.createElement("a", {
+  }, costPrice, " Kr")), _react.default.createElement("a", {
     onClick: onClick
   }, _react.default.createElement("h6", {
     className: "saleCard__content--title"
