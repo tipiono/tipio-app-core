@@ -23,7 +23,8 @@ function BiddingCard(_ref) {
       children = _ref.children,
       salesProgressBarPercentage = _ref.salesProgressBarPercentage,
       bindingCount = _ref.bindingCount,
-      onClick = _ref.onClick;
+      onClick = _ref.onClick,
+      bindHasExpired = _ref.bindHasExpired;
   return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("div", {
     className: "biddingCard"
   }, _react.default.createElement("div", {
@@ -61,7 +62,7 @@ function BiddingCard(_ref) {
     className: "biddingCard__body--content--description"
   }, brand.toUpperCase())), _react.default.createElement("div", {
     className: "biddingCard__body--salesbar"
-  }, bindingCount > 0 ? _react.default.createElement(_SalesProgressBar.default, {
+  }, bindingCount > 0 && !bindHasExpired ? _react.default.createElement(_SalesProgressBar.default, {
     percentage: salesProgressBarPercentage,
     bindingCount: bindingCount
   }) : ''), _react.default.createElement("div", {

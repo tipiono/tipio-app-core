@@ -12,7 +12,8 @@ function BiddingCard({
     children,
     salesProgressBarPercentage,
     bindingCount,
-    onClick
+    onClick,
+    bindHasExpired
 }) {
     return (
         <>
@@ -44,7 +45,7 @@ function BiddingCard({
 
                     <div className="biddingCard__body--salesbar">
                         {
-                            bindingCount>0 ? ( <SalesProgressBar percentage={salesProgressBarPercentage} bindingCount={bindingCount} />) :''
+                            bindingCount>0 && !bindHasExpired ? ( <SalesProgressBar percentage={salesProgressBarPercentage} bindingCount={bindingCount} />) :''
                         }
                        
                     </div>
