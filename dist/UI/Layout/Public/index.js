@@ -61,13 +61,13 @@ function PublicLayout(_ref) {
     className: "customFooter__list__content"
   }, _react.default.createElement("li", null, _react.default.createElement("a", {
     className: "customFooter__list__content__link",
-    href: "https://www.facebook.com/"
+    href: "https://www.facebook.com/Tipio-667205140149721"
   }, "Facebook")), _react.default.createElement("li", null, _react.default.createElement("a", {
     className: "customFooter__list__content__link",
-    href: "https://instagram.com/"
+    href: "https://www.instagram.com/tipio.no"
   }, "Instagram")), _react.default.createElement("li", null, _react.default.createElement("a", {
     className: "customFooter__list__content__link",
-    href: "https://www.linkedin.com/"
+    href: "https://www.linkedin.com/company/tipio/?viewAsMember=true"
   }, "Linkedin"))))), _react.default.createElement("div", {
     className: "col-sm-12 col-md-6"
   }, _react.default.createElement("p", {
