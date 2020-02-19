@@ -62,10 +62,10 @@ function BiddingCard(_ref) {
     className: "biddingCard__body--content--description"
   }, brand.toUpperCase())), _react.default.createElement("div", {
     className: "biddingCard__body--salesbar"
-  }, bindingCount > 0 && !bindHasExpired ? _react.default.createElement(_SalesProgressBar.default, {
+  }, !bindHasExpired && (bindingCount > 0 ? _react.default.createElement(_react.default.Fragment, null, " Test", _react.default.createElement(_SalesProgressBar.default, {
     percentage: salesProgressBarPercentage,
     bindingCount: bindingCount
-  }) : ''), _react.default.createElement("div", {
+  })) : "")), _react.default.createElement("div", {
     className: "biddingCard__body--share"
   }, children))));
 }
