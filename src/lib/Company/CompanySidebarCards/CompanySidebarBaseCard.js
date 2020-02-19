@@ -12,7 +12,7 @@ const CompanySidebarBaseCard = ({children, ...props}) => {
                 </div>
 
                 <div className="companySidebarCard__header__cost">
-                    <p className="companySidebarCard__header__cost--label">Potensiell omsetning</p>
+                    <p className="companySidebarCard__header__cost--label">Omsetning</p>
                     {props.loading ? (<div className="placeholder-content companySidebarCard__header--placeholder">
                             &nbsp;
                     </div>) : (
