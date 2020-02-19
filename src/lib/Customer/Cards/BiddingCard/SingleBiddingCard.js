@@ -5,7 +5,7 @@ import SecondaryButton from "../../../UI/Buttons/SecondaryButton";
 import generatePrice from '../../../Util/generatePrice';
 import calculateDiscountPercentage from '../../../Util/calculateDiscountPercentage';
 
-function SingleBiddingCard({
+const SingleBiddingCard = ({
     image,
     title,
     brand,
@@ -16,7 +16,7 @@ function SingleBiddingCard({
     bindingCount,
     onClick,
     ...props
-}) {
+}) => {
     const rangeList = (props.tipio_offer && props.tipio_offer.offer_price_ranges) || [];
     const firstRange = rangeList.length > 0 && parseInt(rangeList[1].price, 10) && rangeList[1];
     const secondRange = rangeList.length > 0 && parseInt(rangeList[0].price, 10) && rangeList[0];

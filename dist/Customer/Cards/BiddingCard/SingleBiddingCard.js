@@ -23,7 +23,7 @@ function _objectWithoutProperties(source, excluded) { if (source == null) return
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
-function SingleBiddingCard(_ref) {
+var SingleBiddingCard = function SingleBiddingCard(_ref) {
   var image = _ref.image,
       title = _ref.title,
       brand = _ref.brand,
@@ -93,8 +93,7 @@ function SingleBiddingCard(_ref) {
     text: "Legg i handlekurv",
     onClick: props.bindOnClick
   }))));
-}
+};
 
-;
 var _default = SingleBiddingCard;
 exports.default = _default;
