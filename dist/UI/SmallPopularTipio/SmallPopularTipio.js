@@ -46,10 +46,9 @@ var SmallPopularTipio = function SmallPopularTipio(_ref) {
     className: "smallPopularTipio__content"
   }, _react.default.createElement("a", {
     href: "",
-    onClick: onClick
-  }, _react.default.createElement("h2", {
+    onClick: onClick,
     className: "smallPopularTipio__content--title"
-  }, title)), _react.default.createElement("p", {
+  }, title), _react.default.createElement("p", {
     className: "smallPopularTipio__content--description"
   }, brand), children));
 };

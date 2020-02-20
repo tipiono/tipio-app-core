@@ -48,10 +48,9 @@ var LargePopularTipio = function LargePopularTipio(_ref) {
     className: "largePopularTipio__content"
   }, _react.default.createElement("a", {
     href: "",
-    onClick: onClick
-  }, _react.default.createElement("h1", {
+    onClick: onClick,
     className: "largePopularTipio__content--title"
-  }, title)), _react.default.createElement("a", {
+  }, title), _react.default.createElement("a", {
     href: "",
     className: "largePopularTipio__content--description"
   }, subtitle), children));
