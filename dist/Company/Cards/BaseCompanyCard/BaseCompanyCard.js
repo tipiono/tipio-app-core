@@ -30,8 +30,8 @@ var BaseCompanyCard = function BaseCompanyCard(_ref) {
   var showBrand = props.showBrand || false;
 
   var showLabel = function showLabel() {
-    if (props.showVotingCount) return 'votes';
-    return showBindingCount ? 'kjøpte' : 'påmeldte';
+    if (props.showVotingCount) return "votes";
+    return showBindingCount ? "kjøpte" : "påmeldte";
   };
 
   return _react.default.createElement("div", null, _react.default.createElement("div", {
@@ -74,11 +74,11 @@ var BaseCompanyCard = function BaseCompanyCard(_ref) {
     className: "baseCompanyCard__body--cost--price"
   }, potential_earning, " Kr"), _react.default.createElement("span", {
     className: "baseCompanyCard__body--cost--label"
-  }, showOmsetning ? "Omstening" : "Potensiell omsetning")), _react.default.createElement("div", {
+  }, showOmsetning ? "Omstening" : "Potensiell omsetning")), binding_count > 0 && _react.default.createElement("div", {
     className: "baseCompanyCard__body--interested"
   }, _react.default.createElement("h6", {
     className: "baseCompanyCard__body--interested--counter"
-  }, binding_count, " ", showLabel(), " ! ")), children)));
+  }, binding_count, " ", showLabel(), " !", " ")), children)));
 };
 
 var _default = BaseCompanyCard;

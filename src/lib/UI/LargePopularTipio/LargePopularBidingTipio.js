@@ -26,7 +26,7 @@ const LargePopularBidingTipio = (props) => {
                         onClick={props.shareOnClick}
                     />
                 ) : (
-                        <SecondaryOutlineButton
+                        <SecondaryButton
                             text="Legg i handlekurv"
                             onClick={props.bindOnClick}
                         />

@@ -1,19 +1,20 @@
-.biddingCard {
-  box-shadow: 0 1px 1px 0 #e5e5e5;
+.singleBiddingCard {
+  display: flex;
+  align-items: center;
 
   &__header {
     position: relative;
+    width: 50%;
     background: $white;
 
     &--preview {
       overflow: hidden;
-      border-bottom: solid 2px #f5f5f5;
+      border: solid 2px #f5f5f5;
       text-align: center;
       background: $white;
 
       &--image {
-        max-width: 100%;
-        max-height: 390px;
+        max-height: 440px;
         -webkit-transform: translateZ(0) scale(1.01, 1.01);
         transform: translateZ(0) scale(1.01, 1.01);
       }
@@ -37,11 +38,15 @@
   }
 
   &__body {
-    background: $white;
-    padding: 1.5rem 1.5rem 2.5rem;
+    width: 40%;
+    margin-left: 100px;
+    text-align: center;
 
     &--price {
-      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 2rem;
 
       &--sale {
         letter-spacing: 0.4px;
@@ -56,44 +61,63 @@
     }
 
     &--content {
-      margin-bottom: 1.5rem;
+      margin-bottom: 38px;
 
       &--title {
         font-family: "Riposte-Regular", sans-serif;
-        color: $gray-700;
+        font-size: 38px;
         margin-bottom: 6px;
       }
 
       &--description {
-        font-family: "Riposte-Lazer", sans-serif;
-        font-size: 0.875rem;
+        color: $gray-700;
+        font-family: "Riposte-Light", sans-serif;
       }
     }
 
     &--salesbar {
-      width: 70%;
+      margin-bottom: 38px;
+
+      .sales__progress--bar {
+        height: 10px;
+        margin-bottom: 1rem;
+      }
+
+      .sales__progress--label {
+        font-size: 16px;
+      }
     }
 
-    &--share {
-      width: 70%;
+    &--addToCart {
+      display: inline-block;
 
       button {
-        margin-top: 1.625rem;
+        display: inline-block;
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
       }
     }
   }
 
   @include media-breakpoint-down(md) {
+    flex-direction: column;
+
     &__header {
+      width: 100%;
+      margin-bottom: 1.5rem;
+
       &--preview {
         &--image {
+          width: 100%;
           max-height: 240px;
+          object-fit: contain;
         }
       }
     }
 
     &__body {
-      padding: 1.25rem 0.625rem 2rem;
+      width: 90%;
+      margin: 0 auto;
 
       &--price {
         margin-bottom: 1.25rem;
@@ -113,23 +137,23 @@
         margin-bottom: 1.3rem;
 
         &--title {
-          font-size: 1rem;
+          font-size: 1.5rem;
           margin-bottom: 8px;
+        }
+
+        &--description {
+          font-size: 1rem;
         }
       }
 
       &--salesbar {
         width: 100%;
-      }
-
-      &--share {
-        width: 100%;
+        margin-bottom: 1.5rem;
       }
 
       button {
         font-size: 0.75rem;
-        padding: 6px 1rem !important;
-        margin-top: 1.625rem;
+        padding: 6px 2rem !important;
       }
     }
   }
