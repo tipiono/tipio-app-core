@@ -1,6 +1,4 @@
 .baseCompanyCard {
-  box-shadow: 0 1px 1px 0 #e5e5e5;
-
   &__header {
     position: relative;
     background-color: $white;
@@ -10,6 +8,7 @@
       overflow: hidden;
       border-bottom: solid 1px #f5f5f5;
       text-align: center;
+      background: $white;
 
       &--image {
         max-width: 100%;

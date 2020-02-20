@@ -35,6 +35,7 @@
         }
 
         .category-right-icon * {
+          fill: $primary;
           stroke: $primary;
         }
       }
@@ -253,6 +254,7 @@
 
       .category-right-icon {
         svg * {
+          stroke: $primary;
           fill: $primary;
         }
       }

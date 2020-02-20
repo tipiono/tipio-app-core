@@ -40,7 +40,6 @@
     'components/_empty_interested',
     'components/_empty-orders.scss',
     'components/tipio-posted-by',
-    'components/tipio-gallery',
     'components/tipio-view-card',
 
     // 3.1 UI Components
@@ -81,6 +80,10 @@
     'components/UI/shipping-returns',
     'components/UI/delivery-time',
     'components/UI/tipio-show-more',
+    'components/UI/tipio-of-the-day',
+    'components/UI/large-popular-tipio',
+    'components/UI/small-popular-tipio',
+    'components/UI/medium-popular-tipio',
 
 
     // 3.2 Company Components
@@ -116,6 +119,8 @@
     'components/Customer/Modals/_join-tipio-onboarding.scss',
     'components/Customer/Cards/voting-card',
     'components/Customer/Cards/bidding-card',
+    'components/Customer/Cards/single-bidding-card',
+    'components/Customer/Cards/single-voting-card',
     'components/Customer/Cards/sale-card',
     'components/Customer/Cards/shopping-bag-item',
     'components/Customer/CustomerSidebarCards/customer-sidebar-card',

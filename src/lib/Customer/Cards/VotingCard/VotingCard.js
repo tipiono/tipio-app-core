@@ -1,7 +1,7 @@
 import React from "react";
 import TipioCountdown from "../../../UI/TipioCountdown/TipioCountdown";
 
-function VotingCard({ image, interestedCounter, title, brand, expiresIn, children, onClick }) {
+function VotingCard({ image, interestedCounter, title, brand, expiresIn, children, onClick,voteHasExpired }) {
     return (
         <>
             <div className="votingCard">
@@ -20,10 +20,14 @@ function VotingCard({ image, interestedCounter, title, brand, expiresIn, childre
                 </div>
 
                 <div className="votingCard__body">
-                    <div className="votingCard__body--interested">
-                        <h3 className="votingCard__body--interested--counter">{interestedCounter || 1}</h3>
-                        <p className="votingCard__body--interested--label">Interesserte!</p>
-                    </div>
+                    {!voteHasExpired ?
+                      <div className="votingCard__body--interested">
+                      <h3 className="votingCard__body--interested--counter">{interestedCounter || 1}</h3>
+                      <p className="votingCard__body--interested--label">Interesserte!</p>
+                  </div>
+                  :('')
+                }
+                  
 
                     <div className="votingCard__body--content">
                         <a onClick={onClick} href="#"><h5 className="votingCard__body--content--title">{title}</h5></a>

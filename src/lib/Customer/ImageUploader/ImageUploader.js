@@ -8,7 +8,7 @@ import IconButton from "../../UI/Buttons/IconButton";
 import RemoveImageIcon from "../../UI/Icons/RemoveImageIcon";
 import ErrorMessage from '../../UI/ErrorMessage/ErrorMessage';
 
-function ImageUploader({setFieldValue, name, errors, displayErrors}) {
+function ImageUploader({setFieldValue, name, errors, displayErrors, title}) {
     const [showCropper, setShowCropper] = useState(false);
     const [cropImage, setCropImage] = useState(null);
     const [initialCropCompleted, setInitialCropCompleted] = useState(null);
@@ -104,11 +104,11 @@ function ImageUploader({setFieldValue, name, errors, displayErrors}) {
         indicator =
             <p className="label-sm mb-0 mt-3" style={{textAlign: 'center'}}>{croppedImageIndex} av {files.length}</p>;
     }
-
     return (
         <>
             {showCropper && (
                 <ImageCropper
+                    title={title}
                     image={cropImage}
                     onDone={cropperOnDone}
                     onClose={cropperModalOnClose}

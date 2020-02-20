@@ -365,6 +365,120 @@ Object.defineProperty(exports, "ShippingReturns", {
     return _ShippingReturns.default;
   }
 });
+Object.defineProperty(exports, "TipioOfTheDay", {
+  enumerable: true,
+  get: function get() {
+    return _TipioOfTheDay.default;
+  }
+});
+Object.defineProperty(exports, "TipioOfTheDayEdit", {
+  enumerable: true,
+  get: function get() {
+    return _TipioOfTheDayEdit.default;
+  }
+});
+Object.defineProperty(exports, "TipioOfTheDayVoting", {
+  enumerable: true,
+  get: function get() {
+    return _TipioOfTheDayVoting.default;
+  }
+});
+Object.defineProperty(exports, "TipioOfTheDayBidding", {
+  enumerable: true,
+  get: function get() {
+    return _TipioOfTheDayBidding.default;
+  }
+});
+Object.defineProperty(exports, "LargePopularTipio", {
+  enumerable: true,
+  get: function get() {
+    return _LargePopularTipio.default;
+  }
+});
+Object.defineProperty(exports, "LargePopularBidingTipio", {
+  enumerable: true,
+  get: function get() {
+    return _LargePopularBidingTipio.default;
+  }
+});
+Object.defineProperty(exports, "LargePopularBidingTipioEdit", {
+  enumerable: true,
+  get: function get() {
+    return _LargePopularBidingTipioEdit.default;
+  }
+});
+Object.defineProperty(exports, "LargePopularVotingTipio", {
+  enumerable: true,
+  get: function get() {
+    return _LargePopularVotingTipio.default;
+  }
+});
+Object.defineProperty(exports, "LargePopularVotingTipioEdit", {
+  enumerable: true,
+  get: function get() {
+    return _LargePopularVotingTipioEdit.default;
+  }
+});
+Object.defineProperty(exports, "SmallPopularTipio", {
+  enumerable: true,
+  get: function get() {
+    return _SmallPopularTipio.default;
+  }
+});
+Object.defineProperty(exports, "SmallPopularBiddingTipio", {
+  enumerable: true,
+  get: function get() {
+    return _SmallPopularBiddingTipio.default;
+  }
+});
+Object.defineProperty(exports, "SmallPopularBiddingTipioEdit", {
+  enumerable: true,
+  get: function get() {
+    return _SmallPopularBiddingTipioEdit.default;
+  }
+});
+Object.defineProperty(exports, "SmallPopularVotingTipio", {
+  enumerable: true,
+  get: function get() {
+    return _SmallPopularVotingTipio.default;
+  }
+});
+Object.defineProperty(exports, "SmallPopularVotingTipioEdit", {
+  enumerable: true,
+  get: function get() {
+    return _SmallPopularVotingTipioEdit.default;
+  }
+});
+Object.defineProperty(exports, "MediumPopularTipio", {
+  enumerable: true,
+  get: function get() {
+    return _MediumPopularTipio.default;
+  }
+});
+Object.defineProperty(exports, "MediumPopularBiddingTipio", {
+  enumerable: true,
+  get: function get() {
+    return _MediumPopularBiddingTipio.default;
+  }
+});
+Object.defineProperty(exports, "MediumPopularBiddingTipioEdit", {
+  enumerable: true,
+  get: function get() {
+    return _MediumPopularBiddingTipioEdit.default;
+  }
+});
+Object.defineProperty(exports, "MediumPopularVotingTipio", {
+  enumerable: true,
+  get: function get() {
+    return _MediumPopularVotingTipio.default;
+  }
+});
+Object.defineProperty(exports, "MediumPopularVotingTipioEdit", {
+  enumerable: true,
+  get: function get() {
+    return _MediumPopularVotingTipioEdit.default;
+  }
+});
 Object.defineProperty(exports, "TipioWithOffer", {
   enumerable: true,
   get: function get() {
@@ -431,6 +545,12 @@ Object.defineProperty(exports, "VotingCard", {
     return _VotingCard.default;
   }
 });
+Object.defineProperty(exports, "SingleVotingCard", {
+  enumerable: true,
+  get: function get() {
+    return _SingleVotingCard.default;
+  }
+});
 Object.defineProperty(exports, "VotingCardShowInterestButton", {
   enumerable: true,
   get: function get() {
@@ -453,6 +573,12 @@ Object.defineProperty(exports, "BiddingCardShareButton", {
   enumerable: true,
   get: function get() {
     return _BiddingCardShareButton.default;
+  }
+});
+Object.defineProperty(exports, "SingleBiddingCard", {
+  enumerable: true,
+  get: function get() {
+    return _SingleBiddingCard.default;
   }
 });
 Object.defineProperty(exports, "SaleCard", {
@@ -893,6 +1019,44 @@ var _DeliveryTime = _interopRequireDefault(require("./UI/DeliveryTime/DeliveryTi
 
 var _ShippingReturns = _interopRequireDefault(require("./UI/ShippingReturns/ShippingReturns"));
 
+var _TipioOfTheDay = _interopRequireDefault(require("./UI/TipioOfTheDay/TipioOfTheDay"));
+
+var _TipioOfTheDayEdit = _interopRequireDefault(require("./UI/TipioOfTheDay/TipioOfTheDayEdit"));
+
+var _TipioOfTheDayVoting = _interopRequireDefault(require("./UI/TipioOfTheDay/TipioOfTheDayVoting"));
+
+var _TipioOfTheDayBidding = _interopRequireDefault(require("./UI/TipioOfTheDay/TipioOfTheDayBidding"));
+
+var _LargePopularTipio = _interopRequireDefault(require("./UI/LargePopularTipio/LargePopularTipio"));
+
+var _LargePopularBidingTipio = _interopRequireDefault(require("./UI/LargePopularTipio/LargePopularBidingTipio"));
+
+var _LargePopularBidingTipioEdit = _interopRequireDefault(require("./UI/LargePopularTipio/LargePopularBidingTipioEdit"));
+
+var _LargePopularVotingTipio = _interopRequireDefault(require("./UI/LargePopularTipio/LargePopularVotingTipio"));
+
+var _LargePopularVotingTipioEdit = _interopRequireDefault(require("./UI/LargePopularTipio/LargePopularVotingTipioEdit"));
+
+var _SmallPopularTipio = _interopRequireDefault(require("./UI/SmallPopularTipio/SmallPopularTipio"));
+
+var _SmallPopularBiddingTipio = _interopRequireDefault(require("./UI/SmallPopularTipio/SmallPopularBiddingTipio"));
+
+var _SmallPopularBiddingTipioEdit = _interopRequireDefault(require("./UI/SmallPopularTipio/SmallPopularBiddingTipioEdit"));
+
+var _SmallPopularVotingTipio = _interopRequireDefault(require("./UI/SmallPopularTipio/SmallPopularVotingTipio"));
+
+var _SmallPopularVotingTipioEdit = _interopRequireDefault(require("./UI/SmallPopularTipio/SmallPopularVotingTipioEdit"));
+
+var _MediumPopularTipio = _interopRequireDefault(require("./UI/MediumPopularTipio/MediumPopularTipio"));
+
+var _MediumPopularBiddingTipio = _interopRequireDefault(require("./UI/MediumPopularTipio/MediumPopularBiddingTipio"));
+
+var _MediumPopularBiddingTipioEdit = _interopRequireDefault(require("./UI/MediumPopularTipio/MediumPopularBiddingTipioEdit"));
+
+var _MediumPopularVotingTipio = _interopRequireDefault(require("./UI/MediumPopularTipio/MediumPopularVotingTipio"));
+
+var _MediumPopularVotingTipioEdit = _interopRequireDefault(require("./UI/MediumPopularTipio/MediumPopularVotingTipioEdit"));
+
 var _TipioWithOffer = _interopRequireDefault(require("./Customer/Modals/TipioWithOffer/TipioWithOffer"));
 
 var _TipioConfirmation = _interopRequireDefault(require("./Customer/Modals/TipioConfirmation/TipioConfirmation"));
@@ -915,6 +1079,8 @@ var _ChooseCategory = _interopRequireDefault(require("./Company/Modals/ChooseCat
 
 var _VotingCard = _interopRequireDefault(require("./Customer/Cards/VotingCard/VotingCard"));
 
+var _SingleVotingCard = _interopRequireDefault(require("./Customer/Cards/VotingCard/SingleVotingCard"));
+
 var _VotingCardShowInterestButton = _interopRequireDefault(require("./Customer/Cards/VotingCard/VotingCardShowInterestButton"));
 
 var _VotingCardShareButton = _interopRequireDefault(require("./Customer/Cards/VotingCard/VotingCardShareButton"));
@@ -922,6 +1088,8 @@ var _VotingCardShareButton = _interopRequireDefault(require("./Customer/Cards/Vo
 var _BiddingCard = _interopRequireDefault(require("./Customer/Cards/BiddingCard/BiddingCard"));
 
 var _BiddingCardShareButton = _interopRequireDefault(require("./Customer/Cards/BiddingCard/BiddingCardShareButton"));
+
+var _SingleBiddingCard = _interopRequireDefault(require("./Customer/Cards/BiddingCard/SingleBiddingCard"));
 
 var _SaleCard = _interopRequireDefault(require("./Customer/Cards/SaleCard/SaleCard"));
 

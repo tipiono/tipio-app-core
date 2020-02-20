@@ -15,6 +15,8 @@ var _ShareButton = _interopRequireDefault(require("./ShareButton"));
 
 var _SecondaryOutlineButton = _interopRequireDefault(require("../../UI/Buttons/SecondaryOutlineButton"));
 
+var _GrayOutlineButton = _interopRequireDefault(require("../../UI/Buttons/GrayOutlineButton"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
@@ -42,6 +44,9 @@ var VotingCard = function VotingCard(_ref) {
     className: "customerSidebarCard__footer--action"
   }, _react.default.createElement(_ShareButton.default, {
     onClick: props.shareOnClick
+  }), _react.default.createElement(_GrayOutlineButton.default, {
+    text: "Meldt av interesse",
+    onClick: props.notInterestedOnClick
   })), _react.default.createElement("p", {
     className: "customerSidebarCard__footer--interestedCounter"
   }, "Allerede ", props.meta.joined_count, " Interesserte!"));

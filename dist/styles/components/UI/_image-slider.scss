@@ -5,13 +5,15 @@
 .imageSlider {
   /// Slider Images
   position: relative;
+
   .carousel-slider {
+    overflow: visible !important;
+
     .slider-wrapper {
       margin-bottom: 1rem;
+      border: 1px solid #f5f5f5;
 
       .slider {
-        border: 1px solid #f5f5f5;
-
         .slide {
           background: $white;
           display: flex;
@@ -21,10 +23,13 @@
           img {
             max-height: 570px;
             object-fit: contain;
+            margin: 0 10px;
           }
         }
         .selected {
-          margin: 0;
+          img {
+            margin: 0;
+          }
         }
       }
     }
@@ -46,6 +51,42 @@
         background: $gray-700;
       }
     }
+
+    // Arrows
+    .control-arrow {
+      top: 108% !important;
+      bottom: unset !important;
+
+      &:hover {
+        background: transparent !important;
+      }
+    }
+
+    // Next arrow
+    .control-next {
+      &:before {
+        content: '';
+        background: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg width='11px' height='19px' viewBox='0 0 11 19' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com --%3E%3Ctitle%3EPath 2 Copy 3%3C/title%3E%3Cdesc%3ECreated with Sketch.%3C/desc%3E%3Cg id='Desktop' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd' stroke-linecap='round' stroke-linejoin='round'%3E%3Cg id='Company_Tipio_add-bid_add-limited-number' transform='translate(-525.000000, -617.000000)' stroke='%2391979A' stroke-width='2'%3E%3Cpolyline id='Path-2-Copy-3' transform='translate(530.500000, 626.500000) rotate(-90.000000) translate(-530.500000, -626.500000) ' points='539 622 530.536404 631 522 622'%3E%3C/polyline%3E%3C/g%3E%3C/g%3E%3C/svg%3E") no-repeat;
+        display: block;
+        width: 12px;
+        height: 19px;
+        border: none !important;
+        margin: 0 !important;
+      }
+    }
+
+    // Prev arrow
+    .control-prev {
+      &:before {
+        content: '';
+        background: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg width='11px' height='19px' viewBox='0 0 11 19' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com --%3E%3Ctitle%3EPath 2 Copy 4%3C/title%3E%3Cdesc%3ECreated with Sketch.%3C/desc%3E%3Cg id='Desktop' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd' stroke-linecap='round' stroke-linejoin='round'%3E%3Cg id='Company_Tipio_add-bid_add-limited-number' transform='translate(-146.000000, -617.000000)' stroke='%2391979A' stroke-width='2'%3E%3Cpolyline id='Path-2-Copy-4' transform='translate(151.500000, 626.500000) rotate(-270.000000) translate(-151.500000, -626.500000) ' points='160 622 151.536404 631 143 622'%3E%3C/polyline%3E%3C/g%3E%3C/g%3E%3C/svg%3E") no-repeat;
+        display: block;
+        width: 12px;
+        height: 19px;
+        border: none !important;
+        margin: 0 !important;
+      }
+    }
   }
 
   /// Thumbnails Images
@@ -55,6 +96,7 @@
 
       .thumbs {
         margin-bottom: 0;
+        height: 110px;
 
         .thumb {
           img {
@@ -72,51 +114,27 @@
         }
       }
 
-      .control-next {
-        &:before {
-          content: '';
-          background: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg width='11px' height='19px' viewBox='0 0 11 19' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com --%3E%3Ctitle%3EPath 2 Copy 3%3C/title%3E%3Cdesc%3ECreated with Sketch.%3C/desc%3E%3Cg id='Desktop' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd' stroke-linecap='round' stroke-linejoin='round'%3E%3Cg id='Company_Tipio_add-bid_add-limited-number' transform='translate(-525.000000, -617.000000)' stroke='%2391979A' stroke-width='2'%3E%3Cpolyline id='Path-2-Copy-3' transform='translate(530.500000, 626.500000) rotate(-90.000000) translate(-530.500000, -626.500000) ' points='539 622 530.536404 631 522 622'%3E%3C/polyline%3E%3C/g%3E%3C/g%3E%3C/svg%3E") no-repeat;
-          display: block;
-          width: 20px;
-          height: 19px;
-          border-bottom: none;
-          border-top: none;
-          padding: 0;
-        }
-      }
-
-      .control-prev {
-        &:before {
-          content: '';
-          background: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg width='11px' height='19px' viewBox='0 0 11 19' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com --%3E%3Ctitle%3EPath 2 Copy 4%3C/title%3E%3Cdesc%3ECreated with Sketch.%3C/desc%3E%3Cg id='Desktop' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd' stroke-linecap='round' stroke-linejoin='round'%3E%3Cg id='Company_Tipio_add-bid_add-limited-number' transform='translate(-146.000000, -617.000000)' stroke='%2391979A' stroke-width='2'%3E%3Cpolyline id='Path-2-Copy-4' transform='translate(151.500000, 626.500000) rotate(-270.000000) translate(-151.500000, -626.500000) ' points='160 622 151.536404 631 143 622'%3E%3C/polyline%3E%3C/g%3E%3C/g%3E%3C/svg%3E") no-repeat;
-          display: block;
-          width: 20px;
-          height: 19px;
-          border-bottom: none;
-          border-top: none;
-          padding: 0;
-        }
+      .control-arrow {
+        display: none;
       }
     }
   }
 
-  &__countDown{
+  &__countDown {
     position: absolute;
-    bottom: 132px;
-    right: 1px;
+    bottom: 126px;
+    right: 0;
   }
 
   @include media-breakpoint-down(sm) {
-
     .carousel-slider {
       .slider-wrapper {
         margin-bottom: 2rem;
+        border-left: 0;
+        border-right: 0;
 
         .slider {
           .slide {
-            border-top: 1px solid #F5F5F5;
-            border-bottom: 1px solid #F5F5F5;
-
             img {
               max-height: 400px;
             }
@@ -127,6 +145,12 @@
       /// Dot Indicatiors
       .control-dots {
         display: block;
+        bottom: -30px !important;
+      }
+
+      // Arrows (hide on mobile view)
+      .control-arrow {
+        display: none;
       }
     }
 
@@ -135,21 +159,8 @@
         display: none;
       }
     }
-    &__countDown{
-      bottom:32px;
-    }
-  }
-}
-
-.showIndicators {
-  .carousel {
-    .thumbs-wrapper {
-      .control-disabled {
-        opacity: .4;
-        cursor: inherit;
-        display: inline;
-        pointer-events: none;
-      }
+    &__countDown {
+      bottom: 0px;
     }
   }
 }

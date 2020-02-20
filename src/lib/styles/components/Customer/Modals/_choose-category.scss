@@ -70,8 +70,10 @@
   }
 
   @include media-breakpoint-down(sm) {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 120px;
 
-    padding: 80px 24px;
     .choose-category-footer {
       width: 100%;
 

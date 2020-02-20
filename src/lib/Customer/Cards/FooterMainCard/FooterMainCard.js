@@ -1,13 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import SecondaryButton from "../../../UI/Buttons/SecondaryButton";
+import generatePrice from '../../../Util/generatePrice';
 
 const FooterMainCard = ({ title, marketPrice, firstRange, secondRange, bindCount, onBindClick }) => {
-
-    const generateNewPrice = () => {
-        return bindCount >= 0 && bindCount >= firstRange.from && bindCount <= firstRange.to ? firstRange.price : secondRange.price;
-    }
-
     return (
         <div className="footerMainCard">
             <div className="row align-items-center">
@@ -22,7 +18,7 @@ const FooterMainCard = ({ title, marketPrice, firstRange, secondRange, bindCount
 
                         </div>
                         <div className="footerMainCard__content__priceValue">
-                            <h6 className="footerMainCard__content__priceValue__new">{generateNewPrice()} Kr</h6>
+                            <h6 className="footerMainCard__content__priceValue__new">{generatePrice(bindCount, firstRange, secondRange)} Kr</h6>
                             <h6 className="footerMainCard__content__priceValue__first">{marketPrice} Kr</h6>
                         </div>
                     </div>

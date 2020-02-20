@@ -28,10 +28,10 @@ const OrderNotDelivered = ({ loading, onClick, onCancel }) => {
                     <h4 className="orderDelivered--title">Er du sikker på at du vil fjerne <br/> alle markeringene som er levert?</h4>
 
                     <div className="orderDelivered--action mb-3">
-                        <SecondaryButton text="Merk alle som levert" onClick={onClick} loading={loading}/>
+                        <SecondaryButton text="Avbryt" onClick={ onCancel} loading={loading}/>
                     </div>
                     <div className="orderDelivered--action">
-                        <SecondaryOutlineButton text="Avbryt" onClick={onCancel} disabled={loading} />
+                        <SecondaryOutlineButton text="Fjern alle markeringer" onClick={onClick} disabled={loading} />
                     </div>
                 </div>
             </Modal>

@@ -33,12 +33,12 @@ function PublicLayout({ children, ...props }) {
                                         <div className="customFooter__list">
                                             <h5 className="customFooter__list__title">Følg Tipio</h5>
                                             <ul className="customFooter__list__content">
-                                                <li><a className="customFooter__list__content__link"
-                                                    href="https://www.facebook.com/">Facebook</a></li>
-                                                <li><a className="customFooter__list__content__link"
-                                                    href="https://instagram.com/">Instagram</a></li>
-                                                <li><a className="customFooter__list__content__link"
-                                                    href="https://www.linkedin.com/">Linkedin</a></li>
+                                            <li><a className="customFooter__list__content__link"
+                                            href="https://www.facebook.com/Tipio-667205140149721">Facebook</a></li>
+                                        <li><a className="customFooter__list__content__link"
+                                            href="https://www.instagram.com/tipio.no">Instagram</a></li>
+                                        <li><a className="customFooter__list__content__link"
+                                            href="https://www.linkedin.com/company/tipio/?viewAsMember=true">Linkedin</a></li>
                                             </ul>
                                         </div>
                                     </div>

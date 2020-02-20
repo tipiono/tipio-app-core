@@ -20,8 +20,8 @@ function TipioConfirmation({ image, expiresIn, share, ...props }) {
             <Modal showCloseButton {...props}>
                 <div className="tipio__confirmation">
 
-                    <a className="tipio__confirmation--image lazy-image" href="">
-                        <img className="img-fluid lazyload" src={image} width="310px" alt="Tipio with offer"/>
+                    <a className="tipio__confirmation--image" href="">
+                        <img className="img-fluid" src={image} width="310px" alt="Tipio with offer"/>
 
                         <div className="tipio__confirmation--timeLeft">
                             <TipioCountdown className="timer" expires_in={expiresIn}/>
@@ -29,7 +29,7 @@ function TipioConfirmation({ image, expiresIn, share, ...props }) {
                     </a>
 
                     <h3 className="tipio__confirmation--title">Dere er sterkere sammen!!</h3>
-                    <p className="tipio__confirmation--description">For å øke sjansen til at Tipio skal gå igjennom kan du invitere venner som kan være  interessert i det samme. </p>
+                    <p className="tipio__confirmation--description">For å øke sjansen til at Tipio skal gå igjennom kan du invitere venner som kan være  interessert i det samme.</p>
                     <ul className="tipio__confirmation__share">
                         <FacebookShareButton
                             url={share.link}

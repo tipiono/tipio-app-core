@@ -49,14 +49,14 @@ var OrderNotDelivered = function OrderNotDelivered(_ref) {
   }, "Er du sikker p\xE5 at du vil fjerne ", _react.default.createElement("br", null), " alle markeringene som er levert?"), _react.default.createElement("div", {
     className: "orderDelivered--action mb-3"
   }, _react.default.createElement(_SecondaryButton.default, {
-    text: "Merk alle som levert",
-    onClick: onClick,
+    text: "Avbryt",
+    onClick: onCancel,
     loading: loading
   })), _react.default.createElement("div", {
     className: "orderDelivered--action"
   }, _react.default.createElement(_SecondaryOutlineButton.default, {
-    text: "Avbryt",
-    onClick: onCancel,
+    text: "Fjern alle markeringer",
+    onClick: onClick,
     disabled: loading
   })))));
 };
