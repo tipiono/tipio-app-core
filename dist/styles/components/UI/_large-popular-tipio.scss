@@ -3,14 +3,12 @@
     overflow: hidden;
     margin-bottom: 2.5rem;
     position: relative;
-
-    &.lazy-image {
-      background: linear-gradient(rgba(41, 44, 49, .05) 50%, rgba(41, 44, 49, 0.20));
-    }
+    text-align: center;
+    background: $white;
 
     &--image {
       max-width: 100%;
-      height: auto;
+      max-height: 500px;
       -webkit-transform: translateZ(0) scale(1.01, 1.01);
       transform: translateZ(0) scale(1.01, 1.01);
     }
@@ -39,12 +37,19 @@
     &--title {
       font-size: 3.5rem;
       font-family: 'Riposte-Regular', sans-serif;
+      color: $primary;
+      margin-bottom: 1.5rem;
+
+      &:hover {
+        text-decoration-color: $gray-100;
+        color: $primary;
+      }
     }
 
     &--description {
       display: block;
       font-size: 2.25rem;
-      margin-bottom: 1rem;
+      margin-bottom: 8px;
       font-family: 'Riposte-Light', sans-serif;
       color: $gray-700;
 
@@ -58,7 +63,7 @@
     &__price {
       display: flex;
       flex-direction: row;
-      margin-bottom: 2.25rem;
+      margin-bottom: 2.5rem;
 
       &--marketprice {
         font-size: 1.5rem;
@@ -83,15 +88,21 @@
       color: $cyan;
       font-size: 1.5rem;
       font-family: 'Riposte-Regular', sans-serif;
-      margin-bottom: 2rem;
+      margin-bottom: 2.5rem;
     }
   }
 
   @include media-breakpoint-down(sm) {
+    &__preview {
+      &--image {
+        max-height: 320px;
+      }
+    }
     &__content {
       &--title {
         font-size: 2.25rem;
       }
+
       &--description {
         font-size: 1.5rem;
       }
@@ -100,6 +111,7 @@
         &--marketprice {
           font-size: 1.125rem;
         }
+
         &--saleprice {
           font-size: 1.125rem;
         }
@@ -107,6 +119,13 @@
 
       &--interested {
         font-size: 1rem;
+      }
+
+      &__submit {
+        button {
+          font-size: 0.75rem;
+          padding: 6px 1rem !important;
+        }
       }
     }
   }

@@ -45,10 +45,9 @@ var MediumPopularTipio = function MediumPopularTipio(_ref) {
     className: "mediumPopularTipio__content"
   }, _react.default.createElement("a", {
     href: "",
-    onClick: onClick
-  }, _react.default.createElement("h2", {
+    onClick: onClick,
     className: "mediumPopularTipio__content--title"
-  }, title)), _react.default.createElement("p", {
+  }, title), _react.default.createElement("p", {
     className: "mediumPopularTipio__content--description"
   }, brand), children));
 };
