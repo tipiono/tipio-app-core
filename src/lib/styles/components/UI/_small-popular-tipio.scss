@@ -1,16 +1,16 @@
 .smallPopularTipio {
   &__preview {
     overflow: hidden;
-    margin-bottom: 2.5rem;
+    margin-bottom: 1.5rem;
     position: relative;
-
-    &.lazy-image {
-      background: linear-gradient(rgba(41, 44, 49, 0.05) 50%, rgba(41, 44, 49, 0.2));
-    }
+    background: $white;
+    text-align: center;
 
     &--image {
       max-width: 100%;
-      height: auto;
+      height: 360px;
+      background: $white;
+      object-fit: contain;
       -webkit-transform: translateZ(0) scale(1.01, 1.01);
       transform: translateZ(0) scale(1.01, 1.01);
     }
@@ -37,14 +37,20 @@
     text-align: center;
 
     &--title {
-      font-size: calculateRem(36px);
+      font-size: 2.25rem;
       font-family: 'Riposte-Regular', sans-serif;
+      color: $primary;
+
+      &:hover {
+        text-decoration-color: $gray-100;
+        color: $primary;
+      }
     }
 
     &--description {
       display: block;
-      font-size: calculateRem(24px);
       margin-bottom: 1rem;
+      font-size: 1.5rem;
       font-family: 'Riposte-Light', sans-serif;
       color: $gray-700;
 
@@ -60,7 +66,7 @@
       margin-bottom: 2.25rem;
 
       &--marketprice {
-        font-size: calculateRem(24px);
+        font-size: 1.5rem;
         color: $gray-700;
         text-decoration: line-through;
         margin-right: 2rem;
@@ -68,7 +74,7 @@
       }
 
       &--saleprice {
-        font-size: calculateRem(24px);
+        font-size: 1.5rem;
         margin-bottom: 0;
         color: $cyan;
       }
@@ -87,6 +93,12 @@
   }
 
   @include media-breakpoint-down(sm) {
+    &__preview {
+      &--image {
+        max-height: 320px;
+      }
+    }
+
     &__content {
       &--title {
         font-size: 2.25rem;
@@ -101,6 +113,16 @@
         }
         &--saleprice {
           font-size: 1.125rem;
+        }
+      }
+
+      &__submit {
+        button {
+          font-size: 0.75rem;
+          padding: 6px 2rem !important;
+          margin: 0 auto;
+          width: auto;
+
         }
       }
     }

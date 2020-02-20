@@ -33,7 +33,7 @@ const MediumPopularTipio = ({
             </div>
 
             <div className="mediumPopularTipio__content">
-                <a href="" onClick={onClick}><h2 className="mediumPopularTipio__content--title">{title}</h2></a>
+                <a href="" onClick={onClick} className="mediumPopularTipio__content--title">{title}</a>
                 <p className="mediumPopularTipio__content--description">{brand}</p>
 
                 {children}
