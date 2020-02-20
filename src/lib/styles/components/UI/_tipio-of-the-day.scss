@@ -1,7 +1,6 @@
 .tipioOfTheDay {
     display: flex;
     justify-content: space-between;
-    padding: 6.875rem 0 9.375rem;
     width: 100%;
 
     &__preview {
@@ -73,8 +72,6 @@
 
     @include media-breakpoint-down(md) {
         flex-direction: column;
-        padding-top: 0;
-        padding-bottom: 3.75rem;
 
         &__preview {
             width: 100%;

@@ -37,7 +37,7 @@ const SmallPopularTipio = ({
             </div>
 
             <div className="smallPopularTipio__content">
-                <a href="" onClick={onClick}><h2 className="smallPopularTipio__content--title">{title}</h2></a>
+                <a href="" onClick={onClick} className="smallPopularTipio__content--title">{title}</a>
                 <p className="smallPopularTipio__content--description">{brand}</p>
 
                 {children}
