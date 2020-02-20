@@ -71,7 +71,7 @@ var SingleBiddingCard = function SingleBiddingCard(_ref) {
     href: "/"
   }, _react.default.createElement("h2", {
     className: "singleBiddingCard__body--content--title"
-  }, title)), _react.default.createElement("h4", {
+  }, title)), brand && _react.default.createElement("h4", {
     className: "singleBiddingCard__body--content--description"
   }, brand)), _react.default.createElement("div", {
     className: "singleBiddingCard__body--price"
@@ -81,10 +81,10 @@ var SingleBiddingCard = function SingleBiddingCard(_ref) {
     className: "singleBiddingCard__body--price--sale"
   }, (0, _generatePrice.default)(bindingCount, firstRange, secondRange), " Kr")), _react.default.createElement("div", {
     className: "singleBiddingCard__body--salesbar"
-  }, _react.default.createElement(_SalesProgressBar.default, {
+  }, bindingCount > 0 ? _react.default.createElement(_SalesProgressBar.default, {
     percentage: bindingPercentage,
     bindingCount: bindingCount
-  })), _react.default.createElement("span", {
+  }) : ''), _react.default.createElement("span", {
     className: "singleBiddingCard__body--addToCart"
   }, props.binded ? _react.default.createElement(_SecondaryButton.default, {
     text: "Del n\xE5",

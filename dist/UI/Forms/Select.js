@@ -34,11 +34,7 @@ function Select(_ref) {
       name = _ref.name;
 
   //const [value, setValue] = useState({ value: defaultValue, label: defaultValue} || false);
-  var _onChange = function _onChange(v) {
-    onChange(v || {
-      value: 1,
-      label: 1
-    });
+  var _onChange = function _onChange(v) {// onChange(v || { value: 1, label: 1})
   };
 
   return _react.default.createElement("div", {
