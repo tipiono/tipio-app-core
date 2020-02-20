@@ -56,7 +56,7 @@ function BiddingCard({
 
           <div className="biddingCard__body--salesbar">
             {!bindHasExpired &&
-              (bindingCount > 0 ? (<> Test
+              (bindingCount > 0 ? (<> 
                 <SalesProgressBar
                   percentage={salesProgressBarPercentage}
                   bindingCount={bindingCount}
