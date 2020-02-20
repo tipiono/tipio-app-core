@@ -14,10 +14,12 @@
       margin-right: 1.625rem;
       border: 1px solid #F5F5F5;
       overflow: hidden;
+      background: $white;
+      text-align: center;
 
       &--image {
         max-width: 100%;
-        height: auto;
+        max-height: 260px;
         -webkit-transform: translateZ(0) scale(1.01, 1.01);
         transform: translateZ(0) scale(1.01, 1.01);
       }

@@ -8,11 +8,12 @@ function ImageSlider({ images, showThumbs, showTimer, tipio_expires_in }) {
     return <>
         <div className={cx('imageSlider', images && { showIndicators: images.length >= 5 }, { removeMargin: images.length < 5 })}>
             <Carousel
-                showIndicators={true}
+                showIndicators={images.length >= 2}
                 showArrows={images.length >= 5}
                 showStatus={false}
                 showThumbs={showThumbs}
                 infiniteLoop
+                renderBottomCenterControls={false}
             >
                 {images && images.map((item) => (
                     <img src={item.blob_url} alt="..." />

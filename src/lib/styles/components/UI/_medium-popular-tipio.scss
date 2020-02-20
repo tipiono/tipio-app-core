@@ -8,14 +8,14 @@
     width: 50%;
     overflow: hidden;
     position: relative;
-
-    &.lazy-image {
-      background: linear-gradient(rgba(41, 44, 49, 0.05) 50%, rgba(41, 44, 49, 0.2));
-    }
+    background: white;
+    text-align: center;
 
     &--image {
       max-width: 100%;
-      height: auto;
+      max-height: 460px;
+      background: white;
+      object-fit: contain;
       -webkit-transform: translateZ(0) scale(1.01, 1.01);
       transform: translateZ(0) scale(1.01, 1.01);
     }
@@ -43,6 +43,12 @@
       font-size: 2.25rem;
       font-family: 'Riposte-Regular', sans-serif;
       margin-bottom: 0;
+      color: $primary;
+
+      &:hover {
+        text-decoration-color: $gray-100;
+        color: $primary;
+      }
     }
 
     &--description {
@@ -91,6 +97,10 @@
     &__preview {
       width: 100%;
       margin-bottom: 1.5rem;
+
+      &--image {
+        max-height: 320px;
+      }
     }
 
     &__content {
@@ -127,9 +137,9 @@
 
       &__submit {
         button {
-          margin: 0 auto;
           font-size: 0.75rem;
-          padding: 6px 1rem !important;
+          padding: 6px 2rem !important;
+          margin: 0 auto;
           width: auto;
         }
       }

@@ -13,7 +13,7 @@ const BaseCard = ({ children, ...props }) => {
 
                 {
                     props.inventory && (
-                        <p className="customerSidebarCard__header__stock">Kun {props.inventory} igjen </p>
+                        <p className="customerSidebarCard__header__stock">Kun {props.inventory} igjen</p>
                     )
                 }
 
