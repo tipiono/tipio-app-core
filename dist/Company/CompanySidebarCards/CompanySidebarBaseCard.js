@@ -33,7 +33,7 @@ var CompanySidebarBaseCard = function CompanySidebarBaseCard(_ref) {
     className: "companySidebarCard__header__cost"
   }, _react.default.createElement("p", {
     className: "companySidebarCard__header__cost--label"
-  }, "Potensiell omsetning"), props.loading ? _react.default.createElement("div", {
+  }, "Omsetning"), props.loading ? _react.default.createElement("div", {
     className: "placeholder-content companySidebarCard__header--placeholder"
   }, "\xA0") : _react.default.createElement("h3", {
     className: "companySidebarCard__header__cost--price"

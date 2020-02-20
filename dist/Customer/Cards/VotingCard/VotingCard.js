@@ -18,7 +18,8 @@ function VotingCard(_ref) {
       brand = _ref.brand,
       expiresIn = _ref.expiresIn,
       children = _ref.children,
-      onClick = _ref.onClick;
+      onClick = _ref.onClick,
+      voteHasExpired = _ref.voteHasExpired;
   return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("div", {
     className: "votingCard"
   }, _react.default.createElement("div", {
@@ -39,13 +40,13 @@ function VotingCard(_ref) {
     expires_in: expiresIn
   }))), _react.default.createElement("div", {
     className: "votingCard__body"
-  }, _react.default.createElement("div", {
+  }, !voteHasExpired ? _react.default.createElement("div", {
     className: "votingCard__body--interested"
   }, _react.default.createElement("h3", {
     className: "votingCard__body--interested--counter"
   }, interestedCounter || 1), _react.default.createElement("p", {
     className: "votingCard__body--interested--label"
-  }, "Interesserte!")), _react.default.createElement("div", {
+  }, "Interesserte!")) : '', _react.default.createElement("div", {
     className: "votingCard__body--content"
   }, _react.default.createElement("a", {
     onClick: onClick,

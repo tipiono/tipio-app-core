@@ -37,7 +37,7 @@ var LargePopularBidingTipio = function LargePopularBidingTipio(props) {
   }, props.binded ? _react.default.createElement(_SecondaryButton.default, {
     text: "Del n\xE5",
     onClick: props.shareOnClick
-  }) : _react.default.createElement(_SecondaryOutlineButton.default, {
+  }) : _react.default.createElement(_SecondaryButton.default, {
     text: "Legg i handlekurv",
     onClick: props.bindOnClick
   })));
