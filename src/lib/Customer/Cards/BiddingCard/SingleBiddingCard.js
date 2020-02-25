@@ -49,7 +49,9 @@ const SingleBiddingCard = ({
                             {title}
                         </h2>
                     </a>
-                    <h4 className="singleBiddingCard__body--content--description">{brand}</h4>
+                    {brand &&
+                        <h4 className="singleBiddingCard__body--content--description">{brand}</h4>
+                    }
                 </div>
 
                 <div className="singleBiddingCard__body--price">
@@ -58,10 +60,9 @@ const SingleBiddingCard = ({
                 </div>
 
                 <div className="singleBiddingCard__body--salesbar">
-                    <SalesProgressBar
-                        percentage={bindingPercentage}
-                        bindingCount={bindingCount}
-                    />
+                    {
+                        bindingCount > 0 ? (<SalesProgressBar percentage={bindingPercentage} bindingCount={bindingCount} />) : ''
+                    }
                 </div>
                 <span className="singleBiddingCard__body--addToCart">
                     {props.binded ? (
