@@ -13,8 +13,6 @@ const MediumPopularTipio = ({
     images,
     brand,
     type,
-    market_price,
-    new_price,
     onClick
 }) => {
 
@@ -27,9 +25,13 @@ const MediumPopularTipio = ({
                     src={images && images.length && images[0].blob_url}
                     alt=""
                 />
-                <div className="mediumPopularTipio__preview--timeLeft">
-                    <TipioCountdown className="timer" expires_in={binding_expires_in} />
-                </div>
+                {
+                    type === 2 && (
+                        <div className="mediumPopularTipio__preview--timeLeft">
+                            <TipioCountdown className="timer" expires_in={binding_expires_in} />
+                        </div>
+                    )
+                }
             </div>
 
             <div className="mediumPopularTipio__content">

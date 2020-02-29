@@ -19,12 +19,8 @@ var LargePopularTipio = function LargePopularTipio(_ref) {
       subtitle = _ref.subtitle,
       binding_expires_in = _ref.binding_expires_in,
       images = _ref.images,
-      brand = _ref.brand,
       onClick = _ref.onClick,
-      voteOnClick = _ref.voteOnClick,
-      shareOnClick = _ref.shareOnClick,
-      has_offer = _ref.has_offer,
-      joined = _ref.joined;
+      type = _ref.type;
 
   var _useTranslation = (0, _reactI18next.useTranslation)(),
       t = _useTranslation.t;
@@ -39,7 +35,7 @@ var LargePopularTipio = function LargePopularTipio(_ref) {
     "data-src": images && images.length && images[0].blob_url,
     src: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 2'%3E%3C/svg%3E",
     alt: ""
-  }), has_offer && _react.default.createElement("div", {
+  }), type === 2 && _react.default.createElement("div", {
     className: "largePopularTipio__preview--timeLeft"
   }, _react.default.createElement(_tipioAppCore.TipioCountdown, {
     className: "timer",

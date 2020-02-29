@@ -1,7 +1,8 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import {
-    TipioCountdown }
+    TipioCountdown
+}
     from 'tipio-app-core';
 
 const SmallPopularTipio = ({
@@ -11,15 +12,10 @@ const SmallPopularTipio = ({
     images,
     brand,
     type,
-    market_price,
-    new_price,
-    has_offer,
     onClick
 }) => {
     const { t } = useTranslation();
-
     return (
-
         <div className="smallPopularTipio">
             <div className="smallPopularTipio__preview lazy-image" onClick={onClick}>
                 <img
@@ -28,7 +24,7 @@ const SmallPopularTipio = ({
                     alt=""
                 />
                 {
-                    has_offer && (
+                    type === 2 && (
                         <div className="smallPopularTipio__preview--timeLeft">
                             <TipioCountdown className="timer" expires_in={binding_expires_in} />
                         </div>

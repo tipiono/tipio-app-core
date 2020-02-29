@@ -115,7 +115,6 @@ function (_Component) {
   }, {
     key: "render",
     value: function render() {
-      console.log(this.props);
       var showCloseButton = this.props.showCloseButton;
       var modalOnClose = this.modalOnClose;
 
