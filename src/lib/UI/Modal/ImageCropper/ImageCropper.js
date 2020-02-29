@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Modal, ModalType} from '../Modal'
+import { Modal, ModalType } from '../Modal'
 import 'cropperjs/dist/cropper.css';
 import Cropper from 'cropperjs';
 import GrayOutlineButton from '../../Buttons/GrayOutlineButton';
@@ -50,11 +50,10 @@ class ImageCropper extends Component {
         })
     }
     render() {
-        console.log(this.props);
         let showCloseButton = this.props.showCloseButton;
         let modalOnClose = this.modalOnClose;
-        if (!showCloseButton){
-            modalOnClose = ()=>{};
+        if (!showCloseButton) {
+            modalOnClose = () => { };
         }
         return (
             <>
@@ -68,8 +67,8 @@ class ImageCropper extends Component {
                                 </div>
                             </div>}
 
-                            <div style={{opacity: this.state.cropperReady ? 100 : 0, width: "350px", height: "350px"}}>
-                                <img id="image" src={this.props.image.preview}/>
+                            <div style={{ opacity: this.state.cropperReady ? 100 : 0, width: "350px", height: "350px" }}>
+                                <img id="image" src={this.props.image.preview} />
                             </div>
 
                             {this.props.indicator && this.props.indicator}
