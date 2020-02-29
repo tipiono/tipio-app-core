@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import ReactSelect from 'react-select';
-import ErrorMessage from '../ErrorMessage/ErrorMessage';
+// import ErrorMessage from '../ErrorMessage/ErrorMessage';
 
 function Select({ placeholder, options, label, onChange, defaultValue, displayErrors, errors, name }) {
     const [value, setValue] = useState({ value: defaultValue, label: defaultValue } || false);

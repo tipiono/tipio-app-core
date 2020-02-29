@@ -20,8 +20,6 @@ var MediumPopularTipio = function MediumPopularTipio(_ref) {
       images = _ref.images,
       brand = _ref.brand,
       type = _ref.type,
-      market_price = _ref.market_price,
-      new_price = _ref.new_price,
       onClick = _ref.onClick;
 
   var _useTranslation = (0, _reactI18next.useTranslation)(),
@@ -36,7 +34,7 @@ var MediumPopularTipio = function MediumPopularTipio(_ref) {
     className: "mediumPopularTipio__preview--image lazyload",
     src: images && images.length && images[0].blob_url,
     alt: ""
-  }), _react.default.createElement("div", {
+  }), type === 2 && _react.default.createElement("div", {
     className: "mediumPopularTipio__preview--timeLeft"
   }, _react.default.createElement(_tipioAppCore.TipioCountdown, {
     className: "timer",

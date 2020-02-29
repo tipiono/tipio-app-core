@@ -10,12 +10,8 @@ const LargePopularTipio = ({
     subtitle,
     binding_expires_in,
     images,
-    brand,
     onClick,
-    voteOnClick,
-    shareOnClick,
-    has_offer,
-    joined,
+    type,
 }) => {
     const { t } = useTranslation();
     return (
@@ -28,7 +24,7 @@ const LargePopularTipio = ({
                     alt=""
                 />
                 {
-                    has_offer && (
+                    type === 2 && (
                         <div className="largePopularTipio__preview--timeLeft">
                             <TipioCountdown className="timer" expires_in={binding_expires_in} />
                         </div>
