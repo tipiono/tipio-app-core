@@ -13,8 +13,6 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _reactSelect = _interopRequireDefault(require("react-select"));
 
-var _ErrorMessage = _interopRequireDefault(require("../ErrorMessage/ErrorMessage"));
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
@@ -29,6 +27,7 @@ function _iterableToArrayLimit(arr, i) { if (!(Symbol.iterator in Object(arr) ||
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
+// import ErrorMessage from '../ErrorMessage/ErrorMessage';
 function Select(_ref) {
   var placeholder = _ref.placeholder,
       options = _ref.options,

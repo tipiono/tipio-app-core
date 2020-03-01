@@ -456,6 +456,17 @@ body.noscroll {
     .shoppingbag-action-item {
       width: 48%;
     }
+
+    @media (max-width: 320.98px) {
+      .shoppingbag-action-item {
+        width: auto;
+      }
+      .goToCheckout {
+        button {
+          width: auto;
+        }
+      }
+    }
   }
 
   .custom-alert {
