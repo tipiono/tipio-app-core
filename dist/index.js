@@ -875,6 +875,12 @@ Object.defineProperty(exports, "EmptyBagIcon", {
     return _EmptyBagIcon.default;
   }
 });
+Object.defineProperty(exports, "ConfirmedIcon", {
+  enumerable: true,
+  get: function get() {
+    return _ConfirmedIcon.default;
+  }
+});
 Object.defineProperty(exports, "WithAnimation", {
   enumerable: true,
   get: function get() {
@@ -1194,6 +1200,8 @@ var _FilterIcon = _interopRequireDefault(require("./UI/Icons/FilterIcon"));
 var _FilterIconCyan = _interopRequireDefault(require("./UI/Icons/FilterIconCyan"));
 
 var _EmptyBagIcon = _interopRequireDefault(require("./UI/Icons/EmptyBagIcon"));
+
+var _ConfirmedIcon = _interopRequireDefault(require("./UI/Icons/ConfirmedIcon"));
 
 var _withAnimation = _interopRequireDefault(require("./effects/withAnimation"));
 
