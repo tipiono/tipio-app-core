@@ -164,6 +164,7 @@ import CloseIcon from "./UI/Icons/CloseIcon";
 import FilterIcon from "./UI/Icons/FilterIcon";
 import FilterIconCyan from "./UI/Icons/FilterIconCyan";
 import EmptyBagIcon from "./UI/Icons/EmptyBagIcon";
+import ConfirmedIcon from "./UI/Icons/ConfirmedIcon";
 
 /**
  * Effects
@@ -330,5 +331,6 @@ export {
     MediumPopularVotingTipioEdit,
     TipioOfTheDayBidding,
     SingleBiddingCard,
-    SingleVotingCard
+    SingleVotingCard,
+    ConfirmedIcon
 };
