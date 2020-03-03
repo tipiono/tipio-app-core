@@ -41,8 +41,7 @@ GrayOutlineButton.defaultProps = {
 };
 GrayOutlineButton.propTypes = {
   loading: _propTypes.default.bool,
-  text: _propTypes.default.string.isRequired,
-  children: _propTypes.default.instanceOf(Array).isRequired
+  text: _propTypes.default.string.isRequired
 };
 var _default = GrayOutlineButton;
 exports.default = _default;
