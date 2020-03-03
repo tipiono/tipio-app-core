@@ -11,6 +11,10 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _Modal = require("../Modal");
 
+var _ConfirmedIcon = _interopRequireDefault(require("../../Icons/ConfirmedIcon"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
@@ -24,8 +28,9 @@ function SuccessModal(_ref) {
       successDescription = _ref.successDescription,
       animationURL = _ref.animationURL,
       videoURL = _ref.videoURL,
+      imageURL = _ref.imageURL,
       children = _ref.children,
-      props = _objectWithoutProperties(_ref, ["successTitle", "successDescription", "animationURL", "videoURL", "children"]);
+      props = _objectWithoutProperties(_ref, ["successTitle", "successDescription", "animationURL", "videoURL", "imageURL", "children"]);
 
   var renderVideo = function renderVideo() {
     return _react.default.createElement("video", {
@@ -48,13 +53,20 @@ function SuccessModal(_ref) {
     });
   };
 
+  var renderSvg = function renderSvg() {
+    return _react.default.createElement("div", {
+      className: "successModal--animation"
+    }, _react.default.createElement(_ConfirmedIcon.default, null));
+  };
+
+  console.log(animationURL);
   return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_Modal.Modal, props, _react.default.createElement("div", {
     className: "successModal"
-  }, videoURL ? renderVideo() : renderImage(), _react.default.createElement("h3", {
+  }, imageURL ? renderSvg() : videoURL ? renderVideo() : renderImage(), _react.default.createElement("h3", {
     className: "successModal--title"
   }, successTitle), _react.default.createElement("p", {
     className: "successModal--description"
-  }, successDescription)), children && children));
+  }, successDescription), children && children)));
 }
 
 var _default = SuccessModal;
