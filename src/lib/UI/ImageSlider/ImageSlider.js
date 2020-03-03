@@ -5,8 +5,9 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import TipioCountdown from '../TipioCountdown/TipioCountdown';
 
 function ImageSlider({ images, showThumbs, showTimer, tipio_expires_in }) {
+    console.log(images.length<5)
     return <>
-        <div className={cx('imageSlider', images && { showIndicators: images.length >= 5 }, { removeMargin: images.length < 5 })}>
+        <div className={cx('imageSlider', images && { showIndicators: images.length >= 5 }, images && { removeMargin: images.length < 5 })}>
             <Carousel
                 showIndicators={images.length >= 2}
                 showArrows={images.length >= 5}

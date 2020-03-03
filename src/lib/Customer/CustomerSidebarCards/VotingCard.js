@@ -27,7 +27,7 @@ const VotingCard = ({ state, ...props }) => {
                 <GrayOutlineButton text="Meldt av interesse" onClick={props.notInterestedOnClick} />
             </div>}
 
-            <p className="customerSidebarCard__footer--interestedCounter">Allerede {props.meta.joined_count} Interesserte!</p>
+            {props.meta.joined_count >0 ? <p className="customerSidebarCard__footer--interestedCounter">Allerede {props.meta.joined_count} Interesserte!</p> :''}
 
         </BaseCard>
     )
