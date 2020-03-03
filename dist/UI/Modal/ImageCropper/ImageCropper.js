@@ -84,7 +84,8 @@ function (_Component) {
         crop: function crop(event) {},
         ready: function ready() {
           setCropperReady(cropper);
-        }
+        },
+        viewMode: 1
       });
     }
   }, {
