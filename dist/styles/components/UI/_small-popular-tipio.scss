@@ -101,19 +101,28 @@
 
     &__content {
       &--title {
-        font-size: 2.25rem;
+        font-size: 1.5rem;
+        font-family: 'Riposte-Medium', sans-serif;
+        margin-bottom: .5rem;
       }
       &--description {
-        font-size: 1.5rem;
+        font-size: 1rem;
+        margin-bottom: 1.2rem;
       }
 
       &__price {
+        margin-bottom: 1.5rem;
+
         &--marketprice {
           font-size: 1.125rem;
         }
         &--saleprice {
           font-size: 1.125rem;
         }
+      }
+
+      &--interested {
+        margin-bottom: 1.5rem;
       }
 
       &__submit {

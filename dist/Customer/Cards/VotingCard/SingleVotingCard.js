@@ -42,7 +42,7 @@ var SingleVotingCard = function SingleVotingCard(_ref) {
     href: "/"
   }, _react.default.createElement("h5", {
     className: "singleVotingCard__body--content--title"
-  }, title)), _react.default.createElement("h4", {
+  }, title)), brand && _react.default.createElement("h4", {
     className: "singleVotingCard__body--content--description"
   }, brand)), _react.default.createElement("h3", {
     className: "singleVotingCard__body--content--interested"

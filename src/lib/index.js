@@ -18,6 +18,7 @@ import { Accordion } from "./UI/Accordion/Accordion";
 import PinkyCountdownSM from "./UI/Countdown/PinkyCountdownSM";
 import TipioCountdown from "./UI/TipioCountdown/TipioCountdown";
 import Select from "./UI/Forms/Select";
+import SelectWithCustomOptions from "./UI/Forms/SelectWithCustomOptions";
 import * as CountdownType from "./UI/Countdown/CountdownType";
 import Input from "./UI/Forms/Input";
 import BirthdayInput from "./UI/Forms/BirthdayInput";
@@ -163,6 +164,7 @@ import CloseIcon from "./UI/Icons/CloseIcon";
 import FilterIcon from "./UI/Icons/FilterIcon";
 import FilterIconCyan from "./UI/Icons/FilterIconCyan";
 import EmptyBagIcon from "./UI/Icons/EmptyBagIcon";
+import ConfirmedIcon from "./UI/Icons/ConfirmedIcon";
 
 /**
  * Effects
@@ -220,6 +222,7 @@ export {
     BirthdayInput,
     Textarea,
     Select,
+    SelectWithCustomOptions,
     Checkbox,
     RadioButton,
     ToggleSwitch,
@@ -328,5 +331,6 @@ export {
     MediumPopularVotingTipioEdit,
     TipioOfTheDayBidding,
     SingleBiddingCard,
-    SingleVotingCard
+    SingleVotingCard,
+    ConfirmedIcon
 };

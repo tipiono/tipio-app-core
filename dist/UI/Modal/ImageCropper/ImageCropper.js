@@ -78,7 +78,7 @@ function (_Component) {
 
       var image = document.getElementById('image');
       var cropper = new _cropperjs.default(image, {
-        // aspectRatio: this.props.aspectRatio || 2 / 3,
+        aspectRatio: this.props.aspectRatio || '',
         // modal: false,
         background: false,
         crop: function crop(event) {},
@@ -115,7 +115,6 @@ function (_Component) {
   }, {
     key: "render",
     value: function render() {
-      console.log(this.props);
       var showCloseButton = this.props.showCloseButton;
       var modalOnClose = this.modalOnClose;
 

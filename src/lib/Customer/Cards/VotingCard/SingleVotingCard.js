@@ -29,7 +29,9 @@ const SingleVotingCard = ({ title,
                             {title}
                         </h5>
                     </a>
-                    <h4 className="singleVotingCard__body--content--description">{brand}</h4>
+                    {brand &&
+                        <h4 className="singleVotingCard__body--content--description">{brand}</h4>
+                    }
                 </div>
 
                 <h3 className="singleVotingCard__body--content--interested">{joinCount} interesserte</h3>

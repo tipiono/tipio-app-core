@@ -1,25 +1,25 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import ReactSelect from 'react-select';
-// import ErrorMessage from '../ErrorMessage/ErrorMessage';
+import CreatableSelect from 'react-select/creatable';
+import ErrorMessage from '../ErrorMessage/ErrorMessage';
 
 function Select({ placeholder, options, label, onChange, defaultValue, displayErrors, errors, name }) {
-    const [value, setValue] = useState({ value: defaultValue, label: defaultValue } || false);
+    //const [value, setValue] = useState({ value: defaultValue, label: defaultValue} || false);
 
     const _onChange = (v) => {
-        setValue(v);
-        onChange(v);
+        // onChange(v || { value: 1, label: 1})
     };
     return (
 
         <div className="custom-material-select">
             <label className="select-label">{label}</label>
-            <ReactSelect
-                value={value}
+            <CreatableSelect
+                isClearable
+                value={{ value: defaultValue, label: defaultValue }}
                 onChange={_onChange}
                 options={options.map(x => ({ value: x, label: x }))}
                 placeholder={placeholder || '-'}
-                isClearable={false}
             />
 
             {/*{displayErrors && errors && errors[name] &&*/}
