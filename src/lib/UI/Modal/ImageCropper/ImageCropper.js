@@ -24,7 +24,7 @@ class ImageCropper extends Component {
         };
         const image = document.getElementById('image');
         const cropper = new Cropper(image, {
-            // aspectRatio: this.props.aspectRatio || 2 / 3,
+            aspectRatio: this.props.aspectRatio || '',
             // modal: false,
             background: false,
             crop(event) {
