@@ -43,6 +43,10 @@
   &__footer {
     &--action {
       margin-bottom: 2rem;
+
+        &--notInterested {
+            margin-top: 1rem;
+        }
     }
 
     &--alert {

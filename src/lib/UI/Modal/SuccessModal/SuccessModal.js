@@ -1,9 +1,10 @@
 import React, { Children } from "react";
 import {Modal} from '../Modal';
+import cx from 'classnames';
 import ConfirmedIcon from "../../Icons/ConfirmedIcon";
 
 
-function SuccessModal({successTitle, successDescription, animationURL, videoURL, imageURL, children, ...props}) {
+function SuccessModal({successTitle, successDescription, animationURL, videoURL, imageURL, customStyle, children, ...props}) {
     const renderVideo = () => (
         <video poster={animationURL} playsinline="" autoPlay="" muted="" loop="">
             <source src={videoURL} type="video/mp4" />
@@ -22,7 +23,7 @@ function SuccessModal({successTitle, successDescription, animationURL, videoURL,
     return (
         <>
             <Modal {...props}>
-                <div className="successModal">
+                <div className={cx("successModal", customStyle)}>
                     {
                         imageURL ? renderSvg() :(videoURL ? renderVideo() : renderImage())
                     }
