@@ -22,7 +22,6 @@ function ImageSlider(_ref) {
       showThumbs = _ref.showThumbs,
       showTimer = _ref.showTimer,
       tipio_expires_in = _ref.tipio_expires_in;
-  console.log(images.length < 5);
   return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("div", {
     className: (0, _classnames.default)('imageSlider', images && {
       showIndicators: images.length >= 5
