@@ -4,21 +4,23 @@ import {
 } from 'tipio-app-core';
 
 function TipioOfTheDay({
+    id,
     children,
     title,
     subtitle,
+    type,
     voting_expires_in,
     images,
     voteOnClick,
     shareOnClick,
     joined,
     onClick
- }) {
+}) {
 
     return (
         <div className="tipioOfTheDay">
             <a
-                href=""
+                href={`/tipio/vote/${id}`}
                 onClick={onClick}
                 className="tipioOfTheDay__preview"
             >
@@ -29,12 +31,12 @@ function TipioOfTheDay({
                 />
 
                 <div className="tipioOfTheDay__preview--timeLeft">
-                    <TipioCountdown className="timer" expires_in={voting_expires_in}/>
+                    <TipioCountdown className="timer" expires_in={voting_expires_in} />
                 </div>
             </a>
 
             <div className="tipioOfTheDay__content">
-                <a href="/" className="tipioOfTheDay__content--title" onClick={onClick}>{title}</a>
+                <a href={`/tipio/vote/${id}`} className="tipioOfTheDay__content--title" onClick={onClick}>{title}</a>
 
                 <p className="tipioOfTheDay__content--description">{subtitle}</p>
 

@@ -1,11 +1,11 @@
 import React from 'react';
-import { useTranslation } from 'react-i18next';
 import {
     TipioCountdown
 }
     from 'tipio-app-core';
 
 const SmallPopularTipio = ({
+    id,
     children,
     title,
     binding_expires_in,
@@ -14,7 +14,6 @@ const SmallPopularTipio = ({
     type,
     onClick
 }) => {
-    const { t } = useTranslation();
     return (
         <div className="smallPopularTipio">
             <div className="smallPopularTipio__preview lazy-image" onClick={onClick}>
@@ -33,7 +32,7 @@ const SmallPopularTipio = ({
             </div>
 
             <div className="smallPopularTipio__content">
-                <a href="" onClick={onClick} className="smallPopularTipio__content--title">{title}</a>
+                <a href={`/tipio/${type === 2 ? 'bind' : 'vote'}/${id}`} onClick={onClick} className="smallPopularTipio__content--title">{title}</a>
                 <p className="smallPopularTipio__content--description">{brand}</p>
 
                 {children}
