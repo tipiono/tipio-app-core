@@ -18,7 +18,8 @@ var CompanySidebarBaseCard = function CompanySidebarBaseCard(_ref) {
       props = _objectWithoutProperties(_ref, ["children"]);
 
   var tipio = props.tipio,
-      meta = props.meta;
+      meta = props.meta,
+      generatedOmstening = props.generatedOmstening;
   return _react.default.createElement("div", {
     className: "companySidebarCard"
   }, _react.default.createElement("div", {
@@ -37,7 +38,7 @@ var CompanySidebarBaseCard = function CompanySidebarBaseCard(_ref) {
     className: "placeholder-content companySidebarCard__header--placeholder"
   }, "\xA0") : _react.default.createElement("h3", {
     className: "companySidebarCard__header__cost--price"
-  }, meta.potential_earning, " Kr"))), children);
+  }, generatedOmstening ? generatedOmstening : meta.potential_earning, " Kr"))), children);
 };
 
 var _default = CompanySidebarBaseCard;

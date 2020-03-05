@@ -78,13 +78,14 @@ function (_Component) {
 
       var image = document.getElementById('image');
       var cropper = new _cropperjs.default(image, {
-        // aspectRatio: this.props.aspectRatio || 2 / 3,
+        aspectRatio: this.props.aspectRatio || '',
         // modal: false,
         background: false,
         crop: function crop(event) {},
         ready: function ready() {
           setCropperReady(cropper);
-        }
+        },
+        viewMode: 1
       });
     }
   }, {

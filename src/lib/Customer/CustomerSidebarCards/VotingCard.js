@@ -24,10 +24,10 @@ const VotingCard = ({ state, ...props }) => {
             {state === 'interested' &&
             <div className="customerSidebarCard__footer--action">
                 <ShareButton onClick={props.shareOnClick} />
-                <GrayOutlineButton text="Meldt av interesse" onClick={props.notInterestedOnClick} />
+                <div className="customerSidebarCard__footer--action--notInterested"><GrayOutlineButton text="Meldt av interesse" onClick={props.notInterestedOnClick} /></div>
             </div>}
 
-            <p className="customerSidebarCard__footer--interestedCounter">Allerede {props.meta.joined_count} Interesserte!</p>
+            {props.meta.joined_count >0 ? <p className="customerSidebarCard__footer--interestedCounter">Allerede {props.meta.joined_count} Interesserte!</p> :''}
 
         </BaseCard>
     )

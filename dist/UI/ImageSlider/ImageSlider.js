@@ -25,7 +25,7 @@ function ImageSlider(_ref) {
   return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("div", {
     className: (0, _classnames.default)('imageSlider', images && {
       showIndicators: images.length >= 5
-    }, {
+    }, images && {
       removeMargin: images.length < 5
     })
   }, _react.default.createElement(_reactResponsiveCarousel.Carousel, {

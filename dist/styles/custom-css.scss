@@ -4,6 +4,11 @@
 .btn-secondary {
     color: $primary;
     letter-spacing: .75px;
+    
+    &:focus {
+        box-shadow: none !important;
+        outline: 0 !important;
+    }
 }
 
 .btn-secondary.disabled,
