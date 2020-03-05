@@ -3,6 +3,7 @@ import TipioCountdown from "../../../UI/TipioCountdown/TipioCountdown";
 import SalesProgressBar from "../../SalesProgressBar/SalesProgressBar";
 
 function BiddingCard({
+  id,
   image,
   title,
   brand,
@@ -20,7 +21,7 @@ function BiddingCard({
       <div className="biddingCard">
         <div className="biddingCard__header">
           <a
-            href=""
+            href={`/tipio/bind/${id}`}
             className="lazy-image biddingCard__header--preview"
             onClick={onClick}
           >
@@ -56,15 +57,15 @@ function BiddingCard({
 
           <div className="biddingCard__body--salesbar">
             {!bindHasExpired &&
-              (bindingCount > 0 ? (<> 
+              (bindingCount > 0 ? (<>
                 <SalesProgressBar
                   percentage={salesProgressBarPercentage}
                   bindingCount={bindingCount}
                 />
-                </>
+              </>
               ) : (
-                ""
-              ))}
+                  ""
+                ))}
           </div>
           <div className="biddingCard__body--share">{children}</div>
         </div>

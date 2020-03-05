@@ -14,7 +14,8 @@ var _SalesProgressBar = _interopRequireDefault(require("../../SalesProgressBar/S
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function BiddingCard(_ref) {
-  var image = _ref.image,
+  var id = _ref.id,
+      image = _ref.image,
       title = _ref.title,
       brand = _ref.brand,
       expiresIn = _ref.expiresIn,
@@ -30,7 +31,7 @@ function BiddingCard(_ref) {
   }, _react.default.createElement("div", {
     className: "biddingCard__header"
   }, _react.default.createElement("a", {
-    href: "",
+    href: "/tipio/bind/".concat(id),
     className: "lazy-image biddingCard__header--preview",
     onClick: onClick
   }, _react.default.createElement("img", {
