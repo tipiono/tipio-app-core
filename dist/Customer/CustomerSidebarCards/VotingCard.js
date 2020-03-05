@@ -44,10 +44,12 @@ var VotingCard = function VotingCard(_ref) {
     className: "customerSidebarCard__footer--action"
   }, _react.default.createElement(_ShareButton.default, {
     onClick: props.shareOnClick
-  }), _react.default.createElement(_GrayOutlineButton.default, {
+  }), _react.default.createElement("div", {
+    className: "customerSidebarCard__footer--action--notInterested"
+  }, _react.default.createElement(_GrayOutlineButton.default, {
     text: "Meldt av interesse",
     onClick: props.notInterestedOnClick
-  })), props.meta.joined_count > 0 ? _react.default.createElement("p", {
+  }))), props.meta.joined_count > 0 ? _react.default.createElement("p", {
     className: "customerSidebarCard__footer--interestedCounter"
   }, "Allerede ", props.meta.joined_count, " Interesserte!") : '');
 };

@@ -40,6 +40,7 @@ function TipioConfirmation({ image, expiresIn, share, ...props }) {
                                     <svg width={31} height={31}>
                                         <g fill="none" fillRule="evenodd">
                                             <path
+                                                className="svgBg"
                                                 d="M30.086 15.957C30.086 24.266 23.351 31 15.043 31 6.734 31 0 24.266 0 15.957 0 7.647 6.734.914 15.043.914c8.308 0 15.043 6.734 15.043 15.043"
                                                 fill="#8C8F91"
                                             />
@@ -61,6 +62,7 @@ function TipioConfirmation({ image, expiresIn, share, ...props }) {
                                     <svg width={31} height={31}>
                                         <g fill="none" fillRule="evenodd">
                                             <path
+                                                className="svgBg"
                                                 d="M30.47 15.957C30.47 24.266 23.733 31 15.425 31 7.117 31 .382 24.266.382 15.957.382 7.647 7.117.914 15.426.914c8.308 0 15.043 6.734 15.043 15.043"
                                                 fill="#8C8F91"
                                             />
@@ -76,7 +78,7 @@ function TipioConfirmation({ image, expiresIn, share, ...props }) {
                         <li className="tipio__confirmation__share--item">
                             <a href={messengerShareUrlMobile(share.url)}
                                 onClick={(e) => {
-                                    if(!isMobile) { 
+                                    if(!isMobile) {
                                         e.preventDefault();
                                         shareOnMessengerWeb(share.url);
                                     }
@@ -85,6 +87,7 @@ function TipioConfirmation({ image, expiresIn, share, ...props }) {
                                 <svg width={31} height={31}>
                                     <g fill="none" fillRule="evenodd">
                                         <path
+                                            className="svgBg"
                                             d="M30.852 15.957C30.852 24.266 24.117 31 15.81 31 7.5 31 .765 24.266.765 15.957.765 7.647 7.5.914 15.81.914c8.308 0 15.043 6.734 15.043 15.043"
                                             fill="#8C8F91"
                                         />
@@ -103,19 +106,15 @@ function TipioConfirmation({ image, expiresIn, share, ...props }) {
                             className="Demo__some-network__share-button">
                             <li className="tipio__confirmation__share--item">
                                 <a href="tipio__confirmation__share--item--link">
-                                    <svg width={31} height={31}>
-                                        <defs>
-                                            <path id="prefix__a" d="M.94.914h30.085V31H.939z" />
-                                        </defs>
-                                        <g fill="none" fillRule="evenodd">
-                                            <g>
-                                                <mask id="prefix__b" fill="#fff">
-                                                    <use xlinkHref="#prefix__a" />
-                                                </mask>
-                                                <path d="M31.025 15.957C31.025 24.266 24.29 31 15.982 31 7.673 31 .94 24.266.94 15.957.94 7.647 7.673.914 15.982.914c8.308 0 15.043 6.734 15.043 15.043" fill="#8C8F91" mask="url(#prefix__b)"/>
+                                    <svg width="31px" height="31px" viewBox="0 0 31 31">
+                                        <g id="Desktop---Customer" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
+                                            <g id="Group-35" transform="translate(0.938500, 0.913600)">
+                                                <path className="svgBg" d="M30.086,15.043 C30.086,23.352 23.351,30.086 15.043,30.086 C6.734,30.086 1.20792265e-13,23.352 1.20792265e-13,15.043 C1.20792265e-13,6.734 6.734,-1.0658141e-13 15.043,-1.0658141e-13 C23.351,-1.0658141e-13 30.086,6.734 30.086,15.043" id="Fill-7" fill="#8C8F91" />
+                                                <g id="Group-33" transform="translate(7.146000, 9.976600)" fill="#FEFEFE">
+                                                    <polygon id="Fill-16" points="15.794 4.17443857e-14 7.91 5.833 -7.01660952e-14 4.17443857e-14" />
+                                                    <polygon id="Fill-18" points="15.794 0.9365 15.794 10.1325 -7.01660952e-14 10.1325 -7.01660952e-14 0.9365 7.91 6.8115" />
+                                                </g>
                                             </g>
-                                            <path fill="#FEFEFE" d="M23.879 10.89l-7.884 5.833-7.91-5.833z" />
-                                            <path fill="#FEFEFE" d="M23.879 11.827v9.196H8.085v-9.196l7.91 5.875z" />
                                         </g>
                                     </svg>
                                 </a>

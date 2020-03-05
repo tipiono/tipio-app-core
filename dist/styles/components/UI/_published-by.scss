@@ -60,6 +60,10 @@
       .dropdown-item {
         padding: .75rem 2.5rem .75rem 2.5rem;
         color: $gray-700;
+
+          &:active {
+              background: $gray-100;
+          }
       }
     }
 

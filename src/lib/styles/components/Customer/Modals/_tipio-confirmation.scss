@@ -3,7 +3,7 @@
   text-align: center;
 
   &--image {
-    display: block;
+    display: inline-block;
     position: relative;
     margin: 0 auto;
 
@@ -43,6 +43,12 @@
 
     &--item {
       margin: 0 .25rem;
+
+        &:hover {
+            .svgBg {
+                fill: $primary;
+            }
+        }
     }
   }
 
