@@ -11,6 +11,8 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _Modal = require("../Modal");
 
+var _classnames = _interopRequireDefault(require("classnames"));
+
 var _ConfirmedIcon = _interopRequireDefault(require("../../Icons/ConfirmedIcon"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -29,8 +31,9 @@ function SuccessModal(_ref) {
       animationURL = _ref.animationURL,
       videoURL = _ref.videoURL,
       imageURL = _ref.imageURL,
+      customStyle = _ref.customStyle,
       children = _ref.children,
-      props = _objectWithoutProperties(_ref, ["successTitle", "successDescription", "animationURL", "videoURL", "imageURL", "children"]);
+      props = _objectWithoutProperties(_ref, ["successTitle", "successDescription", "animationURL", "videoURL", "imageURL", "customStyle", "children"]);
 
   var renderVideo = function renderVideo() {
     return _react.default.createElement("video", {
@@ -61,7 +64,7 @@ function SuccessModal(_ref) {
 
   console.log(animationURL);
   return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_Modal.Modal, props, _react.default.createElement("div", {
-    className: "successModal"
+    className: (0, _classnames.default)("successModal", customStyle)
   }, imageURL ? renderSvg() : videoURL ? renderVideo() : renderImage(), _react.default.createElement("h3", {
     className: "successModal--title"
   }, successTitle), _react.default.createElement("p", {

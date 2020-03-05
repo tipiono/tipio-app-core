@@ -62,7 +62,14 @@
         font-family: "Riposte-Regular", sans-serif;
         color: $gray-700;
         margin-bottom: 6px;
+
+          &:hover {
+              color: $gray-800;
+          }
       }
+        a:hover {
+            text-decoration-color: $gray-200;
+        }
 
       &--description {
         font-family: "Riposte-Lazer", sans-serif;
