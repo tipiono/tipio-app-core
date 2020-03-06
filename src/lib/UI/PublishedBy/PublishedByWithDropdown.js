@@ -37,7 +37,7 @@ const PublishedByWithDropDown = (props) => {
                         </FacebookShareButton>
                     </NewDropdownItem>
                     <NewDropdownItem key={'2'} href={messengerShareUrlMobile(share.url)} onClick={() => {
-                        if(!isMobile) { 
+                        if(!isMobile) {
                             shareOnMessengerWeb(share.url);
                         }
                     }}>
@@ -65,8 +65,8 @@ const PublishedByWithDropDown = (props) => {
                     }}>
                         Kopier lenke
                     </NewDropdownItem>
-                    <br />
-                    <NewDropdownItem key={'7'} onClick={reportOnClick}>Rapportér <small className="d-block text-gray-600">Dette bryter med Tipio’s rettningslinjer</small></NewDropdownItem>
+                    {/*<br />*/}
+                    {/*<NewDropdownItem key={'7'} onClick={reportOnClick}>Rapportér <small className="d-block text-gray-600">Dette bryter med Tipio’s rettningslinjer</small></NewDropdownItem>*/}
                 </NewDropdown>
             </div>
 

@@ -449,24 +449,24 @@ body.noscroll {
   .shoppingbag-action {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
     padding: 24px 40px 40px;
     border-bottom: 10px solid $gray-100;
 
-    .shoppingbag-action-item {
-      width: 48%;
-    }
+     .goToFrontPage {
+         margin-right: 1rem;
+     }
 
-    @media (max-width: 320.98px) {
-      .shoppingbag-action-item {
-        width: auto;
+      @include media-breakpoint-up(md) {
+          justify-content: space-between;
+
+          .shoppingbag-action-item {
+              width: 48%;
+          }
+
+          .goToFrontPage {
+              margin-right: 0;
+          }
       }
-      .goToCheckout {
-        button {
-          width: auto;
-        }
-      }
-    }
   }
 
   .custom-alert {

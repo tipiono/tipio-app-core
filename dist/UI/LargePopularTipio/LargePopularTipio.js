@@ -7,24 +7,19 @@ exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
-var _reactI18next = require("react-i18next");
-
 var _tipioAppCore = require("tipio-app-core");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var LargePopularTipio = function LargePopularTipio(_ref) {
-  var children = _ref.children,
+  var id = _ref.id,
+      children = _ref.children,
       title = _ref.title,
       subtitle = _ref.subtitle,
       binding_expires_in = _ref.binding_expires_in,
       images = _ref.images,
       onClick = _ref.onClick,
       type = _ref.type;
-
-  var _useTranslation = (0, _reactI18next.useTranslation)(),
-      t = _useTranslation.t;
-
   return _react.default.createElement("div", {
     className: "largePopularTipio"
   }, _react.default.createElement("div", {
@@ -43,11 +38,11 @@ var LargePopularTipio = function LargePopularTipio(_ref) {
   }))), _react.default.createElement("div", {
     className: "largePopularTipio__content"
   }, _react.default.createElement("a", {
-    href: "",
+    href: "/tipio/".concat(type === 2 ? 'bind' : 'vote', "/").concat(id),
     onClick: onClick,
     className: "largePopularTipio__content--title"
   }, title), _react.default.createElement("a", {
-    href: "",
+    href: "/tipio/".concat(type === 2 ? 'bind' : 'vote', "/").concat(id),
     className: "largePopularTipio__content--description"
   }, subtitle), children));
 };

@@ -12,7 +12,8 @@ var _TipioCountdown = _interopRequireDefault(require("../../../UI/TipioCountdown
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function VotingCard(_ref) {
-  var image = _ref.image,
+  var id = _ref.id,
+      image = _ref.image,
       interestedCounter = _ref.interestedCounter,
       title = _ref.title,
       brand = _ref.brand,
@@ -26,7 +27,7 @@ function VotingCard(_ref) {
     className: "votingCard__header"
   }, _react.default.createElement("a", {
     className: "lazy-image votingCard__header--preview",
-    href: "",
+    href: "/tipio/vote/".concat(id),
     onClick: onClick
   }, _react.default.createElement("img", {
     className: "lazyload votingCard__header--preview--image",
