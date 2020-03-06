@@ -8,12 +8,8 @@ function TipioOfTheDay({
     children,
     title,
     subtitle,
-    type,
     voting_expires_in,
     images,
-    voteOnClick,
-    shareOnClick,
-    joined,
     onClick
 }) {
 
