@@ -55,7 +55,11 @@ var AddMoreSaleCompanyCard = function AddMoreSaleCompanyCard(props) {
   }, props.first_price, " Kr"), _react.default.createElement("h6", {
     className: "addMoreSaleCard__content__price--cost"
   }, props.company_price, " Kr"))), _react.default.createElement("a", {
-    href: "",
+    onClick: function onClick(e) {
+      e.preventDefault();
+      props.onDelete(props.sale_offer_id);
+    },
+    href: "/",
     className: "addMoreSaleCard__remove"
   })));
 };

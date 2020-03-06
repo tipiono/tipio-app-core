@@ -71,12 +71,7 @@ var PublishedByWithDropDown = function PublishedByWithDropDown(props) {
     onClick: function onClick() {
       navigator.clipboard.writeText(share.link);
     }
-  }, "Kopier lenke"), _react.default.createElement("br", null), _react.default.createElement(_NewDropdown.NewDropdownItem, {
-    key: '7',
-    onClick: reportOnClick
-  }, "Rapport\xE9r ", _react.default.createElement("small", {
-    className: "d-block text-gray-600"
-  }, "Dette bryter med Tipio\u2019s rettningslinjer")))));
+  }, "Kopier lenke"))));
 };
 
 var _default = PublishedByWithDropDown;

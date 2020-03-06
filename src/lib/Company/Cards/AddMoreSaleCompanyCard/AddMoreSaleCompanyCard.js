@@ -15,23 +15,26 @@ const AddMoreSaleCompanyCard = (props) => {
         <div className="addMoreSaleCard">
             <div className="d-flex flex-row align-items-center">
                 <div className="addMoreSaleCard__preview">
-                    <a className="addMoreSaleCard__preview--image lazy-image" href="" onClick={(e)=>{e.preventDefault(); props.titleOnClick(props);}}>
+                    <a className="addMoreSaleCard__preview--image lazy-image" href="" onClick={(e) => { e.preventDefault(); props.titleOnClick(props); }}>
                         {props.tipio.images
                             && props.tipio.images.length
-                            && <img className="lazyload img-fluid" src={props.tipio.images[0].blob_url} alt=""/>
+                            && <img className="lazyload img-fluid" src={props.tipio.images[0].blob_url} alt="" />
                         }
                         <span className="addMoreSaleCard__preview--discount">{saleDiscount}</span>
                     </a>
                 </div>
                 <div className="addMoreSaleCard__content">
-                    <h5><a href="" className="addMoreSaleCard__content--title" onClick={(e)=>{e.preventDefault(); props.titleOnClick(props);}}>{props.tipio.title}</a></h5>
+                    <h5><a href="" className="addMoreSaleCard__content--title" onClick={(e) => { e.preventDefault(); props.titleOnClick(props); }}>{props.tipio.title}</a></h5>
                     <div className="addMoreSaleCard__content__price">
                         <h6 className="addMoreSaleCard__content__price--sale">{props.first_price} Kr</h6>
                         <h6 className="addMoreSaleCard__content__price--cost">{props.company_price} Kr</h6>
                     </div>
                 </div>
 
-                <a href="" className="addMoreSaleCard__remove" />
+                <a onClick={(e) => {
+                    e.preventDefault();
+                    props.onDelete(props.sale_offer_id);
+                }} href="/" className="addMoreSaleCard__remove" />
             </div>
         </div>
     );
