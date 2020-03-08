@@ -21,6 +21,22 @@ function HorizontalTimeline(_ref) {
     return null;
   }
 
+  var titles = {
+    step1: 'Påmelding pågår',
+    step2: 'Levering pågår',
+    step3: 'Levert'
+  };
+
+  var _renderTitle = function _renderTitle() {
+    if (status.step3 === 'completed') {
+      return titles.step3;
+    } else if (status.step2 === 'completed') {
+      return titles.step2;
+    }
+
+    return titles.step1;
+  };
+
   return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("div", {
     className: "horizontal-timeline"
   }, _react.default.createElement("ul", {
@@ -35,7 +51,7 @@ function HorizontalTimeline(_ref) {
     className: "horizontal-timeline-content"
   }, _react.default.createElement("h4", {
     className: "timeline-item-title"
-  }, "P\xE5melding p\xE5g\xE5r"), _react.default.createElement("a", {
+  }, _renderTitle()), _react.default.createElement("a", {
     href: "#",
     onClick: verticalStatusOnClick
   }, "Sjekk status"))));
