@@ -102,7 +102,10 @@ function SelectImages(_ref) {
     var result = [];
 
     for (var i = 0; i < sorted.length; i += 1) {
-      result.push(imgs[sorted[i].id]);
+      result.push({
+        img: imgs[sorted[i].id],
+        order: sorted[i].order
+      });
     }
 
     if (props.onSubmit) {
