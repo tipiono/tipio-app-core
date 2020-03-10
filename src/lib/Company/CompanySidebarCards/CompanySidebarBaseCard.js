@@ -1,10 +1,9 @@
 import React from 'react';
 
-const CompanySidebarBaseCard = ({children, ...props}) => {
-    const { tipio, meta,generatedOmstening } = props;
+const CompanySidebarBaseCard = ({ children, ...props }) => {
+    const { tipio, meta, generatedRevenue } = props;
     return (
         <div className="companySidebarCard">
-
             <div className="companySidebarCard__header">
                 <div className="companySidebarCard__header__content">
                     <h3 className="companySidebarCard__header__content--title">{tipio.title}</h3>
@@ -13,15 +12,17 @@ const CompanySidebarBaseCard = ({children, ...props}) => {
 
                 <div className="companySidebarCard__header__cost">
                     <p className="companySidebarCard__header__cost--label">Omsetning</p>
-                    {props.loading ? (<div className="placeholder-content companySidebarCard__header--placeholder">
-                            &nbsp;
-                    </div>) : (
-                        <h3 className="companySidebarCard__header__cost--price">{generatedOmstening ? generatedOmstening :meta.potential_earning} Kr</h3>
+                    {props.loading ? (
+                        <div className="placeholder-content companySidebarCard__header--placeholder">&nbsp;</div>
+                    ) : (
+                        <h3 className="companySidebarCard__header__cost--price">
+                            {generatedRevenue ? generatedRevenue : meta.potential_earning} Kr
+                        </h3>
                     )}
                 </div>
             </div>
             {children}
         </div>
-    )
-}
+    );
+};
 export default CompanySidebarBaseCard;
