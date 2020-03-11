@@ -3,8 +3,8 @@
 
 .btn-secondary {
     color: $primary;
-    letter-spacing: .75px;
-    
+    letter-spacing: 0.75px;
+
     &:focus {
         box-shadow: none !important;
         outline: 0 !important;
@@ -30,7 +30,7 @@
 .btn-outline-secondary {
     color: $primary;
     border: 2px solid $secondary;
-    letter-spacing: .75px;
+    letter-spacing: 0.75px;
 
     &:hover {
         color: $primary;
@@ -52,7 +52,7 @@
 
 .btn-outline-secondary:not(:disabled):not(.disabled):active,
 .btn-outline-secondary:not(:disabled):not(.disabled).active,
-.show>.btn-outline-secondary.dropdown-toggle {
+.show > .btn-outline-secondary.dropdown-toggle {
     color: $primary;
 }
 
@@ -96,11 +96,11 @@
 }
 
 .alert-dismissible {
-    padding: .75rem 1.25rem;
+    padding: 0.75rem 1.25rem;
 }
 
 .custom-select {
-    background: url("/src/static/assets/images/down.svg") no-repeat right 8px center !important;
+    background: url('/src/static/assets/images/down.svg') no-repeat right 8px center !important;
 }
 
 ::-webkit-scrollbar {
@@ -173,4 +173,13 @@ h6 {
 
 .react-datepicker-wrapper {
     display: unset !important;
+}
+
+.link-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: inline;
+    margin: 0;
+    padding: 0;
 }
