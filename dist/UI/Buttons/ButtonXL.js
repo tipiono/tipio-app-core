@@ -88,8 +88,7 @@ var ButtonXl = function ButtonXl(_ref) {
                     role: 'status',
                     'aria-hidden': 'true'
                 }),
-                ' ',
-                'Loading...'
+                ' Loading...'
             )
     );
 };
