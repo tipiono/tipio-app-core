@@ -182,4 +182,15 @@ h6 {
     display: inline;
     margin: 0;
     padding: 0;
+    border: none;
+    outline-style: 0 !important;
+
+    &:focus {
+        border: none;
+        outline: none !important;
+    }
+    &:active {
+        border: none;
+        outline: none !important;
+    }
 }
