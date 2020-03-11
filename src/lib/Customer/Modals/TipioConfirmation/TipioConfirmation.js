@@ -1,16 +1,12 @@
-import React, { useEffect } from "react";
-import {Modal} from '../../../UI/Modal/Modal'
-import { isMobile } from "react-device-detect";
-import TipioCountdown from "../../../UI/TipioCountdown/TipioCountdown";
-import { loadFbSDK, shareOnMessengerWeb, messengerShareUrlMobile} from "../../../Util/fbShare";
+import React, { useEffect } from 'react';
+import { Modal } from '../../../UI/Modal/Modal';
+import { isMobile } from 'react-device-detect';
+import TipioCountdown from '../../../UI/TipioCountdown/TipioCountdown';
+import { loadFbSDK, shareOnMessengerWeb, messengerShareUrlMobile } from '../../../Util/fbShare';
 
-import {
-    FacebookShareButton,
-    TwitterShareButton,
-    EmailShareButton,
-} from 'react-share';
+import { FacebookShareButton, TwitterShareButton, EmailShareButton } from 'react-share';
 
-function TipioConfirmation({ image, expiresIn, share, ...props }) {
+function TipioConfirmation({ image, expiresIn, share, title, description, ...props }) {
     useEffect(() => {
         loadFbSDK();
     }, []);
@@ -19,22 +15,22 @@ function TipioConfirmation({ image, expiresIn, share, ...props }) {
         <>
             <Modal showCloseButton {...props}>
                 <div className="tipio__confirmation">
-
                     <a className="tipio__confirmation--image" href="">
-                        <img className="img-fluid" src={image} width="310px" alt="Tipio with offer"/>
+                        <img className="img-fluid" src={image} width="310px" alt="Tipio with offer" />
 
                         <div className="tipio__confirmation--timeLeft">
-                            <TipioCountdown className="timer" expires_in={expiresIn}/>
+                            <TipioCountdown className="timer" expires_in={expiresIn} />
                         </div>
                     </a>
 
-                    <h3 className="tipio__confirmation--title">Dere er sterkere sammen!!</h3>
-                    <p className="tipio__confirmation--description">For å øke sjansen til at Tipio skal gå igjennom kan du invitere venner som kan være  interessert i det samme.</p>
+                    <h3 className="tipio__confirmation--title">{title}</h3>
+                    <p className="tipio__confirmation--description">{description}</p>
                     <ul className="tipio__confirmation__share">
                         <FacebookShareButton
                             url={share.link}
                             quote={share.title}
-                            className="Demo__some-network__share-button">
+                            className="Demo__some-network__share-button"
+                        >
                             <li className="tipio__confirmation__share--item">
                                 <a href="">
                                     <svg width={31} height={31}>
@@ -56,7 +52,8 @@ function TipioConfirmation({ image, expiresIn, share, ...props }) {
                         <TwitterShareButton
                             url={share.link}
                             title={share.title}
-                            className="Demo__some-network__share-button">
+                            className="Demo__some-network__share-button"
+                        >
                             <li className="tipio__confirmation__share--item">
                                 <a href="">
                                     <svg width={31} height={31}>
@@ -76,9 +73,10 @@ function TipioConfirmation({ image, expiresIn, share, ...props }) {
                             </li>
                         </TwitterShareButton>
                         <li className="tipio__confirmation__share--item">
-                            <a href={messengerShareUrlMobile(share.url)}
+                            <a
+                                href={messengerShareUrlMobile(share.url)}
                                 onClick={(e) => {
-                                    if(!isMobile) {
+                                    if (!isMobile) {
                                         e.preventDefault();
                                         shareOnMessengerWeb(share.url);
                                     }
@@ -103,16 +101,38 @@ function TipioConfirmation({ image, expiresIn, share, ...props }) {
                             url={share.link}
                             subject={share.title}
                             body={share.title}
-                            className="Demo__some-network__share-button">
+                            className="Demo__some-network__share-button"
+                        >
                             <li className="tipio__confirmation__share--item">
                                 <a href="tipio__confirmation__share--item--link">
                                     <svg width="31px" height="31px" viewBox="0 0 31 31">
-                                        <g id="Desktop---Customer" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
+                                        <g
+                                            id="Desktop---Customer"
+                                            stroke="none"
+                                            strokeWidth="1"
+                                            fill="none"
+                                            fillRule="evenodd"
+                                        >
                                             <g id="Group-35" transform="translate(0.938500, 0.913600)">
-                                                <path className="svgBg" d="M30.086,15.043 C30.086,23.352 23.351,30.086 15.043,30.086 C6.734,30.086 1.20792265e-13,23.352 1.20792265e-13,15.043 C1.20792265e-13,6.734 6.734,-1.0658141e-13 15.043,-1.0658141e-13 C23.351,-1.0658141e-13 30.086,6.734 30.086,15.043" id="Fill-7" fill="#8C8F91" />
-                                                <g id="Group-33" transform="translate(7.146000, 9.976600)" fill="#FEFEFE">
-                                                    <polygon id="Fill-16" points="15.794 4.17443857e-14 7.91 5.833 -7.01660952e-14 4.17443857e-14" />
-                                                    <polygon id="Fill-18" points="15.794 0.9365 15.794 10.1325 -7.01660952e-14 10.1325 -7.01660952e-14 0.9365 7.91 6.8115" />
+                                                <path
+                                                    className="svgBg"
+                                                    d="M30.086,15.043 C30.086,23.352 23.351,30.086 15.043,30.086 C6.734,30.086 1.20792265e-13,23.352 1.20792265e-13,15.043 C1.20792265e-13,6.734 6.734,-1.0658141e-13 15.043,-1.0658141e-13 C23.351,-1.0658141e-13 30.086,6.734 30.086,15.043"
+                                                    id="Fill-7"
+                                                    fill="#8C8F91"
+                                                />
+                                                <g
+                                                    id="Group-33"
+                                                    transform="translate(7.146000, 9.976600)"
+                                                    fill="#FEFEFE"
+                                                >
+                                                    <polygon
+                                                        id="Fill-16"
+                                                        points="15.794 4.17443857e-14 7.91 5.833 -7.01660952e-14 4.17443857e-14"
+                                                    />
+                                                    <polygon
+                                                        id="Fill-18"
+                                                        points="15.794 0.9365 15.794 10.1325 -7.01660952e-14 10.1325 -7.01660952e-14 0.9365 7.91 6.8115"
+                                                    />
                                                 </g>
                                             </g>
                                         </g>
@@ -124,7 +144,7 @@ function TipioConfirmation({ image, expiresIn, share, ...props }) {
                 </div>
             </Modal>
         </>
-    )
+    );
 }
 
 export default TipioConfirmation;

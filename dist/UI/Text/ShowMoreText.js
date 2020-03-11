@@ -114,7 +114,7 @@ function ShowMoreText(_ref) {
                 return _react.default.createElement(
                     'li',
                     {
-                        key: key + '' + item
+                        key: key
                     },
                     item
                 );
