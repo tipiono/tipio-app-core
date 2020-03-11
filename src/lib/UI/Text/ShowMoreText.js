@@ -2,11 +2,7 @@ import React, { useState } from 'react';
 import formatText from '../../Util/formatText';
 
 function ShowMoreText({ text }) {
-    const { textFormatted, restFormatted } = formatText(
-        text,
-        (item, key) => <li key={key + '' + item}>{item}</li>,
-        <br />
-    );
+    const { textFormatted, restFormatted } = formatText(text, (item, key) => <li key={key}>{item}</li>, <br />);
     const [showMore, setShowMore] = useState(false);
     return (
         <div className="productDetails__description">
