@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import PropTypes from 'prop-types';
 
 const ButtonXl = ({ loading, text, onClick, ...props }) => (
@@ -13,14 +13,9 @@ const ButtonXl = ({ loading, text, onClick, ...props }) => (
         {!loading && text}
         {loading && (
             <span>
-                                {' '}
-                <span
-                    className="spinner-border spinner-border-sm"
-                    role="status"
-                    aria-hidden="true"
-                />
                 {' '}
-                Loading...</span>
+                <span className="spinner-border spinner-border-sm" role="status" aria-hidden="true" /> Loading...
+            </span>
         )}
     </button>
 );
@@ -31,8 +26,7 @@ ButtonXl.defaultProps = {
 
 ButtonXl.propTypes = {
     loading: PropTypes.bool,
-    text: PropTypes.string.isRequired,
-    children: PropTypes.instanceOf(Array).isRequired
+    text: PropTypes.string.isRequired
 };
 
 export default ButtonXl;
