@@ -580,7 +580,7 @@ var VerticalTimeline = function VerticalTimeline(_ref2) {
                                                     tipio.meta.binding_count,
                                                     ' andre kj\xF8pte sammen med deg! ',
                                                     _react.default.createElement('br', null),
-                                                    'Dermed ble prisen kun p\xE5 ',
+                                                    'Dermed ble prisen kun p\xE5',
                                                     ' ',
                                                     (0, _generatePrice.default)(
                                                         tipio.meta.binding_count,
