@@ -309,7 +309,9 @@ var VerticalTimeline = function VerticalTimeline(_ref2) {
                                                     {
                                                         className: 'content-description'
                                                     },
-                                                    'Jo flere som er med jo bedre pris.'
+                                                    'Flere med? bedre pris.',
+                                                    _react.default.createElement('br', null),
+                                                    'Del Tipioen!'
                                                 ),
                                                 _react.default.createElement(
                                                     'ul',
@@ -576,7 +578,9 @@ var VerticalTimeline = function VerticalTimeline(_ref2) {
                                                         className: 'content-description'
                                                     },
                                                     tipio.meta.binding_count,
-                                                    ' andre kj\xF8pte med deg! Prisen gikk ytterligere ned til',
+                                                    ' andre kj\xF8pte sammen med deg! ',
+                                                    _react.default.createElement('br', null),
+                                                    'Dermed ble prisen kun p\xE5 ',
                                                     ' ',
                                                     (0, _generatePrice.default)(
                                                         tipio.meta.binding_count,
