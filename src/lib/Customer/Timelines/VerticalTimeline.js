@@ -16,6 +16,8 @@ const VerticalTimeline = ({ isLoading, tipio, stepStatus, onClose, firstRange, s
     useEffect(() => {
         loadFbSDK();
     }, []);
+
+    const isMobile = false; //@TODO Send as property
     return (
         <div className="container">
             {isLoading && <p>Loading...</p>}

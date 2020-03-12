@@ -146,6 +146,8 @@ var VerticalTimeline = function VerticalTimeline(_ref2) {
     (0, _react.useEffect)(function() {
         (0, _fbShare.loadFbSDK)();
     }, []);
+    var isMobile = false; //@TODO Send as property
+
     return _react.default.createElement(
         'div',
         {
