@@ -16,6 +16,8 @@ const VerticalTimeline = ({ isLoading, tipio, stepStatus, onClose, firstRange, s
     useEffect(() => {
         loadFbSDK();
     }, []);
+
+    const isMobile = false; //@TODO Send as property
     return (
         <div className="container">
             {isLoading && <p>Loading...</p>}
@@ -71,7 +73,9 @@ const VerticalTimeline = ({ isLoading, tipio, stepStatus, onClose, firstRange, s
                                                 <div className="timeline-item-content">
                                                     <h6 className="content-title">Påmelding pågår</h6>
                                                     <p className="content-description">
-                                                        Jo flere som er med jo bedre pris.
+                                                        Flere med? bedre pris.
+                                                        <br />
+                                                        Del Tipioen!
                                                     </p>
                                                     <ul className="tipio__share">
                                                         <FacebookShareButton
@@ -213,8 +217,8 @@ const VerticalTimeline = ({ isLoading, tipio, stepStatus, onClose, firstRange, s
                                                 </div>
                                                 <div className="timeline-item-content">
                                                     <p className="content-description">
-                                                        {tipio.meta.binding_count} andre kjøpte med deg! Prisen gikk
-                                                        ytterligere ned til{' '}
+                                                        {tipio.meta.binding_count} andre kjøpte sammen med deg! <br />
+                                                        Dermed ble prisen kun på{' '}
                                                         {generatePrice(
                                                             tipio.meta.binding_count,
                                                             firstRange,
