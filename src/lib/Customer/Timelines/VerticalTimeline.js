@@ -5,6 +5,7 @@ import Countdown, { calcTimeDelta, formatTimeDelta } from 'react-countdown-now';
 import SecondaryOutlineButton from '../../UI/Buttons/SecondaryOutlineButton';
 import { FacebookShareButton, TwitterShareButton, EmailShareButton } from 'react-share';
 import { loadFbSDK, shareOnMessengerWeb, messengerShareUrlMobile } from '../../Util/fbShare';
+import { isMobile } from 'react-device-detect';
 const renderer = ({ hours, minutes, seconds, completed }) => {
     return (
         <span className="pinky-countdown-sm-time">
@@ -17,7 +18,6 @@ const VerticalTimeline = ({ isLoading, tipio, stepStatus, onClose, firstRange, s
         loadFbSDK();
     }, []);
 
-    const isMobile = false; //@TODO Send as property
     return (
         <div className="container">
             {isLoading && <p>Loading...</p>}
