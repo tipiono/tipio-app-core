@@ -72,31 +72,31 @@ function TipioConfirmation({ image, expiresIn, share, title, description, ...pro
                                 </a>
                             </li>
                         </TwitterShareButton>
-                        <li className="tipio__confirmation__share--item">
-                            <a
-                                href={messengerShareUrlMobile(share.url)}
-                                onClick={(e) => {
-                                    if (!isMobile) {
-                                        e.preventDefault();
-                                        shareOnMessengerWeb(share.url);
-                                    }
-                                }}
-                            >
-                                <svg width={31} height={31}>
-                                    <g fill="none" fillRule="evenodd">
-                                        <path
-                                            className="svgBg"
-                                            d="M30.852 15.957C30.852 24.266 24.117 31 15.81 31 7.5 31 .765 24.266.765 15.957.765 7.647 7.5.914 15.81.914c8.308 0 15.043 6.734 15.043 15.043"
-                                            fill="#8C8F91"
-                                        />
-                                        <path
-                                            fill="#FEFEFE"
-                                            d="M17.277 20.192l-3.69-3.953-7.227 3.953 7.943-8.47 3.802 3.99 7.152-3.99z"
-                                        />
-                                    </g>
-                                </svg>
-                            </a>
-                        </li>
+                        {/*<li className="tipio__confirmation__share--item">*/}
+                        {/*    <a*/}
+                        {/*        href={messengerShareUrlMobile(share.url)}*/}
+                        {/*        onClick={(e) => {*/}
+                        {/*            if (!isMobile) {*/}
+                        {/*                e.preventDefault();*/}
+                        {/*                shareOnMessengerWeb(share.url);*/}
+                        {/*            }*/}
+                        {/*        }}*/}
+                        {/*    >*/}
+                        {/*        <svg width={31} height={31}>*/}
+                        {/*            <g fill="none" fillRule="evenodd">*/}
+                        {/*                <path*/}
+                        {/*                    className="svgBg"*/}
+                        {/*                    d="M30.852 15.957C30.852 24.266 24.117 31 15.81 31 7.5 31 .765 24.266.765 15.957.765 7.647 7.5.914 15.81.914c8.308 0 15.043 6.734 15.043 15.043"*/}
+                        {/*                    fill="#8C8F91"*/}
+                        {/*                />*/}
+                        {/*                <path*/}
+                        {/*                    fill="#FEFEFE"*/}
+                        {/*                    d="M17.277 20.192l-3.69-3.953-7.227 3.953 7.943-8.47 3.802 3.99 7.152-3.99z"*/}
+                        {/*                />*/}
+                        {/*            </g>*/}
+                        {/*        </svg>*/}
+                        {/*    </a>*/}
+                        {/*</li>*/}
                         <EmailShareButton
                             url={share.link}
                             subject={share.title}
