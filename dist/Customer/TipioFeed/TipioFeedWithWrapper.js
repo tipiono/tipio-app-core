@@ -40,7 +40,7 @@ var TipioFeedWithWrapper = function TipioFeedWithWrapper(props) {
             if (showAddTipioButton && i === 0 && props.AddTipioButton) {
                 items.push(
                     _react.default.createElement(props.AddTipioButton, {
-                        key: i
+                        key: 'add-button'
                     })
                 );
             }
