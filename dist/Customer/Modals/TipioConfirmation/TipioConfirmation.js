@@ -281,48 +281,6 @@ function TipioConfirmation(_ref) {
                         )
                     ),
                     _react.default.createElement(
-                        'li',
-                        {
-                            className: 'tipio__confirmation__share--item'
-                        },
-                        _react.default.createElement(
-                            'a',
-                            {
-                                href: (0, _fbShare.messengerShareUrlMobile)(share.url),
-                                onClick: function onClick(e) {
-                                    if (!_reactDeviceDetect.isMobile) {
-                                        e.preventDefault();
-                                        (0, _fbShare.shareOnMessengerWeb)(share.url);
-                                    }
-                                }
-                            },
-                            _react.default.createElement(
-                                'svg',
-                                {
-                                    width: 31,
-                                    height: 31
-                                },
-                                _react.default.createElement(
-                                    'g',
-                                    {
-                                        fill: 'none',
-                                        fillRule: 'evenodd'
-                                    },
-                                    _react.default.createElement('path', {
-                                        className: 'svgBg',
-                                        d:
-                                            'M30.852 15.957C30.852 24.266 24.117 31 15.81 31 7.5 31 .765 24.266.765 15.957.765 7.647 7.5.914 15.81.914c8.308 0 15.043 6.734 15.043 15.043',
-                                        fill: '#8C8F91'
-                                    }),
-                                    _react.default.createElement('path', {
-                                        fill: '#FEFEFE',
-                                        d: 'M17.277 20.192l-3.69-3.953-7.227 3.953 7.943-8.47 3.802 3.99 7.152-3.99z'
-                                    })
-                                )
-                            )
-                        )
-                    ),
-                    _react.default.createElement(
                         _reactShare.EmailShareButton,
                         {
                             url: share.link,
