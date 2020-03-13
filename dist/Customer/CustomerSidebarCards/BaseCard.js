@@ -72,7 +72,7 @@ var BaseCard = function BaseCard(_ref) {
                     {
                         className: 'customerSidebarCard__header__content--subtitle'
                     },
-                    props.brand ? props.brand : props.subtitle || 'noething'
+                    props.brand ? props.brand : props.subtitle || ''
                 )
             ),
             props.inventory &&
