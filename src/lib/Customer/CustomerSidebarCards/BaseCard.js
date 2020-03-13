@@ -7,7 +7,7 @@ const BaseCard = ({ children, ...props }) => {
                 <div className="customerSidebarCard__header__content">
                     <h3 className="customerSidebarCard__header__content--title">{props.title}</h3>
                     <p className="customerSidebarCard__header__content--subtitle">
-                        {props.brand === '' ? props.brand : props.subtitle}
+                        {props.brand ? props.brand : props.subtitle || ''}
                     </p>
                 </div>
                 {/* add limited stock */}
