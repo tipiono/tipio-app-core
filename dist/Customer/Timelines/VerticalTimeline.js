@@ -34,6 +34,8 @@ var _reactShare = require('react-share');
 
 var _fbShare = require('../../Util/fbShare');
 
+var _reactDeviceDetect = require('react-device-detect');
+
 function _interopRequireDefault(obj) {
     return obj && obj.__esModule ? obj : { default: obj };
 }
@@ -146,8 +148,6 @@ var VerticalTimeline = function VerticalTimeline(_ref2) {
     (0, _react.useEffect)(function() {
         (0, _fbShare.loadFbSDK)();
     }, []);
-    var isMobile = false; //@TODO Send as property
-
     return _react.default.createElement(
         'div',
         {
@@ -418,7 +418,7 @@ var VerticalTimeline = function VerticalTimeline(_ref2) {
                                                             {
                                                                 href: (0, _fbShare.messengerShareUrlMobile)(share.url),
                                                                 onClick: function onClick(e) {
-                                                                    if (!isMobile) {
+                                                                    if (!_reactDeviceDetect.isMobile) {
                                                                         e.preventDefault();
                                                                         (0, _fbShare.shareOnMessengerWeb)(share.url);
                                                                     }
