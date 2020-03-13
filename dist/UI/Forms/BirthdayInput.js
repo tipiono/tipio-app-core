@@ -83,7 +83,7 @@ var _default = _react.default.forwardRef(function(_ref, ref) {
                 'input',
                 _extends(
                     {
-                        placeholder: props.value ? ' ' : 'DD-MM-YYYY',
+                        placeholder: props.value ? ' ' : props.dateInput,
                         id: props.id || name,
                         name: name
                     },
