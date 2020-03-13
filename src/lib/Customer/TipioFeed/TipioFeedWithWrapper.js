@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Masonry from 'react-masonry-css'
+import Masonry from 'react-masonry-css';
 
-import Pagination from "../../UI/Pagination/Pagination";
+import Pagination from '../../UI/Pagination/Pagination';
 import WithAnimation from '../../effects/withAnimation';
 
 const breakpointColumnsObj = (max = 4) => {
@@ -14,21 +14,21 @@ const breakpointColumnsObj = (max = 4) => {
     };
 };
 
-const TipioFeedWithWrapper = props => {
+const TipioFeedWithWrapper = (props) => {
     const items = [];
     const showAddTipioButton = props.showAddTipioButton !== undefined ? props.showAddTipioButton : true;
     if (props.tipios) {
         for (let i = 0; i < props.tipios.length; i += 1) {
             const item = props.tipios[i];
             if (showAddTipioButton && i === 0 && props.AddTipioButton) {
-                items.push(<props.AddTipioButton />);
+                items.push(<props.AddTipioButton key="add-button" />);
             }
             if (props.card) {
-                items.push(<div className="mb-3 mb-md-4">
-                    <WithAnimation>
-                        {props.card(item)}
-                    </WithAnimation>
-                </div>);
+                items.push(
+                    <div className="mb-3 mb-md-4">
+                        <WithAnimation key={props.card(item.id)}>{props.card(item)}</WithAnimation>
+                    </div>
+                );
             }
         }
     }
@@ -54,25 +54,26 @@ const TipioFeedWithWrapper = props => {
                     >
                         {items}
                     </Masonry>
-                    {props.loading && <div className="d-flex justify-content-center">
-                        <div className="spinner-border" role="status">
-                            <span className="sr-only">Loading...</span>
+                    {props.loading && (
+                        <div className="d-flex justify-content-center">
+                            <div className="spinner-border" role="status">
+                                <span className="sr-only">Loading...</span>
+                            </div>
                         </div>
-                    </div>}
+                    )}
                 </div>
             </div>
-            {props.tipios && props.tipios.length > 0 && props.page > 0 &&
-
-            <div className="d-flex justify-content-center py-5">
-                <Pagination
-                    page={props.page}
-                    pageCount={props.pageCount}
-                    showPrevButton={showPrevButton}
-                    showNextButton={showNextButton}
-                    handlePageClick={props.handlePageClick}
-                />
-            </div>
-            }
+            {props.tipios && props.tipios.length > 0 && props.page > 0 && (
+                <div className="d-flex justify-content-center py-5">
+                    <Pagination
+                        page={props.page}
+                        pageCount={props.pageCount}
+                        showPrevButton={showPrevButton}
+                        showNextButton={showNextButton}
+                        handlePageClick={props.handlePageClick}
+                    />
+                </div>
+            )}
         </>
     );
 };
