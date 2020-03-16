@@ -43,9 +43,11 @@ class Modal extends Component {
 
     onCloseButtonClick(e) {
         // this.toggleNoScroll();
-        e.preventDefault();
+        // e.preventDefault();
         this.removeNoScrollClass();
-        this.props.onCloseButtonClick();
+        setTimeout(() => {
+            this.props.onCloseButtonClick();
+        }, 500);
     }
 
     addNoScroll() {
@@ -83,7 +85,7 @@ class Modal extends Component {
                                 </ModalOnClickOutsideWrapper>
                             </div>
                             {showCloseButton && (
-                                <a href="#" className="custom__modal--close" onClick={this.onCloseButtonClick}>
+                                <span className="custom__modal--close" onClick={this.onCloseButtonClick}>
                                     <svg width="19px" height="19px" viewBox="0 0 19 19">
                                         <g id="Symbols" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
                                             <path
@@ -94,7 +96,7 @@ class Modal extends Component {
                                             />
                                         </g>
                                     </svg>
-                                </a>
+                                </span>
                             )}
                         </div>
                     </div>
@@ -109,7 +111,7 @@ Modal.defaultProps = {
 
 Modal.propTypes = {
     className: PropTypes.string,
-    children: PropTypes.instanceOf(Array).isRequired
+    children: PropTypes.instanceOf(Object).isRequired
 };
 
 const ModalType = {
