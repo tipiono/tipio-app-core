@@ -149,7 +149,15 @@ var OnClickOutsideWrapper =
             {
                 key: 'render',
                 value: function render() {
-                    return _react.default.createElement('div', null, this.props.children);
+                    return _react.default.createElement(
+                        'div',
+                        {
+                            style: {
+                                height: '100%'
+                            }
+                        },
+                        this.props.children
+                    );
                 }
             }
         ]);
@@ -213,10 +221,14 @@ var Modal =
             {
                 key: 'onCloseButtonClick',
                 value: function onCloseButtonClick(e) {
+                    var _this3 = this;
+
                     // this.toggleNoScroll();
-                    e.preventDefault();
+                    // e.preventDefault();
                     this.removeNoScrollClass();
-                    this.props.onCloseButtonClick();
+                    setTimeout(function() {
+                        _this3.props.onCloseButtonClick();
+                    }, 500);
                 }
             },
             {
@@ -291,9 +303,8 @@ var Modal =
                                     ),
                                     showCloseButton &&
                                         _react.default.createElement(
-                                            'a',
+                                            'span',
                                             {
-                                                href: '#',
                                                 className: 'custom__modal--close',
                                                 onClick: this.onCloseButtonClick
                                             },
@@ -340,7 +351,7 @@ Modal.defaultProps = {
 };
 Modal.propTypes = {
     className: _propTypes.default.string,
-    children: _propTypes.default.instanceOf(Array).isRequired
+    children: _propTypes.default.instanceOf(Object).isRequired
 };
 var ModalType = {
     LARGE: 'modal-lg',

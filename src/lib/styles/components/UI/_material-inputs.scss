@@ -1,7 +1,5 @@
 .pure-material-textfield-outlined {
-    --pure-material-safari-helper1: rgba(
-        var(--pure-material-primary-rgb, 33, 150, 243)
-    );
+    --pure-material-safari-helper1: rgba(var(--pure-material-primary-rgb, 33, 150, 243));
     position: relative;
     display: inline-block;
     padding-top: 6px;
@@ -35,10 +33,7 @@
             font-family: inherit;
             font-size: inherit;
             line-height: inherit;
-            caret-color: rgba(
-                var(--pure-material-primary-rgb, 33, 150, 243),
-                1
-            );
+            caret-color: rgba(var(--pure-material-primary-rgb, 33, 150, 243), 1);
             transition: border 0.2s, box-shadow 0.2s;
             //font-size: 16px;
             font-weight: 300;
@@ -67,7 +62,7 @@
         input + span {
             &::before,
             &::after {
-                content: "";
+                content: '';
                 display: block;
                 box-sizing: border-box;
                 margin-top: 6px;
@@ -84,7 +79,7 @@
         textarea + span {
             &::before,
             &::after {
-                content: "";
+                content: '';
                 display: block;
                 box-sizing: border-box;
                 margin-top: 6px;
@@ -101,7 +96,7 @@
         .css-1pcexqc-container + span {
             &::before,
             &::after {
-                content: "";
+                content: '';
                 display: block;
                 box-sizing: border-box;
                 margin-top: 6px;
@@ -235,19 +230,13 @@
         input:disabled,
         textarea:disabled,
         .css-1pcexqc-container:disabled {
-            border-color: rgba(
-                var(--pure-material-onsurface-rgb, 0, 0, 0),
-                0.38
-            ) !important;
+            border-color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.38) !important;
             border-top-color: transparent !important;
             color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.38);
             pointer-events: none;
 
             + span {
-                border-color: rgba(
-                    var(--pure-material-onsurface-rgb, 0, 0, 0),
-                    0.38
-                ) !important;
+                border-color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.38) !important;
                 border-top-color: transparent !important;
                 color: #4f2e90;
                 pointer-events: none;
@@ -257,46 +246,31 @@
         input:disabled + span {
             &::before,
             &::after {
-                border-top-color: rgba(
-                    var(--pure-material-onsurface-rgb, 0, 0, 0),
-                    0.38
-                ) !important;
+                border-top-color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.38) !important;
             }
         }
 
         textarea:disabled + span {
             &::before,
             &::after {
-                border-top-color: rgba(
-                    var(--pure-material-onsurface-rgb, 0, 0, 0),
-                    0.38
-                ) !important;
+                border-top-color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.38) !important;
             }
         }
 
         .css-1pcexqc-container:disabled + span {
             &::before,
             &::after {
-                border-top-color: rgba(
-                    var(--pure-material-onsurface-rgb, 0, 0, 0),
-                    0.38
-                ) !important;
+                border-top-color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.38) !important;
             }
         }
 
         input:disabled:placeholder-shown,
         textarea:disabled:placeholder-shown,
         .css-1pcexqc-container:disabled:placeholder-shown {
-            border-top-color: rgba(
-                var(--pure-material-onsurface-rgb, 0, 0, 0),
-                0.38
-            ) !important;
+            border-top-color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.38) !important;
 
             + span {
-                border-top-color: rgba(
-                    var(--pure-material-onsurface-rgb, 0, 0, 0),
-                    0.38
-                ) !important;
+                border-top-color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.38) !important;
             }
         }
 
@@ -368,7 +342,15 @@
         input,
         textarea,
         .css-1pcexqc-container {
-            border: 1px solid #da3021 !important;
+            border-left: 1px solid #da3021 !important;
+            border-right: 1px solid #da3021 !important;
+            border-bottom: 1px solid #da3021 !important;
+        }
+        input + span {
+            &::before,
+            &::after {
+                border-top-color: #da3021;
+            }
         }
     }
 
@@ -639,13 +621,12 @@ textarea {
     resize: none;
 }
 
-
-.birthdayInput{
-    input::placeholder{
+.birthdayInput {
+    input::placeholder {
         visibility: hidden;
     }
 
-    input:focus::placeholder{
+    input:focus::placeholder {
         visibility: visible;
     }
 }
