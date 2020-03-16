@@ -5,7 +5,7 @@ import onClickOutside from 'react-onclickoutside';
 
 class OnClickOutsideWrapper extends Component {
     render() {
-        return <div>{this.props.children}</div>;
+        return <div style={{ height: '100%' }}>{this.props.children}</div>;
     }
 }
 let ModalOnClickOutsideWrapper = onClickOutside(OnClickOutsideWrapper);

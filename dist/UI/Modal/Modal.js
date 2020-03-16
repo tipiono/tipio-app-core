@@ -149,7 +149,15 @@ var OnClickOutsideWrapper =
             {
                 key: 'render',
                 value: function render() {
-                    return _react.default.createElement('div', null, this.props.children);
+                    return _react.default.createElement(
+                        'div',
+                        {
+                            style: {
+                                height: '100%'
+                            }
+                        },
+                        this.props.children
+                    );
                 }
             }
         ]);
