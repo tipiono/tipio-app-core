@@ -1,19 +1,15 @@
 import React from 'react';
-import {
-    Checkbox,
-    Input,
-    Select
-} from 'tipio-app-core';
 
-import Timer from "../../static/assets/images/timer.svg";
+import Timer from '../../static/assets/images/timer.svg';
+import Input from '../Forms/Input';
+import Select from '../Forms/Select';
+import Checkbox from '../Forms/Checkbox';
 
-
-const DeliveryTimeForm = ({showIcon, showCheckbox}) => {
+const DeliveryTimeForm = ({ showIcon, showCheckbox }) => {
     return (
         <div className="deliveryTimeForm">
-
             <div className="deliveryTimeForm__header">
-                {showIcon ?(<img className="deliveryTimeForm__header__icon" src={Timer} alt=""/>) : ''}
+                {showIcon ? <img className="deliveryTimeForm__header__icon" src={Timer} alt="" /> : ''}
                 <h5 className="deliveryTimeForm__header__title">Forventet leveringstid</h5>
             </div>
 
@@ -53,21 +49,20 @@ const DeliveryTimeForm = ({showIcon, showCheckbox}) => {
                     {/*    displayErrors*/}
                     {/*/>*/}
 
-                    <Select
-                        defaultValue={"Virkedager"}
-                        label="Tidwsrom"
-                        options={["Virkedager", "Uker", "Måneder"]}
-                    />
+                    <Select defaultValue={'Virkedager'} label="Tidwsrom" options={['Virkedager', 'Uker', 'Måneder']} />
                 </div>
             </div>
 
-           {showCheckbox ?( <Checkbox
-                id="save_payment_info"
-                label="Sett som standard leverings tid"
-                // checked={values.save_payment_info}
-                // onChange={handleChange}
-            />) :''}
-
+            {showCheckbox ? (
+                <Checkbox
+                    id="save_payment_info"
+                    label="Sett som standard leverings tid"
+                    // checked={values.save_payment_info}
+                    // onChange={handleChange}
+                />
+            ) : (
+                ''
+            )}
         </div>
     );
 };
