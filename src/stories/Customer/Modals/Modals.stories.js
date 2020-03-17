@@ -38,8 +38,8 @@ storiesOf('Customer/Components/Modals', module)
                             expiresIn={new Date()}
                             onCloseButtonClick={toggle}
                             share={{
-                                link: `tipio/vote/`,
-                                title: `TItle ...`
+                                link: `https://tipio.no/tipio/vote/1`,
+                                title: `Title ...`
                             }}
                             title={'title'}
                             description={'description ...'}
