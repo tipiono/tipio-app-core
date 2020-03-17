@@ -39,10 +39,7 @@ function DeleteAccount(props) {
                         </g>
                     </svg>
 
-                    <h4 className="deleteAccount--title">
-                        Er du sikker på at du vil slette
-                        <br /> bedrifts kontoen din? Vil all datahistorikk <br /> bli slettet.{' '}
-                    </h4>
+                    <h4 className="deleteAccount--title">{props.title} </h4>
 
                     <div className="deleteAccount--action mb-4">
                         <SecondaryOutlineButton

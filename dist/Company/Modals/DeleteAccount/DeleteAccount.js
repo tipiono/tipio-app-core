@@ -113,11 +113,8 @@ function DeleteAccount(props) {
                     {
                         className: 'deleteAccount--title'
                     },
-                    'Er du sikker p\xE5 at du vil slette',
-                    _react.default.createElement('br', null),
-                    ' bedrifts kontoen din? Vil all datahistorikk ',
-                    _react.default.createElement('br', null),
-                    ' bli slettet. '
+                    props.title,
+                    ' '
                 ),
                 _react.default.createElement(
                     'div',
