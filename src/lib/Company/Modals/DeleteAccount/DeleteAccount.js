@@ -1,14 +1,13 @@
-import React from "react";
-import {Modal} from '../../../UI/Modal/Modal'
-import SecondaryOutlineButton from "../../../UI/Buttons/SecondaryOutlineButton";
-import GrayOutlineButton from "../../../UI/Buttons/GrayOutlineButton";
+import React from 'react';
+import { Modal } from '../../../UI/Modal/Modal';
+import SecondaryOutlineButton from '../../../UI/Buttons/SecondaryOutlineButton';
+import GrayOutlineButton from '../../../UI/Buttons/GrayOutlineButton';
 
 function DeleteAccount(props) {
     return (
         <>
-            <Modal showCloseButton={!props.isLoading} {...props} >
+            <Modal showCloseButton={!props.isLoading} {...props}>
                 <div className="deleteAccount">
-
                     <svg className="deleteAccount--icon" width={49} height={60}>
                         <defs>
                             <path id="prefix__a" d="M0 59.93h48.447V0H0z" />
@@ -40,19 +39,30 @@ function DeleteAccount(props) {
                         </g>
                     </svg>
 
-                    <h4 className="deleteAccount--title">Er du sikker på at du vil slette <br/> bedrifts kontoen din? Vil all datahistorikk <br/>  bli slettet. </h4>
+                    <h4 className="deleteAccount--title">
+                        Er du sikker på at du vil slette
+                        <br /> bedrifts kontoen din? Vil all datahistorikk <br /> bli slettet.{' '}
+                    </h4>
 
                     <div className="deleteAccount--action mb-4">
-                        <SecondaryOutlineButton text="Ja, slett bruker" onClick={props.onConfirm} loading={props.isLoading} />
+                        <SecondaryOutlineButton
+                            text="Ja, slett bruker"
+                            onClick={props.onConfirm}
+                            loading={props.isLoading}
+                        />
                     </div>
 
                     <div className="deleteAccount--action mb-4">
-                        <GrayOutlineButton text="Avbryt"  onClick={props.onCloseButtonClick} disabled={props.isLoading} />
+                        <GrayOutlineButton
+                            text="Avbryt"
+                            onClick={props.onCloseButtonClick}
+                            disabled={props.isLoading}
+                        />
                     </div>
                 </div>
             </Modal>
         </>
-    )
+    );
 }
 
 export default DeleteAccount;
