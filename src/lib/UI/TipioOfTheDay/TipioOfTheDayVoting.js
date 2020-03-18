@@ -10,7 +10,11 @@ const TipioOfTheDayVoting = (props) => {
                 {props.joined ? (
                     <SecondaryButton text="Del nå" onClick={props.shareOnClick} />
                 ) : (
-                    <SecondaryOutlineButton text="Meld interesse" textColor="text-white" onClick={props.voteOnClick} />
+                    <SecondaryOutlineButton
+                        text="Delta i konkurransen"
+                        textColor="text-white"
+                        onClick={props.voteOnClick}
+                    />
                 )}
             </div>
         </TipioOfTheDay>
