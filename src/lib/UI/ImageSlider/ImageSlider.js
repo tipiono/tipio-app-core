@@ -21,6 +21,7 @@ function ImageSlider({ images, showThumbs, showTimer, tipio_expires_in }) {
                     showThumbs={showThumbs}
                     infiniteLoop
                     renderBottomCenterControls={false}
+                    swipeScrollTolerance={40}
                 >
                     {images && images.map((item, i) => <img src={item.blob_url} alt="..." key={i} />)}
                 </Carousel>

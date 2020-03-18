@@ -6,7 +6,7 @@ import GrayOutlineButton from '../../../UI/Buttons/GrayOutlineButton';
 function DeleteAccount(props) {
     return (
         <>
-            <Modal showCloseButton={!props.isLoading} {...props}>
+            <Modal showCloseButton={!props.isLoading} onCloseButtonClick={props.onCloseButtonClick}>
                 <div className="deleteAccount">
                     <svg className="deleteAccount--icon" width={49} height={60}>
                         <defs>

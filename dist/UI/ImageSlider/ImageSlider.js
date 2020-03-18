@@ -48,7 +48,8 @@ function ImageSlider(_ref) {
                     showStatus: false,
                     showThumbs: showThumbs,
                     infiniteLoop: true,
-                    renderBottomCenterControls: false
+                    renderBottomCenterControls: false,
+                    swipeScrollTolerance: 40
                 },
                 images &&
                     images.map(function(item, i) {
