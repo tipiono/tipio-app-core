@@ -10,7 +10,7 @@ export default React.forwardRef(({ placeholder, name, errors, displayErrors, onB
             })}
         >
             <input
-                placeholder={props.value ? ' ' : props.dateInput}
+                placeholder={props.value ? ' ' : props.dateinput}
                 id={props.id || name}
                 name={name}
                 {...props}

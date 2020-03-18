@@ -43,8 +43,8 @@ function SelectWithSeperateValues({
 SelectWithSeperateValues.defaultProps = {};
 
 SelectWithSeperateValues.propTypes = {
-    value: PropTypes.string.isRequired,
-    placeholder: PropTypes.string.isRequired,
+    value: PropTypes.string,
+    placeholder: PropTypes.string,
     options: PropTypes.array.isRequired,
     label: PropTypes.string.isRequired
 };
