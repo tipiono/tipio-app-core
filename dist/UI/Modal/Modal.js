@@ -115,7 +115,7 @@ function (_Component2) {
       var _this3 = this;
 
       // this.toggleNoScroll();
-      this.removeNoScrollClass(); //this.props.onCloseButtonClick();
+      this.removeNoScrollClass();
 
       if (window.innerWidth <= 575) {
         setTimeout(function () {

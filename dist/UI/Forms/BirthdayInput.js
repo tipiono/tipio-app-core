@@ -32,7 +32,7 @@ var _default = _react.default.forwardRef(function (_ref, ref) {
       validationError: errors && errors[name]
     })
   }, _react.default.createElement("input", _extends({
-    placeholder: props.value ? ' ' : props.dateInput,
+    placeholder: props.value ? ' ' : props.dateinput,
     id: props.id || name,
     name: name
   }, props, {

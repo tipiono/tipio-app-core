@@ -71,8 +71,8 @@ function SelectWithSeperateValues(_ref) {
 
 SelectWithSeperateValues.defaultProps = {};
 SelectWithSeperateValues.propTypes = {
-  value: _propTypes.default.string.isRequired,
-  placeholder: _propTypes.default.string.isRequired,
+  value: _propTypes.default.string,
+  placeholder: _propTypes.default.string,
   options: _propTypes.default.array.isRequired,
   label: _propTypes.default.string.isRequired
 };

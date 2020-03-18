@@ -44,7 +44,6 @@ class Modal extends Component {
     onCloseButtonClick(e) {
         // this.toggleNoScroll();
         this.removeNoScrollClass();
-        //this.props.onCloseButtonClick();
         if (window.innerWidth <= 575) {
             setTimeout(() => {
                 this.props.onCloseButtonClick();
