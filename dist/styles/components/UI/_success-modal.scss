@@ -12,6 +12,16 @@
     width: 320px;
     margin-bottom: 2rem;
   }
+  &--video{
+    margin-bottom: 2rem;
+    max-height: 320px;
+    max-width: 320px;
+
+    video{
+      height: 100%;
+      width: 100%;
+    }
+  }
 
   &--title {
     color: $white;
