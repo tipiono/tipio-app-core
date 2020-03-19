@@ -16,6 +16,6 @@ git push origin --tags
 git checkout master
 git pull origin master
 git merge dev --no-ff --no-edit
-git push origin staging
+git push origin master
 
 git checkout $currentBranch
