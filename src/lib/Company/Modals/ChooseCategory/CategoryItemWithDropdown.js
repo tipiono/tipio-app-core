@@ -1,12 +1,11 @@
-import React, {useState} from 'react';
-import PropTypes from "prop-types";
+import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import Checkbox from '../../../UI/Forms/Checkbox';
-import ArrowDownIcon from "../../../UI/Icons/ArrowDownIcon";
+import ArrowDownIcon from '../../../UI/Icons/ArrowDownIcon';
 import SvgInline from '../../../Hooks/svgInline';
-function dropdown() {
-}
+function dropdown() {}
 
-const SubCategories = ({sub_categories, onClick, subSubCategoryOnClick, withCheckbox, onChange, selectedMap}) => {
+const SubCategories = ({ sub_categories, onClick, subSubCategoryOnClick, withCheckbox, onChange, selectedMap }) => {
     let [showSubSubcategories, setShowSubSubcategories] = useState(0);
 
     function subCategoryOnClick(item) {
@@ -23,27 +22,38 @@ const SubCategories = ({sub_categories, onClick, subSubCategoryOnClick, withChec
                 return (
                     <>
                         <li className="sub-category-item" key={item.id}>
-                            <a className="sub-category-link" href="#" onClick={() => {
-                                subCategoryOnClick(item);
-                                onClick(item);
-                            }}>{item.title}</a>
+                            <a
+                                className="sub-category-link"
+                                href="#"
+                                onClick={() => {
+                                    subCategoryOnClick(item);
+                                    onClick(item);
+                                }}
+                            >
+                                {item.title}
+                            </a>
                         </li>
-                        {showSubSubcategories === item.id && item.sub_categories && <ul className="sub-sub-categories ">
-                            {
-                                item.sub_categories.map((c) => {
+                        {showSubSubcategories === item.id && item.sub_categories && (
+                            <ul className="sub-sub-categories ">
+                                {item.sub_categories.map((c) => {
                                     return (
                                         <li key={c.id} className="sub-sub-category-item">
                                             {/*{withCheckbox && (<Checkbox id={c.id} onChange={onChange} value={c.id}*/}
                                             {/*                            checked={selectedMap[c.id]}/>)}*/}
-                                            <a href="#" className="sub-sub-category-link" onClick={() => {
-                                                onClick(c);
-                                            }}>{c.title}
+                                            <a
+                                                href="#"
+                                                className="sub-sub-category-link"
+                                                onClick={() => {
+                                                    onClick(c);
+                                                }}
+                                            >
+                                                {c.title}
                                             </a>
                                         </li>
                                     );
-                                })
-                            }
-                        </ul>}
+                                })}
+                            </ul>
+                        )}
                     </>
                 );
             })}
@@ -51,16 +61,31 @@ const SubCategories = ({sub_categories, onClick, subSubCategoryOnClick, withChec
     );
 };
 
-const CategoryItem = ({id, title, icon, onSelect, active, sub_categories, onClick, subCategoriesOnClick, withCheckbox, onChange, selectedMap}) => {
-    return (<div className="category-item dropdown">
+const CategoryItem = ({
+    id,
+    title,
+    icon,
+    onSelect,
+    active,
+    sub_categories,
+    onClick,
+    subCategoriesOnClick,
+    withCheckbox,
+    onChange,
+    selectedMap
+}) => {
+    return (
+        <div className="category-item dropdown">
             <div className="d-flex align-items-center">
-                {withCheckbox && (<Checkbox id={id} onChange={onChange} value={id} checked={selectedMap[id]}/>)}
-                <a className={'category-link d-flex align-items-center ' + (active ? 'active' : '')} href="#"
-                   onClick={(e) => {
-                       e.preventDefault();
-                       onClick();
-                   }}>
-
+                {withCheckbox && <Checkbox id={id} onChange={onChange} value={id} checked={selectedMap[id]} />}
+                <a
+                    className={'category-link d-flex align-items-center ' + (active ? 'active' : '')}
+                    href="#"
+                    onClick={(e) => {
+                        e.preventDefault();
+                        onClick();
+                    }}
+                >
                     <div className="category-left-icon">
                         <SvgInline url={icon} />
                     </div>
@@ -78,16 +103,23 @@ const CategoryItem = ({id, title, icon, onSelect, active, sub_categories, onClic
                     </div>
                 </a>
             </div>
-            {active && <SubCategories sub_categories={sub_categories} onClick={(item) => {
-                subCategoriesOnClick(item)
-            }} withCheckbox={withCheckbox} onChange={onChange} selectedMap={selectedMap}/>}
+            {active && (
+                <SubCategories
+                    sub_categories={sub_categories}
+                    onClick={(item) => {
+                        subCategoriesOnClick(item);
+                    }}
+                    withCheckbox={withCheckbox}
+                    onChange={onChange}
+                    selectedMap={selectedMap}
+                />
+            )}
         </div>
-    )
-
+    );
 };
 CategoryItem.propTypes = {
-    name: PropTypes.string.isRequired,
-    icon: PropTypes.string.isRequired,
-    onSelect: PropTypes.func.isRequired,
+    name: PropTypes.string,
+    icon: PropTypes.string,
+    onSelect: PropTypes.func
 };
 export default CategoryItem;
