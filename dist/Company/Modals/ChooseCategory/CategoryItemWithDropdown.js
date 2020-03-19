@@ -142,9 +142,9 @@ var CategoryItem = function CategoryItem(_ref2) {
 };
 
 CategoryItem.propTypes = {
-  name: _propTypes.default.string.isRequired,
-  icon: _propTypes.default.string.isRequired,
-  onSelect: _propTypes.default.func.isRequired
+  name: _propTypes.default.string,
+  icon: _propTypes.default.string,
+  onSelect: _propTypes.default.func
 };
 var _default = CategoryItem;
 exports.default = _default;

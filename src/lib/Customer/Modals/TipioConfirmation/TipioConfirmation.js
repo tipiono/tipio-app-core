@@ -7,7 +7,6 @@ import { loadFbSDK, shareOnMessengerWeb, messengerShareUrlMobile } from '../../.
 import { FacebookShareButton, TwitterShareButton, EmailShareButton } from 'react-share';
 
 function TipioConfirmation({ image, expiresIn, share, title, description, ...props }) {
-    console.log(share);
     useEffect(() => {
         loadFbSDK();
     }, []);
