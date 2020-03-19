@@ -67,7 +67,7 @@ const TipioFeedWithWrapper = (props) => {
                 <div className="d-flex justify-content-center py-5">
                     <Pagination
                         page={props.page}
-                        pageCount={props.pageCount}
+                        pageCount={props.pageCount ? props.pageCount : 1}
                         showPrevButton={showPrevButton}
                         showNextButton={showNextButton}
                         handlePageClick={props.handlePageClick}
