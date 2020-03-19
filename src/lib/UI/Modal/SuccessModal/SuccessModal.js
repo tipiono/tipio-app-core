@@ -15,7 +15,7 @@ function SuccessModal({
 }) {
     const renderVideo = () => (
         <div className="successModal--video">
-            <video autoplay="autoplay" loop muted playsinline>
+            <video autoPlay="autoplay" loop muted playsInline>
                 <source src={videoURL} type="video/mp4" />
                 Nettleseren din støtter ikke videokoden.
             </video>

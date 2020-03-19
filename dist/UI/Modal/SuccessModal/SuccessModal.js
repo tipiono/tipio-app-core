@@ -39,10 +39,10 @@ function SuccessModal(_ref) {
     return _react.default.createElement("div", {
       className: "successModal--video"
     }, _react.default.createElement("video", {
-      autoplay: "autoplay",
+      autoPlay: "autoplay",
       loop: true,
       muted: true,
-      playsinline: true
+      playsInline: true
     }, _react.default.createElement("source", {
       src: videoURL,
       type: "video/mp4"
