@@ -13,6 +13,15 @@
     overflow: hidden;
     width: 100%;
 
+    input {
+        position: relative;
+    }
+    .error-icon {
+        z-index: 10;
+        top: 20px;
+        right: 14px;
+    }
+
     > {
         input,
         textarea,
@@ -342,6 +351,10 @@
 ////// Input Validation Error
 
 .pure-material-textfield-outlined.validationError {
+    .error-icon {
+        display: block;
+        position: absolute;
+    }
     > {
         input,
         textarea,
