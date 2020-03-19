@@ -36,16 +36,17 @@ function SuccessModal(_ref) {
       props = _objectWithoutProperties(_ref, ["successTitle", "successDescription", "animationURL", "videoURL", "imageURL", "customStyle", "children"]);
 
   var renderVideo = function renderVideo() {
-    return _react.default.createElement("video", {
-      poster: animationURL,
-      playsinline: "",
-      autoPlay: "",
-      muted: "",
-      loop: ""
+    return _react.default.createElement("div", {
+      className: "successModal--video"
+    }, _react.default.createElement("video", {
+      autoPlay: "autoplay",
+      loop: true,
+      muted: true,
+      playsInline: true
     }, _react.default.createElement("source", {
       src: videoURL,
       type: "video/mp4"
-    }));
+    }), "Nettleseren din st\xF8tter ikke videokoden."));
   };
 
   var renderImage = function renderImage() {

@@ -79,7 +79,7 @@ var TipioFeedWithWrapper = function TipioFeedWithWrapper(props) {
     className: "d-flex justify-content-center py-5"
   }, _react.default.createElement(_Pagination.default, {
     page: props.page,
-    pageCount: props.pageCount,
+    pageCount: props.pageCount ? props.pageCount : 1,
     showPrevButton: showPrevButton,
     showNextButton: showNextButton,
     handlePageClick: props.handlePageClick

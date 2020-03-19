@@ -39,7 +39,6 @@ function TipioConfirmation(_ref) {
       description = _ref.description,
       props = _objectWithoutProperties(_ref, ["image", "expiresIn", "share", "title", "description"]);
 
-  console.log(share);
   (0, _react.useEffect)(function () {
     (0, _fbShare.loadFbSDK)();
   }, []);

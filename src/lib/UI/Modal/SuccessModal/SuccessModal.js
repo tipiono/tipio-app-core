@@ -14,9 +14,12 @@ function SuccessModal({
     ...props
 }) {
     const renderVideo = () => (
-        <video poster={animationURL} playsinline="" autoPlay="" muted="" loop="">
-            <source src={videoURL} type="video/mp4" />
-        </video>
+        <div className="successModal--video">
+            <video autoPlay="autoplay" loop muted playsInline>
+                <source src={videoURL} type="video/mp4" />
+                Nettleseren din støtter ikke videokoden.
+            </video>
+        </div>
     );
 
     const renderImage = () => <img className="successModal--animation" src={animationURL} alt="" />;
