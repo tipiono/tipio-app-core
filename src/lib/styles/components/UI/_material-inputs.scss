@@ -351,6 +351,9 @@
 ////// Input Validation Error
 
 .pure-material-textfield-outlined.validationError {
+    input {
+        padding-right: 35px;
+    }
     .error-icon {
         display: block;
         position: absolute;
