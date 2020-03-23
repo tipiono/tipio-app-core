@@ -29,7 +29,8 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 
 var PublishedByWithDropDown = function PublishedByWithDropDown(props) {
   var share = props.share,
-      reportOnClick = props.reportOnClick;
+      reportOnClick = props.reportOnClick,
+      showEdit = props.showEdit;
   (0, _react.useEffect)(function () {
     (0, _fbShare.loadFbSDK)();
   }, []);
