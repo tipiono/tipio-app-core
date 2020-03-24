@@ -51,7 +51,7 @@ function VotingCard(_ref) {
     className: "votingCard__body--content"
   }, _react.default.createElement("a", {
     onClick: onClick,
-    href: "#"
+    href: "/tipio/vote/".concat(id)
   }, _react.default.createElement("h5", {
     className: "votingCard__body--content--title"
   }, title)), brand && _react.default.createElement("p", {
