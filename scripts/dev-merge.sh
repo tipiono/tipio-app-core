@@ -13,15 +13,12 @@ if ! git diff-index --quiet HEAD --; then
   exit
 fi
 
+git pull origin $currentBranch
+git push origin $currentBranch
+
 git checkout dev
 git pull origin dev
-npm version patch
+git merge $currentBranch --no-ff --no-edit
 git push origin dev
-git push origin --tags
-
-git checkout master
-git pull origin master
-git merge dev --no-ff --no-edit
-git push origin master
 
 git checkout $currentBranch
