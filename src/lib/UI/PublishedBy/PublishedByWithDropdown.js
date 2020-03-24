@@ -1,26 +1,22 @@
-import React, { useEffect } from "react";
+import React, { useEffect } from 'react';
 
 import PublishedByBase from './PublishedByBase';
-import ThreeDotsIcon from "../Icons/ThreeDotsIcon";
+import ThreeDotsIcon from '../Icons/ThreeDotsIcon';
 import { NewDropdown, NewDropdownItem } from '../NewDropdown/NewDropdown';
-import { isMobile } from "react-device-detect";
-import { loadFbSDK, shareOnMessengerWeb, messengerShareUrlMobile} from "../../Util/fbShare";
+import { isMobile } from 'react-device-detect';
+import { loadFbSDK, shareOnMessengerWeb, messengerShareUrlMobile } from '../../Util/fbShare';
 
-import {
-    FacebookShareButton,
-    TwitterShareButton,
-    EmailShareButton,
-} from 'react-share';
+import { FacebookShareButton, TwitterShareButton, EmailShareButton } from 'react-share';
 
 const PublishedByWithDropDown = (props) => {
-    const { share, reportOnClick } = props;
+    const { share, reportOnClick, showEdit } = props;
 
     useEffect(() => {
         loadFbSDK();
     }, []);
 
     return (
-        <PublishedByBase {...props} >
+        <PublishedByBase {...props}>
             <div className="publishedBy__dropdown">
                 <NewDropdown
                     title={<ThreeDotsIcon />}
@@ -32,15 +28,20 @@ const PublishedByWithDropDown = (props) => {
                         <FacebookShareButton
                             url={share.link}
                             quote={share.title}
-                            className="Demo__some-network__share-button">
+                            className="Demo__some-network__share-button"
+                        >
                             Del på facebook
                         </FacebookShareButton>
                     </NewDropdownItem>
-                    <NewDropdownItem key={'2'} href={messengerShareUrlMobile(share.url)} onClick={() => {
-                        if(!isMobile) {
-                            shareOnMessengerWeb(share.url);
-                        }
-                    }}>
+                    <NewDropdownItem
+                        key={'2'}
+                        href={messengerShareUrlMobile(share.url)}
+                        onClick={() => {
+                            if (!isMobile) {
+                                shareOnMessengerWeb(share.url);
+                            }
+                        }}
+                    >
                         Del på Messanger
                     </NewDropdownItem>
                     <NewDropdownItem key={'3'}>
@@ -53,23 +54,29 @@ const PublishedByWithDropDown = (props) => {
                         </TwitterShareButton>
                     </NewDropdownItem>
                     <NewDropdownItem key={'4'}>
-                        <EmailShareButton
-                            url={share.link}
-                            subject={share.title}
-                            body={share.title}>
+                        <EmailShareButton url={share.link} subject={share.title} body={share.title}>
                             Del på mail
                         </EmailShareButton>
                     </NewDropdownItem>
-                    <NewDropdownItem key={'5'} onClick={() => {
-                        navigator.clipboard.writeText(share.link);
-                    }}>
+                    <NewDropdownItem
+                        key={'5'}
+                        onClick={() => {
+                            navigator.clipboard.writeText(share.link);
+                        }}
+                    >
                         Kopier lenke
                     </NewDropdownItem>
+                    {showEdit ? (
+                        <NewDropdownItem key={'6'} onClick={props.onEditClick}>
+                            Rediger
+                        </NewDropdownItem>
+                    ) : (
+                        ''
+                    )}
                     {/*<br />*/}
-                    {/*<NewDropdownItem key={'7'} onClick={reportOnClick}>Rapportér <small className="d-block text-gray-600">Dette bryter med Tipio’s rettningslinjer</small></NewDropdownItem>*/}
+                    {/* <NewDropdownItem key={'7'} >Rapportér <small className="d-block text-gray-600">Dette bryter med Tipio’s rettningslinjer</small></NewDropdownItem> */}
                 </NewDropdown>
             </div>
-
         </PublishedByBase>
     );
 };

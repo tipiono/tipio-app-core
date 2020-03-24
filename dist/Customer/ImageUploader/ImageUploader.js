@@ -37,12 +37,17 @@ function _iterableToArrayLimit(arr, i) { if (!(Symbol.iterator in Object(arr) ||
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
 function ImageUploader(_ref) {
   var setFieldValue = _ref.setFieldValue,
       name = _ref.name,
       errors = _ref.errors,
       displayErrors = _ref.displayErrors,
-      title = _ref.title;
+      title = _ref.title,
+      props = _objectWithoutProperties(_ref, ["setFieldValue", "name", "errors", "displayErrors", "title"]);
 
   var _useState = (0, _react.useState)(false),
       _useState2 = _slicedToArray(_useState, 2),
@@ -64,7 +69,7 @@ function ImageUploader(_ref) {
       croppedImageIndex = _useState8[0],
       setCroppedImageIndex = _useState8[1];
 
-  var _useState9 = (0, _react.useState)([]),
+  var _useState9 = (0, _react.useState)(props.files ? props.files : []),
       _useState10 = _slicedToArray(_useState9, 2),
       files = _useState10[0],
       setFiles = _useState10[1];
@@ -85,7 +90,7 @@ function ImageUploader(_ref) {
     setFieldValue('files', t);
     setInitialCropCompleted(false);
     openCropper(acceptedFiles);
-    setCroppedImageIndex(files.length + 1);
+    setCroppedImageIndex(files && files.length + 1);
   };
 
   var openCropper = function openCropper(files) {
@@ -114,7 +119,7 @@ function ImageUploader(_ref) {
       return x.id === cropImage.id;
     });
     setCroppedImageIndex(croppedImageIndex + 2);
-    var icc = !initialCropCompleted && croppedImageIndex === files.length - 1;
+    var icc = !initialCropCompleted && croppedImageIndex === (files && files.length) - 1;
 
     if (icc) {
       setInitialCropCompleted(true);
@@ -141,7 +146,7 @@ function ImageUploader(_ref) {
 
   var thumbs = null;
 
-  if (files.length > 1) {
+  if (files && files.length > 1) {
     thumbs = files.slice(1).map(function (file) {
       return _react.default.createElement("div", {
         key: file.name,
@@ -167,7 +172,7 @@ function ImageUploader(_ref) {
       style: {
         textAlign: 'center'
       }
-    }, croppedImageIndex, " av ", files.length);
+    }, croppedImageIndex, " av ", files && files.length);
   }
 
   return _react.default.createElement(_react.default.Fragment, null, showCropper && _react.default.createElement(_index.ImageCropper, {
@@ -191,7 +196,7 @@ function ImageUploader(_ref) {
       onClick: function onClick(event) {
         return event.preventDefault();
       }
-    }), _react.default.createElement("input", getInputProps()), files.length === 0 && _react.default.createElement(_Placeholder.default, null)), files.length > 0 && _react.default.createElement("div", {
+    }), _react.default.createElement("input", getInputProps()), files && files.length === 0 && _react.default.createElement(_Placeholder.default, null)), files && files.length > 0 && _react.default.createElement("div", {
       className: "uploadViewer__main"
     }, _react.default.createElement("img", {
       className: "uploadViewer__main--image",
@@ -206,7 +211,7 @@ function ImageUploader(_ref) {
       className: "uploadViewer__thumbnail"
     }, thumbs), _react.default.createElement("div", getRootProps({
       className: 'dropzone'
-    }), _react.default.createElement("input", getInputProps()), files.length > 0 && _react.default.createElement("div", {
+    }), _react.default.createElement("input", getInputProps()), files && files.length > 0 && _react.default.createElement("div", {
       className: "mt-3 mb-5"
     }, _react.default.createElement(_IconButton.default, {
       text: "Last opp produktbilder",
@@ -216,7 +221,7 @@ function ImageUploader(_ref) {
     }))));
   }), displayErrors && errors && errors[name] && _react.default.createElement(_ErrorMessage.default, {
     content: errors[name].message,
-    color: "bg-red"
+    color: 'bg-red'
   }));
 }
 

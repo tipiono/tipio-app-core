@@ -52,7 +52,7 @@ function NewDropdown(props) {
     }
   }, props.title), _react.default.createElement("div", {
     className: (0, _classnames.default)('dropdown-menu', props.aligned, {
-      'show': visible,
+      show: visible,
       'd-none': !visible
     })
   }, props.showCloseIcon ? _react.default.createElement("a", {
@@ -62,7 +62,7 @@ function NewDropdown(props) {
       e.preventDefault();
       setDropDownVisibility(false);
     }
-  }, "                       ", _react.default.createElement("svg", {
+  }, ' ', _react.default.createElement("svg", {
     width: "19px",
     height: "19px",
     viewBox: "0 0 19 19"
@@ -78,17 +78,19 @@ function NewDropdown(props) {
     fill: "#8C8F91",
     fillRule: "nonzero"
   })))) : null, _react.default.Children.map(props.children, function (child) {
-    return (0, _react.cloneElement)(child, {
-      hideOnClick: props.hideOnClick,
-      setDropDownVisibility: setDropDownVisibility
-    });
+    if (child !== '') {
+      return (0, _react.cloneElement)(child, {
+        hideOnClick: props.hideOnClick,
+        setDropDownVisibility: setDropDownVisibility
+      });
+    }
   })));
 }
 
 function NewDropdownItem(props) {
   return _react.default.createElement("a", {
     className: "dropdown-item",
-    href: props.href ? props.href : "#",
+    href: props.href ? props.href : '#',
     onClick: function onClick(e) {
       e.preventDefault();
       props.hideOnClick && props.setDropDownVisibility(false);
