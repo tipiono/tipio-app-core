@@ -56,7 +56,7 @@ function BiddingCard(_ref) {
     className: "biddingCard__body--content"
   }, _react.default.createElement("a", {
     onClick: onClick,
-    href: "#"
+    href: "/tipio/bind/".concat(id)
   }, _react.default.createElement("h4", {
     className: "biddingCard__body--content--title"
   }, title)), brand && _react.default.createElement("p", {
