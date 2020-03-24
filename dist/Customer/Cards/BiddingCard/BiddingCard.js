@@ -66,7 +66,7 @@ function BiddingCard(_ref) {
   }, !bindHasExpired && (bindingCount > 0 ? _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_SalesProgressBar.default, {
     percentage: salesProgressBarPercentage,
     bindingCount: bindingCount
-  })) : "")), _react.default.createElement("div", {
+  })) : '')), _react.default.createElement("div", {
     className: "biddingCard__body--share"
   }, children))));
 }

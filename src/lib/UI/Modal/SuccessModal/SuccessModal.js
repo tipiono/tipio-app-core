@@ -33,7 +33,7 @@ function SuccessModal({
     return (
         <>
             <Modal {...props}>
-                <div className={cx('successModal', customStyle)}>
+                <div className={cx('successModal', customStyle)} style={customStyle}>
                     {imageURL ? renderSvg() : videoURL ? renderVideo() : renderImage()}
 
                     <h3 className="successModal--title">{successTitle}</h3>

@@ -64,7 +64,8 @@ function SuccessModal(_ref) {
   };
 
   return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_Modal.Modal, props, _react.default.createElement("div", {
-    className: (0, _classnames.default)('successModal', customStyle)
+    className: (0, _classnames.default)('successModal', customStyle),
+    style: customStyle
   }, imageURL ? renderSvg() : videoURL ? renderVideo() : renderImage(), _react.default.createElement("h3", {
     className: "successModal--title"
   }, successTitle), _react.default.createElement("p", {
