@@ -29,7 +29,8 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 
 var PublishedByWithDropDown = function PublishedByWithDropDown(props) {
   var share = props.share,
-      reportOnClick = props.reportOnClick;
+      reportOnClick = props.reportOnClick,
+      showEdit = props.showEdit;
   (0, _react.useEffect)(function () {
     (0, _fbShare.loadFbSDK)();
   }, []);
@@ -71,7 +72,10 @@ var PublishedByWithDropDown = function PublishedByWithDropDown(props) {
     onClick: function onClick() {
       navigator.clipboard.writeText(share.link);
     }
-  }, "Kopier lenke"))));
+  }, "Kopier lenke"), showEdit ? _react.default.createElement(_NewDropdown.NewDropdownItem, {
+    key: '6',
+    onClick: props.onEditClick
+  }, "Rediger") : '')));
 };
 
 var _default = PublishedByWithDropDown;
