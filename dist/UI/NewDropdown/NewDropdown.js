@@ -78,10 +78,12 @@ function NewDropdown(props) {
     fill: "#8C8F91",
     fillRule: "nonzero"
   })))) : null, _react.default.Children.map(props.children, function (child) {
-    return (0, _react.cloneElement)(child, {
-      hideOnClick: props.hideOnClick,
-      setDropDownVisibility: setDropDownVisibility
-    });
+    if (child !== '') {
+      return (0, _react.cloneElement)(child, {
+        hideOnClick: props.hideOnClick,
+        setDropDownVisibility: setDropDownVisibility
+      });
+    }
   })));
 }
 

@@ -141,8 +141,8 @@ function (_Component) {
       }, "Loading..."))), _react.default.createElement("div", {
         style: {
           opacity: this.state.cropperReady ? 100 : 0,
-          width: "350px",
-          height: "350px"
+          width: '350px',
+          height: '350px'
         }
       }, _react.default.createElement("img", {
         id: "image",
@@ -152,13 +152,13 @@ function (_Component) {
       }, _react.default.createElement("li", {
         className: "imageCropper__content__action--cancel"
       }, _react.default.createElement(_GrayOutlineButton.default, {
-        text: "Avbryt",
+        text: 'Avbryt',
         onClick: this.modalOnClose,
         disabled: this.props.isSubmitting
       })), _react.default.createElement("li", {
         className: "imageCropper__content__action--next"
       }, _react.default.createElement(_SecondaryButton.default, {
-        text: "Neste",
+        text: 'Neste',
         onClick: this.cropDoneOnClick,
         loading: this.props.isSubmitting
       })))))));

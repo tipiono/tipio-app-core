@@ -48,7 +48,9 @@ export function NewDropdown(props) {
                     </a>
                 ) : null}
                 {React.Children.map(props.children, (child) => {
-                    return cloneElement(child, { hideOnClick: props.hideOnClick, setDropDownVisibility });
+                    if (child !== '') {
+                        return cloneElement(child, { hideOnClick: props.hideOnClick, setDropDownVisibility });
+                    }
                 })}
             </div>
         </div>
