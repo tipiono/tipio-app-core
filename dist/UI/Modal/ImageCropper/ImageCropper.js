@@ -87,12 +87,11 @@ function (_Component) {
         },
         viewMode: 1
       });
-    }
-  }, {
-    key: "componentWillUnmount",
-    value: function componentWillUnmount() {
-      this.state.cropperInstance.destroy();
-    }
+    } // componentWillUnmount() {
+    //     //this.props.onClose();
+    //     this.state.cropperInstance.destroy();
+    // }
+
   }, {
     key: "modalOnClose",
     value: function modalOnClose() {
