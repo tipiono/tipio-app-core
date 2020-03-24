@@ -39,7 +39,7 @@ var SingleVotingCard = function SingleVotingCard(_ref) {
     className: "singleVotingCard__body--content"
   }, _react.default.createElement("a", {
     onClick: onClick,
-    href: "/"
+    href: "/tipio/vote/".concat(id)
   }, _react.default.createElement("h5", {
     className: "singleVotingCard__body--content--title"
   }, title)), brand && _react.default.createElement("h4", {
