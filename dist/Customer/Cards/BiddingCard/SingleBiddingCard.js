@@ -50,7 +50,7 @@ var SingleBiddingCard = function SingleBiddingCard(_ref) {
   }, _react.default.createElement("div", {
     className: "singleBiddingCard__header"
   }, _react.default.createElement("a", {
-    href: "/",
+    href: "/tipio/bind/".concat(id),
     className: "lazy-image singleBiddingCard__header--preview",
     onClick: onClick
   }, _react.default.createElement("img", {
@@ -68,7 +68,7 @@ var SingleBiddingCard = function SingleBiddingCard(_ref) {
     className: "singleBiddingCard__body--content"
   }, _react.default.createElement("a", {
     onClick: onClick,
-    href: "/"
+    href: "/tipio/bind/".concat(id)
   }, _react.default.createElement("h2", {
     className: "singleBiddingCard__body--content--title"
   }, title)), brand && _react.default.createElement("h4", {
