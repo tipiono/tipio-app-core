@@ -32,9 +32,8 @@ var CategoryItem = function CategoryItem(_ref) {
     onChange: onChange,
     value: id,
     checked: selectedMap[id]
-  }), _react.default.createElement("a", {
+  }), _react.default.createElement("span", {
     className: 'category-link ' + (selected ? 'selected' : ''),
-    href: "#",
     onClick: onSelect
   }, _react.default.createElement("div", {
     className: "category-left-icon"

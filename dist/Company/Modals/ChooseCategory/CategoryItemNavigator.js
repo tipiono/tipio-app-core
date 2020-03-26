@@ -27,9 +27,8 @@ var CategoryItem = function CategoryItem(props) {
     onChange: props.onChange,
     value: props.item.id,
     checked: props.selectedMap[props.item.id]
-  }), _react.default.createElement("a", {
+  }), _react.default.createElement("span", {
     className: 'category-link ',
-    href: "#",
     onClick: props.onClick
   }, _react.default.createElement("div", {
     className: "category-left-icon"
@@ -41,9 +40,9 @@ var CategoryItem = function CategoryItem(props) {
 };
 
 CategoryItem.propTypes = {
-  name: _propTypes.default.string.isRequired,
-  icon: _propTypes.default.string.isRequired,
-  onSelect: _propTypes.default.func.isRequired
+  name: _propTypes.default.string,
+  icon: _propTypes.default.string,
+  onSelect: _propTypes.default.func
 };
 var _default = CategoryItem;
 exports.default = _default;
