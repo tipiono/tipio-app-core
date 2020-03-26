@@ -39,7 +39,8 @@ var SubCategories = function SubCategories(_ref) {
       subSubCategoryOnClick = _ref.subSubCategoryOnClick,
       withCheckbox = _ref.withCheckbox,
       onChange = _ref.onChange,
-      selectedMap = _ref.selectedMap;
+      selectedMap = _ref.selectedMap,
+      onSelectItem = _ref.onSelectItem;
 
   var _useState = (0, _react.useState)(0),
       _useState2 = _slicedToArray(_useState, 2),
@@ -61,23 +62,27 @@ var SubCategories = function SubCategories(_ref) {
   }, sub_categories.map(function (item) {
     return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("li", {
       className: "sub-category-item",
-      key: item.id
-    }, _react.default.createElement("a", {
+      key: (item.id, ":", item.title)
+    }, _react.default.createElement("span", {
       className: "sub-category-link",
-      href: "#",
-      onClick: function onClick() {
-        subCategoryOnClick(item);
+      onClick: function onClick(e) {
+        e.preventDefault();
 
-        _onClick(item);
+        if (item.sub_categories.length) {
+          subCategoryOnClick(item);
+
+          _onClick(item);
+        } else {
+          onSelectItem(item);
+        }
       }
     }, item.title)), showSubSubcategories === item.id && item.sub_categories && _react.default.createElement("ul", {
       className: "sub-sub-categories "
     }, item.sub_categories.map(function (c) {
       return _react.default.createElement("li", {
-        key: c.id,
+        key: (c.id, ":", c.title),
         className: "sub-sub-category-item"
-      }, _react.default.createElement("a", {
-        href: "#",
+      }, _react.default.createElement("span", {
         className: "sub-sub-category-link",
         onClick: function onClick() {
           _onClick(c);
@@ -108,9 +113,8 @@ var CategoryItem = function CategoryItem(_ref2) {
     onChange: onChange,
     value: id,
     checked: selectedMap[id]
-  }), _react.default.createElement("a", {
+  }), _react.default.createElement("span", {
     className: 'category-link d-flex align-items-center ' + (active ? 'active' : ''),
-    href: "#",
     onClick: function onClick(e) {
       e.preventDefault();
 
@@ -137,7 +141,10 @@ var CategoryItem = function CategoryItem(_ref2) {
     },
     withCheckbox: withCheckbox,
     onChange: onChange,
-    selectedMap: selectedMap
+    selectedMap: selectedMap,
+    onSelectItem: function onSelectItem(item) {
+      onSelect(item);
+    }
   }));
 };
 

@@ -5,7 +5,15 @@ import ArrowDownIcon from '../../../UI/Icons/ArrowDownIcon';
 import SvgInline from '../../../Hooks/svgInline';
 function dropdown() {}
 
-const SubCategories = ({ sub_categories, onClick, subSubCategoryOnClick, withCheckbox, onChange, selectedMap }) => {
+const SubCategories = ({
+    sub_categories,
+    onClick,
+    subSubCategoryOnClick,
+    withCheckbox,
+    onChange,
+    selectedMap,
+    onSelectItem
+}) => {
     let [showSubSubcategories, setShowSubSubcategories] = useState(0);
 
     function subCategoryOnClick(item) {
@@ -21,34 +29,37 @@ const SubCategories = ({ sub_categories, onClick, subSubCategoryOnClick, withChe
             {sub_categories.map((item) => {
                 return (
                     <>
-                        <li className="sub-category-item" key={item.id}>
-                            <a
+                        <li className="sub-category-item" key={(item.id, ':', item.title)}>
+                            <span
                                 className="sub-category-link"
-                                href="#"
-                                onClick={() => {
-                                    subCategoryOnClick(item);
-                                    onClick(item);
+                                onClick={(e) => {
+                                    e.preventDefault();
+                                    if (item.sub_categories.length) {
+                                        subCategoryOnClick(item);
+                                        onClick(item);
+                                    } else {
+                                        onSelectItem(item);
+                                    }
                                 }}
                             >
                                 {item.title}
-                            </a>
+                            </span>
                         </li>
                         {showSubSubcategories === item.id && item.sub_categories && (
                             <ul className="sub-sub-categories ">
                                 {item.sub_categories.map((c) => {
                                     return (
-                                        <li key={c.id} className="sub-sub-category-item">
+                                        <li key={(c.id, ':', c.title)} className="sub-sub-category-item">
                                             {/*{withCheckbox && (<Checkbox id={c.id} onChange={onChange} value={c.id}*/}
                                             {/*                            checked={selectedMap[c.id]}/>)}*/}
-                                            <a
-                                                href="#"
+                                            <span
                                                 className="sub-sub-category-link"
                                                 onClick={() => {
                                                     onClick(c);
                                                 }}
                                             >
                                                 {c.title}
-                                            </a>
+                                            </span>
                                         </li>
                                     );
                                 })}
@@ -78,9 +89,8 @@ const CategoryItem = ({
         <div className="category-item dropdown">
             <div className="d-flex align-items-center">
                 {withCheckbox && <Checkbox id={id} onChange={onChange} value={id} checked={selectedMap[id]} />}
-                <a
+                <span
                     className={'category-link d-flex align-items-center ' + (active ? 'active' : '')}
-                    href="#"
                     onClick={(e) => {
                         e.preventDefault();
                         onClick();
@@ -101,7 +111,7 @@ const CategoryItem = ({
                             />
                         </svg>
                     </div>
-                </a>
+                </span>
             </div>
             {active && (
                 <SubCategories
@@ -112,6 +122,9 @@ const CategoryItem = ({
                     withCheckbox={withCheckbox}
                     onChange={onChange}
                     selectedMap={selectedMap}
+                    onSelectItem={(item) => {
+                        onSelect(item);
+                    }}
                 />
             )}
         </div>

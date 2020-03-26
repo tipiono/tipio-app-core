@@ -42,7 +42,7 @@ function ImageSlider(_ref) {
       alt: "...",
       key: i
     });
-  })), showTimer && _react.default.createElement("div", {
+  })), showTimer && tipio_expires_in && _react.default.createElement("div", {
     className: "imageSlider__countDown"
   }, _react.default.createElement(_TipioCountdown.default, {
     className: "timer",
