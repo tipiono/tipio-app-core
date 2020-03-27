@@ -103,6 +103,7 @@
 
             .sub-category-item {
                 padding: 8px 0;
+                text-align: left;
 
                 .sub-category-link {
                     font-size: 18px;
@@ -142,6 +143,14 @@
                     display: block;
                     background-color: transparent;
                     color: $gray-800;
+                }
+
+                .sub-sub-category-item{
+                    text-align: left;
+                    @include media-breakpoint-up(md) {
+                        &:hover {
+                            text-decoration: underline;
+                        }}
                 }
             }
         }
