@@ -11,8 +11,6 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
-var _reactSelect = _interopRequireDefault(require("react-select"));
-
 var _creatable = _interopRequireDefault(require("react-select/creatable"));
 
 var _ErrorMessage = _interopRequireDefault(require("../ErrorMessage/ErrorMessage"));
@@ -34,7 +32,11 @@ function Select(_ref) {
       name = _ref.name;
 
   //const [value, setValue] = useState({ value: defaultValue, label: defaultValue} || false);
-  var _onChange = function _onChange(v) {// onChange(v || { value: 1, label: 1})
+  var _onChange = function _onChange(v) {
+    onChange(v || {
+      value: 1,
+      label: 1
+    });
   };
 
   return _react.default.createElement("div", {
@@ -54,16 +56,22 @@ function Select(_ref) {
         label: x
       };
     }),
-    placeholder: placeholder || '-'
+    placeholder: placeholder || '-',
+    formatCreateLabel: function formatCreateLabel(inputValue) {
+      return inputValue;
+    }
+  }), displayErrors && errors && errors[name] && _react.default.createElement(_ErrorMessage.default, {
+    content: errors[name].message || errors[name],
+    color: 'bg-red'
   }));
 }
 
 Select.defaultProps = {};
 Select.propTypes = {
-  value: _propTypes.default.string.isRequired,
-  placeholder: _propTypes.default.string.isRequired,
-  options: _propTypes.default.array.isRequired,
-  label: _propTypes.default.string.isRequired
+  value: _propTypes.default.string,
+  placeholder: _propTypes.default.string,
+  options: _propTypes.default.array,
+  label: _propTypes.default.string
 };
 var _default = Select;
 exports.default = _default;

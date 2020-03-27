@@ -33,7 +33,8 @@ var SingleBiddingCard = function SingleBiddingCard(_ref) {
       salesProgressBarPercentage = _ref.salesProgressBarPercentage,
       bindingCount = _ref.bindingCount,
       onClick = _ref.onClick,
-      props = _objectWithoutProperties(_ref, ["image", "title", "brand", "expiresIn", "market_price", "costPrice", "salesProgressBarPercentage", "bindingCount", "onClick"]);
+      id = _ref.id,
+      props = _objectWithoutProperties(_ref, ["image", "title", "brand", "expiresIn", "market_price", "costPrice", "salesProgressBarPercentage", "bindingCount", "onClick", "id"]);
 
   var rangeList = props.tipio_offer && props.tipio_offer.offer_price_ranges || [];
   var firstRange = rangeList.length > 0 && parseInt(rangeList[1].price, 10) && rangeList[1];

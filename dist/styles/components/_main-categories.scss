@@ -2,9 +2,9 @@
     .category-item {
         width: 90%;
 
-
         .category-link {
             width: 100%;
+
             &:hover {
                 text-decoration: none;
             }
@@ -14,7 +14,8 @@
     .category-item.dropdown {
         padding-top: 24px;
         border-bottom: 1px solid $gray-200;
-        span{
+
+        span {
             cursor: pointer;
         }
 
@@ -125,6 +126,11 @@
                         }
                     }
                 }
+
+                .selected {
+                    box-shadow: 0 2px 0 $secondary;
+                    color: $primary !important;
+                }
             }
 
             .sub-sub-categories {
@@ -144,9 +150,10 @@
     .category-item.more {
         padding-top: 24px;
 
-        span{
+        span {
             cursor: pointer;
         }
+
         .category-link {
             display: flex;
             align-items: center;
@@ -186,7 +193,8 @@
         &:last-child {
             border-bottom: none;
         }
-        span{
+
+        span {
             cursor: pointer;
         }
 
@@ -268,9 +276,10 @@
         border-bottom: 1px solid $gray-200;
         width: 80%;
 
-        span{
+        span {
             cursor: pointer;
         }
+
         &:hover {
             border-bottom: 1px solid $primary;
 
@@ -323,7 +332,8 @@
         &.select {
             display: flex;
             align-items: center;
-            span{
+
+            span {
                 cursor: pointer;
             }
 
@@ -373,6 +383,11 @@
                 .sub-category-link {
                     font-size: 18px;
                     color: $gray-700;
+                }
+
+                .selected {
+                    color: #4f2e90;
+                    box-shadow: 0 2px 0 #4abcac;
                 }
             }
 
