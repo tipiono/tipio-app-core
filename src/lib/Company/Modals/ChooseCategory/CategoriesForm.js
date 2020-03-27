@@ -1,9 +1,9 @@
-import React, {useState, useEffect} from 'react';
-import Masonry from "react-masonry-css";
-import CategoryItem from "./CategoryItem";
-import CategoryItemNavigator from "./CategoryItemNavigator";
-import CategoryItemWithDropdown from "./CategoryItemWithDropdown";
-import CategoriesHeader from "./CategoriesHeader";
+import React, { useState, useEffect } from 'react';
+import Masonry from 'react-masonry-css';
+import CategoryItem from './CategoryItem';
+import CategoryItemNavigator from './CategoryItemNavigator';
+import CategoryItemWithDropdown from './CategoryItemWithDropdown';
+import CategoriesHeader from './CategoriesHeader';
 import cx from 'classnames';
 
 import SecondaryButton from '../../../UI/Buttons/SecondaryButton';
@@ -16,21 +16,21 @@ const breakpointColumnsObj = {
 };
 
 function CategoriesForm({
-                            active,
-                            navigation,
-                            parent,
-                            buttonTitle,
-                            withCheckbox,
-                            onChange,
-                            controlDisabledButton,
-                            disabledButton,
-                            selectedMap,
-                            onComplete,
-                            isLoading,
-                            setActiveCategory,
-                            goBack,
-                            path
-                        }) {
+    active,
+    navigation,
+    parent,
+    buttonTitle,
+    withCheckbox,
+    onChange,
+    controlDisabledButton,
+    disabledButton,
+    selectedMap,
+    onComplete,
+    isLoading,
+    setActiveCategory,
+    goBack,
+    path
+}) {
     const [selectedOptionId, setSelectedOptionId] = useState(0);
     const [selectedOption, setSelectedOption] = useState(null);
     const [selectedCategoryId, setSelectedCategoryId] = useState(0);
@@ -85,67 +85,86 @@ function CategoriesForm({
     }
 
     return (
-
         <div className="choose-category">
-            <CategoriesHeader data={navigation} parent={parent} backButtonOnClick={backButtonOnClick} subCategoriesOnClick={headerSubOnClick} path={path}/>
+            <CategoriesHeader
+                data={navigation}
+                parent={parent}
+                backButtonOnClick={backButtonOnClick}
+                subCategoriesOnClick={headerSubOnClick}
+                path={path}
+            />
             <div className="choose-category-body">
                 <Masonry
                     breakpointCols={breakpointColumnsObj}
                     className="my-masonry-grid browse-categories"
-                    columnClassName={cx("my-masonry-grid_column", {
-                        "customer-main-categories": !withCheckbox,
-                        "company-main-categories": withCheckbox
+                    columnClassName={cx('my-masonry-grid_column', {
+                        'customer-main-categories': !withCheckbox,
+                        'company-main-categories': withCheckbox
                     })}
                 >
-                    {active && active.map((item) => {
-                        if (item.height === 1) {
-                            return <CategoryItemNavigator
-                                item={item}
-                                onClick={(e) => {
-                                    navigatorOnSelect(item.id);
-                                }}
-                                withCheckbox={withCheckbox}
-                                onChange={onChange}
-                                selectedMap={selectedMap}
-                            />
-                        } else if (item.height > 1) { // height > 1
-                            return <CategoryItemWithDropdown
-                                id={item.id}
-                                title={item.title}
-                                sub_categories={selectedCategoryId === item.id ? item.sub_categories : []}
-                                onClick={() => {
-                                    categoryWithDropdownOnSelect(item);
-                                }}
-                                active={selectedCategoryId === item.id}
-                                subCategoriesOnClick={subCategoriesOnClick}
-                                icon={item.file_store && item.file_store.blob_url}
-                                withCheckbox={withCheckbox}
-                                onChange={onChange}
-                                selectedMap={selectedMap}
-                            />
-                        } else { // height 0
-                            return <CategoryItem
-                                id={item.id}
-                                icon={item.file_store && item.file_store.blob_url}
-                                title={item.title}
-                                onSelect={(e) => {
-                                    e.preventDefault();
-                                    optionOnSelect(item);
-                                }}
-                                selected={item.id === selectedOptionId}
-                                withCheckbox={withCheckbox}
-                                onChange={onChange}
-                                selectedMap={selectedMap}
-                            />
-                        }
-                    })}
+                    {active &&
+                        active.map((item) => {
+                            if (item.height === 1) {
+                                return (
+                                    <CategoryItemNavigator
+                                        item={item}
+                                        onClick={(e) => {
+                                            navigatorOnSelect(item.id);
+                                        }}
+                                        withCheckbox={withCheckbox}
+                                        onChange={onChange}
+                                        selectedMap={selectedMap}
+                                    />
+                                );
+                            } else if (item.height > 1) {
+                                // height > 1
+                                return (
+                                    <CategoryItemWithDropdown
+                                        id={item.id}
+                                        title={item.title}
+                                        sub_categories={selectedCategoryId === item.id ? item.sub_categories : []}
+                                        onClick={() => {
+                                            categoryWithDropdownOnSelect(item);
+                                        }}
+                                        onSelect={(selectedItem) => {
+                                            optionOnSelect(selectedItem);
+                                        }}
+                                        active={selectedCategoryId === item.id}
+                                        subCategoriesOnClick={subCategoriesOnClick}
+                                        icon={item.file_store && item.file_store.blob_url}
+                                        withCheckbox={withCheckbox}
+                                        onChange={onChange}
+                                        selectedMap={selectedMap}
+                                    />
+                                );
+                            } else {
+                                // height 0
+                                return (
+                                    <CategoryItem
+                                        id={item.id}
+                                        icon={item.file_store && item.file_store.blob_url}
+                                        title={item.title}
+                                        onSelect={(e) => {
+                                            e.preventDefault();
+                                            optionOnSelect(item);
+                                        }}
+                                        selected={item.id === selectedOptionId}
+                                        withCheckbox={withCheckbox}
+                                        onChange={onChange}
+                                        selectedMap={selectedMap}
+                                    />
+                                );
+                            }
+                        })}
                 </Masonry>
             </div>
             <div className="choose-category-footer">
                 <SecondaryButton
                     className="choose-category-footer--btn btn btn-lg btn-secondary"
                     text={buttonTitle || 'Lagre'}
-                    disabled={(controlDisabledButton && disabledButton) || (!controlDisabledButton && !selectedOptionId)}
+                    disabled={
+                        (controlDisabledButton && disabledButton) || (!controlDisabledButton && !selectedOptionId)
+                    }
                     onClick={chooseCategoryOnClick}
                     loading={isLoading}
                 />

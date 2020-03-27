@@ -25,7 +25,7 @@ function ImageSlider({ images, showThumbs, showTimer, tipio_expires_in }) {
                 >
                     {images && images.map((item, i) => <img src={item.blob_url} alt="..." key={i} />)}
                 </Carousel>
-                {showTimer && (
+                {showTimer && tipio_expires_in && (
                     <div className="imageSlider__countDown">
                         <TipioCountdown className="timer" expires_in={tipio_expires_in} />
                     </div>
