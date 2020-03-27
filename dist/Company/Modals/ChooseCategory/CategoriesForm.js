@@ -87,6 +87,17 @@ function CategoriesForm(_ref) {
     setSelectedCategoryId(0);
   }
 
+  function selectedSubCategory(item) {
+    console.log("HEREEE: ", item);
+    var soi = 0;
+
+    if (selectedOptionId !== item.id) {
+      soi = item.id;
+    }
+
+    setSelectedOptionId(soi); // setActiveCategory(item.id)
+  }
+
   function categoryWithDropdownOnSelect(item) {
     var sci = 0;
 
@@ -111,6 +122,8 @@ function CategoriesForm(_ref) {
   }
 
   function subCategoriesOnClick(item) {
+    console.log("HERE IN THIS CLICK: ", item.height);
+
     if (item.height === 1) {
       setActiveCategory(item.id);
     }
@@ -167,7 +180,7 @@ function CategoriesForm(_ref) {
           categoryWithDropdownOnSelect(item);
         },
         onSelect: function onSelect(selectedItem) {
-          optionOnSelect(selectedItem);
+          selectedSubCategory(selectedItem);
         },
         active: selectedCategoryId === item.id,
         subCategoriesOnClick: subCategoriesOnClick,

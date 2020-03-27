@@ -48,7 +48,7 @@ function CategoriesHeader(_ref) {
         e.preventDefault();
         subCategoriesOnClick(navigation);
       },
-      className: (0, _classnames.default)("category-type-item-link", {
+      className: (0, _classnames.default)('category-type-item-link', {
         selected: navigation.id === currentCat.id
       })
     }, navigation.title));

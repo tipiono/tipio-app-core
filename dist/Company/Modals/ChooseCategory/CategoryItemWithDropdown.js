@@ -47,6 +47,11 @@ var SubCategories = function SubCategories(_ref) {
       showSubSubcategories = _useState2[0],
       setShowSubSubcategories = _useState2[1];
 
+  var _useState3 = (0, _react.useState)(0),
+      _useState4 = _slicedToArray(_useState3, 2),
+      selectedId = _useState4[0],
+      setSelectedId = _useState4[1];
+
   function subCategoryOnClick(item) {
     var sci = 0;
 
@@ -60,27 +65,32 @@ var SubCategories = function SubCategories(_ref) {
   return _react.default.createElement("ul", {
     className: "sub-categories "
   }, sub_categories.map(function (item) {
-    return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("li", {
+    return _react.default.createElement(_react.default.Fragment, null, ' ', item.sub_categories.length ? _react.default.createElement("li", {
       className: "sub-category-item",
-      key: (item.id, ":", item.title)
+      key: (item.id, ':', item.title)
     }, _react.default.createElement("span", {
       className: "sub-category-link",
       onClick: function onClick(e) {
         e.preventDefault();
+        subCategoryOnClick(item);
 
-        if (item.sub_categories.length) {
-          subCategoryOnClick(item);
-
-          _onClick(item);
-        } else {
-          onSelectItem(item);
-        }
+        _onClick(item);
+      }
+    }, item.title)) : _react.default.createElement("li", {
+      className: "sub-category-item",
+      key: (item.id, ':', item.title)
+    }, _react.default.createElement("span", {
+      className: 'sub-category-link ' + (selectedId === item.id ? 'selected' : ''),
+      onClick: function onClick(e) {
+        e.preventDefault();
+        setSelectedId(item.id);
+        onSelectItem(item);
       }
     }, item.title)), showSubSubcategories === item.id && item.sub_categories && _react.default.createElement("ul", {
       className: "sub-sub-categories "
     }, item.sub_categories.map(function (c) {
       return _react.default.createElement("li", {
-        key: (c.id, ":", c.title),
+        key: (c.id, ':', c.title),
         className: "sub-sub-category-item"
       }, _react.default.createElement("span", {
         className: "sub-sub-category-link",
