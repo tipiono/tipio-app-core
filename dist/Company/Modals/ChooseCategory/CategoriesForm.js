@@ -88,14 +88,13 @@ function CategoriesForm(_ref) {
   }
 
   function selectedSubCategory(item) {
-    console.log("HEREEE: ", item);
     var soi = 0;
 
     if (selectedOptionId !== item.id) {
       soi = item.id;
     }
 
-    setSelectedOptionId(soi); // setActiveCategory(item.id)
+    setSelectedOptionId(soi);
   }
 
   function categoryWithDropdownOnSelect(item) {
@@ -122,8 +121,6 @@ function CategoriesForm(_ref) {
   }
 
   function subCategoriesOnClick(item) {
-    console.log("HERE IN THIS CLICK: ", item.height);
-
     if (item.height === 1) {
       setActiveCategory(item.id);
     }

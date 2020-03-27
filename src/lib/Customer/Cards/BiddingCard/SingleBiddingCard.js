@@ -15,6 +15,7 @@ const SingleBiddingCard = ({
     salesProgressBarPercentage,
     bindingCount,
     onClick,
+    id,
     ...props
 }) => {
     const rangeList = (props.tipio_offer && props.tipio_offer.offer_price_ranges) || [];

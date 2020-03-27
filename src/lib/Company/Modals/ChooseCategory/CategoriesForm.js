@@ -75,7 +75,6 @@ function CategoriesForm({
     }
 
     function subCategoriesOnClick(item) {
-        console.log('HERE IN THIS CLICK: ', item.height);
         if (item.height === 1) {
             setActiveCategory(item.id);
         }
