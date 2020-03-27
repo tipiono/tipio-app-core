@@ -28,9 +28,8 @@ function CategoriesHeader(_ref) {
     className: "category-header-title"
   }, _react.default.createElement("h3", {
     className: "mb-0"
-  }, mainTitle), parent && _react.default.createElement("a", {
+  }, mainTitle), parent && _react.default.createElement("span", {
     className: "backward",
-    href: "#",
     onClick: backButtonOnClick
   }, _react.default.createElement("svg", {
     width: 15,
@@ -44,15 +43,14 @@ function CategoriesHeader(_ref) {
   }, data.map(function (navigation) {
     return _react.default.createElement("li", {
       className: "category-type-item"
-    }, _react.default.createElement("a", {
+    }, _react.default.createElement("span", {
       onClick: function onClick(e) {
         e.preventDefault();
         subCategoriesOnClick(navigation);
       },
-      className: (0, _classnames.default)("category-type-item-link", {
+      className: (0, _classnames.default)('category-type-item-link', {
         selected: navigation.id === currentCat.id
-      }),
-      href: ""
+      })
     }, navigation.title));
   }))));
 }

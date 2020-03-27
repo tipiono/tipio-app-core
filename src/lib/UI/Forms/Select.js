@@ -11,13 +11,12 @@ function Select({ placeholder, options, label, onChange, defaultValue, displayEr
         onChange(v);
     };
     return (
-
         <div className="custom-material-select">
             <label className="select-label">{label}</label>
             <ReactSelect
                 value={value}
                 onChange={_onChange}
-                options={options.map(x => ({ value: x, label: x }))}
+                options={options.map((x) => ({ value: x, label: x }))}
                 placeholder={placeholder || '-'}
                 isClearable={false}
             />
@@ -28,17 +27,15 @@ function Select({ placeholder, options, label, onChange, defaultValue, displayEr
             {/*    color={"bg-red"}*/}
             {/*/>*/}
             {/*}*/}
-
         </div>
-    )
+    );
 }
 
-Select.defaultProps = {
-};
+Select.defaultProps = {};
 
 Select.propTypes = {
-    value: PropTypes.string.isRequired,
-    placeholder: PropTypes.string.isRequired,
+    value: PropTypes.string,
+    placeholder: PropTypes.string,
     options: PropTypes.array.isRequired,
     label: PropTypes.string.isRequired
 };

@@ -4,6 +4,7 @@
 
         .category-link {
             width: 100%;
+
             &:hover {
                 text-decoration: none;
             }
@@ -13,6 +14,10 @@
     .category-item.dropdown {
         padding-top: 24px;
         border-bottom: 1px solid $gray-200;
+
+        span {
+            cursor: pointer;
+        }
 
         &:last-child {
             border-bottom: none;
@@ -121,6 +126,11 @@
                         }
                     }
                 }
+
+                .selected {
+                    box-shadow: 0 2px 0 $secondary;
+                    color: $primary !important;
+                }
             }
 
             .sub-sub-categories {
@@ -139,6 +149,10 @@
 
     .category-item.more {
         padding-top: 24px;
+
+        span {
+            cursor: pointer;
+        }
 
         .category-link {
             display: flex;
@@ -178,6 +192,10 @@
 
         &:last-child {
             border-bottom: none;
+        }
+
+        span {
+            cursor: pointer;
         }
 
         .category-link {
@@ -258,6 +276,10 @@
         border-bottom: 1px solid $gray-200;
         width: 80%;
 
+        span {
+            cursor: pointer;
+        }
+
         &:hover {
             border-bottom: 1px solid $primary;
 
@@ -311,6 +333,10 @@
             display: flex;
             align-items: center;
 
+            span {
+                cursor: pointer;
+            }
+
             .category-link {
                 .category-right-icon {
                     margin-left: auto;
@@ -357,6 +383,11 @@
                 .sub-category-link {
                     font-size: 18px;
                     color: $gray-700;
+                }
+
+                .selected {
+                    color: #4f2e90;
+                    box-shadow: 0 2px 0 #4abcac;
                 }
             }
 

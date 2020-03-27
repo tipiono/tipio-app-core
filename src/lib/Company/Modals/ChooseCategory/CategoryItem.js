@@ -8,7 +8,7 @@ const CategoryItem = ({ id, title, icon, onSelect, selected, sub_categories, wit
         {}
         {withCheckbox && <Checkbox id={id} onChange={onChange} value={id} checked={selectedMap[id]} />}
 
-        <a className={'category-link ' + (selected ? 'selected' : '')} href="#" onClick={onSelect}>
+        <span className={'category-link ' + (selected ? 'selected' : '')} onClick={onSelect}>
             <div className="category-left-icon">
                 <SvgInline url={icon} />
             </div>
@@ -26,7 +26,7 @@ const CategoryItem = ({ id, title, icon, onSelect, selected, sub_categories, wit
                     <circle fill="none" stroke="#371e1e" strokeMiterlimit="10" cx="12" cy="12" r="11" />
                 </g>
             </svg>
-        </a>
+        </span>
     </div>
 );
 CategoryItem.propTypes = {

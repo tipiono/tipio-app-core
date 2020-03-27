@@ -71,8 +71,8 @@ function Select(_ref) {
 
 Select.defaultProps = {};
 Select.propTypes = {
-  value: _propTypes.default.string.isRequired,
-  placeholder: _propTypes.default.string.isRequired,
+  value: _propTypes.default.string,
+  placeholder: _propTypes.default.string,
   options: _propTypes.default.array.isRequired,
   label: _propTypes.default.string.isRequired
 };
