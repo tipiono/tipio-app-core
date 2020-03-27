@@ -128,6 +128,10 @@ function CategoriesForm(_ref) {
     if (item.height === 2) {
       setActiveCategory(item.id);
     }
+
+    if (item.height === 3) {
+      setActiveCategory(item.id);
+    }
   }
 
   function headerSubOnClick(item) {
