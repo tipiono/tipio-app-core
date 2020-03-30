@@ -1,6 +1,6 @@
 import React from 'react';
 import TipioCountdown from '../../../UI/TipioCountdown/TipioCountdown';
-import SalesProgressBar from '../../SalesProgressBar/SalesProgressBar';
+import SalesProgressBarTooltip from '../../SalesProgressBarTooltip/SalesProgressBarTooltip';
 
 function BiddingCard({
     id,
@@ -51,7 +51,7 @@ function BiddingCard({
                         {!bindHasExpired &&
                             (bindingCount > 0 ? (
                                 <>
-                                    <SalesProgressBar
+                                    <SalesProgressBarTooltip
                                         percentage={salesProgressBarPercentage}
                                         bindingCount={bindingCount}
                                     />
