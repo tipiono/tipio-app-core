@@ -87,6 +87,16 @@ function CategoriesForm(_ref) {
     setSelectedCategoryId(0);
   }
 
+  function selectedSubCategory(item) {
+    var soi = 0;
+
+    if (selectedOptionId !== item.id) {
+      soi = item.id;
+    }
+
+    setSelectedOptionId(soi);
+  }
+
   function categoryWithDropdownOnSelect(item) {
     var sci = 0;
 
@@ -116,6 +126,10 @@ function CategoriesForm(_ref) {
     }
 
     if (item.height === 2) {
+      setActiveCategory(item.id);
+    }
+
+    if (item.height === 3) {
       setActiveCategory(item.id);
     }
   }
@@ -167,7 +181,7 @@ function CategoriesForm(_ref) {
           categoryWithDropdownOnSelect(item);
         },
         onSelect: function onSelect(selectedItem) {
-          optionOnSelect(selectedItem);
+          selectedSubCategory(selectedItem);
         },
         active: selectedCategoryId === item.id,
         subCategoriesOnClick: subCategoriesOnClick,

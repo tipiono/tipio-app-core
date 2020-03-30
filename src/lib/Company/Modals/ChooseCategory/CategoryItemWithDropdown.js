@@ -15,6 +15,7 @@ const SubCategories = ({
     onSelectItem
 }) => {
     let [showSubSubcategories, setShowSubSubcategories] = useState(0);
+    let [selectedId, setSelectedId] = useState(0);
 
     function subCategoryOnClick(item) {
         let sci = 0;
@@ -29,22 +30,34 @@ const SubCategories = ({
             {sub_categories.map((item) => {
                 return (
                     <>
-                        <li className="sub-category-item" key={(item.id, ':', item.title)}>
-                            <span
-                                className="sub-category-link"
-                                onClick={(e) => {
-                                    e.preventDefault();
-                                    if (item.sub_categories.length) {
+                        {' '}
+                        {item.sub_categories.length ? (
+                            <li className="sub-category-item" key={(item.id, ':', item.title)}>
+                                <span
+                                    className="sub-category-link"
+                                    onClick={(e) => {
+                                        e.preventDefault();
                                         subCategoryOnClick(item);
                                         onClick(item);
-                                    } else {
+                                    }}
+                                >
+                                    {item.title}
+                                </span>
+                            </li>
+                        ) : (
+                            <li className="sub-category-item" key={(item.id, ':', item.title)}>
+                                <span
+                                    className={'sub-category-link ' + (selectedId === item.id ? 'selected' : '')}
+                                    onClick={(e) => {
+                                        e.preventDefault();
+                                        setSelectedId(item.id);
                                         onSelectItem(item);
-                                    }
-                                }}
-                            >
-                                {item.title}
-                            </span>
-                        </li>
+                                    }}
+                                >
+                                    {item.title}
+                                </span>
+                            </li>
+                        )}
                         {showSubSubcategories === item.id && item.sub_categories && (
                             <ul className="sub-sub-categories ">
                                 {item.sub_categories.map((c) => {

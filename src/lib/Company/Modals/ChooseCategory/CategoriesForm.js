@@ -45,6 +45,14 @@ function CategoriesForm({
         setSelectedCategoryId(0);
     }
 
+    function selectedSubCategory(item) {
+        let soi = 0;
+        if (selectedOptionId !== item.id) {
+            soi = item.id;
+        }
+        setSelectedOptionId(soi);
+    }
+
     function categoryWithDropdownOnSelect(item) {
         let sci = 0;
         if (selectedCategoryId !== item.id) {
@@ -71,6 +79,9 @@ function CategoriesForm({
             setActiveCategory(item.id);
         }
         if (item.height === 2) {
+            setActiveCategory(item.id);
+        }
+        if (item.height === 3) {
             setActiveCategory(item.id);
         }
     }
@@ -127,7 +138,7 @@ function CategoriesForm({
                                             categoryWithDropdownOnSelect(item);
                                         }}
                                         onSelect={(selectedItem) => {
-                                            optionOnSelect(selectedItem);
+                                            selectedSubCategory(selectedItem);
                                         }}
                                         active={selectedCategoryId === item.id}
                                         subCategoriesOnClick={subCategoriesOnClick}
