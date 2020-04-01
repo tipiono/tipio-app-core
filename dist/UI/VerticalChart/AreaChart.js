@@ -13,9 +13,8 @@ var _getDate = _interopRequireDefault(require("../../Util/getDate"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var VerticalChart = function VerticalChart(_ref) {
-  var data = _ref.data,
-      showYears = _ref.showYears;
+var AreaChart = function AreaChart(_ref) {
+  var data = _ref.data;
   var labels = [];
   var dataset1 = [];
   var dataset2 = [];
@@ -31,19 +30,23 @@ var VerticalChart = function VerticalChart(_ref) {
   var charData = {
     labels: labels,
     datasets: [{
+      label: 'Mergsalg',
+      data: dataset2,
+      backgroundColor: '#E2E7EF',
+      borderColor: '#C9BFDF'
+    }, {
       label: 'Hovedprofukt',
       data: dataset1,
-      backgroundColor: '#4ABCAC'
-    }, {
-      label: 'Mersalg',
-      data: dataset2,
-      backgroundColor: '#C2E7E2'
+      backgroundColor: '#E0F3E0',
+      borderColor: '#4ABCAC'
     }]
   };
   var options = {
+    showLines: true,
+    spanGaps: true,
     layout: {
       padding: {
-        top: 55
+        top: 45
       }
     },
     title: {
@@ -55,7 +58,6 @@ var VerticalChart = function VerticalChart(_ref) {
     scales: {
       yAxes: [{
         ticks: {
-          beginAtZero: true,
           display: false
         },
         gridLines: {
@@ -63,18 +65,19 @@ var VerticalChart = function VerticalChart(_ref) {
         }
       }],
       xAxes: [{
-        barPercentage: 0.7,
+        ticks: {
+          autoSkip: true,
+          userCallback: function userCallback(item, index) {
+            if (index === 4) return (0, _getDate.default)(item, 'DateMonth');
+            if (index === 9) return (0, _getDate.default)(item, 'DateMonth');
+            if (index === 14) return (0, _getDate.default)(item, 'DateMonth');
+            if (index === 19) return (0, _getDate.default)(item, 'DateMonth');
+            if (index === 24) return (0, _getDate.default)(item, 'DateMonth');
+            if (index === 29) return (0, _getDate.default)(item, 'DateMonth');
+          }
+        },
         gridLines: {
           display: false
-        },
-        ticks: {
-          callback: function callback(value) {
-            if (showYears) {
-              return (0, _getDate.default)(value, 'Month');
-            } else {
-              return (0, _getDate.default)(value, 'DateName');
-            }
-          }
         }
       }]
     },
@@ -89,24 +92,20 @@ var VerticalChart = function VerticalChart(_ref) {
       titleAlign: 'center',
       bodyAlign: 'center',
       callbacks: {
-        title: function title(tooltipItems) {
+        title: function title(tooltipItems, data) {
           return tooltipItems[0].yLabel;
         },
         label: function label(tooltipItems) {
-          if (showYears) {
-            return (0, _getDate.default)(tooltipItems.xLabel, 'MonthYear');
-          } else {
-            return (0, _getDate.default)(tooltipItems.xLabel, 'DateName') + ' ' + (0, _getDate.default)(tooltipItems.xLabel, 'DateMonth');
-          }
+          return (0, _getDate.default)(tooltipItems.xLabel, 'DateName') + ' ' + (0, _getDate.default)(tooltipItems.xLabel, 'DateMonth');
         }
       }
     }
   };
-  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_reactChartjs.Bar, {
+  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_reactChartjs.Line, {
     data: charData,
     options: options
   }));
 };
 
-var _default = VerticalChart;
+var _default = AreaChart;
 exports.default = _default;
