@@ -38,9 +38,9 @@ const SubNav = ({
             </div>
 
             <ul className="subNav__list">
-                {items.map((item) => {
+                {items.map((item, i) => {
                     return (
-                        <li className="subNav__list--item" key={item.id}>
+                        <li className="subNav__list--item" key={item.id + ':' + i}>
                             <a
                                 className={cx('subNav__list--item--link', {
                                     active: item.link === activeLink || item.id === activeId
