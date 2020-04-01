@@ -311,6 +311,12 @@ Object.defineProperty(exports, "CircleChart", {
     return _CircleChart.default;
   }
 });
+Object.defineProperty(exports, "VerticalChart", {
+  enumerable: true,
+  get: function get() {
+    return _VerticalChart.default;
+  }
+});
 Object.defineProperty(exports, "SearchInput", {
   enumerable: true,
   get: function get() {
@@ -1018,6 +1024,8 @@ var _SelectImages = _interopRequireDefault(require("./UI/SelectImages"));
 var _ErrorMessage = _interopRequireDefault(require("./UI/ErrorMessage/ErrorMessage"));
 
 var _CircleChart = _interopRequireDefault(require("./UI/CircleChart/CircleChart"));
+
+var _VerticalChart = _interopRequireDefault(require("./UI/VerticalChart/VerticalChart"));
 
 var _SearchInput = _interopRequireDefault(require("./UI/Layout/Navigation/SearchInput"));
 
