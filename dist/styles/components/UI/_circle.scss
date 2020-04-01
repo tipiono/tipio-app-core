@@ -1,23 +1,22 @@
 .set-size {
-	font-size: 8rem;
+    font-size: 8rem;
 }
 
 .donut-inner {
-	margin-top: -100px;
-	margin-bottom: 100px;
-	text-align: center;
- }
- .donut-inner span {
-	color: $primary;
-	font-size: 1.75rem;
-	font-family: 'Riposte-Medium', sans-serif;
-	text-align: center;
-	cursor: default;
- }
-
+    margin-top: -100px;
+    margin-bottom: 100px;
+    text-align: center;
+}
+.donut-inner span {
+    color: $primary;
+    font-size: 1.75rem;
+    font-family: 'Riposte-Medium', sans-serif;
+    text-align: center;
+    cursor: default;
+}
 
 .charts-container:after {
-	clear: both;
-	content: "";
-	display: table;
+    clear: both;
+    content: '';
+    display: table;
 }

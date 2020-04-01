@@ -67,6 +67,7 @@
 
         &--submit {
             width: 50%;
+
         }
     }
 
@@ -78,6 +79,7 @@
             margin-bottom: 1.125rem;
             margin-right: 0;
         }
+
         &__content {
             width: 100%;
             padding: 0 16px;
@@ -101,6 +103,14 @@
         button {
             font-size: 0.75rem;
             padding: 6px 1rem !important;
+        }
+    }
+
+    @include media-breakpoint-down(xs) {
+        &__content {
+            &--submit {
+                width: 60%;
+            }
         }
     }
 }
