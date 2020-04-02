@@ -20,7 +20,7 @@ function VotingCard(_ref) {
       expiresIn = _ref.expiresIn,
       children = _ref.children,
       onClick = _ref.onClick,
-      description = _ref.description,
+      subtitle = _ref.subtitle,
       voteHasExpired = _ref.voteHasExpired;
   return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("div", {
     className: "votingCard"
@@ -57,7 +57,7 @@ function VotingCard(_ref) {
     className: "votingCard__body--content--title"
   }, title)), _react.default.createElement("p", {
     className: "votingCard__body--content--description"
-  }, brand ? brand.toUpperCase() : description.toUpperCase())), children)));
+  }, brand ? brand.toUpperCase() : subtitle.toUpperCase())), children)));
 }
 
 var _default = VotingCard;

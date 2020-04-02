@@ -10,7 +10,7 @@ function VotingCard({
     expiresIn,
     children,
     onClick,
-    description,
+    subtitle,
     voteHasExpired
 }) {
     return (
@@ -46,7 +46,7 @@ function VotingCard({
                             <h5 className="votingCard__body--content--title">{title}</h5>
                         </a>
                         <p className="votingCard__body--content--description">
-                            {brand ? brand.toUpperCase() : description.toUpperCase()}
+                            {brand ? brand.toUpperCase() : subtitle.toUpperCase()}
                         </p>
                     </div>
                     {children}
