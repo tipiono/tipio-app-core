@@ -25,7 +25,8 @@ var BaseCompanyCard = function BaseCompanyCard(_ref) {
       showBindingCount = _ref.showBindingCount,
       _ref$forceLoad = _ref.forceLoad,
       forceLoad = _ref$forceLoad === void 0 ? false : _ref$forceLoad,
-      props = _objectWithoutProperties(_ref, ["children", "expires_in", "brand", "binding_count", "potential_earning", "showRevenue", "showBindingCount", "forceLoad"]);
+      link = _ref.link,
+      props = _objectWithoutProperties(_ref, ["children", "expires_in", "brand", "binding_count", "potential_earning", "showRevenue", "showBindingCount", "forceLoad", "link"]);
 
   var showBrand = props.showBrand || false;
 
@@ -36,8 +37,7 @@ var BaseCompanyCard = function BaseCompanyCard(_ref) {
 
   return _react.default.createElement("div", null, _react.default.createElement("div", {
     className: "baseCompanyCard"
-  }, _react.default.createElement("a", {
-    href: "#",
+  }, _react.default.createElement("span", {
     onClick: function onClick(e) {
       e.preventDefault();
       props.onClick();
@@ -45,7 +45,7 @@ var BaseCompanyCard = function BaseCompanyCard(_ref) {
   }, _react.default.createElement("div", {
     className: "baseCompanyCard__header"
   }, props.images && props.images.length && _react.default.createElement("a", {
-    href: "",
+    href: link,
     className: "lazy-image baseCompanyCard__header--preview"
   }, _react.default.createElement("img", {
     className: "lazyload baseCompanyCard__header--preview--image",
@@ -60,7 +60,7 @@ var BaseCompanyCard = function BaseCompanyCard(_ref) {
   })))), _react.default.createElement("div", {
     className: "baseCompanyCard__body"
   }, _react.default.createElement("a", {
-    href: "#",
+    href: link,
     onClick: function onClick() {
       props.onClick();
     }
