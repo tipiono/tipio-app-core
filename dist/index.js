@@ -317,6 +317,12 @@ Object.defineProperty(exports, "VerticalChart", {
     return _VerticalChart.default;
   }
 });
+Object.defineProperty(exports, "AreaChart", {
+  enumerable: true,
+  get: function get() {
+    return _AreaChart.default;
+  }
+});
 Object.defineProperty(exports, "SearchInput", {
   enumerable: true,
   get: function get() {
@@ -1026,6 +1032,8 @@ var _ErrorMessage = _interopRequireDefault(require("./UI/ErrorMessage/ErrorMessa
 var _CircleChart = _interopRequireDefault(require("./UI/CircleChart/CircleChart"));
 
 var _VerticalChart = _interopRequireDefault(require("./UI/VerticalChart/VerticalChart"));
+
+var _AreaChart = _interopRequireDefault(require("./UI/VerticalChart/AreaChart"));
 
 var _SearchInput = _interopRequireDefault(require("./UI/Layout/Navigation/SearchInput"));
 
