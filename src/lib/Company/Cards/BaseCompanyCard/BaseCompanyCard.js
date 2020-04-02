@@ -10,6 +10,7 @@ const BaseCompanyCard = ({
     showRevenue,
     showBindingCount,
     forceLoad = false,
+    link,
     ...props
 }) => {
     const showBrand = props.showBrand || false;
@@ -20,8 +21,7 @@ const BaseCompanyCard = ({
     return (
         <div>
             <div className="baseCompanyCard">
-                <a
-                    href="#"
+                <span
                     onClick={(e) => {
                         e.preventDefault();
                         props.onClick();
@@ -29,7 +29,7 @@ const BaseCompanyCard = ({
                 >
                     <div className="baseCompanyCard__header">
                         {props.images && props.images.length && (
-                            <a href="" className="lazy-image baseCompanyCard__header--preview">
+                            <a href={link} className="lazy-image baseCompanyCard__header--preview">
                                 <img
                                     className="lazyload baseCompanyCard__header--preview--image"
                                     data-src={props.images[0].blob_url}
@@ -46,11 +46,11 @@ const BaseCompanyCard = ({
                             <TipioCountdown className="timer" expires_in={expires_in} />
                         </div>
                     </div>
-                </a>
+                </span>
 
                 <div className="baseCompanyCard__body">
                     <a
-                        href="#"
+                        href={link}
                         onClick={() => {
                             props.onClick();
                         }}
