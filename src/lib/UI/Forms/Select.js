@@ -37,7 +37,7 @@ Select.propTypes = {
     value: PropTypes.string,
     placeholder: PropTypes.string,
     options: PropTypes.array.isRequired,
-    label: PropTypes.string.isRequired
+    label: PropTypes.string
 };
 
 export default Select;

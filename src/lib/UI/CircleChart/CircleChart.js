@@ -26,7 +26,7 @@ const CircleChart = ({ percentage }) => {
         <>
             <div>
                 <Doughnut data={data} options={options} />
-                <div class="donut-inner">
+                <div className="donut-inner">
                     <span>{percentage}%</span>
                 </div>
             </div>

@@ -72,7 +72,7 @@ function PublicLayout(_ref) {
     className: "col-sm-12 col-md-6"
   }, _react.default.createElement("p", {
     className: "customFooter__description"
-  }, "Hvorfor kj\xF8pe dyrt alene n\xE5r vi kan handle billig sammen?", _react.default.createElement("br", null), _react.default.createElement("p", null), "I Tipio kan du fortelle butikkene hva du \xF8nsker \xE5 f\xE5 en bedre pris p\xE5."))))))));
+  }, "Hvorfor kj\xF8pe dyrt alene n\xE5r vi kan handle billig sammen?", _react.default.createElement("br", null), _react.default.createElement("span", null), "I Tipio kan du fortelle butikkene hva du \xF8nsker \xE5 f\xE5 en bedre pris p\xE5."))))))));
 }
 
 var _default = PublicLayout;

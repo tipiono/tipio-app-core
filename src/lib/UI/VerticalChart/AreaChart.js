@@ -1,8 +1,8 @@
 import React from 'react';
-import { Bar } from 'react-chartjs-2';
+import { Line } from 'react-chartjs-2';
 import getDate from '../../Util/getDate';
 
-const VerticalChart = ({ data, showYears }) => {
+const AreaChart = ({ data }) => {
     let labels = [];
     let dataset1 = [];
     let dataset2 = [];
@@ -13,21 +13,25 @@ const VerticalChart = ({ data, showYears }) => {
         labels: labels,
         datasets: [
             {
-                label: 'Hovedprofukt',
-                data: dataset1,
-                backgroundColor: '#4ABCAC'
+                label: 'Mergsalg',
+                data: dataset2,
+                backgroundColor: '#E2E7EF',
+                borderColor: '#C9BFDF'
             },
             {
-                label: 'Mersalg',
-                data: dataset2,
-                backgroundColor: '#C2E7E2'
+                label: 'Hovedprofukt',
+                data: dataset1,
+                backgroundColor: '#E0F3E0',
+                borderColor: '#4ABCAC'
             }
         ]
     };
     const options = {
+        showLines: true,
+        spanGaps: true,
         layout: {
             padding: {
-                top: 55
+                top: 45
             }
         },
         title: {
@@ -40,7 +44,6 @@ const VerticalChart = ({ data, showYears }) => {
             yAxes: [
                 {
                     ticks: {
-                        beginAtZero: true,
                         display: false
                     },
                     gridLines: {
@@ -50,18 +53,19 @@ const VerticalChart = ({ data, showYears }) => {
             ],
             xAxes: [
                 {
-                    barPercentage: 0.7,
+                    ticks: {
+                        autoSkip: true,
+                        userCallback: function(item, index) {
+                            if (index === 4) return getDate(item, 'DateMonth');
+                            if (index === 9) return getDate(item, 'DateMonth');
+                            if (index === 14) return getDate(item, 'DateMonth');
+                            if (index === 19) return getDate(item, 'DateMonth');
+                            if (index === 24) return getDate(item, 'DateMonth');
+                            if (index === 29) return getDate(item, 'DateMonth');
+                        }
+                    },
                     gridLines: {
                         display: false
-                    },
-                    ticks: {
-                        callback: function(value) {
-                            if (showYears) {
-                                return getDate(value, 'Month');
-                            } else {
-                                return getDate(value, 'DateName');
-                            }
-                        }
                     }
                 }
             ]
@@ -77,17 +81,11 @@ const VerticalChart = ({ data, showYears }) => {
             titleAlign: 'center',
             bodyAlign: 'center',
             callbacks: {
-                title: function(tooltipItems) {
+                title: function(tooltipItems, data) {
                     return tooltipItems[0].yLabel;
                 },
                 label: function(tooltipItems) {
-                    if (showYears) {
-                        return getDate(tooltipItems.xLabel, 'MonthYear');
-                    } else {
-                        return (
-                            getDate(tooltipItems.xLabel, 'DateName') + ' ' + getDate(tooltipItems.xLabel, 'DateMonth')
-                        );
-                    }
+                    return getDate(tooltipItems.xLabel, 'DateName') + ' ' + getDate(tooltipItems.xLabel, 'DateMonth');
                 }
             }
         }
@@ -95,8 +93,8 @@ const VerticalChart = ({ data, showYears }) => {
 
     return (
         <>
-            <Bar data={charData} options={options} />
+            <Line data={charData} options={options} />
         </>
     );
 };
-export default VerticalChart;
+export default AreaChart;

@@ -34,7 +34,7 @@ var CircleChart = function CircleChart(_ref) {
     data: data,
     options: options
   }), _react.default.createElement("div", {
-    class: "donut-inner"
+    className: "donut-inner"
   }, _react.default.createElement("span", null, percentage, "%"))));
 };
 
