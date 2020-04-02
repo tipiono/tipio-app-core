@@ -47,7 +47,7 @@ var VotingCard = function VotingCard(_ref) {
   }), _react.default.createElement("div", {
     className: "customerSidebarCard__footer--action--notInterested"
   }, _react.default.createElement(_GrayOutlineButton.default, {
-    text: "Meldt av interesse",
+    text: "Meld av interesse",
     onClick: props.notInterestedOnClick
   }))), props.meta.joined_count > 0 ? _react.default.createElement("p", {
     className: "customerSidebarCard__footer--interestedCounter"

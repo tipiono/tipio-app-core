@@ -74,7 +74,7 @@ Select.propTypes = {
   value: _propTypes.default.string,
   placeholder: _propTypes.default.string,
   options: _propTypes.default.array.isRequired,
-  label: _propTypes.default.string.isRequired
+  label: _propTypes.default.string
 };
 var _default = Select;
 exports.default = _default;

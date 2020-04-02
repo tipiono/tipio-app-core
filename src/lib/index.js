@@ -51,6 +51,8 @@ import PublishedByWithDropdown from './UI/PublishedBy/PublishedByWithDropdown';
 import SelectImages from './UI/SelectImages';
 import ErrorMessage from './UI/ErrorMessage/ErrorMessage';
 import CircleChart from './UI/CircleChart/CircleChart';
+import VerticalChart from './UI/VerticalChart/VerticalChart';
+import AreaChart from './UI/VerticalChart/AreaChart';
 import SearchInput from './UI/Layout/Navigation/SearchInput';
 import Overlay from './UI/Overlay/Overlay';
 import Alert from './UI/Alert/Alert';
@@ -265,6 +267,7 @@ export {
     FromToInput,
     ShowMoreText,
     PriceInput,
+    AreaChart,
     ContentSpinner,
     Table,
     PublishedByWithDate,
@@ -280,6 +283,7 @@ export {
     MaterialSearch,
     ExportIcon,
     CircleChart,
+    VerticalChart,
     AddSaleSidebarCard,
     AddCategoryButton,
     SelectedCategoryButton,

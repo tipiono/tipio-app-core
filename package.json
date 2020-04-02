@@ -1,7 +1,7 @@
 {
     "name": "tipio-app-core",
     "private": true,
-    "version": "0.5.7",
+    "version": "0.5.9",
     "main": "dist/index.js",
     "module": "dist/index.js",
     "repository": "/tipio-app-core",
@@ -19,10 +19,13 @@
         "build-storybook": "build-storybook -s public"
     },
     "dependencies": {
+        "acorn-jsx": "^5.2.0",
         "bootstrap": "^4.3.1",
+        "chart.js": "^2.9.3",
         "classnames": "^2.2.6",
         "cropperjs": "^1.5.5",
         "eslint": "^6.1.0",
+        "react-chartjs-2": "^2.9.0",
         "react-countdown-now": "^2.1.1",
         "react-device-detect": "^1.11.14",
         "react-dropzone": "^10.1.10",

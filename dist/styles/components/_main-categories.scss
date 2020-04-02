@@ -145,12 +145,13 @@
                     color: $gray-800;
                 }
 
-                .sub-sub-category-item{
+                .sub-sub-category-item {
                     text-align: left;
                     @include media-breakpoint-up(md) {
                         &:hover {
                             text-decoration: underline;
-                        }}
+                        }
+                    }
                 }
             }
         }

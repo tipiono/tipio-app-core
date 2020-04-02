@@ -1,17 +1,36 @@
 import React from 'react';
+import { Doughnut } from 'react-chartjs-2';
 
-const CircleChart = () => {
+const CircleChart = ({ percentage }) => {
+    const data = {
+        labels: ['Man', 'Tir'],
+        datasets: [
+            {
+                data: [percentage, 100 - percentage],
+                backgroundColor: ['#4ABCAC'],
+                borderWidth: 1
+            }
+        ]
+    };
+    const options = {
+        cutoutPercentage: 80,
+        legend: {
+            display: false
+        },
+        tooltips: {
+            enabled: false
+        }
+    };
+
     return (
-        <div className="set-size charts-container">
-            <div className="pie-wrapper progress-45 style-2">
-                <span className="label">45%</span>
-                <div className="pie">
-                    <div className="left-side half-circle" />
-                    <div className="right-side half-circle" />
+        <>
+            <div>
+                <Doughnut data={data} options={options} />
+                <div className="donut-inner">
+                    <span>{percentage}%</span>
                 </div>
-                <div className="shadow" />
             </div>
-        </div>
+        </>
     );
 };
 

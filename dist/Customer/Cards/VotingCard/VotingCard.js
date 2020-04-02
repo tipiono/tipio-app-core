@@ -20,6 +20,7 @@ function VotingCard(_ref) {
       expiresIn = _ref.expiresIn,
       children = _ref.children,
       onClick = _ref.onClick,
+      subtitle = _ref.subtitle,
       voteHasExpired = _ref.voteHasExpired;
   return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("div", {
     className: "votingCard"
@@ -54,9 +55,9 @@ function VotingCard(_ref) {
     href: "/tipio/vote/".concat(id)
   }, _react.default.createElement("h5", {
     className: "votingCard__body--content--title"
-  }, title)), brand && _react.default.createElement("p", {
+  }, title)), _react.default.createElement("p", {
     className: "votingCard__body--content--description"
-  }, brand.toUpperCase())), children)));
+  }, brand ? brand.toUpperCase() : subtitle.toUpperCase())), children)));
 }
 
 var _default = VotingCard;

@@ -1,4 +1,15 @@
 .pure-material-textfield-outlined {
+    input:-webkit-autofill + .label-sm {
+        color: #5c6265;
+        &:active {
+            input:-webkit-autofill + .label-sm {
+                color: #4f2e90;
+            }
+        }
+    }
+}
+
+.pure-material-textfield-outlined {
     --pure-material-safari-helper1: rgba(var(--pure-material-primary-rgb, 33, 150, 243));
     position: relative;
     display: inline-block;

@@ -18,15 +18,21 @@ function Table(props) {
     className: "table table-borderless"
   }, _react.default.createElement("thead", {
     className: "tableHead"
-  }, columns && columns.map(function (_ref) {
-    var title = _ref.title;
+  }, _react.default.createElement("tr", null, columns && columns.map(function (_ref) {
+    var title = _ref.title,
+        i = _ref.i;
     return _react.default.createElement("th", {
       className: "tableHead--item",
-      scope: "col"
+      scope: "col",
+      key: title + ':' + i
     }, title);
-  })), _react.default.createElement("tbody", null, rows && rows.map(function (row) {
-    return _react.default.createElement("tr", null, row && row.map(function (data) {
-      return _react.default.createElement("td", null, data);
+  }))), _react.default.createElement("tbody", null, rows && rows.map(function (row, i) {
+    return _react.default.createElement("tr", {
+      key: 'row:' + i
+    }, row && row.map(function (data, i) {
+      return _react.default.createElement("td", {
+        key: data + ':' + i
+      }, data);
     }));
   })))));
 }
