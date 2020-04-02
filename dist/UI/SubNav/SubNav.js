@@ -57,7 +57,7 @@ var SubNav = function SubNav(_ref) {
   }, items.map(function (item, i) {
     return _react.default.createElement("li", {
       className: "subNav__list--item",
-      key: item.id + ":" + i
+      key: item.id + ':' + i
     }, _react.default.createElement("a", {
       className: (0, _classnames.default)('subNav__list--item--link', {
         active: item.link === activeLink || item.id === activeId
