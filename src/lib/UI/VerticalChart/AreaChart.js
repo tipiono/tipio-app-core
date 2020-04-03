@@ -27,6 +27,11 @@ const AreaChart = ({ data }) => {
         ]
     };
     const options = {
+        elements: {
+            point: {
+                radius: 2
+            }
+        },
         showLines: true,
         spanGaps: true,
         layout: {
