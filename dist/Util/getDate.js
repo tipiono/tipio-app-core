@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = void 0;
 
 function getDate(date, type) {
-  var dateStr = new Date(date.toString());
+  var dateStr = new Date(date);
   var day = dateStr.getDate();
   var dayName = dateStr.toLocaleDateString('nb-NB', {
     weekday: 'long'
@@ -14,9 +14,6 @@ function getDate(date, type) {
   var month = dateStr.toLocaleDateString('nb-NB', {
     month: 'long'
   }).substring(0, 3);
-  var monthName = dateStr.toLocaleDateString('nb-NB', {
-    month: 'long'
-  });
 
   if (type === 'DateName') {
     return dayName.charAt(0).toUpperCase() + dayName.slice(1);
@@ -31,7 +28,7 @@ function getDate(date, type) {
   }
 
   if (type === 'Month') {
-    return monthName.charAt(0).toUpperCase() + monthName.slice(1);
+    return month.charAt(0).toUpperCase() + month.slice(1);
   }
 }
 

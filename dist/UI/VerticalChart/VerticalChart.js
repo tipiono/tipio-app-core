@@ -14,19 +14,20 @@ var _getDate = _interopRequireDefault(require("../../Util/getDate"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var VerticalChart = function VerticalChart(_ref) {
-  var data = _ref.data,
+  var tipio = _ref.tipio,
+      additionalSales = _ref.additionalSales,
       showYears = _ref.showYears;
   var labels = [];
   var dataset1 = [];
   var dataset2 = [];
-  labels = data.map(function (day) {
+  labels = additionalSales && additionalSales.map(function (day) {
     return day.date;
   });
-  dataset1 = data.map(function (el) {
+  dataset1 = tipio && tipio.map(function (el) {
     return el.count;
   });
-  dataset2 = data.map(function (el) {
-    return el.count2;
+  dataset2 = additionalSales && additionalSales.map(function (el) {
+    return el.count;
   });
   var charData = {
     labels: labels,
@@ -55,7 +56,8 @@ var VerticalChart = function VerticalChart(_ref) {
     scales: {
       yAxes: [{
         ticks: {
-          beginAtZero: true,
+          beginAtZero: false,
+          min: 0,
           display: false
         },
         gridLines: {
@@ -102,7 +104,7 @@ var VerticalChart = function VerticalChart(_ref) {
       }
     }
   };
-  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_reactChartjs.Bar, {
+  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("h1", null, "HEREE"), _react.default.createElement(_reactChartjs.Bar, {
     data: charData,
     options: options
   }));

@@ -2,13 +2,13 @@ import React from 'react';
 import { Bar } from 'react-chartjs-2';
 import getDate from '../../Util/getDate';
 
-const VerticalChart = ({ data, showYears }) => {
+const VerticalChart = ({ tipio, additionalSales, showYears }) => {
     let labels = [];
     let dataset1 = [];
     let dataset2 = [];
-    labels = data.map((day) => day.date);
-    dataset1 = data.map((el) => el.count);
-    dataset2 = data.map((el) => el.count2);
+    labels = additionalSales && additionalSales.map((day) => day.date);
+    dataset1 = tipio && tipio.map((el) => el.count);
+    dataset2 = additionalSales && additionalSales.map((el) => el.count);
     const charData = {
         labels: labels,
         datasets: [
@@ -40,7 +40,8 @@ const VerticalChart = ({ data, showYears }) => {
             yAxes: [
                 {
                     ticks: {
-                        beginAtZero: true,
+                        beginAtZero: false,
+                        min: 0,
                         display: false
                     },
                     gridLines: {
@@ -95,6 +96,7 @@ const VerticalChart = ({ data, showYears }) => {
 
     return (
         <>
+            <h1>HEREE</h1>
             <Bar data={charData} options={options} />
         </>
     );

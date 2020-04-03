@@ -2,13 +2,13 @@ import React from 'react';
 import { Line } from 'react-chartjs-2';
 import getDate from '../../Util/getDate';
 
-const AreaChart = ({ data }) => {
+const AreaChart = ({ tipio, additionalSales }) => {
     let labels = [];
     let dataset1 = [];
     let dataset2 = [];
-    labels = data.map((day) => day.date);
-    dataset1 = data.map((el) => el.count);
-    dataset2 = data.map((el) => el.count2);
+    labels = tipio.map((day) => day.date);
+    dataset1 = tipio.map((el) => el.count);
+    dataset2 = additionalSales.map((el) => el.count);
     const charData = {
         labels: labels,
         datasets: [
@@ -36,7 +36,7 @@ const AreaChart = ({ data }) => {
         spanGaps: true,
         layout: {
             padding: {
-                top: 45
+                top: 55
             }
         },
         title: {
