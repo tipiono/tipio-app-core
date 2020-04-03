@@ -19,7 +19,8 @@ var CompanySidebarBaseCard = function CompanySidebarBaseCard(_ref) {
 
   var tipio = props.tipio,
       meta = props.meta,
-      generatedRevenue = props.generatedRevenue;
+      generatedRevenue = props.generatedRevenue,
+      showRevenue = props.showRevenue;
   return _react.default.createElement("div", {
     className: "companySidebarCard"
   }, _react.default.createElement("div", {
@@ -34,7 +35,7 @@ var CompanySidebarBaseCard = function CompanySidebarBaseCard(_ref) {
     className: "companySidebarCard__header__cost"
   }, _react.default.createElement("p", {
     className: "companySidebarCard__header__cost--label"
-  }, "Omsetning"), props.loading ? _react.default.createElement("div", {
+  }, showRevenue ? 'Omsetning' : 'Potensiell omsetning'), props.loading ? _react.default.createElement("div", {
     className: "placeholder-content companySidebarCard__header--placeholder"
   }, "\xA0") : _react.default.createElement("h3", {
     className: "companySidebarCard__header__cost--price"

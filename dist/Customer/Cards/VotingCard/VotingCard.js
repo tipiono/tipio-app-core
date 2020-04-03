@@ -57,7 +57,7 @@ function VotingCard(_ref) {
     className: "votingCard__body--content--title"
   }, title)), _react.default.createElement("p", {
     className: "votingCard__body--content--description"
-  }, brand ? brand.toUpperCase() : subtitle.toUpperCase())), children)));
+  }, brand ? brand.toUpperCase() : subtitle ? subtitle.toUpperCase() : "")), children)));
 }
 
 var _default = VotingCard;

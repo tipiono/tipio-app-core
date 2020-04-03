@@ -1,7 +1,7 @@
 import React from 'react';
 
 const CompanySidebarBaseCard = ({ children, ...props }) => {
-    const { tipio, meta, generatedRevenue } = props;
+    const { tipio, meta, generatedRevenue, showRevenue } = props;
     return (
         <div className="companySidebarCard">
             <div className="companySidebarCard__header">
@@ -11,7 +11,9 @@ const CompanySidebarBaseCard = ({ children, ...props }) => {
                 </div>
 
                 <div className="companySidebarCard__header__cost">
-                    <p className="companySidebarCard__header__cost--label">Omsetning</p>
+                    <p className="companySidebarCard__header__cost--label">
+                        {showRevenue ? 'Omsetning' : 'Potensiell omsetning'}
+                    </p>
                     {props.loading ? (
                         <div className="placeholder-content companySidebarCard__header--placeholder">&nbsp;</div>
                     ) : (
