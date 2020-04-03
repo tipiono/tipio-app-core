@@ -46,7 +46,7 @@ function VotingCard({
                             <h5 className="votingCard__body--content--title">{title}</h5>
                         </a>
                         <p className="votingCard__body--content--description">
-                            {brand ? brand.toUpperCase() : subtitle.toUpperCase()}
+                            {brand ? brand.toUpperCase() : subtitle ? subtitle.toUpperCase() : ''}
                         </p>
                     </div>
                     {children}
