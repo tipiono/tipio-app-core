@@ -1,0 +1,24 @@
+.marker__tooltip {
+    background: '#4F2E90';
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 100;
+    text-align: center;
+    padding: 0.35rem;
+    position: relative;
+    cursor: default;
+    bottom: 125%;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+.marker__tooltip::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    border: 8px solid transparent;
+    border-top-color: #4f2e90;
+    left: 50%;
+    top: 100%;
+    transform: translate(-50%, 0);
+}

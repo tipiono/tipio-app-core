@@ -9,7 +9,7 @@ var _react = _interopRequireDefault(require("react"));
 
 var _TipioCountdown = _interopRequireDefault(require("../../../UI/TipioCountdown/TipioCountdown"));
 
-var _SalesProgressBarTooltip = _interopRequireDefault(require("../../SalesProgressBarTooltip/SalesProgressBarTooltip"));
+var _SalesProgressBar = _interopRequireDefault(require("../../SalesProgressBar/SalesProgressBar"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -63,7 +63,7 @@ function BiddingCard(_ref) {
     className: "biddingCard__body--content--description"
   }, brand.toUpperCase())), _react.default.createElement("div", {
     className: "biddingCard__body--salesbar"
-  }, !bindHasExpired && (bindingCount > 0 ? _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_SalesProgressBarTooltip.default, {
+  }, !bindHasExpired && (bindingCount > 0 ? _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_SalesProgressBar.default, {
     percentage: salesProgressBarPercentage,
     bindingCount: bindingCount
   })) : '')), _react.default.createElement("div", {
