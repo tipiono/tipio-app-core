@@ -28,7 +28,7 @@ var CompanyAddBidCard = function CompanyAddBidCard(props) {
     className: "placeholder-content companyAddBidCard--placeholder mb-4"
   }, "\xA0") : _react.default.createElement("h6", {
     className: "companyAddBidCard--interested"
-  }, meta.joined_count, " ", showBindingCount ? 'kjøpte' : 'påmeldte'), _react.default.createElement("div", {
+  }, meta.joined_count, " ", showBindingCount ? 'kjøpte!' : 'påmeldte!'), _react.default.createElement("div", {
     className: "companyAddBidCard__price"
   }, _react.default.createElement("div", {
     className: "companyAddBidCard__price--cost"

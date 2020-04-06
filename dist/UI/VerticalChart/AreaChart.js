@@ -42,6 +42,11 @@ var AreaChart = function AreaChart(_ref) {
     }]
   };
   var options = {
+    elements: {
+      point: {
+        radius: 2
+      }
+    },
     showLines: true,
     spanGaps: true,
     layout: {
