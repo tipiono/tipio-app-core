@@ -14,18 +14,19 @@ var _getDate = _interopRequireDefault(require("../../Util/getDate"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var AreaChart = function AreaChart(_ref) {
-  var data = _ref.data;
+  var tipio = _ref.tipio,
+      additionalSales = _ref.additionalSales;
   var labels = [];
   var dataset1 = [];
   var dataset2 = [];
-  labels = data.map(function (day) {
+  labels = tipio.map(function (day) {
     return day.date;
   });
-  dataset1 = data.map(function (el) {
+  dataset1 = tipio.map(function (el) {
     return el.count;
   });
-  dataset2 = data.map(function (el) {
-    return el.count2;
+  dataset2 = additionalSales.map(function (el) {
+    return el.count;
   });
   var charData = {
     labels: labels,
@@ -51,7 +52,7 @@ var AreaChart = function AreaChart(_ref) {
     spanGaps: true,
     layout: {
       padding: {
-        top: 45
+        top: 55
       }
     },
     title: {
