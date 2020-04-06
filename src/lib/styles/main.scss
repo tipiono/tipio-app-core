@@ -1,153 +1,69 @@
 // 1. Abstracts, configuration and helpers
-@import
-    'abstracts/bootstrap/functions',
-    'abstracts/bootstrap/variables',
-    'abstracts/_lazy-image-loading',
+@import 'abstracts/bootstrap/functions', 'abstracts/bootstrap/variables', 'abstracts/_lazy-image-loading',
     'abstracts/_lazy-card-loading';
 
 // 2. Base stuff
-@import
-    'base/_fonts.css',
-    'base/font-sizes',
-    'base/view_port',
-    'base/base';
+@import 'base/_fonts.css', 'base/font-sizes', 'base/view_port', 'base/base';
 
 @import '~bootstrap/scss/bootstrap';
 
 // 3. Components
-@import
-    'components/navigation',
-    'components/carousel-card',
-    'components/hamburger-button',
-    'components/special-card',
-    'components/shopping-bag-special-card',
-    'components/Customer/Cards/cart-product',
-    'components/Customer/Cards/footer-main-card',
-    'components/Customer/Cards/order-card',
-    'components/Customer/Cards/ordered-item-card',
-    'components/Customer/footer',
-    'components/invite-friends',
-    'components/completed-tipio',
-    'components/login-register',
-    'components/add-tipio',
-    'components/custom-accordion',
-    'components/upload-viewer',
-    'components/UI/image-slider',
-    'components/main-categories',
-    'components/Customer/vertical-timeline',
-    'components/tipio-status',
-    'components/Customer/Modals/choose-category',
-    'components/_empty_interested',
-    'components/_empty-orders.scss',
-    'components/tipio-posted-by',
-    'components/tipio-view-card',
-
+@import 'components/navigation', 'components/carousel-card', 'components/hamburger-button', 'components/special-card',
+    'components/shopping-bag-special-card', 'components/Customer/Cards/cart-product',
+    'components/Customer/Cards/footer-main-card', 'components/Customer/Cards/order-card',
+    'components/Customer/Cards/ordered-item-card', 'components/Customer/footer', 'components/invite-friends',
+    'components/completed-tipio', 'components/login-register', 'components/add-tipio', 'components/custom-accordion',
+    'components/upload-viewer', 'components/UI/image-slider', 'components/main-categories',
+    'components/Customer/vertical-timeline', 'components/tipio-status', 'components/Customer/Modals/choose-category',
+    'components/_empty_interested', 'components/_empty-orders.scss', 'components/tipio-posted-by',
+    'components/tipio-view-card', 'components/marker-toottip',
     // 3.1 UI Components
-    'components/UI/custom-material-select',
-    'components/UI/custom-modal',
-    'components/UI/success-modal',
-    'components/UI/modal-spinner',
-    'components/UI/pinky-countdown',
-    'components/UI/green-countdown',
-    'components/UI/timetag',
-    'components/UI/toggle-switch',
-    'components/UI/radio-buttons',
-    'components/UI/checkboxes',
-    'components/UI/pagination',
-    'components/UI/material-inputs',
-    'components/UI/onboarding-tooltip',
-    'components/UI/image-cropper',
-    'components/UI/tabs',
-    'components/UI/pill-tabs',
-    'components/UI/avatar',
-    'components/UI/sub-nav',
-    'components/UI/custom-btn-xl',
-    'components/placeholder-content',
-    'components/UI/table-borderless',
-    'components/UI/published-by',
-    'components/UI/product-details',
-    'components/UI/icon-btn',
-    'components/UI/error-message',
-    'components/UI/select-images',
-    'components/UI/circle',
-    'components/UI/selected-category-button',
-    'components/UI/add-category-button',
-    'components/UI/search-input',
-    'components/UI/overlay',
-    'components/UI/custom-alert',
-    'components/UI/delivery-time-form',
-    'components/tipio-already-exists',
-    'components/UI/shipping-returns',
-    'components/UI/delivery-time',
-    'components/UI/tipio-show-more',
-    'components/UI/tipio-of-the-day',
-    'components/UI/large-popular-tipio',
-    'components/UI/small-popular-tipio',
-    'components/UI/medium-popular-tipio',
-
-
+        'components/UI/custom-material-select',
+    'components/UI/custom-modal', 'components/UI/success-modal', 'components/UI/modal-spinner',
+    'components/UI/pinky-countdown', 'components/UI/green-countdown', 'components/UI/timetag',
+    'components/UI/toggle-switch', 'components/UI/radio-buttons', 'components/UI/checkboxes', 'components/UI/pagination',
+    'components/UI/material-inputs', 'components/UI/onboarding-tooltip', 'components/UI/image-cropper',
+    'components/UI/tabs', 'components/UI/pill-tabs', 'components/UI/avatar', 'components/UI/sub-nav',
+    'components/UI/custom-btn-xl', 'components/placeholder-content', 'components/UI/table-borderless',
+    'components/UI/published-by', 'components/UI/product-details', 'components/UI/icon-btn',
+    'components/UI/error-message', 'components/UI/select-images', 'components/UI/circle',
+    'components/UI/selected-category-button', 'components/UI/add-category-button', 'components/UI/search-input',
+    'components/UI/overlay', 'components/UI/custom-alert', 'components/UI/delivery-time-form',
+    'components/tipio-already-exists', 'components/UI/shipping-returns', 'components/UI/delivery-time',
+    'components/UI/tipio-show-more', 'components/UI/tipio-of-the-day', 'components/UI/large-popular-tipio',
+    'components/UI/small-popular-tipio', 'components/UI/medium-popular-tipio',
     // 3.2 Company Components
-    'components/Company/delete-account',
-    'components/Company/add-sales',
-    'components/Company/company-success-story',
-    'components/Company/won-bidding-round',
-    'components/Company/already-has-bid',
-    'components/Company/empty-avatar',
-    'components/Company/order-delivered',
-    'components/Company/export-as',
-    'components/Company/empty-cover',
-    'components/Company/change-avatar',
-    'components/Company/change-cover',
-    'components/Company/Cards/order-item-card',
-    'components/Company/Cards/base-company-card',
-    'components/Company/Cards/choose-add-sale-card',
+        'components/Company/delete-account',
+    'components/Company/add-sales', 'components/Company/company-success-story', 'components/Company/won-bidding-round',
+    'components/Company/already-has-bid', 'components/Company/empty-avatar', 'components/Company/order-delivered',
+    'components/Company/export-as', 'components/Company/empty-cover', 'components/Company/change-avatar',
+    'components/Company/change-cover', 'components/Company/Cards/order-item-card',
+    'components/Company/Cards/base-company-card', 'components/Company/Cards/choose-add-sale-card',
     'components/Company/CompanySidebarCards/company-sidebar-card',
-    'components/Company/CompanySidebarCards/company-addBidCard',
-    'components/Company/create-offer-form',
-    'components/Company/Cards/add-more-sale-card',
-    'components/Company/Cards/add-more-sale-ended-card',
-    'components/Company/material-search',
-    'components/Company/CompanySidebarCards/addSale-sidebar-card',
-
+    'components/Company/CompanySidebarCards/company-addBidCard', 'components/Company/create-offer-form',
+    'components/Company/Cards/add-more-sale-card', 'components/Company/Cards/add-more-sale-ended-card',
+    'components/Company/material-search', 'components/Company/CompanySidebarCards/addSale-sidebar-card',
     // 3.3 Customer Components
-    'components/Customer/sales-progressbar',
-    'components/Customer/Modals/_tipio-with-offer.scss',
-    'components/Customer/Modals/_tipio-confirmation.scss',
-    'components/Customer/Modals/_onboarding-movie',
-    'components/Customer/Modals/_login-or-register.scss',
-    'components/Customer/Modals/_ready-to-bid.scss',
-    'components/Customer/Modals/_join-tipio-onboarding.scss',
-    'components/Customer/Cards/voting-card',
-    'components/Customer/Cards/bidding-card',
-    'components/Customer/Cards/single-bidding-card',
-    'components/Customer/Cards/single-voting-card',
-    'components/Customer/Cards/sale-card',
-    'components/Customer/Cards/shopping-bag-item',
-    'components/Customer/CustomerSidebarCards/customer-sidebar-card',
-    'components/Customer/image-uploader',
+        'components/Customer/sales-progressbar',
+    'components/Customer/Modals/_tipio-with-offer.scss', 'components/Customer/Modals/_tipio-confirmation.scss',
+    'components/Customer/Modals/_onboarding-movie', 'components/Customer/Modals/_login-or-register.scss',
+    'components/Customer/Modals/_ready-to-bid.scss', 'components/Customer/Modals/_join-tipio-onboarding.scss',
+    'components/Customer/Cards/voting-card', 'components/Customer/Cards/bidding-card',
+    'components/Customer/Cards/single-bidding-card', 'components/Customer/Cards/single-voting-card',
+    'components/Customer/Cards/sale-card', 'components/Customer/Cards/shopping-bag-item',
+    'components/Customer/CustomerSidebarCards/customer-sidebar-card', 'components/Customer/image-uploader',
     'components/Customer/horizontal-timeline';
 
-
-
 // 4. Layout-related sections
-@import
-    'layout/footer',
-    'layout/masonry-grid',
-    'layout/header';
+@import 'layout/footer', 'layout/masonry-grid', 'layout/header';
 
 // 5. Page-specific styles
-@import
-    'pages/credit-cart',
-    'pages/tipio-view',
-    'pages/select-category-page';
-
+@import 'pages/credit-cart', 'pages/tipio-view', 'pages/select-category-page';
 
 // 6. Themes
-@import
-    'themes/default';
+@import 'themes/default';
 
 // 7. Vendors
 
 // . Custom
-@import
-    'custom-css';
+@import 'custom-css';

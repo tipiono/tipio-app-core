@@ -96,7 +96,6 @@ const VerticalChart = ({ tipio, additionalSales, showYears }) => {
 
     return (
         <>
-            <h1>HEREE</h1>
             <Bar data={charData} options={options} />
         </>
     );
