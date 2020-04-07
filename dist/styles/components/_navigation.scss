@@ -203,9 +203,28 @@ body.noscroll {
         .add-new {
             display: flex;
             align-items: center;
-            font-size: 22px;
-            font-family: 'Riposte-Regular', sans-serif;
             margin-bottom: 30px;
+            p {
+                span {
+                    padding-bottom: 5px;
+                    font-size: 22px;
+                    font-family: 'Riposte-Regular', sans-serif;
+                    margin-left: 18px;
+                    border-bottom: 1px solid transparent;
+                }
+                &:hover {
+                    svg {
+                        g {
+                            path {
+                                fill: #ffffff;
+                            }
+                        }
+                    }
+                    span {
+                        border-bottom: 1px solid #a794cb;
+                    }
+                }
+            }
         }
 
         .nav-item-logout {
