@@ -203,9 +203,31 @@ body.noscroll {
         .add-new {
             display: flex;
             align-items: center;
-            font-size: 22px;
-            font-family: 'Riposte-Regular', sans-serif;
             margin-bottom: 30px;
+            p {
+                span {
+                    padding-bottom: 5px;
+                    font-size: 22px;
+                    font-family: 'Riposte-Regular', sans-serif;
+                    margin-left: 18px;
+                    border-bottom: 1px solid transparent;
+                }
+                &:hover {
+                    svg {
+                        g {
+                            path {
+                                fill: #ffffff;
+                            }
+                        }
+                    }
+                    span {
+                        border-bottom: 1px solid #a794cb;
+                        // -webkit-box-shadow: 0px 1px 0px 0px rgba(167, 148, 203, 0.67);
+                        // -moz-box-shadow: 0px 1px 0px 0px rgba(167, 148, 203, 0.67);
+                        // box-shadow: 0px 1px 0px 0px rgba(167, 148, 203, 0.67);
+                    }
+                }
+            }
         }
 
         .nav-item-logout {
