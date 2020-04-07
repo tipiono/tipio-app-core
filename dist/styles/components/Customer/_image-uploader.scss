@@ -24,5 +24,6 @@
 
   @include media-breakpoint-down(sm) {
     background-color: $gray-100;
+    height: 12.5rem;
   }
 }

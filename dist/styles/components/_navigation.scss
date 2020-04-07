@@ -201,10 +201,10 @@ body.noscroll {
         }
 
         .add-new {
-            display: flex;
-            align-items: center;
             margin-bottom: 30px;
             p {
+                display: flex;
+                align-items: center;
                 span {
                     padding-bottom: 5px;
                     font-size: 22px;
