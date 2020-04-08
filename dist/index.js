@@ -899,6 +899,12 @@ Object.defineProperty(exports, "ConfirmedIcon", {
     return _ConfirmedIcon.default;
   }
 });
+Object.defineProperty(exports, "ImageSliderModal", {
+  enumerable: true,
+  get: function get() {
+    return _ImageSlider2.default;
+  }
+});
 Object.defineProperty(exports, "WithAnimation", {
   enumerable: true,
   get: function get() {
@@ -1226,6 +1232,8 @@ var _FilterIconCyan = _interopRequireDefault(require("./UI/Icons/FilterIconCyan"
 var _EmptyBagIcon = _interopRequireDefault(require("./UI/Icons/EmptyBagIcon"));
 
 var _ConfirmedIcon = _interopRequireDefault(require("./UI/Icons/ConfirmedIcon"));
+
+var _ImageSlider2 = _interopRequireDefault(require("./UI/Modal/ImageSlider/ImageSlider"));
 
 var _withAnimation = _interopRequireDefault(require("./effects/withAnimation"));
 

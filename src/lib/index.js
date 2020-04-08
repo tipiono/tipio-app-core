@@ -165,7 +165,7 @@ import FilterIcon from './UI/Icons/FilterIcon';
 import FilterIconCyan from './UI/Icons/FilterIconCyan';
 import EmptyBagIcon from './UI/Icons/EmptyBagIcon';
 import ConfirmedIcon from './UI/Icons/ConfirmedIcon';
-
+import ImageSliderModal from './UI/Modal/ImageSlider/ImageSlider';
 /**
  * Effects
  */
@@ -230,6 +230,7 @@ export {
     TipioSidebarVotingCard,
     TipioSidebarBindingCard,
     ImageSlider,
+    ImageSliderModal,
     ProductDetails,
     ImageUploader,
     Tabs,
