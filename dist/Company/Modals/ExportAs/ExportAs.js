@@ -15,12 +15,14 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var ExportAs = function ExportAs(_ref) {
   var onClose = _ref.onClose,
-      exportExcelClick = _ref.exportExcelClick;
+      exportExcelOnClick = _ref.exportExcelOnClick,
+      exportCSVOnClick = _ref.exportCSVOnClick;
   return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_Modal.Modal, {
     showCloseButton: true,
     onCloseButtonClick: onClose
   }, _react.default.createElement("div", {
-    className: "exportAs"
+    className: "exportAs",
+    onClick: exportCSVOnClick
   }, _react.default.createElement("div", {
     className: "exportAs--cvs"
   }, _react.default.createElement(_ExportIcon.default, null), _react.default.createElement("h3", {
@@ -29,7 +31,7 @@ var ExportAs = function ExportAs(_ref) {
     className: "exportAs--divider"
   }), _react.default.createElement("div", {
     className: "exportAs--excel",
-    onClick: exportExcelClick
+    onClick: exportExcelOnClick
   }, _react.default.createElement(_ExportIcon.default, null), _react.default.createElement("h3", {
     className: "exportAs--excel--label"
   }, "Eksporter Excel-fil")))));
