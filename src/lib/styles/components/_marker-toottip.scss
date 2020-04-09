@@ -1,15 +1,19 @@
 .marker__tooltip {
-    background: '#4F2E90';
+    width: 70px;
+    height: 24px;
+    background: #4f2e90;
     color: #fff;
     font-size: 0.9rem;
     font-weight: 100;
     text-align: center;
-    padding: 0.35rem;
     position: relative;
     cursor: default;
     bottom: 125%;
-    padding: 5px 10px;
+    padding: 6px 10px;
     border-radius: 4px;
+    span {
+        text-align: center;
+    }
 }
 
 .marker__tooltip::before {
