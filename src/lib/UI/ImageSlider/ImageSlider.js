@@ -4,7 +4,7 @@ import cx from 'classnames';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import TipioCountdown from '../TipioCountdown/TipioCountdown';
 
-function ImageSlider({ images, showThumbs, showTimer, tipio_expires_in }) {
+function ImageSlider({ images, showThumbs, showTimer, tipio_expires_in, onClick }) {
     return (
         <>
             <div
@@ -22,6 +22,7 @@ function ImageSlider({ images, showThumbs, showTimer, tipio_expires_in }) {
                     infiniteLoop
                     renderBottomCenterControls={false}
                     swipeScrollTolerance={40}
+                    onClickItem={onClick && onClick}
                 >
                     {images && images.map((item, i) => <img src={item.blob_url} alt="..." key={i} />)}
                 </Carousel>
