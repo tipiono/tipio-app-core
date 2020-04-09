@@ -1,49 +1,27 @@
 .sales__progress {
-
-  // .arrow-center {
-  //   display: flex;
-  //   justify-content: center;
-  //   align-items: center
-  // }
+position: relative;
   &--bar {
-    height: .3125rem;
+    height: .3435rem;
     background-color: $gray-100;
   }
-
-  &--arrow {
-    margin-top: 2px;
-    width: 0;
-    height: 0;
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-    border-bottom: 5px solid #C2E7E2;
+  .tooltip-progressbar{
+    position: absolute;
+    height: 13px;
+    width: 3px;
+    background-color: #4ABCAC;
+    top:-4px;
   }
 
   &--tooltip {
-    position: absolute;
+    width: inherit;
+    display: flex;
+    justify-content: center;
     z-index: 1;
-    margin-left: -23%;
-    // overflow: hidden;
     white-space: nowrap;
-    display: inline-block;
     line-height: 2.5rem;
-    border-radius: .5rem;
-    font-size: .875rem;
-    background-color: #C2E7E2;
-    padding: 0 1rem;
+    font-size: 1rem;
+    color: #188576;
     margin-top: .625rem;
-
-      &:after {
-        content: '';
-        position: absolute;
-        border-left: 6px solid transparent;
-        border-right: 6px solid transparent;
-        border-bottom: 6px solid #C2E7E2;
-        width: 0;
-        height: 0;
-        left: 50%;
-        top: -.375rem;
-      }
 
     &--icon {
       margin-right: .375rem;
