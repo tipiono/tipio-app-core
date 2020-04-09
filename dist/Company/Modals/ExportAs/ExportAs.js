@@ -13,21 +13,23 @@ var _ExportIcon = _interopRequireDefault(require("../../../UI/Icons/ExportIcon")
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var ExportAs = function ExportAs() {
+var ExportAs = function ExportAs(_ref) {
+  var onClose = _ref.onClose,
+      exportExcelClick = _ref.exportExcelClick;
   return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_Modal.Modal, {
-    showCloseButton: true
+    showCloseButton: true,
+    onCloseButtonClick: onClose
   }, _react.default.createElement("div", {
     className: "exportAs"
-  }, _react.default.createElement("a", {
-    href: "",
+  }, _react.default.createElement("div", {
     className: "exportAs--cvs"
   }, _react.default.createElement(_ExportIcon.default, null), _react.default.createElement("h3", {
     className: "exportAs--cvs--label"
   }, "Eksporter CSV-fil")), _react.default.createElement("div", {
     className: "exportAs--divider"
-  }), _react.default.createElement("a", {
-    href: "",
-    className: "exportAs--excel"
+  }), _react.default.createElement("div", {
+    className: "exportAs--excel",
+    onClick: exportExcelClick
   }, _react.default.createElement(_ExportIcon.default, null), _react.default.createElement("h3", {
     className: "exportAs--excel--label"
   }, "Eksporter Excel-fil")))));

@@ -1,0 +1,29 @@
+.imageSlider__modal {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 3rem;
+
+    .imageSlider .carousel-slider {
+        .slider-wrapper {
+            border: none;
+        }
+        .control-arrow {
+            top: 50% !important;
+            bottom: unset !important;
+            font-size: 28px;
+            padding: 0;
+        }
+
+        .control-prev {
+            left: -32px;
+        }
+
+        .control-next {
+            right: -32px;
+        }
+    }
+    @include media-breakpoint-down(xs) {
+        padding: 0;
+    }
+}

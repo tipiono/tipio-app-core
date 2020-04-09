@@ -21,7 +21,8 @@ function ImageSlider(_ref) {
   var images = _ref.images,
       showThumbs = _ref.showThumbs,
       showTimer = _ref.showTimer,
-      tipio_expires_in = _ref.tipio_expires_in;
+      tipio_expires_in = _ref.tipio_expires_in,
+      onClick = _ref.onClick;
   return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("div", {
     className: (0, _classnames.default)('imageSlider', images && {
       showIndicators: images.length >= 5
@@ -35,7 +36,8 @@ function ImageSlider(_ref) {
     showThumbs: showThumbs,
     infiniteLoop: true,
     renderBottomCenterControls: false,
-    swipeScrollTolerance: 40
+    swipeScrollTolerance: 40,
+    onClickItem: onClick && onClick
   }, images && images.map(function (item, i) {
     return _react.default.createElement("img", {
       src: item.blob_url,
