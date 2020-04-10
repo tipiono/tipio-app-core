@@ -53,7 +53,9 @@ const CompanyAddBidCard = (props) => {
                                 >
                                     Ny pris
                                 </p>
-                                <h6 className="companyAddBidCard__price--sale--amount">{tipio.new_price} Kr</h6>
+                                <h6 className="companyAddBidCard__price--sale--amount">
+                                    {generatePrice(meta.joined_count, firstRange, secondRange)} Kr
+                                </h6>
                             </>
                         )}
                         {showOfferPrice && (

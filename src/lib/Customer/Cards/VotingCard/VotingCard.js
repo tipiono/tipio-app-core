@@ -26,9 +26,9 @@ function VotingCard({
                         />
                     </a>
 
-                    <div className="votingCard__header--timeLeft">
+                    {/* <div className="votingCard__header--timeLeft">
                         <TipioCountdown className="timer" expires_in={expiresIn} />
-                    </div>
+                    </div> */}
                 </div>
 
                 <div className="votingCard__body">

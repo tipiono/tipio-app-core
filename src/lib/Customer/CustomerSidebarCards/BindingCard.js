@@ -47,7 +47,7 @@ const BindingCard = ({
                 </div>
             )}
 
-            {state !== 'bought' && (
+            {state !== 'bought' && !props.expiredTipio && (
                 <>
                     <SecondaryButton text={'Legg i handlekurv'} onClick={onBindClick} />
                 </>

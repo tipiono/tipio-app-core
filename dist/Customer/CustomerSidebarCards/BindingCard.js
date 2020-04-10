@@ -53,7 +53,7 @@ var BindingCard = function BindingCard(_ref) {
   }, _react.default.createElement(_SalesProgressBarTooltip.default, {
     bindCount: props.bindCount,
     percentage: bindingPercentage
-  })), state !== 'bought' && _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_SecondaryButton.default, {
+  })), state !== 'bought' && !props.expiredTipio && _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_SecondaryButton.default, {
     text: 'Legg i handlekurv',
     onClick: onBindClick
   })), state === 'bought' && _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("div", {
