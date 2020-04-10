@@ -18,7 +18,8 @@ function TipioOfTheDay(_ref) {
       subtitle = _ref.subtitle,
       voting_expires_in = _ref.voting_expires_in,
       images = _ref.images,
-      onClick = _ref.onClick;
+      onClick = _ref.onClick,
+      showTimer = _ref.showTimer;
   return _react.default.createElement("div", {
     className: "tipioOfTheDay"
   }, _react.default.createElement("a", {
@@ -29,7 +30,7 @@ function TipioOfTheDay(_ref) {
     className: "tipioOfTheDay__preview--image",
     src: images && images.length && images[0].blob_url,
     alt: ""
-  }), _react.default.createElement("div", {
+  }), showTimer && _react.default.createElement("div", {
     className: "tipioOfTheDay__preview--timeLeft"
   }, _react.default.createElement(_TipioCountdown.default, {
     className: "timer",
