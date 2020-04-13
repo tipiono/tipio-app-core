@@ -22,7 +22,7 @@ import SelectWithCustomOptions from './UI/Forms/SelectWithCustomOptions';
 import SelectWithSeperateValues from './UI/Forms/SelectWithSeperateValues';
 import * as CountdownType from './UI/Countdown/CountdownType';
 import Input from './UI/Forms/Input';
-import BirthdayInput from './UI/Forms/BirthdayInput';
+import PlaceholderInput from './UI/Forms/PlaceholderInput';
 import Textarea from './UI/Forms/Textarea';
 import Checkbox from './UI/Forms/Checkbox';
 import RadioButton from './UI/Forms/RadioButton';
@@ -219,7 +219,7 @@ export {
     TipioCountdown,
     CountdownType,
     Input,
-    BirthdayInput,
+    PlaceholderInput,
     Textarea,
     Select,
     SelectWithCustomOptions,
