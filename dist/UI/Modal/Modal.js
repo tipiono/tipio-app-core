@@ -118,7 +118,7 @@ function (_Component2) {
       this.removeNoScrollClass();
 
       if (window.innerWidth <= 768) {
-        console.log("HERE");
+        console.log('HERE');
         setTimeout(function () {
           _this3.props.onCloseButtonClick();
         }, 500);

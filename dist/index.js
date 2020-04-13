@@ -125,10 +125,10 @@ Object.defineProperty(exports, "Input", {
     return _Input.default;
   }
 });
-Object.defineProperty(exports, "BirthdayInput", {
+Object.defineProperty(exports, "PlaceholderInput", {
   enumerable: true,
   get: function get() {
-    return _BirthdayInput.default;
+    return _PlaceholderInput.default;
   }
 });
 Object.defineProperty(exports, "Textarea", {
@@ -979,7 +979,7 @@ exports.CountdownType = CountdownType;
 
 var _Input = _interopRequireDefault(require("./UI/Forms/Input"));
 
-var _BirthdayInput = _interopRequireDefault(require("./UI/Forms/BirthdayInput"));
+var _PlaceholderInput = _interopRequireDefault(require("./UI/Forms/PlaceholderInput"));
 
 var _Textarea = _interopRequireDefault(require("./UI/Forms/Textarea"));
 
