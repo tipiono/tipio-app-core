@@ -1,31 +1,31 @@
 .errorMessage {
-  font-size: 80%;
-  padding: 10px;
-  margin-bottom: .5rem;
+    font-size: 80%;
+    padding: 10px;
+    margin-bottom: 0.5rem;
 
-  &--title {
-    font-family: 'Riposte-Medium', sans-serif;
-  }
+    &--title {
+        font-family: 'Riposte-Medium', sans-serif;
+    }
 
-  /// Background Colors
+    /// Background Colors
 
-  &.bg-yellow {
-    background-color: #fcf5bc;
-  }
+    &.bg-yellow {
+        background-color: #fcf5bc;
+    }
 
-  &.bg-purple {
-    background-color: #ded8ec;
-  }
+    &.bg-purple {
+        background-color: #ded8ec;
+    }
 
-  &.bg-red {
-    background-color: #fcd9d9;;
-  }
+    &.bg-red {
+        background-color: #fcd9d9;
+    }
 
-  &.bg-green {
-    background-color: #c2e7e2;
-  }
+    &.bg-green {
+        background-color: #c2e7e2;
+    }
 
-  &.bg-gray {
-    background-color: #DEEFF3;
-  }
+    &.bg-gray {
+        background-color: #deeff3;
+    }
 }
