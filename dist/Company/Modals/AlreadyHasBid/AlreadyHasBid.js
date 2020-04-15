@@ -20,7 +20,9 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 var AlreadyHasBid = function AlreadyHasBid(props) {
   return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_.Modal, _extends({
     showCloseButton: !props.isLoading
-  }, props), _react.default.createElement("div", {
+  }, props, {
+    onCloseButtonClick: props.onCloseButtonClick
+  }), _react.default.createElement("div", {
     className: "alreadyHasBid"
   }, _react.default.createElement("div", {
     className: "alreadyHasBid--icon"
