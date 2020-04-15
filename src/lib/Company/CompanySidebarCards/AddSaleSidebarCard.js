@@ -1,6 +1,5 @@
 import React from 'react';
-import SecondaryOutlineButton from "../../UI/Buttons/SecondaryOutlineButton";
-
+import SecondaryOutlineButton from '../../UI/Buttons/SecondaryOutlineButton';
 
 const AddSaleSidebarCard = ({
     first_price,
@@ -11,16 +10,13 @@ const AddSaleSidebarCard = ({
     showEditButton = true,
     showAddToCartButton = false
 }) => {
-    const {
-        title,
-        subtitle,
-    } = tipio;
+    const { title, brand } = tipio;
     return (
         <div className="addSaleSidebarCard">
             <div className="addSaleSidebarCard__header">
                 <div className="addSaleSidebarCard__header__content">
                     <h3 className="addSaleSidebarCard__header__content--title">{title}</h3>
-                    <p className="addSaleSidebarCard__header__content--subtitle">{subtitle}</p>
+                    <p className="addSaleSidebarCard__header__content--subtitle">{brand}</p>
                 </div>
             </div>
 
@@ -36,12 +32,16 @@ const AddSaleSidebarCard = ({
             </div>
 
             <div className="addSaleSidebarCard__footer">
-                {showEditButton && <div className="addSaleSidebarCard__footer--action">
-                  <SecondaryOutlineButton text="Rediger" onClick={editButtonOnClick}/>
-                </div>}
-                {showAddToCartButton && <div className="addSaleSidebarCard__footer--action">
-                  <SecondaryOutlineButton text="Legg i handlekurv" onClick={addToCartOnClick}/>
-                </div>}
+                {showEditButton && (
+                    <div className="addSaleSidebarCard__footer--action">
+                        <SecondaryOutlineButton text="Rediger" onClick={editButtonOnClick} />
+                    </div>
+                )}
+                {showAddToCartButton && (
+                    <div className="addSaleSidebarCard__footer--action">
+                        <SecondaryOutlineButton text="Legg i handlekurv" onClick={addToCartOnClick} />
+                    </div>
+                )}
                 <p className="addSaleSidebarCard__footer--interestedCounter">Allerede 329 påmeldte!</p>
             </div>
         </div>
