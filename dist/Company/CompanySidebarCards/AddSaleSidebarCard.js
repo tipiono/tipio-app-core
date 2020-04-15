@@ -22,7 +22,7 @@ var AddSaleSidebarCard = function AddSaleSidebarCard(_ref) {
       _ref$showAddToCartBut = _ref.showAddToCartButton,
       showAddToCartButton = _ref$showAddToCartBut === void 0 ? false : _ref$showAddToCartBut;
   var title = tipio.title,
-      subtitle = tipio.subtitle;
+      brand = tipio.brand;
   return _react.default.createElement("div", {
     className: "addSaleSidebarCard"
   }, _react.default.createElement("div", {
@@ -33,7 +33,7 @@ var AddSaleSidebarCard = function AddSaleSidebarCard(_ref) {
     className: "addSaleSidebarCard__header__content--title"
   }, title), _react.default.createElement("p", {
     className: "addSaleSidebarCard__header__content--subtitle"
-  }, subtitle))), _react.default.createElement("div", {
+  }, brand))), _react.default.createElement("div", {
     className: "addSaleSidebarCard__price"
   }, _react.default.createElement("div", {
     className: "addSaleSidebarCard__price--cost"
