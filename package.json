@@ -1,7 +1,7 @@
 {
     "name": "tipio-app-core",
     "private": true,
-    "version": "0.5.10",
+    "version": "0.5.11",
     "main": "dist/index.js",
     "module": "dist/index.js",
     "repository": "/tipio-app-core",
