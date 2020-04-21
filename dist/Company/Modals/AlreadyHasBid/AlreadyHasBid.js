@@ -30,7 +30,7 @@ var AlreadyHasBid = function AlreadyHasBid(props) {
     className: "alreadyHasBid--title"
   }, "Oi! Noen var vist raskere enn deg"), _react.default.createElement("p", {
     className: "alreadyHasBid--description"
-  }, "En annen bedrift har akkurat sendt inn et bud p\xE5 dette ", _react.default.createElement("br", null), " produkte. Budet ditt ble derfor dessverre ikke sendt inn. "), _react.default.createElement("div", {
+  }, "En annen bedrift har akkurat sendt inn et bud p\xE5 dette ", _react.default.createElement("br", null), " produkte. Budet ditt ble derfor dessverre ikke sendt inn.", ' '), _react.default.createElement("div", {
     className: "alreadyHasBid--action"
   }, _react.default.createElement(_GrayOutlineButton.default, {
     text: "Avbryt",

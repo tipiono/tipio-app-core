@@ -72,7 +72,10 @@ var PublishedByWithDropDown = function PublishedByWithDropDown(props) {
     onClick: function onClick() {
       navigator.clipboard.writeText(share.link);
     }
-  }, "Kopier lenke"))));
+  }, "Kopier lenke"), showEdit ? _react.default.createElement(_NewDropdown.NewDropdownItem, {
+    key: '6',
+    onClick: props.onEditClick
+  }, "Rediger") : '')));
 };
 
 var _default = PublishedByWithDropDown;
