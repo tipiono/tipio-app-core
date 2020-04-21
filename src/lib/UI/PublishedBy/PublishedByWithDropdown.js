@@ -66,13 +66,13 @@ const PublishedByWithDropDown = (props) => {
                     >
                         Kopier lenke
                     </NewDropdownItem>
-                    {/* {showEdit ? (
+                    {showEdit ? (
                         <NewDropdownItem key={'6'} onClick={props.onEditClick}>
                             Rediger
                         </NewDropdownItem>
                     ) : (
                         ''
-                    )} */}
+                    )}
                     {/*<br />*/}
                     {/* <NewDropdownItem key={'7'} >Rapportér <small className="d-block text-gray-600">Dette bryter med Tipio’s rettningslinjer</small></NewDropdownItem> */}
                 </NewDropdown>
