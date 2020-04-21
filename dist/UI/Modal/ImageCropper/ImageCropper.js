@@ -85,7 +85,8 @@ function (_Component) {
         ready: function ready() {
           setCropperReady(cropper);
         },
-        viewMode: 1
+        viewMode: 1,
+        autoCropArea: 1
       });
     } // componentWillUnmount() {
     //     //this.props.onClose();

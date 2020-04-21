@@ -32,7 +32,8 @@ class ImageCropper extends Component {
             ready() {
                 setCropperReady(cropper);
             },
-            viewMode: 1
+            viewMode: 1,
+            autoCropArea: 1
         });
     }
     // componentWillUnmount() {

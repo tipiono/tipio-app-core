@@ -62,12 +62,12 @@ function ImageUploader({ setFieldValue, name, errors, displayErrors, title, ...p
         }
 
         const tempImage = files[croppedImageIndex];
-        let file = new File([blob], tempImage.name);
+        let file = new File([blob], tempImage.name, { type: tempImage.type });
         file.id = tempImage.id;
         file.path = tempImage.path;
         file.preview = URL.createObjectURL(file);
         files[croppedImageIndex] = file;
-        setFiles(files);
+        setFiles([...files]);
         setFieldValue('files', files);
         if (!icc && !initialCropCompleted) {
             setCropImage(files[croppedImageIndex + 1]);
