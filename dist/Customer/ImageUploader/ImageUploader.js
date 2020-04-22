@@ -5,7 +5,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = void 0;
+exports["default"] = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
 
@@ -23,11 +23,11 @@ var _RemoveImageIcon = _interopRequireDefault(require("../../UI/Icons/RemoveImag
 
 var _ErrorMessage = _interopRequireDefault(require("../../UI/ErrorMessage/ErrorMessage"));
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
 
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
 
@@ -81,7 +81,7 @@ function ImageUploader(_ref) {
 
     var acceptedFiles = droppedFiles.map(function (file) {
       return Object.assign(file, {
-        id: _uuid.default.v4(),
+        id: _uuid["default"].v4(),
         preview: URL.createObjectURL(file)
       });
     });
@@ -148,26 +148,26 @@ function ImageUploader(_ref) {
 
   if (files && files.length > 1) {
     thumbs = files.slice(1).map(function (file) {
-      return _react.default.createElement("div", {
+      return _react["default"].createElement("div", {
         key: file.name,
         className: "uploadViewer__thumbnail--item"
-      }, _react.default.createElement("img", {
+      }, _react["default"].createElement("img", {
         className: "uploadViewer__thumbnail--item--image",
         src: file.preview
-      }), _react.default.createElement("span", {
+      }), _react["default"].createElement("span", {
         className: "uploadViewer__thumbnail--item--remove",
         onClick: function onClick(e) {
           e.preventDefault();
           removeImageButtonOnClick(file);
         }
-      }, _react.default.createElement(_RemoveImageIcon.default, null)));
+      }, _react["default"].createElement(_RemoveImageIcon["default"], null)));
     });
   }
 
   var indicator = null;
 
   if (!initialCropCompleted) {
-    indicator = _react.default.createElement("p", {
+    indicator = _react["default"].createElement("p", {
       className: "label-sm mb-0 mt-3",
       style: {
         textAlign: 'center'
@@ -175,7 +175,7 @@ function ImageUploader(_ref) {
     }, croppedImageIndex, " av ", files && files.length);
   }
 
-  return _react.default.createElement(_react.default.Fragment, null, showCropper && _react.default.createElement(_index.ImageCropper, {
+  return _react["default"].createElement(_react["default"].Fragment, null, showCropper && _react["default"].createElement(_index.ImageCropper, {
     title: title,
     image: cropImage,
     onDone: cropperOnDone,
@@ -183,47 +183,47 @@ function ImageUploader(_ref) {
     showCloseButton: initialCropCompleted,
     indicator: indicator,
     setLoading: cropperSetLoading
-  }), _react.default.createElement(_reactDropzone.default, {
+  }), _react["default"].createElement(_reactDropzone["default"], {
     accept: "image/*",
     onDrop: onDrop
   }, function (_ref2) {
     var getRootProps = _ref2.getRootProps,
         getInputProps = _ref2.getInputProps;
-    return _react.default.createElement("section", {
+    return _react["default"].createElement("section", {
       className: "uploadViewer"
-    }, _react.default.createElement("div", getRootProps({
+    }, _react["default"].createElement("div", getRootProps({
       className: 'dropzone',
       onClick: function onClick(event) {
         return event.preventDefault();
       }
-    }), _react.default.createElement("input", getInputProps()), files && files.length === 0 && _react.default.createElement(_Placeholder.default, null)), files && files.length > 0 && _react.default.createElement("div", {
+    }), _react["default"].createElement("input", getInputProps()), files && files.length === 0 && _react["default"].createElement(_Placeholder["default"], null)), files && files.length > 0 && _react["default"].createElement("div", {
       className: "uploadViewer__main"
-    }, _react.default.createElement("img", {
+    }, _react["default"].createElement("img", {
       className: "uploadViewer__main--image",
       src: files[0].preview
-    }), _react.default.createElement("span", {
+    }), _react["default"].createElement("span", {
       className: "uploadViewer__main--remove",
       onClick: function onClick(e) {
         e.preventDefault();
         removeImageButtonOnClick(files[0]);
       }
-    }, _react.default.createElement(_RemoveImageIcon.default, null))), _react.default.createElement("aside", {
+    }, _react["default"].createElement(_RemoveImageIcon["default"], null))), _react["default"].createElement("aside", {
       className: "uploadViewer__thumbnail"
-    }, thumbs), _react.default.createElement("div", getRootProps({
+    }, thumbs), _react["default"].createElement("div", getRootProps({
       className: 'dropzone'
-    }), _react.default.createElement("input", getInputProps()), files && files.length > 0 && _react.default.createElement("div", {
+    }), _react["default"].createElement("input", getInputProps()), files && files.length > 0 && _react["default"].createElement("div", {
       className: "mt-3 mb-5"
-    }, _react.default.createElement(_IconButton.default, {
+    }, _react["default"].createElement(_IconButton["default"], {
       text: "Last opp produktbilder",
       onClick: function onClick(e) {
         e.preventDefault();
       }
     }))));
-  }), displayErrors && errors && errors[name] && _react.default.createElement(_ErrorMessage.default, {
+  }), displayErrors && errors && errors[name] && _react["default"].createElement(_ErrorMessage["default"], {
     content: errors[name].message,
     color: 'bg-red'
   }));
 }
 
 var _default = ImageUploader;
-exports.default = _default;
+exports["default"] = _default;
