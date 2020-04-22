@@ -3,13 +3,13 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = TabNavItem;
+exports["default"] = TabNavItem;
 
 var _react = _interopRequireDefault(require("react"));
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
@@ -22,10 +22,10 @@ function TabNavItem(_ref) {
       isActive = _ref.isActive,
       props = _objectWithoutProperties(_ref, ["children", "isActive"]);
 
-  return _react.default.createElement("li", _extends({}, props, {
+  return _react["default"].createElement("li", _extends({}, props, {
     className: "tab__item"
-  }), _react.default.createElement("a", {
-    className: (0, _classnames.default)('tab__item--link', {
+  }), _react["default"].createElement("a", {
+    className: (0, _classnames["default"])('tab__item--link', {
       'active': isActive
     })
   }, children));
