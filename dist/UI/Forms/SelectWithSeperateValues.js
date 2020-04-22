@@ -5,7 +5,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports["default"] = void 0;
+exports.default = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
 
@@ -13,11 +13,11 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _reactSelect = _interopRequireDefault(require("react-select"));
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
 
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
 
@@ -51,11 +51,11 @@ function SelectWithSeperateValues(_ref) {
     onChange(v);
   };
 
-  return _react["default"].createElement("div", {
+  return _react.default.createElement("div", {
     className: "custom-material-select"
-  }, _react["default"].createElement("label", {
+  }, _react.default.createElement("label", {
     className: "select-label"
-  }, label), _react["default"].createElement(_reactSelect["default"], {
+  }, label), _react.default.createElement(_reactSelect.default, {
     value: value,
     onChange: _onChange,
     options: options.map(function (x) {
@@ -71,10 +71,10 @@ function SelectWithSeperateValues(_ref) {
 
 SelectWithSeperateValues.defaultProps = {};
 SelectWithSeperateValues.propTypes = {
-  value: _propTypes["default"].string,
-  placeholder: _propTypes["default"].string,
-  options: _propTypes["default"].array.isRequired,
-  label: _propTypes["default"].string.isRequired
+  value: _propTypes.default.string,
+  placeholder: _propTypes.default.string,
+  options: _propTypes.default.array.isRequired,
+  label: _propTypes.default.string.isRequired
 };
 var _default = SelectWithSeperateValues;
-exports["default"] = _default;
+exports.default = _default;

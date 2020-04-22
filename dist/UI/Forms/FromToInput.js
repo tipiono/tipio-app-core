@@ -3,13 +3,13 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports["default"] = void 0;
+exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
@@ -17,7 +17,7 @@ function _objectWithoutProperties(source, excluded) { if (source == null) return
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
-var _default = _react["default"].forwardRef(function (_ref, ref) {
+var _default = _react.default.forwardRef(function (_ref, ref) {
   var from = _ref.from,
       to = _ref.to,
       label = _ref.label,
@@ -25,11 +25,11 @@ var _default = _react["default"].forwardRef(function (_ref, ref) {
       errors = _ref.errors,
       props = _objectWithoutProperties(_ref, ["from", "to", "label", "name", "errors"]);
 
-  return _react["default"].createElement(_react["default"].Fragment, null, _react["default"].createElement("label", {
-    className: (0, _classnames["default"])("pure-material-textfield-outlined from-to-input", {
+  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("label", {
+    className: (0, _classnames.default)("pure-material-textfield-outlined from-to-input", {
       validationError: errors && errors[name]
     })
-  }, _react["default"].createElement("input", _extends({
+  }, _react.default.createElement("input", _extends({
     placeholder: to,
     type: "number",
     name: name,
@@ -39,13 +39,13 @@ var _default = _react["default"].forwardRef(function (_ref, ref) {
     style: {
       paddingLeft: props.paddingLeft ? "".concat(props.paddingLeft + 55 + 8 + 5.328125, "px") : '75px'
     }
-  })), _react["default"].createElement("label", {
+  })), _react.default.createElement("label", {
     className: "outside-label"
-  }, label), _react["default"].createElement("span", {
+  }, label), _react.default.createElement("span", {
     className: "inside-label"
-  }, "Fra"), _react["default"].createElement("p", {
+  }, "Fra"), _react.default.createElement("p", {
     className: "static-placeholder"
   }, from, " -")));
 });
 
-exports["default"] = _default;
+exports.default = _default;
