@@ -12,11 +12,11 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
 
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
 
@@ -33,7 +33,7 @@ function DropDown(props) {
       setDropDownVisibility = _useState2[1];
 
   var visible = props.controlled ? props.visible : dropDownVisibility;
-  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("a", {
+  return _react["default"].createElement(_react["default"].Fragment, null, _react["default"].createElement("a", {
     className: "dropdown-toggle mb-2",
     href: "#",
     id: "minKonto",
@@ -50,34 +50,34 @@ function DropDown(props) {
         setDropDownVisibility(!dropDownVisibility);
       }
     }
-  }, _react.default.createElement("span", null, props.title), props.afterTitle && props.afterTitle(), _react.default.createElement("svg", {
-    className: (0, _classnames.default)({
+  }, _react["default"].createElement("span", null, props.title), props.afterTitle && props.afterTitle(), _react["default"].createElement("svg", {
+    className: (0, _classnames["default"])({
       downArrow: dropDownVisibility
     }),
     xmlns: "http://www.w3.org/2000/svg",
     width: "20",
     height: "20",
     viewBox: "0 0 24 24"
-  }, _react.default.createElement("g", {
+  }, _react["default"].createElement("g", {
     className: "nc-icon-wrapper",
     strokeLinecap: "round",
     strokeLinejoin: "round",
     strokeWidth: "2",
     fill: "#ffffff",
     stroke: "#ffffff"
-  }, _react.default.createElement("polyline", {
+  }, _react["default"].createElement("polyline", {
     fill: "none",
     stroke: "#ffffff",
     strokeMiterlimit: "10",
     points: "2,7 12,17 22,7 ",
     transform: "translate(0, 0)"
-  })))), _react.default.createElement("ul", {
+  })))), _react["default"].createElement("ul", {
     className: "dropdown-list ".concat(visible ? 'show' : 'd-none')
-  }, _react.default.Children.map(props.children, function (child) {
+  }, _react["default"].Children.map(props.children, function (child) {
     return child;
   })));
 }
 
 function DropDownItem(props) {
-  return _react.default.createElement("li", null, props.children);
+  return _react["default"].createElement("li", null, props.children);
 }
