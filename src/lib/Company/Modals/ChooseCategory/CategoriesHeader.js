@@ -2,16 +2,18 @@ import React from 'react';
 import cx from 'classnames';
 
 function CategoriesHeader({ data, parent, path, backButtonOnClick, subCategoriesOnClick }) {
-    // const mainTitle = data && data.length !== 0 && data[0].title;
-    const mainTitle = parent && parent.title;
-    const currentCat = path && path.length > 0 ? path[path.length - 1] : { id: 0 };
+    const title = path && path[0] && path[0].title;
+    let items = [];
+    for (let i = 1; i < (path && path.length); i += 1) {
+        items.push(path[i]);
+    }
     return (
         <>
-            {mainTitle && (
+            {title && (
                 <div className="choose-category-header">
                     <div className="category-header-title">
-                        <h3 className="mb-0">{mainTitle}</h3>
-                        {parent && (
+                        <h3 className="mb-0">{title}</h3>
+                        {path && path[0] && path[0].title && (
                             <span className="backward" onClick={backButtonOnClick}>
                                 <svg width={15} height={9}>
                                     <title>{'Mask'}</title>
@@ -26,22 +28,36 @@ function CategoriesHeader({ data, parent, path, backButtonOnClick, subCategories
                     </div>
 
                     <ul className="category-types">
-                        {data.map((navigation) => {
-                            return (
-                                <li className="category-type-item">
-                                    <span
-                                        onClick={(e) => {
-                                            e.preventDefault();
-                                            subCategoriesOnClick(navigation);
-                                        }}
-                                        className={cx('category-type-item-link', {
-                                            selected: navigation.id === currentCat.id
-                                        })}
-                                    >
-                                        {navigation.title}
-                                    </span>
-                                </li>
-                            );
+                        {items.map((navigation, i) => {
+                            if (items.length === i + 1) {
+                                return (
+                                    <li className="category-type-item">
+                                        <span
+                                            onClick={(e) => {
+                                                e.preventDefault();
+                                                subCategoriesOnClick(navigation);
+                                            }}
+                                            className={cx('category-type-item-link')}
+                                        >
+                                            {navigation.title}
+                                        </span>
+                                    </li>
+                                );
+                            } else {
+                                return (
+                                    <li className="category-type-item">
+                                        <span
+                                            onClick={(e) => {
+                                                e.preventDefault();
+                                                subCategoriesOnClick(navigation);
+                                            }}
+                                            className={cx('category-type-item-link')}
+                                        >
+                                            {navigation.title}
+                                        </span>
+                                    </li>
+                                );
+                            }
                         })}
                     </ul>
                 </div>

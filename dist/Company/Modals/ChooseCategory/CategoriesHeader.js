@@ -17,18 +17,20 @@ function CategoriesHeader(_ref) {
       path = _ref.path,
       backButtonOnClick = _ref.backButtonOnClick,
       subCategoriesOnClick = _ref.subCategoriesOnClick;
-  // const mainTitle = data && data.length !== 0 && data[0].title;
-  var mainTitle = parent && parent.title;
-  var currentCat = path && path.length > 0 ? path[path.length - 1] : {
-    id: 0
-  };
-  return _react.default.createElement(_react.default.Fragment, null, mainTitle && _react.default.createElement("div", {
+  var title = path && path[0] && path[0].title;
+  var items = [];
+
+  for (var i = 1; i < (path && path.length); i += 1) {
+    items.push(path[i]);
+  }
+
+  return _react.default.createElement(_react.default.Fragment, null, title && _react.default.createElement("div", {
     className: "choose-category-header"
   }, _react.default.createElement("div", {
     className: "category-header-title"
   }, _react.default.createElement("h3", {
     className: "mb-0"
-  }, mainTitle), parent && _react.default.createElement("span", {
+  }, title), path && path[0] && path[0].title && _react.default.createElement("span", {
     className: "backward",
     onClick: backButtonOnClick
   }, _react.default.createElement("svg", {
@@ -40,18 +42,28 @@ function CategoriesHeader(_ref) {
     fillRule: "nonzero"
   })))), _react.default.createElement("ul", {
     className: "category-types"
-  }, data.map(function (navigation) {
-    return _react.default.createElement("li", {
-      className: "category-type-item"
-    }, _react.default.createElement("span", {
-      onClick: function onClick(e) {
-        e.preventDefault();
-        subCategoriesOnClick(navigation);
-      },
-      className: (0, _classnames.default)('category-type-item-link', {
-        selected: navigation.id === currentCat.id
-      })
-    }, navigation.title));
+  }, items.map(function (navigation, i) {
+    if (items.length === i + 1) {
+      return _react.default.createElement("li", {
+        className: "category-type-item"
+      }, _react.default.createElement("span", {
+        onClick: function onClick(e) {
+          e.preventDefault();
+          subCategoriesOnClick(navigation);
+        },
+        className: (0, _classnames.default)('category-type-item-link')
+      }, navigation.title));
+    } else {
+      return _react.default.createElement("li", {
+        className: "category-type-item"
+      }, _react.default.createElement("span", {
+        onClick: function onClick(e) {
+          e.preventDefault();
+          subCategoriesOnClick(navigation);
+        },
+        className: (0, _classnames.default)('category-type-item-link')
+      }, navigation.title));
+    }
   }))));
 }
 

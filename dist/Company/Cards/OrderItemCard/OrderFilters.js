@@ -61,7 +61,7 @@ var OrderFilters = function OrderFilters(props) {
     className: "orderFilters"
   }, _react.default.createElement("div", {
     className: (0, _classnames.default)('orderFilters--dropdown', {
-      'orderFilters__active': props.visible
+      orderFilters__active: props.visible
     })
   }, _react.default.createElement("span", {
     className: "orderFilters--dropdown--icon"

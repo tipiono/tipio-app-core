@@ -27,7 +27,7 @@
       margin-bottom: 0;
 
       .category-type-item {
-        margin-right: 24px;
+        // margin-right: 24px;
         margin-bottom: 12px;
 
         .category-type-item-link {
@@ -40,6 +40,13 @@
 
           &.selected {
             box-shadow: 0 1px 0 0 $primary;
+          }
+        }
+        &:not(:last-child){
+          &:after{
+            content: "-";
+            padding-right: 5px;
+            padding-left: 5px;
           }
         }
       }
