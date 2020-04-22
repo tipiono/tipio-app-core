@@ -39,13 +39,16 @@ const OrderItemCard = ({ order, deliveredOnChange }) => {
                         {order.order_products.map((order_product) => (
                             <div className="orderItem--row">
                                 <p className="w-33 p-bold product__title">{order_product.title}</p>
-                                <p className="w-33">Ordrenummer: 89674590</p>
-                                <p className="w-16">Antall: {order_product.quantity}</p>
-                                <p className="w-16">Pris: {order_product.price} Kr</p>
+                                <p className="w-33 orderNumber">Ordrenummer: 89674590</p>
+                                <div className="w-33 antall__price">
+                                    <p>Antall: {order_product.quantity}</p>
+                                    <p>Pris: {order_product.price} Kr</p>
+                                </div>
                             </div>
                         ))}
                         <div className="orderItem--row">
                             <p className="w-33">30.06.2019 - 13:09</p>
+                            <p className="w-33 orderNumberMobile">Ordrenummer: 89674590</p>
                             <p className="w-33">Betalingsmåte: Kort</p>
                             <p className="w-33">Størrelse: 46</p>
                         </div>

@@ -36,8 +36,23 @@
         &--productDetails {
             padding-top: 23px;
             border-bottom: 2px solid #8c8f91;
+
             .product__title {
                 font-family: 'Riposte-Medium', sans-serif !important;
+            }
+
+            .antall__price {
+                display: flex;
+
+                p {
+                    &:first-child {
+                        margin-right: 71px;
+                    }
+                }
+            }
+
+            .orderNumberMobile {
+                display: none;
             }
         }
 
@@ -63,7 +78,8 @@
     .w-16 {
         width: 16%;
     }
-    @include media-breakpoint-up(sm) {
+
+    @include media-breakpoint-up(md) {
         .p-bold {
             font-family: 'Riposte-Medium', sans-serif !important;
         }
@@ -110,9 +126,9 @@
             }
 
             &--productDetails {
-                border-bottom: none;
                 display: flex;
                 flex-direction: column-reverse;
+                padding-bottom: 29px;
 
                 .orderItem--row {
                     &:last-child {
@@ -123,10 +139,24 @@
                         display: none;
                     }
                 }
+
+                .orderNumber {
+                    display: none;
+                }
+
+                .orderNumberMobile {
+                    display: block;
+                }
             }
 
             &--totalSum {
-                display: none;
+                justify-content: start;
+
+                p {
+                    &:first-child {
+                        margin-right: 57px;
+                    }
+                }
             }
 
             &--arrow {
@@ -179,31 +209,9 @@
         justify-content: space-between;
     }
 
-    &__active {
-        background-color: white;
-        color: $primary;
-
-        .orderFilters--dropdown--icon {
-            svg path {
-                fill: $primary;
-            }
-        }
-
-        .dropdown-toggle {
-            span {
-                color: $primary;
-                text-decoration: underline;
-            }
-
-            svg path {
-                fill: $primary;
-            }
-        }
-    }
-
     @include media-breakpoint-up(lg) {
-        .w-25 {
-            width: 25%;
+        .w-28 {
+            width: 28%;
         }
     }
 
@@ -214,11 +222,13 @@
     &--sort {
         color: $gray-700;
 
-        &:hover {
-            color: $primary;
+        @include media-breakpoint-up(lg) {
+            &:hover {
+                color: $primary;
 
-            svg * {
-                stroke: $primary;
+                svg * {
+                    stroke: $primary;
+                }
             }
         }
 
@@ -238,99 +248,120 @@
 
     &--dropdown {
         display: flex;
-        align-items: center;
-        padding: 10px 24px;
-        position: relative;
+        justify-content: start;
 
-        @include media-breakpoint-up(lg) {
-            width: 22%;
-        }
-
-        .dropdown-toggle {
-            margin-bottom: 0 !important;
-        }
-
-        .dropdown-toggle {
-            color: $gray-700;
+        &__content {
+            display: flex;
+            align-items: center;
+            padding: 10px 24px;
             position: relative;
 
-            svg {
-                display: none;
+            .dropdown-toggle {
+                margin-bottom: 0 !important;
             }
-
-            span {
-                padding-right: 8px;
-            }
-
-            &:after {
-                width: 4px;
-                height: 15px;
-                background-repeat: no-repeat;
-                background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg width='3px' height='15px' viewBox='0 0 3 15' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cg id='Desktop' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='Company_Customerlist' transform='translate(-338.000000, -430.000000)' fill='%235C6265'%3E%3Cg id='Group-10' transform='translate(163.000000, 426.000000)'%3E%3Cg id='Group-5' transform='translate(175.000000, 4.000000)'%3E%3Ccircle id='Oval' cx='1.5' cy='1.5' r='1.5'%3E%3C/circle%3E%3Ccircle id='Oval-Copy-6' cx='1.5' cy='7.5' r='1.5'%3E%3C/circle%3E%3Ccircle id='Oval-Copy-7' cx='1.5' cy='13.5' r='1.5'%3E%3C/circle%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-                border: 0;
-                vertical-align: text-bottom;
-            }
-        }
-
-        &:hover {
-            background-color: white;
-            color: $primary;
 
             .dropdown-toggle {
+                color: $gray-700;
+                position: relative;
+
+                svg {
+                    display: none;
+                }
+
                 span {
+                    padding-right: 8px;
+                }
+
+                &:after {
+                    width: 4px;
+                    height: 15px;
+                    background-repeat: no-repeat;
+                    background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg width='3px' height='15px' viewBox='0 0 3 15' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cg id='Desktop' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='Company_Customerlist' transform='translate(-338.000000, -430.000000)' fill='%235C6265'%3E%3Cg id='Group-10' transform='translate(163.000000, 426.000000)'%3E%3Cg id='Group-5' transform='translate(175.000000, 4.000000)'%3E%3Ccircle id='Oval' cx='1.5' cy='1.5' r='1.5'%3E%3C/circle%3E%3Ccircle id='Oval-Copy-6' cx='1.5' cy='7.5' r='1.5'%3E%3C/circle%3E%3Ccircle id='Oval-Copy-7' cx='1.5' cy='13.5' r='1.5'%3E%3C/circle%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+                    border: 0;
+                    vertical-align: text-bottom;
+                }
+            }
+
+            @include media-breakpoint-up(lg) {
+                &:hover {
+                    background-color: white;
                     color: $primary;
-                    text-decoration: underline;
-                }
+                    box-shadow: 0px 1px 2px #d7d7d7;
+                    border-radius: 8px;
 
-                svg path {
-                    fill: $primary;
+                    .dropdown-toggle {
+                        span {
+                            color: $primary;
+                            text-decoration: underline;
+                        }
+
+                        svg path {
+                            fill: $primary;
+                        }
+                    }
+
+                    .orderFilters--dropdown--icon {
+                        svg path {
+                            fill: $primary;
+                        }
+                    }
                 }
             }
 
-            .orderFilters--dropdown--icon {
-                svg path {
-                    fill: $primary;
-                }
-            }
-        }
+            .dropdown-list {
+                position: absolute;
+                top: 46px;
+                min-width: 290px;
+                background: white;
+                box-shadow: 2px 2px 4px 0 #e5e5e5;
+                border-radius: 0 8px 8px 8px;
+                padding-bottom: 20px;
+                padding-top: 5px;
+                z-index: 2;
+                left: -1px;
 
-        .dropdown-list {
-            position: absolute;
-            top: 43px;
-            min-width: 290px;
-            background: white;
-            box-shadow: 2px 2px 4px 0 #e5e5e5;
-            border-radius: 8px;
-            padding-bottom: 20px;
-            padding-top: 5px;
-            z-index: 2;
+                li {
+                    margin-bottom: 20px;
+                    padding: 6px 34px;
 
-            li {
-                margin-bottom: 20px;
-                padding: 6px 34px;
+                    a {
+                        color: $gray-700;
 
-                a {
-                    color: $gray-700;
+                        &:hover {
+                            text-decoration: none;
+                        }
+                    }
 
-                    &:hover {
-                        text-decoration: none;
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+
+                    @include media-breakpoint-up(lg) {
+                        &:hover {
+                            background-color: #f5f5f5;
+                            text-decoration: none;
+                        }
                     }
                 }
 
-                &:last-child {
-                    margin-bottom: 0;
-                }
-
-                &:hover {
-                    background-color: #f5f5f5;
-                    text-decoration: none;
+                &--close {
+                    position: relative;
+                    margin-left: 88%;
+                    &:hover {
+                        svg g path {
+                            fill: $primary;
+                        }
+                    }
                 }
             }
 
-            &--close {
-                position: relative;
-                margin-left: 88%;
+            @include media-breakpoint-down(sm) {
+                padding: 10px 10px;
             }
+        }
+
+        @include media-breakpoint-up(lg) {
+            width: 22%;
         }
     }
 
@@ -344,9 +375,36 @@
         &__addrese {
             display: none;
         }
+    }
+    &__active {
+        background-color: white;
+        color: $primary;
+        box-shadow: 0px 1px 2px #d7d7d7;
+        border-radius: 8px 8px 0 0;
 
-        &--dropdown {
-            padding: 10px 10px;
+        .orderFilters--dropdown--icon {
+            svg path {
+                fill: $primary;
+            }
+        }
+
+        .dropdown-toggle {
+            span {
+                color: $primary;
+            }
+
+            svg path {
+                fill: $primary;
+            }
+        }
+
+        &:hover {
+            border-radius: 8px 8px 0 0;
+            .dropdown-toggle {
+                span {
+                    text-decoration: none;
+                }
+            }
         }
     }
 }

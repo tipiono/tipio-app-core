@@ -60,7 +60,9 @@ var OrderFilters = function OrderFilters(props) {
   return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("div", {
     className: "orderFilters"
   }, _react.default.createElement("div", {
-    className: (0, _classnames.default)('orderFilters--dropdown', {
+    className: "orderFilters--dropdown"
+  }, _react.default.createElement("div", {
+    className: (0, _classnames.default)('orderFilters--dropdown__content', {
       orderFilters__active: props.visible
     })
   }, _react.default.createElement("span", {
@@ -91,8 +93,8 @@ var OrderFilters = function OrderFilters(props) {
       e.preventDefault();
       props.onClick(2);
     }
-  }, "Merk alle som ikke levert")))), _react.default.createElement("div", {
-    className: "w-25"
+  }, "Merk alle som ikke levert"))))), _react.default.createElement("div", {
+    className: "w-28"
   }, _react.default.createElement("a", {
     className: (0, _classnames.default)('orderFilters--sort', {
       active: props.order_by === 'full_name'
@@ -107,7 +109,7 @@ var OrderFilters = function OrderFilters(props) {
   }, "Navn"), _react.default.createElement(SortIcon, null))), _react.default.createElement("div", {
     className: "orderFilters__addrese w-25"
   }, "Adresse"), _react.default.createElement("div", {
-    className: "w-25"
+    className: "w-28"
   }, _react.default.createElement("a", {
     className: (0, _classnames.default)('orderFilters--sort lastElement', {
       active: props.order_by === 'zip_code'

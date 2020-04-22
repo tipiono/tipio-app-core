@@ -76,17 +76,17 @@ var OrderItemCard = function OrderItemCard(_ref) {
     }, _react.default.createElement("p", {
       className: "w-33 p-bold product__title"
     }, order_product.title), _react.default.createElement("p", {
-      className: "w-33"
-    }, "Ordrenummer: 89674590"), _react.default.createElement("p", {
-      className: "w-16"
-    }, "Antall: ", order_product.quantity), _react.default.createElement("p", {
-      className: "w-16"
-    }, "Pris: ", order_product.price, " Kr"));
+      className: "w-33 orderNumber"
+    }, "Ordrenummer: 89674590"), _react.default.createElement("div", {
+      className: "w-33 antall__price"
+    }, _react.default.createElement("p", null, "Antall: ", order_product.quantity), _react.default.createElement("p", null, "Pris: ", order_product.price, " Kr")));
   }), _react.default.createElement("div", {
     className: "orderItem--row"
   }, _react.default.createElement("p", {
     className: "w-33"
   }, "30.06.2019 - 13:09"), _react.default.createElement("p", {
+    className: "w-33 orderNumberMobile"
+  }, "Ordrenummer: 89674590"), _react.default.createElement("p", {
     className: "w-33"
   }, "Betalingsm\xE5te: Kort"), _react.default.createElement("p", {
     className: "w-33"

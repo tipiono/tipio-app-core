@@ -54,7 +54,7 @@ var AddMoreSaleCompanyCard = function AddMoreSaleCompanyCard(props) {
     className: "addMoreSaleCard__content__price--sale"
   }, props.first_price, " Kr"), _react.default.createElement("h6", {
     className: "addMoreSaleCard__content__price--cost"
-  }, props.company_price, " Kr"))), _react.default.createElement("a", {
+  }, props.company_price, " Kr"))), !props.delete && _react.default.createElement("a", {
     onClick: function onClick(e) {
       e.preventDefault();
       props.onDelete(props.sale_offer_id);
