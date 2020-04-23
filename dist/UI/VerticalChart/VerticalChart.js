@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = void 0;
+exports["default"] = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -11,7 +11,7 @@ var _reactChartjs = require("react-chartjs-2");
 
 var _getDate = _interopRequireDefault(require("../../Util/getDate"));
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 var VerticalChart = function VerticalChart(_ref) {
   var tipio = _ref.tipio,
@@ -72,9 +72,9 @@ var VerticalChart = function VerticalChart(_ref) {
         ticks: {
           callback: function callback(value) {
             if (showYears) {
-              return (0, _getDate.default)(value, 'Month');
+              return (0, _getDate["default"])(value, 'Month');
             } else {
-              return (0, _getDate.default)(value, 'DateName');
+              return (0, _getDate["default"])(value, 'DateName');
             }
           }
         }
@@ -96,19 +96,19 @@ var VerticalChart = function VerticalChart(_ref) {
         },
         label: function label(tooltipItems) {
           if (showYears) {
-            return (0, _getDate.default)(tooltipItems.xLabel, 'MonthYear');
+            return (0, _getDate["default"])(tooltipItems.xLabel, 'MonthYear');
           } else {
-            return (0, _getDate.default)(tooltipItems.xLabel, 'DateName') + ' ' + (0, _getDate.default)(tooltipItems.xLabel, 'DateMonth');
+            return (0, _getDate["default"])(tooltipItems.xLabel, 'DateName') + ' ' + (0, _getDate["default"])(tooltipItems.xLabel, 'DateMonth');
           }
         }
       }
     }
   };
-  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_reactChartjs.Bar, {
+  return _react["default"].createElement(_react["default"].Fragment, null, _react["default"].createElement(_reactChartjs.Bar, {
     data: charData,
     options: options
   }));
 };
 
 var _default = VerticalChart;
-exports.default = _default;
+exports["default"] = _default;

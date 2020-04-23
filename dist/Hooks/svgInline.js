@@ -5,13 +5,13 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = void 0;
+exports["default"] = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
 
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
 
@@ -22,11 +22,11 @@ function _iterableToArrayLimit(arr, i) { if (!(Symbol.iterator in Object(arr) ||
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 var Spinner = function Spinner() {
-  return _react.default.createElement("div", {
-    class: "spinner-grow",
+  return _react["default"].createElement("div", {
+    "class": "spinner-grow",
     role: "status"
-  }, _react.default.createElement("span", {
-    class: "sr-only"
+  }, _react["default"].createElement("span", {
+    "class": "sr-only"
   }));
 };
 
@@ -49,19 +49,19 @@ var SvgInline = function SvgInline(props) {
   (0, _react.useEffect)(function () {
     fetch(props.url).then(function (res) {
       return res.text();
-    }).then(setSvg).catch(setIsErrored).then(function () {
+    }).then(setSvg)["catch"](setIsErrored).then(function () {
       return setIsLoaded(true);
     });
   }, [props.url]);
-  return _react.default.createElement(_react.default.Fragment, null, isLoaded ? _react.default.createElement("div", {
+  return _react["default"].createElement(_react["default"].Fragment, null, isLoaded ? _react["default"].createElement("div", {
     className: "svgInline svgInline--".concat(isLoaded ? 'loaded' : 'loading', " ").concat(isErrored ? 'svgInline--errored' : ''),
     dangerouslySetInnerHTML: {
       __html: svg
     }
-  }) : _react.default.createElement("p", {
+  }) : _react["default"].createElement("p", {
     className: "category-left-icon-loading"
   }));
 };
 
 var _default = SvgInline;
-exports.default = _default;
+exports["default"] = _default;
