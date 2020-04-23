@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = initSelectedOrder;
+exports["default"] = initSelectedOrder;
 
 function initSelectedOrder(imgs) {
   if (imgs) {

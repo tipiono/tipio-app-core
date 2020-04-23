@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = void 0;
+exports["default"] = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -13,7 +13,7 @@ var _SecondaryButton = _interopRequireDefault(require("../../../UI/Buttons/Secon
 
 var _generatePrice = _interopRequireDefault(require("../../../Util/generatePrice"));
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 var FooterMainCard = function FooterMainCard(_ref) {
   var title = _ref.title,
@@ -22,33 +22,33 @@ var FooterMainCard = function FooterMainCard(_ref) {
       secondRange = _ref.secondRange,
       bindCount = _ref.bindCount,
       onBindClick = _ref.onBindClick;
-  return _react.default.createElement("div", {
+  return _react["default"].createElement("div", {
     className: "footerMainCard"
-  }, _react.default.createElement("div", {
+  }, _react["default"].createElement("div", {
     className: "row align-items-center"
-  }, _react.default.createElement("div", {
+  }, _react["default"].createElement("div", {
     className: "col-6 col-lg-5"
-  }, _react.default.createElement("h3", {
+  }, _react["default"].createElement("h3", {
     className: "footerMainCard__title"
-  }, title)), _react.default.createElement("div", {
+  }, title)), _react["default"].createElement("div", {
     className: "col-8 col-md-4 d-none d-lg-block"
-  }, _react.default.createElement("div", {
+  }, _react["default"].createElement("div", {
     className: "footerMainCard__content"
-  }, _react.default.createElement("div", {
+  }, _react["default"].createElement("div", {
     className: "footerMainCard__content__priceLabel"
-  }, _react.default.createElement("h6", {
+  }, _react["default"].createElement("h6", {
     className: "footerMainCard__content__priceLabel__new"
-  }, "Pris n\xE5"), _react.default.createElement("h6", {
+  }, "Pris n\xE5"), _react["default"].createElement("h6", {
     className: "footerMainCard__content__priceLabel__first"
-  }, "Markedspris")), _react.default.createElement("div", {
+  }, "Markedspris")), _react["default"].createElement("div", {
     className: "footerMainCard__content__priceValue"
-  }, _react.default.createElement("h6", {
+  }, _react["default"].createElement("h6", {
     className: "footerMainCard__content__priceValue__new"
-  }, (0, _generatePrice.default)(bindCount, firstRange, secondRange), " Kr"), _react.default.createElement("h6", {
+  }, (0, _generatePrice["default"])(bindCount, firstRange, secondRange), " Kr"), _react["default"].createElement("h6", {
     className: "footerMainCard__content__priceValue__first"
-  }, marketPrice, " Kr")))), _react.default.createElement("div", {
+  }, marketPrice, " Kr")))), _react["default"].createElement("div", {
     className: "col-4 col-md-3 ml-auto"
-  }, _react.default.createElement(_SecondaryButton.default, {
+  }, _react["default"].createElement(_SecondaryButton["default"], {
     onClick: onBindClick,
     text: 'Kjøp',
     loading: false
@@ -56,12 +56,12 @@ var FooterMainCard = function FooterMainCard(_ref) {
 };
 
 FooterMainCard.propTypes = {
-  title: _propTypes.default.string.isRequired,
-  marketPrice: _propTypes.default.string.isRequired,
-  firstRange: _propTypes.default.object.isRequired,
-  secondRange: _propTypes.default.object.isRequired,
-  bindCount: _propTypes.default.number.isRequired,
-  onBindClick: _propTypes.default.func.isRequired
+  title: _propTypes["default"].string.isRequired,
+  marketPrice: _propTypes["default"].string.isRequired,
+  firstRange: _propTypes["default"].object.isRequired,
+  secondRange: _propTypes["default"].object.isRequired,
+  bindCount: _propTypes["default"].number.isRequired,
+  onBindClick: _propTypes["default"].func.isRequired
 };
 var _default = FooterMainCard;
-exports.default = _default;
+exports["default"] = _default;
