@@ -5,17 +5,17 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = void 0;
+exports["default"] = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
 
 var _ToggleSwitch = _interopRequireDefault(require("../../../UI/Forms/ToggleSwitch"));
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
 
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
@@ -40,88 +40,88 @@ var OrderItemCard = function OrderItemCard(_ref) {
       address = _order$order_addresse[0];
 
   address = address || {};
-  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("section", {
+  return _react["default"].createElement(_react["default"].Fragment, null, _react["default"].createElement("section", {
     className: "orderItem"
-  }, _react.default.createElement("div", {
+  }, _react["default"].createElement("div", {
     className: "orderItem__toggleSwitch"
-  }, _react.default.createElement(_ToggleSwitch.default, {
+  }, _react["default"].createElement(_ToggleSwitch["default"], {
     name: "delivered".concat(order.id),
     id: "delivered".concat(order.id),
     checked: order.delivered,
     onChange: deliveredOnChange,
     "data-order_id": order.id
-  }), _react.default.createElement("span", null, order.delivered ? 'Levert' : 'Ikke levert')), _react.default.createElement("div", _defineProperty({
+  }), _react["default"].createElement("span", null, order.delivered ? 'Levert' : 'Ikke levert')), _react["default"].createElement("div", _defineProperty({
     className: "orderItem__content"
-  }, "className", "orderItem__content ".concat(activeOrder ? 'orderActive' : '')), _react.default.createElement("div", {
+  }, "className", "orderItem__content ".concat(activeOrder ? 'orderActive' : '')), _react["default"].createElement("div", {
     className: "orderItem__content--personalDetails"
-  }, _react.default.createElement("div", {
+  }, _react["default"].createElement("div", {
     className: "orderItem--row"
-  }, _react.default.createElement("p", {
+  }, _react["default"].createElement("p", {
     className: "userName w-33 p-bold"
-  }, order.order_user.full_name), _react.default.createElement("p", {
+  }, order.order_user.full_name), _react["default"].createElement("p", {
     className: "w-33 p-bold"
-  }, "Adresse: ", address.address), _react.default.createElement("p", {
+  }, "Adresse: ", address.address), _react["default"].createElement("p", {
     className: "w-33 p-bold post__sted"
-  }, _react.default.createElement("span", null, "Post sted: "), " ", address.city, ", ", address.zip_code)), _react.default.createElement("div", {
+  }, _react["default"].createElement("span", null, "Post sted: "), " ", address.city, ", ", address.zip_code)), _react["default"].createElement("div", {
     className: "orderItem--row"
-  }, _react.default.createElement("p", {
+  }, _react["default"].createElement("p", {
     className: "w-33"
-  }, "E-post: ", order.order_user.email), _react.default.createElement("p", {
+  }, "E-post: ", order.order_user.email), _react["default"].createElement("p", {
     className: "w-33"
-  }, "Nummer: 987 67 890"))), _react.default.createElement("div", {
+  }, "Nummer: 987 67 890"))), _react["default"].createElement("div", {
     className: "orderItem__content--productDetails"
   }, order.order_products.map(function (order_product) {
-    return _react.default.createElement("div", {
+    return _react["default"].createElement("div", {
       className: "orderItem--row"
-    }, _react.default.createElement("p", {
+    }, _react["default"].createElement("p", {
       className: "w-33 p-bold product__title"
-    }, order_product.title), _react.default.createElement("p", {
+    }, order_product.title), _react["default"].createElement("p", {
       className: "w-33 orderNumber"
-    }, "Ordrenummer: 89674590"), _react.default.createElement("div", {
+    }, "Ordrenummer: 89674590"), _react["default"].createElement("div", {
       className: "w-33 antall__price"
-    }, _react.default.createElement("p", null, "Antall: ", order_product.quantity), _react.default.createElement("p", null, "Pris: ", order_product.price, " Kr")));
-  }), _react.default.createElement("div", {
+    }, _react["default"].createElement("p", null, "Antall: ", order_product.quantity), _react["default"].createElement("p", null, "Pris: ", order_product.price, " Kr")));
+  }), _react["default"].createElement("div", {
     className: "orderItem--row"
-  }, _react.default.createElement("p", {
+  }, _react["default"].createElement("p", {
     className: "w-33"
-  }, "30.06.2019 - 13:09"), _react.default.createElement("p", {
+  }, "30.06.2019 - 13:09"), _react["default"].createElement("p", {
     className: "w-33 orderNumberMobile"
-  }, "Ordrenummer: 89674590"), _react.default.createElement("p", {
+  }, "Ordrenummer: 89674590"), _react["default"].createElement("p", {
     className: "w-33"
-  }, "Betalingsm\xE5te: Kort"), _react.default.createElement("p", {
+  }, "Betalingsm\xE5te: Kort"), _react["default"].createElement("p", {
     className: "w-33"
-  }, "St\xF8rrelse: 46"))), _react.default.createElement("div", {
+  }, "St\xF8rrelse: 46"))), _react["default"].createElement("div", {
     className: "orderItem__content--totalSum"
-  }, _react.default.createElement("p", null, "Totalsum"), _react.default.createElement("p", null, order.total_price, " Kr")), _react.default.createElement("div", {
+  }, _react["default"].createElement("p", null, "Totalsum"), _react["default"].createElement("p", null, order.total_price, " Kr")), _react["default"].createElement("div", {
     className: "orderItem__content--arrow",
     onClick: function onClick() {
       setActiveOrder(!activeOrder);
     }
-  }, _react.default.createElement("svg", {
+  }, _react["default"].createElement("svg", {
     width: 21,
     height: 13,
     viewBox: "0 0 21 13",
     fill: "none"
-  }, _react.default.createElement("path", {
+  }, _react["default"].createElement("path", {
     d: "M10.51 12.2c-.33 0-.645-.13-.88-.36L.67 3a1.255 1.255 0 011.75-1.8l8.09 8 8.09-8A1.259 1.259 0 1120.36 3l-9 8.86a1.24 1.24 0 01-.85.34z",
     fill: "#8C8F91"
-  }), _react.default.createElement("mask", {
+  }), _react["default"].createElement("mask", {
     id: "prefix__a",
     maskUnits: "userSpaceOnUse",
     x: 0,
     y: 0,
     width: 21,
     height: 13
-  }, _react.default.createElement("path", {
+  }, _react["default"].createElement("path", {
     d: "M10.51 12.2c-.33 0-.645-.13-.88-.36L.67 3a1.255 1.255 0 011.75-1.8l8.09 8 8.09-8A1.259 1.259 0 1120.36 3l-9 8.86a1.24 1.24 0 01-.85.34z",
     fill: "#fff"
-  })), _react.default.createElement("g", {
+  })), _react["default"].createElement("g", {
     mask: "url(#prefix__a)"
-  }, _react.default.createElement("path", {
+  }, _react["default"].createElement("path", {
     fill: "#8C8F91",
     d: "M-2-6h50v50H-2z"
   })))))));
 };
 
 var _default = OrderItemCard;
-exports.default = _default;
+exports["default"] = _default;

@@ -3,13 +3,13 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = void 0;
+exports["default"] = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
 var _Checkbox = _interopRequireDefault(require("../../../UI/Forms/Checkbox"));
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
@@ -17,7 +17,7 @@ function _objectWithoutProperties(source, excluded) { if (source == null) return
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
-var _default = _react.default.forwardRef(function (_ref, ref) {
+var _default = _react["default"].forwardRef(function (_ref, ref) {
   var image = _ref.image,
       title = _ref.title,
       salePrice = _ref.salePrice,
@@ -32,34 +32,34 @@ var _default = _react.default.forwardRef(function (_ref, ref) {
       onClick = _ref.onClick,
       props = _objectWithoutProperties(_ref, ["image", "title", "salePrice", "costPrice", "saleDiscount", "children", "defaultValue", "id", "label", "name", "errors", "onClick"]);
 
-  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("div", {
+  return _react["default"].createElement(_react["default"].Fragment, null, _react["default"].createElement("div", {
     className: "chooseAddSaleCard"
-  }, _react.default.createElement("div", {
+  }, _react["default"].createElement("div", {
     className: "d-flex flex-row mb-4 mb-md-5"
-  }, _react.default.createElement("div", {
+  }, _react["default"].createElement("div", {
     className: "chooseAddSaleCard__preview"
-  }, _react.default.createElement("a", {
+  }, _react["default"].createElement("a", {
     className: "chooseAddSaleCard__preview--image lazy-image",
     href: "",
     onClick: onClick
-  }, _react.default.createElement("img", {
+  }, _react["default"].createElement("img", {
     className: "lazyload img-fluid",
     src: image,
     alt: ""
-  }), _react.default.createElement("span", {
+  }), _react["default"].createElement("span", {
     className: "chooseAddSaleCard__preview--discount"
-  }, saleDiscount))), _react.default.createElement("div", {
+  }, saleDiscount))), _react["default"].createElement("div", {
     className: "chooseAddSaleCard__content"
-  }, _react.default.createElement("div", {
+  }, _react["default"].createElement("div", {
     className: "chooseAddSaleCard__content--price"
-  }, _react.default.createElement("h6", {
+  }, _react["default"].createElement("h6", {
     className: "chooseAddSaleCard__content--price--sale"
-  }, salePrice, " Kr"), _react.default.createElement("h6", {
+  }, salePrice, " Kr"), _react["default"].createElement("h6", {
     className: "chooseAddSaleCard__content--price--cost"
-  }, costPrice, " Kr")), _react.default.createElement("h6", {
+  }, costPrice, " Kr")), _react["default"].createElement("h6", {
     className: "chooseAddSaleCard__content--title",
     onClick: onClick
-  }, title))), _react.default.createElement(_Checkbox.default, _extends({
+  }, title))), _react["default"].createElement(_Checkbox["default"], _extends({
     label: "Legg til mersalg",
     id: id,
     name: name
@@ -68,4 +68,4 @@ var _default = _react.default.forwardRef(function (_ref, ref) {
   }))));
 });
 
-exports.default = _default;
+exports["default"] = _default;

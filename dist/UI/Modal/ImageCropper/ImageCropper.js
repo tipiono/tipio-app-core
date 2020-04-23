@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = void 0;
+exports["default"] = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
 
@@ -17,11 +17,11 @@ var _GrayOutlineButton = _interopRequireDefault(require("../../Buttons/GrayOutli
 
 var _SecondaryButton = _interopRequireDefault(require("../../Buttons/SecondaryButton"));
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
 
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -77,7 +77,7 @@ function (_Component) {
       };
 
       var image = document.getElementById('image');
-      var cropper = new _cropperjs.default(image, {
+      var cropper = new _cropperjs["default"](image, {
         aspectRatio: this.props.aspectRatio || '',
         // modal: false,
         background: false,
@@ -123,42 +123,42 @@ function (_Component) {
         modalOnClose = function modalOnClose() {};
       }
 
-      return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_Modal.Modal, {
+      return _react["default"].createElement(_react["default"].Fragment, null, _react["default"].createElement(_Modal.Modal, {
         showCloseButton: true,
         onCloseButtonClick: this.modalOnClose
-      }, _react.default.createElement("div", {
+      }, _react["default"].createElement("div", {
         className: "imageCropper"
-      }, _react.default.createElement("div", {
+      }, _react["default"].createElement("div", {
         className: "imageCropper__content"
-      }, _react.default.createElement("h3", {
+      }, _react["default"].createElement("h3", {
         className: "imageCropper__content--title"
-      }, this.props.title), !this.state.cropperReady && _react.default.createElement("div", {
+      }, this.props.title), !this.state.cropperReady && _react["default"].createElement("div", {
         className: "d-flex justify-content-center"
-      }, _react.default.createElement("div", {
+      }, _react["default"].createElement("div", {
         className: "spinner-border",
         role: "status"
-      }, _react.default.createElement("span", {
+      }, _react["default"].createElement("span", {
         className: "sr-only"
-      }, "Loading..."))), _react.default.createElement("div", {
+      }, "Loading..."))), _react["default"].createElement("div", {
         style: {
           opacity: this.state.cropperReady ? 100 : 0,
           width: '350px',
           height: '350px'
         }
-      }, _react.default.createElement("img", {
+      }, _react["default"].createElement("img", {
         id: "image",
         src: this.props.image.preview
-      })), this.props.indicator && this.props.indicator, _react.default.createElement("ul", {
+      })), this.props.indicator && this.props.indicator, _react["default"].createElement("ul", {
         className: "imageCropper__content__action"
-      }, _react.default.createElement("li", {
+      }, _react["default"].createElement("li", {
         className: "imageCropper__content__action--cancel"
-      }, _react.default.createElement(_GrayOutlineButton.default, {
+      }, _react["default"].createElement(_GrayOutlineButton["default"], {
         text: 'Avbryt',
         onClick: this.modalOnClose,
         disabled: this.props.isSubmitting
-      })), _react.default.createElement("li", {
+      })), _react["default"].createElement("li", {
         className: "imageCropper__content__action--next"
-      }, _react.default.createElement(_SecondaryButton.default, {
+      }, _react["default"].createElement(_SecondaryButton["default"], {
         text: 'Neste',
         onClick: this.cropDoneOnClick,
         loading: this.props.isSubmitting
@@ -170,4 +170,4 @@ function (_Component) {
 }(_react.Component);
 
 var _default = ImageCropper;
-exports.default = _default;
+exports["default"] = _default;

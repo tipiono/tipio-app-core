@@ -3,13 +3,13 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = void 0;
+exports["default"] = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
 var _TipioCountdown = _interopRequireDefault(require("../TipioCountdown/TipioCountdown"));
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function TipioOfTheDay(_ref) {
   var id = _ref.id,
@@ -20,31 +20,31 @@ function TipioOfTheDay(_ref) {
       images = _ref.images,
       onClick = _ref.onClick,
       showTimer = _ref.showTimer;
-  return _react.default.createElement("div", {
+  return _react["default"].createElement("div", {
     className: "tipioOfTheDay"
-  }, _react.default.createElement("a", {
+  }, _react["default"].createElement("a", {
     href: "/tipio/vote/".concat(id),
     onClick: onClick,
     className: "tipioOfTheDay__preview"
-  }, _react.default.createElement("img", {
+  }, _react["default"].createElement("img", {
     className: "tipioOfTheDay__preview--image",
     src: images && images.length && images[0].blob_url,
     alt: ""
-  }), showTimer && _react.default.createElement("div", {
+  }), showTimer && _react["default"].createElement("div", {
     className: "tipioOfTheDay__preview--timeLeft"
-  }, _react.default.createElement(_TipioCountdown.default, {
+  }, _react["default"].createElement(_TipioCountdown["default"], {
     className: "timer",
     expires_in: voting_expires_in
-  }))), _react.default.createElement("div", {
+  }))), _react["default"].createElement("div", {
     className: "tipioOfTheDay__content"
-  }, _react.default.createElement("a", {
+  }, _react["default"].createElement("a", {
     href: "/tipio/vote/".concat(id),
     className: "tipioOfTheDay__content--title",
     onClick: onClick
-  }, title), _react.default.createElement("p", {
+  }, title), _react["default"].createElement("p", {
     className: "tipioOfTheDay__content--description"
   }, subtitle), children));
 }
 
 var _default = TipioOfTheDay;
-exports.default = _default;
+exports["default"] = _default;
