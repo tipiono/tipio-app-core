@@ -3,11 +3,11 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports["default"] = void 0;
+exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
@@ -19,29 +19,29 @@ var IconButton = function IconButton(_ref) {
   var text = _ref.text,
       props = _objectWithoutProperties(_ref, ["text"]);
 
-  return _react["default"].createElement("a", _extends({
+  return _react.default.createElement("a", _extends({
     className: "iconButton",
     href: ""
-  }, props), _react["default"].createElement("svg", {
+  }, props), _react.default.createElement("svg", {
     className: "iconButton--plus",
     width: 30,
     height: 30
-  }, _react["default"].createElement("g", {
+  }, _react.default.createElement("g", {
     fill: "none",
     fillRule: "evenodd"
-  }, _react["default"].createElement("circle", {
+  }, _react.default.createElement("circle", {
     fill: "#4ABCAC",
     cx: 15,
     cy: 15,
     r: 15
-  }), _react["default"].createElement("path", {
+  }), _react.default.createElement("path", {
     d: "M13.95 15.567H9.177a.805.805 0 010-1.61h4.773V9.184a.805.805 0 011.61 0v4.773h4.78a.805.805 0 010 1.61h-4.78v4.78a.805.805 0 01-1.61 0v-4.78z",
     fill: "#381B81",
     fillRule: "nonzero"
-  }))), _react["default"].createElement("span", {
+  }))), _react.default.createElement("span", {
     className: "iconButton--text"
   }, text));
 };
 
 var _default = IconButton;
-exports["default"] = _default;
+exports.default = _default;

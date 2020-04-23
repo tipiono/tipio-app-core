@@ -9,7 +9,7 @@ var _react = _interopRequireWildcard(require("react"));
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
 
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -41,17 +41,17 @@ var CardHeader = function CardHeader(_ref) {
     titleLabel = titleOnShow;
   }
 
-  return _react["default"].createElement("div", {
+  return _react.default.createElement("div", {
     className: "customAccordion__item " + (show ? "show" : ""),
     id: id
-  }, _react["default"].createElement("button", {
+  }, _react.default.createElement("button", {
     id: id,
     className: "customAccordion__item--button",
     onClick: onClick
-  }, _react["default"].createElement("a", {
+  }, _react.default.createElement("a", {
     id: id,
     onClick: onClick
-  }, titleLabel), _react["default"].createElement("a", {
+  }, titleLabel), _react.default.createElement("a", {
     id: id,
     onClick: onClick,
     className: "customAccordion__item--button--icon"
@@ -62,7 +62,7 @@ var CardBody = function CardBody(_ref2) {
   var children = _ref2.children,
       id = _ref2.id,
       show = _ref2.show;
-  return _react["default"].createElement("div", {
+  return _react.default.createElement("div", {
     id: id,
     className: "customAccordion__item--content " + (show ? 'show' : ''),
     "data-parent": "#accordionExample"
@@ -102,21 +102,21 @@ function (_Component) {
     value: function render() {
       var _this2 = this;
 
-      return _react["default"].createElement("div", {
+      return _react.default.createElement("div", {
         className: "customAccordion",
         id: "accordionExample"
-      }, _react["default"].Children.map(this.props.children, function (child, index) {
+      }, _react.default.Children.map(this.props.children, function (child, index) {
         var _child$props = child.props,
             title = _child$props.title,
             titleOnShow = _child$props.titleOnShow;
         var show = _this2.state.active === index + 1;
-        return [_react["default"].createElement(CardHeader, {
+        return [_react.default.createElement(CardHeader, {
           title: title,
           titleOnShow: titleOnShow,
           id: index + 1,
           onClick: _this2.headerOnClick,
           show: show
-        }), _react["default"].createElement(CardBody, {
+        }), _react.default.createElement(CardBody, {
           id: index,
           show: show
         }, child)];
