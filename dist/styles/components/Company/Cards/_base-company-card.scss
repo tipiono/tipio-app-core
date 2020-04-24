@@ -82,6 +82,7 @@
     }
 
     &__body {
+      padding: .75rem;
       &--title {
         font-family: 'Riposte-Regular', sans-serif;
         font-size: 1rem;
@@ -104,8 +105,8 @@
       }
     }
     button {
-      padding: .35rem 1rem !important;
-      font-size: .875rem !important;
+      padding: .35rem 0.5rem !important;
+      font-size: 0.75rem !important;
     }
   }
 }
