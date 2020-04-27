@@ -159,6 +159,7 @@
 
     .category-item.more {
         padding-top: 24px;
+        border-bottom: 1px solid #dadada;
 
         span {
             cursor: pointer;
@@ -302,10 +303,10 @@
             }
 
             .category-right-icon {
-                svg * {
-                    stroke: $primary;
-                    fill: $primary;
-                }
+                // svg * {
+                //     stroke: $primary;
+                //     fill: $primary;
+                // }
             }
         }
 

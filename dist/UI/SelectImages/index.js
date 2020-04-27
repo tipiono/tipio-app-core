@@ -5,7 +5,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports["default"] = void 0;
+exports.default = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
 
@@ -17,11 +17,11 @@ var _initSelectedOrder = _interopRequireDefault(require("./utils/initSelectedOrd
 
 var _SecondaryButton = _interopRequireDefault(require("../Buttons/SecondaryButton"));
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
 
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
 
@@ -36,7 +36,7 @@ function _objectWithoutProperties(source, excluded) { if (source == null) return
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
 var breakpointColumnsObj = {
-  "default": 4,
+  default: 4,
   1100: 3,
   700: 2,
   500: 2
@@ -57,7 +57,7 @@ function SelectImages(_ref) {
       selectedMax = _useState2[0],
       setSelectedMax = _useState2[1];
 
-  var _useState3 = (0, _react.useState)((0, _initSelectedOrder["default"])(images)),
+  var _useState3 = (0, _react.useState)((0, _initSelectedOrder.default)(images)),
       _useState4 = _slicedToArray(_useState3, 2),
       selectedOrder = _useState4[0],
       setSelectedOrder = _useState4[1];
@@ -121,28 +121,28 @@ function SelectImages(_ref) {
       src: item
     };
   });
-  return _react["default"].createElement(_react["default"].Fragment, null, _react["default"].createElement("div", {
+  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("div", {
     className: "select-images"
-  }, _react["default"].createElement("div", {
+  }, _react.default.createElement("div", {
     className: "layout-container"
-  }, _react["default"].createElement("div", {
+  }, _react.default.createElement("div", {
     className: "container"
-  }, _react["default"].createElement(_reactMasonryCss["default"], {
+  }, _react.default.createElement(_reactMasonryCss.default, {
     breakpointCols: breakpointColumnsObj,
     className: 'layout-content ' + selectImagesClass,
     columnClassName: "my-masonry-grid_column"
   }, imagesMapped.map(function (item, index) {
-    return _react["default"].createElement(_Image["default"], {
+    return _react.default.createElement(_Image.default, {
       key: index,
       image: item,
       selectedIndex: selectedOrder[item.id],
       onChange: _onChange
     });
-  })), _react["default"].createElement("div", {
+  })), _react.default.createElement("div", {
     className: "row"
-  }, _react["default"].createElement("div", {
+  }, _react.default.createElement("div", {
     className: "col-sm-12 col-md-4 mx-auto"
-  }, _react["default"].createElement(_SecondaryButton["default"], {
+  }, _react.default.createElement(_SecondaryButton.default, {
     text: "Neste",
     onClick: _onSubmit,
     disabled: selectedMax === 0
@@ -150,4 +150,4 @@ function SelectImages(_ref) {
 }
 
 var _default = SelectImages;
-exports["default"] = _default;
+exports.default = _default;
