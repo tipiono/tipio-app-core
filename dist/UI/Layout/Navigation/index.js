@@ -13,8 +13,6 @@ var _HamburgerMenu = _interopRequireDefault(require("./HamburgerMenu"));
 
 var _SearchInput = _interopRequireDefault(require("./SearchInput"));
 
-var _FilterIcon = _interopRequireDefault(require("../../Icons/FilterIcon"));
-
 var _Logo = _interopRequireDefault(require("../../Logo/Logo"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -41,15 +39,7 @@ function Navigation(_ref) {
     className: "nav-list ml-auto"
   }, _react.default.createElement("li", {
     className: "nav-list-item d-flex align-items-center"
-  }, _react.default.createElement(_SearchInput.default, props)), props.filterButtonVisible && _react.default.createElement("li", {
-    className: "nav-list-item"
-  }, _react.default.createElement("a", {
-    className: "nav-list-link",
-    href: "",
-    onClick: filterOnClick
-  }, _react.default.createElement(_FilterIcon.default, null), _react.default.createElement("span", {
-    className: "text-white"
-  }, "Filters"))), _react.default.createElement(_HamburgerMenu.default, props))))));
+  }, _react.default.createElement(_SearchInput.default, props)), _react.default.createElement(_HamburgerMenu.default, props))))));
 }
 
 var _default = Navigation;
