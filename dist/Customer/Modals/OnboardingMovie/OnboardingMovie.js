@@ -3,21 +3,21 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = void 0;
+exports["default"] = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
 var _Modal = require("../../../UI/Modal/Modal");
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function OnboardingMovie(_ref) {
   var movieURL = _ref.movieURL;
-  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_Modal.Modal, {
+  return _react["default"].createElement(_react["default"].Fragment, null, _react["default"].createElement(_Modal.Modal, {
     showCloseButton: true
-  }, _react.default.createElement("div", {
+  }, _react["default"].createElement("div", {
     className: "onboarding__movie"
-  }, _react.default.createElement("iframe", {
+  }, _react["default"].createElement("iframe", {
     className: "onboarding__movie--iframe",
     src: movieURL,
     width: "640",
@@ -29,4 +29,4 @@ function OnboardingMovie(_ref) {
 }
 
 var _default = OnboardingMovie;
-exports.default = _default;
+exports["default"] = _default;

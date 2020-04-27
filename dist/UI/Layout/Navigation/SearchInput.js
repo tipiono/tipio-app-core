@@ -5,7 +5,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = void 0;
+exports["default"] = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
 
@@ -17,11 +17,11 @@ var _classnames = _interopRequireDefault(require("classnames"));
 
 var _Overlay = _interopRequireDefault(require("../../Overlay/Overlay"));
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
 
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
 
@@ -69,11 +69,11 @@ var SearchInput = function SearchInput(props) {
     setShow(false);
   };
 
-  return _react.default.createElement(_react.default.Fragment, null, show && _react.default.createElement(_Overlay.default, {
+  return _react["default"].createElement(_react["default"].Fragment, null, show && _react["default"].createElement(_Overlay["default"], {
     onClick: _onClick
-  }), _react.default.createElement("a", {
+  }), _react["default"].createElement("a", {
     href: "#",
-    className: (0, _classnames.default)("nav-list-link", {
+    className: (0, _classnames["default"])("nav-list-link", {
       "d-none": show
     }),
     onClick: function onClick(e) {
@@ -81,15 +81,15 @@ var SearchInput = function SearchInput(props) {
       setShow(true);
       props.searchFormOnShow();
     }
-  }, _react.default.createElement(_SearchIcon.default, null)), _react.default.createElement("div", {
-    className: (0, _classnames.default)("searchInput", {
+  }, _react["default"].createElement(_SearchIcon["default"], null)), _react["default"].createElement("div", {
+    className: (0, _classnames["default"])("searchInput", {
       show: show
     })
-  }, _react.default.createElement("div", {
+  }, _react["default"].createElement("div", {
     className: "searchInput__form"
-  }, _react.default.createElement("div", {
+  }, _react["default"].createElement("div", {
     className: "searchInput__form--leftIcon"
-  }, _react.default.createElement(_SearchIcon.default, null)), _react.default.createElement("input", {
+  }, _react["default"].createElement(_SearchIcon["default"], null)), _react["default"].createElement("input", {
     id: "search-layout",
     ref: function ref(input) {
       return input && input.focus();
@@ -98,14 +98,14 @@ var SearchInput = function SearchInput(props) {
     type: "text",
     className: "searchInput__form--input",
     placeholder: "S\xF8k produkt, navn, merke"
-  }), _react.default.createElement("a", {
+  }), _react["default"].createElement("a", {
     className: "searchInput__form--rightIcon",
     href: "#",
     onClick: function onClick() {
       setShow(false);
     }
-  }, _react.default.createElement(_CloseIcon.default, null)))));
+  }, _react["default"].createElement(_CloseIcon["default"], null)))));
 };
 
 var _default = SearchInput;
-exports.default = _default;
+exports["default"] = _default;

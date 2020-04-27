@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = void 0;
+exports["default"] = void 0;
 
 function calculateDiscountPercentage(price, salePrice) {
   var priceNumber = parseFloat(price);
@@ -13,4 +13,4 @@ function calculateDiscountPercentage(price, salePrice) {
 }
 
 var _default = calculateDiscountPercentage;
-exports.default = _default;
+exports["default"] = _default;
