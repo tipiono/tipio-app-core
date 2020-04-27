@@ -833,6 +833,12 @@ Object.defineProperty(exports, "SuccessStory", {
     return _SuccessStory.default;
   }
 });
+Object.defineProperty(exports, "Filters", {
+  enumerable: true,
+  get: function get() {
+    return _Filters.default;
+  }
+});
 Object.defineProperty(exports, "PublicLayout", {
   enumerable: true,
   get: function get() {
@@ -1210,6 +1216,8 @@ var _AddSaleSidebarCard = _interopRequireDefault(require("./Company/CompanySideb
 var _MaterialSearch = _interopRequireDefault(require("./Company/MaterialSearch/MaterialSearch"));
 
 var _SuccessStory = _interopRequireDefault(require("./Company/SuccessStory/SuccessStory"));
+
+var _Filters = _interopRequireDefault(require("./UI/Filters"));
 
 var _index = _interopRequireDefault(require("./UI/Layout/Public/index"));
 

@@ -146,6 +146,7 @@ import AddMoreSaleEndedCompanyCard from './Company/Cards/AddMoreSaleEndedCompany
 import AddSaleSidebarCard from './Company/CompanySidebarCards/AddSaleSidebarCard';
 import MaterialSearch from './Company/MaterialSearch/MaterialSearch';
 import SuccessStory from './Company/SuccessStory/SuccessStory';
+import Filters from './UI/Filters';
 
 /*
  *   Layout
@@ -212,6 +213,7 @@ export {
     BiddingCardShareButton,
     Onboarding,
     Categories,
+    Filters,
     Accordion,
     SaleCard,
     SaleCardAddToCartButton,
