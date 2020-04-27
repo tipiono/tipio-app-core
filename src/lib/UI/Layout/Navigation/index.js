@@ -3,7 +3,7 @@ import React from 'react';
 import BusinessPrivateNavigationItems from './BusinessPrivateNavigationItems';
 import HamburgerMenu from './HamburgerMenu';
 import SearchInput from './SearchInput';
-import FilterIcon from '../../Icons/FilterIcon';
+// import FilterIcon from '../../Icons/FilterIcon';
 import Logo from '../../Logo/Logo';
 
 function Navigation({ children, filterOnClick, ...props }) {
@@ -22,14 +22,14 @@ function Navigation({ children, filterOnClick, ...props }) {
                                 <SearchInput {...props} />
                             </li>
 
-                            {props.filterButtonVisible && (
+                            {/* {props.filterButtonVisible && (
                                 <li className="nav-list-item">
                                     <a className="nav-list-link" href="" onClick={filterOnClick}>
                                         <FilterIcon />
                                         <span className="text-white">Filters</span>
                                     </a>
                                 </li>
-                            )}
+                            )} */}
 
                             <HamburgerMenu {...props} />
                         </ul>

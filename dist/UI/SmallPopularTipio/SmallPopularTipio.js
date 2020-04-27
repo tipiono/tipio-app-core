@@ -3,13 +3,13 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports["default"] = void 0;
+exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
 var _TipioCountdown = _interopRequireDefault(require("../TipioCountdown/TipioCountdown"));
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var SmallPopularTipio = function SmallPopularTipio(_ref) {
   var id = _ref.id,
@@ -20,30 +20,30 @@ var SmallPopularTipio = function SmallPopularTipio(_ref) {
       brand = _ref.brand,
       type = _ref.type,
       onClick = _ref.onClick;
-  return _react["default"].createElement("div", {
+  return _react.default.createElement("div", {
     className: "smallPopularTipio"
-  }, _react["default"].createElement("div", {
+  }, _react.default.createElement("div", {
     className: "smallPopularTipio__preview lazy-image",
     onClick: onClick
-  }, _react["default"].createElement("img", {
+  }, _react.default.createElement("img", {
     className: "smallPopularTipio__preview--image lazyload",
     src: images && images.length && images[0].blob_url,
     alt: ""
-  }), type === 2 && _react["default"].createElement("div", {
+  }), type === 2 && _react.default.createElement("div", {
     className: "smallPopularTipio__preview--timeLeft"
-  }, _react["default"].createElement(_TipioCountdown["default"], {
+  }, _react.default.createElement(_TipioCountdown.default, {
     className: "timer",
     expires_in: binding_expires_in
-  }))), _react["default"].createElement("div", {
+  }))), _react.default.createElement("div", {
     className: "smallPopularTipio__content"
-  }, _react["default"].createElement("a", {
+  }, _react.default.createElement("a", {
     href: "/tipio/".concat(type === 2 ? 'bind' : 'vote', "/").concat(id),
     onClick: onClick,
     className: "smallPopularTipio__content--title"
-  }, title), _react["default"].createElement("p", {
+  }, title), _react.default.createElement("p", {
     className: "smallPopularTipio__content--description"
   }, brand), children));
 };
 
 var _default = SmallPopularTipio;
-exports["default"] = _default;
+exports.default = _default;
