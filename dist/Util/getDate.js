@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports["default"] = void 0;
+exports.default = void 0;
 
 function getDate(date, type) {
   var dateStr = new Date(date);
@@ -33,4 +33,4 @@ function getDate(date, type) {
 }
 
 var _default = getDate;
-exports["default"] = _default;
+exports.default = _default;

@@ -5,7 +5,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports["default"] = void 0;
+exports.default = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
 
@@ -23,11 +23,11 @@ var _classnames = _interopRequireDefault(require("classnames"));
 
 var _SecondaryButton = _interopRequireDefault(require("../../../UI/Buttons/SecondaryButton"));
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
 
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
 
@@ -38,7 +38,7 @@ function _iterableToArrayLimit(arr, i) { if (!(Symbol.iterator in Object(arr) ||
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 var breakpointColumnsObj = {
-  "default": 2,
+  default: 2,
   1100: 1,
   700: 1,
   500: 1
@@ -143,26 +143,26 @@ function CategoriesForm(_ref) {
     goBack();
   }
 
-  return _react["default"].createElement("div", {
+  return _react.default.createElement("div", {
     className: "choose-category"
-  }, _react["default"].createElement(_CategoriesHeader["default"], {
+  }, _react.default.createElement(_CategoriesHeader.default, {
     data: navigation,
     parent: parent,
     backButtonOnClick: backButtonOnClick,
     subCategoriesOnClick: headerSubOnClick,
     path: path
-  }), _react["default"].createElement("div", {
+  }), _react.default.createElement("div", {
     className: "choose-category-body"
-  }, _react["default"].createElement(_reactMasonryCss["default"], {
+  }, _react.default.createElement(_reactMasonryCss.default, {
     breakpointCols: breakpointColumnsObj,
     className: "my-masonry-grid browse-categories",
-    columnClassName: (0, _classnames["default"])('my-masonry-grid_column', {
+    columnClassName: (0, _classnames.default)('my-masonry-grid_column', {
       'customer-main-categories': !withCheckbox,
       'company-main-categories': withCheckbox
     })
   }, active && active.map(function (item) {
     if (item.height === 1) {
-      return _react["default"].createElement(_CategoryItemNavigator["default"], {
+      return _react.default.createElement(_CategoryItemNavigator.default, {
         item: item,
         onClick: function onClick(e) {
           navigatorOnSelect(item.id);
@@ -173,7 +173,7 @@ function CategoriesForm(_ref) {
       });
     } else if (item.height > 1) {
       // height > 1
-      return _react["default"].createElement(_CategoryItemWithDropdown["default"], {
+      return _react.default.createElement(_CategoryItemWithDropdown.default, {
         id: item.id,
         title: item.title,
         sub_categories: selectedCategoryId === item.id ? item.sub_categories : [],
@@ -192,7 +192,7 @@ function CategoriesForm(_ref) {
       });
     } else {
       // height 0
-      return _react["default"].createElement(_CategoryItem["default"], {
+      return _react.default.createElement(_CategoryItem.default, {
         id: item.id,
         icon: item.file_store && item.file_store.blob_url,
         title: item.title,
@@ -206,9 +206,9 @@ function CategoriesForm(_ref) {
         selectedMap: selectedMap
       });
     }
-  }))), _react["default"].createElement("div", {
+  }))), _react.default.createElement("div", {
     className: "choose-category-footer"
-  }, _react["default"].createElement(_SecondaryButton["default"], {
+  }, _react.default.createElement(_SecondaryButton.default, {
     className: "choose-category-footer--btn btn btn-lg btn-secondary",
     text: buttonTitle || 'Lagre',
     disabled: controlDisabledButton && disabledButton || !controlDisabledButton && !selectedOptionId,
@@ -218,4 +218,4 @@ function CategoriesForm(_ref) {
 }
 
 var _default = CategoriesForm;
-exports["default"] = _default;
+exports.default = _default;
