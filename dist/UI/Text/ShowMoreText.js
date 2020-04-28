@@ -5,17 +5,17 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports["default"] = void 0;
+exports.default = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
 
 var _formatText2 = _interopRequireDefault(require("../../Util/formatText"));
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
 
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
 
@@ -28,11 +28,11 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 function ShowMoreText(_ref) {
   var text = _ref.text;
 
-  var _formatText = (0, _formatText2["default"])(text, function (item, key) {
-    return _react["default"].createElement("li", {
+  var _formatText = (0, _formatText2.default)(text, function (item, key) {
+    return _react.default.createElement("li", {
       key: key
     }, item);
-  }, _react["default"].createElement("br", null)),
+  }, _react.default.createElement("br", null)),
       textFormatted = _formatText.textFormatted,
       restFormatted = _formatText.restFormatted;
 
@@ -41,14 +41,14 @@ function ShowMoreText(_ref) {
       showMore = _useState2[0],
       setShowMore = _useState2[1];
 
-  return _react["default"].createElement("div", {
+  return _react.default.createElement("div", {
     className: "productDetails__description"
-  }, _react["default"].createElement("ul", null, textFormatted), restFormatted && showMore && _react["default"].createElement("div", {
+  }, _react.default.createElement("ul", null, textFormatted), restFormatted && showMore && _react.default.createElement("div", {
     className: "tipio-show-more"
-  }, _react["default"].createElement("div", {
+  }, _react.default.createElement("div", {
     title: "Les mer",
     titleOnShow: "Read less"
-  }, _react["default"].createElement("ul", null, restFormatted))), restFormatted && _react["default"].createElement("a", {
+  }, _react.default.createElement("ul", null, restFormatted))), restFormatted && _react.default.createElement("a", {
     className: "productDetails__description--showMore",
     href: "#",
     onClick: function onClick(e) {
@@ -59,4 +59,4 @@ function ShowMoreText(_ref) {
 }
 
 var _default = ShowMoreText;
-exports["default"] = _default;
+exports.default = _default;

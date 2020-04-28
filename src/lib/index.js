@@ -149,6 +149,7 @@ import AddSaleSidebarCard from './Company/CompanySidebarCards/AddSaleSidebarCard
 import MaterialSearch from './Company/MaterialSearch/MaterialSearch';
 import SuccessStory from './Company/SuccessStory/SuccessStory';
 import Filters from './UI/Filters';
+import FilterSearch from './UI/Filters/Search';
 
 /*
  *   Layout
@@ -216,6 +217,7 @@ export {
     Onboarding,
     Categories,
     Filters,
+    FilterSearch,
     Accordion,
     SaleCard,
     SaleCardAddToCartButton,
