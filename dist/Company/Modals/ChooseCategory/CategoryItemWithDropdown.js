@@ -5,7 +5,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports["default"] = void 0;
+exports.default = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
 
@@ -17,11 +17,11 @@ var _ArrowDownIcon = _interopRequireDefault(require("../../../UI/Icons/ArrowDown
 
 var _svgInline = _interopRequireDefault(require("../../../Hooks/svgInline"));
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
 
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
 
@@ -62,10 +62,10 @@ var SubCategories = function SubCategories(_ref) {
     setShowSubSubcategories(sci);
   }
 
-  return _react["default"].createElement("ul", {
+  return _react.default.createElement("ul", {
     className: "sub-categories "
   }, sub_categories.map(function (item) {
-    return _react["default"].createElement(_react["default"].Fragment, null, ' ', item.sub_categories.length ? _react["default"].createElement("li", {
+    return _react.default.createElement(_react.default.Fragment, null, ' ', item.sub_categories.length ? _react.default.createElement("li", {
       className: "sub-category-item",
       key: (item.id, ':', item.title)
     }, withCheckbox && _react["default"].createElement(_Checkbox["default"], {
@@ -81,20 +81,20 @@ var SubCategories = function SubCategories(_ref) {
 
         _onClick(item);
       }
-    }, item.title)) : _react["default"].createElement("li", {
+    }, item.title)) : _react.default.createElement("li", {
       className: "sub-category-item",
       key: (item.id, ':', item.title)
-    }, _react["default"].createElement("span", {
+    }, _react.default.createElement("span", {
       className: 'sub-category-link ' + (selectedId === item.id ? 'selected' : ''),
       onClick: function onClick(e) {
         e.preventDefault();
         setSelectedId(item.id);
         onSelectItem(item);
       }
-    }, item.title)), showSubSubcategories === item.id && item.sub_categories && _react["default"].createElement("ul", {
+    }, item.title)), showSubSubcategories === item.id && item.sub_categories && _react.default.createElement("ul", {
       className: "sub-sub-categories "
     }, item.sub_categories.map(function (c) {
-      return _react["default"].createElement("li", {
+      return _react.default.createElement("li", {
         key: (c.id, ':', c.title),
         className: "sub-sub-category-item "
       }, withCheckbox && _react["default"].createElement(_Checkbox["default"], {
@@ -124,37 +124,37 @@ var CategoryItem = function CategoryItem(_ref2) {
       withCheckbox = _ref2.withCheckbox,
       onChange = _ref2.onChange,
       selectedMap = _ref2.selectedMap;
-  return _react["default"].createElement("div", {
+  return _react.default.createElement("div", {
     className: "category-item dropdown"
-  }, _react["default"].createElement("div", {
+  }, _react.default.createElement("div", {
     className: "d-flex align-items-center"
-  }, withCheckbox && _react["default"].createElement(_Checkbox["default"], {
+  }, withCheckbox && _react.default.createElement(_Checkbox.default, {
     id: id,
     onChange: onChange,
     value: id,
     checked: selectedMap[id]
-  }), _react["default"].createElement("span", {
+  }), _react.default.createElement("span", {
     className: 'category-link d-flex align-items-center ' + (active ? 'active' : ''),
     onClick: function onClick(e) {
       e.preventDefault();
 
       _onClick2();
     }
-  }, _react["default"].createElement("div", {
+  }, _react.default.createElement("div", {
     className: "category-left-icon"
-  }, _react["default"].createElement(_svgInline["default"], {
+  }, _react.default.createElement(_svgInline.default, {
     url: icon
-  })), _react["default"].createElement("span", null, title), _react["default"].createElement("div", {
+  })), _react.default.createElement("span", null, title), _react.default.createElement("div", {
     className: "category-right-icon"
-  }, _react["default"].createElement("svg", {
+  }, _react.default.createElement("svg", {
     width: 16,
     height: 10,
     viewBox: "0 0 16 10"
-  }, _react["default"].createElement("path", {
+  }, _react.default.createElement("path", {
     d: "M8.007 9.104a.907.907 0 01-.633-.26L.922 2.48a.904.904 0 011.26-1.296l5.825 5.76 5.825-5.76a.906.906 0 111.267 1.296L8.62 8.86a.893.893 0 01-.612.244z",
     fill: "#8C8F91",
     fillRule: "nonzero"
-  }))))), active && _react["default"].createElement(SubCategories, {
+  }))))), active && _react.default.createElement(SubCategories, {
     sub_categories: sub_categories,
     onClick: function onClick(item) {
       subCategoriesOnClick(item);
@@ -169,9 +169,9 @@ var CategoryItem = function CategoryItem(_ref2) {
 };
 
 CategoryItem.propTypes = {
-  name: _propTypes["default"].string,
-  icon: _propTypes["default"].string,
-  onSelect: _propTypes["default"].func
+  name: _propTypes.default.string,
+  icon: _propTypes.default.string,
+  onSelect: _propTypes.default.func
 };
 var _default = CategoryItem;
-exports["default"] = _default;
+exports.default = _default;
