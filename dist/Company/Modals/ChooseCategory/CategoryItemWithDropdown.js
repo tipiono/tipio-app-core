@@ -68,8 +68,13 @@ var SubCategories = function SubCategories(_ref) {
     return _react["default"].createElement(_react["default"].Fragment, null, ' ', item.sub_categories.length ? _react["default"].createElement("li", {
       className: "sub-category-item",
       key: (item.id, ':', item.title)
-    }, _react["default"].createElement("span", {
-      className: "sub-category-link",
+    }, withCheckbox && _react["default"].createElement(_Checkbox["default"], {
+      id: item.id,
+      onChange: onChange,
+      value: item.id,
+      checked: selectedMap[item.id]
+    }), _react["default"].createElement("span", {
+      className: "sub-category-link ml-4",
       onClick: function onClick(e) {
         e.preventDefault();
         subCategoryOnClick(item);
@@ -91,9 +96,14 @@ var SubCategories = function SubCategories(_ref) {
     }, item.sub_categories.map(function (c) {
       return _react["default"].createElement("li", {
         key: (c.id, ':', c.title),
-        className: "sub-sub-category-item"
-      }, _react["default"].createElement("span", {
-        className: "sub-sub-category-link",
+        className: "sub-sub-category-item "
+      }, withCheckbox && _react["default"].createElement(_Checkbox["default"], {
+        id: c.id,
+        onChange: onChange,
+        value: c.id,
+        checked: selectedMap[c.id]
+      }), _react["default"].createElement("span", {
+        className: "sub-sub-category-link ml-4",
         onClick: function onClick() {
           _onClick(c);
         }

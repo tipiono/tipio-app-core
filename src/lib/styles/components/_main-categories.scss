@@ -383,7 +383,7 @@
         }
 
         .sub-categories {
-            margin-left: 90px;
+            margin-left: 44px;
             padding-bottom: 24px;
 
             .sub-category-item {
@@ -411,6 +411,11 @@
                     display: block;
                     background-color: transparent;
                     color: $gray-800;
+                }
+
+                .sub-sub-category-item {
+                    display: flex;
+                    align-items: center;
                 }
             }
         }

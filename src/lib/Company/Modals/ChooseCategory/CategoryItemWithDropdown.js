@@ -33,8 +33,16 @@ const SubCategories = ({
                         {' '}
                         {item.sub_categories.length ? (
                             <li className="sub-category-item" key={(item.id, ':', item.title)}>
+                                {withCheckbox && (
+                                    <Checkbox
+                                        id={item.id}
+                                        onChange={onChange}
+                                        value={item.id}
+                                        checked={selectedMap[item.id]}
+                                    />
+                                )}
                                 <span
-                                    className="sub-category-link"
+                                    className="sub-category-link ml-4"
                                     onClick={(e) => {
                                         e.preventDefault();
                                         subCategoryOnClick(item);
@@ -62,11 +70,17 @@ const SubCategories = ({
                             <ul className="sub-sub-categories ">
                                 {item.sub_categories.map((c) => {
                                     return (
-                                        <li key={(c.id, ':', c.title)} className="sub-sub-category-item">
-                                            {/*{withCheckbox && (<Checkbox id={c.id} onChange={onChange} value={c.id}*/}
-                                            {/*                            checked={selectedMap[c.id]}/>)}*/}
+                                        <li key={(c.id, ':', c.title)} className="sub-sub-category-item ">
+                                            {withCheckbox && (
+                                                <Checkbox
+                                                    id={c.id}
+                                                    onChange={onChange}
+                                                    value={c.id}
+                                                    checked={selectedMap[c.id]}
+                                                />
+                                            )}
                                             <span
-                                                className="sub-sub-category-link"
+                                                className="sub-sub-category-link ml-4"
                                                 onClick={() => {
                                                     onClick(c);
                                                 }}

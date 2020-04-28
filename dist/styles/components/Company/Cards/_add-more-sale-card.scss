@@ -1,93 +1,93 @@
 .addMoreSaleCard {
-  margin-bottom: 2rem;
-  position: relative;
+    margin-bottom: 2rem;
+    position: relative;
 
-  &__preview {
-    margin-right: 1.5rem;
+    &__preview {
+        margin-right: 1.5rem;
 
-    &--image {
-      position: relative;
-      display: block;
-      width: 150px;
-      height: auto;
-      border: 1px solid #F5F5F5;
-      overflow: hidden;
+        &--image {
+            position: relative;
+            display: block;
+            width: 150px;
+            height: auto;
+            border: 1px solid #f5f5f5;
+            overflow: hidden;
 
-      img {
-        transition: all 0.3s;
-        -webkit-transform: translateZ(0) scale(1.01, 1.01);
-        transform: translateZ(0) scale(1.01, 1.01);
-        width: 100%;
-        height: 130px;
-      }
+            img {
+                transition: all 0.3s;
+                -webkit-transform: translateZ(0) scale(1.01, 1.01);
+                transform: translateZ(0) scale(1.01, 1.01);
+                width: 100%;
+                height: 130px;
+            }
 
-      &:hover {
-        img {
-          -webkit-backface-visibility: hidden;
-          -webkit-transform: translateZ(0) scale(1.04, 1.04);
-          transform: translateZ(0) scale(1.04, 1.04);
+            &:hover {
+                img {
+                    -webkit-backface-visibility: hidden;
+                    -webkit-transform: translateZ(0) scale(1.04, 1.04);
+                    transform: translateZ(0) scale(1.04, 1.04);
+                }
+            }
         }
-      }
+
+        &--discount {
+            position: absolute;
+            top: 0;
+            left: 0;
+            font-size: 0.75rem;
+            font-family: 'Riposte-Medium', sans-serif;
+            color: #fff;
+            background: #e74298;
+            padding: 0.1875rem;
+        }
     }
 
-    &--discount {
-      position: absolute;
-      top: 0;
-      left: 0;
-      font-size: 0.75rem;
-      font-family: 'Riposte-Medium', sans-serif;
-      color: #fff;
-      background: #E74298;
-      padding: .1875rem;
-    }
-  }
-
-  &__content {
-    //margin-top: 1rem;
-
-    &--title {
-      color: $gray-800;
-      font-size: 1.25rem;
-      margin-bottom: 1rem;
-
-      &:hover {
-        color: $primary;
-      }
-    }
-
-    &__price {
-      display: flex;
-      flex-direction: row;
-
-      &--sale {
-        color: #8c8f91;
-        text-decoration: line-through;
-        font-family: 'Riposte-Regular', sans-serif;
-        letter-spacing: .4px;
-        margin-right: 3rem;
-      }
-    }
-  }
-
-  &__remove {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 14px;
-    height: 14px;
-    background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg width='15px' height='15px' viewBox='0 0 15 15' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cg id='Symbols' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cpath d='M8.62158017,7.85401762 L14.1055454,2.33941574 C14.3285585,2.11640259 14.4156551,1.79135385 14.3340266,1.48671222 C14.2523981,1.1820706 14.0144459,0.944118402 13.7098043,0.862489925 C13.4051627,0.780861447 13.0801139,0.867957996 12.8571008,1.09097114 L7.37313557,6.58259552 L1.88917037,1.09097114 C1.54442191,0.746222688 0.985474229,0.746222688 0.640725774,1.09097114 C0.295977319,1.4357196 0.295977319,1.99466728 0.640725774,2.33941574 L6.12469098,7.85401762 L0.640725774,13.3073461 C0.474685083,13.4726415 0.381341482,13.6972779 0.381341482,13.9315684 C0.381341482,14.165859 0.474685083,14.3904954 0.640725774,14.5557907 C0.806021111,14.7218314 1.03065753,14.815175 1.26494807,14.815175 C1.49923862,14.815175 1.72387503,14.7218314 1.88917037,14.5557907 L7.37313557,9.07182553 L12.8571008,14.5557907 C13.0245761,14.7210329 13.249887,14.8144545 13.4851527,14.8162361 C13.8498481,14.8193609 14.1794318,14.5993237 14.3163371,14.2612858 C14.4532425,13.9232478 14.3696588,13.5358778 14.1055454,13.2843686 L8.62158017,7.85401762 Z' id='Mask' fill='%238C8F91' fill-rule='nonzero'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-
-    &:hover {
-      background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg width='15px' height='15px' viewBox='0 0 15 15' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cg id='Symbols' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cpath d='M8.62158017,7.85401762 L14.1055454,2.33941574 C14.3285585,2.11640259 14.4156551,1.79135385 14.3340266,1.48671222 C14.2523981,1.1820706 14.0144459,0.944118402 13.7098043,0.862489925 C13.4051627,0.780861447 13.0801139,0.867957996 12.8571008,1.09097114 L7.37313557,6.58259552 L1.88917037,1.09097114 C1.54442191,0.746222688 0.985474229,0.746222688 0.640725774,1.09097114 C0.295977319,1.4357196 0.295977319,1.99466728 0.640725774,2.33941574 L6.12469098,7.85401762 L0.640725774,13.3073461 C0.474685083,13.4726415 0.381341482,13.6972779 0.381341482,13.9315684 C0.381341482,14.165859 0.474685083,14.3904954 0.640725774,14.5557907 C0.806021111,14.7218314 1.03065753,14.815175 1.26494807,14.815175 C1.49923862,14.815175 1.72387503,14.7218314 1.88917037,14.5557907 L7.37313557,9.07182553 L12.8571008,14.5557907 C13.0245761,14.7210329 13.249887,14.8144545 13.4851527,14.8162361 C13.8498481,14.8193609 14.1794318,14.5993237 14.3163371,14.2612858 C14.4532425,13.9232478 14.3696588,13.5358778 14.1055454,13.2843686 L8.62158017,7.85401762 Z' id='Mask' fill='%23DA3021' fill-rule='nonzero'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
-    }
-  }
-
-  @include media-breakpoint-down(sm) {
     &__content {
-      &--title {
-        font-size: 1rem;
-      }
+        //margin-top: 1rem;
+
+        &--title {
+            color: $gray-800;
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+
+            &:hover {
+                color: $primary;
+            }
+        }
+
+        &__price {
+            display: flex;
+            flex-direction: row;
+
+            &--sale {
+                color: #8c8f91;
+                text-decoration: line-through;
+                font-family: 'Riposte-Regular', sans-serif;
+                letter-spacing: 0.4px;
+                margin-right: 3rem;
+            }
+        }
     }
-  }
+
+    &__remove {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 14px;
+        height: 14px;
+        background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg width='15px' height='15px' viewBox='0 0 15 15' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cg id='Symbols' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cpath d='M8.62158017,7.85401762 L14.1055454,2.33941574 C14.3285585,2.11640259 14.4156551,1.79135385 14.3340266,1.48671222 C14.2523981,1.1820706 14.0144459,0.944118402 13.7098043,0.862489925 C13.4051627,0.780861447 13.0801139,0.867957996 12.8571008,1.09097114 L7.37313557,6.58259552 L1.88917037,1.09097114 C1.54442191,0.746222688 0.985474229,0.746222688 0.640725774,1.09097114 C0.295977319,1.4357196 0.295977319,1.99466728 0.640725774,2.33941574 L6.12469098,7.85401762 L0.640725774,13.3073461 C0.474685083,13.4726415 0.381341482,13.6972779 0.381341482,13.9315684 C0.381341482,14.165859 0.474685083,14.3904954 0.640725774,14.5557907 C0.806021111,14.7218314 1.03065753,14.815175 1.26494807,14.815175 C1.49923862,14.815175 1.72387503,14.7218314 1.88917037,14.5557907 L7.37313557,9.07182553 L12.8571008,14.5557907 C13.0245761,14.7210329 13.249887,14.8144545 13.4851527,14.8162361 C13.8498481,14.8193609 14.1794318,14.5993237 14.3163371,14.2612858 C14.4532425,13.9232478 14.3696588,13.5358778 14.1055454,13.2843686 L8.62158017,7.85401762 Z' id='Mask' fill='%238C8F91' fill-rule='nonzero'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+
+        &:hover {
+            background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg width='15px' height='15px' viewBox='0 0 15 15' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cg id='Symbols' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cpath d='M8.62158017,7.85401762 L14.1055454,2.33941574 C14.3285585,2.11640259 14.4156551,1.79135385 14.3340266,1.48671222 C14.2523981,1.1820706 14.0144459,0.944118402 13.7098043,0.862489925 C13.4051627,0.780861447 13.0801139,0.867957996 12.8571008,1.09097114 L7.37313557,6.58259552 L1.88917037,1.09097114 C1.54442191,0.746222688 0.985474229,0.746222688 0.640725774,1.09097114 C0.295977319,1.4357196 0.295977319,1.99466728 0.640725774,2.33941574 L6.12469098,7.85401762 L0.640725774,13.3073461 C0.474685083,13.4726415 0.381341482,13.6972779 0.381341482,13.9315684 C0.381341482,14.165859 0.474685083,14.3904954 0.640725774,14.5557907 C0.806021111,14.7218314 1.03065753,14.815175 1.26494807,14.815175 C1.49923862,14.815175 1.72387503,14.7218314 1.88917037,14.5557907 L7.37313557,9.07182553 L12.8571008,14.5557907 C13.0245761,14.7210329 13.249887,14.8144545 13.4851527,14.8162361 C13.8498481,14.8193609 14.1794318,14.5993237 14.3163371,14.2612858 C14.4532425,13.9232478 14.3696588,13.5358778 14.1055454,13.2843686 L8.62158017,7.85401762 Z' id='Mask' fill='%23DA3021' fill-rule='nonzero'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
+        }
+    }
+
+    @include media-breakpoint-down(sm) {
+        &__content {
+            &--title {
+                font-size: 1rem;
+            }
+        }
+    }
 }
