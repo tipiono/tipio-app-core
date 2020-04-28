@@ -3,18 +3,18 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = VotingCardShowInterestButton;
+exports["default"] = VotingCardShowInterestButton;
 
 var _react = _interopRequireDefault(require("react"));
 
 var _SecondaryOutlineButton = _interopRequireDefault(require("../../../UI/Buttons/SecondaryOutlineButton"));
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
 function VotingCardShowInterestButton(props) {
-  return _react.default.createElement(_SecondaryOutlineButton.default, _extends({
+  return _react["default"].createElement(_SecondaryOutlineButton["default"], _extends({
     text: "Meld interesse"
   }, props));
 }

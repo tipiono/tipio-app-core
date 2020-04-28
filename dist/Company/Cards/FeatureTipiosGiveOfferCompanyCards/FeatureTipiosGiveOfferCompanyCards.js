@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = void 0;
+exports["default"] = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -11,7 +11,7 @@ var _TipioCountdown = _interopRequireDefault(require("../../../UI/TipioCountdown
 
 var _index = require("../../../index");
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 
@@ -26,44 +26,44 @@ var FeatureTipiosCompanyCards = function FeatureTipiosCompanyCards(_ref) {
       link = _ref.link,
       props = _objectWithoutProperties(_ref, ["expires_in", "brand", "binding_count", "forceLoad", "link"]);
 
-  return _react.default.createElement("div", null, _react.default.createElement("div", {
+  return _react["default"].createElement("div", null, _react["default"].createElement("div", {
     className: "featureTipiosCompanyCards"
-  }, _react.default.createElement("span", {
+  }, _react["default"].createElement("span", {
     onClick: function onClick(e) {
       e.preventDefault();
       props.onClick();
     }
-  }, _react.default.createElement("div", {
+  }, _react["default"].createElement("div", {
     className: "featureTipiosCompanyCards__header"
-  }, props.images && props.images.length && _react.default.createElement("a", {
+  }, props.images && props.images.length && _react["default"].createElement("a", {
     href: link,
     className: "lazy-image featureTipiosCompanyCards__header--preview"
-  }, _react.default.createElement("img", {
+  }, _react["default"].createElement("img", {
     className: "lazyload featureTipiosCompanyCards__header--preview--image lazyload",
     "data-src": props.images[0].blob_url,
     src: !forceLoad ? "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 2'%3E%3C/svg%3E" : props.images[0].blob_url,
     alt: ""
-  })), _react.default.createElement("div", {
+  })), _react["default"].createElement("div", {
     className: "featureTipiosCompanyCards__header--timeLeft"
-  }, _react.default.createElement(_TipioCountdown.default, {
+  }, _react["default"].createElement(_TipioCountdown["default"], {
     className: "timer",
     expires_in: expires_in
-  })))), _react.default.createElement("div", {
+  })))), _react["default"].createElement("div", {
     className: "featureTipiosCompanyCards__body"
-  }, _react.default.createElement("a", {
+  }, _react["default"].createElement("a", {
     href: link,
     onClick: function onClick() {
       props.onClick();
     }
-  }, _react.default.createElement("h3", {
+  }, _react["default"].createElement("h3", {
     className: "featureTipiosCompanyCards__body--productName"
-  }, props.title)), _react.default.createElement("p", {
+  }, props.title)), _react["default"].createElement("p", {
     className: "featureTipiosCompanyCards__body--brand"
-  }, !brand ? props.subtitle : brand), binding_count > 0 && _react.default.createElement("div", {
+  }, !brand ? props.subtitle : brand), binding_count > 0 && _react["default"].createElement("div", {
     className: "featureTipiosCompanyCards__body--interested"
-  }, _react.default.createElement("h5", {
+  }, _react["default"].createElement("h5", {
     className: "featureTipiosCompanyCards__body--interested--counter"
-  }, binding_count, " interesserte!")), _react.default.createElement(_index.SecondaryButton, {
+  }, binding_count, " interesserte!")), _react["default"].createElement(_index.SecondaryButton, {
     text: 'Git tilbud',
     loading: props.loading,
     onClick: props.onClick
@@ -71,4 +71,4 @@ var FeatureTipiosCompanyCards = function FeatureTipiosCompanyCards(_ref) {
 };
 
 var _default = FeatureTipiosCompanyCards;
-exports.default = _default;
+exports["default"] = _default;

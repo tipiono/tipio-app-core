@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = void 0;
+exports["default"] = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -11,7 +11,7 @@ var _reactChartjs = require("react-chartjs-2");
 
 var _getDate = _interopRequireDefault(require("../../Util/getDate"));
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 var AreaChart = function AreaChart(_ref) {
   var tipio = _ref.tipio,
@@ -74,12 +74,12 @@ var AreaChart = function AreaChart(_ref) {
         ticks: {
           autoSkip: true,
           userCallback: function userCallback(item, index) {
-            if (index === 4) return (0, _getDate.default)(item, 'DateMonth');
-            if (index === 9) return (0, _getDate.default)(item, 'DateMonth');
-            if (index === 14) return (0, _getDate.default)(item, 'DateMonth');
-            if (index === 19) return (0, _getDate.default)(item, 'DateMonth');
-            if (index === 24) return (0, _getDate.default)(item, 'DateMonth');
-            if (index === 29) return (0, _getDate.default)(item, 'DateMonth');
+            if (index === 4) return (0, _getDate["default"])(item, 'DateMonth');
+            if (index === 9) return (0, _getDate["default"])(item, 'DateMonth');
+            if (index === 14) return (0, _getDate["default"])(item, 'DateMonth');
+            if (index === 19) return (0, _getDate["default"])(item, 'DateMonth');
+            if (index === 24) return (0, _getDate["default"])(item, 'DateMonth');
+            if (index === 29) return (0, _getDate["default"])(item, 'DateMonth');
           }
         },
         gridLines: {
@@ -102,16 +102,16 @@ var AreaChart = function AreaChart(_ref) {
           return tooltipItems[0].yLabel;
         },
         label: function label(tooltipItems) {
-          return (0, _getDate.default)(tooltipItems.xLabel, 'DateName') + ' ' + (0, _getDate.default)(tooltipItems.xLabel, 'DateMonth');
+          return (0, _getDate["default"])(tooltipItems.xLabel, 'DateName') + ' ' + (0, _getDate["default"])(tooltipItems.xLabel, 'DateMonth');
         }
       }
     }
   };
-  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_reactChartjs.Line, {
+  return _react["default"].createElement(_react["default"].Fragment, null, _react["default"].createElement(_reactChartjs.Line, {
     data: charData,
     options: options
   }));
 };
 
 var _default = AreaChart;
-exports.default = _default;
+exports["default"] = _default;
