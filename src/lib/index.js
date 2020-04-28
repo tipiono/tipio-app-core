@@ -137,6 +137,8 @@ import BaseCompanyCard from './Company/Cards/BaseCompanyCard/BaseCompanyCard';
 import AddSaleCompanyCard from './Company/Cards/AddSaleCompanyCard/AddSaleCompanyCard';
 import CustomerListCompanyCard from './Company/Cards/CustomerListCompanyCard/CustomerListCompanyCard';
 import GiveOfferCompanyCard from './Company/Cards/GiveOfferCompanyCard/GiveOfferCompanyCard';
+import HighligtedGiveOfferCompanyCards from './Company/Cards/HighligtedGiveOfferCompanyCard.js/HighligtedGiveOfferCompanyCards';
+import FeatureTipiosCompanyCards from './Company/Cards/FeatureTipiosGiveOfferCompanyCards/FeatureTipiosGiveOfferCompanyCards';
 import TipioWithOfferCompanyCard from './Company/Cards/TipioWithOfferCompanyCard/TipioWithOfferCompanyCard';
 import ChooseAddSaleCompanyCard from './Company/Cards/ChooseAddSaleCompanyCard/ChooseAddSaleCompanyCard';
 import CompanySidebarBaseCard from './Company/CompanySidebarCards/CompanySidebarBaseCard';
@@ -254,6 +256,8 @@ export {
     AddSaleCompanyCard,
     CustomerListCompanyCard,
     GiveOfferCompanyCard,
+    FeatureTipiosCompanyCards,
+    HighligtedGiveOfferCompanyCards,
     TipioWithOfferCompanyCard,
     ChooseAddSaleCompanyCard,
     SubNav,
