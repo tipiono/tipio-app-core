@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports["default"] = void 0;
+exports.default = void 0;
 
 var _default = function _default(bindCount, range1, range2) {
   var firstRange = {};
@@ -20,4 +20,4 @@ var _default = function _default(bindCount, range1, range2) {
   return parseInt(bindCount, 10) >= 0 && parseInt(bindCount, 10) <= parseInt(firstRange.to, 10) ? firstRange.price : secondRange.price;
 };
 
-exports["default"] = _default;
+exports.default = _default;
