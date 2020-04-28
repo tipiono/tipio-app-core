@@ -3,13 +3,13 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = void 0;
+exports["default"] = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
 var _TipioCountdown = _interopRequireDefault(require("../TipioCountdown/TipioCountdown"));
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 var MediumPopularTipio = function MediumPopularTipio(_ref) {
   var id = _ref.id,
@@ -20,30 +20,30 @@ var MediumPopularTipio = function MediumPopularTipio(_ref) {
       brand = _ref.brand,
       type = _ref.type,
       onClick = _ref.onClick;
-  return _react.default.createElement("div", {
+  return _react["default"].createElement("div", {
     className: "mediumPopularTipio"
-  }, _react.default.createElement("div", {
+  }, _react["default"].createElement("div", {
     className: "mediumPopularTipio__preview lazy-image",
     onClick: onClick
-  }, _react.default.createElement("img", {
+  }, _react["default"].createElement("img", {
     className: "mediumPopularTipio__preview--image lazyload",
     src: images && images.length && images[0].blob_url,
     alt: ""
-  }), type === 2 && _react.default.createElement("div", {
+  }), type === 2 && _react["default"].createElement("div", {
     className: "mediumPopularTipio__preview--timeLeft"
-  }, _react.default.createElement(_TipioCountdown.default, {
+  }, _react["default"].createElement(_TipioCountdown["default"], {
     className: "timer",
     expires_in: binding_expires_in
-  }))), _react.default.createElement("div", {
+  }))), _react["default"].createElement("div", {
     className: "mediumPopularTipio__content"
-  }, _react.default.createElement("a", {
+  }, _react["default"].createElement("a", {
     href: "/tipio/".concat(type === 2 ? 'bind' : 'vote', "/").concat(id),
     onClick: onClick,
     className: "mediumPopularTipio__content--title"
-  }, title), _react.default.createElement("p", {
+  }, title), _react["default"].createElement("p", {
     className: "mediumPopularTipio__content--description"
   }, brand), children));
 };
 
 var _default = MediumPopularTipio;
-exports.default = _default;
+exports["default"] = _default;
