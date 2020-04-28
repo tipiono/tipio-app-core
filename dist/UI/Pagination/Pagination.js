@@ -3,13 +3,13 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = void 0;
+exports["default"] = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
 var _reactPaginate = _interopRequireDefault(require("react-paginate"));
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function Pagination(_ref) {
   var page = _ref.page,
@@ -17,10 +17,10 @@ function Pagination(_ref) {
       showPrevButton = _ref.showPrevButton,
       showNextButton = _ref.showNextButton,
       handlePageClick = _ref.handlePageClick;
-  return _react.default.createElement("nav", {
+  return _react["default"].createElement("nav", {
     className: "custom-pagination",
     "aria-label": "Page navigation"
-  }, _react.default.createElement(_reactPaginate.default, {
+  }, _react["default"].createElement(_reactPaginate["default"], {
     previousLabel: '',
     nextLabel: '',
     breakLabel: '...',
@@ -38,4 +38,4 @@ function Pagination(_ref) {
 }
 
 var _default = Pagination;
-exports.default = _default;
+exports["default"] = _default;
