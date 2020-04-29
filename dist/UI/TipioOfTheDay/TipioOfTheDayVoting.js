@@ -22,7 +22,7 @@ var TipioOfTheDayVoting = function TipioOfTheDayVoting(props) {
     text: "Del n\xE5",
     onClick: props.shareOnClick
   }) : _react.default.createElement(_SecondaryOutlineButton.default, {
-    text: "Delta i konkurransen",
+    text: "Meld interesse",
     textColor: "text-white",
     onClick: props.voteOnClick
   })));
