@@ -5,8 +5,8 @@
     padding: 1.625rem 0;
 
     .filters__item {
-        background: #ECE9F3;
-        border: 0.964047px solid #ECE9F3;
+        background: #ece9f3;
+        border: 0.964047px solid #ece9f3;
         box-sizing: border-box;
         border-radius: 25.0652px;
         color: $primary;
@@ -21,11 +21,11 @@
         &:not(:last-child) {
             margin-right: 18px;
         }
-        svg{
-            margin-right:0.5rem ;
+        svg {
+            margin-right: 0.5rem;
         }
 
-        @include media-breakpoint-down(sm){
+        @include media-breakpoint-down(sm) {
             font-size: 12px;
             line-height: 14px;
             width: 6.5625rem;
@@ -33,14 +33,14 @@
             &:not(:last-child) {
                 margin-right: 12px;
             }
-            svg{
-                margin-right:0.1875rem ;
+            svg {
+                margin-right: 0.1875rem;
             }
         }
     }
 
-    .filter__active{
+    .filter__active {
         background-color: #ffffff;
-        border: 0.964047px solid #A794CB;
+        border: 0.964047px solid #a794cb;
     }
 }

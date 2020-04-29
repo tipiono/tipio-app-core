@@ -17,19 +17,19 @@ const Filters = ({ onFilterChange, onFilterClick, active }) => {
     return (
         <div className="filters">
             <div
-                className={cx('filters__item', { filter__active: f.Newest === active })}
+                className={cx('filters__item', { filter__active: 'latest' === active })}
                 onClick={(e) => {
                     e.preventDefault();
-                    onFilterChange(f.Newest);
+                    onFilterChange('latest');
                 }}
             >
                 Nyeste
             </div>
             <div
-                className={cx('filters__item', { filter__active: f.Popular === active })}
+                className={cx('filters__item', { filter__active: 'popular' === active })}
                 onClick={(e) => {
                     e.preventDefault();
-                    onFilterChange(f.Popular);
+                    onFilterChange('popular');
                 }}
             >
                 Populære

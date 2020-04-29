@@ -137,6 +137,8 @@ import BaseCompanyCard from './Company/Cards/BaseCompanyCard/BaseCompanyCard';
 import AddSaleCompanyCard from './Company/Cards/AddSaleCompanyCard/AddSaleCompanyCard';
 import CustomerListCompanyCard from './Company/Cards/CustomerListCompanyCard/CustomerListCompanyCard';
 import GiveOfferCompanyCard from './Company/Cards/GiveOfferCompanyCard/GiveOfferCompanyCard';
+import HighligtedGiveOfferCompanyCards from './Company/Cards/HighligtedGiveOfferCompanyCard.js/HighligtedGiveOfferCompanyCards';
+import FeatureTipiosCompanyCards from './Company/Cards/FeatureTipiosGiveOfferCompanyCards/FeatureTipiosGiveOfferCompanyCards';
 import TipioWithOfferCompanyCard from './Company/Cards/TipioWithOfferCompanyCard/TipioWithOfferCompanyCard';
 import ChooseAddSaleCompanyCard from './Company/Cards/ChooseAddSaleCompanyCard/ChooseAddSaleCompanyCard';
 import CompanySidebarBaseCard from './Company/CompanySidebarCards/CompanySidebarBaseCard';
@@ -147,6 +149,7 @@ import AddSaleSidebarCard from './Company/CompanySidebarCards/AddSaleSidebarCard
 import MaterialSearch from './Company/MaterialSearch/MaterialSearch';
 import SuccessStory from './Company/SuccessStory/SuccessStory';
 import Filters from './UI/Filters';
+import FilterSearch from './UI/Filters/Search';
 
 /*
  *   Layout
@@ -214,6 +217,7 @@ export {
     Onboarding,
     Categories,
     Filters,
+    FilterSearch,
     Accordion,
     SaleCard,
     SaleCardAddToCartButton,
@@ -254,6 +258,8 @@ export {
     AddSaleCompanyCard,
     CustomerListCompanyCard,
     GiveOfferCompanyCard,
+    FeatureTipiosCompanyCards,
+    HighligtedGiveOfferCompanyCards,
     TipioWithOfferCompanyCard,
     ChooseAddSaleCompanyCard,
     SubNav,

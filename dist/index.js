@@ -779,6 +779,18 @@ Object.defineProperty(exports, "GiveOfferCompanyCard", {
     return _GiveOfferCompanyCard.default;
   }
 });
+Object.defineProperty(exports, "HighligtedGiveOfferCompanyCards", {
+  enumerable: true,
+  get: function get() {
+    return _HighligtedGiveOfferCompanyCards.default;
+  }
+});
+Object.defineProperty(exports, "FeatureTipiosCompanyCards", {
+  enumerable: true,
+  get: function get() {
+    return _FeatureTipiosGiveOfferCompanyCards.default;
+  }
+});
 Object.defineProperty(exports, "TipioWithOfferCompanyCard", {
   enumerable: true,
   get: function get() {
@@ -837,6 +849,12 @@ Object.defineProperty(exports, "Filters", {
   enumerable: true,
   get: function get() {
     return _Filters.default;
+  }
+});
+Object.defineProperty(exports, "FilterSearch", {
+  enumerable: true,
+  get: function get() {
+    return _Search.default;
   }
 });
 Object.defineProperty(exports, "PublicLayout", {
@@ -1199,6 +1217,10 @@ var _CustomerListCompanyCard = _interopRequireDefault(require("./Company/Cards/C
 
 var _GiveOfferCompanyCard = _interopRequireDefault(require("./Company/Cards/GiveOfferCompanyCard/GiveOfferCompanyCard"));
 
+var _HighligtedGiveOfferCompanyCards = _interopRequireDefault(require("./Company/Cards/HighligtedGiveOfferCompanyCard.js/HighligtedGiveOfferCompanyCards"));
+
+var _FeatureTipiosGiveOfferCompanyCards = _interopRequireDefault(require("./Company/Cards/FeatureTipiosGiveOfferCompanyCards/FeatureTipiosGiveOfferCompanyCards"));
+
 var _TipioWithOfferCompanyCard = _interopRequireDefault(require("./Company/Cards/TipioWithOfferCompanyCard/TipioWithOfferCompanyCard"));
 
 var _ChooseAddSaleCompanyCard = _interopRequireDefault(require("./Company/Cards/ChooseAddSaleCompanyCard/ChooseAddSaleCompanyCard"));
@@ -1218,6 +1240,8 @@ var _MaterialSearch = _interopRequireDefault(require("./Company/MaterialSearch/M
 var _SuccessStory = _interopRequireDefault(require("./Company/SuccessStory/SuccessStory"));
 
 var _Filters = _interopRequireDefault(require("./UI/Filters"));
+
+var _Search = _interopRequireDefault(require("./UI/Filters/Search"));
 
 var _index = _interopRequireDefault(require("./UI/Layout/Public/index"));
 

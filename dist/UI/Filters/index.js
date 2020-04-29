@@ -51,19 +51,19 @@ var Filters = function Filters(_ref) {
     className: "filters"
   }, _react.default.createElement("div", {
     className: (0, _classnames.default)('filters__item', {
-      filter__active: f.Newest === active
+      filter__active: 'latest' === active
     }),
     onClick: function onClick(e) {
       e.preventDefault();
-      onFilterChange(f.Newest);
+      onFilterChange('latest');
     }
   }, "Nyeste"), _react.default.createElement("div", {
     className: (0, _classnames.default)('filters__item', {
-      filter__active: f.Popular === active
+      filter__active: 'popular' === active
     }),
     onClick: function onClick(e) {
       e.preventDefault();
-      onFilterChange(f.Popular);
+      onFilterChange('popular');
     }
   }, "Popul\xE6re"), _react.default.createElement("div", {
     className: "filters__item",
