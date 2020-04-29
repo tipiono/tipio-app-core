@@ -1,8 +1,8 @@
 import React from 'react';
 import cx from 'classnames';
 
-function CategoriesHeader({ data, parent, path, backButtonOnClick, subCategoriesOnClick }) {
-    const title = path && path[0] && path[0].title;
+function CategoriesHeader({ data, parent, path, backButtonOnClick, subCategoriesOnClick, isFilter, clearFilter }) {
+    const title = path && path[0] ? path[0].title : !!isFilter ? 'Velg Kategori' : '';
     let items = [];
     for (let i = 1; i < (path && path.length); i += 1) {
         items.push(path[i]);
@@ -60,6 +60,7 @@ function CategoriesHeader({ data, parent, path, backButtonOnClick, subCategories
                             }
                         })}
                     </ul>
+                    {!!isFilter && <p onClick={clearFilter}>Nullstill</p>}
                 </div>
             )}
         </>

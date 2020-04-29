@@ -113,7 +113,7 @@ const CategoryItem = ({
     selectedMap
 }) => {
     return (
-        <div className="category-item dropdown">
+        <div className="category-item dropdown" key={id}>
             <div className="d-flex align-items-center">
                 {withCheckbox && <Checkbox id={id} onChange={onChange} value={id} checked={selectedMap[id]} />}
                 <span
