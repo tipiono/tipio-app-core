@@ -58,7 +58,9 @@ function CategoriesForm(_ref) {
       isLoading = _ref.isLoading,
       setActiveCategory = _ref.setActiveCategory,
       goBack = _ref.goBack,
-      path = _ref.path;
+      path = _ref.path,
+      isFilter = _ref.isFilter,
+      clearFilter = _ref.clearFilter;
 
   var _useState = (0, _react.useState)(0),
       _useState2 = _slicedToArray(_useState, 2),
@@ -150,7 +152,11 @@ function CategoriesForm(_ref) {
     parent: parent,
     backButtonOnClick: backButtonOnClick,
     subCategoriesOnClick: headerSubOnClick,
-    path: path
+    path: path,
+    clearFilter: !isLoading ? function (_) {
+      return clearFilter();
+    } : function (_) {},
+    isFilter: isFilter
   }), _react.default.createElement("div", {
     className: "choose-category-body"
   }, _react.default.createElement(_reactMasonryCss.default, {

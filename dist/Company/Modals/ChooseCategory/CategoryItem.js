@@ -26,7 +26,8 @@ var CategoryItem = function CategoryItem(_ref) {
       onChange = _ref.onChange,
       selectedMap = _ref.selectedMap;
   return _react.default.createElement("div", {
-    className: "category-item select"
+    className: "category-item select",
+    key: id
   }, withCheckbox && _react.default.createElement(_Checkbox.default, {
     id: id,
     onChange: onChange,

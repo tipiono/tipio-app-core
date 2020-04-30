@@ -29,7 +29,9 @@ function CategoriesForm({
     isLoading,
     setActiveCategory,
     goBack,
-    path
+    path,
+    isFilter,
+    clearFilter
 }) {
     const [selectedOptionId, setSelectedOptionId] = useState(0);
     const [selectedOption, setSelectedOption] = useState(null);
@@ -103,6 +105,8 @@ function CategoriesForm({
                 backButtonOnClick={backButtonOnClick}
                 subCategoriesOnClick={headerSubOnClick}
                 path={path}
+                clearFilter={!isLoading ? (_) => clearFilter() : (_) => {}}
+                isFilter={isFilter}
             />
             <div className="choose-category-body">
                 <Masonry

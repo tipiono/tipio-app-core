@@ -16,8 +16,10 @@ function CategoriesHeader(_ref) {
       parent = _ref.parent,
       path = _ref.path,
       backButtonOnClick = _ref.backButtonOnClick,
-      subCategoriesOnClick = _ref.subCategoriesOnClick;
-  var title = path && path[0] && path[0].title;
+      subCategoriesOnClick = _ref.subCategoriesOnClick,
+      isFilter = _ref.isFilter,
+      clearFilter = _ref.clearFilter;
+  var title = path && path[0] ? path[0].title : !!isFilter ? 'Velg Kategori' : '';
   var items = [];
 
   for (var i = 1; i < (path && path.length); i += 1) {
@@ -64,7 +66,9 @@ function CategoriesHeader(_ref) {
         className: (0, _classnames.default)('category-type-item-link')
       }, navigation.title));
     }
-  }))));
+  })), !!isFilter && _react.default.createElement("p", {
+    onClick: clearFilter
+  }, "Nullstill")));
 }
 
 var _default = CategoriesHeader;
