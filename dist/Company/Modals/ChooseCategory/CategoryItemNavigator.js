@@ -20,14 +20,14 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var CategoryItem = function CategoryItem(props) {
   return _react.default.createElement("div", {
     className: "category-item more",
-    key: props.item.id
+    key: (props.item.id, ":", props.item.title)
   }, _react.default.createElement("div", {
     className: "d-flex align-items-center"
   }, props.withCheckbox && _react.default.createElement(_Checkbox.default, {
     id: props.item.id,
     onChange: props.onChange,
     value: props.item.id,
-    checked: props.selectedMap[props.item.id]
+    checked: props.selectedMap[props.item.id] || false
   }), _react.default.createElement("span", {
     className: 'category-link ',
     onClick: props.onClick
