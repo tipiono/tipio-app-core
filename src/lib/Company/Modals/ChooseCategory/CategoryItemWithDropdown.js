@@ -38,7 +38,7 @@ const SubCategories = ({
                                         id={item.id}
                                         onChange={onChange}
                                         value={item.id}
-                                        checked={selectedMap[item.id]}
+                                        checked={selectedMap[item.id] || false}
                                     />
                                 )}
                                 <span
@@ -54,16 +54,30 @@ const SubCategories = ({
                             </li>
                         ) : (
                             <li className="sub-category-item" key={(item.id, ':', item.title)}>
-                                <span
-                                    className={'sub-category-link ' + (selectedId === item.id ? 'selected' : '')}
-                                    onClick={(e) => {
-                                        e.preventDefault();
-                                        setSelectedId(item.id);
-                                        onSelectItem(item);
-                                    }}
-                                >
-                                    {item.title}
-                                </span>
+                                {withCheckbox ? (
+                                    <>
+                                        <Checkbox
+                                            id={item.id}
+                                            onChange={onChange}
+                                            value={item.id}
+                                            checked={selectedMap[item.id] || false}
+                                        />
+                                        <span className="sub-category-link ml-4"> {item.title}</span>
+                                    </>
+                                ) : (
+                                    <span
+                                        className={
+                                            'sub-category-link ml-4 ' + (selectedId === item.id ? 'selected' : '')
+                                        }
+                                        onClick={(e) => {
+                                            e.preventDefault();
+                                            setSelectedId(item.id);
+                                            onSelectItem(item);
+                                        }}
+                                    >
+                                        {item.title}
+                                    </span>
+                                )}
                             </li>
                         )}
                         {showSubSubcategories === item.id && item.sub_categories && (
@@ -76,7 +90,7 @@ const SubCategories = ({
                                                     id={c.id}
                                                     onChange={onChange}
                                                     value={c.id}
-                                                    checked={selectedMap[c.id]}
+                                                    checked={selectedMap[c.id] || false}
                                                 />
                                             )}
                                             <span
@@ -113,9 +127,9 @@ const CategoryItem = ({
     selectedMap
 }) => {
     return (
-        <div className="category-item dropdown" key={id}>
+        <div className="category-item dropdown" key={(id, ':', title)}>
             <div className="d-flex align-items-center">
-                {withCheckbox && <Checkbox id={id} onChange={onChange} value={id} checked={selectedMap[id]} />}
+                {withCheckbox && <Checkbox id={id} onChange={onChange} value={id} checked={selectedMap[id] || false} />}
                 <span
                     className={'category-link d-flex align-items-center ' + (active ? 'active' : '')}
                     onClick={(e) => {

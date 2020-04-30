@@ -72,7 +72,7 @@ var SubCategories = function SubCategories(_ref) {
       id: item.id,
       onChange: onChange,
       value: item.id,
-      checked: selectedMap[item.id]
+      checked: selectedMap[item.id] || false
     }), _react.default.createElement("span", {
       className: "sub-category-link ml-4",
       onClick: function onClick(e) {
@@ -84,8 +84,15 @@ var SubCategories = function SubCategories(_ref) {
     }, item.title)) : _react.default.createElement("li", {
       className: "sub-category-item",
       key: (item.id, ':', item.title)
-    }, _react.default.createElement("span", {
-      className: 'sub-category-link ' + (selectedId === item.id ? 'selected' : ''),
+    }, withCheckbox ? _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_Checkbox.default, {
+      id: item.id,
+      onChange: onChange,
+      value: item.id,
+      checked: selectedMap[item.id] || false
+    }), _react.default.createElement("span", {
+      className: "sub-category-link ml-4"
+    }, " ", item.title)) : _react.default.createElement("span", {
+      className: 'sub-category-link ml-4 ' + (selectedId === item.id ? 'selected' : ''),
       onClick: function onClick(e) {
         e.preventDefault();
         setSelectedId(item.id);
@@ -101,7 +108,7 @@ var SubCategories = function SubCategories(_ref) {
         id: c.id,
         onChange: onChange,
         value: c.id,
-        checked: selectedMap[c.id]
+        checked: selectedMap[c.id] || false
       }), _react.default.createElement("span", {
         className: "sub-sub-category-link ml-4",
         onClick: function onClick() {
@@ -126,14 +133,14 @@ var CategoryItem = function CategoryItem(_ref2) {
       selectedMap = _ref2.selectedMap;
   return _react.default.createElement("div", {
     className: "category-item dropdown",
-    key: id
+    key: (id, ':', title)
   }, _react.default.createElement("div", {
     className: "d-flex align-items-center"
   }, withCheckbox && _react.default.createElement(_Checkbox.default, {
     id: id,
     onChange: onChange,
     value: id,
-    checked: selectedMap[id]
+    checked: selectedMap[id] || false
   }), _react.default.createElement("span", {
     className: 'category-link d-flex align-items-center ' + (active ? 'active' : ''),
     onClick: function onClick(e) {
