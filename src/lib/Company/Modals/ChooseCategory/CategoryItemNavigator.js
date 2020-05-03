@@ -5,14 +5,14 @@ import SvgInline from '../../../Hooks/svgInline';
 import ArrowDownIcon from '../../../UI/Icons/ArrowDownIcon';
 
 const CategoryItem = (props) => (
-    <div className="category-item more" key={props.item.id}>
+    <div className="category-item more" key={(props.item.id, ':', props.item.title)}>
         <div className="d-flex align-items-center">
             {props.withCheckbox && (
                 <Checkbox
                     id={props.item.id}
                     onChange={props.onChange}
                     value={props.item.id}
-                    checked={props.selectedMap[props.item.id]}
+                    checked={props.selectedMap[props.item.id] || false}
                 />
             )}
             <span className={'category-link '} onClick={props.onClick}>
