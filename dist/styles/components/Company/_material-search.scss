@@ -47,6 +47,8 @@
     &--icon {
         position: absolute;
         right: 0;
+        background: #ffffff;
+        padding-left: 3px;
     }
 
     svg {
@@ -59,6 +61,7 @@
         &--input {
             height: 26px;
             font-size: 1rem;
+            padding-left: 5px;
         }
     }
 }
