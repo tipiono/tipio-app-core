@@ -30,7 +30,9 @@ function CategoriesHeader(_ref) {
     className: "choose-category-header"
   }, _react.default.createElement("div", {
     className: "category-header-title"
-  }, _react.default.createElement("div", null, ' ', _react.default.createElement("h3", {
+  }, _react.default.createElement("div", {
+    className: "header__title"
+  }, ' ', _react.default.createElement("h3", {
     className: "mb-0"
   }, title), path && path[0] && path[0].title && _react.default.createElement("span", {
     className: "backward",

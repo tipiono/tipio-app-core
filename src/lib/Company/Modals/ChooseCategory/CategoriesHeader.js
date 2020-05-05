@@ -12,7 +12,7 @@ function CategoriesHeader({ data, parent, path, backButtonOnClick, subCategories
             {title && (
                 <div className="choose-category-header">
                     <div className="category-header-title">
-                        <div>
+                        <div className="header__title">
                             {' '}
                             <h3 className="mb-0">{title}</h3>
                             {path && path[0] && path[0].title && (
