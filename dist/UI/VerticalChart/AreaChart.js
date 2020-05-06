@@ -23,10 +23,10 @@ var AreaChart = function AreaChart(_ref) {
     return day.date;
   });
   dataset1 = tipio.map(function (el) {
-    return el.count;
+    return el.revenue;
   });
   dataset2 = additionalSales.map(function (el) {
-    return el.count;
+    return el.revenue;
   });
   var charData = {
     labels: labels,

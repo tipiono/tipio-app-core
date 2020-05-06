@@ -31,7 +31,7 @@ var CategoryItem = function CategoryItem(_ref) {
     id: id,
     onChange: onChange,
     value: id,
-    checked: selectedMap[id]
+    checked: selectedMap[id] || false
   }), _react.default.createElement("span", {
     className: 'category-link ' + (selected ? 'selected' : ''),
     onClick: onSelect

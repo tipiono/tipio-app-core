@@ -7,8 +7,8 @@ const AreaChart = ({ tipio, additionalSales }) => {
     let dataset1 = [];
     let dataset2 = [];
     labels = tipio.map((day) => day.date);
-    dataset1 = tipio.map((el) => el.count);
-    dataset2 = additionalSales.map((el) => el.count);
+    dataset1 = tipio.map((el) => el.revenue);
+    dataset2 = additionalSales.map((el) => el.revenue);
     const charData = {
         labels: labels,
         datasets: [

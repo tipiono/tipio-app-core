@@ -58,7 +58,9 @@ function CategoriesForm(_ref) {
       isLoading = _ref.isLoading,
       setActiveCategory = _ref.setActiveCategory,
       goBack = _ref.goBack,
-      path = _ref.path;
+      path = _ref.path,
+      isFilter = _ref.isFilter,
+      clearFilter = _ref.clearFilter;
 
   var _useState = (0, _react.useState)(0),
       _useState2 = _slicedToArray(_useState, 2),
@@ -150,7 +152,11 @@ function CategoriesForm(_ref) {
     parent: parent,
     backButtonOnClick: backButtonOnClick,
     subCategoriesOnClick: headerSubOnClick,
-    path: path
+    path: path,
+    clearFilter: !isLoading ? function (_) {
+      return clearFilter();
+    } : function (_) {},
+    isFilter: isFilter
   }), _react.default.createElement("div", {
     className: "choose-category-body"
   }, _react.default.createElement(_reactMasonryCss.default, {
@@ -163,6 +169,7 @@ function CategoriesForm(_ref) {
   }, active && active.map(function (item) {
     if (item.height === 1) {
       return _react.default.createElement(_CategoryItemNavigator.default, {
+        key: item.id + ":" + item.title,
         item: item,
         onClick: function onClick(e) {
           navigatorOnSelect(item.id);
@@ -174,6 +181,7 @@ function CategoriesForm(_ref) {
     } else if (item.height > 1) {
       // height > 1
       return _react.default.createElement(_CategoryItemWithDropdown.default, {
+        key: item.id + ":" + item.title,
         id: item.id,
         title: item.title,
         sub_categories: selectedCategoryId === item.id ? item.sub_categories : [],
@@ -193,6 +201,7 @@ function CategoriesForm(_ref) {
     } else {
       // height 0
       return _react.default.createElement(_CategoryItem.default, {
+        key: item.id + ":" + item.title,
         id: item.id,
         icon: item.file_store && item.file_store.blob_url,
         title: item.title,

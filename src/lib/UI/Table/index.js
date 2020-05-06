@@ -18,7 +18,7 @@ function Table(props) {
                                 })}
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody className="tableBody">
                         {rows &&
                             rows.map((row, i) => {
                                 return (

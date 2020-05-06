@@ -5,6 +5,26 @@
     &--item {
       font-family: 'Riposte-Medium', sans-serif;
       font-weight: unset;
+
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    .tableHead {
+      &--item {
+        font-size: 14px;
+        line-height: 17px;
+        padding:0.75rem 0.25rem;
+
+      }
+    }
+
+    .tableBody {
+      tr td {
+        font-size: 14px;
+        line-height: 17px;
+        padding:0.75rem 0.25rem;
+      }
     }
   }
 }

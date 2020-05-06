@@ -29,44 +29,73 @@ const SubCategories = ({
         <ul className="sub-categories ">
             {sub_categories.map((item) => {
                 return (
-                    <>
-                        {' '}
-                        {item.sub_categories.length ? (
-                            <li className="sub-category-item" key={(item.id, ':', item.title)}>
-                                <span
-                                    className="sub-category-link"
-                                    onClick={(e) => {
-                                        e.preventDefault();
-                                        subCategoryOnClick(item);
-                                        onClick(item);
-                                    }}
-                                >
-                                    {item.title}
-                                </span>
-                            </li>
-                        ) : (
-                            <li className="sub-category-item" key={(item.id, ':', item.title)}>
-                                <span
-                                    className={'sub-category-link ' + (selectedId === item.id ? 'selected' : '')}
-                                    onClick={(e) => {
-                                        e.preventDefault();
-                                        setSelectedId(item.id);
-                                        onSelectItem(item);
-                                    }}
-                                >
-                                    {item.title}
-                                </span>
-                            </li>
-                        )}
+                    <div key={item.id + ':' + item.title}>
+                        <li className="sub-category-item">
+                            {item.sub_categories.length ? (
+                                <>
+                                    {withCheckbox && (
+                                        <Checkbox
+                                            id={item.id}
+                                            onChange={onChange}
+                                            value={item.id}
+                                            checked={selectedMap[item.id] || false}
+                                        />
+                                    )}
+                                    <span
+                                        className="sub-category-link ml-4"
+                                        onClick={(e) => {
+                                            e.preventDefault();
+                                            subCategoryOnClick(item);
+                                            onClick(item);
+                                        }}
+                                    >
+                                        {item.title}
+                                    </span>
+                                </>
+                            ) : (
+                                <>
+                                    {withCheckbox ? (
+                                        <>
+                                            <Checkbox
+                                                id={item.id}
+                                                onChange={onChange}
+                                                value={item.id}
+                                                checked={selectedMap[item.id] || false}
+                                            />
+                                            <span className="sub-category-link ml-4"> {item.title}</span>
+                                        </>
+                                    ) : (
+                                        <span
+                                            className={
+                                                'sub-category-link ml-4 ' + (selectedId === item.id ? 'selected' : '')
+                                            }
+                                            onClick={(e) => {
+                                                e.preventDefault();
+                                                setSelectedId(item.id);
+                                                onSelectItem(item);
+                                            }}
+                                        >
+                                            {item.title}
+                                        </span>
+                                    )}
+                                </>
+                            )}
+                        </li>
                         {showSubSubcategories === item.id && item.sub_categories && (
                             <ul className="sub-sub-categories ">
                                 {item.sub_categories.map((c) => {
                                     return (
-                                        <li key={(c.id, ':', c.title)} className="sub-sub-category-item">
-                                            {/*{withCheckbox && (<Checkbox id={c.id} onChange={onChange} value={c.id}*/}
-                                            {/*                            checked={selectedMap[c.id]}/>)}*/}
+                                        <li key={(c.id, ':', c.title)} className="sub-sub-category-item ">
+                                            {withCheckbox && (
+                                                <Checkbox
+                                                    id={c.id}
+                                                    onChange={onChange}
+                                                    value={c.id}
+                                                    checked={selectedMap[c.id] || false}
+                                                />
+                                            )}
                                             <span
-                                                className="sub-sub-category-link"
+                                                className="sub-sub-category-link ml-4"
                                                 onClick={() => {
                                                     onClick(c);
                                                 }}
@@ -78,7 +107,7 @@ const SubCategories = ({
                                 })}
                             </ul>
                         )}
-                    </>
+                    </div>
                 );
             })}
         </ul>
@@ -101,7 +130,7 @@ const CategoryItem = ({
     return (
         <div className="category-item dropdown">
             <div className="d-flex align-items-center">
-                {withCheckbox && <Checkbox id={id} onChange={onChange} value={id} checked={selectedMap[id]} />}
+                {withCheckbox && <Checkbox id={id} onChange={onChange} value={id} checked={selectedMap[id] || false} />}
                 <span
                     className={'category-link d-flex align-items-center ' + (active ? 'active' : '')}
                     onClick={(e) => {

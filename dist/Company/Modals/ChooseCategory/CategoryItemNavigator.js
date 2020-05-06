@@ -26,7 +26,7 @@ var CategoryItem = function CategoryItem(props) {
     id: props.item.id,
     onChange: props.onChange,
     value: props.item.id,
-    checked: props.selectedMap[props.item.id]
+    checked: props.selectedMap[props.item.id] || false
   }), _react.default.createElement("span", {
     className: 'category-link ',
     onClick: props.onClick

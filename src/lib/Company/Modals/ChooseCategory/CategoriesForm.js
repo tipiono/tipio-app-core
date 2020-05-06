@@ -29,7 +29,9 @@ function CategoriesForm({
     isLoading,
     setActiveCategory,
     goBack,
-    path
+    path,
+    isFilter,
+    clearFilter
 }) {
     const [selectedOptionId, setSelectedOptionId] = useState(0);
     const [selectedOption, setSelectedOption] = useState(null);
@@ -103,6 +105,8 @@ function CategoriesForm({
                 backButtonOnClick={backButtonOnClick}
                 subCategoriesOnClick={headerSubOnClick}
                 path={path}
+                clearFilter={!isLoading ? (_) => clearFilter() : (_) => {}}
+                isFilter={isFilter}
             />
             <div className="choose-category-body">
                 <Masonry
@@ -118,6 +122,7 @@ function CategoriesForm({
                             if (item.height === 1) {
                                 return (
                                     <CategoryItemNavigator
+                                        key={item.id + ':' + item.title}
                                         item={item}
                                         onClick={(e) => {
                                             navigatorOnSelect(item.id);
@@ -131,6 +136,7 @@ function CategoriesForm({
                                 // height > 1
                                 return (
                                     <CategoryItemWithDropdown
+                                        key={item.id + ':' + item.title}
                                         id={item.id}
                                         title={item.title}
                                         sub_categories={selectedCategoryId === item.id ? item.sub_categories : []}
@@ -152,6 +158,7 @@ function CategoriesForm({
                                 // height 0
                                 return (
                                     <CategoryItem
+                                        key={item.id + ':' + item.title}
                                         id={item.id}
                                         icon={item.file_store && item.file_store.blob_url}
                                         title={item.title}
