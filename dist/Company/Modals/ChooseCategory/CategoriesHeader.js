@@ -73,27 +73,50 @@ function CategoriesHeader(_ref) {
   }))), "Nullstill")), _react.default.createElement("ul", {
     className: "category-types"
   }, items.map(function (navigation, i) {
-    if (items.length === i + 1) {
-      return _react.default.createElement("li", {
-        className: "category-type-item"
-      }, _react.default.createElement("span", {
-        onClick: function onClick(e) {
-          e.preventDefault();
-          subCategoriesOnClick(navigation);
-        },
-        className: (0, _classnames.default)('category-type-item-link')
-      }, navigation.title));
-    } else {
-      return _react.default.createElement("li", {
-        className: "category-type-item"
-      }, _react.default.createElement("span", {
-        onClick: function onClick(e) {
-          e.preventDefault();
-          subCategoriesOnClick(navigation);
-        },
-        className: (0, _classnames.default)('category-type-item-link')
-      }, navigation.title));
-    }
+    return _react.default.createElement("li", {
+      className: "category-type-item",
+      key: navigation.id + ":" + navigation.title
+    }, items.length === i + 1 ? _react.default.createElement("span", {
+      onClick: function onClick(e) {
+        e.preventDefault();
+        subCategoriesOnClick(navigation);
+      },
+      className: (0, _classnames.default)('category-type-item-link')
+    }, navigation.title) : _react.default.createElement("span", {
+      onClick: function onClick(e) {
+        e.preventDefault();
+        subCategoriesOnClick(navigation);
+      },
+      className: (0, _classnames.default)('category-type-item-link')
+    }, navigation.title)); // if (items.length === i + 1) {
+    //     return (
+    //         <li className="category-type-item">
+    //             <span
+    //                 onClick={(e) => {
+    //                     e.preventDefault();
+    //                     subCategoriesOnClick(navigation);
+    //                 }}
+    //                 className={cx('category-type-item-link')}
+    //             >
+    //                 {navigation.title}
+    //             </span>
+    //         </li>
+    //     );
+    // } else {
+    //     return (
+    //         <li className="category-type-item">
+    //             <span
+    //                 onClick={(e) => {
+    //                     e.preventDefault();
+    //                     subCategoriesOnClick(navigation);
+    //                 }}
+    //                 className={cx('category-type-item-link')}
+    //             >
+    //                 {navigation.title}
+    //             </span>
+    //         </li>
+    //     );
+    // }
   }))));
 }
 

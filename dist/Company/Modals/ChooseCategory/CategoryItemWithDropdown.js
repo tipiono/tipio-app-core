@@ -65,10 +65,11 @@ var SubCategories = function SubCategories(_ref) {
   return _react.default.createElement("ul", {
     className: "sub-categories "
   }, sub_categories.map(function (item) {
-    return _react.default.createElement(_react.default.Fragment, null, ' ', item.sub_categories.length ? _react.default.createElement("li", {
-      className: "sub-category-item",
-      key: (item.id, ':', item.title)
-    }, withCheckbox && _react.default.createElement(_Checkbox.default, {
+    return _react.default.createElement("div", {
+      key: item.id + ':' + item.title
+    }, _react.default.createElement("li", {
+      className: "sub-category-item"
+    }, item.sub_categories.length ? _react.default.createElement(_react.default.Fragment, null, withCheckbox && _react.default.createElement(_Checkbox.default, {
       id: item.id,
       onChange: onChange,
       value: item.id,
@@ -81,10 +82,7 @@ var SubCategories = function SubCategories(_ref) {
 
         _onClick(item);
       }
-    }, item.title)) : _react.default.createElement("li", {
-      className: "sub-category-item",
-      key: (item.id, ':', item.title)
-    }, withCheckbox ? _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_Checkbox.default, {
+    }, item.title)) : _react.default.createElement(_react.default.Fragment, null, withCheckbox ? _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_Checkbox.default, {
       id: item.id,
       onChange: onChange,
       value: item.id,
@@ -98,7 +96,7 @@ var SubCategories = function SubCategories(_ref) {
         setSelectedId(item.id);
         onSelectItem(item);
       }
-    }, item.title)), showSubSubcategories === item.id && item.sub_categories && _react.default.createElement("ul", {
+    }, item.title))), showSubSubcategories === item.id && item.sub_categories && _react.default.createElement("ul", {
       className: "sub-sub-categories "
     }, item.sub_categories.map(function (c) {
       return _react.default.createElement("li", {
@@ -132,8 +130,7 @@ var CategoryItem = function CategoryItem(_ref2) {
       onChange = _ref2.onChange,
       selectedMap = _ref2.selectedMap;
   return _react.default.createElement("div", {
-    className: "category-item dropdown",
-    key: (id, ':', title)
+    className: "category-item dropdown"
   }, _react.default.createElement("div", {
     className: "d-flex align-items-center"
   }, withCheckbox && _react.default.createElement(_Checkbox.default, {
