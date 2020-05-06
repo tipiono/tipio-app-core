@@ -19,8 +19,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var CategoryItem = function CategoryItem(props) {
   return _react.default.createElement("div", {
-    className: "category-item more",
-    key: (props.item.id, ':', props.item.title)
+    className: "category-item more"
   }, _react.default.createElement("div", {
     className: "d-flex align-items-center"
   }, props.withCheckbox && _react.default.createElement(_Checkbox.default, {

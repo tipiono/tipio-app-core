@@ -52,9 +52,9 @@ function CategoriesHeader({ data, parent, path, backButtonOnClick, subCategories
 
                     <ul className="category-types">
                         {items.map((navigation, i) => {
-                            if (items.length === i + 1) {
-                                return (
-                                    <li className="category-type-item">
+                            return (
+                                <li className="category-type-item" key={navigation.id + ':' + navigation.title}>
+                                    {items.length === i + 1 ? (
                                         <span
                                             onClick={(e) => {
                                                 e.preventDefault();
@@ -64,11 +64,7 @@ function CategoriesHeader({ data, parent, path, backButtonOnClick, subCategories
                                         >
                                             {navigation.title}
                                         </span>
-                                    </li>
-                                );
-                            } else {
-                                return (
-                                    <li className="category-type-item">
+                                    ) : (
                                         <span
                                             onClick={(e) => {
                                                 e.preventDefault();
@@ -78,9 +74,9 @@ function CategoriesHeader({ data, parent, path, backButtonOnClick, subCategories
                                         >
                                             {navigation.title}
                                         </span>
-                                    </li>
-                                );
-                            }
+                                    )}
+                                </li>
+                            );
                         })}
                     </ul>
                 </div>

@@ -4,7 +4,7 @@ import Checkbox from '../../../UI/Forms/Checkbox';
 import SvgInline from '../../../Hooks/svgInline';
 
 const CategoryItem = ({ id, title, icon, onSelect, selected, sub_categories, withCheckbox, onChange, selectedMap }) => (
-    <div className="category-item select" key={(id, ':', title)}>
+    <div className="category-item select">
         {withCheckbox && <Checkbox id={id} onChange={onChange} value={id} checked={selectedMap[id] || false} />}
 
         <span className={'category-link ' + (selected ? 'selected' : '')} onClick={onSelect}>
