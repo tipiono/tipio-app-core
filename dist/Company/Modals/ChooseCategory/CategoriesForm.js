@@ -169,7 +169,7 @@ function CategoriesForm(_ref) {
   }, active && active.map(function (item) {
     if (item.height === 1) {
       return _react.default.createElement(_CategoryItemNavigator.default, {
-        key: item.id + ":" + item.title,
+        key: item.id + ':' + item.title,
         item: item,
         onClick: function onClick(e) {
           navigatorOnSelect(item.id);
@@ -181,7 +181,7 @@ function CategoriesForm(_ref) {
     } else if (item.height > 1) {
       // height > 1
       return _react.default.createElement(_CategoryItemWithDropdown.default, {
-        key: item.id + ":" + item.title,
+        key: item.id + ':' + item.title,
         id: item.id,
         title: item.title,
         sub_categories: selectedCategoryId === item.id ? item.sub_categories : [],
@@ -201,7 +201,7 @@ function CategoriesForm(_ref) {
     } else {
       // height 0
       return _react.default.createElement(_CategoryItem.default, {
-        key: item.id + ":" + item.title,
+        key: item.id + ':' + item.title,
         id: item.id,
         icon: item.file_store && item.file_store.blob_url,
         title: item.title,
