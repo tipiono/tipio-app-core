@@ -8,7 +8,9 @@ const AddSaleSidebarCard = ({
     editButtonOnClick,
     addToCartOnClick,
     showEditButton = true,
-    showAddToCartButton = false
+    inventory,
+    showAddToCartButton = false,
+    bindingCount
 }) => {
     const { title, brand } = tipio;
     return (
@@ -19,6 +21,8 @@ const AddSaleSidebarCard = ({
                     <p className="addSaleSidebarCard__header__content--subtitle">{brand}</p>
                 </div>
             </div>
+
+            {inventory > 0 && <p className="addSaleSidebarCard__stock">Kun {inventory} igjen</p>}
 
             <div className="addSaleSidebarCard__price">
                 <div className="addSaleSidebarCard__price--cost">
@@ -42,7 +46,9 @@ const AddSaleSidebarCard = ({
                         <SecondaryOutlineButton text="Legg i handlekurv" onClick={addToCartOnClick} />
                     </div>
                 )}
-                <p className="addSaleSidebarCard__footer--interestedCounter">Allerede 329 påmeldte!</p>
+                {bindingCount > 0 && (
+                    <p className="addSaleSidebarCard__footer--interestedCounter">{bindingCount} har allerede kjøpt!</p>
+                )}
             </div>
         </div>
     );
