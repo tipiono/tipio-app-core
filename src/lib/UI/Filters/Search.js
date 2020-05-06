@@ -1,6 +1,13 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 const FilterSearch = ({ defaultValue, onSubmit }) => {
+    const [inputValue, setInputValue] = useState(defaultValue);
+
+    useEffect(() => {
+        if (inputValue !== defaultValue) {
+            setInputValue(defaultValue);
+        }
+    }, []);
     return (
         <div className="filterSearch">
             <svg className="filterSearch--icon" width={20} height={20} viewBox="0 0 20 20" fill="none">
@@ -29,7 +36,6 @@ const FilterSearch = ({ defaultValue, onSubmit }) => {
                 placeholder="Søk på kategori, navn, merke.."
                 onKeyUp={(e) => {
                     if (e.key === 'Enter') {
-                        // alert("enter")
                         e.preventDefault();
                         e.stopPropagation();
                         onSubmit(e.target.value);

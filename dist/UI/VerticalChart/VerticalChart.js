@@ -24,10 +24,10 @@ var VerticalChart = function VerticalChart(_ref) {
     return day.date;
   });
   dataset1 = tipio && tipio.map(function (el) {
-    return el.count;
+    return el.revenue;
   });
   dataset2 = additionalSales && additionalSales.map(function (el) {
-    return el.count;
+    return el.revenue;
   });
   var charData = {
     labels: labels,

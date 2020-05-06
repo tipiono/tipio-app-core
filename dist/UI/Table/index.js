@@ -26,7 +26,9 @@ function Table(props) {
       scope: "col",
       key: title + ':' + i
     }, title);
-  }))), _react.default.createElement("tbody", null, rows && rows.map(function (row, i) {
+  }))), _react.default.createElement("tbody", {
+    className: "tableBody"
+  }, rows && rows.map(function (row, i) {
     return _react.default.createElement("tr", {
       key: 'row:' + i
     }, row && row.map(function (data, i) {
