@@ -122,6 +122,7 @@ function CategoriesForm({
                             if (item.height === 1) {
                                 return (
                                     <CategoryItemNavigator
+                                        key={item.id + ':' + item.title}
                                         item={item}
                                         onClick={(e) => {
                                             navigatorOnSelect(item.id);
@@ -135,6 +136,7 @@ function CategoriesForm({
                                 // height > 1
                                 return (
                                     <CategoryItemWithDropdown
+                                        key={item.id + ':' + item.title}
                                         id={item.id}
                                         title={item.title}
                                         sub_categories={selectedCategoryId === item.id ? item.sub_categories : []}
@@ -156,6 +158,7 @@ function CategoriesForm({
                                 // height 0
                                 return (
                                     <CategoryItem
+                                        key={item.id + ':' + item.title}
                                         id={item.id}
                                         icon={item.file_store && item.file_store.blob_url}
                                         title={item.title}

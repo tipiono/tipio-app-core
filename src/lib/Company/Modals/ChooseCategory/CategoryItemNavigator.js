@@ -5,7 +5,7 @@ import SvgInline from '../../../Hooks/svgInline';
 import ArrowDownIcon from '../../../UI/Icons/ArrowDownIcon';
 
 const CategoryItem = (props) => (
-    <div className="category-item more" key={(props.item.id, ':', props.item.title)}>
+    <div className="category-item more">
         <div className="d-flex align-items-center">
             {props.withCheckbox && (
                 <Checkbox
