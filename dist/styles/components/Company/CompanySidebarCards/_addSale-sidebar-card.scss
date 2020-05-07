@@ -1,137 +1,137 @@
 .addSaleSidebarCard {
-  border: 1px solid $gray-200;
-  padding: 4.2rem;
-
-  &__header {
-    text-align: center;
-
-    &__content {
-      margin-bottom: 2rem;
-
-      &--title {
-        letter-spacing: -0.4px;
-      }
-
-      &--subtitle {
-        font-family: 'Riposte-Light', sans-serif;
-      }
-    }
-
-    &__cost {
-      margin-bottom: 2rem;
-
-      &--label {
-        font-size: .875rem;
-        color: $gray-500;
-        margin-bottom: .275rem;
-      }
-
-      &--price {
-        margin-bottom: 0;
-      }
-    }
-
-    &--placeholder {
-      height: 30px;
-      width: 200px;
-      margin: 0 auto;
-    }
-  }
-  &__stock {
-    color: #e74298;
-    font-family: 'Riposte-Medium', sans-serif;
-    font-size: 1.125rem;
-    text-align: center;
-}
-
-  &__price {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-
-    &--cost {
-      &--label {
-        font-size: .875rem;
-        color: $gray-500;
-        margin-bottom: .4rem;
-      }
-
-      &--amount {
-        font-size: 1.625rem;
-        color: $gray-700;
-        text-decoration: line-through;
-        margin-bottom: 0;
-      }
-    }
-
-    &--sale {
-      text-align: right;
-
-      &--label {
-        color: $gray-500;
-        font-size: .875rem;
-        margin-bottom: .4rem;
-      }
-
-      &--amount {
-        font-size: 1.625rem;
-        margin-bottom: 0;
-      }
-    }
-  }
-
-  &__footer {
-    margin-top: 2.8rem;
-
-    &--action {
-      margin-bottom: 2rem;
-    }
-
-    &--interestedCounter {
-      text-align: center;
-      color: $cyan;
-      margin-bottom: 0;
-      letter-spacing: .67px;
-      font-family: 'Riposte-Medium', sans-serif;
-    }
-  }
-
-  @include media-breakpoint-down(sm) {
-    border: none;
-    border-bottom: 1px solid $gray-200;
-    padding: 0 0 2rem;
+    border: 1px solid $gray-200;
+    padding: 4.2rem;
 
     &__header {
-      &__content {
-        margin-bottom: 1.2rem;
+        text-align: center;
 
-        &--title {
-          font-size: 1.125rem;
+        &__content {
+            margin-bottom: 2rem;
+
+            &--title {
+                letter-spacing: -0.4px;
+            }
+
+            &--subtitle {
+                font-family: 'Riposte-Light', sans-serif;
+            }
         }
 
-        &--subtitle {
-          font-size: 0.875rem;
-          padding: 0 3rem;
+        &__cost {
+            margin-bottom: 2rem;
+
+            &--label {
+                font-size: 0.875rem;
+                color: $gray-500;
+                margin-bottom: 0.275rem;
+            }
+
+            &--price {
+                margin-bottom: 0;
+            }
         }
-      }
+
+        &--placeholder {
+            height: 30px;
+            width: 200px;
+            margin: 0 auto;
+        }
+    }
+    &__stock {
+        color: #e74298;
+        font-family: 'Riposte-Medium', sans-serif;
+        font-size: 1.125rem;
+        text-align: center;
     }
 
     &__price {
-      &--cost {
-        &--amount {
-          font-size: 1.125rem;
-        }
-      }
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
 
-      &--sale {
-        &--amount {
-          font-size: 1.125rem;
+        &--cost {
+            &--label {
+                font-size: 0.875rem;
+                color: $gray-500;
+                margin-bottom: 0.4rem;
+            }
+
+            &--amount {
+                font-size: 1.625rem;
+                color: $gray-700;
+                text-decoration: line-through;
+                margin-bottom: 0;
+            }
         }
-      }
+
+        &--sale {
+            text-align: right;
+
+            &--label {
+                color: $gray-500;
+                font-size: 0.875rem;
+                margin-bottom: 0.4rem;
+            }
+
+            &--amount {
+                font-size: 1.625rem;
+                margin-bottom: 0;
+            }
+        }
     }
 
     &__footer {
-      margin-top: 1.5rem;
+        margin-top: 2.8rem;
+
+        &--action {
+            margin-bottom: 2rem;
+        }
+
+        &--interestedCounter {
+            text-align: center;
+            color: $cyan;
+            margin-bottom: 0;
+            letter-spacing: 0.67px;
+            font-family: 'Riposte-Medium', sans-serif;
+        }
     }
-  }
+
+    @include media-breakpoint-down(sm) {
+        border: none;
+        border-bottom: 1px solid $gray-200;
+        padding: 0 0 2rem;
+
+        &__header {
+            &__content {
+                margin-bottom: 1.2rem;
+
+                &--title {
+                    font-size: 1.125rem;
+                }
+
+                &--subtitle {
+                    font-size: 0.875rem;
+                    padding: 0 3rem;
+                }
+            }
+        }
+
+        &__price {
+            &--cost {
+                &--amount {
+                    font-size: 1.125rem;
+                }
+            }
+
+            &--sale {
+                &--amount {
+                    font-size: 1.125rem;
+                }
+            }
+        }
+
+        &__footer {
+            margin-top: 1.5rem;
+        }
+    }
 }

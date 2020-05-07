@@ -78,7 +78,7 @@ var FilterSearch = function FilterSearch(_ref) {
       }
     },
     defaultValue: defaultValue,
-    autocomplete: "off"
+    autoComplete: "off"
   }));
 };
 

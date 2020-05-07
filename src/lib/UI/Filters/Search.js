@@ -42,7 +42,7 @@ const FilterSearch = ({ defaultValue, onSubmit }) => {
                     }
                 }}
                 defaultValue={defaultValue}
-                autocomplete="off"
+                autoComplete="off"
             />
         </div>
     );
