@@ -7,7 +7,19 @@ const FilterSearch = ({ defaultValue, onSubmit }) => {
         if (inputValue !== defaultValue) {
             setInputValue(defaultValue);
         }
-    }, []);
+    }, [defaultValue]);
+
+    const _onKeyUp = (e) => {
+        if (e.key === 'Enter') {
+            e.preventDefault();
+            e.stopPropagation();
+            onSubmit(e.target.value);
+        }
+    };
+    const _onChange = (e) => {
+        setInputValue(e.target.value);
+    };
+
     return (
         <div className="filterSearch">
             <svg className="filterSearch--icon" width={20} height={20} viewBox="0 0 20 20" fill="none">
@@ -34,14 +46,9 @@ const FilterSearch = ({ defaultValue, onSubmit }) => {
                 className="filterSearch--input"
                 type="text"
                 placeholder="Søk på kategori, navn, merke.."
-                onKeyUp={(e) => {
-                    if (e.key === 'Enter') {
-                        e.preventDefault();
-                        e.stopPropagation();
-                        onSubmit(e.target.value);
-                    }
-                }}
-                defaultValue={defaultValue}
+                value={inputValue || ''}
+                onChange={_onChange}
+                onKeyUp={_onKeyUp}
                 autoComplete="off"
             />
         </div>
