@@ -37,7 +37,7 @@ var FilterSearch = function FilterSearch(_ref) {
   }, [defaultValue]);
 
   var _onKeyUp = function _onKeyUp(e) {
-    if (e.key === "Enter") {
+    if (e.key === 'Enter') {
       e.preventDefault();
       e.stopPropagation();
       onSubmit(e.target.value);
