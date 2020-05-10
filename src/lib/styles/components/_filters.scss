@@ -22,6 +22,7 @@
         &:not(:last-child) {
             margin-right: 1.125rem;
         }
+
         svg {
             margin-right: 0.5rem;
         }
@@ -34,20 +35,26 @@
             &:not(:last-child) {
                 margin-right: 12px;
             }
+
             svg {
                 margin-right: 0.1875rem;
             }
         }
 
-        &:hover {
-            background-color: #ded8ec;
-            border: 0.964047px solid $primary;
-            color: $primary;
+        @include media-breakpoint-up(md) {
+            &:hover {
+                background-color: #ded8ec;
+                border: 0.964047px solid $primary;
+                color: $primary;
+            }
         }
     }
 
     .filter__active {
         background-color: #ffffff;
         border: 0.964047px solid $primary;
+    }
+    @include media-breakpoint-down(sm) {
+        padding: 1.25rem 0;
     }
 }
