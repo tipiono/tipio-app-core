@@ -5,22 +5,24 @@
     padding: 1.625rem 0;
 
     .filters__item {
-        background: #ece9f3;
+        font-family: 'Riposte-Light', sans-serif;
+        background-color: #ece9f3;
         border: 0.964047px solid #ece9f3;
         box-sizing: border-box;
-        border-radius: 25.0652px;
+        border-radius: 1.6rem;
         color: $primary;
         width: 10.625rem;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        font-size: 14px;
+        padding-top: 0.625rem;
+        padding-bottom: 0.625rem;
+        font-size: 0.875rem;
         line-height: 16px;
         text-align: center;
         cursor: pointer;
 
         &:not(:last-child) {
-            margin-right: 18px;
+            margin-right: 1.125rem;
         }
+
         svg {
             margin-right: 0.5rem;
         }
@@ -33,14 +35,26 @@
             &:not(:last-child) {
                 margin-right: 12px;
             }
+
             svg {
                 margin-right: 0.1875rem;
+            }
+        }
+
+        @include media-breakpoint-up(md) {
+            &:hover {
+                background-color: #ded8ec;
+                border: 0.964047px solid $primary;
+                color: $primary;
             }
         }
     }
 
     .filter__active {
         background-color: #ffffff;
-        border: 0.964047px solid #a794cb;
+        border: 0.964047px solid $primary;
+    }
+    @include media-breakpoint-down(sm) {
+        padding: 1.25rem 0;
     }
 }
