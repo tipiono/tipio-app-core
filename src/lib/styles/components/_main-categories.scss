@@ -147,6 +147,7 @@
 
                 .sub-sub-category-item {
                     text-align: left;
+
                     @include media-breakpoint-up(md) {
                         &:hover {
                             text-decoration: underline;
@@ -297,17 +298,6 @@
             .category-link {
                 color: $primary;
             }
-
-            .md-checkbox label:before {
-                border-width: 1.8px;
-            }
-
-            .category-right-icon {
-                // svg * {
-                //     stroke: $primary;
-                //     fill: $primary;
-                // }
-            }
         }
 
         .category-link {
@@ -394,6 +384,17 @@
                 .sub-category-link {
                     font-size: 18px;
                     color: $gray-700;
+                    @include media-breakpoint-up(md) {
+                        &:hover {
+                            color: $primary;
+                            box-shadow: 0 2px 0 $primary;
+                        }
+
+                        &:focus {
+                            color: $primary;
+                            box-shadow: 0 2px 0 $secondary;
+                        }
+                    }
                 }
 
                 .selected {
@@ -420,6 +421,12 @@
             }
         }
     }
+
+    // .md-checkbox label:before {
+    //     &:hover {
+    //         border-width: 1.8px;
+    //     }
+    // }
 
     @include media-breakpoint-down(sm) {
         .category-item {

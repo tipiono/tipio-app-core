@@ -19,8 +19,10 @@ var AddSaleSidebarCard = function AddSaleSidebarCard(_ref) {
       addToCartOnClick = _ref.addToCartOnClick,
       _ref$showEditButton = _ref.showEditButton,
       showEditButton = _ref$showEditButton === void 0 ? true : _ref$showEditButton,
+      inventory = _ref.inventory,
       _ref$showAddToCartBut = _ref.showAddToCartButton,
-      showAddToCartButton = _ref$showAddToCartBut === void 0 ? false : _ref$showAddToCartBut;
+      showAddToCartButton = _ref$showAddToCartBut === void 0 ? false : _ref$showAddToCartBut,
+      bindingCount = _ref.bindingCount;
   var title = tipio.title,
       brand = tipio.brand;
   return _react.default.createElement("div", {
@@ -33,7 +35,9 @@ var AddSaleSidebarCard = function AddSaleSidebarCard(_ref) {
     className: "addSaleSidebarCard__header__content--title"
   }, title), _react.default.createElement("p", {
     className: "addSaleSidebarCard__header__content--subtitle"
-  }, brand))), _react.default.createElement("div", {
+  }, brand))), inventory > 0 && _react.default.createElement("p", {
+    className: "addSaleSidebarCard__stock"
+  }, "Kun ", inventory, " igjen"), _react.default.createElement("div", {
     className: "addSaleSidebarCard__price"
   }, _react.default.createElement("div", {
     className: "addSaleSidebarCard__price--cost"
@@ -59,9 +63,9 @@ var AddSaleSidebarCard = function AddSaleSidebarCard(_ref) {
   }, _react.default.createElement(_SecondaryOutlineButton.default, {
     text: "Legg i handlekurv",
     onClick: addToCartOnClick
-  })), _react.default.createElement("p", {
+  })), bindingCount > 0 && _react.default.createElement("p", {
     className: "addSaleSidebarCard__footer--interestedCounter"
-  }, "Allerede 329 p\xE5meldte!")));
+  }, bindingCount, " har allerede kj\xF8pt!")));
 };
 
 var _default = AddSaleSidebarCard;

@@ -34,7 +34,20 @@ var FilterSearch = function FilterSearch(_ref) {
     if (inputValue !== defaultValue) {
       setInputValue(defaultValue);
     }
-  }, []);
+  }, [defaultValue]);
+
+  var _onKeyUp = function _onKeyUp(e) {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      e.stopPropagation();
+      onSubmit(e.target.value);
+    }
+  };
+
+  var _onChange = function _onChange(e) {
+    setInputValue(e.target.value);
+  };
+
   return _react.default.createElement("div", {
     className: "filterSearch"
   }, _react.default.createElement("svg", {
@@ -70,15 +83,10 @@ var FilterSearch = function FilterSearch(_ref) {
     className: "filterSearch--input",
     type: "text",
     placeholder: "S\xF8k p\xE5 kategori, navn, merke..",
-    onKeyUp: function onKeyUp(e) {
-      if (e.key === 'Enter') {
-        e.preventDefault();
-        e.stopPropagation();
-        onSubmit(e.target.value);
-      }
-    },
-    defaultValue: defaultValue,
-    autocomplete: "off"
+    value: inputValue || '',
+    onChange: _onChange,
+    onKeyUp: _onKeyUp,
+    autoComplete: "off"
   }));
 };
 
