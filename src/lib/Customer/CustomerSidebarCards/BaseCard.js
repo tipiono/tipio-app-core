@@ -12,7 +12,9 @@ const BaseCard = ({ children, ...props }) => {
                 </div>
                 {/* add limited stock */}
 
-                {props.inventory && <p className="customerSidebarCard__header__stock">Kun {props.inventory} igjen</p>}
+                {props.inventory && props.inventory < 10 && (
+                    <p className="customerSidebarCard__header__stock">Kun {props.inventory} igjen</p>
+                )}
 
                 <div className="customerSidebarCard__header__cost">
                     <p className="customerSidebarCard__header__cost--label" id={props.marketPriceId}>
