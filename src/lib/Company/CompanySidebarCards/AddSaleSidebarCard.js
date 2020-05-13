@@ -22,7 +22,7 @@ const AddSaleSidebarCard = ({
                 </div>
             </div>
 
-            {inventory > 0 && <p className="addSaleSidebarCard__stock">Kun {inventory} igjen</p>}
+            {inventory && inventory < 10 && <p className="addSaleSidebarCard__stock">Kun {inventory} igjen</p>}
 
             <div className="addSaleSidebarCard__price">
                 <div className="addSaleSidebarCard__price--cost">
