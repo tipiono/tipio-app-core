@@ -28,10 +28,11 @@ function BiddingCard({
                             alt=""
                         />
                     </a>
-
-                    <div className="biddingCard__header--timeLeft">
-                        <TipioCountdown className="timer" expires_in={expiresIn} />
-                    </div>
+                    {expiresIn && (
+                        <div className="biddingCard__header--timeLeft">
+                            <TipioCountdown className="timer" expires_in={expiresIn} />
+                        </div>
+                    )}
                 </div>
 
                 <div className="biddingCard__body">
