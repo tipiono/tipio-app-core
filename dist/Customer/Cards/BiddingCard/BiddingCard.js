@@ -39,7 +39,7 @@ function BiddingCard(_ref) {
     "data-src": image,
     src: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 2'%3E%3C/svg%3E",
     alt: ""
-  })), _react.default.createElement("div", {
+  })), expiresIn && _react.default.createElement("div", {
     className: "biddingCard__header--timeLeft"
   }, _react.default.createElement(_TipioCountdown.default, {
     className: "timer",
