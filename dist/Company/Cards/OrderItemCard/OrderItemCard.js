@@ -53,7 +53,7 @@ var OrderItemCard = function OrderItemCard(_ref) {
     var day = dateStr.getDate().toString().padStart(2, '0');
     var hours = dateStr.getHours().toString().padStart(2, '0');
     var min = dateStr.getMinutes().toString().padStart(2, '0');
-    return day + '.' + month + '.' + year + ' - ' + hours + ":" + min;
+    return day + '.' + month + '.' + year + ' - ' + hours + ':' + min;
   };
 
   return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("section", {
