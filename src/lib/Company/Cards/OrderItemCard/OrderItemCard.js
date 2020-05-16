@@ -5,6 +5,31 @@ const OrderItemCard = ({ order, deliveredOnChange }) => {
     const [activeOrder, setActiveOrder] = useState(false);
     let [address] = order.order_addresses;
     address = address || {};
+
+    const getDate = (date) => {
+        const dateStr = new Date(date);
+        console.log(dateStr.getMonth());
+    };
+
+    const getFormattedDate = (date) => {
+        const dateStr = new Date(date);
+        let year = dateStr.getFullYear();
+        let month = (1 + dateStr.getMonth()).toString().padStart(2, '0');
+        let day = dateStr
+            .getDate()
+            .toString()
+            .padStart(2, '0');
+        let hours = dateStr
+            .getHours()
+            .toString()
+            .padStart(2, '0');
+        let min = dateStr
+            .getMinutes()
+            .toString()
+            .padStart(2, '0');
+
+        return day + '.' + month + '.' + year + ' - ' + hours + ':' + min;
+    };
     return (
         <>
             <section className="orderItem">
@@ -32,26 +57,28 @@ const OrderItemCard = ({ order, deliveredOnChange }) => {
                         </div>
                         <div className="orderItem--row">
                             <p className="w-33">E-post: {order.order_user.email}</p>
-                            <p className="w-33">Nummer: 987 67 890</p>
+                            <p className="w-33">Nummer:{order.user.phone}</p>
                         </div>
                     </div>
-                    <div className="orderItem__content--productDetails">
-                        {order.order_products.map((order_product) => (
-                            <div className="orderItem--row">
-                                <p className="w-33 p-bold product__title">{order_product.title}</p>
-                                <p className="w-33 orderNumber">Ordrenummer: 89674590</p>
-                                <div className="w-33 antall__price">
-                                    <p>Antall: {order_product.quantity}</p>
-                                    <p>Pris: {order_product.price} Kr</p>
+                    <div className="border__bottom">
+                        {order.order_products.map((order_product, i) => (
+                            <div className="orderItem__content--productDetails" key={order_product.id + i}>
+                                <div className="orderItem--row">
+                                    <p className="w-33 p-bold product__title">{order_product.title}</p>
+                                    <p className="w-33 orderNumber">Ordrenummer: {order_product.order_id}</p>
+                                    <div className="w-33 antall__price">
+                                        <p>Antall: {order_product.quantity}</p>
+                                        <p>Pris: {order_product.price} Kr</p>
+                                    </div>
+                                </div>
+                                <div className="orderItem--row">
+                                    <p className="w-33">{getFormattedDate(order_product.created_at)}</p>
+                                    <p className="w-33 orderNumberMobile">Ordrenummer: {order_product.order_id}</p>
+                                    <p className="w-33">Betalingsmåte: Kort</p>
+                                    {/* <p className="w-33">Størrelse: 46</p> */}
                                 </div>
                             </div>
                         ))}
-                        <div className="orderItem--row">
-                            <p className="w-33">30.06.2019 - 13:09</p>
-                            <p className="w-33 orderNumberMobile">Ordrenummer: 89674590</p>
-                            <p className="w-33">Betalingsmåte: Kort</p>
-                            <p className="w-33">Størrelse: 46</p>
-                        </div>
                     </div>
                     <div className="orderItem__content--totalSum">
                         <p>Totalsum</p>

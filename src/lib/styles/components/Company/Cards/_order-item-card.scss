@@ -33,9 +33,12 @@
             }
         }
 
+        .border__bottom {
+            border-bottom: 2px solid #8c8f91;
+        }
+
         &--productDetails {
             padding-top: 23px;
-            border-bottom: 2px solid #8c8f91;
 
             .product__title {
                 font-family: 'Riposte-Medium', sans-serif !important;
@@ -125,10 +128,13 @@
                 }
             }
 
+            .border__bottom {
+                padding-bottom: 29px;
+            }
+
             &--productDetails {
                 display: flex;
                 flex-direction: column-reverse;
-                padding-bottom: 29px;
 
                 .orderItem--row {
                     &:last-child {
@@ -347,6 +353,7 @@
                 &--close {
                     position: relative;
                     margin-left: 88%;
+
                     &:hover {
                         svg g path {
                             fill: $primary;
@@ -376,6 +383,7 @@
             display: none;
         }
     }
+
     &__active {
         background-color: white;
         color: $primary;
@@ -400,6 +408,7 @@
 
         &:hover {
             border-radius: 8px 8px 0 0;
+
             .dropdown-toggle {
                 span {
                     text-decoration: none;
