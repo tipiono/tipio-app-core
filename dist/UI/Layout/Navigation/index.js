@@ -26,20 +26,20 @@ function Navigation(_ref) {
       filterOnClick = _ref.filterOnClick,
       props = _objectWithoutProperties(_ref, ["children", "filterOnClick"]);
 
-  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("nav", {
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("nav", {
     className: "navigation"
-  }, _react.default.createElement("div", {
+  }, /*#__PURE__*/_react.default.createElement("div", {
     className: "container"
-  }, _react.default.createElement("div", {
+  }, /*#__PURE__*/_react.default.createElement("div", {
     className: "nav-wrapper"
-  }, _react.default.createElement("a", {
+  }, /*#__PURE__*/_react.default.createElement("a", {
     className: "logo mr-5",
     href: "/"
-  }, _react.default.createElement(_Logo.default, null)), _react.default.createElement(_BusinessPrivateNavigationItems.default, props), _react.default.createElement("ul", {
+  }, /*#__PURE__*/_react.default.createElement(_Logo.default, null)), /*#__PURE__*/_react.default.createElement(_BusinessPrivateNavigationItems.default, props), /*#__PURE__*/_react.default.createElement("ul", {
     className: "nav-list ml-auto"
-  }, _react.default.createElement("li", {
+  }, /*#__PURE__*/_react.default.createElement("li", {
     className: "nav-list-item d-flex align-items-center"
-  }, _react.default.createElement(_SearchInput.default, props)), _react.default.createElement(_HamburgerMenu.default, props))))));
+  }, /*#__PURE__*/_react.default.createElement(_SearchInput.default, props)), /*#__PURE__*/_react.default.createElement(_HamburgerMenu.default, props))))));
 }
 
 var _default = Navigation;

@@ -30,12 +30,12 @@ var CircleChart = function CircleChart(_ref) {
       enabled: false
     }
   };
-  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("div", null, _react.default.createElement(_reactChartjs.Doughnut, {
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_reactChartjs.Doughnut, {
     data: data,
     options: options
-  }), _react.default.createElement("div", {
+  }), /*#__PURE__*/_react.default.createElement("div", {
     className: "donut-inner"
-  }, _react.default.createElement("span", null, percentage, "%"))));
+  }, /*#__PURE__*/_react.default.createElement("span", null, percentage, "%"))));
 };
 
 var _default = CircleChart;

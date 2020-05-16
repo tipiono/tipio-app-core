@@ -19,15 +19,15 @@ var MediumPopularBiddingTipioEdit = function MediumPopularBiddingTipioEdit(props
   var _useTranslation = (0, _reactI18next.useTranslation)(),
       t = _useTranslation.t;
 
-  return _react.default.createElement(_MediumPopularTipio.default, props, _react.default.createElement("div", {
+  return /*#__PURE__*/_react.default.createElement(_MediumPopularTipio.default, props, /*#__PURE__*/_react.default.createElement("div", {
     className: "mediumPopularTipio__content__price"
-  }, _react.default.createElement("h6", {
+  }, /*#__PURE__*/_react.default.createElement("h6", {
     className: "mediumPopularTipio__content__price--marketprice"
-  }, "4 500 Kr"), _react.default.createElement("h6", {
+  }, "4 500 Kr"), /*#__PURE__*/_react.default.createElement("h6", {
     className: "mediumPopularTipio__content__price--saleprice"
-  }, "2 500 Kr")), _react.default.createElement("div", {
+  }, "2 500 Kr")), /*#__PURE__*/_react.default.createElement("div", {
     className: "mediumPopularTipio__content__submit"
-  }, _react.default.createElement(_SecondaryOutlineButton.default, {
+  }, /*#__PURE__*/_react.default.createElement(_SecondaryOutlineButton.default, {
     text: t('admin.mainTipio.edit'),
     onClick: props.onClick
   })));

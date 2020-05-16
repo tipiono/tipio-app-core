@@ -14,7 +14,7 @@ var _index = require("../../../index");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var GiveOfferCompanyCard = function GiveOfferCompanyCard(props) {
-  return _react.default.createElement("div", null, _react.default.createElement(_BaseCompanyCard.default, props, _react.default.createElement(_index.SecondaryButton, {
+  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_BaseCompanyCard.default, props, /*#__PURE__*/_react.default.createElement(_index.SecondaryButton, {
     text: 'Git tilbud',
     loading: props.loading,
     onClick: props.onClick

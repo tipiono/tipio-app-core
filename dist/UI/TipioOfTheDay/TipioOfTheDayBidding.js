@@ -19,9 +19,9 @@ var TipioOfTheDayBidding = function TipioOfTheDayBidding(props) {
   var _useTranslation = (0, _reactI18next.useTranslation)(),
       t = _useTranslation.t;
 
-  return _react.default.createElement(_TipioOfTheDay.default, props, _react.default.createElement("div", {
+  return /*#__PURE__*/_react.default.createElement(_TipioOfTheDay.default, props, /*#__PURE__*/_react.default.createElement("div", {
     className: "tipioOfTheDay__content--submit"
-  }, _react.default.createElement(_SecondaryButton.default, {
+  }, /*#__PURE__*/_react.default.createElement(_SecondaryButton.default, {
     text: "Legg i handlekurv"
   })));
 };

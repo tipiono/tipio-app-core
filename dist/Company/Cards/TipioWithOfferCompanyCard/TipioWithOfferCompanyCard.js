@@ -12,7 +12,7 @@ var _BaseCompanyCard = _interopRequireDefault(require("../BaseCompanyCard/BaseCo
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var TipioWithOfferCompanyCard = function TipioWithOfferCompanyCard(props) {
-  return _react.default.createElement("div", null, _react.default.createElement(_BaseCompanyCard.default, props));
+  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_BaseCompanyCard.default, props));
 };
 
 var _default = TipioWithOfferCompanyCard;

@@ -14,12 +14,12 @@ var _VerticalTimeline = _interopRequireDefault(require("../../Timelines/Vertical
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function VerticalTimelineModal(props) {
-  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_Modal.Modal, {
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_Modal.Modal, {
     showCloseButton: true,
     onCloseButtonClick: props.onClose
-  }, _react.default.createElement("div", {
+  }, /*#__PURE__*/_react.default.createElement("div", {
     className: ""
-  }, _react.default.createElement(_VerticalTimeline.default, props))));
+  }, /*#__PURE__*/_react.default.createElement(_VerticalTimeline.default, props))));
 }
 
 var _default = VerticalTimelineModal;

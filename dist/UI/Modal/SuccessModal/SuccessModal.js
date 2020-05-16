@@ -1,6 +1,6 @@
 "use strict";
 
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -36,21 +36,21 @@ function SuccessModal(_ref) {
       props = _objectWithoutProperties(_ref, ["successTitle", "successDescription", "animationURL", "videoURL", "imageURL", "customStyle", "children"]);
 
   var renderVideo = function renderVideo() {
-    return _react.default.createElement("div", {
+    return /*#__PURE__*/_react.default.createElement("div", {
       className: "successModal--video"
-    }, _react.default.createElement("video", {
+    }, /*#__PURE__*/_react.default.createElement("video", {
       autoPlay: "autoplay",
       loop: true,
       muted: true,
       playsInline: true
-    }, _react.default.createElement("source", {
+    }, /*#__PURE__*/_react.default.createElement("source", {
       src: videoURL,
       type: "video/mp4"
     }), "Nettleseren din st\xF8tter ikke videokoden."));
   };
 
   var renderImage = function renderImage() {
-    return _react.default.createElement("img", {
+    return /*#__PURE__*/_react.default.createElement("img", {
       className: "successModal--animation",
       src: animationURL,
       alt: ""
@@ -58,17 +58,17 @@ function SuccessModal(_ref) {
   };
 
   var renderSvg = function renderSvg() {
-    return _react.default.createElement("div", {
+    return /*#__PURE__*/_react.default.createElement("div", {
       className: "successModal--animation"
-    }, _react.default.createElement(_ConfirmedIcon.default, null));
+    }, /*#__PURE__*/_react.default.createElement(_ConfirmedIcon.default, null));
   };
 
-  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_Modal.Modal, props, _react.default.createElement("div", {
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_Modal.Modal, props, /*#__PURE__*/_react.default.createElement("div", {
     className: (0, _classnames.default)('successModal', customStyle),
     style: customStyle
-  }, imageURL ? renderSvg() : videoURL ? renderVideo() : renderImage(), _react.default.createElement("h3", {
+  }, imageURL ? renderSvg() : videoURL ? renderVideo() : renderImage(), /*#__PURE__*/_react.default.createElement("h3", {
     className: "successModal--title"
-  }, successTitle), _react.default.createElement("p", {
+  }, successTitle), /*#__PURE__*/_react.default.createElement("p", {
     className: "successModal--description"
   }, successDescription), children && children)));
 }
