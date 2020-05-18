@@ -22,35 +22,35 @@ function VotingCard(_ref) {
       onClick = _ref.onClick,
       subtitle = _ref.subtitle,
       voteHasExpired = _ref.voteHasExpired;
-  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("div", {
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("div", {
     className: "votingCard"
-  }, _react.default.createElement("div", {
+  }, /*#__PURE__*/_react.default.createElement("div", {
     className: "votingCard__header"
-  }, _react.default.createElement("a", {
+  }, /*#__PURE__*/_react.default.createElement("a", {
     className: "lazy-image votingCard__header--preview",
     href: "/tipio/vote/".concat(id),
     onClick: onClick
-  }, _react.default.createElement("img", {
+  }, /*#__PURE__*/_react.default.createElement("img", {
     className: "lazyload votingCard__header--preview--image",
     src: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 2'%3E%3C/svg%3E",
     "data-src": image,
     alt: ""
-  }))), _react.default.createElement("div", {
+  }))), /*#__PURE__*/_react.default.createElement("div", {
     className: "votingCard__body"
-  }, !voteHasExpired ? _react.default.createElement("div", {
+  }, !voteHasExpired ? /*#__PURE__*/_react.default.createElement("div", {
     className: "votingCard__body--interested"
-  }, _react.default.createElement("h3", {
+  }, /*#__PURE__*/_react.default.createElement("h3", {
     className: "votingCard__body--interested--counter"
-  }, interestedCounter || 1), _react.default.createElement("p", {
+  }, interestedCounter || 1), /*#__PURE__*/_react.default.createElement("p", {
     className: "votingCard__body--interested--label"
-  }, "Interesserte!")) : '', _react.default.createElement("div", {
+  }, "Interesserte!")) : '', /*#__PURE__*/_react.default.createElement("div", {
     className: "votingCard__body--content"
-  }, _react.default.createElement("a", {
+  }, /*#__PURE__*/_react.default.createElement("a", {
     onClick: onClick,
     href: "/tipio/vote/".concat(id)
-  }, _react.default.createElement("h5", {
+  }, /*#__PURE__*/_react.default.createElement("h5", {
     className: "votingCard__body--content--title"
-  }, title)), _react.default.createElement("p", {
+  }, title)), /*#__PURE__*/_react.default.createElement("p", {
     className: "votingCard__body--content--description"
   }, brand ? brand.toUpperCase() : subtitle ? subtitle.toUpperCase() : '')), children)));
 }

@@ -29,7 +29,16 @@ const VotingCard = ({ state, ...props }) => {
                 </div>
             )}
 
-            {props.meta.joined_count > 0 ? (
+            {state === 'restore' && (
+                <>
+                    <div className="customerSidebarCard__footer--action">
+                        <SecondaryOutlineButton text={'Gjennopprett'} onClick={props.restoreOnClick} />
+                    </div>
+                    <p className="customerSidebarCard__footer--alert">Dette er ikke bindende</p>
+                </>
+            )}
+
+            {props.meta && props.meta.joined_count > 0 ? (
                 <p className="customerSidebarCard__footer--interestedCounter">
                     Allerede {props.meta.joined_count} Interesserte!
                 </p>

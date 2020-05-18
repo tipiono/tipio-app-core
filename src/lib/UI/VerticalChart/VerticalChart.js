@@ -1,5 +1,6 @@
 import React from 'react';
 import { Bar } from 'react-chartjs-2';
+import 'chartjs-plugin-annotation';
 import getDate from '../../Util/getDate';
 
 const VerticalChart = ({ tipio, additionalSales, showYears }) => {
@@ -91,6 +92,18 @@ const VerticalChart = ({ tipio, additionalSales, showYears }) => {
                     }
                 }
             }
+        },
+        annotation: {
+            annotations: [
+                {
+                    type: 'line',
+                    mode: 'horizontal',
+                    scaleID: 'y-axis-0',
+                    value: 0,
+                    borderColor: '#C9CFD3',
+                    borderWidth: 1
+                }
+            ]
         }
     };
 

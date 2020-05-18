@@ -17,18 +17,18 @@ function Image(_ref) {
   var image = _ref.image,
       selectedIndex = _ref.selectedIndex,
       onChange = _ref.onChange;
-  return _react.default.createElement("label", {
+  return /*#__PURE__*/_react.default.createElement("label", {
     className: "layout-item"
-  }, _react.default.createElement("input", {
+  }, /*#__PURE__*/_react.default.createElement("input", {
     type: "checkbox",
     value: image.id,
     onChange: onChange,
     checked: selectedIndex > 0 ? "checked" : ""
-  }), _react.default.createElement(_reactShimmer.default, {
+  }), /*#__PURE__*/_react.default.createElement(_reactShimmer.default, {
     className: "layout-img",
     src: image.src,
-    fallback: _react.default.createElement(_ContentSpinner.default, null)
-  }), selectedIndex > 0 && _react.default.createElement("span", {
+    fallback: /*#__PURE__*/_react.default.createElement(_ContentSpinner.default, null)
+  }), selectedIndex > 0 && /*#__PURE__*/_react.default.createElement("span", {
     className: "selected-number"
   }, selectedIndex));
 }

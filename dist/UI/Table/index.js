@@ -12,27 +12,27 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function Table(props) {
   var rows = props.rows,
       columns = props.columns;
-  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("div", {
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("div", {
     className: "table-responsive"
-  }, _react.default.createElement("table", {
+  }, /*#__PURE__*/_react.default.createElement("table", {
     className: "table table-borderless"
-  }, _react.default.createElement("thead", {
+  }, /*#__PURE__*/_react.default.createElement("thead", {
     className: "tableHead"
-  }, _react.default.createElement("tr", null, columns && columns.map(function (_ref) {
+  }, /*#__PURE__*/_react.default.createElement("tr", null, columns && columns.map(function (_ref) {
     var title = _ref.title,
         i = _ref.i;
-    return _react.default.createElement("th", {
+    return /*#__PURE__*/_react.default.createElement("th", {
       className: "tableHead--item",
       scope: "col",
       key: title + ':' + i
     }, title);
-  }))), _react.default.createElement("tbody", {
+  }))), /*#__PURE__*/_react.default.createElement("tbody", {
     className: "tableBody"
   }, rows && rows.map(function (row, i) {
-    return _react.default.createElement("tr", {
+    return /*#__PURE__*/_react.default.createElement("tr", {
       key: 'row:' + i
     }, row && row.map(function (data, i) {
-      return _react.default.createElement("td", {
+      return /*#__PURE__*/_react.default.createElement("td", {
         key: data + ':' + i
       }, data);
     }));

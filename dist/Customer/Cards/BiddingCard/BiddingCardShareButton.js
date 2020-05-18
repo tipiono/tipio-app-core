@@ -12,7 +12,7 @@ var _SecondaryButton = _interopRequireDefault(require("../../../UI/Buttons/Secon
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function BiddingCardShareButton() {
-  return _react.default.createElement(_SecondaryButton.default, {
+  return /*#__PURE__*/_react.default.createElement(_SecondaryButton.default, {
     text: "Del n\xE5"
   });
 }
