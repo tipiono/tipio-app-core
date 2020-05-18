@@ -49,7 +49,14 @@ var VotingCard = function VotingCard(_ref) {
   }, /*#__PURE__*/_react.default.createElement(_GrayOutlineButton.default, {
     text: "Meld av interesse",
     onClick: props.notInterestedOnClick
-  }))), props.meta.joined_count > 0 ? /*#__PURE__*/_react.default.createElement("p", {
+  }))), state === 'restore' && /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("div", {
+    className: "customerSidebarCard__footer--action"
+  }, /*#__PURE__*/_react.default.createElement(_SecondaryOutlineButton.default, {
+    text: 'Gjennopprett',
+    onClick: props.restoreOnClick
+  })), /*#__PURE__*/_react.default.createElement("p", {
+    className: "customerSidebarCard__footer--alert"
+  }, "Dette er ikke bindende")), props.meta && props.meta.joined_count > 0 ? /*#__PURE__*/_react.default.createElement("p", {
     className: "customerSidebarCard__footer--interestedCounter"
   }, "Allerede ", props.meta.joined_count, " Interesserte!") : '');
 };
