@@ -20,13 +20,13 @@ function HamburgerMenu(props) {
       toggleMenu = props.toggleMenu,
       items = props.items,
       logedIn = props.logedIn;
-  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, menuVisible && /*#__PURE__*/_react.default.createElement(_Overlay.default, {
+  return _react.default.createElement(_react.default.Fragment, null, menuVisible && _react.default.createElement(_Overlay.default, {
     onClick: toggleMenu,
     opacity: 0.5,
     top: "88px"
-  }), /*#__PURE__*/_react.default.createElement("li", {
+  }), _react.default.createElement("li", {
     className: "nav-list-item"
-  }, /*#__PURE__*/_react.default.createElement("span", null, /*#__PURE__*/_react.default.createElement("a", {
+  }, _react.default.createElement("span", null, _react.default.createElement("a", {
     href: "#",
     className: (0, _classnames.default)("hamburger-button", {
       show: menuVisible
@@ -35,9 +35,9 @@ function HamburgerMenu(props) {
       e.preventDefault();
       toggleMenu();
     }
-  }, "Menu")), menuVisible && /*#__PURE__*/_react.default.createElement("div", {
+  }, "Menu")), menuVisible && _react.default.createElement("div", {
     className: "menu-content show"
-  }, /*#__PURE__*/_react.default.createElement("ul", {
+  }, _react.default.createElement("ul", {
     className: "tab-content company-menu-content"
   }, items && items.map(function (x) {
     if (x.shouldDisplay && !x.shouldDisplay({
@@ -47,15 +47,15 @@ function HamburgerMenu(props) {
     }
 
     if (x.sub_items) {
-      return /*#__PURE__*/_react.default.createElement("li", {
+      return _react.default.createElement("li", {
         key: x.name,
         className: "nav-item"
-      }, /*#__PURE__*/_react.default.createElement(_DropDown.DropDown, {
+      }, _react.default.createElement(_DropDown.DropDown, {
         title: "Mine Tipioer"
       }, x.sub_items.map(function (y) {
-        return /*#__PURE__*/_react.default.createElement(_DropDown.DropDownItem, {
+        return _react.default.createElement(_DropDown.DropDownItem, {
           key: y.name
-        }, /*#__PURE__*/_react.default.createElement("a", {
+        }, _react.default.createElement("a", {
           to: "/",
           onClick: function onClick(e) {
             e.preventDefault();
@@ -67,14 +67,14 @@ function HamburgerMenu(props) {
       {
         /* const logoutItem = x.name === "Logg ut"; */
       }
-      return /*#__PURE__*/_react.default.createElement("li", {
+      return _react.default.createElement("li", {
         key: x.name,
         id: "nav-item",
         className: (0, _classnames.default)({
           "nav-item": items.sub_items // "nav-item-logout": logoutItem
 
         })
-      }, /*#__PURE__*/_react.default.createElement("a", {
+      }, _react.default.createElement("a", {
         href: "/tipio/new",
         onClick: function onClick(e) {
           e.preventDefault();

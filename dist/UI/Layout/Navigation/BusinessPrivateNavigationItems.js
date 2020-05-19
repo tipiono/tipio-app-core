@@ -10,17 +10,17 @@ var _react = _interopRequireDefault(require("react"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function BusinessPrivateNavigationItems(props) {
-  return /*#__PURE__*/_react.default.createElement("ul", {
+  return _react.default.createElement("ul", {
     className: "nav-list d-none d-md-block"
-  }, /*#__PURE__*/_react.default.createElement("li", {
+  }, _react.default.createElement("li", {
     className: "nav-list-item"
-  }, /*#__PURE__*/_react.default.createElement("a", {
+  }, _react.default.createElement("a", {
     className: "nav-list-link nav-list-lg-link",
     href: "#",
     onClick: props.mainNavOnClick
-  }, "Privat")), /*#__PURE__*/_react.default.createElement("li", {
+  }, "Privat")), _react.default.createElement("li", {
     className: "nav-list-item"
-  }, /*#__PURE__*/_react.default.createElement("a", {
+  }, _react.default.createElement("a", {
     className: "nav-list-link nav-list-lg-link active",
     href: "#"
   }, "Bedrift")));

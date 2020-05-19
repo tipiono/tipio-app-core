@@ -20,28 +20,28 @@ function TipioOfTheDay(_ref) {
       images = _ref.images,
       onClick = _ref.onClick,
       showTimer = _ref.showTimer;
-  return /*#__PURE__*/_react.default.createElement("div", {
+  return _react.default.createElement("div", {
     className: "tipioOfTheDay"
-  }, /*#__PURE__*/_react.default.createElement("a", {
+  }, _react.default.createElement("a", {
     href: "/tipio/vote/".concat(id),
     onClick: onClick,
     className: "tipioOfTheDay__preview"
-  }, /*#__PURE__*/_react.default.createElement("img", {
+  }, _react.default.createElement("img", {
     className: "tipioOfTheDay__preview--image",
     src: images && images.length && images[0].blob_url,
     alt: ""
-  }), showTimer && /*#__PURE__*/_react.default.createElement("div", {
+  }), showTimer && _react.default.createElement("div", {
     className: "tipioOfTheDay__preview--timeLeft"
-  }, /*#__PURE__*/_react.default.createElement(_TipioCountdown.default, {
+  }, _react.default.createElement(_TipioCountdown.default, {
     className: "timer",
     expires_in: voting_expires_in
-  }))), /*#__PURE__*/_react.default.createElement("div", {
+  }))), _react.default.createElement("div", {
     className: "tipioOfTheDay__content"
-  }, /*#__PURE__*/_react.default.createElement("a", {
+  }, _react.default.createElement("a", {
     href: "/tipio/vote/".concat(id),
     className: "tipioOfTheDay__content--title",
     onClick: onClick
-  }, title), /*#__PURE__*/_react.default.createElement("p", {
+  }, title), _react.default.createElement("p", {
     className: "tipioOfTheDay__content--description"
   }, subtitle), children));
 }

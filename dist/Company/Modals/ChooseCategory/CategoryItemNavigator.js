@@ -18,25 +18,25 @@ var _ArrowDownIcon = _interopRequireDefault(require("../../../UI/Icons/ArrowDown
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var CategoryItem = function CategoryItem(props) {
-  return /*#__PURE__*/_react.default.createElement("div", {
+  return _react.default.createElement("div", {
     className: "category-item more"
-  }, /*#__PURE__*/_react.default.createElement("div", {
+  }, _react.default.createElement("div", {
     className: "d-flex align-items-center"
-  }, props.withCheckbox && /*#__PURE__*/_react.default.createElement(_Checkbox.default, {
+  }, props.withCheckbox && _react.default.createElement(_Checkbox.default, {
     id: props.item.id,
     onChange: props.onChange,
     value: props.item.id,
     checked: props.selectedMap[props.item.id] || false
-  }), /*#__PURE__*/_react.default.createElement("span", {
+  }), _react.default.createElement("span", {
     className: 'category-link ',
     onClick: props.onClick
-  }, /*#__PURE__*/_react.default.createElement("div", {
+  }, _react.default.createElement("div", {
     className: "category-left-icon"
-  }, props.item.file_store && /*#__PURE__*/_react.default.createElement(_svgInline.default, {
+  }, props.item.file_store && _react.default.createElement(_svgInline.default, {
     url: props.item.file_store.blob_url
-  })), /*#__PURE__*/_react.default.createElement("span", null, props.item.title), /*#__PURE__*/_react.default.createElement("div", {
+  })), _react.default.createElement("span", null, props.item.title), _react.default.createElement("div", {
     className: "category-right-icon"
-  }, /*#__PURE__*/_react.default.createElement(_ArrowDownIcon.default, null)))));
+  }, _react.default.createElement(_ArrowDownIcon.default, null)))));
 };
 
 CategoryItem.propTypes = {

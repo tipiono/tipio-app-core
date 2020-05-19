@@ -23,20 +23,20 @@ var _default = _react.default.forwardRef(function (_ref, ref) {
       errors = _ref.errors,
       props = _objectWithoutProperties(_ref, ["label", "name", "errors"]);
 
-  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("label", {
+  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("label", {
     className: (0, _classnames.default)("pure-material-textfield-outlined price-input", {
       'validationError': errors && errors[name]
     })
-  }, /*#__PURE__*/_react.default.createElement("input", _extends({
+  }, _react.default.createElement("input", _extends({
     placeholder: "50",
     type: "number",
     name: name,
     id: name
   }, props, {
     ref: ref
-  })), /*#__PURE__*/_react.default.createElement("label", {
+  })), _react.default.createElement("label", {
     className: "outside-label"
-  }, label), /*#__PURE__*/_react.default.createElement("p", {
+  }, label), _react.default.createElement("p", {
     className: "static-placeholder"
   }, "Kr")));
 });

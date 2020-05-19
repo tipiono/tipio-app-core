@@ -1,6 +1,6 @@
 "use strict";
 
-function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -39,11 +39,11 @@ function Select(_ref) {
     });
   };
 
-  return /*#__PURE__*/_react.default.createElement("div", {
+  return _react.default.createElement("div", {
     className: "custom-material-select"
-  }, /*#__PURE__*/_react.default.createElement("label", {
+  }, _react.default.createElement("label", {
     className: "select-label"
-  }, label), /*#__PURE__*/_react.default.createElement(_creatable.default, {
+  }, label), _react.default.createElement(_creatable.default, {
     isClearable: true,
     value: {
       value: defaultValue,
@@ -60,7 +60,7 @@ function Select(_ref) {
     formatCreateLabel: function formatCreateLabel(inputValue) {
       return inputValue;
     }
-  }), displayErrors && errors && errors[name] && /*#__PURE__*/_react.default.createElement(_ErrorMessage.default, {
+  }), displayErrors && errors && errors[name] && _react.default.createElement(_ErrorMessage.default, {
     content: errors[name].message || errors[name],
     color: 'bg-red'
   }));

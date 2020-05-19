@@ -21,10 +21,10 @@ function AddSaleCompanyCard(_ref) {
   var children = _ref.children,
       props = _objectWithoutProperties(_ref, ["children"]);
 
-  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_BaseCompanyCard.default, props, props.showAddAdditionalSaleButton && /*#__PURE__*/_react.default.createElement(_index.SecondaryButton, {
+  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_BaseCompanyCard.default, props, props.showAddAdditionalSaleButton && _react.default.createElement(_index.SecondaryButton, {
     onClick: props.addAdditionalSalesOnClick,
     text: 'Legg til mersalg'
-  }), props.showSeeCustomerListButton ? /*#__PURE__*/_react.default.createElement(_index.SecondaryOutlineButton, {
+  }), props.showSeeCustomerListButton ? _react.default.createElement(_index.SecondaryOutlineButton, {
     onClick: props.seeCustomerListOnClick,
     text: 'Se kundeliste'
   }) : null));

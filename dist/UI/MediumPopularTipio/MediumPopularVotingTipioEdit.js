@@ -19,11 +19,11 @@ var MediumPopularVotingTipioEdit = function MediumPopularVotingTipioEdit(props) 
   var _useTranslation = (0, _reactI18next.useTranslation)(),
       t = _useTranslation.t;
 
-  return /*#__PURE__*/_react.default.createElement(_MediumPopularTipio.default, props, /*#__PURE__*/_react.default.createElement("h6", {
+  return _react.default.createElement(_MediumPopularTipio.default, props, _react.default.createElement("h6", {
     className: "mediumPopularTipio__content--interested"
-  }, "2 789 interesserte!"), /*#__PURE__*/_react.default.createElement("div", {
+  }, "2 789 interesserte!"), _react.default.createElement("div", {
     className: "mediumPopularTipio__content__submit"
-  }, /*#__PURE__*/_react.default.createElement(_SecondaryOutlineButton.default, {
+  }, _react.default.createElement(_SecondaryOutlineButton.default, {
     text: t('admin.mainTipio.edit'),
     onClick: props.onClick
   })));

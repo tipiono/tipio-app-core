@@ -22,33 +22,33 @@ var FooterMainCard = function FooterMainCard(_ref) {
       secondRange = _ref.secondRange,
       bindCount = _ref.bindCount,
       onBindClick = _ref.onBindClick;
-  return /*#__PURE__*/_react.default.createElement("div", {
+  return _react.default.createElement("div", {
     className: "footerMainCard"
-  }, /*#__PURE__*/_react.default.createElement("div", {
+  }, _react.default.createElement("div", {
     className: "row align-items-center"
-  }, /*#__PURE__*/_react.default.createElement("div", {
+  }, _react.default.createElement("div", {
     className: "col-6 col-lg-5"
-  }, /*#__PURE__*/_react.default.createElement("h3", {
+  }, _react.default.createElement("h3", {
     className: "footerMainCard__title"
-  }, title)), /*#__PURE__*/_react.default.createElement("div", {
+  }, title)), _react.default.createElement("div", {
     className: "col-8 col-md-4 d-none d-lg-block"
-  }, /*#__PURE__*/_react.default.createElement("div", {
+  }, _react.default.createElement("div", {
     className: "footerMainCard__content"
-  }, /*#__PURE__*/_react.default.createElement("div", {
+  }, _react.default.createElement("div", {
     className: "footerMainCard__content__priceLabel"
-  }, /*#__PURE__*/_react.default.createElement("h6", {
+  }, _react.default.createElement("h6", {
     className: "footerMainCard__content__priceLabel__new"
-  }, "Pris n\xE5"), /*#__PURE__*/_react.default.createElement("h6", {
+  }, "Pris n\xE5"), _react.default.createElement("h6", {
     className: "footerMainCard__content__priceLabel__first"
-  }, "Markedspris")), /*#__PURE__*/_react.default.createElement("div", {
+  }, "Markedspris")), _react.default.createElement("div", {
     className: "footerMainCard__content__priceValue"
-  }, /*#__PURE__*/_react.default.createElement("h6", {
+  }, _react.default.createElement("h6", {
     className: "footerMainCard__content__priceValue__new"
-  }, (0, _generatePrice.default)(bindCount, firstRange, secondRange), " Kr"), /*#__PURE__*/_react.default.createElement("h6", {
+  }, (0, _generatePrice.default)(bindCount, firstRange, secondRange), " Kr"), _react.default.createElement("h6", {
     className: "footerMainCard__content__priceValue__first"
-  }, marketPrice, " Kr")))), /*#__PURE__*/_react.default.createElement("div", {
+  }, marketPrice, " Kr")))), _react.default.createElement("div", {
     className: "col-4 col-md-3 ml-auto"
-  }, /*#__PURE__*/_react.default.createElement(_SecondaryButton.default, {
+  }, _react.default.createElement(_SecondaryButton.default, {
     onClick: onBindClick,
     text: 'Kjøp',
     loading: false

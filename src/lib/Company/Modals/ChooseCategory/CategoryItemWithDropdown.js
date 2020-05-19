@@ -62,7 +62,7 @@ const SubCategories = ({
                                                 value={item.id}
                                                 checked={selectedMap[item.id] || false}
                                             />
-                                            <span className="sub-category-link ml-4"> {item.title}</span>
+                                            <span className="sub-category-link ml-4">{item.title}</span>
                                         </>
                                     ) : (
                                         <span
@@ -71,7 +71,7 @@ const SubCategories = ({
                                             }
                                             onClick={(e) => {
                                                 e.preventDefault();
-                                                setSelectedId(item.id);
+                                                setSelectedId(selectedId === item.id ? null : item.id);
                                                 onSelectItem(item);
                                             }}
                                         >
@@ -97,7 +97,10 @@ const SubCategories = ({
                                             <span
                                                 className="sub-sub-category-link ml-4"
                                                 onClick={() => {
-                                                    onClick(c);
+                                                    if (!c.sub_categories.length) {
+                                                        setSelectedId(selectedId === c.id ? null : c.id);
+                                                        onSelectItem(c);
+                                                    } else onClick(c);
                                                 }}
                                             >
                                                 {c.title}
