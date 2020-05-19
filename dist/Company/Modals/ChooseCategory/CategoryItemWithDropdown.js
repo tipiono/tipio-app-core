@@ -79,6 +79,8 @@ var SubCategories = function SubCategories(_ref) {
       onClick: function onClick(e) {
         e.preventDefault();
         subCategoryOnClick(item);
+        onSelectItem(0);
+        setSelectedId(null);
 
         _onClick(item);
       }
@@ -107,13 +109,18 @@ var SubCategories = function SubCategories(_ref) {
         onChange: onChange,
         value: c.id,
         checked: selectedMap[c.id] || false
-      }), _react.default.createElement("span", {
+      }), !c.sub_categories.length ? _react.default.createElement("span", {
+        className: "sub-sub-category-link ml-4 ".concat(selectedId === c.id ? 'selected' : ''),
+        onClick: function onClick() {
+          setSelectedId(selectedId === c.id ? null : c.id);
+          onSelectItem(c);
+        }
+      }, c.title) : _react.default.createElement("span", {
         className: "sub-sub-category-link ml-4",
         onClick: function onClick() {
-          if (!c.sub_categories.length) {
-            setSelectedId(selectedId === c.id ? null : c.id);
-            onSelectItem(c);
-          } else _onClick(c);
+          onSelectItem(0);
+
+          _onClick(c);
         }
       }, c.title));
     })));
