@@ -25,11 +25,11 @@ var _default = _react.default.forwardRef(function (_ref, ref) {
       errors = _ref.errors,
       props = _objectWithoutProperties(_ref, ["from", "to", "label", "name", "errors"]);
 
-  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("label", {
+  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("label", {
     className: (0, _classnames.default)("pure-material-textfield-outlined from-to-input", {
       validationError: errors && errors[name]
     })
-  }, /*#__PURE__*/_react.default.createElement("input", _extends({
+  }, _react.default.createElement("input", _extends({
     placeholder: to,
     type: "number",
     name: name,
@@ -39,11 +39,11 @@ var _default = _react.default.forwardRef(function (_ref, ref) {
     style: {
       paddingLeft: props.paddingLeft ? "".concat(props.paddingLeft + 55 + 8 + 5.328125, "px") : '75px'
     }
-  })), /*#__PURE__*/_react.default.createElement("label", {
+  })), _react.default.createElement("label", {
     className: "outside-label"
-  }, label), /*#__PURE__*/_react.default.createElement("span", {
+  }, label), _react.default.createElement("span", {
     className: "inside-label"
-  }, "Fra"), /*#__PURE__*/_react.default.createElement("p", {
+  }, "Fra"), _react.default.createElement("p", {
     className: "static-placeholder"
   }, from, " -")));
 });

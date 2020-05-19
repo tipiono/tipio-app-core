@@ -19,15 +19,15 @@ var SmallPopularBiddingTipioEdit = function SmallPopularBiddingTipioEdit(props) 
   var _useTranslation = (0, _reactI18next.useTranslation)(),
       t = _useTranslation.t;
 
-  return /*#__PURE__*/_react.default.createElement(_SmallPopularTipio.default, props, /*#__PURE__*/_react.default.createElement("div", {
+  return _react.default.createElement(_SmallPopularTipio.default, props, _react.default.createElement("div", {
     className: "smallPopularTipio__content__price"
-  }, /*#__PURE__*/_react.default.createElement("h6", {
+  }, _react.default.createElement("h6", {
     className: "smallPopularTipio__content__price--marketprice"
-  }, "4 500 Kr"), /*#__PURE__*/_react.default.createElement("h6", {
+  }, "4 500 Kr"), _react.default.createElement("h6", {
     className: "smallPopularTipio__content__price--saleprice"
-  }, "2 500 Kr")), /*#__PURE__*/_react.default.createElement("div", {
+  }, "2 500 Kr")), _react.default.createElement("div", {
     className: "smallPopularTipio__content__submit"
-  }, /*#__PURE__*/_react.default.createElement(_SecondaryOutlineButton.default, {
+  }, _react.default.createElement(_SecondaryOutlineButton.default, {
     text: t('admin.mainTipio.edit'),
     onClick: props.onClick
   })));

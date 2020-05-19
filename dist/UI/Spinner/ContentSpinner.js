@@ -10,9 +10,9 @@ var _react = _interopRequireDefault(require("react"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function ContentSpinner() {
-  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("div", {
+  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("div", {
     className: "text-center pt-6"
-  }, /*#__PURE__*/_react.default.createElement("span", {
+  }, _react.default.createElement("span", {
     className: "spinner-border text-primary",
     role: "status",
     "aria-hidden": "true"

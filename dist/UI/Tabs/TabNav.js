@@ -21,7 +21,7 @@ function TabNav(_ref) {
   var children = _ref.children,
       attributes = _objectWithoutProperties(_ref, ["children"]);
 
-  return /*#__PURE__*/_react.default.createElement("ul", _extends({}, attributes, {
+  return _react.default.createElement("ul", _extends({}, attributes, {
     className: "tab"
   }), children);
 }
