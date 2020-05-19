@@ -9,6 +9,8 @@ var _react = _interopRequireDefault(require("react"));
 
 var _reactChartjs = require("react-chartjs-2");
 
+require("chartjs-plugin-annotation");
+
 var _getDate = _interopRequireDefault(require("../../Util/getDate"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -102,6 +104,16 @@ var VerticalChart = function VerticalChart(_ref) {
           }
         }
       }
+    },
+    annotation: {
+      annotations: [{
+        type: 'line',
+        mode: 'horizontal',
+        scaleID: 'y-axis-0',
+        value: 0,
+        borderColor: '#C9CFD3',
+        borderWidth: 1
+      }]
     }
   };
   return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_reactChartjs.Bar, {

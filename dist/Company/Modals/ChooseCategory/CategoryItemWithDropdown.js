@@ -89,11 +89,11 @@ var SubCategories = function SubCategories(_ref) {
       checked: selectedMap[item.id] || false
     }), _react.default.createElement("span", {
       className: "sub-category-link ml-4"
-    }, " ", item.title)) : _react.default.createElement("span", {
+    }, item.title)) : _react.default.createElement("span", {
       className: 'sub-category-link ml-4 ' + (selectedId === item.id ? 'selected' : ''),
       onClick: function onClick(e) {
         e.preventDefault();
-        setSelectedId(item.id);
+        setSelectedId(selectedId === item.id ? null : item.id);
         onSelectItem(item);
       }
     }, item.title))), showSubSubcategories === item.id && item.sub_categories && _react.default.createElement("ul", {
@@ -110,7 +110,10 @@ var SubCategories = function SubCategories(_ref) {
       }), _react.default.createElement("span", {
         className: "sub-sub-category-link ml-4",
         onClick: function onClick() {
-          _onClick(c);
+          if (!c.sub_categories.length) {
+            setSelectedId(selectedId === c.id ? null : c.id);
+            onSelectItem(c);
+          } else _onClick(c);
         }
       }, c.title));
     })));

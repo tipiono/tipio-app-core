@@ -40,6 +40,22 @@ var OrderItemCard = function OrderItemCard(_ref) {
       address = _order$order_addresse[0];
 
   address = address || {};
+
+  var getDate = function getDate(date) {
+    var dateStr = new Date(date);
+    console.log(dateStr.getMonth());
+  };
+
+  var getFormattedDate = function getFormattedDate(date) {
+    var dateStr = new Date(date);
+    var year = dateStr.getFullYear();
+    var month = (1 + dateStr.getMonth()).toString().padStart(2, '0');
+    var day = dateStr.getDate().toString().padStart(2, '0');
+    var hours = dateStr.getHours().toString().padStart(2, '0');
+    var min = dateStr.getMinutes().toString().padStart(2, '0');
+    return day + '.' + month + '.' + year + ' - ' + hours + ':' + min;
+  };
+
   return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("section", {
     className: "orderItem"
   }, _react.default.createElement("div", {
@@ -68,29 +84,30 @@ var OrderItemCard = function OrderItemCard(_ref) {
     className: "w-33"
   }, "E-post: ", order.order_user.email), _react.default.createElement("p", {
     className: "w-33"
-  }, "Nummer: 987 67 890"))), _react.default.createElement("div", {
-    className: "orderItem__content--productDetails"
-  }, order.order_products.map(function (order_product) {
+  }, "Nummer:", order.user.phone))), _react.default.createElement("div", {
+    className: "border__bottom"
+  }, order.order_products.map(function (order_product, i) {
     return _react.default.createElement("div", {
+      className: "orderItem__content--productDetails",
+      key: order_product.id + i
+    }, _react.default.createElement("div", {
       className: "orderItem--row"
     }, _react.default.createElement("p", {
       className: "w-33 p-bold product__title"
     }, order_product.title), _react.default.createElement("p", {
       className: "w-33 orderNumber"
-    }, "Ordrenummer: 89674590"), _react.default.createElement("div", {
+    }, "Ordrenummer: ", order_product.order_id), _react.default.createElement("div", {
       className: "w-33 antall__price"
-    }, _react.default.createElement("p", null, "Antall: ", order_product.quantity), _react.default.createElement("p", null, "Pris: ", order_product.price, " Kr")));
-  }), _react.default.createElement("div", {
-    className: "orderItem--row"
-  }, _react.default.createElement("p", {
-    className: "w-33"
-  }, "30.06.2019 - 13:09"), _react.default.createElement("p", {
-    className: "w-33 orderNumberMobile"
-  }, "Ordrenummer: 89674590"), _react.default.createElement("p", {
-    className: "w-33"
-  }, "Betalingsm\xE5te: Kort"), _react.default.createElement("p", {
-    className: "w-33"
-  }, "St\xF8rrelse: 46"))), _react.default.createElement("div", {
+    }, _react.default.createElement("p", null, "Antall: ", order_product.quantity), _react.default.createElement("p", null, "Pris: ", order_product.price, " Kr"))), _react.default.createElement("div", {
+      className: "orderItem--row"
+    }, _react.default.createElement("p", {
+      className: "w-33"
+    }, getFormattedDate(order_product.created_at)), _react.default.createElement("p", {
+      className: "w-33 orderNumberMobile"
+    }, "Ordrenummer: ", order_product.order_id), _react.default.createElement("p", {
+      className: "w-33"
+    }, "Betalingsm\xE5te: Kort")));
+  })), _react.default.createElement("div", {
     className: "orderItem__content--totalSum"
   }, _react.default.createElement("p", null, "Totalsum"), _react.default.createElement("p", null, order.total_price, " Kr")), _react.default.createElement("div", {
     className: "orderItem__content--arrow",
