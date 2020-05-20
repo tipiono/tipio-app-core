@@ -18,6 +18,7 @@ var SmallPopularTipio = function SmallPopularTipio(_ref) {
       binding_expires_in = _ref.binding_expires_in,
       images = _ref.images,
       brand = _ref.brand,
+      subtitle = _ref.subtitle,
       type = _ref.type,
       onClick = _ref.onClick;
   return _react.default.createElement("div", {
@@ -42,7 +43,7 @@ var SmallPopularTipio = function SmallPopularTipio(_ref) {
     className: "smallPopularTipio__content--title"
   }, title), _react.default.createElement("p", {
     className: "smallPopularTipio__content--description"
-  }, brand), children));
+  }, brand ? brand : subtitle, " "), children));
 };
 
 var _default = SmallPopularTipio;
