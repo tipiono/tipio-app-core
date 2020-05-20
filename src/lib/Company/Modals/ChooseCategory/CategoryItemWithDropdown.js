@@ -46,6 +46,8 @@ const SubCategories = ({
                                         onClick={(e) => {
                                             e.preventDefault();
                                             subCategoryOnClick(item);
+                                            onSelectItem(0);
+                                            setSelectedId(null);
                                             onClick(item);
                                         }}
                                     >
@@ -94,17 +96,29 @@ const SubCategories = ({
                                                     checked={selectedMap[c.id] || false}
                                                 />
                                             )}
-                                            <span
-                                                className="sub-sub-category-link ml-4"
-                                                onClick={() => {
-                                                    if (!c.sub_categories.length) {
+                                            {!c.sub_categories.length ? (
+                                                <span
+                                                    className={`sub-sub-category-link ml-4 ${
+                                                        selectedId === c.id ? 'selected' : ''
+                                                    }`}
+                                                    onClick={() => {
                                                         setSelectedId(selectedId === c.id ? null : c.id);
                                                         onSelectItem(c);
-                                                    } else onClick(c);
-                                                }}
-                                            >
-                                                {c.title}
-                                            </span>
+                                                    }}
+                                                >
+                                                    {c.title}
+                                                </span>
+                                            ) : (
+                                                <span
+                                                    className={'sub-sub-category-link ml-4'}
+                                                    onClick={() => {
+                                                        onSelectItem(0);
+                                                        onClick(c);
+                                                    }}
+                                                >
+                                                    {c.title}
+                                                </span>
+                                            )}
                                         </li>
                                     );
                                 })}
