@@ -116,7 +116,7 @@ var SubCategories = function SubCategories(_ref) {
           onSelectItem(c);
         }
       }, c.title) : _react.default.createElement("span", {
-        className: "sub-sub-category-link ml-4",
+        className: 'sub-sub-category-link ml-4',
         onClick: function onClick() {
           onSelectItem(0);
 
