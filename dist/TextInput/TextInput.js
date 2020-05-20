@@ -21,11 +21,11 @@ var TextInput = function TextInput(_ref) {
       label = _ref.label,
       onChange = _ref.onChange,
       onBlur = _ref.onBlur;
-  return /*#__PURE__*/_react.default.createElement("div", {
+  return _react.default.createElement("div", {
     className: "form-group"
-  }, /*#__PURE__*/_react.default.createElement("label", {
+  }, _react.default.createElement("label", {
     className: "pure-material-textfield-outlined"
-  }, /*#__PURE__*/_react.default.createElement("input", {
+  }, _react.default.createElement("input", {
     placeholder: placeholder,
     type: "text",
     className: "form-control form-control-lg",
@@ -34,7 +34,7 @@ var TextInput = function TextInput(_ref) {
     name: "title",
     onChange: onChange,
     onBlur: onBlur
-  }), /*#__PURE__*/_react.default.createElement("span", {
+  }), _react.default.createElement("span", {
     className: "label-sm"
   }, label)));
 };

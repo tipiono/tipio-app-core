@@ -21,37 +21,37 @@ var SingleVotingCard = function SingleVotingCard(_ref) {
       joined = _ref.joined,
       shareOnClick = _ref.shareOnClick,
       voteOnClick = _ref.voteOnClick;
-  return /*#__PURE__*/_react.default.createElement("div", {
+  return _react.default.createElement("div", {
     className: "singleVotingCard"
-  }, /*#__PURE__*/_react.default.createElement("div", {
+  }, _react.default.createElement("div", {
     className: "singleVotingCard__header"
-  }, /*#__PURE__*/_react.default.createElement("a", {
+  }, _react.default.createElement("a", {
     className: "lazy-image singleVotingCard__header--preview",
     href: "/",
     onClick: onClick
-  }, /*#__PURE__*/_react.default.createElement("img", {
+  }, _react.default.createElement("img", {
     className: "lazyload singleVotingCard__header--preview--image",
     src: image,
     alt: ""
-  }))), /*#__PURE__*/_react.default.createElement("div", {
+  }))), _react.default.createElement("div", {
     className: "singleVotingCard__body"
-  }, /*#__PURE__*/_react.default.createElement("div", {
+  }, _react.default.createElement("div", {
     className: "singleVotingCard__body--content"
-  }, /*#__PURE__*/_react.default.createElement("a", {
+  }, _react.default.createElement("a", {
     onClick: onClick,
     href: "/tipio/vote/".concat(id)
-  }, /*#__PURE__*/_react.default.createElement("h5", {
+  }, _react.default.createElement("h5", {
     className: "singleVotingCard__body--content--title"
-  }, title)), brand && /*#__PURE__*/_react.default.createElement("h4", {
+  }, title)), brand && _react.default.createElement("h4", {
     className: "singleVotingCard__body--content--description"
-  }, brand)), /*#__PURE__*/_react.default.createElement("h3", {
+  }, brand)), _react.default.createElement("h3", {
     className: "singleVotingCard__body--content--interested"
-  }, joinCount, " interesserte"), /*#__PURE__*/_react.default.createElement("span", {
+  }, joinCount, " interesserte"), _react.default.createElement("span", {
     className: "singleVotingCard__body--showInterese"
-  }, joined ? /*#__PURE__*/_react.default.createElement(_SecondaryOutlineButton.default, {
+  }, joined ? _react.default.createElement(_SecondaryOutlineButton.default, {
     text: "Del n\xE5",
     onClick: shareOnClick
-  }) : /*#__PURE__*/_react.default.createElement(_SecondaryOutlineButton.default, {
+  }) : _react.default.createElement(_SecondaryOutlineButton.default, {
     text: "Meld interesse",
     onClick: voteOnClick
   }))));

@@ -20,35 +20,35 @@ function SaleCard(_ref) {
       children = _ref.children,
       expiresIn = _ref.expiresIn,
       onClick = _ref.onClick;
-  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("div", {
+  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("div", {
     className: "saleCard"
-  }, /*#__PURE__*/_react.default.createElement("div", {
+  }, _react.default.createElement("div", {
     className: "d-flex flex-row mb-4"
-  }, /*#__PURE__*/_react.default.createElement("a", {
+  }, _react.default.createElement("a", {
     className: "saleCard__preview lazy-image",
     href: "",
     onClick: onClick
-  }, /*#__PURE__*/_react.default.createElement("img", {
+  }, _react.default.createElement("img", {
     className: "saleCard__preview--image lazyload",
     src: image,
     alt: ""
-  }), /*#__PURE__*/_react.default.createElement("span", {
+  }), _react.default.createElement("span", {
     className: "saleCard__preview--discount"
-  }, saleDiscount, " %")), /*#__PURE__*/_react.default.createElement("div", {
+  }, saleDiscount, " %")), _react.default.createElement("div", {
     className: "saleCard__content"
-  }, /*#__PURE__*/_react.default.createElement("div", {
+  }, _react.default.createElement("div", {
     className: "saleCard__content--price"
-  }, /*#__PURE__*/_react.default.createElement("h6", {
+  }, _react.default.createElement("h6", {
     className: "saleCard__content--price--sale"
-  }, salePrice, " Kr"), /*#__PURE__*/_react.default.createElement("h6", {
+  }, salePrice, " Kr"), _react.default.createElement("h6", {
     className: "saleCard__content--price--cost"
-  }, costPrice, " Kr")), /*#__PURE__*/_react.default.createElement("a", {
+  }, costPrice, " Kr")), _react.default.createElement("a", {
     onClick: onClick
-  }, /*#__PURE__*/_react.default.createElement("h6", {
+  }, _react.default.createElement("h6", {
     className: "saleCard__content--title"
-  }, title)), /*#__PURE__*/_react.default.createElement("div", {
+  }, title)), _react.default.createElement("div", {
     className: "saleCard__content--timeLeft"
-  }, /*#__PURE__*/_react.default.createElement(_index.PinkyCountdownSM, {
+  }, _react.default.createElement(_index.PinkyCountdownSM, {
     expires_in: expiresIn,
     type: _index.CountdownType.PINK
   })))), children));

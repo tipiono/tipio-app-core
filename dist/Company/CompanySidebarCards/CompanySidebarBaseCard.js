@@ -21,23 +21,23 @@ var CompanySidebarBaseCard = function CompanySidebarBaseCard(_ref) {
       meta = props.meta,
       generatedRevenue = props.generatedRevenue,
       showRevenue = props.showRevenue;
-  return /*#__PURE__*/_react.default.createElement("div", {
+  return _react.default.createElement("div", {
     className: "companySidebarCard"
-  }, /*#__PURE__*/_react.default.createElement("div", {
+  }, _react.default.createElement("div", {
     className: "companySidebarCard__header"
-  }, /*#__PURE__*/_react.default.createElement("div", {
+  }, _react.default.createElement("div", {
     className: "companySidebarCard__header__content"
-  }, /*#__PURE__*/_react.default.createElement("h3", {
+  }, _react.default.createElement("h3", {
     className: "companySidebarCard__header__content--title"
-  }, tipio.title), /*#__PURE__*/_react.default.createElement("p", {
+  }, tipio.title), _react.default.createElement("p", {
     className: "companySidebarCard__header__content--subtitle"
-  }, "Varekode: ", tipio.product_code, " ")), /*#__PURE__*/_react.default.createElement("div", {
+  }, "Varekode: ", tipio.product_code, " ")), _react.default.createElement("div", {
     className: "companySidebarCard__header__cost"
-  }, /*#__PURE__*/_react.default.createElement("p", {
+  }, _react.default.createElement("p", {
     className: "companySidebarCard__header__cost--label"
-  }, showRevenue ? 'Omsetning' : 'Potensiell omsetning'), props.loading ? /*#__PURE__*/_react.default.createElement("div", {
+  }, showRevenue ? 'Omsetning' : 'Potensiell omsetning'), props.loading ? _react.default.createElement("div", {
     className: "placeholder-content companySidebarCard__header--placeholder"
-  }, "\xA0") : /*#__PURE__*/_react.default.createElement("h3", {
+  }, "\xA0") : _react.default.createElement("h3", {
     className: "companySidebarCard__header__cost--price"
   }, generatedRevenue ? generatedRevenue : meta.potential_earning, " Kr"))), children);
 };

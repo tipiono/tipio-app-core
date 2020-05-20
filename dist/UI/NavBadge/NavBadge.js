@@ -11,7 +11,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var NavBadge = function NavBadge(_ref) {
   var count = _ref.count;
-  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("span", {
+  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("span", {
     className: "navBadge"
   }, count));
 };

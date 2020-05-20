@@ -24,18 +24,18 @@ var _default = _react.default.forwardRef(function (_ref, ref) {
       displayErrors = _ref.displayErrors,
       props = _objectWithoutProperties(_ref, ["placeholder", "name", "errors", "displayErrors"]);
 
-  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("label", {
+  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("label", {
     className: "pure-material-textfield-outlined"
-  }, /*#__PURE__*/_react.default.createElement("textarea", _extends({
+  }, _react.default.createElement("textarea", _extends({
     rows: "4",
     placeholder: " ",
     type: "radio",
     name: name
   }, props, {
     ref: ref
-  })), /*#__PURE__*/_react.default.createElement("span", {
+  })), _react.default.createElement("span", {
     className: "label-sm"
-  }, placeholder)), displayErrors && errors && errors[name] && /*#__PURE__*/_react.default.createElement(_ErrorMessage.default, {
+  }, placeholder)), displayErrors && errors && errors[name] && _react.default.createElement(_ErrorMessage.default, {
     content: errors[name].message,
     color: "bg-red"
   }));

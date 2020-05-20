@@ -17,5 +17,5 @@ function TabContentItem(_ref) {
   var children = _ref.children,
       props = _objectWithoutProperties(_ref, ["children"]);
 
-  return /*#__PURE__*/_react.default.createElement("div", props, children);
+  return _react.default.createElement("div", props, children);
 }

@@ -17,10 +17,10 @@ function Pagination(_ref) {
       showPrevButton = _ref.showPrevButton,
       showNextButton = _ref.showNextButton,
       handlePageClick = _ref.handlePageClick;
-  return /*#__PURE__*/_react.default.createElement("nav", {
+  return _react.default.createElement("nav", {
     className: "custom-pagination",
     "aria-label": "Page navigation"
-  }, /*#__PURE__*/_react.default.createElement(_reactPaginate.default, {
+  }, _react.default.createElement(_reactPaginate.default, {
     previousLabel: '',
     nextLabel: '',
     breakLabel: '...',

@@ -107,7 +107,7 @@ var AreaChart = function AreaChart(_ref) {
       }
     }
   };
-  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_reactChartjs.Line, {
+  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_reactChartjs.Line, {
     data: charData,
     options: options
   }));

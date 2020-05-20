@@ -14,11 +14,11 @@ var _SecondaryOutlineButton = _interopRequireDefault(require("../Buttons/Seconda
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var LargePopularVotingTipioEdit = function LargePopularVotingTipioEdit(props) {
-  return /*#__PURE__*/_react.default.createElement(_LargePopularTipio.default, props, /*#__PURE__*/_react.default.createElement("h6", {
+  return _react.default.createElement(_LargePopularTipio.default, props, _react.default.createElement("h6", {
     className: "largePopularTipio__content--interested"
-  }, "2 789 interesserte!"), /*#__PURE__*/_react.default.createElement("div", {
+  }, "2 789 interesserte!"), _react.default.createElement("div", {
     className: "largePopularTipio__content__submit"
-  }, /*#__PURE__*/_react.default.createElement(_SecondaryOutlineButton.default, {
+  }, _react.default.createElement(_SecondaryOutlineButton.default, {
     text: "Edit"
   })));
 };
