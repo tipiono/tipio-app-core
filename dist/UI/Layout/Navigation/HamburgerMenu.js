@@ -20,7 +20,6 @@ function HamburgerMenu(props) {
       toggleMenu = props.toggleMenu,
       items = props.items,
       logedIn = props.logedIn;
-  console.log(items);
   return _react.default.createElement(_react.default.Fragment, null, menuVisible && _react.default.createElement(_Overlay.default, {
     onClick: toggleMenu,
     opacity: 0.5,

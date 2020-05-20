@@ -79,6 +79,8 @@ var SubCategories = function SubCategories(_ref) {
       onClick: function onClick(e) {
         e.preventDefault();
         subCategoryOnClick(item);
+        onSelectItem(0);
+        setSelectedId(null);
 
         _onClick(item);
       }
@@ -89,11 +91,11 @@ var SubCategories = function SubCategories(_ref) {
       checked: selectedMap[item.id] || false
     }), _react.default.createElement("span", {
       className: "sub-category-link ml-4"
-    }, " ", item.title)) : _react.default.createElement("span", {
+    }, item.title)) : _react.default.createElement("span", {
       className: 'sub-category-link ml-4 ' + (selectedId === item.id ? 'selected' : ''),
       onClick: function onClick(e) {
         e.preventDefault();
-        setSelectedId(item.id);
+        setSelectedId(selectedId === item.id ? null : item.id);
         onSelectItem(item);
       }
     }, item.title))), showSubSubcategories === item.id && item.sub_categories && _react.default.createElement("ul", {
@@ -107,9 +109,17 @@ var SubCategories = function SubCategories(_ref) {
         onChange: onChange,
         value: c.id,
         checked: selectedMap[c.id] || false
-      }), _react.default.createElement("span", {
-        className: "sub-sub-category-link ml-4",
+      }), !c.sub_categories.length ? _react.default.createElement("span", {
+        className: "sub-sub-category-link ml-4 ".concat(selectedId === c.id ? 'selected' : ''),
         onClick: function onClick() {
+          setSelectedId(selectedId === c.id ? null : c.id);
+          onSelectItem(c);
+        }
+      }, c.title) : _react.default.createElement("span", {
+        className: 'sub-sub-category-link ml-4',
+        onClick: function onClick() {
+          onSelectItem(0);
+
           _onClick(c);
         }
       }, c.title));

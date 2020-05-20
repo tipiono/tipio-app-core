@@ -6,7 +6,6 @@ import { DropDown, DropDownItem } from '../../DdropDown/DropDown';
 function HamburgerMenu(props) {
     const { menuVisible, toggleMenu, items, logedIn } = props;
 
-    console.log(items);
     return (
         <>
             {menuVisible && <Overlay onClick={toggleMenu} opacity={0.5} top="88px" />}

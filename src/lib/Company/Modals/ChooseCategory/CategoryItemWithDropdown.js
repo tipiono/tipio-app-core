@@ -46,6 +46,8 @@ const SubCategories = ({
                                         onClick={(e) => {
                                             e.preventDefault();
                                             subCategoryOnClick(item);
+                                            onSelectItem(0);
+                                            setSelectedId(null);
                                             onClick(item);
                                         }}
                                     >
@@ -62,7 +64,7 @@ const SubCategories = ({
                                                 value={item.id}
                                                 checked={selectedMap[item.id] || false}
                                             />
-                                            <span className="sub-category-link ml-4"> {item.title}</span>
+                                            <span className="sub-category-link ml-4">{item.title}</span>
                                         </>
                                     ) : (
                                         <span
@@ -71,7 +73,7 @@ const SubCategories = ({
                                             }
                                             onClick={(e) => {
                                                 e.preventDefault();
-                                                setSelectedId(item.id);
+                                                setSelectedId(selectedId === item.id ? null : item.id);
                                                 onSelectItem(item);
                                             }}
                                         >
@@ -94,14 +96,29 @@ const SubCategories = ({
                                                     checked={selectedMap[c.id] || false}
                                                 />
                                             )}
-                                            <span
-                                                className="sub-sub-category-link ml-4"
-                                                onClick={() => {
-                                                    onClick(c);
-                                                }}
-                                            >
-                                                {c.title}
-                                            </span>
+                                            {!c.sub_categories.length ? (
+                                                <span
+                                                    className={`sub-sub-category-link ml-4 ${
+                                                        selectedId === c.id ? 'selected' : ''
+                                                    }`}
+                                                    onClick={() => {
+                                                        setSelectedId(selectedId === c.id ? null : c.id);
+                                                        onSelectItem(c);
+                                                    }}
+                                                >
+                                                    {c.title}
+                                                </span>
+                                            ) : (
+                                                <span
+                                                    className={'sub-sub-category-link ml-4'}
+                                                    onClick={() => {
+                                                        onSelectItem(0);
+                                                        onClick(c);
+                                                    }}
+                                                >
+                                                    {c.title}
+                                                </span>
+                                            )}
                                         </li>
                                     );
                                 })}
