@@ -35,9 +35,9 @@ var AddSaleSidebarCard = function AddSaleSidebarCard(_ref) {
     className: "addSaleSidebarCard__header__content--title"
   }, title), _react.default.createElement("p", {
     className: "addSaleSidebarCard__header__content--subtitle"
-  }, brand))), inventory && inventory > 0 && inventory <= 10 && _react.default.createElement("p", {
+  }, brand))), inventory && inventory > 0 && inventory <= 10 ? _react.default.createElement("p", {
     className: "addSaleSidebarCard__stock"
-  }, "Kun ", inventory, " igjen"), _react.default.createElement("div", {
+  }, "Kun ", inventory, " igjen") : '', _react.default.createElement("div", {
     className: "addSaleSidebarCard__price"
   }, _react.default.createElement("div", {
     className: "addSaleSidebarCard__price--cost"
