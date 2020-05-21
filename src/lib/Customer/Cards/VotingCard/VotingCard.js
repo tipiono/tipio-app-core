@@ -11,7 +11,8 @@ function VotingCard({
     children,
     onClick,
     subtitle,
-    voteHasExpired
+    voteHasExpired,
+    showTimmer
 }) {
     return (
         <>
@@ -26,9 +27,11 @@ function VotingCard({
                         />
                     </a>
 
-                    {/* <div className="votingCard__header--timeLeft">
-                        <TipioCountdown className="timer" expires_in={expiresIn} />
-                    </div> */}
+                    {showTimmer && (
+                        <div className="votingCard__header--timeLeft">
+                            <TipioCountdown className="timer" expires_in={expiresIn} />
+                        </div>
+                    )}
                 </div>
 
                 <div className="votingCard__body">

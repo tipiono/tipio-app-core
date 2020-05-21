@@ -1,7 +1,7 @@
 import React from 'react';
 import TipioCountdown from '../TipioCountdown/TipioCountdown';
 
-const SmallPopularTipio = ({ id, children, title, binding_expires_in, images, brand, type, onClick }) => {
+const SmallPopularTipio = ({ id, children, title, binding_expires_in, images, brand, subtitle, type, onClick }) => {
     return (
         <div className="smallPopularTipio">
             <div className="smallPopularTipio__preview lazy-image" onClick={onClick}>
@@ -25,7 +25,7 @@ const SmallPopularTipio = ({ id, children, title, binding_expires_in, images, br
                 >
                     {title}
                 </a>
-                <p className="smallPopularTipio__content--description">{brand}</p>
+                <p className="smallPopularTipio__content--description">{brand ? brand : subtitle} </p>
 
                 {children}
             </div>

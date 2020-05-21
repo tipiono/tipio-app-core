@@ -9,17 +9,18 @@ var _react = _interopRequireDefault(require("react"));
 
 var _LargePopularTipio = _interopRequireDefault(require("./LargePopularTipio"));
 
-var _SecondaryOutlineButton = _interopRequireDefault(require("../Buttons/SecondaryOutlineButton"));
+var _SecondaryButton = _interopRequireDefault(require("../Buttons/SecondaryButton"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var LargePopularVotingTipioEdit = function LargePopularVotingTipioEdit(props) {
   return _react.default.createElement(_LargePopularTipio.default, props, _react.default.createElement("h6", {
     className: "largePopularTipio__content--interested"
-  }, "2 789 interesserte!"), _react.default.createElement("div", {
+  }, props.count, " interesserte!"), _react.default.createElement("div", {
     className: "largePopularTipio__content__submit"
-  }, _react.default.createElement(_SecondaryOutlineButton.default, {
-    text: "Edit"
+  }, _react.default.createElement(_SecondaryButton.default, {
+    text: "Gi tilbud",
+    onClick: props.onClick
   })));
 };
 

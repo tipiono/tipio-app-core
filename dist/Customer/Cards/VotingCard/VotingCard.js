@@ -21,7 +21,8 @@ function VotingCard(_ref) {
       children = _ref.children,
       onClick = _ref.onClick,
       subtitle = _ref.subtitle,
-      voteHasExpired = _ref.voteHasExpired;
+      voteHasExpired = _ref.voteHasExpired,
+      showTimmer = _ref.showTimmer;
   return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("div", {
     className: "votingCard"
   }, _react.default.createElement("div", {
@@ -35,6 +36,11 @@ function VotingCard(_ref) {
     src: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 2'%3E%3C/svg%3E",
     "data-src": image,
     alt: ""
+  })), showTimmer && _react.default.createElement("div", {
+    className: "votingCard__header--timeLeft"
+  }, _react.default.createElement(_TipioCountdown.default, {
+    className: "timer",
+    expires_in: expiresIn
   }))), _react.default.createElement("div", {
     className: "votingCard__body"
   }, !voteHasExpired ? _react.default.createElement("div", {

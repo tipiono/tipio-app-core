@@ -16,6 +16,7 @@ var LargePopularTipio = function LargePopularTipio(_ref) {
       children = _ref.children,
       title = _ref.title,
       subtitle = _ref.subtitle,
+      brand = _ref.brand,
       binding_expires_in = _ref.binding_expires_in,
       images = _ref.images,
       onClick = _ref.onClick,
@@ -44,7 +45,7 @@ var LargePopularTipio = function LargePopularTipio(_ref) {
   }, title), _react.default.createElement("a", {
     href: "/tipio/".concat(type === 2 ? 'bind' : 'vote', "/").concat(id),
     className: "largePopularTipio__content--description"
-  }, subtitle), children));
+  }, brand ? brand : subtitle), children));
 };
 
 var _default = LargePopularTipio;
