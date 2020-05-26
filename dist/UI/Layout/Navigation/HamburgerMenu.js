@@ -17,9 +17,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function HamburgerMenu(props) {
   var menuVisible = props.menuVisible,
-      toggleMenu = props.toggleMenu,
-      items = props.items,
-      logedIn = props.logedIn;
+    toggleMenu = props.toggleMenu,
+    items = props.items,
+    logedIn = props.logedIn;
   return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, menuVisible && /*#__PURE__*/_react.default.createElement(_Overlay.default, {
     onClick: toggleMenu,
     opacity: 0.5,
@@ -28,7 +28,7 @@ function HamburgerMenu(props) {
     className: "nav-list-item"
   }, /*#__PURE__*/_react.default.createElement("span", null, /*#__PURE__*/_react.default.createElement("a", {
     href: "#",
-    className: (0, _classnames.default)("hamburger-button", {
+    className: (0, _classnames.default)('hamburger-button', {
       show: menuVisible
     }),
     onClick: function onClick(e) {
@@ -50,8 +50,8 @@ function HamburgerMenu(props) {
       return /*#__PURE__*/_react.default.createElement("li", {
         key: x.name,
         className: "nav-item"
-      }, /*#__PURE__*/_react.default.createElement(_DropDown.DropDown, {
-        title: "Mine Tipioer"
+      }, _react.default.createElement(_DropDown.DropDown, {
+        title: 'Mine Tipioer'
       }, x.sub_items.map(function (y) {
         return /*#__PURE__*/_react.default.createElement(_DropDown.DropDownItem, {
           key: y.name
@@ -71,7 +71,7 @@ function HamburgerMenu(props) {
         key: x.name,
         id: "nav-item",
         className: (0, _classnames.default)({
-          "nav-item": items.sub_items // "nav-item-logout": logoutItem
+          'nav-item': items.sub_items // "nav-item-logout": logoutItem
 
         })
       }, /*#__PURE__*/_react.default.createElement("a", {
@@ -80,7 +80,25 @@ function HamburgerMenu(props) {
           e.preventDefault();
           props.menuItemOnClick(x);
         }
-      }, x.name));
+      }, _react.default.createElement("span", {
+        className: "nav-item__title"
+      }, ' ', x.showAddButton && _react.default.createElement("svg", {
+        width: 35,
+        height: 35,
+        viewBox: "0 0 35 35"
+      }, _react.default.createElement("g", {
+        fill: "none",
+        fillRule: "evenodd"
+      }, _react.default.createElement("circle", {
+        fill: "#4ABCAC",
+        cx: 17.28,
+        cy: 17.28,
+        r: 17.28
+      }), _react.default.createElement("path", {
+        d: "M17.06 10a.89.89 0 01.89.89v5.279h5.288a.89.89 0 010 1.781H17.95v5.288a.89.89 0 01-1.78 0l-.001-5.288H10.89a.89.89 0 010-1.78l5.279-.001V10.89a.89.89 0 01.891-.89z",
+        fill: "#381B81",
+        fillRule: "nonzero"
+      }))), x.name)));
     }
   })))));
 }

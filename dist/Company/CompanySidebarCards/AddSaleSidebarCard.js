@@ -13,18 +13,18 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var AddSaleSidebarCard = function AddSaleSidebarCard(_ref) {
   var first_price = _ref.first_price,
-      company_price = _ref.company_price,
-      tipio = _ref.tipio,
-      editButtonOnClick = _ref.editButtonOnClick,
-      addToCartOnClick = _ref.addToCartOnClick,
-      _ref$showEditButton = _ref.showEditButton,
-      showEditButton = _ref$showEditButton === void 0 ? true : _ref$showEditButton,
-      inventory = _ref.inventory,
-      _ref$showAddToCartBut = _ref.showAddToCartButton,
-      showAddToCartButton = _ref$showAddToCartBut === void 0 ? false : _ref$showAddToCartBut,
-      bindingCount = _ref.bindingCount;
+    company_price = _ref.company_price,
+    tipio = _ref.tipio,
+    editButtonOnClick = _ref.editButtonOnClick,
+    addToCartOnClick = _ref.addToCartOnClick,
+    _ref$showEditButton = _ref.showEditButton,
+    showEditButton = _ref$showEditButton === void 0 ? true : _ref$showEditButton,
+    inventory = _ref.inventory,
+    _ref$showAddToCartBut = _ref.showAddToCartButton,
+    showAddToCartButton = _ref$showAddToCartBut === void 0 ? false : _ref$showAddToCartBut,
+    bindingCount = _ref.bindingCount;
   var title = tipio.title,
-      brand = tipio.brand;
+    brand = tipio.brand;
   return /*#__PURE__*/_react.default.createElement("div", {
     className: "addSaleSidebarCard"
   }, /*#__PURE__*/_react.default.createElement("div", {
@@ -35,9 +35,9 @@ var AddSaleSidebarCard = function AddSaleSidebarCard(_ref) {
     className: "addSaleSidebarCard__header__content--title"
   }, title), /*#__PURE__*/_react.default.createElement("p", {
     className: "addSaleSidebarCard__header__content--subtitle"
-  }, brand))), inventory && inventory > 0 && inventory <= 10 && /*#__PURE__*/_react.default.createElement("p", {
+  }, brand))), inventory && inventory > 0 && inventory <= 10 ? _react.default.createElement("p", {
     className: "addSaleSidebarCard__stock"
-  }, "Kun ", inventory, " igjen"), /*#__PURE__*/_react.default.createElement("div", {
+  }, "Kun ", inventory, " igjen") : '', _react.default.createElement("div", {
     className: "addSaleSidebarCard__price"
   }, /*#__PURE__*/_react.default.createElement("div", {
     className: "addSaleSidebarCard__price--cost"

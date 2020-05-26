@@ -1,14 +1,14 @@
 import React from 'react';
-import LargePopularTipio from "./LargePopularTipio";
-import SecondaryOutlineButton from "../Buttons/SecondaryOutlineButton";
+import LargePopularTipio from './LargePopularTipio';
+import SecondaryButton from '../Buttons/SecondaryButton';
 
 const LargePopularVotingTipioEdit = (props) => {
     return (
         <LargePopularTipio {...props}>
-            <h6 className="largePopularTipio__content--interested">2 789 interesserte!</h6>
+            <h6 className="largePopularTipio__content--interested">{props.count} interesserte!</h6>
 
             <div className="largePopularTipio__content__submit">
-                <SecondaryOutlineButton text="Edit"/>
+                <SecondaryButton text="Gi tilbud" onClick={props.onClick} />
             </div>
         </LargePopularTipio>
     );

@@ -35,26 +35,26 @@ function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
-function dropdown() {}
+function dropdown() { }
 
 var SubCategories = function SubCategories(_ref) {
   var sub_categories = _ref.sub_categories,
-      _onClick = _ref.onClick,
-      subSubCategoryOnClick = _ref.subSubCategoryOnClick,
-      withCheckbox = _ref.withCheckbox,
-      onChange = _ref.onChange,
-      selectedMap = _ref.selectedMap,
-      onSelectItem = _ref.onSelectItem;
+    _onClick = _ref.onClick,
+    subSubCategoryOnClick = _ref.subSubCategoryOnClick,
+    withCheckbox = _ref.withCheckbox,
+    onChange = _ref.onChange,
+    selectedMap = _ref.selectedMap,
+    onSelectItem = _ref.onSelectItem;
 
   var _useState = (0, _react.useState)(0),
-      _useState2 = _slicedToArray(_useState, 2),
-      showSubSubcategories = _useState2[0],
-      setShowSubSubcategories = _useState2[1];
+    _useState2 = _slicedToArray(_useState, 2),
+    showSubSubcategories = _useState2[0],
+    setShowSubSubcategories = _useState2[1];
 
   var _useState3 = (0, _react.useState)(0),
-      _useState4 = _slicedToArray(_useState3, 2),
-      selectedId = _useState4[0],
-      setSelectedId = _useState4[1];
+    _useState4 = _slicedToArray(_useState3, 2),
+    selectedId = _useState4[0],
+    setSelectedId = _useState4[1];
 
   function subCategoryOnClick(item) {
     var sci = 0;
@@ -83,6 +83,8 @@ var SubCategories = function SubCategories(_ref) {
       onClick: function onClick(e) {
         e.preventDefault();
         subCategoryOnClick(item);
+        onSelectItem(0);
+        setSelectedId(null);
 
         _onClick(item);
       }
@@ -111,13 +113,18 @@ var SubCategories = function SubCategories(_ref) {
         onChange: onChange,
         value: c.id,
         checked: selectedMap[c.id] || false
-      }), /*#__PURE__*/_react.default.createElement("span", {
-        className: "sub-sub-category-link ml-4",
+      }), !c.sub_categories.length ? _react.default.createElement("span", {
+        className: "sub-sub-category-link ml-4 ".concat(selectedId === c.id ? 'selected' : ''),
         onClick: function onClick() {
-          if (!c.sub_categories.length) {
-            setSelectedId(selectedId === c.id ? null : c.id);
-            onSelectItem(c);
-          } else _onClick(c);
+          setSelectedId(selectedId === c.id ? null : c.id);
+          onSelectItem(c);
+        }
+      }, c.title) : _react.default.createElement("span", {
+        className: 'sub-sub-category-link ml-4',
+        onClick: function onClick() {
+          onSelectItem(0);
+
+          _onClick(c);
         }
       }, c.title));
     })));
@@ -126,16 +133,16 @@ var SubCategories = function SubCategories(_ref) {
 
 var CategoryItem = function CategoryItem(_ref2) {
   var id = _ref2.id,
-      title = _ref2.title,
-      icon = _ref2.icon,
-      onSelect = _ref2.onSelect,
-      active = _ref2.active,
-      sub_categories = _ref2.sub_categories,
-      _onClick2 = _ref2.onClick,
-      subCategoriesOnClick = _ref2.subCategoriesOnClick,
-      withCheckbox = _ref2.withCheckbox,
-      onChange = _ref2.onChange,
-      selectedMap = _ref2.selectedMap;
+    title = _ref2.title,
+    icon = _ref2.icon,
+    onSelect = _ref2.onSelect,
+    active = _ref2.active,
+    sub_categories = _ref2.sub_categories,
+    _onClick2 = _ref2.onClick,
+    subCategoriesOnClick = _ref2.subCategoriesOnClick,
+    withCheckbox = _ref2.withCheckbox,
+    onChange = _ref2.onChange,
+    selectedMap = _ref2.selectedMap;
   return /*#__PURE__*/_react.default.createElement("div", {
     className: "category-item dropdown"
   }, /*#__PURE__*/_react.default.createElement("div", {

@@ -13,16 +13,17 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function VotingCard(_ref) {
   var id = _ref.id,
-      image = _ref.image,
-      interestedCounter = _ref.interestedCounter,
-      title = _ref.title,
-      brand = _ref.brand,
-      expiresIn = _ref.expiresIn,
-      children = _ref.children,
-      onClick = _ref.onClick,
-      subtitle = _ref.subtitle,
-      voteHasExpired = _ref.voteHasExpired;
-  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("div", {
+    image = _ref.image,
+    interestedCounter = _ref.interestedCounter,
+    title = _ref.title,
+    brand = _ref.brand,
+    expiresIn = _ref.expiresIn,
+    children = _ref.children,
+    onClick = _ref.onClick,
+    subtitle = _ref.subtitle,
+    voteHasExpired = _ref.voteHasExpired,
+    showTimmer = _ref.showTimmer;
+  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("div", {
     className: "votingCard"
   }, /*#__PURE__*/_react.default.createElement("div", {
     className: "votingCard__header"
@@ -35,7 +36,12 @@ function VotingCard(_ref) {
     src: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 2'%3E%3C/svg%3E",
     "data-src": image,
     alt: ""
-  }))), /*#__PURE__*/_react.default.createElement("div", {
+  })), showTimmer && _react.default.createElement("div", {
+    className: "votingCard__header--timeLeft"
+  }, _react.default.createElement(_TipioCountdown.default, {
+    className: "timer",
+    expires_in: expiresIn
+  }))), _react.default.createElement("div", {
     className: "votingCard__body"
   }, !voteHasExpired ? /*#__PURE__*/_react.default.createElement("div", {
     className: "votingCard__body--interested"
