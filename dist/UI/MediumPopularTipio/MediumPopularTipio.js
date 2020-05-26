@@ -20,27 +20,27 @@ var MediumPopularTipio = function MediumPopularTipio(_ref) {
       brand = _ref.brand,
       type = _ref.type,
       onClick = _ref.onClick;
-  return _react.default.createElement("div", {
+  return /*#__PURE__*/_react.default.createElement("div", {
     className: "mediumPopularTipio"
-  }, _react.default.createElement("div", {
+  }, /*#__PURE__*/_react.default.createElement("div", {
     className: "mediumPopularTipio__preview lazy-image",
     onClick: onClick
-  }, _react.default.createElement("img", {
+  }, /*#__PURE__*/_react.default.createElement("img", {
     className: "mediumPopularTipio__preview--image lazyload",
     src: images && images.length && images[0].blob_url,
     alt: ""
-  }), type === 2 && _react.default.createElement("div", {
+  }), type === 2 && /*#__PURE__*/_react.default.createElement("div", {
     className: "mediumPopularTipio__preview--timeLeft"
-  }, _react.default.createElement(_TipioCountdown.default, {
+  }, /*#__PURE__*/_react.default.createElement(_TipioCountdown.default, {
     className: "timer",
     expires_in: binding_expires_in
-  }))), _react.default.createElement("div", {
+  }))), /*#__PURE__*/_react.default.createElement("div", {
     className: "mediumPopularTipio__content"
-  }, _react.default.createElement("a", {
+  }, /*#__PURE__*/_react.default.createElement("a", {
     href: "/tipio/".concat(type === 2 ? 'bind' : 'vote', "/").concat(id),
     onClick: onClick,
     className: "mediumPopularTipio__content--title"
-  }, title), _react.default.createElement("p", {
+  }, title), /*#__PURE__*/_react.default.createElement("p", {
     className: "mediumPopularTipio__content--description"
   }, brand), children));
 };

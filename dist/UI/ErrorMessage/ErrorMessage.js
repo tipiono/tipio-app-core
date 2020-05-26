@@ -18,11 +18,11 @@ var ErrorMessage = function ErrorMessage(_ref) {
       paddingY = _ref.paddingY,
       paddingX = _ref.paddingX,
       textAlign = _ref.textAlign;
-  return _react.default.createElement("div", {
+  return /*#__PURE__*/_react.default.createElement("div", {
     className: (0, _classnames.default)("errorMessage", color, paddingY, paddingX, textAlign)
-  }, _react.default.createElement("span", {
+  }, /*#__PURE__*/_react.default.createElement("span", {
     className: "errorMessage--title"
-  }, title, " "), _react.default.createElement("span", {
+  }, title, " "), /*#__PURE__*/_react.default.createElement("span", {
     className: "errorMessage--content"
   }, content));
 };

@@ -19,11 +19,11 @@ var SmallPopularVotingTipioEdit = function SmallPopularVotingTipioEdit(props) {
   var _useTranslation = (0, _reactI18next.useTranslation)(),
       t = _useTranslation.t;
 
-  return _react.default.createElement(_SmallPopularTipio.default, props, _react.default.createElement("h6", {
+  return /*#__PURE__*/_react.default.createElement(_SmallPopularTipio.default, props, /*#__PURE__*/_react.default.createElement("h6", {
     className: "smallPopularTipio__content--interested"
-  }, "2 789 interesserte!"), _react.default.createElement("div", {
+  }, "2 789 interesserte!"), /*#__PURE__*/_react.default.createElement("div", {
     className: "smallPopularTipio__content__submit"
-  }, _react.default.createElement(_SecondaryOutlineButton.default, {
+  }, /*#__PURE__*/_react.default.createElement(_SecondaryOutlineButton.default, {
     text: t('admin.mainTipio.edit'),
     onClick: props.onClick
   })));

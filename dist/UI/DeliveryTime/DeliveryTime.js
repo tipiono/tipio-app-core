@@ -18,13 +18,13 @@ var DeliveryTime = function DeliveryTime(_ref) {
     2: 'uker',
     3: 'månder'
   };
-  return _react.default.createElement(_react.default.Fragment, null, estimate && _react.default.createElement("div", {
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, estimate && /*#__PURE__*/_react.default.createElement("div", {
     className: "deliveryTime"
-  }, _react.default.createElement("img", {
+  }, /*#__PURE__*/_react.default.createElement("img", {
     className: "deliveryTime__icon",
     src: _deliverytime.default,
     alt: ""
-  }), _react.default.createElement("span", {
+  }), /*#__PURE__*/_react.default.createElement("span", {
     className: "deliveryTime__title"
   }, "Levering i l\xF8pet av ".concat(estimate.from, " - ").concat(estimate.to, " ").concat(periods[estimate.period]))));
 };
