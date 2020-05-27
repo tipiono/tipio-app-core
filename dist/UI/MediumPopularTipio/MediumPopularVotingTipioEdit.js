@@ -24,7 +24,7 @@ var MediumPopularVotingTipioEdit = function MediumPopularVotingTipioEdit(props) 
   }, "2 789 interesserte!"), _react.default.createElement("div", {
     className: "mediumPopularTipio__content__submit"
   }, _react.default.createElement(_SecondaryOutlineButton.default, {
-    text: t('admin.mainTipio.edit'),
+    text: "Rediger",
     onClick: props.onClick
   })));
 };

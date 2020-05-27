@@ -18,9 +18,9 @@ var LargePopularBidingTipioEdit = function LargePopularBidingTipioEdit(props) {
     className: "largePopularTipio__content__price"
   }, _react.default.createElement("h6", {
     className: "largePopularTipio__content__price--marketprice"
-  }, "4 500 Kr"), _react.default.createElement("h6", {
+  }, props.market_price, " Kr"), _react.default.createElement("h6", {
     className: "largePopularTipio__content__price--saleprice"
-  }, "2 500 Kr")), _react.default.createElement("div", {
+  }, props.offer_price, " Kr")), _react.default.createElement("div", {
     className: "largePopularTipio__content__submit"
   }, _react.default.createElement(_SecondaryButton.default, {
     text: "Rediger",
