@@ -6,8 +6,8 @@ const LargePopularBidingTipioEdit = (props) => {
     return (
         <LargePopularTipio {...props}>
             <div className="largePopularTipio__content__price">
-                <h6 className="largePopularTipio__content__price--marketprice">4 500 Kr</h6>
-                <h6 className="largePopularTipio__content__price--saleprice">2 500 Kr</h6>
+                <h6 className="largePopularTipio__content__price--marketprice">{props.market_price} Kr</h6>
+                <h6 className="largePopularTipio__content__price--saleprice">{props.offer_price} Kr</h6>
             </div>
 
             <div className="largePopularTipio__content__submit">
