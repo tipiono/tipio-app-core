@@ -37,7 +37,7 @@ var _default = _react.default.forwardRef(function (_ref, ref) {
   }, props, {
     ref: ref,
     style: {
-      paddingLeft: props.paddingLeft ? "".concat(props.paddingLeft + 55 + 8 + 5.328125, "px") : '75px'
+      paddingLeft: props.paddingleft ? "".concat(props.paddingleft + 55 + 8 + 5.328125, "px") : '75px'
     }
   })), _react.default.createElement("label", {
     className: "outside-label"
