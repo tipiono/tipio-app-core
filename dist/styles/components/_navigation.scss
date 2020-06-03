@@ -65,6 +65,14 @@ body.noscroll {
                     &:hover {
                         text-decoration: none;
                     }
+                    @include media-breakpoint-down(sm) {
+                        .mr-3{
+                            margin-right: 0 !important;
+                        }
+                        span{
+                            display: none;
+                        }
+                    }
                 }
 
                 .nav-list-lg-link {
