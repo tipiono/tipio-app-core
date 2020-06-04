@@ -66,10 +66,10 @@ body.noscroll {
                         text-decoration: none;
                     }
                     @include media-breakpoint-down(sm) {
-                        .mr-3{
+                        .mr-3 {
                             margin-right: 0 !important;
                         }
-                        span{
+                        span {
                             display: none;
                         }
                     }
