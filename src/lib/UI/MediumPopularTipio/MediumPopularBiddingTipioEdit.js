@@ -1,11 +1,8 @@
 import React from 'react';
-import { useTranslation } from 'react-i18next';
 import MediumPopularTipio from './MediumPopularTipio';
 import SecondaryOutlineButton from '../Buttons/SecondaryOutlineButton';
 
 const MediumPopularBiddingTipioEdit = (props) => {
-    const { t } = useTranslation();
-
     return (
         <MediumPopularTipio {...props}>
             <div className="mediumPopularTipio__content__price">
