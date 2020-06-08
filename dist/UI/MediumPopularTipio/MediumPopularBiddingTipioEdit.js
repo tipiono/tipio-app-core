@@ -24,7 +24,7 @@ var MediumPopularBiddingTipioEdit = function MediumPopularBiddingTipioEdit(props
     className: "mediumPopularTipio__content__submit"
   }, _react.default.createElement(_SecondaryOutlineButton.default, {
     text: "Rediger",
-    onClick: props.onClick
+    onClick: props.onEditClick
   })));
 };
 

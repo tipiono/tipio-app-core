@@ -24,7 +24,7 @@ var SmallPopularBiddingTipioEdit = function SmallPopularBiddingTipioEdit(props) 
     className: "smallPopularTipio__content__submit"
   }, _react.default.createElement(_SecondaryOutlineButton.default, {
     text: "Rediger",
-    onClick: props.onClick
+    onClick: props.onEditClick
   })));
 };
 

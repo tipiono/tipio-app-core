@@ -11,7 +11,7 @@ const SmallPopularBiddingTipioEdit = (props) => {
             </div>
 
             <div className="smallPopularTipio__content__submit">
-                <SecondaryOutlineButton text="Rediger" onClick={props.onClick} />
+                <SecondaryOutlineButton text="Rediger" onClick={props.onEditClick} />
             </div>
         </SmallPopularTipio>
     );
