@@ -1,11 +1,8 @@
 import React from 'react';
 import SmallPopularTipio from './SmallPopularTipio';
-import { useTranslation } from 'react-i18next';
 import SecondaryOutlineButton from '../Buttons/SecondaryOutlineButton';
 
 const SmallPopularBiddingTipioEdit = (props) => {
-    const { t } = useTranslation();
-
     return (
         <SmallPopularTipio {...props}>
             <div className="smallPopularTipio__content__price">
@@ -14,7 +11,7 @@ const SmallPopularBiddingTipioEdit = (props) => {
             </div>
 
             <div className="smallPopularTipio__content__submit">
-                <SecondaryOutlineButton text="Rediger" onClick={props.onClick} />
+                <SecondaryOutlineButton text="Rediger" onClick={props.onEditClick} />
             </div>
         </SmallPopularTipio>
     );

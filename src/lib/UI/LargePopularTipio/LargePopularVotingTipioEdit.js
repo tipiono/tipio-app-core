@@ -1,6 +1,6 @@
 import React from 'react';
 import LargePopularTipio from './LargePopularTipio';
-import SecondaryButton from '../Buttons/SecondaryButton';
+import SecondaryOutlineButton from '../Buttons/SecondaryOutlineButton';
 
 const LargePopularVotingTipioEdit = (props) => {
     return (
@@ -8,7 +8,7 @@ const LargePopularVotingTipioEdit = (props) => {
             <h6 className="largePopularTipio__content--interested">{props.count} interesserte!</h6>
 
             <div className="largePopularTipio__content__submit">
-                <SecondaryButton text="Gi tilbud" onClick={props.onClick} />
+                <SecondaryOutlineButton text="Rediger" onClick={props.onEditClick} />
             </div>
         </LargePopularTipio>
     );

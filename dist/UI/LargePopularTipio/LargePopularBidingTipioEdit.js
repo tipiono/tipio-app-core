@@ -9,7 +9,7 @@ var _react = _interopRequireDefault(require("react"));
 
 var _LargePopularTipio = _interopRequireDefault(require("./LargePopularTipio"));
 
-var _SecondaryButton = _interopRequireDefault(require("../Buttons/SecondaryButton"));
+var _SecondaryOutlineButton = _interopRequireDefault(require("../Buttons/SecondaryOutlineButton"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -22,9 +22,9 @@ var LargePopularBidingTipioEdit = function LargePopularBidingTipioEdit(props) {
     className: "largePopularTipio__content__price--saleprice"
   }, props.offer_price, " Kr")), _react.default.createElement("div", {
     className: "largePopularTipio__content__submit"
-  }, _react.default.createElement(_SecondaryButton.default, {
+  }, _react.default.createElement(_SecondaryOutlineButton.default, {
     text: "Rediger",
-    onClick: props.onClick
+    onClick: props.onEditClick
   })));
 };
 
