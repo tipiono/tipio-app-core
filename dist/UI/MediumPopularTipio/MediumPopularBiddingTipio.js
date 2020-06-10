@@ -13,14 +13,9 @@ var _SecondaryButton = _interopRequireDefault(require("../Buttons/SecondaryButto
 
 var _generatePrice = _interopRequireDefault(require("../../Util/generatePrice"));
 
-var _reactI18next = require("react-i18next");
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var MediumPopularBiddingTipio = function MediumPopularBiddingTipio(props) {
-  var _useTranslation = (0, _reactI18next.useTranslation)(),
-      t = _useTranslation.t;
-
   var rangeList = props.tipio_offer && props.tipio_offer.offer_price_ranges || [];
   var firstRange = rangeList.length > 0 && parseInt(rangeList[1].price, 10) && rangeList[1];
   var secondRange = rangeList.length > 0 && parseInt(rangeList[0].price, 10) && rangeList[0];

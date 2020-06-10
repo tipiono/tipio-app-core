@@ -8,7 +8,7 @@ const SmallPopularVotingTipioEdit = (props) => {
             <h6 className="smallPopularTipio__content--interested">{props.count} interesserte!</h6>
 
             <div className="smallPopularTipio__content__submit">
-                <SecondaryOutlineButton text="Gi tilbud" onClick={props.onClick} />
+                <SecondaryOutlineButton text="Rediger" onClick={props.onEditClick} />
             </div>
         </SmallPopularTipio>
     );

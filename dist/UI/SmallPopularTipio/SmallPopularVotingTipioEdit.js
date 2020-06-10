@@ -19,8 +19,8 @@ var SmallPopularVotingTipioEdit = function SmallPopularVotingTipioEdit(props) {
   }, props.count, " interesserte!"), _react.default.createElement("div", {
     className: "smallPopularTipio__content__submit"
   }, _react.default.createElement(_SecondaryOutlineButton.default, {
-    text: "Gi tilbud",
-    onClick: props.onClick
+    text: "Rediger",
+    onClick: props.onEditClick
   })));
 };
 

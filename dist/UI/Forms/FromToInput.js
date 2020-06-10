@@ -19,14 +19,14 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 
 var _default = _react.default.forwardRef(function (_ref, ref) {
   var from = _ref.from,
-      to = _ref.to,
-      label = _ref.label,
-      name = _ref.name,
-      errors = _ref.errors,
-      props = _objectWithoutProperties(_ref, ["from", "to", "label", "name", "errors"]);
+    to = _ref.to,
+    label = _ref.label,
+    name = _ref.name,
+    errors = _ref.errors,
+    props = _objectWithoutProperties(_ref, ["from", "to", "label", "name", "errors"]);
 
-  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("label", {
-    className: (0, _classnames.default)("pure-material-textfield-outlined from-to-input", {
+  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("label", {
+    className: (0, _classnames.default)('pure-material-textfield-outlined from-to-input', {
       validationError: errors && errors[name]
     })
   }, /*#__PURE__*/_react.default.createElement("input", _extends({
@@ -37,7 +37,7 @@ var _default = _react.default.forwardRef(function (_ref, ref) {
   }, props, {
     ref: ref,
     style: {
-      paddingLeft: props.paddingLeft ? "".concat(props.paddingLeft + 55 + 8 + 5.328125, "px") : '75px'
+      paddingLeft: props.paddingleft ? "".concat(props.paddingleft + 55 + 8 + 5.328125, "px") : '75px'
     }
   })), /*#__PURE__*/_react.default.createElement("label", {
     className: "outside-label"

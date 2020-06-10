@@ -17,7 +17,7 @@ var _default = function _default(bindCount, range1, range2) {
     secondRange = range1;
   }
 
-  return parseInt(bindCount, 10) >= 0 && parseInt(bindCount, 10) <= parseInt(firstRange.to, 10) ? firstRange.price : secondRange.price;
+  return parseInt(bindCount, 10) >= 0 && parseInt(bindCount, 10) <= parseInt(firstRange && firstRange.to, 10) ? firstRange && firstRange.price : secondRange && secondRange.price;
 };
 
 exports.default = _default;

@@ -29,16 +29,16 @@ function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) ===
 
 function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () { })); return true; } catch (e) { return false; } }
 
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
 var CardHeader = function CardHeader(_ref) {
   var title = _ref.title,
-      titleOnShow = _ref.titleOnShow,
-      id = _ref.id,
-      onClick = _ref.onClick,
-      show = _ref.show;
+    titleOnShow = _ref.titleOnShow,
+    id = _ref.id,
+    onClick = _ref.onClick,
+    show = _ref.show;
   var titleLabel = title;
 
   if (titleOnShow && show) {
@@ -64,13 +64,13 @@ var CardHeader = function CardHeader(_ref) {
 
 var CardBody = function CardBody(_ref2) {
   var children = _ref2.children,
-      id = _ref2.id,
-      show = _ref2.show;
-  return /*#__PURE__*/_react.default.createElement("div", {
+    id = _ref2.id,
+    show = _ref2.show;
+  return show ? _react.default.createElement("div", {
     id: id,
-    className: "customAccordion__item--content " + (show ? 'show' : ''),
+    className: "customAccordion__item--content show",
     "data-parent": "#accordionExample"
-  }, children);
+  }, children) : _react.default.createElement(_react.default.Fragment, null);
 };
 
 var Accordion = /*#__PURE__*/function (_Component) {
@@ -111,8 +111,8 @@ var Accordion = /*#__PURE__*/function (_Component) {
         id: "accordionExample"
       }, _react.default.Children.map(this.props.children, function (child, index) {
         var _child$props = child.props,
-            title = _child$props.title,
-            titleOnShow = _child$props.titleOnShow;
+          title = _child$props.title,
+          titleOnShow = _child$props.titleOnShow;
         var show = _this2.state.active === index + 1;
         return [/*#__PURE__*/_react.default.createElement(CardHeader, {
           title: title,

@@ -33,17 +33,17 @@ function ShowMoreText(_ref) {
   var text = _ref.text;
 
   var _formatText = (0, _formatText2.default)(text, function (item, key) {
-    return /*#__PURE__*/_react.default.createElement("li", {
-      key: key
+    return _react.default.createElement("li", {
+      key: key + ' ' + item
     }, item);
   }, /*#__PURE__*/_react.default.createElement("br", null)),
-      textFormatted = _formatText.textFormatted,
-      restFormatted = _formatText.restFormatted;
+    textFormatted = _formatText.textFormatted,
+    restFormatted = _formatText.restFormatted;
 
   var _useState = (0, _react.useState)(false),
-      _useState2 = _slicedToArray(_useState, 2),
-      showMore = _useState2[0],
-      setShowMore = _useState2[1];
+    _useState2 = _slicedToArray(_useState, 2),
+    showMore = _useState2[0],
+    setShowMore = _useState2[1];
 
   return /*#__PURE__*/_react.default.createElement("div", {
     className: "productDetails__description"
