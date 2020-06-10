@@ -30,7 +30,7 @@ function ShowMoreText(_ref) {
 
   var _formatText = (0, _formatText2.default)(text, function (item, key) {
     return _react.default.createElement("li", {
-      key: key
+      key: key + ' ' + item
     }, item);
   }, _react.default.createElement("br", null)),
       textFormatted = _formatText.textFormatted,

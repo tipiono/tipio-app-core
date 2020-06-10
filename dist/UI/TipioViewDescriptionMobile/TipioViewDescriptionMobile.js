@@ -17,7 +17,7 @@ function _default(_ref) {
   if (description) {
     var _FormatText = (0, _formatText.default)(description, function (item, key) {
       return _react.default.createElement("li", {
-        key: key
+        key: key + ' ' + item
       }, item);
     }, _react.default.createElement("br", null)),
         textFormatted = _FormatText.textFormatted,
@@ -27,6 +27,4 @@ function _default(_ref) {
   }
 
   return null;
-}
-
-; // CHANGE
+} // CHANGE

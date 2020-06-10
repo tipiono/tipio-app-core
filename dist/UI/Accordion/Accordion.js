@@ -62,11 +62,11 @@ var CardBody = function CardBody(_ref2) {
   var children = _ref2.children,
       id = _ref2.id,
       show = _ref2.show;
-  return _react.default.createElement("div", {
+  return show ? _react.default.createElement("div", {
     id: id,
-    className: "customAccordion__item--content " + (show ? 'show' : ''),
+    className: "customAccordion__item--content show",
     "data-parent": "#accordionExample"
-  }, children);
+  }, children) : _react.default.createElement(_react.default.Fragment, null);
 };
 
 var Accordion =
