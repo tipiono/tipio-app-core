@@ -42,7 +42,7 @@ var CardHeader = function CardHeader(_ref) {
   }
 
   return _react.default.createElement("div", {
-    className: "customAccordion__item " + (show ? "show" : ""),
+    className: 'customAccordion__item ' + (show ? 'show' : ''),
     id: id
   }, _react.default.createElement("button", {
     id: id,
@@ -64,7 +64,7 @@ var CardBody = function CardBody(_ref2) {
       show = _ref2.show;
   return show ? _react.default.createElement("div", {
     id: id,
-    className: "customAccordion__item--content show",
+    className: 'customAccordion__item--content show',
     "data-parent": "#accordionExample"
   }, children) : _react.default.createElement(_react.default.Fragment, null);
 };
@@ -128,4 +128,3 @@ function (_Component) {
 }(_react.Component);
 
 exports.Accordion = Accordion;
-;
