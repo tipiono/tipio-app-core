@@ -72,18 +72,70 @@
         &__quantity {
             width: 48%;
             margin-bottom: 1rem;
-
-            .custom-material-select .css-1hwfws3 {
-                padding: 6px 14px !important;
-            }
         }
 
         &__size {
             width: 48%;
             margin-bottom: 1rem;
+        }
 
-            .custom-material-select .css-1hwfws3 {
-                padding: 6px 14px !important;
+        .custom-material-select {
+            .css-1hwfws3 {
+                padding: 2px 14px !important;
+            }
+
+            .select-label {
+                left: 4px;
+            }
+
+            .css-1szy77t {
+                &:hover {
+                    border-radius: 0 !important;
+                    border-color: hsl(0, 0%, 80%) !important;
+                }
+            }
+
+            .css-1pcexqc-container {
+                .css-3esr4u-a11yText {
+                    border-radius: 0 !important;
+                    border-color: hsl(0, 0%, 80%) !important;
+                }
+
+                .css-1szy77t-control {
+                    border-radius: 0 !important;
+                    border-color: hsl(0, 0%, 80%) !important;
+
+                    &:focus {
+                        box-shadow: none !important;
+                        outline: none !important;
+                        border-color: hsl(0, 0%, 80%) !important;
+                    }
+
+                    &:hover {
+                        box-shadow: none !important;
+                        outline: none !important;
+                        border-color: hsl(0, 0%, 80%) !important;
+                    }
+                }
+
+                .css-kj6f9i-menu {
+                    background: white;
+
+                    .css-11unzgr {
+                        background: white;
+                        color: #5c6265;
+
+                        div {
+                            background: white;
+                            color: #5c6265;
+
+                            &:hover {
+                                background-color: #ece9f3;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
             }
         }
 
