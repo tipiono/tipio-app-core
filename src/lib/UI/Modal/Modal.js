@@ -110,7 +110,8 @@ class Modal extends Component {
     }
 }
 Modal.defaultProps = {
-    className: ''
+    className: '',
+    onCloseButtonClick: (_) => _
 };
 
 Modal.propTypes = {
