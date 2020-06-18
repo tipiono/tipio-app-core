@@ -199,7 +199,10 @@ function (_Component2) {
 
 exports.Modal = Modal;
 Modal.defaultProps = {
-  className: ''
+  className: '',
+  onCloseButtonClick: function onCloseButtonClick(_) {
+    return _;
+  }
 };
 Modal.propTypes = {
   className: _propTypes.default.string,
