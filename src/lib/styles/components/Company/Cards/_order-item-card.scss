@@ -156,7 +156,7 @@
             }
 
             &--totalSum {
-                justify-content: start;
+                justify-content: flex-start;
 
                 p {
                     &:first-child {
@@ -254,7 +254,7 @@
 
     &--dropdown {
         display: flex;
-        justify-content: start;
+        justify-content: flex-start;
 
         &__content {
             display: flex;
