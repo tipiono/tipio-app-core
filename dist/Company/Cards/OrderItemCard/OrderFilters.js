@@ -59,7 +59,7 @@ var OrderFilters = function OrderFilters(props) {
   }, []);
   return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("div", {
     className: "orderFilters"
-  }, _react.default.createElement("div", {
+  }, !props.dontShowOrderUpdate && _react.default.createElement("div", {
     className: "orderFilters--dropdown"
   }, _react.default.createElement("div", {
     className: (0, _classnames.default)('orderFilters--dropdown__content', {
