@@ -29,7 +29,8 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 var OrderItemCard = function OrderItemCard(_ref) {
   var order = _ref.order,
-      deliveredOnChange = _ref.deliveredOnChange;
+      deliveredOnChange = _ref.deliveredOnChange,
+      dontShowOrderUpdate = _ref.dontShowOrderUpdate;
 
   var _useState = (0, _react.useState)(false),
       _useState2 = _slicedToArray(_useState, 2),
@@ -58,7 +59,7 @@ var OrderItemCard = function OrderItemCard(_ref) {
 
   return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("section", {
     className: "orderItem"
-  }, _react.default.createElement("div", {
+  }, !dontShowOrderUpdate && _react.default.createElement("div", {
     className: "orderItem__toggleSwitch"
   }, _react.default.createElement(_ToggleSwitch.default, {
     name: "delivered".concat(order.id),
