@@ -11,36 +11,53 @@ var _reactChartjs = require("react-chartjs-2");
 
 var _getDate = _interopRequireDefault(require("../../Util/getDate"));
 
+require("chartjs-plugin-annotation");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var AreaChart = function AreaChart(_ref) {
-  var tipio = _ref.tipio,
-      additionalSales = _ref.additionalSales;
+  var firstDatasets = _ref.firstDatasets,
+      secondDatasets = _ref.secondDatasets,
+      thirdDatasets = _ref.thirdDatasets;
+  var dataset3 = [250, 520, 290, 940];
   var labels = [];
-  var dataset1 = [];
-  var dataset2 = [];
-  labels = tipio.map(function (day) {
+  labels = firstDatasets && firstDatasets.map(function (day) {
     return day.date;
   });
-  dataset1 = tipio.map(function (el) {
-    return el.revenue;
-  });
-  dataset2 = additionalSales.map(function (el) {
-    return el.revenue;
-  });
+  var datatests = [{
+    label: 'First DataSet',
+    data: secondDatasets === null || secondDatasets === void 0 ? void 0 : secondDatasets.map(function (el) {
+      return el.revenue;
+    }),
+    borderWidth: 2,
+    lineTension: 0,
+    backgroundColor: 'transparent',
+    borderColor: '#C9BFDF'
+  }, {
+    label: 'Second Dataset',
+    data: firstDatasets === null || firstDatasets === void 0 ? void 0 : firstDatasets.map(function (el) {
+      return el.revenue;
+    }),
+    borderWidth: 2,
+    lineTension: 0,
+    backgroundColor: 'transparent',
+    borderColor: '#4ABCAC'
+  }];
+
+  if (thirdDatasets) {
+    datatests.push({
+      label: 'Third Dataset',
+      data: dataset3,
+      borderWidth: 2,
+      lineTension: 0,
+      backgroundColor: 'transparent',
+      borderColor: '#C2E7E2'
+    });
+  }
+
   var charData = {
     labels: labels,
-    datasets: [{
-      label: 'Mergsalg',
-      data: dataset2,
-      backgroundColor: '#E2E7EF',
-      borderColor: '#C9BFDF'
-    }, {
-      label: 'Hovedprofukt',
-      data: dataset1,
-      backgroundColor: '#E0F3E0',
-      borderColor: '#4ABCAC'
-    }]
+    datasets: datatests
   };
   var options = {
     elements: {
@@ -64,26 +81,22 @@ var AreaChart = function AreaChart(_ref) {
     scales: {
       yAxes: [{
         ticks: {
-          display: false
+          beginAtZero: false,
+          min: 0,
+          display: true,
+          color: '#8C8F91'
         },
         gridLines: {
-          display: false
+          display: true,
+          color: '#F5F5F5'
         }
       }],
       xAxes: [{
-        ticks: {
-          autoSkip: true,
-          userCallback: function userCallback(item, index) {
-            if (index === 4) return (0, _getDate.default)(item, 'DateMonth');
-            if (index === 9) return (0, _getDate.default)(item, 'DateMonth');
-            if (index === 14) return (0, _getDate.default)(item, 'DateMonth');
-            if (index === 19) return (0, _getDate.default)(item, 'DateMonth');
-            if (index === 24) return (0, _getDate.default)(item, 'DateMonth');
-            if (index === 29) return (0, _getDate.default)(item, 'DateMonth');
-          }
-        },
         gridLines: {
           display: false
+        },
+        ticks: {
+          color: '#5C6265'
         }
       }]
     },

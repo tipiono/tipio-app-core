@@ -53,6 +53,7 @@ import ErrorMessage from './UI/ErrorMessage/ErrorMessage';
 import CircleChart from './UI/CircleChart/CircleChart';
 import VerticalChart from './UI/VerticalChart/VerticalChart';
 import AreaChart from './UI/VerticalChart/AreaChart';
+import LineChart from './UI/VerticalChart/LineChart';
 import SearchInput from './UI/Layout/Navigation/SearchInput';
 import Overlay from './UI/Overlay/Overlay';
 import Alert from './UI/Alert/Alert';
@@ -241,6 +242,7 @@ export {
     ImageUploader,
     Tabs,
     TabNav,
+    LineChart,
     TabNavItem,
     TabContent,
     TabContentItem,
