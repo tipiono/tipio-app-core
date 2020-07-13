@@ -25,6 +25,7 @@
 
         svg {
             margin-right: 0.5rem;
+            vertical-align: baseline;
         }
 
         @include media-breakpoint-down(sm) {
