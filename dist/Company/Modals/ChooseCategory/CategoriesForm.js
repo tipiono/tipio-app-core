@@ -60,7 +60,8 @@ function CategoriesForm(_ref) {
       goBack = _ref.goBack,
       path = _ref.path,
       isFilter = _ref.isFilter,
-      clearFilter = _ref.clearFilter;
+      clearFilter = _ref.clearFilter,
+      onClickSelect = _ref.onClickSelect;
 
   var _useState = (0, _react.useState)(0),
       _useState2 = _slicedToArray(_useState, 2),
@@ -87,6 +88,10 @@ function CategoriesForm(_ref) {
     setSelectedOptionId(soi);
     setSelectedOption(soi === 0 ? null : item);
     setSelectedCategoryId(0);
+
+    if (onClickSelect) {
+      onComplete(soi, selectedOption);
+    }
   }
 
   function selectedSubCategory(item) {
@@ -215,7 +220,7 @@ function CategoriesForm(_ref) {
         selectedMap: selectedMap
       });
     }
-  }))), _react.default.createElement("div", {
+  }))), !onClickSelect && _react.default.createElement("div", {
     className: "choose-category-footer"
   }, _react.default.createElement(_SecondaryButton.default, {
     className: "choose-category-footer--btn btn btn-lg btn-secondary",

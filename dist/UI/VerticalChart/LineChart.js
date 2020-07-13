@@ -22,13 +22,13 @@ var LineChart = function LineChart(_ref) {
   var labels = [];
   var dataset1 = [];
   var dataset2 = [];
-  labels = tipio.map(function (day) {
+  labels = tipio && tipio.map(function (day) {
     return day.date;
   });
-  dataset1 = tipio.map(function (el) {
+  dataset1 = tipio && tipio.map(function (el) {
     return el.revenue;
   });
-  dataset2 = additionalSales.map(function (el) {
+  dataset2 = additionalSales && additionalSales.map(function (el) {
     return el.revenue;
   });
   var charData = {
