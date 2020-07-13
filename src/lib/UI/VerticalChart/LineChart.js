@@ -7,9 +7,9 @@ const LineChart = ({ tipio, additionalSales, showGridLines }) => {
     let labels = [];
     let dataset1 = [];
     let dataset2 = [];
-    labels = tipio.map((day) => day.date);
-    dataset1 = tipio.map((el) => el.revenue);
-    dataset2 = additionalSales.map((el) => el.revenue);
+    labels = tipio && tipio.map((day) => day.date);
+    dataset1 = tipio && tipio.map((el) => el.revenue);
+    dataset2 = additionalSales && additionalSales.map((el) => el.revenue);
     const charData = {
         labels: labels,
         datasets: [
