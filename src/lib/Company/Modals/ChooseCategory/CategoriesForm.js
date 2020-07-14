@@ -57,6 +57,9 @@ function CategoriesForm({
             soi = item.id;
         }
         setSelectedOptionId(soi);
+        if (onClickSelect) {
+            onComplete(soi);
+        }
     }
 
     function categoryWithDropdownOnSelect(item) {
