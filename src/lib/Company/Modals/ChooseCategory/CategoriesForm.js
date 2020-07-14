@@ -57,8 +57,10 @@ function CategoriesForm({
             soi = item.id;
         }
         setSelectedOptionId(soi);
-        if (onClickSelect) {
-            onComplete(soi);
+        if (typeof item === 'object') {
+            if (onClickSelect) {
+                onComplete(soi);
+            }
         }
     }
 
