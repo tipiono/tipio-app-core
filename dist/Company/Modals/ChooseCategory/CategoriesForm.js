@@ -104,8 +104,6 @@ function CategoriesForm(_ref) {
     setSelectedOptionId(soi);
 
     if (onClickSelect) {
-      console.log('SEE ALLL CLICKEDDD');
-      console.log('Annet CLICKEDDD');
       onComplete(soi);
     }
   }
