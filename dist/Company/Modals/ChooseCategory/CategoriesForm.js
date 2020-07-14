@@ -102,6 +102,10 @@ function CategoriesForm(_ref) {
     }
 
     setSelectedOptionId(soi);
+
+    if (onClickSelect) {
+      onComplete(soi);
+    }
   }
 
   function categoryWithDropdownOnSelect(item) {
