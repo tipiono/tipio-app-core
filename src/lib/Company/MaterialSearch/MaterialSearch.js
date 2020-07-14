@@ -1,6 +1,6 @@
 import React from 'react';
 
-const MaterialSearch = ({ defaultValue, onSubmit }) => {
+const MaterialSearch = ({ defaultValue, onSubmit, placeholderText }) => {
     return (
         <div className="materialSearch">
             <svg className="materialSearch--icon" width={21} height={21}>
@@ -14,7 +14,7 @@ const MaterialSearch = ({ defaultValue, onSubmit }) => {
                 id="material-search"
                 className="materialSearch--input"
                 type="text"
-                placeholder="Søk navn, poststed"
+                placeholder={placeholderText ? placeholderText : 'Søk navn, poststed'}
                 onKeyUp={(e) => {
                     if (e.key === 'Enter') {
                         // alert("enter")
