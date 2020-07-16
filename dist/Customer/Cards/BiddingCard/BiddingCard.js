@@ -25,13 +25,14 @@ function BiddingCard(_ref) {
       salesProgressBarPercentage = _ref.salesProgressBarPercentage,
       bindingCount = _ref.bindingCount,
       onClick = _ref.onClick,
-      bindHasExpired = _ref.bindHasExpired;
+      bindHasExpired = _ref.bindHasExpired,
+      link = _ref.link;
   return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("div", {
     className: "biddingCard"
   }, _react.default.createElement("div", {
     className: "biddingCard__header"
   }, _react.default.createElement("a", {
-    href: "/tipio/bind/".concat(id),
+    href: link ? link : "/tipio/bind/".concat(id),
     className: "lazy-image biddingCard__header--preview",
     onClick: onClick
   }, _react.default.createElement("img", {
