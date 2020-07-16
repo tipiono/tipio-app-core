@@ -14,13 +14,18 @@ function BiddingCard({
     salesProgressBarPercentage,
     bindingCount,
     onClick,
-    bindHasExpired
+    bindHasExpired,
+    link
 }) {
     return (
         <>
             <div className="biddingCard">
                 <div className="biddingCard__header">
-                    <a href={`/tipio/bind/${id}`} className="lazy-image biddingCard__header--preview" onClick={onClick}>
+                    <a
+                        href={link ? link : `/tipio/bind/${id}`}
+                        className="lazy-image biddingCard__header--preview"
+                        onClick={onClick}
+                    >
                         <img
                             className="lazyload biddingCard__header--preview--image"
                             data-src={image}
