@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import ToggleSwitch from '../../../UI/Forms/ToggleSwitch';
 
-const OrderItemCard = ({ order, deliveredOnChange }) => {
+const OrderItemCard = ({ order, deliveredOnChange, dontShowOrderUpdate }) => {
     const [activeOrder, setActiveOrder] = useState(false);
     let [address] = order.order_addresses;
     address = address || {};
@@ -33,16 +33,18 @@ const OrderItemCard = ({ order, deliveredOnChange }) => {
     return (
         <>
             <section className="orderItem">
-                <div className="orderItem__toggleSwitch">
-                    <ToggleSwitch
-                        name={`delivered${order.id}`}
-                        id={`delivered${order.id}`}
-                        checked={order.delivered}
-                        onChange={deliveredOnChange}
-                        data-order_id={order.id}
-                    />
-                    <span>{order.delivered ? 'Levert' : 'Ikke levert'}</span>
-                </div>
+                {!dontShowOrderUpdate && (
+                    <div className="orderItem__toggleSwitch">
+                        <ToggleSwitch
+                            name={`delivered${order.id}`}
+                            id={`delivered${order.id}`}
+                            checked={order.delivered}
+                            onChange={deliveredOnChange}
+                            data-order_id={order.id}
+                        />
+                        <span>{order.delivered ? 'Levert' : 'Ikke levert'}</span>
+                    </div>
+                )}
                 <div
                     className="orderItem__content"
                     className={`orderItem__content ${activeOrder ? 'orderActive' : ''}`}

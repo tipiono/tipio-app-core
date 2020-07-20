@@ -3,7 +3,7 @@ import { Bar } from 'react-chartjs-2';
 import 'chartjs-plugin-annotation';
 import getDate from '../../Util/getDate';
 
-const VerticalChart = ({ tipio, additionalSales, showYears }) => {
+const VerticalChart = ({ tipio, additionalSales, showYears, showGridLines }) => {
     let labels = [];
     let dataset1 = [];
     let dataset2 = [];
@@ -43,10 +43,12 @@ const VerticalChart = ({ tipio, additionalSales, showYears }) => {
                     ticks: {
                         beginAtZero: false,
                         min: 0,
-                        display: false
+                        display: showGridLines ? true : false,
+                        color: '#8C8F91'
                     },
                     gridLines: {
-                        display: false
+                        display: showGridLines ? true : false,
+                        color: '#F5F5F5'
                     }
                 }
             ],
@@ -57,6 +59,7 @@ const VerticalChart = ({ tipio, additionalSales, showYears }) => {
                         display: false
                     },
                     ticks: {
+                        color: '#5C6265',
                         callback: function(value) {
                             if (showYears) {
                                 return getDate(value, 'Month');

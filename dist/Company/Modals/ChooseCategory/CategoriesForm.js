@@ -1,7 +1,5 @@
 "use strict";
 
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -28,6 +26,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
 
@@ -60,7 +60,8 @@ function CategoriesForm(_ref) {
       goBack = _ref.goBack,
       path = _ref.path,
       isFilter = _ref.isFilter,
-      clearFilter = _ref.clearFilter;
+      clearFilter = _ref.clearFilter,
+      onClickSelect = _ref.onClickSelect;
 
   var _useState = (0, _react.useState)(0),
       _useState2 = _slicedToArray(_useState, 2),
@@ -87,6 +88,10 @@ function CategoriesForm(_ref) {
     setSelectedOptionId(soi);
     setSelectedOption(soi === 0 ? null : item);
     setSelectedCategoryId(0);
+
+    if (onClickSelect) {
+      onComplete(soi, selectedOption);
+    }
   }
 
   function selectedSubCategory(item) {
@@ -97,6 +102,12 @@ function CategoriesForm(_ref) {
     }
 
     setSelectedOptionId(soi);
+
+    if (_typeof(item) === 'object') {
+      if (onClickSelect) {
+        onComplete(soi);
+      }
+    }
   }
 
   function categoryWithDropdownOnSelect(item) {
@@ -215,7 +226,7 @@ function CategoriesForm(_ref) {
         selectedMap: selectedMap
       });
     }
-  }))), _react.default.createElement("div", {
+  }))), !onClickSelect && _react.default.createElement("div", {
     className: "choose-category-footer"
   }, _react.default.createElement(_SecondaryButton.default, {
     className: "choose-category-footer--btn btn btn-lg btn-secondary",

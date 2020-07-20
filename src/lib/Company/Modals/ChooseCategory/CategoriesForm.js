@@ -31,7 +31,8 @@ function CategoriesForm({
     goBack,
     path,
     isFilter,
-    clearFilter
+    clearFilter,
+    onClickSelect
 }) {
     const [selectedOptionId, setSelectedOptionId] = useState(0);
     const [selectedOption, setSelectedOption] = useState(null);
@@ -45,6 +46,9 @@ function CategoriesForm({
         setSelectedOptionId(soi);
         setSelectedOption(soi === 0 ? null : item);
         setSelectedCategoryId(0);
+        if (onClickSelect) {
+            onComplete(soi, selectedOption);
+        }
     }
 
     function selectedSubCategory(item) {
@@ -53,6 +57,11 @@ function CategoriesForm({
             soi = item.id;
         }
         setSelectedOptionId(soi);
+        if (typeof item === 'object') {
+            if (onClickSelect) {
+                onComplete(soi);
+            }
+        }
     }
 
     function categoryWithDropdownOnSelect(item) {
@@ -176,17 +185,19 @@ function CategoriesForm({
                         })}
                 </Masonry>
             </div>
-            <div className="choose-category-footer">
-                <SecondaryButton
-                    className="choose-category-footer--btn btn btn-lg btn-secondary"
-                    text={buttonTitle || 'Lagre'}
-                    disabled={
-                        (controlDisabledButton && disabledButton) || (!controlDisabledButton && !selectedOptionId)
-                    }
-                    onClick={chooseCategoryOnClick}
-                    loading={isLoading}
-                />
-            </div>
+            {!onClickSelect && (
+                <div className="choose-category-footer">
+                    <SecondaryButton
+                        className="choose-category-footer--btn btn btn-lg btn-secondary"
+                        text={buttonTitle || 'Lagre'}
+                        disabled={
+                            (controlDisabledButton && disabledButton) || (!controlDisabledButton && !selectedOptionId)
+                        }
+                        onClick={chooseCategoryOnClick}
+                        loading={isLoading}
+                    />
+                </div>
+            )}
         </div>
     );
 }

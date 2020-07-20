@@ -1,85 +1,176 @@
 // Custom Material Design Select
 
 .custom-material-select {
-  position: relative;
-  width: 100%;
+    position: relative;
+    width: 100%;
+    margin-top: 2px;
 
-  .select-label {
-    position: absolute;
-    top: -12px;
-    left: 14px;
-    z-index: 1;
-    background: white;
-    font-size: 12px;
-    color: #8c8f91;
-    margin-bottom: 0.25rem;
-    padding: 2px;
-  }
+    .select-label {
+        position: absolute;
+        top: -12px;
+        left: 14px;
+        z-index: 1;
+        background: white;
+        font-size: 12px;
+        color: #8c8f91;
+        margin-bottom: 0.25rem;
+        padding: 2px;
+    }
 
-  .css-9gakcf-option {
-    background-color: #ded8ec !important;
-    padding: 12px 12px !important;
-    color: #5c6265 !important;
-  }
+    .css-9gakcf-option {
+        background-color: #ded8ec !important;
+        padding: 12px 12px !important;
+        color: #5c6265 !important;
+    }
 
-  .css-1n7v3ny-option {
-    background-color: #f5f5f5 !important;
-    padding: 12px 12px !important;
-  }
+    .css-1n7v3ny-option {
+        background-color: #f5f5f5 !important;
+        padding: 12px 12px !important;
+    }
 
-  .css-yt9ioa-option {
-    padding: 12px 12px !important;
-  }
+    .css-yt9ioa-option {
+        padding: 12px 12px !important;
+    }
 
-  .css-1hwfws3 {
-    padding: 11px 14px !important;
-  }
+    .css-1hwfws3 {
+        padding: 11px 14px !important;
+    }
 
-  .css-yk16xz-control {
-    border-radius: 0 !important;
-  }
+    .css-yk16xz-control {
+        height: 56px;
+        border-radius: 0 !important;
+    }
 
-  .css-26l3qy-menu {
-    border-radius: 0 !important;
-    box-shadow: 0 0 0 1px hsla(0, 0%, 0%, 0.1);
-  }
+    .css-26l3qy-menu {
+        border-radius: 0 !important;
+        box-shadow: 0 0 0 1px hsla(0, 0%, 0%, 0.1);
+    }
 
-  .css-1ml51p6-MenuList {
-    padding-top: 0 !important;
-    padding-bottom: 0 !important;
-  }
+    .css-1ml51p6-MenuList {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+    }
 
-  .css-tlfecz-indicatorContainer {
-    padding: 0 14px !important;
-  }
+    .css-tlfecz-indicatorContainer {
+        padding: 0 4px !important;
+    }
 
-  .css-1gtu0rj-indicatorContainer {
-    padding: 0 14px !important;
-  }
+    .css-1gtu0rj-indicatorContainer {
+        padding: 0 4px !important;
+    }
 
-  .css-1pahdxg-control {
-    box-shadow: none;
-    border-color: #4f2e90;
-    border-radius: 0;
-  }
+    .css-1pahdxg-control {
+        box-shadow: none;
+        border-color: #4f2e90;
+        border-radius: 0;
+    }
 
-  .css-1pahdxg-control:hover {
-    border-color: #4f2e90;
-  }
+    .css-1pahdxg-control:hover {
+        border-color: #4f2e90;
+    }
 
-  .css-1uccc91-singleValue {
-    margin-left: 2px;
-  }
+    .css-1uccc91-singleValue {
+        margin-left: 2px;
+    }
 
-  .css-1okebmr-indicatorSeparator {
-    display: none;
-  }
+    .css-1okebmr-indicatorSeparator {
+        display: none;
+    }
 
-  .css-26l3qy-menu {
-    z-index: 99;
-  }
+    .css-26l3qy-menu {
+        z-index: 99;
+    }
 
+    .css-1hwfws3 {
+        padding: 2px 14px !important;
+    }
+
+    .css-1szy77t {
+        height: 56px;
+        border-radius: 0 !important;
+        border-color: hsl(0, 0%, 80%) !important;
+
+        &:hover {
+            border-radius: 0 !important;
+            border-color: hsl(0, 0%, 80%) !important;
+        }
+    }
+
+    .css-3esr4u-a11yText {
+        border-radius: 0 !important;
+        border-color: hsl(0, 0%, 80%) !important;
+    }
+
+    .css-bg1rzq-control {
+        height: 56px;
+        border-radius: 0 !important;
+        border-color: hsl(0, 0%, 80%) !important;
+
+        &:focus {
+            box-shadow: none !important;
+            outline: none !important;
+            border-color: hsl(0, 0%, 80%) !important;
+        }
+
+        &:hover {
+            box-shadow: none !important;
+            outline: none !important;
+            border-color: hsl(0, 0%, 80%) !important;
+        }
+    }
+
+    .css-1pahdxg-control {
+        height: 56px;
+        border-radius: 0 !important;
+        border-color: hsl(0, 0%, 80%) !important;
+
+        &:focus {
+            box-shadow: none !important;
+            outline: none !important;
+            border-color: hsl(0, 0%, 80%) !important;
+        }
+
+        &:hover {
+            box-shadow: none !important;
+            outline: none !important;
+            border-color: hsl(0, 0%, 80%) !important;
+        }
+    }
+
+    .css-1szy77t-control {
+        height: 56px;
+        border-radius: 0 !important;
+        border-color: hsl(0, 0%, 80%) !important;
+
+        &:focus {
+            box-shadow: none !important;
+            outline: none !important;
+            border-color: hsl(0, 0%, 80%) !important;
+        }
+
+        &:hover {
+            box-shadow: none !important;
+            outline: none !important;
+            border-color: hsl(0, 0%, 80%) !important;
+        }
+    }
+
+    .css-kj6f9i-menu {
+        background: white;
+
+        .css-11unzgr {
+            background: white;
+            color: #5c6265;
+
+            div {
+                background: white;
+                color: #5c6265;
+
+                &:hover {
+                    background-color: #ece9f3;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
 }
-
-
-

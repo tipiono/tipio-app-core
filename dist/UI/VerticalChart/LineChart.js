@@ -9,21 +9,20 @@ var _react = _interopRequireDefault(require("react"));
 
 var _reactChartjs = require("react-chartjs-2");
 
-require("chartjs-plugin-annotation");
-
 var _getDate = _interopRequireDefault(require("../../Util/getDate"));
+
+require("chartjs-plugin-annotation");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var VerticalChart = function VerticalChart(_ref) {
+var LineChart = function LineChart(_ref) {
   var tipio = _ref.tipio,
       additionalSales = _ref.additionalSales,
-      showYears = _ref.showYears,
       showGridLines = _ref.showGridLines;
   var labels = [];
   var dataset1 = [];
   var dataset2 = [];
-  labels = additionalSales && additionalSales.map(function (day) {
+  labels = tipio && tipio.map(function (day) {
     return day.date;
   });
   dataset1 = tipio && tipio.map(function (el) {
@@ -35,16 +34,23 @@ var VerticalChart = function VerticalChart(_ref) {
   var charData = {
     labels: labels,
     datasets: [{
+      label: 'Mergsalg',
+      data: dataset2,
+      borderColor: '#C9BFDF'
+    }, {
       label: 'Hovedprofukt',
       data: dataset1,
-      backgroundColor: '#4ABCAC'
-    }, {
-      label: 'Mersalg',
-      data: dataset2,
-      backgroundColor: '#C2E7E2'
+      borderColor: '#4ABCAC'
     }]
   };
   var options = {
+    elements: {
+      point: {
+        radius: 2
+      }
+    },
+    showLines: true,
+    spanGaps: true,
     layout: {
       padding: {
         top: 55
@@ -70,19 +76,20 @@ var VerticalChart = function VerticalChart(_ref) {
         }
       }],
       xAxes: [{
-        barPercentage: 0.7,
+        ticks: {
+          autoSkip: true,
+          color: '#5C6265',
+          userCallback: function userCallback(item, index) {
+            if (index === 4) return (0, _getDate.default)(item, 'DateMonth');
+            if (index === 9) return (0, _getDate.default)(item, 'DateMonth');
+            if (index === 14) return (0, _getDate.default)(item, 'DateMonth');
+            if (index === 19) return (0, _getDate.default)(item, 'DateMonth');
+            if (index === 24) return (0, _getDate.default)(item, 'DateMonth');
+            if (index === 29) return (0, _getDate.default)(item, 'DateMonth');
+          }
+        },
         gridLines: {
           display: false
-        },
-        ticks: {
-          color: '#5C6265',
-          callback: function callback(value) {
-            if (showYears) {
-              return (0, _getDate.default)(value, 'Month');
-            } else {
-              return (0, _getDate.default)(value, 'DateName');
-            }
-          }
         }
       }]
     },
@@ -97,34 +104,20 @@ var VerticalChart = function VerticalChart(_ref) {
       titleAlign: 'center',
       bodyAlign: 'center',
       callbacks: {
-        title: function title(tooltipItems) {
+        title: function title(tooltipItems, data) {
           return tooltipItems[0].yLabel;
         },
         label: function label(tooltipItems) {
-          if (showYears) {
-            return (0, _getDate.default)(tooltipItems.xLabel, 'MonthYear');
-          } else {
-            return (0, _getDate.default)(tooltipItems.xLabel, 'DateName') + ' ' + (0, _getDate.default)(tooltipItems.xLabel, 'DateMonth');
-          }
+          return (0, _getDate.default)(tooltipItems.xLabel, 'DateName') + ' ' + (0, _getDate.default)(tooltipItems.xLabel, 'DateMonth');
         }
       }
-    },
-    annotation: {
-      annotations: [{
-        type: 'line',
-        mode: 'horizontal',
-        scaleID: 'y-axis-0',
-        value: 0,
-        borderColor: '#C9CFD3',
-        borderWidth: 1
-      }]
     }
   };
-  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_reactChartjs.Bar, {
+  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_reactChartjs.Line, {
     data: charData,
     options: options
   }));
 };
 
-var _default = VerticalChart;
+var _default = LineChart;
 exports.default = _default;

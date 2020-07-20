@@ -11,7 +11,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var MaterialSearch = function MaterialSearch(_ref) {
   var defaultValue = _ref.defaultValue,
-      onSubmit = _ref.onSubmit;
+      onSubmit = _ref.onSubmit,
+      placeholderText = _ref.placeholderText;
   return _react.default.createElement("div", {
     className: "materialSearch"
   }, _react.default.createElement("svg", {
@@ -26,7 +27,7 @@ var MaterialSearch = function MaterialSearch(_ref) {
     id: "material-search",
     className: "materialSearch--input",
     type: "text",
-    placeholder: "S\xF8k navn, poststed",
+    placeholder: placeholderText ? placeholderText : 'Søk navn, poststed',
     onKeyUp: function onKeyUp(e) {
       if (e.key === 'Enter') {
         // alert("enter")
