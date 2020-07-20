@@ -4,7 +4,7 @@ import SalesProgressBarTooltip from '../SalesProgressBarTooltip/SalesProgressBar
 import ShareButton from './ShareButton';
 import HorizontalTimeline from '../Timelines/HorizontalTimeline';
 import SecondaryButton from '../../UI/Buttons/SecondaryButton';
-
+import SecondaryOutlineButton from '../../UI/Buttons/SecondaryOutlineButton';
 const BindingCard = ({
     children,
     state,
@@ -65,7 +65,7 @@ const BindingCard = ({
                     </div>
                 </>
             )}
-            {props.expiredTipio && <SecondaryButton text={'Gjenopprett'} onClick={onRestoreClick} />}
+            {props.expiredTipio && <SecondaryOutlineButton text={'Gjenopprett'} onClick={onRestoreClick} />}
         </BaseCard>
     );
 };

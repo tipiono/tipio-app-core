@@ -17,6 +17,8 @@ var _HorizontalTimeline = _interopRequireDefault(require("../Timelines/Horizonta
 
 var _SecondaryButton = _interopRequireDefault(require("../../UI/Buttons/SecondaryButton"));
 
+var _SecondaryOutlineButton = _interopRequireDefault(require("../../UI/Buttons/SecondaryOutlineButton"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
@@ -63,7 +65,7 @@ var BindingCard = function BindingCard(_ref) {
     onClick: onShareClick
   })), _react.default.createElement("div", {
     className: "customerSidebarCard__footer--timeline"
-  }, _react.default.createElement(_HorizontalTimeline.default, props))), props.expiredTipio && _react.default.createElement(_SecondaryButton.default, {
+  }, _react.default.createElement(_HorizontalTimeline.default, props))), props.expiredTipio && _react.default.createElement(_SecondaryOutlineButton.default, {
     text: 'Gjenopprett',
     onClick: onRestoreClick
   }));
