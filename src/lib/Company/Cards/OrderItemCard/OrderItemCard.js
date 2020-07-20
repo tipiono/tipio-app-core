@@ -8,7 +8,6 @@ const OrderItemCard = ({ order, deliveredOnChange, dontShowOrderUpdate }) => {
 
     const getDate = (date) => {
         const dateStr = new Date(date);
-        console.log(dateStr.getMonth());
     };
 
     const getFormattedDate = (date) => {

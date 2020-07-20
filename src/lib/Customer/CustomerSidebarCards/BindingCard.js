@@ -13,6 +13,7 @@ const BindingCard = ({
     onShareClick,
     onBindClick,
     bindingPercentage,
+    onRestoreClick,
     ...props
 }) => {
     return (
@@ -53,7 +54,7 @@ const BindingCard = ({
                 </>
             )}
 
-            {state === 'bought' && (
+            {state === 'bought' && !props.expiredTipio && (
                 <>
                     <div className="customerSidebarCard__footer--action">
                         <ShareButton onClick={onShareClick} />
@@ -64,6 +65,7 @@ const BindingCard = ({
                     </div>
                 </>
             )}
+            {props.expiredTipio && <SecondaryButton text={'Gjenopprett'} onClick={onRestoreClick} />}
         </BaseCard>
     );
 };

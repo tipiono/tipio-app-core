@@ -14,7 +14,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var AddMoreSaleEndedCompanyCard = function AddMoreSaleEndedCompanyCard(props) {
   var _props$tipio, _props$tipio2;
 
-  console.log(props);
   var saleDiscount = (0, _calculateDiscountPercentage.default)(props.first_price, props.company_price);
   return _react.default.createElement("div", {
     className: "addMoreSaleEndedCard mb-3"
