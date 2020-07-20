@@ -16,7 +16,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var SmallPopularBiddingTipioEdit = function SmallPopularBiddingTipioEdit(props) {
   return _react.default.createElement(_SmallPopularTipio.default, props, _react.default.createElement("div", {
     className: "smallPopularTipio__content__price"
-  }, /*#__PURE__*/_react.default.createElement("h6", {
+  }, _react.default.createElement("h6", {
     className: "smallPopularTipio__content__price--marketprice"
   }, props.market_price, " Kr"), _react.default.createElement("h6", {
     className: "smallPopularTipio__content__price--saleprice"

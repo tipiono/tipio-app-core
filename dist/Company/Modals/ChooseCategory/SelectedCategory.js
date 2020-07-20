@@ -14,30 +14,30 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var SelectedCategory = function SelectedCategory(_ref) {
   var onClick = _ref.onClick,
       title = _ref.title;
-  return /*#__PURE__*/_react.default.createElement("div", {
+  return _react.default.createElement("div", {
     className: "selected-category"
-  }, /*#__PURE__*/_react.default.createElement("button", {
+  }, _react.default.createElement("button", {
     type: "button",
     className: "btn-with-icon",
     onClick: onClick
-  }, /*#__PURE__*/_react.default.createElement("span", null, title), /*#__PURE__*/_react.default.createElement("svg", {
+  }, _react.default.createElement("span", null, title), _react.default.createElement("svg", {
     className: "",
     width: "20",
     height: "20",
     viewBox: "0 0 24 24"
-  }, /*#__PURE__*/_react.default.createElement("g", {
+  }, _react.default.createElement("g", {
     className: "nc-icon-wrapper",
     strokeLinecap: "round",
     strokeLinejoin: "round",
     strokeWidth: "2",
     fill: "#4ABCAC",
     stroke: "#4ABCAC"
-  }, /*#__PURE__*/_react.default.createElement("polyline", {
+  }, _react.default.createElement("polyline", {
     "data-color": "color-2",
     fill: "none",
     strokeMiterlimit: "10",
     points: " 6,12 10,16 18,8 "
-  }), /*#__PURE__*/_react.default.createElement("circle", {
+  }), _react.default.createElement("circle", {
     fill: "none",
     stroke: "#4ABCAC",
     strokeMiterlimit: "10",

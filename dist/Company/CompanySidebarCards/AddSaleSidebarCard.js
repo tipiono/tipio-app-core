@@ -13,57 +13,57 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var AddSaleSidebarCard = function AddSaleSidebarCard(_ref) {
   var first_price = _ref.first_price,
-    company_price = _ref.company_price,
-    tipio = _ref.tipio,
-    editButtonOnClick = _ref.editButtonOnClick,
-    addToCartOnClick = _ref.addToCartOnClick,
-    _ref$showEditButton = _ref.showEditButton,
-    showEditButton = _ref$showEditButton === void 0 ? true : _ref$showEditButton,
-    inventory = _ref.inventory,
-    _ref$showAddToCartBut = _ref.showAddToCartButton,
-    showAddToCartButton = _ref$showAddToCartBut === void 0 ? false : _ref$showAddToCartBut,
-    bindingCount = _ref.bindingCount;
+      company_price = _ref.company_price,
+      tipio = _ref.tipio,
+      editButtonOnClick = _ref.editButtonOnClick,
+      addToCartOnClick = _ref.addToCartOnClick,
+      _ref$showEditButton = _ref.showEditButton,
+      showEditButton = _ref$showEditButton === void 0 ? true : _ref$showEditButton,
+      inventory = _ref.inventory,
+      _ref$showAddToCartBut = _ref.showAddToCartButton,
+      showAddToCartButton = _ref$showAddToCartBut === void 0 ? false : _ref$showAddToCartBut,
+      bindingCount = _ref.bindingCount;
   var title = tipio.title,
-    brand = tipio.brand;
-  return /*#__PURE__*/_react.default.createElement("div", {
+      brand = tipio.brand;
+  return _react.default.createElement("div", {
     className: "addSaleSidebarCard"
-  }, /*#__PURE__*/_react.default.createElement("div", {
+  }, _react.default.createElement("div", {
     className: "addSaleSidebarCard__header"
-  }, /*#__PURE__*/_react.default.createElement("div", {
+  }, _react.default.createElement("div", {
     className: "addSaleSidebarCard__header__content"
-  }, /*#__PURE__*/_react.default.createElement("h3", {
+  }, _react.default.createElement("h3", {
     className: "addSaleSidebarCard__header__content--title"
-  }, title), /*#__PURE__*/_react.default.createElement("p", {
+  }, title), _react.default.createElement("p", {
     className: "addSaleSidebarCard__header__content--subtitle"
   }, brand))), inventory && inventory > 0 && inventory <= 10 ? _react.default.createElement("p", {
     className: "addSaleSidebarCard__stock"
   }, "Kun ", inventory, " igjen") : '', _react.default.createElement("div", {
     className: "addSaleSidebarCard__price"
-  }, /*#__PURE__*/_react.default.createElement("div", {
+  }, _react.default.createElement("div", {
     className: "addSaleSidebarCard__price--cost"
-  }, /*#__PURE__*/_react.default.createElement("p", {
+  }, _react.default.createElement("p", {
     className: "addSaleSidebarCard__price--cost--label"
-  }, "F\xF8r pris"), /*#__PURE__*/_react.default.createElement("h6", {
+  }, "F\xF8r pris"), _react.default.createElement("h6", {
     className: "addSaleSidebarCard__price--cost--amount"
-  }, first_price, " Kr")), /*#__PURE__*/_react.default.createElement("div", {
+  }, first_price, " Kr")), _react.default.createElement("div", {
     className: "addSaleSidebarCard__price--sale"
-  }, /*#__PURE__*/_react.default.createElement("p", {
+  }, _react.default.createElement("p", {
     className: "addSaleSidebarCard__price--sale--label"
-  }, "Ny pris"), /*#__PURE__*/_react.default.createElement("h6", {
+  }, "Ny pris"), _react.default.createElement("h6", {
     className: "addSaleSidebarCard__price--sale--amount"
-  }, company_price, " Kr"))), /*#__PURE__*/_react.default.createElement("div", {
+  }, company_price, " Kr"))), _react.default.createElement("div", {
     className: "addSaleSidebarCard__footer"
-  }, showEditButton && /*#__PURE__*/_react.default.createElement("div", {
+  }, showEditButton && _react.default.createElement("div", {
     className: "addSaleSidebarCard__footer--action"
-  }, /*#__PURE__*/_react.default.createElement(_SecondaryOutlineButton.default, {
+  }, _react.default.createElement(_SecondaryOutlineButton.default, {
     text: "Rediger",
     onClick: editButtonOnClick
-  })), showAddToCartButton && /*#__PURE__*/_react.default.createElement("div", {
+  })), showAddToCartButton && _react.default.createElement("div", {
     className: "addSaleSidebarCard__footer--action"
-  }, /*#__PURE__*/_react.default.createElement(_SecondaryOutlineButton.default, {
+  }, _react.default.createElement(_SecondaryOutlineButton.default, {
     text: "Legg i handlekurv",
     onClick: addToCartOnClick
-  })), bindingCount > 0 && /*#__PURE__*/_react.default.createElement("p", {
+  })), bindingCount > 0 && _react.default.createElement("p", {
     className: "addSaleSidebarCard__footer--interestedCounter"
   }, bindingCount, " har allerede kj\xF8pt!")));
 };

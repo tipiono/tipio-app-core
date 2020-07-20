@@ -23,13 +23,13 @@ var GrayOutlineButton = function GrayOutlineButton(_ref) {
       onClick = _ref.onClick,
       props = _objectWithoutProperties(_ref, ["loading", "text", "onClick"]);
 
-  return /*#__PURE__*/_react.default.createElement("button", _extends({
+  return _react.default.createElement("button", _extends({
     id: "tipio-join-button",
     type: "button",
     disabled: loading,
     className: "btn btn-outline-gray-600 btn-block btn-lg",
     onClick: onClick
-  }, props), !loading && text, loading && /*#__PURE__*/_react.default.createElement("span", null, ' ', /*#__PURE__*/_react.default.createElement("span", {
+  }, props), !loading && text, loading && _react.default.createElement("span", null, ' ', _react.default.createElement("span", {
     className: "spinner-border spinner-border-sm",
     role: "status",
     "aria-hidden": "true"

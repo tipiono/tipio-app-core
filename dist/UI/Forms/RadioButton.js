@@ -22,15 +22,15 @@ var _default = _react.default.forwardRef(function (_ref, ref) {
       errors = _ref.errors,
       props = _objectWithoutProperties(_ref, ["id", "text", "name", "errors"]);
 
-  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("div", {
+  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("div", {
     className: "md-radio"
-  }, /*#__PURE__*/_react.default.createElement("input", _extends({
+  }, _react.default.createElement("input", _extends({
     id: id,
     type: "radio",
     name: name
   }, props, {
     ref: ref
-  })), /*#__PURE__*/_react.default.createElement("label", {
+  })), _react.default.createElement("label", {
     htmlFor: id
   }, text)), errors && errors[name] && errors[name].message);
 });

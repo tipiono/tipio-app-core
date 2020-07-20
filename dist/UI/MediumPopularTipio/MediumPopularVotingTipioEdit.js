@@ -16,7 +16,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var MediumPopularVotingTipioEdit = function MediumPopularVotingTipioEdit(props) {
   return _react.default.createElement(_MediumPopularTipio.default, props, _react.default.createElement("h6", {
     className: "mediumPopularTipio__content--interested"
-  }, "2 789 interesserte!"), /*#__PURE__*/_react.default.createElement("div", {
+  }, "2 789 interesserte!"), _react.default.createElement("div", {
     className: "mediumPopularTipio__content__submit"
   }, _react.default.createElement(_SecondaryOutlineButton.default, {
     text: "Rediger",

@@ -13,25 +13,25 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function VotingCard(_ref) {
   var id = _ref.id,
-    image = _ref.image,
-    interestedCounter = _ref.interestedCounter,
-    title = _ref.title,
-    brand = _ref.brand,
-    expiresIn = _ref.expiresIn,
-    children = _ref.children,
-    onClick = _ref.onClick,
-    subtitle = _ref.subtitle,
-    voteHasExpired = _ref.voteHasExpired,
-    showTimmer = _ref.showTimmer;
+      image = _ref.image,
+      interestedCounter = _ref.interestedCounter,
+      title = _ref.title,
+      brand = _ref.brand,
+      expiresIn = _ref.expiresIn,
+      children = _ref.children,
+      onClick = _ref.onClick,
+      subtitle = _ref.subtitle,
+      voteHasExpired = _ref.voteHasExpired,
+      showTimmer = _ref.showTimmer;
   return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("div", {
     className: "votingCard"
-  }, /*#__PURE__*/_react.default.createElement("div", {
+  }, _react.default.createElement("div", {
     className: "votingCard__header"
-  }, /*#__PURE__*/_react.default.createElement("a", {
+  }, _react.default.createElement("a", {
     className: "lazy-image votingCard__header--preview",
     href: "/tipio/vote/".concat(id),
     onClick: onClick
-  }, /*#__PURE__*/_react.default.createElement("img", {
+  }, _react.default.createElement("img", {
     className: "lazyload votingCard__header--preview--image",
     src: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 2'%3E%3C/svg%3E",
     "data-src": image,
@@ -43,20 +43,20 @@ function VotingCard(_ref) {
     expires_in: expiresIn
   }))), _react.default.createElement("div", {
     className: "votingCard__body"
-  }, !voteHasExpired ? /*#__PURE__*/_react.default.createElement("div", {
+  }, !voteHasExpired ? _react.default.createElement("div", {
     className: "votingCard__body--interested"
-  }, /*#__PURE__*/_react.default.createElement("h3", {
+  }, _react.default.createElement("h3", {
     className: "votingCard__body--interested--counter"
-  }, interestedCounter || 1), /*#__PURE__*/_react.default.createElement("p", {
+  }, interestedCounter || 1), _react.default.createElement("p", {
     className: "votingCard__body--interested--label"
-  }, "Interesserte!")) : '', /*#__PURE__*/_react.default.createElement("div", {
+  }, "Interesserte!")) : '', _react.default.createElement("div", {
     className: "votingCard__body--content"
-  }, /*#__PURE__*/_react.default.createElement("a", {
+  }, _react.default.createElement("a", {
     onClick: onClick,
     href: "/tipio/vote/".concat(id)
-  }, /*#__PURE__*/_react.default.createElement("h5", {
+  }, _react.default.createElement("h5", {
     className: "votingCard__body--content--title"
-  }, title)), /*#__PURE__*/_react.default.createElement("p", {
+  }, title)), _react.default.createElement("p", {
     className: "votingCard__body--content--description"
   }, brand ? brand.toUpperCase() : subtitle ? subtitle.toUpperCase() : '')), children)));
 }

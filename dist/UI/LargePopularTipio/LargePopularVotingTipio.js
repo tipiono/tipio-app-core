@@ -18,12 +18,12 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var LargePopularVotingTipio = function LargePopularVotingTipio(props) {
   return _react.default.createElement(_LargePopularTipio.default, props, _react.default.createElement("h6", {
     className: "largePopularTipio__content--interested"
-  }, props.join_count, " interesserte!"), /*#__PURE__*/_react.default.createElement("div", {
+  }, props.join_count, " interesserte!"), _react.default.createElement("div", {
     className: "largePopularTipio__content__submit"
-  }, props.joined ? /*#__PURE__*/_react.default.createElement(_SecondaryButton.default, {
+  }, props.joined ? _react.default.createElement(_SecondaryButton.default, {
     text: "Del n\xE5",
     onClick: props.shareOnClick
-  }) : /*#__PURE__*/_react.default.createElement(_SecondaryOutlineButton.default, {
+  }) : _react.default.createElement(_SecondaryOutlineButton.default, {
     text: "Meld interesse",
     onClick: props.voteOnClick
   })));

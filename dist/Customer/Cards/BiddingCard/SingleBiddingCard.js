@@ -46,51 +46,51 @@ var SingleBiddingCard = function SingleBiddingCard(_ref) {
     bindingPercentage = 100 + (0, _calculateDiscountPercentage.default)(maxParticipantsRequired, bindingCount);
   }
 
-  return /*#__PURE__*/_react.default.createElement("div", {
+  return _react.default.createElement("div", {
     className: "singleBiddingCard"
-  }, /*#__PURE__*/_react.default.createElement("div", {
+  }, _react.default.createElement("div", {
     className: "singleBiddingCard__header"
-  }, /*#__PURE__*/_react.default.createElement("a", {
+  }, _react.default.createElement("a", {
     href: "/tipio/bind/".concat(id),
     className: "lazy-image singleBiddingCard__header--preview",
     onClick: onClick
-  }, /*#__PURE__*/_react.default.createElement("img", {
+  }, _react.default.createElement("img", {
     className: "lazyload singleBiddingCard__header--preview--image",
     src: image,
     alt: ""
-  })), /*#__PURE__*/_react.default.createElement("div", {
+  })), _react.default.createElement("div", {
     className: "singleBiddingCard__header--timeLeft"
-  }, /*#__PURE__*/_react.default.createElement(_TipioCountdown.default, {
+  }, _react.default.createElement(_TipioCountdown.default, {
     className: "timer",
     expires_in: expiresIn
-  }))), /*#__PURE__*/_react.default.createElement("div", {
+  }))), _react.default.createElement("div", {
     className: "singleBiddingCard__body"
-  }, /*#__PURE__*/_react.default.createElement("div", {
+  }, _react.default.createElement("div", {
     className: "singleBiddingCard__body--content"
-  }, /*#__PURE__*/_react.default.createElement("a", {
+  }, _react.default.createElement("a", {
     onClick: onClick,
     href: "/tipio/bind/".concat(id)
-  }, /*#__PURE__*/_react.default.createElement("h2", {
+  }, _react.default.createElement("h2", {
     className: "singleBiddingCard__body--content--title"
-  }, title)), brand && /*#__PURE__*/_react.default.createElement("h4", {
+  }, title)), brand && _react.default.createElement("h4", {
     className: "singleBiddingCard__body--content--description"
-  }, brand)), /*#__PURE__*/_react.default.createElement("div", {
+  }, brand)), _react.default.createElement("div", {
     className: "singleBiddingCard__body--price"
-  }, /*#__PURE__*/_react.default.createElement("h3", {
+  }, _react.default.createElement("h3", {
     className: "singleBiddingCard__body--price--cost"
-  }, market_price, " Kr"), /*#__PURE__*/_react.default.createElement("h3", {
+  }, market_price, " Kr"), _react.default.createElement("h3", {
     className: "singleBiddingCard__body--price--sale"
-  }, (0, _generatePrice.default)(bindingCount, firstRange, secondRange), " Kr")), /*#__PURE__*/_react.default.createElement("div", {
+  }, (0, _generatePrice.default)(bindingCount, firstRange, secondRange), " Kr")), _react.default.createElement("div", {
     className: "singleBiddingCard__body--salesbar"
-  }, bindingCount > 0 ? /*#__PURE__*/_react.default.createElement(_SalesProgressBar.default, {
+  }, bindingCount > 0 ? _react.default.createElement(_SalesProgressBar.default, {
     percentage: bindingPercentage,
     bindingCount: bindingCount
-  }) : ''), /*#__PURE__*/_react.default.createElement("span", {
+  }) : ''), _react.default.createElement("span", {
     className: "singleBiddingCard__body--addToCart"
-  }, props.binded ? /*#__PURE__*/_react.default.createElement(_SecondaryButton.default, {
+  }, props.binded ? _react.default.createElement(_SecondaryButton.default, {
     text: "Del n\xE5",
     onClick: props.shareOnClick
-  }) : /*#__PURE__*/_react.default.createElement(_SecondaryButton.default, {
+  }) : _react.default.createElement(_SecondaryButton.default, {
     text: "Legg i handlekurv",
     onClick: props.bindOnClick
   }))));

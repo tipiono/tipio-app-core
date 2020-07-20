@@ -25,17 +25,17 @@ var _default = _react.default.forwardRef(function (_ref, ref) {
       displayErrors = _ref.displayErrors,
       props = _objectWithoutProperties(_ref, ["id", "label", "name", "errors", "displayErrors"]);
 
-  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("div", {
+  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("div", {
     className: "md-checkbox"
-  }, /*#__PURE__*/_react.default.createElement("input", _extends({
+  }, _react.default.createElement("input", _extends({
     type: "checkbox",
     id: id,
     name: name
   }, props, {
     ref: ref
-  })), /*#__PURE__*/_react.default.createElement("label", {
+  })), _react.default.createElement("label", {
     htmlFor: id
-  }, label)), displayErrors && errors && errors[name] && /*#__PURE__*/_react.default.createElement(_ErrorMessage.default, {
+  }, label)), displayErrors && errors && errors[name] && _react.default.createElement(_ErrorMessage.default, {
     content: errors[name].message,
     color: "bg-red"
   }));

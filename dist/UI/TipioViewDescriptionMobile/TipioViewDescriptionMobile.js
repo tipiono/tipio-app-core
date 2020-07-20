@@ -19,9 +19,9 @@ function _default(_ref) {
       return _react.default.createElement("li", {
         key: key + ' ' + item
       }, item);
-    }, /*#__PURE__*/_react.default.createElement("br", null)),
-      textFormatted = _FormatText.textFormatted,
-      restFormatted = _FormatText.restFormatted;
+    }, _react.default.createElement("br", null)),
+        textFormatted = _FormatText.textFormatted,
+        restFormatted = _FormatText.restFormatted;
 
     return [textFormatted, restFormatted];
   }

@@ -10,27 +10,27 @@ var _react = _interopRequireDefault(require("react"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var EmptyBagIcon = function EmptyBagIcon(props) {
-  return /*#__PURE__*/_react.default.createElement("svg", {
+  return _react.default.createElement("svg", {
     width: 32,
     height: 32
-  }, /*#__PURE__*/_react.default.createElement("g", {
+  }, _react.default.createElement("g", {
     className: "prefix__nc-icon-wrapper",
     strokeLinecap: "square",
     strokeWidth: 2,
     fill: "none",
     stroke: "#8c8f91",
     strokeMiterlimit: 10
-  }, /*#__PURE__*/_react.default.createElement("circle", {
+  }, _react.default.createElement("circle", {
     "data-color": "color-2",
     cx: 8,
     cy: 28,
     r: 3
-  }), /*#__PURE__*/_react.default.createElement("circle", {
+  }), _react.default.createElement("circle", {
     "data-color": "color-2",
     cx: 27,
     cy: 28,
     r: 3
-  }), /*#__PURE__*/_react.default.createElement("path", {
+  }), _react.default.createElement("path", {
     d: "M5.706 7H30l-3 14H7L5 1H1"
   })));
 };

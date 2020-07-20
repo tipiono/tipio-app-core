@@ -25,21 +25,21 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 
 function Navigation(_ref) {
   var children = _ref.children,
-    filterOnClick = _ref.filterOnClick,
-    props = _objectWithoutProperties(_ref, ["children", "filterOnClick"]);
+      filterOnClick = _ref.filterOnClick,
+      props = _objectWithoutProperties(_ref, ["children", "filterOnClick"]);
 
-  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("nav", {
+  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("nav", {
     className: "navigation"
-  }, /*#__PURE__*/_react.default.createElement("div", {
+  }, _react.default.createElement("div", {
     className: "container"
-  }, /*#__PURE__*/_react.default.createElement("div", {
+  }, _react.default.createElement("div", {
     className: "nav-wrapper"
-  }, /*#__PURE__*/_react.default.createElement("a", {
+  }, _react.default.createElement("a", {
     className: "logo mr-5",
     href: "/"
   }, _react.default.createElement(_Logo.default, null)), props.showBusinessPrivateNavigationItems && _react.default.createElement(_BusinessPrivateNavigationItems.default, props), _react.default.createElement("ul", {
     className: "nav-list ml-auto"
-  }, /*#__PURE__*/_react.default.createElement("li", {
+  }, _react.default.createElement("li", {
     className: "nav-list-item d-flex align-items-center"
   }, _react.default.createElement(_SearchInput.default, props)), props.showFilterIcon && _react.default.createElement("li", {
     className: "nav-list-item"

@@ -14,9 +14,9 @@ var _SecondaryOutlineButton = _interopRequireDefault(require("../Buttons/Seconda
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var LargePopularBidingTipioEdit = function LargePopularBidingTipioEdit(props) {
-  return /*#__PURE__*/_react.default.createElement(_LargePopularTipio.default, props, /*#__PURE__*/_react.default.createElement("div", {
+  return _react.default.createElement(_LargePopularTipio.default, props, _react.default.createElement("div", {
     className: "largePopularTipio__content__price"
-  }, /*#__PURE__*/_react.default.createElement("h6", {
+  }, _react.default.createElement("h6", {
     className: "largePopularTipio__content__price--marketprice"
   }, props.market_price, " Kr"), _react.default.createElement("h6", {
     className: "largePopularTipio__content__price--saleprice"

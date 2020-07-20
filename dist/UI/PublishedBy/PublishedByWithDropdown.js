@@ -1,6 +1,6 @@
 "use strict";
 
-function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -34,20 +34,20 @@ var PublishedByWithDropDown = function PublishedByWithDropDown(props) {
   (0, _react.useEffect)(function () {
     (0, _fbShare.loadFbSDK)();
   }, []);
-  return /*#__PURE__*/_react.default.createElement(_PublishedByBase.default, props, /*#__PURE__*/_react.default.createElement("div", {
+  return _react.default.createElement(_PublishedByBase.default, props, _react.default.createElement("div", {
     className: "publishedBy__dropdown"
-  }, /*#__PURE__*/_react.default.createElement(_NewDropdown.NewDropdown, {
-    title: /*#__PURE__*/_react.default.createElement(_ThreeDotsIcon.default, null),
+  }, _react.default.createElement(_NewDropdown.NewDropdown, {
+    title: _react.default.createElement(_ThreeDotsIcon.default, null),
     aligned: "publishedBy__dropdown--right",
     showCloseIcon: true,
     hideOnClick: true
-  }, /*#__PURE__*/_react.default.createElement(_NewDropdown.NewDropdownItem, {
+  }, _react.default.createElement(_NewDropdown.NewDropdownItem, {
     key: '1'
-  }, /*#__PURE__*/_react.default.createElement(_reactShare.FacebookShareButton, {
+  }, _react.default.createElement(_reactShare.FacebookShareButton, {
     url: share.link,
     quote: share.title,
     className: "Demo__some-network__share-button"
-  }, "Del p\xE5 facebook")), /*#__PURE__*/_react.default.createElement(_NewDropdown.NewDropdownItem, {
+  }, "Del p\xE5 facebook")), _react.default.createElement(_NewDropdown.NewDropdownItem, {
     key: '2',
     href: (0, _fbShare.messengerShareUrlMobile)(share.url),
     onClick: function onClick() {
@@ -55,24 +55,24 @@ var PublishedByWithDropDown = function PublishedByWithDropDown(props) {
         (0, _fbShare.shareOnMessengerWeb)(share.url);
       }
     }
-  }, "Del p\xE5 Messanger"), /*#__PURE__*/_react.default.createElement(_NewDropdown.NewDropdownItem, {
+  }, "Del p\xE5 Messanger"), _react.default.createElement(_NewDropdown.NewDropdownItem, {
     key: '3'
-  }, /*#__PURE__*/_react.default.createElement(_reactShare.TwitterShareButton, {
+  }, _react.default.createElement(_reactShare.TwitterShareButton, {
     url: share.link,
     title: share.title,
     className: "Demo__some-network__share-button"
-  }, "Del p\xE5 Twitter")), /*#__PURE__*/_react.default.createElement(_NewDropdown.NewDropdownItem, {
+  }, "Del p\xE5 Twitter")), _react.default.createElement(_NewDropdown.NewDropdownItem, {
     key: '4'
-  }, /*#__PURE__*/_react.default.createElement(_reactShare.EmailShareButton, {
+  }, _react.default.createElement(_reactShare.EmailShareButton, {
     url: share.link,
     subject: share.title,
     body: share.title
-  }, "Del p\xE5 mail")), /*#__PURE__*/_react.default.createElement(_NewDropdown.NewDropdownItem, {
+  }, "Del p\xE5 mail")), _react.default.createElement(_NewDropdown.NewDropdownItem, {
     key: '5',
     onClick: function onClick() {
       navigator.clipboard.writeText(share.link);
     }
-  }, "Kopier lenke"), showEdit ? /*#__PURE__*/_react.default.createElement(_NewDropdown.NewDropdownItem, {
+  }, "Kopier lenke"), showEdit ? _react.default.createElement(_NewDropdown.NewDropdownItem, {
     key: '6',
     onClick: props.onEditClick
   }, "Rediger") : '')));
