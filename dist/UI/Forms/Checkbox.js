@@ -23,7 +23,8 @@ var _default = _react.default.forwardRef(function (_ref, ref) {
       name = _ref.name,
       errors = _ref.errors,
       displayErrors = _ref.displayErrors,
-      props = _objectWithoutProperties(_ref, ["id", "label", "name", "errors", "displayErrors"]);
+      children = _ref.children,
+      props = _objectWithoutProperties(_ref, ["id", "label", "name", "errors", "displayErrors", "children"]);
 
   return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("div", {
     className: "md-checkbox"
@@ -35,9 +36,9 @@ var _default = _react.default.forwardRef(function (_ref, ref) {
     ref: ref
   })), _react.default.createElement("label", {
     htmlFor: id
-  }, label)), displayErrors && errors && errors[name] && _react.default.createElement(_ErrorMessage.default, {
+  }, label), children), displayErrors && errors && errors[name] && _react.default.createElement(_ErrorMessage.default, {
     content: errors[name].message,
-    color: "bg-red"
+    color: 'bg-red'
   }));
 });
 
