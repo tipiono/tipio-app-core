@@ -17,6 +17,8 @@ var _HorizontalTimeline = _interopRequireDefault(require("../Timelines/Horizonta
 
 var _SecondaryButton = _interopRequireDefault(require("../../UI/Buttons/SecondaryButton"));
 
+var _SecondaryOutlineButton = _interopRequireDefault(require("../../UI/Buttons/SecondaryOutlineButton"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
@@ -31,7 +33,8 @@ var BindingCard = function BindingCard(_ref) {
       onShareClick = _ref.onShareClick,
       onBindClick = _ref.onBindClick,
       bindingPercentage = _ref.bindingPercentage,
-      props = _objectWithoutProperties(_ref, ["children", "state", "firstRange", "secondRange", "onShareClick", "onBindClick", "bindingPercentage"]);
+      onRestoreClick = _ref.onRestoreClick,
+      props = _objectWithoutProperties(_ref, ["children", "state", "firstRange", "secondRange", "onShareClick", "onBindClick", "bindingPercentage", "onRestoreClick"]);
 
   return _react.default.createElement(_BaseCard.default, props, _react.default.createElement("ul", {
     className: "customerSidebarCard__footer__salePrice"
@@ -56,13 +59,16 @@ var BindingCard = function BindingCard(_ref) {
   })), state !== 'bought' && !props.expiredTipio && _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_SecondaryButton.default, {
     text: 'Legg i handlekurv',
     onClick: onBindClick
-  })), state === 'bought' && _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("div", {
+  })), state === 'bought' && !props.expiredTipio && _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("div", {
     className: "customerSidebarCard__footer--action"
   }, _react.default.createElement(_ShareButton.default, {
     onClick: onShareClick
   })), _react.default.createElement("div", {
     className: "customerSidebarCard__footer--timeline"
-  }, _react.default.createElement(_HorizontalTimeline.default, props))));
+  }, _react.default.createElement(_HorizontalTimeline.default, props))), props.expiredTipio && _react.default.createElement(_SecondaryOutlineButton.default, {
+    text: 'Gjenopprett',
+    onClick: onRestoreClick
+  }));
 };
 
 var _default = BindingCard;

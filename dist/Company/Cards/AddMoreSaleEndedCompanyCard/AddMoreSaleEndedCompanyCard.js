@@ -12,6 +12,8 @@ var _calculateDiscountPercentage = _interopRequireDefault(require("../../../Util
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var AddMoreSaleEndedCompanyCard = function AddMoreSaleEndedCompanyCard(props) {
+  var _props$tipio, _props$tipio2;
+
   var saleDiscount = (0, _calculateDiscountPercentage.default)(props.first_price, props.company_price);
   return _react.default.createElement("div", {
     className: "addMoreSaleEndedCard mb-3"
@@ -21,8 +23,12 @@ var AddMoreSaleEndedCompanyCard = function AddMoreSaleEndedCompanyCard(props) {
     className: "addMoreSaleEndedCard__preview"
   }, _react.default.createElement("a", {
     className: "addMoreSaleEndedCard__preview--image",
-    href: ""
-  }, props.tipio.images && props.tipio.images.length && _react.default.createElement("a", {
+    href: "",
+    onClick: function onClick(e) {
+      e.preventDefault();
+      props.titleOnClick();
+    }
+  }, ((_props$tipio = props.tipio) === null || _props$tipio === void 0 ? void 0 : _props$tipio.images) && props.tipio.images.length && _react.default.createElement("a", {
     href: ""
   }, _react.default.createElement("img", {
     className: "img-fluid",
@@ -32,9 +38,14 @@ var AddMoreSaleEndedCompanyCard = function AddMoreSaleEndedCompanyCard(props) {
     className: "addMoreSaleEndedCard__preview--discount"
   }, saleDiscount, "%"))), _react.default.createElement("div", {
     className: "addMoreSaleEndedCard__content"
-  }, _react.default.createElement("h5", {
-    className: "addMoreSaleEndedCard__content--title"
-  }, props.tipio.title), _react.default.createElement("ul", {
+  }, _react.default.createElement("h5", null, _react.default.createElement("a", {
+    href: "",
+    className: "addMoreSaleCard__content--title",
+    onClick: function onClick(e) {
+      e.preventDefault();
+      props.titleOnClick();
+    }
+  }, (_props$tipio2 = props.tipio) === null || _props$tipio2 === void 0 ? void 0 : _props$tipio2.title)), _react.default.createElement("ul", {
     className: "addMoreSaleEndedCard__content__stats"
   }, _react.default.createElement("li", {
     className: "addMoreSaleEndedCard__content__stats--customers"
@@ -50,7 +61,7 @@ var AddMoreSaleEndedCompanyCard = function AddMoreSaleEndedCompanyCard(props) {
     d: "M9 14.487a.5.5 0 01.5-.5h1a.5.5 0 00.5-.5v-1.993A2.494 2.494 0 008.506 9H4.494A2.493 2.493 0 002 11.494v1.993a.5.5 0 00.5.5h1a.5.5 0 01.5.5V20h5v-5.513zM6.5 7a2.5 2.5 0 100-5 2.5 2.5 0 000 5h0zM3 14.987h-.5a1.5 1.5 0 01-1.5-1.5v-1.993A3.494 3.494 0 014.494 8h4.012A3.494 3.494 0 0112 11.494v1.993a1.5 1.5 0 01-1.5 1.5H10V20.5a.5.5 0 01-.5.5h-6a.5.5 0 01-.5-.5v-5.513zM6.5 8A3.5 3.5 0 116.501 1a3.5 3.5 0 010 7.001h0zM21 14.487a.5.5 0 01.5-.5h1a.5.5 0 00.5-.5v-1.993A2.494 2.494 0 0020.506 9h-4.012A2.493 2.493 0 0014 11.494v1.993a.5.5 0 00.5.5h1a.5.5 0 01.5.5V20h5v-5.513zM18.5 7a2.5 2.5 0 100-5 2.5 2.5 0 000 5h0zM15 14.987h-.5a1.5 1.5 0 01-1.5-1.5v-1.993A3.494 3.494 0 0116.494 8h4.012A3.494 3.494 0 0124 11.494v1.993a1.5 1.5 0 01-1.5 1.5H22V20.5a.5.5 0 01-.5.5h-6a.5.5 0 01-.5-.5v-5.513zM18.5 8A3.5 3.5 0 1118.501 1a3.5 3.5 0 010 7.001h0z"
   }))), _react.default.createElement("span", {
     className: "addMoreSaleEndedCard__content__stats--customers--label"
-  }, props.company_price)), _react.default.createElement("li", {
+  }, props === null || props === void 0 ? void 0 : props.company_price)), _react.default.createElement("li", {
     className: "addMoreSaleEndedCard__content__stats--earned"
   }, _react.default.createElement("svg", {
     width: 21,
