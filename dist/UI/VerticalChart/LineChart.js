@@ -18,7 +18,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var LineChart = function LineChart(_ref) {
   var tipio = _ref.tipio,
       additionalSales = _ref.additionalSales,
-      showGridLines = _ref.showGridLines;
+      showGridLines = _ref.showGridLines,
+      isAdmin = _ref.isAdmin;
   var labels = [];
   var dataset1 = [];
   var dataset2 = [];
@@ -26,9 +27,17 @@ var LineChart = function LineChart(_ref) {
     return day.date;
   });
   dataset1 = tipio && tipio.map(function (el) {
+    if (isAdmin) {
+      return el.result;
+    }
+
     return el.revenue;
   });
   dataset2 = additionalSales && additionalSales.map(function (el) {
+    if (isAdmin) {
+      return el.result;
+    }
+
     return el.revenue;
   });
   var charData = {
