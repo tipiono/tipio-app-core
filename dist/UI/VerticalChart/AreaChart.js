@@ -18,16 +18,23 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var AreaChart = function AreaChart(_ref) {
   var firstDatasets = _ref.firstDatasets,
       secondDatasets = _ref.secondDatasets,
-      thirdDatasets = _ref.thirdDatasets;
-  var dataset3 = [250, 520, 290, 940];
+      thirdDatasets = _ref.thirdDatasets,
+      placeholder = _ref.placeholder,
+      labelPlaceholder = _ref.labelPlaceholder;
   var labels = [];
-  labels = firstDatasets && firstDatasets.map(function (day) {
-    return day.date;
-  });
+
+  if (labelPlaceholder === 'year') {
+    labels = ['Q1 20', 'Q2 20', 'Q3 20', 'Q4 20'];
+  } else {
+    labels = firstDatasets && firstDatasets.map(function (day) {
+      return day === null || day === void 0 ? void 0 : day.date;
+    });
+  }
+
   var datatests = [{
     label: 'First DataSet',
-    data: secondDatasets === null || secondDatasets === void 0 ? void 0 : secondDatasets.map(function (el) {
-      return el.revenue;
+    data: firstDatasets === null || firstDatasets === void 0 ? void 0 : firstDatasets.map(function (el) {
+      return el.result;
     }),
     borderWidth: 2,
     lineTension: 0,
@@ -35,8 +42,8 @@ var AreaChart = function AreaChart(_ref) {
     borderColor: '#C9BFDF'
   }, {
     label: 'Second Dataset',
-    data: firstDatasets === null || firstDatasets === void 0 ? void 0 : firstDatasets.map(function (el) {
-      return el.revenue;
+    data: secondDatasets === null || secondDatasets === void 0 ? void 0 : secondDatasets.map(function (el) {
+      return el.result;
     }),
     borderWidth: 2,
     lineTension: 0,
@@ -47,7 +54,9 @@ var AreaChart = function AreaChart(_ref) {
   if (thirdDatasets) {
     datatests.push({
       label: 'Third Dataset',
-      data: dataset3,
+      data: thirdDatasets === null || thirdDatasets === void 0 ? void 0 : thirdDatasets.map(function (el) {
+        return el.result;
+      }),
       borderWidth: 2,
       lineTension: 0,
       backgroundColor: 'transparent',
@@ -81,7 +90,7 @@ var AreaChart = function AreaChart(_ref) {
     scales: {
       yAxes: [{
         ticks: {
-          beginAtZero: false,
+          beginAtZero: true,
           min: 0,
           display: true,
           color: '#8C8F91'
@@ -96,7 +105,14 @@ var AreaChart = function AreaChart(_ref) {
           display: false
         },
         ticks: {
-          color: '#5C6265'
+          color: '#5C6265',
+          callback: function callback(value) {
+            if (labelPlaceholder === 'week') {
+              return (0, _getDate.default)(value, 'DateName');
+            } else if (labelPlaceholder === 'month') {
+              return (0, _getDate.default)(value, 'DateMonth');
+            } else return value;
+          }
         }
       }]
     },
@@ -112,10 +128,19 @@ var AreaChart = function AreaChart(_ref) {
       bodyAlign: 'center',
       callbacks: {
         title: function title(tooltipItems, data) {
-          return tooltipItems[0].yLabel;
+          console.log(tooltipItems);
+          var title = tooltipItems[0].yLabel;
+
+          if (placeholder) {
+            title += ' Kr';
+          } else {
+            title += '';
+          }
+
+          return title;
         },
         label: function label(tooltipItems) {
-          return (0, _getDate.default)(tooltipItems.xLabel, 'DateName') + ' ' + (0, _getDate.default)(tooltipItems.xLabel, 'DateMonth');
+          display: false;
         }
       }
     }

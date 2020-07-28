@@ -3,13 +3,27 @@ import { Bar } from 'react-chartjs-2';
 import 'chartjs-plugin-annotation';
 import getDate from '../../Util/getDate';
 
-const VerticalChart = ({ tipio, additionalSales, showYears, showGridLines }) => {
+const VerticalChart = ({ tipio, additionalSales, showYears, showGridLines, isAdmin }) => {
     let labels = [];
     let dataset1 = [];
     let dataset2 = [];
     labels = additionalSales && additionalSales.map((day) => day.date);
-    dataset1 = tipio && tipio.map((el) => el.revenue);
-    dataset2 = additionalSales && additionalSales.map((el) => el.revenue);
+    dataset1 =
+        tipio &&
+        tipio.map((el) => {
+            if (isAdmin) {
+                return el.result;
+            }
+            return el.revenue;
+        });
+    dataset2 =
+        additionalSales &&
+        additionalSales.map((el) => {
+            if (isAdmin) {
+                return el.result;
+            }
+            return el.revenue;
+        });
     const charData = {
         labels: labels,
         datasets: [
