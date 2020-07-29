@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useLayoutEffect } from 'react';
 import Masonry from 'react-masonry-css';
 import CategoryItem from './CategoryItem';
 import CategoryItemNavigator from './CategoryItemNavigator';
@@ -37,6 +37,37 @@ function CategoriesForm({
     const [selectedOptionId, setSelectedOptionId] = useState(0);
     const [selectedOption, setSelectedOption] = useState(null);
     const [selectedCategoryId, setSelectedCategoryId] = useState(0);
+    const [show, setShow] = useState(false);
+
+    const orderCategories = (arr) => {
+        arr.sort((second, first) => {
+            if ('sub_categories' in first) {
+                first.sub_categories.sort((s, f) => {
+                    if (f.order === undefined) return 1;
+                    if ('sub_categories' in f) orderCategories(first.sub_categories);
+                    return s.order > f.order ? 1 : -1;
+                });
+            }
+            if (first.order === undefined) return 1;
+            return second.order > first.order ? 1 : -1;
+        });
+    };
+
+    useLayoutEffect(() => {
+        const sortAktive = (arr) =>
+            new Promise((resolve, reject) => {
+                try {
+                    setShow(false);
+                    orderCategories(arr);
+                    resolve(true);
+                } catch {
+                    reject(true);
+                }
+            });
+        sortAktive(active)
+            .then((_) => setShow(true))
+            .catch((_) => setShow(true));
+    }, [active]);
 
     function optionOnSelect(item) {
         let soi = 0;
@@ -126,7 +157,8 @@ function CategoriesForm({
                         'company-main-categories': withCheckbox
                     })}
                 >
-                    {active &&
+                    {show &&
+                        active.length &&
                         active.map((item) => {
                             if (item.height === 1) {
                                 return (
