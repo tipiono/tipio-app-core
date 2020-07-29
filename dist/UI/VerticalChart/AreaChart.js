@@ -128,7 +128,6 @@ var AreaChart = function AreaChart(_ref) {
       bodyAlign: 'center',
       callbacks: {
         title: function title(tooltipItems, data) {
-          console.log(tooltipItems);
           var title = tooltipItems[0].yLabel;
 
           if (placeholder) {
