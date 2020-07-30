@@ -50,7 +50,7 @@ const FeatureTipiosCompanyCards = ({ expires_in, brand, binding_count, forceLoad
                         </div>
                     )}
 
-                    <SecondaryButton text={'Git tilbud'} loading={props.loading} onClick={props.onClick} />
+                    <SecondaryButton text={'Gi tilbud'} loading={props.loading} onClick={props.onClick} />
                 </div>
             </div>
         </div>
