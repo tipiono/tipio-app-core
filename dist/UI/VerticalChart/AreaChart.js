@@ -91,13 +91,13 @@ var AreaChart = function AreaChart(_ref) {
       yAxes: [{
         ticks: {
           beginAtZero: true,
+          color: '#8C8F91',
           min: 0,
-          display: true,
-          color: '#8C8F91'
+          display: window.innerWidth >= 540 ? true : false
         },
         gridLines: {
-          display: true,
-          color: '#F5F5F5'
+          color: '#F5F5F5',
+          display: window.innerWidth >= 540 ? true : false
         }
       }],
       xAxes: [{
@@ -142,6 +142,16 @@ var AreaChart = function AreaChart(_ref) {
           display: false;
         }
       }
+    },
+    annotation: {
+      annotations: [{
+        type: 'line',
+        mode: 'horizontal',
+        scaleID: 'y-axis-0',
+        value: 0,
+        borderColor: '#C9CFD3',
+        borderWidth: 1
+      }]
     }
   };
   return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_reactChartjs.Line, {

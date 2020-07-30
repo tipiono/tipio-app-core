@@ -70,11 +70,11 @@ var VerticalChart = function VerticalChart(_ref) {
         ticks: {
           beginAtZero: false,
           min: 0,
-          display: showGridLines ? true : false,
+          display: showGridLines ? window.innerWidth >= 540 ? true : false : false,
           color: '#8C8F91'
         },
         gridLines: {
-          display: showGridLines ? true : false,
+          display: showGridLines ? window.innerWidth >= 540 ? true : false : false,
           color: '#F5F5F5'
         }
       }],
