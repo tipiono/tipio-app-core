@@ -66,14 +66,11 @@ const AreaChart = ({ firstDatasets, secondDatasets, thirdDatasets, placeholder, 
                 {
                     ticks: {
                         beginAtZero: true,
+                        color: '#8C8F91',
                         min: 0,
-                        display: true,
-                        color: '#8C8F91'
+                        display: window.innerWidth >= 540 ? true : false
                     },
-                    gridLines: {
-                        display: true,
-                        color: '#F5F5F5'
-                    }
+                    gridLines: { color: '#F5F5F5', display: window.innerWidth >= 540 ? true : false }
                 }
             ],
             xAxes: [
@@ -118,6 +115,18 @@ const AreaChart = ({ firstDatasets, secondDatasets, thirdDatasets, placeholder, 
                     display: false;
                 }
             }
+        },
+        annotation: {
+            annotations: [
+                {
+                    type: 'line',
+                    mode: 'horizontal',
+                    scaleID: 'y-axis-0',
+                    value: 0,
+                    borderColor: '#C9CFD3',
+                    borderWidth: 1
+                }
+            ]
         }
     };
 
