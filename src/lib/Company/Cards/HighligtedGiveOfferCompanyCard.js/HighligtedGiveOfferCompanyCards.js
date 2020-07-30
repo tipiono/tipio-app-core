@@ -41,7 +41,7 @@ const HighligtedGiveOfferCompanyCards = ({
                     </div>
                 )}
                 <div className="highligtedGiveOfferCompanyCards__content--button">
-                    <SecondaryOutlineButton text={'Git tilbud'} onClick={onClick} />
+                    <SecondaryOutlineButton text={'Gi tilbud'} onClick={onClick} />
                 </div>
             </div>
         </div>

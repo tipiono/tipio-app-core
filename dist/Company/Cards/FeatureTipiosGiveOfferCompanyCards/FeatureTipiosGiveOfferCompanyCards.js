@@ -64,7 +64,7 @@ var FeatureTipiosCompanyCards = function FeatureTipiosCompanyCards(_ref) {
   }, _react.default.createElement("h5", {
     className: "featureTipiosCompanyCards__body--interested--counter"
   }, binding_count, " interesserte!")), _react.default.createElement(_index.SecondaryButton, {
-    text: 'Git tilbud',
+    text: 'Gi tilbud',
     loading: props.loading,
     onClick: props.onClick
   }))));
