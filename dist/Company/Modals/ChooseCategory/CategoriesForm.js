@@ -89,12 +89,12 @@ function CategoriesForm(_ref) {
         first.sub_categories.sort(function (s, f) {
           if (f.order === undefined) return 1;
           if ('sub_categories' in f) orderCategories(first.sub_categories);
-          return s.order < f.order ? 1 : -1;
+          return s.order > f.order ? 1 : -1;
         });
       }
 
       if (first.order === undefined) return 1;
-      return second.order < first.order ? 1 : -1;
+      return second.order > first.order ? 1 : -1;
     });
   };
 
