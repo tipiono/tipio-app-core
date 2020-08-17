@@ -37,7 +37,7 @@ function CategoriesForm({
     const [selectedOptionId, setSelectedOptionId] = useState(0);
     const [selectedOption, setSelectedOption] = useState(null);
     const [selectedCategoryId, setSelectedCategoryId] = useState(0);
-    const [show, setShow] = useState(false);
+    const [orderActive, setOrderActive] = useState([]);
 
     const orderCategories = (arr) => {
         arr.sort((second, first) => {
@@ -57,7 +57,6 @@ function CategoriesForm({
         const sortAktive = (arr) =>
             new Promise((resolve, reject) => {
                 try {
-                    setShow(false);
                     orderCategories(arr);
                     resolve(true);
                 } catch {
@@ -65,8 +64,8 @@ function CategoriesForm({
                 }
             });
         sortAktive(active)
-            .then((_) => setShow(true))
-            .catch((_) => setShow(true));
+            .then((_) => setOrderActive(active))
+            .catch((_) => setOrderActive(active));
     }, [active]);
 
     function optionOnSelect(item) {
@@ -157,9 +156,8 @@ function CategoriesForm({
                         'company-main-categories': withCheckbox
                     })}
                 >
-                    {show &&
-                        active.length &&
-                        active.map((item) => {
+                    {orderActive.length &&
+                        orderActive.map((item) => {
                             if (item.height === 1) {
                                 return (
                                     <CategoryItemNavigator
