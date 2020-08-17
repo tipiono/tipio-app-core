@@ -1,22 +1,20 @@
 import React, { useEffect, useState } from 'react';
 
-const Spinner = () => (
-    <div class="spinner-grow" role="status">
-        <span class="sr-only"></span>
-    </div>
-);
-const SvgInline = (props) => {
+const SvgInline = ({ url }) => {
     const [svg, setSvg] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
     const [isErrored, setIsErrored] = useState(false);
 
     useEffect(() => {
-        fetch(props.url)
-            .then((res) => res.text())
-            .then(setSvg)
-            .catch(setIsErrored)
-            .then(() => setIsLoaded(true));
-    }, [props.url]);
+        if (url)
+            fetch(url)
+                .then((res) => res.text())
+                .then(setSvg)
+                .catch(setIsErrored)
+                .then(() => setIsLoaded(true));
+    }, [url]);
+
+    if (!url) return <></>;
 
     return (
         <>
