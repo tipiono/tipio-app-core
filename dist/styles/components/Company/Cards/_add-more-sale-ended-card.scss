@@ -4,9 +4,11 @@
 
     &--image {
       position: relative;
-      display: block;
+      display: flex;
+      justify-content: center;
+      align-items:center;
       width: 150px;
-      height: auto;
+      height: 130px;
       border: 1px solid #F5F5F5;
       overflow: hidden;
 
@@ -14,6 +16,8 @@
         transition: all 0.3s;
         -webkit-transform: translateZ(0) scale(1.01, 1.01);
         transform: translateZ(0) scale(1.01, 1.01);
+        max-width: 150px;
+        max-height: 130px;
       }
 
       &:hover {

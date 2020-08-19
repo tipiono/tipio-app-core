@@ -16,9 +16,7 @@ const AddMoreSaleEndedCompanyCard = (props) => {
                         }}
                     >
                         {props.tipio?.images && props.tipio.images.length && (
-                            <a href="">
-                                <img className="img-fluid" src={props.tipio.images[0].blob_url} alt="" />
-                            </a>
+                            <img className="img-fluid" src={props.tipio.images[0].blob_url} alt="" />
                         )}
                         <span className="addMoreSaleEndedCard__preview--discount">{saleDiscount}%</span>
                     </a>
@@ -46,7 +44,7 @@ const AddMoreSaleEndedCompanyCard = (props) => {
                                 </g>
                             </svg>
                             <span className="addMoreSaleEndedCard__content__stats--customers--label">
-                                {props?.company_price}
+                                {props?.binding_count || 0}
                             </span>
                         </li>
 
@@ -60,7 +58,9 @@ const AddMoreSaleEndedCompanyCard = (props) => {
                                     fillRule="evenodd"
                                 />
                             </svg>
-                            <span className="addMoreSaleEndedCard__content__stats--earned--label">9 837 711 Kr</span>
+                            <span className="addMoreSaleEndedCard__content__stats--earned--label">
+                                {props?.earnings || 0} Kr
+                            </span>
                         </li>
                     </ul>
                 </div>
