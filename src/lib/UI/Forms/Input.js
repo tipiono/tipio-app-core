@@ -9,23 +9,60 @@ export default React.forwardRef(({ placeholder, name, errors, displayErrors, onB
             <span className="label-sm">{placeholder}</span>
             {displayErrors && errors && errors[name] && (
                 <span className="error-icon">
-                    <svg width={19} height={19} viewBox="0 0 19 19" fill="none">
-                        <mask id="prefix__a" maskUnits="userSpaceOnUse" x={0} y={0} width={19} height={19}>
-                            <path fillRule="evenodd" clipRule="evenodd" d="M0 0h18.35v18.543H0V.001z" fill="#fff" />
-                        </mask>
-                        <g mask="url(#prefix__a)">
+                    <svg width="19" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <mask
+                            id="mask0"
+                            mask-type="alpha"
+                            maskUnits="userSpaceOnUse"
+                            x="0"
+                            y="0"
+                            width="19"
+                            height="20"
+                        >
                             <path
-                                fillRule="evenodd"
-                                clipRule="evenodd"
-                                d="M9.175 17.584C4.64 17.584.95 13.855.95 9.272.95 4.689 4.64.96 9.175.96c4.536 0 8.226 3.729 8.226 8.312 0 4.583-3.69 8.312-8.226 8.312zM9.175 0C4.115 0 0 4.16 0 9.27c0 5.114 4.116 9.272 9.175 9.272 5.06 0 9.176-4.158 9.176-9.271C18.35 4.16 14.235 0 9.175 0z"
+                                fill-rule="evenodd"
+                                clip-rule="evenodd"
+                                d="M0 0.800415H18.3507V19.3428H0V0.800415Z"
+                                fill="white"
+                            />
+                        </mask>
+                        <g mask="url(#mask0)">
+                            <path
+                                fill-rule="evenodd"
+                                clip-rule="evenodd"
+                                d="M9.17529 18.3836C4.63984 18.3836 0.949878 14.6548 0.949878 10.0716C0.949878 5.48842 4.63984 1.75962 9.17529 1.75962C13.7108 1.75962 17.4007 5.48842 17.4007 10.0716C17.4007 14.6548 13.7108 18.3836 9.17529 18.3836ZM9.17529 0.800415C4.11575 0.800415 -0.00012207 4.95962 -0.00012207 10.0716C-0.00012207 15.1844 4.11575 19.3428 9.17529 19.3428C14.2348 19.3428 18.3507 15.1844 18.3507 10.0716C18.3507 4.95962 14.2348 0.800415 9.17529 0.800415Z"
                                 fill="#D93227"
                             />
                         </g>
-                        <mask id="prefix__b" maskUnits="userSpaceOnUse" x={0} y={0} width={19} height={19}>
-                            <path fillRule="evenodd" clipRule="evenodd" d="M0 18.543h18.35V0H0v18.543z" fill="#fff" />
+                        <mask
+                            id="mask1"
+                            mask-type="alpha"
+                            maskUnits="userSpaceOnUse"
+                            x="0"
+                            y="0"
+                            width="19"
+                            height="20"
+                        >
+                            <path
+                                fill-rule="evenodd"
+                                clip-rule="evenodd"
+                                d="M0 19.343H18.3508V0.799774H0V19.343Z"
+                                fill="white"
+                            />
                         </mask>
-                        <g mask="url(#prefix__b)" fillRule="evenodd" clipRule="evenodd" fill="#D93227">
-                            <path d="M8.574 13.595h1.214V7.571H8.574v6.024zM9.175 4.948a.836.836 0 00-.83.838c0 .461.374.838.83.838a.835.835 0 00.83-.838.835.835 0 00-.83-.838z" />
+                        <g mask="url(#mask1)">
+                            <path
+                                fill-rule="evenodd"
+                                clip-rule="evenodd"
+                                d="M8.57458 14.395H9.78821V8.37097H8.57458V14.395Z"
+                                fill="#D93227"
+                            />
+                            <path
+                                fill-rule="evenodd"
+                                clip-rule="evenodd"
+                                d="M9.17525 5.74768C8.71846 5.74768 8.34558 6.12448 8.34558 6.58528C8.34558 7.04688 8.71846 7.42368 9.17525 7.42368C9.63204 7.42368 10.0041 7.04688 10.0041 6.58528C10.0041 6.12448 9.63204 5.74768 9.17525 5.74768Z"
+                                fill="#D93227"
+                            />
                         </g>
                     </svg>
                 </span>
