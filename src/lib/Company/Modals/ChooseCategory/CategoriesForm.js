@@ -1,4 +1,4 @@
-import React, { useState, useLayoutEffect } from 'react';
+import React, { useState, useLayoutEffect, useRef } from 'react';
 import Masonry from 'react-masonry-css';
 import CategoryItem from './CategoryItem';
 import CategoryItemNavigator from './CategoryItemNavigator';
@@ -38,6 +38,7 @@ function CategoriesForm({
     const [selectedOption, setSelectedOption] = useState(null);
     const [selectedCategoryId, setSelectedCategoryId] = useState(0);
     const [orderActive, setOrderActive] = useState([]);
+    const ref = useRef(null);
 
     const orderCategories = (arr) => {
         arr.sort((second, first) => {
@@ -116,13 +117,8 @@ function CategoriesForm({
     }
 
     function subCategoriesOnClick(item) {
-        if (item.height === 1) {
-            setActiveCategory(item.id);
-        }
-        if (item.height === 2) {
-            setActiveCategory(item.id);
-        }
-        if (item.height === 3) {
+        if (item.height >= 1 && item.height <= 3) {
+            ref.current.scrollIntoView({ x: 0, y: 0, behavior: 'smooth' });
             setActiveCategory(item.id);
         }
     }
@@ -137,7 +133,7 @@ function CategoriesForm({
     }
 
     return (
-        <div className="choose-category">
+        <div className="choose-category" ref={ref}>
             <CategoriesHeader
                 data={navigation}
                 parent={parent}
