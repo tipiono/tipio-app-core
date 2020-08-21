@@ -83,6 +83,8 @@ function CategoriesForm(_ref) {
       orderActive = _useState8[0],
       setOrderActive = _useState8[1];
 
+  var ref = (0, _react.useRef)(null);
+
   var orderCategories = function orderCategories(arr) {
     arr.sort(function (second, first) {
       if ('sub_categories' in first) {
@@ -173,15 +175,12 @@ function CategoriesForm(_ref) {
   }
 
   function subCategoriesOnClick(item) {
-    if (item.height === 1) {
-      setActiveCategory(item.id);
-    }
-
-    if (item.height === 2) {
-      setActiveCategory(item.id);
-    }
-
-    if (item.height === 3) {
+    if (item.height >= 1 && item.height <= 3) {
+      ref.current.scrollIntoView({
+        x: 0,
+        y: 0,
+        behavior: 'smooth'
+      });
       setActiveCategory(item.id);
     }
   }
@@ -196,7 +195,8 @@ function CategoriesForm(_ref) {
   }
 
   return _react.default.createElement("div", {
-    className: "choose-category"
+    className: "choose-category",
+    ref: ref
   }, _react.default.createElement(_CategoriesHeader.default, {
     data: navigation,
     parent: parent,
