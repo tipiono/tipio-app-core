@@ -39,9 +39,11 @@ var MediumPopularTipio = function MediumPopularTipio(_ref) {
   }, _react.default.createElement("a", {
     href: "/tipio/".concat(type === 2 ? 'bind' : 'vote', "/").concat(id),
     onClick: onClick,
-    className: "mediumPopularTipio__content--title"
+    className: "text-truncate mediumPopularTipio__content--title",
+    title: title
   }, title), _react.default.createElement("p", {
-    className: "mediumPopularTipio__content--description"
+    className: "text-truncate mediumPopularTipio__content--description",
+    title: brand
   }, brand), children));
 };
 
