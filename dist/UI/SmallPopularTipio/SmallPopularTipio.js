@@ -44,7 +44,7 @@ var SmallPopularTipio = function SmallPopularTipio(_ref) {
     title: title
   }, title), _react.default.createElement("p", {
     className: "text-truncate smallPopularTipio__content--description",
-    title: title
+    title: brand ? brand : subtitle
   }, brand ? brand : subtitle, ' '), children));
 };
 

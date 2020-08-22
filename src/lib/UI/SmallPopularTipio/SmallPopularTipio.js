@@ -26,7 +26,7 @@ const SmallPopularTipio = ({ id, children, title, binding_expires_in, images, br
                 >
                     {title}
                 </a>
-                <p className="text-truncate smallPopularTipio__content--description" title={title}>
+                <p className="text-truncate smallPopularTipio__content--description" title={brand ? brand : subtitle}>
                     {brand ? brand : subtitle}{' '}
                 </p>
 

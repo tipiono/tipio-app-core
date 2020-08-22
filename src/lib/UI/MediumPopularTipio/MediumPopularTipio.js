@@ -26,7 +26,7 @@ const MediumPopularTipio = ({ id, children, title, binding_expires_in, images, b
                 >
                     {title}
                 </a>
-                <p className="text-truncate mediumPopularTipio__content--description" title={title}>
+                <p className="text-truncate mediumPopularTipio__content--description" title={brand}>
                     {brand}
                 </p>
 
