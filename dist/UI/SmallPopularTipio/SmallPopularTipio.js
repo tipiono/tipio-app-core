@@ -40,10 +40,12 @@ var SmallPopularTipio = function SmallPopularTipio(_ref) {
   }, _react.default.createElement("a", {
     href: "/tipio/".concat(type === 2 ? 'bind' : 'vote', "/").concat(id),
     onClick: onClick,
-    className: "smallPopularTipio__content--title"
+    className: "text-truncate smallPopularTipio__content--title",
+    title: title
   }, title), _react.default.createElement("p", {
-    className: "smallPopularTipio__content--description"
-  }, brand ? brand : subtitle, " "), children));
+    className: "text-truncate smallPopularTipio__content--description",
+    title: title
+  }, brand ? brand : subtitle, ' '), children));
 };
 
 var _default = SmallPopularTipio;
