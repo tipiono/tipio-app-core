@@ -85,26 +85,28 @@ function CategoriesForm(_ref) {
 
   var ref = (0, _react.useRef)(null);
 
-  var orderCategories = function orderCategories(arr) {
-    arr.sort(function (second, first) {
-      if ('sub_categories' in first) {
-        first.sub_categories.sort(function (s, f) {
-          if (f.order === undefined) return 1;
-          if ('sub_categories' in f) orderCategories(first.sub_categories);
-          return s.order > f.order ? 1 : -1;
-        });
-      }
-
+  var sort = function sort(arr) {
+    return arr.sort(function (second, first) {
+      if ('sub_categories' in first) sort(first.sub_categories);
       if (first.order === undefined) return 1;
       return second.order > first.order ? 1 : -1;
     });
+  };
+
+  var sorter = function sorter(arr) {
+    for (var i = arr.length - 1; i >= 0; i--) {
+      if ('sub_categories' in arr[i]) sort(arr[i].sub_categories);
+    }
+
+    sort(arr);
+    return arr;
   };
 
   (0, _react.useLayoutEffect)(function () {
     var sortAktive = function sortAktive(arr) {
       return new Promise(function (resolve, reject) {
         try {
-          orderCategories(arr);
+          sorter(arr);
           resolve(true);
         } catch (_unused) {
           reject(true);

@@ -40,25 +40,26 @@ function CategoriesForm({
     const [orderActive, setOrderActive] = useState([]);
     const ref = useRef(null);
 
-    const orderCategories = (arr) => {
+    const sort = (arr) =>
         arr.sort((second, first) => {
-            if ('sub_categories' in first) {
-                first.sub_categories.sort((s, f) => {
-                    if (f.order === undefined) return 1;
-                    if ('sub_categories' in f) orderCategories(first.sub_categories);
-                    return s.order > f.order ? 1 : -1;
-                });
-            }
+            if ('sub_categories' in first) sort(first.sub_categories);
             if (first.order === undefined) return 1;
             return second.order > first.order ? 1 : -1;
         });
+
+    const sorter = (arr) => {
+        for (let i = arr.length - 1; i >= 0; i--) {
+            if ('sub_categories' in arr[i]) sort(arr[i].sub_categories);
+        }
+        sort(arr);
+        return arr;
     };
 
     useLayoutEffect(() => {
         const sortAktive = (arr) =>
             new Promise((resolve, reject) => {
                 try {
-                    orderCategories(arr);
+                    sorter(arr);
                     resolve(true);
                 } catch {
                     reject(true);
