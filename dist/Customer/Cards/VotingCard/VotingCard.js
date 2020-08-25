@@ -45,9 +45,7 @@ function VotingCard(_ref) {
     className: "timer",
     expires_in: expiresIn
   })), sustainable && _react.default.createElement("div", {
-    className: (0, _classnames.default)('votingCard__header--sustainable', {
-      'votingCard__header--sustainableLeft': showTimmer
-    })
+    className: "votingCard__header--sustainable"
   }, _react.default.createElement("span", null, "B\xE6rekraftig"))), _react.default.createElement("div", {
     className: "votingCard__body"
   }, !voteHasExpired ? _react.default.createElement("div", {

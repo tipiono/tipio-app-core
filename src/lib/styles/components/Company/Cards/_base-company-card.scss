@@ -36,7 +36,7 @@
         &--sustainable {
             position: absolute;
             bottom: 0;
-            right: 0;
+            left: 0;
             height: 27px;
             background: #ffffff;
             border: 1px solid #c2e7e2;
@@ -50,11 +50,6 @@
                 padding-left: 14px;
                 padding-right: 14px;
             }
-        }
-
-        &--sustainableLeft {
-            right: auto;
-            left: 0;
         }
     }
 

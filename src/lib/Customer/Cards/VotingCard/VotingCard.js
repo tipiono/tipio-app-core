@@ -34,11 +34,7 @@ function VotingCard({
                         </div>
                     )}
                     {sustainable && (
-                        <div
-                            className={cx('votingCard__header--sustainable', {
-                                'votingCard__header--sustainableLeft': showTimmer
-                            })}
-                        >
+                        <div className="votingCard__header--sustainable">
                             <span>Bærekraftig</span>
                         </div>
                     )}
