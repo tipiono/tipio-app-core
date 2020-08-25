@@ -21,16 +21,9 @@ function _iterableToArrayLimit(arr, i) { if (!(Symbol.iterator in Object(arr) ||
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
-var Spinner = function Spinner() {
-  return _react.default.createElement("div", {
-    class: "spinner-grow",
-    role: "status"
-  }, _react.default.createElement("span", {
-    class: "sr-only"
-  }));
-};
+var SvgInline = function SvgInline(_ref) {
+  var url = _ref.url;
 
-var SvgInline = function SvgInline(props) {
   var _useState = (0, _react.useState)(null),
       _useState2 = _slicedToArray(_useState, 2),
       svg = _useState2[0],
@@ -47,12 +40,13 @@ var SvgInline = function SvgInline(props) {
       setIsErrored = _useState6[1];
 
   (0, _react.useEffect)(function () {
-    fetch(props.url).then(function (res) {
+    if (url) fetch(url).then(function (res) {
       return res.text();
     }).then(setSvg).catch(setIsErrored).then(function () {
       return setIsLoaded(true);
     });
-  }, [props.url]);
+  }, [url]);
+  if (!url) return _react.default.createElement(_react.default.Fragment, null);
   return _react.default.createElement(_react.default.Fragment, null, isLoaded ? _react.default.createElement("div", {
     className: "svgInline svgInline--".concat(isLoaded ? 'loaded' : 'loading', " ").concat(isErrored ? 'svgInline--errored' : ''),
     dangerouslySetInnerHTML: {

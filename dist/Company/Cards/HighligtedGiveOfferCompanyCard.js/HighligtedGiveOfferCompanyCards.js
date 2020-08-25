@@ -53,7 +53,7 @@ var HighligtedGiveOfferCompanyCards = function HighligtedGiveOfferCompanyCards(_
   }, binding_count, " interesserte!")), _react.default.createElement("div", {
     className: "highligtedGiveOfferCompanyCards__content--button"
   }, _react.default.createElement(_index.SecondaryOutlineButton, {
-    text: 'Git tilbud',
+    text: 'Gi tilbud',
     onClick: onClick
   }))));
 };

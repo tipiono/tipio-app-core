@@ -44,7 +44,6 @@ var OrderItemCard = function OrderItemCard(_ref) {
 
   var getDate = function getDate(date) {
     var dateStr = new Date(date);
-    console.log(dateStr.getMonth());
   };
 
   var getFormattedDate = function getFormattedDate(date) {

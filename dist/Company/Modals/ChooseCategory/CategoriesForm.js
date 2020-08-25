@@ -78,6 +78,49 @@ function CategoriesForm(_ref) {
       selectedCategoryId = _useState6[0],
       setSelectedCategoryId = _useState6[1];
 
+  var _useState7 = (0, _react.useState)([]),
+      _useState8 = _slicedToArray(_useState7, 2),
+      orderActive = _useState8[0],
+      setOrderActive = _useState8[1];
+
+  var ref = (0, _react.useRef)(null);
+
+  var sort = function sort(arr) {
+    return arr.sort(function (second, first) {
+      if ('sub_categories' in first) sort(first.sub_categories);
+      if (first.order === undefined) return 1;
+      return second.order > first.order ? 1 : -1;
+    });
+  };
+
+  var sorter = function sorter(arr) {
+    for (var i = arr.length - 1; i >= 0; i--) {
+      if ('sub_categories' in arr[i]) sort(arr[i].sub_categories);
+    }
+
+    sort(arr);
+    return arr;
+  };
+
+  (0, _react.useLayoutEffect)(function () {
+    var sortAktive = function sortAktive(arr) {
+      return new Promise(function (resolve, reject) {
+        try {
+          sorter(arr);
+          resolve(true);
+        } catch (_unused) {
+          reject(true);
+        }
+      });
+    };
+
+    sortAktive(active).then(function (_) {
+      return setOrderActive(active);
+    }).catch(function (_) {
+      return setOrderActive(active);
+    });
+  }, [active]);
+
   function optionOnSelect(item) {
     var soi = 0;
 
@@ -134,15 +177,12 @@ function CategoriesForm(_ref) {
   }
 
   function subCategoriesOnClick(item) {
-    if (item.height === 1) {
-      setActiveCategory(item.id);
-    }
-
-    if (item.height === 2) {
-      setActiveCategory(item.id);
-    }
-
-    if (item.height === 3) {
+    if (item.height >= 1 && item.height <= 3) {
+      ref.current.scrollIntoView({
+        x: 0,
+        y: 0,
+        behavior: 'smooth'
+      });
       setActiveCategory(item.id);
     }
   }
@@ -157,7 +197,8 @@ function CategoriesForm(_ref) {
   }
 
   return _react.default.createElement("div", {
-    className: "choose-category"
+    className: "choose-category",
+    ref: ref
   }, _react.default.createElement(_CategoriesHeader.default, {
     data: navigation,
     parent: parent,
@@ -177,7 +218,7 @@ function CategoriesForm(_ref) {
       'customer-main-categories': !withCheckbox,
       'company-main-categories': withCheckbox
     })
-  }, active && active.map(function (item) {
+  }, orderActive.length && orderActive.map(function (item) {
     if (item.height === 1) {
       return _react.default.createElement(_CategoryItemNavigator.default, {
         key: item.id + ':' + item.title,

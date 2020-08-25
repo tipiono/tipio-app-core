@@ -21,11 +21,14 @@ const MediumPopularTipio = ({ id, children, title, binding_expires_in, images, b
                 <a
                     href={`/tipio/${type === 2 ? 'bind' : 'vote'}/${id}`}
                     onClick={onClick}
-                    className="mediumPopularTipio__content--title"
+                    className="text-truncate mediumPopularTipio__content--title"
+                    title={title}
                 >
                     {title}
                 </a>
-                <p className="mediumPopularTipio__content--description">{brand}</p>
+                <p className="text-truncate mediumPopularTipio__content--description" title={brand}>
+                    {brand}
+                </p>
 
                 {children}
             </div>

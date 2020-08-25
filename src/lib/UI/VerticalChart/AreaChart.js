@@ -3,14 +3,17 @@ import { Line } from 'react-chartjs-2';
 import getDate from '../../Util/getDate';
 import 'chartjs-plugin-annotation';
 
-const AreaChart = ({ firstDatasets, secondDatasets, thirdDatasets }) => {
-    let dataset3 = [250, 520, 290, 940];
+const AreaChart = ({ firstDatasets, secondDatasets, thirdDatasets, placeholder, labelPlaceholder }) => {
     let labels = [];
-    labels = firstDatasets && firstDatasets.map((day) => day.date);
+    if (labelPlaceholder === 'year') {
+        labels = ['Q1 20', 'Q2 20', 'Q3 20', 'Q4 20'];
+    } else {
+        labels = firstDatasets && firstDatasets.map((day) => day?.date);
+    }
     let datatests = [
         {
             label: 'First DataSet',
-            data: secondDatasets?.map((el) => el.revenue),
+            data: firstDatasets?.map((el) => el.result),
             borderWidth: 2,
             lineTension: 0,
             backgroundColor: 'transparent',
@@ -18,7 +21,7 @@ const AreaChart = ({ firstDatasets, secondDatasets, thirdDatasets }) => {
         },
         {
             label: 'Second Dataset',
-            data: firstDatasets?.map((el) => el.revenue),
+            data: secondDatasets?.map((el) => el.result),
             borderWidth: 2,
             lineTension: 0,
             backgroundColor: 'transparent',
@@ -28,7 +31,7 @@ const AreaChart = ({ firstDatasets, secondDatasets, thirdDatasets }) => {
     if (thirdDatasets) {
         datatests.push({
             label: 'Third Dataset',
-            data: dataset3,
+            data: thirdDatasets?.map((el) => el.result),
             borderWidth: 2,
             lineTension: 0,
             backgroundColor: 'transparent',
@@ -62,15 +65,12 @@ const AreaChart = ({ firstDatasets, secondDatasets, thirdDatasets }) => {
             yAxes: [
                 {
                     ticks: {
-                        beginAtZero: false,
+                        beginAtZero: true,
+                        color: '#8C8F91',
                         min: 0,
-                        display: true,
-                        color: '#8C8F91'
+                        display: window.innerWidth >= 540 ? true : false
                     },
-                    gridLines: {
-                        display: true,
-                        color: '#F5F5F5'
-                    }
+                    gridLines: { color: '#F5F5F5', display: window.innerWidth >= 540 ? true : false }
                 }
             ],
             xAxes: [
@@ -79,7 +79,14 @@ const AreaChart = ({ firstDatasets, secondDatasets, thirdDatasets }) => {
                         display: false
                     },
                     ticks: {
-                        color: '#5C6265'
+                        color: '#5C6265',
+                        callback: function(value) {
+                            if (labelPlaceholder === 'week') {
+                                return getDate(value, 'DateName');
+                            } else if (labelPlaceholder === 'month') {
+                                return getDate(value, 'DateMonth');
+                            } else return value;
+                        }
                     }
                 }
             ]
@@ -96,12 +103,30 @@ const AreaChart = ({ firstDatasets, secondDatasets, thirdDatasets }) => {
             bodyAlign: 'center',
             callbacks: {
                 title: function(tooltipItems, data) {
-                    return tooltipItems[0].yLabel;
+                    let title = tooltipItems[0].yLabel;
+                    if (placeholder) {
+                        title += ' Kr';
+                    } else {
+                        title += '';
+                    }
+                    return title;
                 },
                 label: function(tooltipItems) {
-                    return getDate(tooltipItems.xLabel, 'DateName') + ' ' + getDate(tooltipItems.xLabel, 'DateMonth');
+                    display: false;
                 }
             }
+        },
+        annotation: {
+            annotations: [
+                {
+                    type: 'line',
+                    mode: 'horizontal',
+                    scaleID: 'y-axis-0',
+                    value: 0,
+                    borderColor: '#C9CFD3',
+                    borderWidth: 1
+                }
+            ]
         }
     };
 

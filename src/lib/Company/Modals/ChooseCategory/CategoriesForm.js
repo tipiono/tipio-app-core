@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useLayoutEffect, useRef } from 'react';
 import Masonry from 'react-masonry-css';
 import CategoryItem from './CategoryItem';
 import CategoryItemNavigator from './CategoryItemNavigator';
@@ -37,6 +37,38 @@ function CategoriesForm({
     const [selectedOptionId, setSelectedOptionId] = useState(0);
     const [selectedOption, setSelectedOption] = useState(null);
     const [selectedCategoryId, setSelectedCategoryId] = useState(0);
+    const [orderActive, setOrderActive] = useState([]);
+    const ref = useRef(null);
+
+    const sort = (arr) =>
+        arr.sort((second, first) => {
+            if ('sub_categories' in first) sort(first.sub_categories);
+            if (first.order === undefined) return 1;
+            return second.order > first.order ? 1 : -1;
+        });
+
+    const sorter = (arr) => {
+        for (let i = arr.length - 1; i >= 0; i--) {
+            if ('sub_categories' in arr[i]) sort(arr[i].sub_categories);
+        }
+        sort(arr);
+        return arr;
+    };
+
+    useLayoutEffect(() => {
+        const sortAktive = (arr) =>
+            new Promise((resolve, reject) => {
+                try {
+                    sorter(arr);
+                    resolve(true);
+                } catch {
+                    reject(true);
+                }
+            });
+        sortAktive(active)
+            .then((_) => setOrderActive(active))
+            .catch((_) => setOrderActive(active));
+    }, [active]);
 
     function optionOnSelect(item) {
         let soi = 0;
@@ -86,13 +118,8 @@ function CategoriesForm({
     }
 
     function subCategoriesOnClick(item) {
-        if (item.height === 1) {
-            setActiveCategory(item.id);
-        }
-        if (item.height === 2) {
-            setActiveCategory(item.id);
-        }
-        if (item.height === 3) {
+        if (item.height >= 1 && item.height <= 3) {
+            ref.current.scrollIntoView({ x: 0, y: 0, behavior: 'smooth' });
             setActiveCategory(item.id);
         }
     }
@@ -107,7 +134,7 @@ function CategoriesForm({
     }
 
     return (
-        <div className="choose-category">
+        <div className="choose-category" ref={ref}>
             <CategoriesHeader
                 data={navigation}
                 parent={parent}
@@ -126,8 +153,8 @@ function CategoriesForm({
                         'company-main-categories': withCheckbox
                     })}
                 >
-                    {active &&
-                        active.map((item) => {
+                    {orderActive.length &&
+                        orderActive.map((item) => {
                             if (item.height === 1) {
                                 return (
                                     <CategoryItemNavigator

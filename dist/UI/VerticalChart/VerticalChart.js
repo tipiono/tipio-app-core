@@ -19,7 +19,8 @@ var VerticalChart = function VerticalChart(_ref) {
   var tipio = _ref.tipio,
       additionalSales = _ref.additionalSales,
       showYears = _ref.showYears,
-      showGridLines = _ref.showGridLines;
+      showGridLines = _ref.showGridLines,
+      isAdmin = _ref.isAdmin;
   var labels = [];
   var dataset1 = [];
   var dataset2 = [];
@@ -27,9 +28,17 @@ var VerticalChart = function VerticalChart(_ref) {
     return day.date;
   });
   dataset1 = tipio && tipio.map(function (el) {
+    if (isAdmin) {
+      return el.result;
+    }
+
     return el.revenue;
   });
   dataset2 = additionalSales && additionalSales.map(function (el) {
+    if (isAdmin) {
+      return el.result;
+    }
+
     return el.revenue;
   });
   var charData = {
@@ -61,11 +70,11 @@ var VerticalChart = function VerticalChart(_ref) {
         ticks: {
           beginAtZero: false,
           min: 0,
-          display: showGridLines ? true : false,
+          display: showGridLines ? window.innerWidth >= 540 ? true : false : false,
           color: '#8C8F91'
         },
         gridLines: {
-          display: showGridLines ? true : false,
+          display: showGridLines ? window.innerWidth >= 540 ? true : false : false,
           color: '#F5F5F5'
         }
       }],

@@ -3,13 +3,27 @@ import { Line } from 'react-chartjs-2';
 import getDate from '../../Util/getDate';
 import 'chartjs-plugin-annotation';
 
-const LineChart = ({ tipio, additionalSales, showGridLines }) => {
+const LineChart = ({ tipio, additionalSales, showGridLines, isAdmin }) => {
     let labels = [];
     let dataset1 = [];
     let dataset2 = [];
     labels = tipio && tipio.map((day) => day.date);
-    dataset1 = tipio && tipio.map((el) => el.revenue);
-    dataset2 = additionalSales && additionalSales.map((el) => el.revenue);
+    dataset1 =
+        tipio &&
+        tipio.map((el) => {
+            if (isAdmin) {
+                return el.result;
+            }
+            return el.revenue;
+        });
+    dataset2 =
+        additionalSales &&
+        additionalSales.map((el) => {
+            if (isAdmin) {
+                return el.result;
+            }
+            return el.revenue;
+        });
     const charData = {
         labels: labels,
         datasets: [

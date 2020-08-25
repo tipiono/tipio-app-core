@@ -9,6 +9,8 @@ var _react = _interopRequireDefault(require("react"));
 
 var _TipioCountdown = _interopRequireDefault(require("../../../UI/TipioCountdown/TipioCountdown"));
 
+var _classnames = _interopRequireDefault(require("classnames"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
@@ -25,8 +27,10 @@ var BaseCompanyCard = function BaseCompanyCard(_ref) {
       showBindingCount = _ref.showBindingCount,
       _ref$forceLoad = _ref.forceLoad,
       forceLoad = _ref$forceLoad === void 0 ? false : _ref$forceLoad,
+      sustainable = _ref.sustainable,
       link = _ref.link,
-      props = _objectWithoutProperties(_ref, ["children", "expires_in", "brand", "binding_count", "potential_earning", "showRevenue", "showBindingCount", "forceLoad", "link"]);
+      timmerRight = _ref.timmerRight,
+      props = _objectWithoutProperties(_ref, ["children", "expires_in", "brand", "binding_count", "potential_earning", "showRevenue", "showBindingCount", "forceLoad", "sustainable", "link", "timmerRight"]);
 
   var showBrand = props.showBrand || false;
 
@@ -57,7 +61,9 @@ var BaseCompanyCard = function BaseCompanyCard(_ref) {
   }, _react.default.createElement(_TipioCountdown.default, {
     className: "timer",
     expires_in: expires_in
-  })))), _react.default.createElement("div", {
+  })), sustainable && _react.default.createElement("div", {
+    className: "baseCompanyCard__header--sustainable"
+  }, _react.default.createElement("span", null, "B\xE6rekraftig")))), _react.default.createElement("div", {
     className: "baseCompanyCard__body"
   }, _react.default.createElement("a", {
     href: link,

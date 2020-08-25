@@ -9,6 +9,8 @@ var _react = _interopRequireDefault(require("react"));
 
 var _TipioCountdown = _interopRequireDefault(require("../../../UI/TipioCountdown/TipioCountdown"));
 
+var _classnames = _interopRequireDefault(require("classnames"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function VotingCard(_ref) {
@@ -22,7 +24,8 @@ function VotingCard(_ref) {
       onClick = _ref.onClick,
       subtitle = _ref.subtitle,
       voteHasExpired = _ref.voteHasExpired,
-      showTimmer = _ref.showTimmer;
+      showTimmer = _ref.showTimmer,
+      sustainable = _ref.sustainable;
   return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("div", {
     className: "votingCard"
   }, _react.default.createElement("div", {
@@ -41,7 +44,9 @@ function VotingCard(_ref) {
   }, _react.default.createElement(_TipioCountdown.default, {
     className: "timer",
     expires_in: expiresIn
-  }))), _react.default.createElement("div", {
+  })), sustainable && _react.default.createElement("div", {
+    className: "votingCard__header--sustainable"
+  }, _react.default.createElement("span", null, "B\xE6rekraftig"))), _react.default.createElement("div", {
     className: "votingCard__body"
   }, !voteHasExpired ? _react.default.createElement("div", {
     className: "votingCard__body--interested"
