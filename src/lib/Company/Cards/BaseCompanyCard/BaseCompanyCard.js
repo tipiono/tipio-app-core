@@ -50,11 +50,7 @@ const BaseCompanyCard = ({
                             <TipioCountdown className="timer" expires_in={expires_in} />
                         </div>
                         {sustainable && (
-                            <div
-                                className={cx('baseCompanyCard__header--sustainable', {
-                                    'baseCompanyCard__header--sustainableLeft': timmerRight
-                                })}
-                            >
+                            <div className="baseCompanyCard__header--sustainable">
                                 <span>Bærekraftig</span>
                             </div>
                         )}

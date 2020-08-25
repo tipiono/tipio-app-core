@@ -62,9 +62,7 @@ var BaseCompanyCard = function BaseCompanyCard(_ref) {
     className: "timer",
     expires_in: expires_in
   })), sustainable && _react.default.createElement("div", {
-    className: (0, _classnames.default)('baseCompanyCard__header--sustainable', {
-      'baseCompanyCard__header--sustainableLeft': timmerRight
-    })
+    className: "baseCompanyCard__header--sustainable"
   }, _react.default.createElement("span", null, "B\xE6rekraftig")))), _react.default.createElement("div", {
     className: "baseCompanyCard__body"
   }, _react.default.createElement("a", {
