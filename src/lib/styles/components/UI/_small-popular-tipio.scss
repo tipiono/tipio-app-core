@@ -1,5 +1,6 @@
 .smallPopularTipio {
     max-width: 358px;
+    width: 100%;
     &__preview {
         overflow: hidden;
         margin-bottom: 1.5rem;
@@ -92,7 +93,7 @@
             color: $cyan;
             font-size: 1rem;
             font-family: 'Riposte-Regular', sans-serif;
-            margin-bottom: 2rem;
+            margin-bottom: 2.8rem;
         }
     }
 
