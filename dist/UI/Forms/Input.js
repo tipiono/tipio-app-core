@@ -49,7 +49,7 @@ var _default = _react.default.forwardRef(function (_ref, ref) {
     xmlns: "http://www.w3.org/2000/svg"
   }, _react.default.createElement("mask", {
     id: "mask0",
-    maskType: "alpha",
+    masktype: "alpha",
     maskUnits: "userSpaceOnUse",
     x: "0",
     y: "0",
@@ -69,7 +69,7 @@ var _default = _react.default.forwardRef(function (_ref, ref) {
     fill: "#D93227"
   })), _react.default.createElement("mask", {
     id: "mask1",
-    maskType: "alpha",
+    masktype: "alpha",
     maskUnits: "userSpaceOnUse",
     x: "0",
     y: "0",

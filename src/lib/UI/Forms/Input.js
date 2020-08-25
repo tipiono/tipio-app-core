@@ -10,7 +10,7 @@ export default React.forwardRef(({ placeholder, name, errors, displayErrors, onB
             {displayErrors && errors && errors[name] && (
                 <span className="error-icon">
                     <svg width="19" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <mask id="mask0" maskType="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="19" height="20">
+                        <mask id="mask0" masktype="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="19" height="20">
                             <path
                                 fillRule="evenodd"
                                 clipRule="evenodd"
@@ -26,7 +26,7 @@ export default React.forwardRef(({ placeholder, name, errors, displayErrors, onB
                                 fill="#D93227"
                             />
                         </g>
-                        <mask id="mask1" maskType="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="19" height="20">
+                        <mask id="mask1" masktype="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="19" height="20">
                             <path
                                 fillRule="evenodd"
                                 clipRule="evenodd"
