@@ -1,6 +1,6 @@
 import React from 'react';
 import TipioCountdown from '../../../UI/TipioCountdown/TipioCountdown';
-
+import cx from 'classnames';
 function VotingCard({
     id,
     image,
@@ -12,7 +12,8 @@ function VotingCard({
     onClick,
     subtitle,
     voteHasExpired,
-    showTimmer
+    showTimmer,
+    sustainable
 }) {
     return (
         <>
@@ -30,6 +31,15 @@ function VotingCard({
                     {showTimmer && (
                         <div className="votingCard__header--timeLeft">
                             <TipioCountdown className="timer" expires_in={expiresIn} />
+                        </div>
+                    )}
+                    {sustainable && (
+                        <div
+                            className={cx('votingCard__header--sustainable', {
+                                'votingCard__header--sustainableLeft': showTimmer
+                            })}
+                        >
+                            <span>Bærekraftig</span>
                         </div>
                     )}
                 </div>
