@@ -1,5 +1,6 @@
 import React from 'react';
 import TipioCountdown from '../../../UI/TipioCountdown/TipioCountdown';
+import cx from 'classnames';
 
 const BaseCompanyCard = ({
     children,
@@ -10,7 +11,9 @@ const BaseCompanyCard = ({
     showRevenue,
     showBindingCount,
     forceLoad = false,
+    sustainable,
     link,
+    timmerRight,
     ...props
 }) => {
     const showBrand = props.showBrand || false;
@@ -42,9 +45,19 @@ const BaseCompanyCard = ({
                                 />
                             </a>
                         )}
+
                         <div className="baseCompanyCard__header--timeLeft">
                             <TipioCountdown className="timer" expires_in={expires_in} />
                         </div>
+                        {sustainable && (
+                            <div
+                                className={cx('baseCompanyCard__header--sustainable', {
+                                    'baseCompanyCard__header--sustainableLeft': timmerRight
+                                })}
+                            >
+                                <span>Bærekraftig</span>
+                            </div>
+                        )}
                     </div>
                 </span>
 

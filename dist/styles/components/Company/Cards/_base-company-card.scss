@@ -33,6 +33,29 @@
                 right: 0;
             }
         }
+        &--sustainable {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            height: 27px;
+            background: #FFFFFF;
+            border: 1px solid #C2E7E2;
+      
+            span {
+              font-size: 10px;
+              font-family: 'Riposte-Regular', sans-serif;
+              font-weight: 500;
+              text-transform: uppercase;
+              color: #188576;
+              padding-left: 14px;
+              padding-right: 14px;
+            }
+          }
+
+          &--sustainableLeft{
+            right: auto;
+            left: 0;
+          }
     }
 
     &__body {
