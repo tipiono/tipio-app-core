@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import ReactSelect from 'react-select';
-// import ErrorMessage from '../ErrorMessage/ErrorMessage';
 
 function SelectWithSeperateValues({
     placeholder,
@@ -9,9 +8,8 @@ function SelectWithSeperateValues({
     label,
     onChange,
     defaultValue,
-    displayErrors,
-    errors,
-    name
+    YourOption = (_) => <></>,
+    customOption = false
 }) {
     const [value, setValue] = useState({ value: defaultValue, label: defaultValue } || false);
 
@@ -19,28 +17,30 @@ function SelectWithSeperateValues({
         setValue(v);
         onChange(v);
     };
+
+    const MyOption = (props) => {
+        const { innerProps, innerRef, data, isFocused } = props;
+        return (
+            <div ref={innerRef} {...innerProps} style={{ backgroundColor: isFocused ? '#f5f5f5' : 'inherit' }}>
+                <YourOption data={data} />
+            </div>
+        );
+    };
+
     return (
         <div className="custom-material-select">
             <label className="select-label">{label}</label>
             <ReactSelect
                 value={value}
                 onChange={_onChange}
-                options={options.map((x) => ({ value: x.value, label: x.label }))}
+                options={options}
+                components={customOption ? { Option: MyOption } : {}}
                 placeholder={placeholder || '-'}
                 isClearable={false}
             />
-
-            {/*{displayErrors && errors && errors[name] &&*/}
-            {/*<ErrorMessage*/}
-            {/*    content={errors[name].message || errors[name]}*/}
-            {/*    color={"bg-red"}*/}
-            {/*/>*/}
-            {/*}*/}
         </div>
     );
 }
-
-SelectWithSeperateValues.defaultProps = {};
 
 SelectWithSeperateValues.propTypes = {
     value: PropTypes.string,
