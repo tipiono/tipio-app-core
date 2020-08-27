@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import BaseCard from './BaseCard';
 import SalesProgressBarTooltip from '../SalesProgressBarTooltip/SalesProgressBarTooltip';
 import ShareButton from './ShareButton';
 import HorizontalTimeline from '../Timelines/HorizontalTimeline';
 import SecondaryButton from '../../UI/Buttons/SecondaryButton';
 import SecondaryOutlineButton from '../../UI/Buttons/SecondaryOutlineButton';
+import ReactSelect from 'react-select';
+
 const BindingCard = ({
     children,
     state,
@@ -16,6 +18,14 @@ const BindingCard = ({
     onRestoreClick,
     ...props
 }) => {
+    const [value, setValue] = useState({ value: 1, label: 1 } || false);
+
+    const _onChange = (v) => {
+        console.log(v);
+        setValue(v);
+        // onChange(v);
+    };
+
     return (
         <BaseCard {...props}>
             <ul className="customerSidebarCard__footer__salePrice">
@@ -48,6 +58,8 @@ const BindingCard = ({
                 </div>
             )}
 
+            {children}
+
             {state !== 'bought' && !props.expiredTipio && (
                 <>
                     <SecondaryButton text={'Legg i handlekurv'} onClick={onBindClick} />
@@ -65,6 +77,7 @@ const BindingCard = ({
                     </div>
                 </>
             )}
+
             {props.expiredTipio && <SecondaryOutlineButton text={'Gjenopprett'} onClick={onRestoreClick} />}
         </BaseCard>
     );
