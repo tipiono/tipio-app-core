@@ -34,6 +34,7 @@ function SelectWithSeperateValues({
                 value={value}
                 onChange={_onChange}
                 options={options}
+                isOptionDisabled={(option) => option.isdisabled} // disable an option
                 components={customOption ? { Option: MyOption } : {}}
                 placeholder={placeholder || '-'}
                 isClearable={false}

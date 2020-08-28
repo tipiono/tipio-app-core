@@ -79,6 +79,10 @@ function SelectWithSeperateValues(_ref) {
     value: value,
     onChange: _onChange,
     options: options,
+    isOptionDisabled: function isOptionDisabled(option) {
+      return option.isdisabled;
+    } // disable an option
+    ,
     components: customOption ? {
       Option: MyOption
     } : {},
