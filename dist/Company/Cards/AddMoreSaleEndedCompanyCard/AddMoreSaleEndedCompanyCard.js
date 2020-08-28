@@ -12,9 +12,10 @@ var _calculateDiscountPercentage = _interopRequireDefault(require("../../../Util
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var AddMoreSaleEndedCompanyCard = function AddMoreSaleEndedCompanyCard(props) {
-  var _props$tipio, _props$tipio2;
+  var _props$tipio, _props$tipio2, _props$tipio3, _props$tipio4;
 
   var saleDiscount = (0, _calculateDiscountPercentage.default)(props.first_price, props.company_price);
+  console.log((_props$tipio = props.tipio) === null || _props$tipio === void 0 ? void 0 : _props$tipio.sustainable);
   return _react.default.createElement("div", {
     className: "addMoreSaleEndedCard mb-3"
   }, _react.default.createElement("div", {
@@ -28,13 +29,15 @@ var AddMoreSaleEndedCompanyCard = function AddMoreSaleEndedCompanyCard(props) {
       e.preventDefault();
       props.titleOnClick();
     }
-  }, ((_props$tipio = props.tipio) === null || _props$tipio === void 0 ? void 0 : _props$tipio.images) && props.tipio.images.length && _react.default.createElement("img", {
+  }, ((_props$tipio2 = props.tipio) === null || _props$tipio2 === void 0 ? void 0 : _props$tipio2.images) && props.tipio.images.length && _react.default.createElement("img", {
     className: "img-fluid",
     src: props.tipio.images[0].blob_url,
     alt: ""
   }), _react.default.createElement("span", {
     className: "addMoreSaleEndedCard__preview--discount"
-  }, saleDiscount, "%"))), _react.default.createElement("div", {
+  }, saleDiscount, "%"), ((_props$tipio3 = props.tipio) === null || _props$tipio3 === void 0 ? void 0 : _props$tipio3.sustainable) && _react.default.createElement("div", {
+    className: "addMoreSaleEndedCard__preview--sustainable"
+  }, _react.default.createElement("span", null, "B\xE6rekraftig")))), _react.default.createElement("div", {
     className: "addMoreSaleEndedCard__content"
   }, _react.default.createElement("h5", null, _react.default.createElement("a", {
     href: "",
@@ -43,7 +46,7 @@ var AddMoreSaleEndedCompanyCard = function AddMoreSaleEndedCompanyCard(props) {
       e.preventDefault();
       props.titleOnClick();
     }
-  }, (_props$tipio2 = props.tipio) === null || _props$tipio2 === void 0 ? void 0 : _props$tipio2.title)), _react.default.createElement("ul", {
+  }, (_props$tipio4 = props.tipio) === null || _props$tipio4 === void 0 ? void 0 : _props$tipio4.title)), _react.default.createElement("ul", {
     className: "addMoreSaleEndedCard__content__stats"
   }, _react.default.createElement("li", {
     className: "addMoreSaleEndedCard__content__stats--customers"

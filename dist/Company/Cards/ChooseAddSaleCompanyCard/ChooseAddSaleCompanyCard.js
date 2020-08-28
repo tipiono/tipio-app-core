@@ -30,7 +30,8 @@ var _default = _react.default.forwardRef(function (_ref, ref) {
       name = _ref.name,
       errors = _ref.errors,
       onClick = _ref.onClick,
-      props = _objectWithoutProperties(_ref, ["image", "title", "salePrice", "costPrice", "saleDiscount", "children", "defaultValue", "id", "label", "name", "errors", "onClick"]);
+      sustainable = _ref.sustainable,
+      props = _objectWithoutProperties(_ref, ["image", "title", "salePrice", "costPrice", "saleDiscount", "children", "defaultValue", "id", "label", "name", "errors", "onClick", "sustainable"]);
 
   return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("div", {
     className: "chooseAddSaleCard"
@@ -48,7 +49,9 @@ var _default = _react.default.forwardRef(function (_ref, ref) {
     alt: ""
   }), _react.default.createElement("span", {
     className: "chooseAddSaleCard__preview--discount"
-  }, saleDiscount))), _react.default.createElement("div", {
+  }, saleDiscount), sustainable && _react.default.createElement("div", {
+    className: "chooseAddSaleCard__preview--sustainable"
+  }, _react.default.createElement("span", null, "B\xE6rekraftig")))), _react.default.createElement("div", {
     className: "chooseAddSaleCard__content"
   }, _react.default.createElement("div", {
     className: "chooseAddSaleCard__content--price"
