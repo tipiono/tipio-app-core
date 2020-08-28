@@ -19,7 +19,8 @@ function SaleCard(_ref) {
       saleDiscount = _ref.saleDiscount,
       children = _ref.children,
       expiresIn = _ref.expiresIn,
-      onClick = _ref.onClick;
+      onClick = _ref.onClick,
+      sustainable = _ref.sustainable;
   return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("div", {
     className: "saleCard"
   }, _react.default.createElement("div", {
@@ -34,7 +35,9 @@ function SaleCard(_ref) {
     alt: ""
   }), _react.default.createElement("span", {
     className: "saleCard__preview--discount"
-  }, saleDiscount, " %")), _react.default.createElement("div", {
+  }, saleDiscount, " %"), sustainable && _react.default.createElement("div", {
+    className: "saleCard__preview--sustainable"
+  }, _react.default.createElement("span", null, "B\xE6rekraftig"))), _react.default.createElement("div", {
     className: "saleCard__content"
   }, _react.default.createElement("div", {
     className: "saleCard__content--price"
