@@ -63,7 +63,7 @@ var _default = _react.default.forwardRef(function (_ref, ref) {
     className: "chooseAddSaleCard__content--title",
     onClick: onClick
   }, title))), _react.default.createElement(_Checkbox.default, _extends({
-    label: "Legg til mersalg",
+    label: 'Legg til mersalg',
     id: id,
     name: name
   }, props, {
