@@ -1,10 +1,10 @@
 import React from 'react';
 import TipioCountdown from '../TipioCountdown/TipioCountdown';
 
-function TipioOfTheDay({ id, children, title, subtitle, voting_expires_in, images, onClick, showTimer }) {
+function TipioOfTheDay({ id, children, title, subtitle, voting_expires_in, images, onClick, showTimer, link }) {
     return (
         <div className="tipioOfTheDay">
-            <a href={`/tipio/vote/${id}`} onClick={onClick} className="tipioOfTheDay__preview">
+            <a href={link ? link : `/tipio/vote/${id}`} onClick={onClick} className="tipioOfTheDay__preview">
                 <img
                     className="tipioOfTheDay__preview--image"
                     src={images && images.length && images[0].blob_url}
