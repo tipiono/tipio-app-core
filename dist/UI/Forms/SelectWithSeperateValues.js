@@ -19,6 +19,8 @@ function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return 
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
@@ -27,16 +29,18 @@ function _iterableToArrayLimit(arr, i) { if (!(Symbol.iterator in Object(arr) ||
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
-// import ErrorMessage from '../ErrorMessage/ErrorMessage';
 function SelectWithSeperateValues(_ref) {
   var placeholder = _ref.placeholder,
       options = _ref.options,
       label = _ref.label,
       onChange = _ref.onChange,
       defaultValue = _ref.defaultValue,
-      displayErrors = _ref.displayErrors,
-      errors = _ref.errors,
-      name = _ref.name;
+      _ref$YourOption = _ref.YourOption,
+      YourOption = _ref$YourOption === void 0 ? function (_) {
+    return _react.default.createElement(_react.default.Fragment, null);
+  } : _ref$YourOption,
+      _ref$customOption = _ref.customOption,
+      customOption = _ref$customOption === void 0 ? false : _ref$customOption;
 
   var _useState = (0, _react.useState)({
     value: defaultValue,
@@ -51,6 +55,22 @@ function SelectWithSeperateValues(_ref) {
     onChange(v);
   };
 
+  var MyOption = function MyOption(props) {
+    var innerProps = props.innerProps,
+        innerRef = props.innerRef,
+        data = props.data,
+        isFocused = props.isFocused;
+    return _react.default.createElement("div", _extends({
+      ref: innerRef
+    }, innerProps, {
+      style: {
+        backgroundColor: isFocused ? '#f5f5f5' : 'inherit'
+      }
+    }), _react.default.createElement(YourOption, {
+      data: data
+    }));
+  };
+
   return _react.default.createElement("div", {
     className: "custom-material-select"
   }, _react.default.createElement("label", {
@@ -58,18 +78,19 @@ function SelectWithSeperateValues(_ref) {
   }, label), _react.default.createElement(_reactSelect.default, {
     value: value,
     onChange: _onChange,
-    options: options.map(function (x) {
-      return {
-        value: x.value,
-        label: x.label
-      };
-    }),
+    options: options,
+    isOptionDisabled: function isOptionDisabled(option) {
+      return option.isdisabled;
+    } // disable an option
+    ,
+    components: customOption ? {
+      Option: MyOption
+    } : {},
     placeholder: placeholder || '-',
     isClearable: false
   }));
 }
 
-SelectWithSeperateValues.defaultProps = {};
 SelectWithSeperateValues.propTypes = {
   value: _propTypes.default.string,
   placeholder: _propTypes.default.string,

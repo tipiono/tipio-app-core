@@ -19,11 +19,12 @@ function TipioOfTheDay(_ref) {
       voting_expires_in = _ref.voting_expires_in,
       images = _ref.images,
       onClick = _ref.onClick,
-      showTimer = _ref.showTimer;
+      showTimer = _ref.showTimer,
+      link = _ref.link;
   return _react.default.createElement("div", {
     className: "tipioOfTheDay"
   }, _react.default.createElement("a", {
-    href: "/tipio/vote/".concat(id),
+    href: link ? link : "/tipio/vote/".concat(id),
     onClick: onClick,
     className: "tipioOfTheDay__preview"
   }, _react.default.createElement("img", {

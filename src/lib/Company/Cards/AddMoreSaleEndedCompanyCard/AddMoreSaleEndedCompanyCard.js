@@ -3,6 +3,7 @@ import CalculateDiscountPercentage from '../../../Util/calculateDiscountPercenta
 
 const AddMoreSaleEndedCompanyCard = (props) => {
     const saleDiscount = CalculateDiscountPercentage(props.first_price, props.company_price);
+    console.log(props.tipio?.sustainable);
     return (
         <div className="addMoreSaleEndedCard mb-3">
             <div className="d-flex flex-row align-items-center">
@@ -19,6 +20,11 @@ const AddMoreSaleEndedCompanyCard = (props) => {
                             <img className="img-fluid" src={props.tipio.images[0].blob_url} alt="" />
                         )}
                         <span className="addMoreSaleEndedCard__preview--discount">{saleDiscount}%</span>
+                        {props.tipio?.sustainable && (
+                            <div className="addMoreSaleEndedCard__preview--sustainable">
+                                <span>Bærekraftig</span>
+                            </div>
+                        )}
                     </a>
                 </div>
 

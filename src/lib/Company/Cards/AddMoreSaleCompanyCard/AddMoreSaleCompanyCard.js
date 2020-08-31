@@ -24,6 +24,11 @@ const AddMoreSaleCompanyCard = (props) => {
                             <img className="lazyload img-fluid" src={props.tipio.images[0].blob_url} alt="" />
                         )}
                         <span className="addMoreSaleCard__preview--discount">{saleDiscount}</span>
+                        {props.tipio?.sustainable && (
+                            <div className="addMoreSaleCard__preview--sustainable">
+                                <span>Bærekraftig</span>
+                            </div>
+                        )}
                     </a>
                 </div>
                 <div className="addMoreSaleCard__content">
