@@ -1,10 +1,27 @@
 import React from 'react';
 import { CountdownType, PinkyCountdownSM } from '../../../index';
+import cx from 'classnames';
 
-function SaleCard({ image, title, salePrice, costPrice, saleDiscount, children, expiresIn, onClick, sustainable }) {
+function SaleCard({
+    image,
+    title,
+    salePrice,
+    costPrice,
+    saleDiscount,
+    children,
+    expiresIn,
+    onClick,
+    sustainable,
+    isValidTipio
+}) {
+    console.log(isValidTipio, title, 'hahhhh');
     return (
         <>
-            <div className="saleCard">
+            <div
+                className={cx('saleCard', {
+                    inActiveSaleCard: !isValidTipio
+                })}
+            >
                 <div className="d-flex flex-row mb-4">
                     <a className="saleCard__preview lazy-image" href="" onClick={onClick}>
                         <img className="saleCard__preview--image lazyload" src={image} alt="" />
