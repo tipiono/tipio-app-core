@@ -9,6 +9,8 @@ var _react = _interopRequireDefault(require("react"));
 
 var _index = require("../../../index");
 
+var _classnames = _interopRequireDefault(require("classnames"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function SaleCard(_ref) {
@@ -20,9 +22,13 @@ function SaleCard(_ref) {
       children = _ref.children,
       expiresIn = _ref.expiresIn,
       onClick = _ref.onClick,
-      sustainable = _ref.sustainable;
+      sustainable = _ref.sustainable,
+      isValidTipio = _ref.isValidTipio;
+  console.log(isValidTipio, title, 'hahhhh');
   return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("div", {
-    className: "saleCard"
+    className: (0, _classnames.default)('saleCard', {
+      inActiveSaleCard: !isValidTipio
+    })
   }, _react.default.createElement("div", {
     className: "d-flex flex-row mb-4"
   }, _react.default.createElement("a", {
