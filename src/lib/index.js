@@ -156,6 +156,7 @@ import FilterSearch from './UI/Filters/Search';
  *   Layout
  * */
 import PublicLayout from './UI/Layout/Public/index';
+import Footer from './UI/Layout/Footer';
 
 /*
  *   Icons
@@ -250,6 +251,7 @@ export {
     EmptyAvatar,
     EmptyCover,
     PublicLayout,
+    Footer,
     Avatar,
     ChangeAvatar,
     ChangeCover,
