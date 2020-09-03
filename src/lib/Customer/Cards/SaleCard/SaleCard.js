@@ -14,7 +14,6 @@ function SaleCard({
     sustainable,
     isValidTipio
 }) {
-    console.log(isValidTipio, title, 'hahhhh');
     return (
         <>
             <div
