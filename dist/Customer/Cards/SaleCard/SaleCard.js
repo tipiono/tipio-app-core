@@ -24,7 +24,6 @@ function SaleCard(_ref) {
       onClick = _ref.onClick,
       sustainable = _ref.sustainable,
       isValidTipio = _ref.isValidTipio;
-  console.log(isValidTipio, title, 'hahhhh');
   return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("div", {
     className: (0, _classnames.default)('saleCard', {
       inActiveSaleCard: !isValidTipio
