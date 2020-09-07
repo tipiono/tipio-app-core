@@ -869,6 +869,12 @@ Object.defineProperty(exports, "PublicLayout", {
     return _index.default;
   }
 });
+Object.defineProperty(exports, "Footer", {
+  enumerable: true,
+  get: function get() {
+    return _Footer.default;
+  }
+});
 Object.defineProperty(exports, "InteriorIcon", {
   enumerable: true,
   get: function get() {
@@ -1252,6 +1258,8 @@ var _Filters = _interopRequireDefault(require("./UI/Filters"));
 var _Search = _interopRequireDefault(require("./UI/Filters/Search"));
 
 var _index = _interopRequireDefault(require("./UI/Layout/Public/index"));
+
+var _Footer = _interopRequireDefault(require("./UI/Layout/Footer"));
 
 var _InteriorIcon = _interopRequireDefault(require("./UI/Icons/InteriorIcon"));
 
