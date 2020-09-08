@@ -1,19 +1,27 @@
 import React from 'react';
 import { CountdownType, PinkyCountdownSM } from '../../../index';
 import cx from 'classnames';
+import calculateDiscountPercentage from '../../../Util/calculateDiscountPercentage';
 
 function SaleCard({
     image,
     title,
     salePrice,
     costPrice,
-    saleDiscount,
     children,
     expiresIn,
     onClick,
     sustainable,
-    isValidTipio
+    isValidTipio,
+    ...props
 }) {
+    let saleDiscount = 0;
+    if (props?.showOfferAsPercentage) {
+        saleDiscount = `${calculateDiscountPercentage(parseInt(costPrice), parseInt(salePrice))}%`;
+    } else {
+        saleDiscount = `${parseInt(salePrice) - parseInt(costPrice)} kr`;
+    }
+
     return (
         <>
             <div
@@ -24,7 +32,7 @@ function SaleCard({
                 <div className="d-flex flex-row mb-4">
                     <a className="saleCard__preview lazy-image" href="" onClick={onClick}>
                         <img className="saleCard__preview--image lazyload" src={image} alt="" />
-                        <span className="saleCard__preview--discount">{saleDiscount} %</span>
+                        <span className="saleCard__preview--discount">{saleDiscount}</span>
                         {sustainable && (
                             <div className="saleCard__preview--sustainable">
                                 <span>Bærekraftig</span>
