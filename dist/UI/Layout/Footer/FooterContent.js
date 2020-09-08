@@ -24,8 +24,10 @@ var FooterContent = function FooterContent(_ref) {
     className: "customFooter__list__title"
   }, title), _react.default.createElement("ul", {
     className: "customFooter__list__content"
-  }, data.map(function (e) {
-    return _react.default.createElement("li", null, _react.default.createElement("a", _extends({
+  }, data.map(function (e, key) {
+    return _react.default.createElement("li", {
+      key: key
+    }, _react.default.createElement("a", _extends({
       className: "customFooter__list__content__link"
     }, e.anchorProps), e.label));
   }))));
@@ -34,7 +36,7 @@ var FooterContent = function FooterContent(_ref) {
 FooterContent.propTypes = {
   title: _propTypes.default.string.isRequired,
   data: _propTypes.default.arrayOf(_propTypes.default.shape({
-    lable: _propTypes.default.string.isRequired,
+    label: _propTypes.default.string.isRequired,
     anchorProps: _propTypes.default.object.isRequired
   })).isRequired
 };
