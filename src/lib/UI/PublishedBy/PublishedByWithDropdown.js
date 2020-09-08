@@ -35,10 +35,10 @@ const PublishedByWithDropDown = (props) => {
                     </NewDropdownItem>
                     <NewDropdownItem
                         key={'2'}
-                        href={messengerShareUrlMobile(share.url)}
+                        href={messengerShareUrlMobile(share.link)}
                         onClick={() => {
                             if (!isMobile) {
-                                shareOnMessengerWeb(share.url);
+                                shareOnMessengerWeb(share.link);
                             }
                         }}
                     >
