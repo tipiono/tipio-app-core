@@ -50,12 +50,16 @@
         }
 
         &__price {
+            width: 100%;
             display: flex;
-            //justify-content: space-between;
+            justify-content: space-between;
 
             &--sale {
                 letter-spacing: .4px;
-                margin-right: 2rem;
+                // margin-right: 2rem;
+                // @include media-breakpoint-down(sm) {
+                //     margin-right: 3%;
+                // }
             }
 
             &--cost {
@@ -64,6 +68,16 @@
                 font-family: 'Riposte-Regular', sans-serif;
                 letter-spacing: .4px;
             }
+        }
+    }
+
+    @include media-breakpoint-down(sm) {
+        &__preview {
+            width: 35%;
+        }
+        &__content {
+            width: 65%;
+            margin-left: 25px;
         }
     }
 }

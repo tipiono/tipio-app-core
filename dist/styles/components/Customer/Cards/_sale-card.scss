@@ -81,4 +81,22 @@
         opacity: 0.5;
         background: $white;
     }
+
+    @include media-breakpoint-down(sm) {
+        &__preview {
+            margin-right: 1rem;
+            &--image {
+                width: 140px;
+            }
+        }
+        &__content {
+            width: 100%;
+            &--price {
+                justify-content: space-between;
+                &--sale {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
 }
