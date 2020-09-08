@@ -24,7 +24,6 @@
             max-height: 176px;
             -webkit-transform: translateZ(0) scale(1.01, 1.01);
             transform: translateZ(0) scale(1.01, 1.01);
-
         }
 
         &:hover {
@@ -55,7 +54,7 @@
             justify-content: space-between;
 
             &--sale {
-                letter-spacing: .4px;
+                letter-spacing: 0.4px;
                 // margin-right: 2rem;
                 // @include media-breakpoint-down(sm) {
                 //     margin-right: 3%;
@@ -66,7 +65,7 @@
                 color: $gray-500;
                 text-decoration: line-through;
                 font-family: 'Riposte-Regular', sans-serif;
-                letter-spacing: .4px;
+                letter-spacing: 0.4px;
             }
         }
     }

@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 import BaseCard from './BaseCard';
+import cx from 'classnames';
 import SalesProgressBarTooltip from '../SalesProgressBarTooltip/SalesProgressBarTooltip';
 import ShareButton from './ShareButton';
 import HorizontalTimeline from '../Timelines/HorizontalTimeline';
 import SecondaryButton from '../../UI/Buttons/SecondaryButton';
 import SecondaryOutlineButton from '../../UI/Buttons/SecondaryOutlineButton';
-import ReactSelect from 'react-select';
 
 const BindingCard = ({
     children,
@@ -18,20 +18,17 @@ const BindingCard = ({
     onRestoreClick,
     ...props
 }) => {
-    const [value, setValue] = useState({ value: 1, label: 1 } || false);
-
-    const _onChange = (v) => {
-        console.log(v);
-        setValue(v);
-        // onChange(v);
-    };
-
     return (
         <BaseCard {...props}>
             <ul className="customerSidebarCard__footer__salePrice">
                 {firstRange ? (
                     <li className="customerSidebarCard__footer__salePrice--minBuyers" id={props.minimumByersId}>
-                        <h3 className="customerSidebarCard__footer__salePrice--minBuyers--price">
+                        <h3
+                            className={cx('customerSidebarCard__footer__salePrice--minBuyers--price', {
+                                'customerSidebarCard__footer__salePrice--minBuyers--priceSmall':
+                                    ('' + firstRange.price).length >= 5
+                            })}
+                        >
                             {firstRange.price} Kr
                         </h3>
                         <span className="customerSidebarCard__footer__salePrice--minBuyers--label">
@@ -41,7 +38,12 @@ const BindingCard = ({
                 ) : null}
                 {secondRange ? (
                     <li className="customerSidebarCard__footer__salePrice--maxBuyers">
-                        <h3 className="customerSidebarCard__footer__salePrice--maxBuyers--price">
+                        <h3
+                            className={cx('customerSidebarCard__footer__salePrice--maxBuyers--price', {
+                                'customerSidebarCard__footer__salePrice--maxBuyers--priceSmall':
+                                    ('' + secondRange.price).length >= 5
+                            })}
+                        >
                             {' '}
                             {secondRange.price} Kr
                         </h3>
