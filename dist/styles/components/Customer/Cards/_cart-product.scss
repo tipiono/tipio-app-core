@@ -68,6 +68,12 @@
                     font-size: 0.875rem;
                 }
             }
+
+            &--inventory {
+                color: #E74298;
+                font-size: 12px;
+                font-family: 'Riposte-Medium', sans-serif;
+            }
         }
     }
 
@@ -196,8 +202,6 @@
 
             &__content {
                 &__price {
-                    justify-content: unset;
-
                     &--cost {
                         margin-right: 2rem;
                     }
@@ -212,6 +216,23 @@
 
             &__delete {
                 width: 25%;
+            }
+        }
+    }
+    @include media-breakpoint-down(sm) {
+        &__main {
+            &__preview {
+                margin-right: 1rem;
+            }
+
+            &__content {
+                width: 60%;
+                &__price {
+
+                    &--cost {
+                        margin-right: 0;
+                    }
+                }
             }
         }
     }
