@@ -107,12 +107,6 @@ Object.defineProperty(exports, "Select", {
     return _Select.default;
   }
 });
-Object.defineProperty(exports, "SelectWithCustomOptions", {
-  enumerable: true,
-  get: function get() {
-    return _SelectWithCustomOptions.default;
-  }
-});
 Object.defineProperty(exports, "SelectWithSeperateValues", {
   enumerable: true,
   get: function get() {
@@ -863,6 +857,12 @@ Object.defineProperty(exports, "FilterSearch", {
     return _Search.default;
   }
 });
+Object.defineProperty(exports, "PopularFeatureTipio", {
+  enumerable: true,
+  get: function get() {
+    return _PopularFeatureTipio.default;
+  }
+});
 Object.defineProperty(exports, "PublicLayout", {
   enumerable: true,
   get: function get() {
@@ -1004,8 +1004,6 @@ var _PinkyCountdownSM = _interopRequireDefault(require("./UI/Countdown/PinkyCoun
 var _TipioCountdown = _interopRequireDefault(require("./UI/TipioCountdown/TipioCountdown"));
 
 var _Select = _interopRequireDefault(require("./UI/Forms/Select"));
-
-var _SelectWithCustomOptions = _interopRequireDefault(require("./UI/Forms/SelectWithCustomOptions"));
 
 var _SelectWithSeperateValues = _interopRequireDefault(require("./UI/Forms/SelectWithSeperateValues"));
 
@@ -1256,6 +1254,8 @@ var _SuccessStory = _interopRequireDefault(require("./Company/SuccessStory/Succe
 var _Filters = _interopRequireDefault(require("./UI/Filters"));
 
 var _Search = _interopRequireDefault(require("./UI/Filters/Search"));
+
+var _PopularFeatureTipio = _interopRequireDefault(require("./Company/Cards/PopularFeatureTipio/PopularFeatureTipio"));
 
 var _index = _interopRequireDefault(require("./UI/Layout/Public/index"));
 
