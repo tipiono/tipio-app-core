@@ -965,6 +965,12 @@ Object.defineProperty(exports, "limitTipios", {
     return _limitTipios.default;
   }
 });
+Object.defineProperty(exports, "sortNestedArr", {
+  enumerable: true,
+  get: function get() {
+    return _sortNestedArr.default;
+  }
+});
 Object.defineProperty(exports, "useLockBodyScroll", {
   enumerable: true,
   get: function get() {
@@ -1290,6 +1296,8 @@ var _calculateDiscountPercentage = _interopRequireDefault(require("./Util/calcul
 var _formatText = _interopRequireDefault(require("./Util/formatText"));
 
 var _limitTipios = _interopRequireDefault(require("./Util/limitTipios"));
+
+var _sortNestedArr = _interopRequireDefault(require("./Util/sortNestedArr"));
 
 var _useLockBodyScroll = _interopRequireDefault(require("./Hooks/useLockBodyScroll"));
 
