@@ -183,7 +183,7 @@ import WithAnimation from './effects/withAnimation';
 import calculateDiscountPercentage from './Util/calculateDiscountPercentage';
 import formatText from './Util/formatText';
 import limitTipios from './Util/limitTipios';
-
+import sortNestedArr from './Util/sortNestedArr';
 import useLockBodyScroll from './Hooks/useLockBodyScroll';
 
 export {
@@ -292,6 +292,7 @@ export {
     RemoveImageIcon,
     calculateDiscountPercentage as _util_CalculateDiscountPercentage,
     formatText as _util_FormatText,
+    sortNestedArr,
     MaterialSearch,
     ExportIcon,
     CircleChart,
