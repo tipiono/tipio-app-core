@@ -863,6 +863,12 @@ Object.defineProperty(exports, "FilterSearch", {
     return _Search.default;
   }
 });
+Object.defineProperty(exports, "PopularFeatureTipio", {
+  enumerable: true,
+  get: function get() {
+    return _PopularFeatureTipio.default;
+  }
+});
 Object.defineProperty(exports, "PublicLayout", {
   enumerable: true,
   get: function get() {
@@ -1256,6 +1262,8 @@ var _SuccessStory = _interopRequireDefault(require("./Company/SuccessStory/Succe
 var _Filters = _interopRequireDefault(require("./UI/Filters"));
 
 var _Search = _interopRequireDefault(require("./UI/Filters/Search"));
+
+var _PopularFeatureTipio = _interopRequireDefault(require("./Company/Cards/PopularFeatureTipio/PopularFeatureTipio"));
 
 var _index = _interopRequireDefault(require("./UI/Layout/Public/index"));
 
