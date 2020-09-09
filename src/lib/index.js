@@ -18,7 +18,6 @@ import { Accordion } from './UI/Accordion/Accordion';
 import PinkyCountdownSM from './UI/Countdown/PinkyCountdownSM';
 import TipioCountdown from './UI/TipioCountdown/TipioCountdown';
 import Select from './UI/Forms/Select';
-import SelectWithCustomOptions from './UI/Forms/SelectWithCustomOptions';
 import SelectWithSeperateValues from './UI/Forms/SelectWithSeperateValues';
 import * as CountdownType from './UI/Countdown/CountdownType';
 import Input from './UI/Forms/Input';
@@ -231,7 +230,6 @@ export {
     PlaceholderInput,
     Textarea,
     Select,
-    SelectWithCustomOptions,
     SelectWithSeperateValues,
     Checkbox,
     RadioButton,

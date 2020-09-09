@@ -107,12 +107,6 @@ Object.defineProperty(exports, "Select", {
     return _Select.default;
   }
 });
-Object.defineProperty(exports, "SelectWithCustomOptions", {
-  enumerable: true,
-  get: function get() {
-    return _SelectWithCustomOptions.default;
-  }
-});
 Object.defineProperty(exports, "SelectWithSeperateValues", {
   enumerable: true,
   get: function get() {
@@ -1010,8 +1004,6 @@ var _PinkyCountdownSM = _interopRequireDefault(require("./UI/Countdown/PinkyCoun
 var _TipioCountdown = _interopRequireDefault(require("./UI/TipioCountdown/TipioCountdown"));
 
 var _Select = _interopRequireDefault(require("./UI/Forms/Select"));
-
-var _SelectWithCustomOptions = _interopRequireDefault(require("./UI/Forms/SelectWithCustomOptions"));
 
 var _SelectWithSeperateValues = _interopRequireDefault(require("./UI/Forms/SelectWithSeperateValues"));
 
