@@ -63,9 +63,11 @@ export function NewDropdownItem(props) {
             className="dropdown-item"
             href={props.href ? props.href : '#'}
             onClick={(e) => {
-                e.preventDefault();
                 props.hideOnClick && props.setDropDownVisibility(false);
-                props.onClick && props.onClick();
+                if (props.onClick) {
+                    e.preventDefault();
+                    props.onClick();
+                }
             }}
         >
             {props.children}
