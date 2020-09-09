@@ -150,6 +150,7 @@ import MaterialSearch from './Company/MaterialSearch/MaterialSearch';
 import SuccessStory from './Company/SuccessStory/SuccessStory';
 import Filters from './UI/Filters';
 import FilterSearch from './UI/Filters/Search';
+import PopularFeatureTipio from './Company/Cards/PopularFeatureTipio/PopularFeatureTipio';
 
 /*
  *   Layout
@@ -301,6 +302,7 @@ export {
     SearchInput,
     SearchIcon,
     CloseIcon,
+    PopularFeatureTipio,
     FilterIcon,
     Overlay,
     AddMoreSaleEndedCompanyCard,
