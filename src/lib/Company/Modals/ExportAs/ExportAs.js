@@ -6,8 +6,8 @@ const ExportAs = ({ onClose, exportExcelOnClick, exportCSVOnClick }) => {
     return (
         <>
             <Modal showCloseButton onCloseButtonClick={onClose}>
-                <div className="exportAs" onClick={exportCSVOnClick}>
-                    <div className="exportAs--cvs">
+                <div className="exportAs">
+                    <div className="exportAs--cvs" onClick={exportCSVOnClick}>
                         <ExportIcon />
                         <h3 className="exportAs--cvs--label">Eksporter CSV-fil</h3>
                     </div>
