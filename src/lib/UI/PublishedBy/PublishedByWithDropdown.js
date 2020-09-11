@@ -35,12 +35,8 @@ const PublishedByWithDropDown = (props) => {
                     </NewDropdownItem>
                     <NewDropdownItem
                         key={'2'}
-                        href={messengerShareUrlMobile(share.url)}
-                        onClick={() => {
-                            if (!isMobile) {
-                                shareOnMessengerWeb(share.url);
-                            }
-                        }}
+                        href={messengerShareUrlMobile(share.link)}
+                        onClick={!isMobile ? (_) => shareOnMessengerWeb(share.link) : undefined}
                     >
                         Del på Messanger
                     </NewDropdownItem>

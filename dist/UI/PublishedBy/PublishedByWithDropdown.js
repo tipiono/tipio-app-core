@@ -49,12 +49,10 @@ var PublishedByWithDropDown = function PublishedByWithDropDown(props) {
     className: "Demo__some-network__share-button"
   }, "Del p\xE5 facebook")), _react.default.createElement(_NewDropdown.NewDropdownItem, {
     key: '2',
-    href: (0, _fbShare.messengerShareUrlMobile)(share.url),
-    onClick: function onClick() {
-      if (!_reactDeviceDetect.isMobile) {
-        (0, _fbShare.shareOnMessengerWeb)(share.url);
-      }
-    }
+    href: (0, _fbShare.messengerShareUrlMobile)(share.link),
+    onClick: !_reactDeviceDetect.isMobile ? function (_) {
+      return (0, _fbShare.shareOnMessengerWeb)(share.link);
+    } : undefined
   }, "Del p\xE5 Messanger"), _react.default.createElement(_NewDropdown.NewDropdownItem, {
     key: '3'
   }, _react.default.createElement(_reactShare.TwitterShareButton, {

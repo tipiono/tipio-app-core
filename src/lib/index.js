@@ -18,7 +18,6 @@ import { Accordion } from './UI/Accordion/Accordion';
 import PinkyCountdownSM from './UI/Countdown/PinkyCountdownSM';
 import TipioCountdown from './UI/TipioCountdown/TipioCountdown';
 import Select from './UI/Forms/Select';
-import SelectWithCustomOptions from './UI/Forms/SelectWithCustomOptions';
 import SelectWithSeperateValues from './UI/Forms/SelectWithSeperateValues';
 import * as CountdownType from './UI/Countdown/CountdownType';
 import Input from './UI/Forms/Input';
@@ -151,6 +150,7 @@ import MaterialSearch from './Company/MaterialSearch/MaterialSearch';
 import SuccessStory from './Company/SuccessStory/SuccessStory';
 import Filters from './UI/Filters';
 import FilterSearch from './UI/Filters/Search';
+import PopularFeatureTipio from './Company/Cards/PopularFeatureTipio/PopularFeatureTipio';
 
 /*
  *   Layout
@@ -183,7 +183,7 @@ import WithAnimation from './effects/withAnimation';
 import calculateDiscountPercentage from './Util/calculateDiscountPercentage';
 import formatText from './Util/formatText';
 import limitTipios from './Util/limitTipios';
-
+import sortNestedArr from './Util/sortNestedArr';
 import useLockBodyScroll from './Hooks/useLockBodyScroll';
 
 export {
@@ -230,7 +230,6 @@ export {
     PlaceholderInput,
     Textarea,
     Select,
-    SelectWithCustomOptions,
     SelectWithSeperateValues,
     Checkbox,
     RadioButton,
@@ -293,6 +292,7 @@ export {
     RemoveImageIcon,
     calculateDiscountPercentage as _util_CalculateDiscountPercentage,
     formatText as _util_FormatText,
+    sortNestedArr,
     MaterialSearch,
     ExportIcon,
     CircleChart,
@@ -303,6 +303,7 @@ export {
     SearchInput,
     SearchIcon,
     CloseIcon,
+    PopularFeatureTipio,
     FilterIcon,
     Overlay,
     AddMoreSaleEndedCompanyCard,

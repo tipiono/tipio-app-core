@@ -1,143 +1,144 @@
 .biddingCard {
-  box-shadow: 0 1px 1px 0 #e5e5e5;
+    box-shadow: 0 1px 1px 0 #e5e5e5;
 
-  &__header {
-    position: relative;
-    background: $white;
-
-    &--preview {
-      overflow: hidden;
-      border-bottom: solid 2px #f5f5f5;
-      text-align: center;
-      background: $white;
-
-      &--image {
-        max-width: 100%;
-        max-height: 390px;
-        -webkit-transform: translateZ(0) scale(1.01, 1.01);
-        transform: translateZ(0) scale(1.01, 1.01);
-      }
-
-      &:hover {
-        img {
-          -webkit-backface-visibility: hidden;
-          -webkit-transform: translateZ(0) scale(1.04, 1.04);
-          transform: translateZ(0) scale(1.04, 1.04);
-        }
-      }
-    }
-
-    &--timeLeft {
-      span {
-        position: absolute;
-        bottom: 2px;
-        right: 0;
-      }
-    }
-  }
-
-  &__body {
-    background: $white;
-    padding: 1.5rem 1.5rem 2.5rem;
-
-    &--price {
-      margin-bottom: 1.5rem;
-
-      &--sale {
-        letter-spacing: 0.4px;
-      }
-
-      &--cost {
-        color: $gray-500;
-        text-decoration: line-through;
-        font-family: "Riposte-Regular", sans-serif;
-        letter-spacing: 0.4px;
-      }
-    }
-
-    &--content {
-      margin-bottom: 1.5rem;
-
-      &--title {
-        font-family: "Riposte-Regular", sans-serif;
-        color: $gray-700;
-        margin-bottom: 6px;
-
-          &:hover {
-              color: $gray-800;
-          }
-      }
-        a:hover {
-            text-decoration-color: $gray-200;
-        }
-
-      &--description {
-        font-family: "Riposte-Lazer", sans-serif;
-        font-size: 0.875rem;
-      }
-    }
-
-    &--salesbar {
-      width: 70%;
-    }
-
-    &--share {
-      width: 70%;
-
-      button {
-        margin-top: 1.625rem;
-      }
-    }
-  }
-
-  @include media-breakpoint-down(md) {
     &__header {
-      &--preview {
-        &--image {
-          max-height: 240px;
+        position: relative;
+        background: $white;
+
+        &--preview {
+            overflow: hidden;
+            border-bottom: solid 2px #f5f5f5;
+            text-align: center;
+            background: $white;
+
+            &--image {
+                max-width: 100%;
+                max-height: 390px;
+                -webkit-transform: translateZ(0) scale(1.01, 1.01);
+                transform: translateZ(0) scale(1.01, 1.01);
+            }
+
+            &:hover {
+                img {
+                    -webkit-backface-visibility: hidden;
+                    -webkit-transform: translateZ(0) scale(1.04, 1.04);
+                    transform: translateZ(0) scale(1.04, 1.04);
+                }
+            }
         }
-      }
+
+        &--timeLeft {
+            span {
+                position: absolute;
+                bottom: 2px;
+                right: 0;
+            }
+        }
     }
 
     &__body {
-      padding: 1.25rem 0.625rem 2rem;
+        background: $white;
+        padding: 1.5rem 1.5rem 2.5rem;
+        overflow: hidden;
 
-      &--price {
-        margin-bottom: 1.25rem;
+        &--price {
+            margin-bottom: 1.5rem;
 
-        &--sale {
-          font-size: 1.125rem;
-          margin-bottom: 5px;
+            &--sale {
+                letter-spacing: 0.4px;
+            }
+
+            &--cost {
+                color: $gray-500;
+                text-decoration: line-through;
+                font-family: 'Riposte-Regular', sans-serif;
+                letter-spacing: 0.4px;
+            }
         }
 
-        &--cost {
-          font-size: 1.125rem;
-          margin-bottom: 0;
+        &--content {
+            margin-bottom: 1.5rem;
+
+            &--title {
+                font-family: 'Riposte-Regular', sans-serif;
+                color: $gray-700;
+                margin-bottom: 6px;
+
+                &:hover {
+                    color: $gray-800;
+                }
+            }
+            a:hover {
+                text-decoration-color: $gray-200;
+            }
+
+            &--description {
+                font-family: 'Riposte-Lazer', sans-serif;
+                font-size: 0.875rem;
+            }
         }
-      }
 
-      &--content {
-        margin-bottom: 1.3rem;
-
-        &--title {
-          font-size: 1rem;
-          margin-bottom: 8px;
+        &--salesbar {
+            width: 70%;
         }
-      }
 
-      &--salesbar {
-        width: 100%;
-      }
+        &--share {
+            width: 70%;
 
-      &--share {
-        width: 100%;
-      }
-
-      button {
-        font-size: 0.75rem;
-        padding: 6px 1rem !important;
-        margin-top: 1.625rem;
-      }
+            button {
+                margin-top: 1.625rem;
+            }
+        }
     }
-  }
+
+    @include media-breakpoint-down(md) {
+        &__header {
+            &--preview {
+                &--image {
+                    max-height: 240px;
+                }
+            }
+        }
+
+        &__body {
+            padding: 1.25rem 0.625rem 2rem;
+
+            &--price {
+                margin-bottom: 1.25rem;
+
+                &--sale {
+                    font-size: 1.125rem;
+                    margin-bottom: 5px;
+                }
+
+                &--cost {
+                    font-size: 1.125rem;
+                    margin-bottom: 0;
+                }
+            }
+
+            &--content {
+                margin-bottom: 1.3rem;
+
+                &--title {
+                    font-size: 1rem;
+                    margin-bottom: 8px;
+                }
+            }
+
+            &--salesbar {
+                width: 100%;
+            }
+
+            &--share {
+                width: 100%;
+            }
+
+            button {
+                font-size: 0.75rem;
+                padding: 6px 1rem !important;
+                margin-top: 1.625rem;
+            }
+        }
+    }
 }

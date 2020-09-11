@@ -177,6 +177,9 @@
                             margin-right: 8px;
                         }
                     }
+                    &--priceSmall {
+                        font-size: 1.25rem;
+                    }
                 }
                 &--maxBuyers {
                     &--price {
@@ -184,6 +187,9 @@
                         &:before {
                             margin-right: 8px;
                         }
+                    }
+                    &--priceSmall {
+                        font-size: 1.25rem;
                     }
                 }
             }
