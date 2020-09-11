@@ -21,10 +21,10 @@ var ExportAs = function ExportAs(_ref) {
     showCloseButton: true,
     onCloseButtonClick: onClose
   }, _react.default.createElement("div", {
-    className: "exportAs",
-    onClick: exportCSVOnClick
+    className: "exportAs"
   }, _react.default.createElement("div", {
-    className: "exportAs--cvs"
+    className: "exportAs--cvs",
+    onClick: exportCSVOnClick
   }, _react.default.createElement(_ExportIcon.default, null), _react.default.createElement("h3", {
     className: "exportAs--cvs--label"
   }, "Eksporter CSV-fil")), _react.default.createElement("div", {
