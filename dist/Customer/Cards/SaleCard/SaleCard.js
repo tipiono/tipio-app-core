@@ -39,8 +39,6 @@ function SaleCard(_ref) {
     saleDiscount = "".concat(parseInt(salePrice) - parseInt(costPrice), " kr");
   }
 
-  console.log(props.showOfferAsPercentage);
-  console.log(saleDiscount);
   return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("div", {
     className: (0, _classnames.default)('saleCard', {
       inActiveSaleCard: !isValidTipio
