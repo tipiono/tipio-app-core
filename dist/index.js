@@ -977,6 +977,12 @@ Object.defineProperty(exports, "useLockBodyScroll", {
     return _useLockBodyScroll.default;
   }
 });
+Object.defineProperty(exports, "isValidTipio", {
+  enumerable: true,
+  get: function get() {
+    return _validateTipio.default;
+  }
+});
 exports.CountdownType = void 0;
 
 var _main = _interopRequireDefault(require("./styles/main.scss"));
@@ -1300,6 +1306,8 @@ var _limitTipios = _interopRequireDefault(require("./Util/limitTipios"));
 var _sortNestedArr = _interopRequireDefault(require("./Util/sortNestedArr"));
 
 var _useLockBodyScroll = _interopRequireDefault(require("./Hooks/useLockBodyScroll"));
+
+var _validateTipio = _interopRequireDefault(require("./Util/validateTipio"));
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
 
