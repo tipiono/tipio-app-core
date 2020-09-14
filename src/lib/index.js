@@ -185,6 +185,7 @@ import formatText from './Util/formatText';
 import limitTipios from './Util/limitTipios';
 import sortNestedArr from './Util/sortNestedArr';
 import useLockBodyScroll from './Hooks/useLockBodyScroll';
+import isValidTipio from './Util/validateTipio';
 
 export {
     styles,
@@ -292,6 +293,7 @@ export {
     RemoveImageIcon,
     calculateDiscountPercentage as _util_CalculateDiscountPercentage,
     formatText as _util_FormatText,
+    isValidTipio,
     sortNestedArr,
     MaterialSearch,
     ExportIcon,
