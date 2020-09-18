@@ -45,7 +45,11 @@ var PopularFeatureTipio = function PopularFeatureTipio(_ref) {
   }, title), _react.default.createElement("p", {
     className: "text-truncate mediumPopularTipio__content--description",
     title: brand
-  }, brand), _react.default.createElement(_SecondaryOutlineButton.default, {
+  }, !brand ? props.subtitle : brand), binding_count > 0 && _react.default.createElement("div", {
+    className: "featureTipiosCompanyCards__body--interested"
+  }, _react.default.createElement("h5", {
+    className: "featureTipiosCompanyCards__body--interested--counter"
+  }, binding_count, " interesserte!")), _react.default.createElement(_SecondaryOutlineButton.default, {
     text: "Gi tilbud",
     onClick: onClick
   })));
