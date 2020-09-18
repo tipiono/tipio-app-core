@@ -3,7 +3,6 @@ import CalculateDiscountPercentage from '../../../Util/calculateDiscountPercenta
 
 const AddMoreSaleEndedCompanyCard = (props) => {
     const saleDiscount = CalculateDiscountPercentage(props.first_price, props.company_price);
-    console.log(props.tipio?.sustainable);
     return (
         <div className="addMoreSaleEndedCard mb-3">
             <div className="d-flex flex-row align-items-center">

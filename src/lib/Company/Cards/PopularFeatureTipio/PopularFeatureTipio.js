@@ -22,8 +22,16 @@ const PopularFeatureTipio = ({ children, brand, binding_count, link, forceLoad =
                     {title}
                 </a>
                 <p className="text-truncate mediumPopularTipio__content--description" title={brand}>
-                    {brand}
+                    {!brand ? props.subtitle : brand}
                 </p>
+
+                {binding_count > 0 && (
+                    <div className="featureTipiosCompanyCards__body--interested">
+                        <h5 className="featureTipiosCompanyCards__body--interested--counter">
+                            {binding_count} interesserte!
+                        </h5>
+                    </div>
+                )}
 
                 <SecondaryOutlineButton text="Gi tilbud" onClick={onClick} />
             </div>
