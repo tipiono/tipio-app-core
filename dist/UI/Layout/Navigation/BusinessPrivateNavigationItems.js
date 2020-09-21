@@ -14,15 +14,13 @@ function BusinessPrivateNavigationItems(props) {
     className: "nav-list d-none d-md-block"
   }, _react.default.createElement("li", {
     className: "nav-list-item"
-  }, _react.default.createElement("a", {
-    className: "nav-list-link nav-list-lg-link",
-    href: "#",
+  }, _react.default.createElement("button", {
+    className: "link-button nav-list-link nav-list-lg-link ",
     onClick: props.mainNavOnClick
   }, "Privat")), _react.default.createElement("li", {
     className: "nav-list-item"
-  }, _react.default.createElement("a", {
-    className: "nav-list-link nav-list-lg-link active",
-    href: "#"
+  }, _react.default.createElement("button", {
+    className: "link-button nav-list-link nav-list-lg-link active"
   }, "Bedrift")));
 }
 
