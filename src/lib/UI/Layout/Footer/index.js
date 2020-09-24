@@ -16,8 +16,10 @@ const Footer = () => {
                                         anchorProps: { href: 'https://goo.gl/maps/YYYf61pKq3uoiz929', target: '_blank' }
                                     },
                                     {
-                                        label: '+47987 65 456',
-                                        anchorProps: { href: 'tel:+4798765456' }
+                                        label: 'Org. nr. 920 691 951',
+                                        anchorProps: {
+                                            href: 'https://w2.brreg.no/enhet/sok/detalj.jsp?orgnr=920691951'
+                                        }
                                     },
                                     {
                                         label: 'post@tipio.no',
