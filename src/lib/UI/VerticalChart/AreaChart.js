@@ -112,7 +112,7 @@ const AreaChart = ({ firstDatasets, secondDatasets, thirdDatasets, placeholder, 
                     return title;
                 },
                 label: function(tooltipItems) {
-                    display: false;
+                    // display: false;
                 }
             }
         },
