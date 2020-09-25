@@ -11,6 +11,10 @@ var _TipioCountdown = _interopRequireDefault(require("../TipioCountdown/TipioCou
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
 function TipioOfTheDay(_ref) {
   var id = _ref.id,
       children = _ref.children,
@@ -20,7 +24,9 @@ function TipioOfTheDay(_ref) {
       images = _ref.images,
       onClick = _ref.onClick,
       showTimer = _ref.showTimer,
-      link = _ref.link;
+      link = _ref.link,
+      props = _objectWithoutProperties(_ref, ["id", "children", "title", "subtitle", "voting_expires_in", "images", "onClick", "showTimer", "link"]);
+
   return _react.default.createElement("div", {
     className: "tipioOfTheDay"
   }, _react.default.createElement("a", {
@@ -31,11 +37,11 @@ function TipioOfTheDay(_ref) {
     className: "tipioOfTheDay__preview--image",
     src: images && images.length && images[0].blob_url,
     alt: ""
-  }), showTimer && _react.default.createElement("div", {
+  }), showTimer || props.bindingTipio && _react.default.createElement("div", {
     className: "tipioOfTheDay__preview--timeLeft"
   }, _react.default.createElement(_TipioCountdown.default, {
     className: "timer",
-    expires_in: voting_expires_in
+    expires_in: props.bindingTipio ? props.binding_expires_in : voting_expires_in
   }))), _react.default.createElement("div", {
     className: "tipioOfTheDay__content"
   }, _react.default.createElement("a", {
