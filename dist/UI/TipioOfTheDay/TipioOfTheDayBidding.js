@@ -9,21 +9,19 @@ var _react = _interopRequireDefault(require("react"));
 
 var _TipioOfTheDay = _interopRequireDefault(require("./TipioOfTheDay"));
 
-var _SecondaryButton = _interopRequireDefault(require("../Buttons/SecondaryButton"));
-
-var _reactI18next = require("react-i18next");
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var TipioOfTheDayBidding = function TipioOfTheDayBidding(props) {
-  var _useTranslation = (0, _reactI18next.useTranslation)(),
-      t = _useTranslation.t;
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
+var TipioOfTheDayBidding = function TipioOfTheDayBidding(_ref) {
+  var children = _ref.children,
+      props = _objectWithoutProperties(_ref, ["children"]);
 
   return _react.default.createElement(_TipioOfTheDay.default, props, _react.default.createElement("div", {
     className: "tipioOfTheDay__content--submit"
-  }, _react.default.createElement(_SecondaryButton.default, {
-    text: "Legg i handlekurv"
-  })));
+  }, children));
 };
 
 var _default = TipioOfTheDayBidding;

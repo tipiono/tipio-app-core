@@ -1,16 +1,10 @@
 import React from 'react';
-import TipioOfTheDay from "./TipioOfTheDay";
-import SecondaryButton from "../Buttons/SecondaryButton";
-import {useTranslation} from 'react-i18next';
+import TipioOfTheDay from './TipioOfTheDay';
 
-const TipioOfTheDayBidding = (props) => {
-    const { t } = useTranslation();
-
+const TipioOfTheDayBidding = ({ children, ...props }) => {
     return (
         <TipioOfTheDay {...props}>
-            <div className="tipioOfTheDay__content--submit">
-                <SecondaryButton text="Legg i handlekurv" />
-            </div>
+            <div className="tipioOfTheDay__content--submit">{children}</div>
         </TipioOfTheDay>
     );
 };
