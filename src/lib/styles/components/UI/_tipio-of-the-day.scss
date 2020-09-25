@@ -5,11 +5,11 @@
 
     &__preview {
         display: block;
-        position: relative;
         overflow: hidden;
         width: 50%;
         transition: 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
         margin-right: 30px;
+        position: relative;
 
         &--image {
             width: 100%;
