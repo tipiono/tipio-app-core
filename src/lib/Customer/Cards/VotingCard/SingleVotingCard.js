@@ -10,7 +10,8 @@ const SingleVotingCard = ({
     onClick,
     joined,
     shareOnClick,
-    voteOnClick
+    voteOnClick,
+    id
 }) => {
     return (
         <div className="singleVotingCard">
