@@ -20,7 +20,8 @@ var SingleVotingCard = function SingleVotingCard(_ref) {
       onClick = _ref.onClick,
       joined = _ref.joined,
       shareOnClick = _ref.shareOnClick,
-      voteOnClick = _ref.voteOnClick;
+      voteOnClick = _ref.voteOnClick,
+      id = _ref.id;
   return _react.default.createElement("div", {
     className: "singleVotingCard"
   }, _react.default.createElement("div", {
