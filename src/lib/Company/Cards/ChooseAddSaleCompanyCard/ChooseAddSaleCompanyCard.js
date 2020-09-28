@@ -37,8 +37,12 @@ export default React.forwardRef(
                     </div>
                     <div className="chooseAddSaleCard__content">
                         <div className="chooseAddSaleCard__content--price">
-                            <h6 className="chooseAddSaleCard__content--price--sale">{salePrice} Kr</h6>
-                            <h6 className="chooseAddSaleCard__content--price--cost">{costPrice} Kr</h6>
+                            <h6 className="chooseAddSaleCard__content--price--sale">
+                                {salePrice.toLocaleString('nb-NO')} Kr
+                            </h6>
+                            <h6 className="chooseAddSaleCard__content--price--cost">
+                                {costPrice.toLocaleString('nb-NO')} Kr
+                            </h6>
                         </div>
                         <h6 className="chooseAddSaleCard__content--title" onClick={onClick}>
                             {title}
