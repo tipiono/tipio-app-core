@@ -12,7 +12,7 @@ function Select({ placeholder, options, label, onChange, defaultValue, displayEr
     };
     return (
         <div className="custom-material-select">
-            <label className="select-label">{label}</label>
+            {label && <label className="select-label">{label}</label>}
             <ReactSelect
                 value={value}
                 onChange={_onChange}
