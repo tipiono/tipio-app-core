@@ -138,8 +138,7 @@ var AreaChart = function AreaChart(_ref) {
 
           return title;
         },
-        label: function label(tooltipItems) {
-          display: false;
+        label: function label(tooltipItems) {// display: false;
         }
       }
     },

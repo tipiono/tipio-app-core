@@ -31,9 +31,9 @@ var Footer = function Footer() {
         target: '_blank'
       }
     }, {
-      label: '+47987 65 456',
+      label: 'Org. nr. 920 691 951',
       anchorProps: {
-        href: 'tel:+4798765456'
+        href: 'https://w2.brreg.no/enhet/sok/detalj.jsp?orgnr=920691951'
       }
     }, {
       label: 'post@tipio.no',
