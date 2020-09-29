@@ -23,11 +23,10 @@ var IconButton = function IconButton(_ref) {
       disabled = _ref$disabled === void 0 ? false : _ref$disabled,
       props = _objectWithoutProperties(_ref, ["text", "disabled"]);
 
-  return _react.default.createElement("a", _extends({
+  return _react.default.createElement("div", _extends({
     className: (0, _classnames.default)('iconButton', {
       disabled__iconButton: disabled
-    }),
-    href: ""
+    })
   }, props), _react.default.createElement("svg", {
     className: "iconButton--plus",
     width: 30,
