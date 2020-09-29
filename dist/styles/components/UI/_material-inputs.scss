@@ -1,9 +1,9 @@
 .pure-material-textfield-outlined {
-    input:-webkit-autofill+.label-sm {
+    input:-webkit-autofill + .label-sm {
         color: #5c6265;
 
         &:active {
-            input:-webkit-autofill+.label-sm {
+            input:-webkit-autofill + .label-sm {
                 color: #4f2e90;
             }
         }
@@ -36,7 +36,6 @@
     }
 
     > {
-
         input,
         textarea,
         .css-1pcexqc-container {
@@ -69,9 +68,9 @@
             box-shadow: none !important;
         }
 
-        input+span,
-        textarea+span,
-        .css-1pcexqc-container+span {
+        input + span,
+        textarea + span,
+        .css-1pcexqc-container + span {
             position: absolute;
             top: 0;
             left: 0;
@@ -86,8 +85,7 @@
             transition: color 0.2s, font-size 0.2s, line-height 0.2s;
         }
 
-        input+span {
-
+        input + span {
             &::before,
             &::after {
                 content: '';
@@ -104,8 +102,7 @@
             }
         }
 
-        textarea+span {
-
+        textarea + span {
             &::before,
             &::after {
                 content: '';
@@ -122,8 +119,7 @@
             }
         }
 
-        .css-1pcexqc-container+span {
-
+        .css-1pcexqc-container + span {
             &::before,
             &::after {
                 content: '';
@@ -139,17 +135,17 @@
             }
         }
 
-        input+span::before,
-        textarea+span::before,
-        .css-1pcexqc-container+span::before {
+        input + span::before,
+        textarea + span::before,
+        .css-1pcexqc-container + span::before {
             margin-right: 4px;
             border-left: solid 1px transparent;
             border-radius: 1;
         }
 
-        input+span::after,
-        textarea+span::after,
-        .css-1pcexqc-container+span::after {
+        input + span::after,
+        textarea + span::after,
+        .css-1pcexqc-container + span::after {
             flex-grow: 1;
             margin-left: 4px;
             border-right: solid 1px transparent;
@@ -161,8 +157,7 @@
         }
     }
 
-    &:hover> {
-
+    &:hover > {
         input,
         textarea,
         .css-1pcexqc-container {
@@ -170,12 +165,12 @@
             border-top-color: transparent;
         }
 
-        input+span::before,
-        textarea+span::before,
-        .css-1pcexqc-container+span::before,
-        input+span::after,
-        textarea+span::after,
-        .css-1pcexqc-container+span::after {
+        input + span::before,
+        textarea + span::before,
+        .css-1pcexqc-container + span::before,
+        input + span::after,
+        textarea + span::after,
+        .css-1pcexqc-container + span::after {
             border-top-color: #4f2e90;
         }
 
@@ -187,36 +182,37 @@
     }
 
     > {
-
         input:not(:focus):placeholder-shown,
         textarea:not(:focus):placeholder-shown,
         .css-1pcexqc-container:not(:focus):placeholder-shown {
             border-top-color: #c9cfd3;
         }
 
-        input:not(:focus):placeholder-shown+span,
-        textarea:not(:focus):placeholder-shown+span,
-        .css-1pcexqc-container:not(:focus):placeholder-shown+span {
+        input:not(:focus):placeholder-shown + span,
+        textarea:not(:focus):placeholder-shown + span,
+        .css-1pcexqc-container:not(:focus):placeholder-shown + span {
             font-size: inherit;
             line-height: 68px;
         }
 
-        textarea:not(:placeholder-shown)+span {
-            background-image: linear-gradient(to right,
-                    transparent 0%,
-                    transparent 1%,
-                    #fff 1%,
-                    #fff 99%,
-                    transparent 99%,
-                    transparent 1%);
+        textarea:not(:placeholder-shown) + span {
+            background-image: linear-gradient(
+                to right,
+                transparent 0%,
+                transparent 1%,
+                #fff 1%,
+                #fff 99%,
+                transparent 99%,
+                transparent 1%
+            );
         }
 
-        input:not(:focus):placeholder-shown+span::before,
-        textarea:not(:focus):placeholder-shown+span::before,
-        .css-1pcexqc-container:not(:focus):placeholder-shown+span::before,
-        input:not(:focus):placeholder-shown+span::after,
-        textarea:not(:focus):placeholder-shown+span::after,
-        .css-1pcexqc-container:not(:focus):placeholder-shown+span::before {
+        input:not(:focus):placeholder-shown + span::before,
+        textarea:not(:focus):placeholder-shown + span::before,
+        .css-1pcexqc-container:not(:focus):placeholder-shown + span::before,
+        input:not(:focus):placeholder-shown + span::after,
+        textarea:not(:focus):placeholder-shown + span::after,
+        .css-1pcexqc-container:not(:focus):placeholder-shown + span::before {
             border-top-color: transparent;
         }
 
@@ -227,14 +223,13 @@
             outline: none;
         }
 
-        input:focus+span,
-        textarea:focus+span,
-        .css-1pcexqc-container:focus+span {
+        input:focus + span,
+        textarea:focus + span,
+        .css-1pcexqc-container:focus + span {
             color: #4f2e90;
         }
 
-        input:focus+span {
-
+        input:focus + span {
             &::before,
             &::after {
                 border-top-color: #4f2e90;
@@ -242,8 +237,7 @@
             }
         }
 
-        textarea:focus+span {
-
+        textarea:focus + span {
             &::before,
             &::after {
                 border-top-color: #4f2e90;
@@ -251,8 +245,7 @@
             }
         }
 
-        .css-1pcexqc-container:focus+span {
-
+        .css-1pcexqc-container:focus + span {
             &::before,
             &::after {
                 border-top-color: #4f2e90;
@@ -268,7 +261,7 @@
             color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.38);
             pointer-events: none;
 
-            +span {
+            + span {
                 border-color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.38) !important;
                 border-top-color: transparent !important;
                 color: #4f2e90;
@@ -276,24 +269,21 @@
             }
         }
 
-        input:disabled+span {
-
+        input:disabled + span {
             &::before,
             &::after {
                 border-top-color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.38) !important;
             }
         }
 
-        textarea:disabled+span {
-
+        textarea:disabled + span {
             &::before,
             &::after {
                 border-top-color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.38) !important;
             }
         }
 
-        .css-1pcexqc-container:disabled+span {
-
+        .css-1pcexqc-container:disabled + span {
             &::before,
             &::after {
                 border-top-color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.38) !important;
@@ -305,29 +295,26 @@
         .css-1pcexqc-container:disabled:placeholder-shown {
             border-top-color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.38) !important;
 
-            +span {
+            + span {
                 border-top-color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.38) !important;
             }
         }
 
-        input:disabled:placeholder-shown+span {
-
+        input:disabled:placeholder-shown + span {
             &::before,
             &::after {
                 border-top-color: transparent !important;
             }
         }
 
-        textarea:disabled:placeholder-shown+span {
-
+        textarea:disabled:placeholder-shown + span {
             &::before,
             &::after {
                 border-top-color: transparent !important;
             }
         }
 
-        .css-1pcexqc-container:disabled:placeholder-shown+span {
-
+        .css-1pcexqc-container:disabled:placeholder-shown + span {
             &::before,
             &::after {
                 border-top-color: transparent !important;
@@ -347,27 +334,24 @@
 /* Faster transition in Safari for less noticable fractional font-size issue */
 @media not all and (min-resolution: 0.001dpcm) {
     @supports (-webkit-appearance: none) {
-        .pure-material-textfield-outlined> {
-
+        .pure-material-textfield-outlined > {
             input,
             textarea {
                 transition-duration: 0.1s;
 
-                +span {
+                + span {
                     transition-duration: 0.1s;
                 }
             }
 
-            input+span {
-
+            input + span {
                 &::before,
                 &::after {
                     transition-duration: 0.1s;
                 }
             }
 
-            textarea+span {
-
+            textarea + span {
                 &::before,
                 &::after {
                     transition-duration: 0.1s;
@@ -390,7 +374,6 @@
     }
 
     > {
-
         input,
         textarea,
         .css-1pcexqc-container {
@@ -399,8 +382,7 @@
             border-bottom: 1px solid #da3021 !important;
         }
 
-        input+span {
-
+        input + span {
             &::before,
             &::after {
                 border-top-color: #da3021;
@@ -409,19 +391,18 @@
     }
 
     > {
-
         input:not(:focus):placeholder-shown,
         textarea:not(:focus):placeholder-shown,
         .css-1pcexqc-container:not(:focus):placeholder-shown {
             border-top-color: #da3021 !important;
         }
 
-        input:not(:focus):placeholder-shown+span::before,
-        textarea:not(:focus):placeholder-shown+span::before,
-        .css-1pcexqc-container:not(:focus):placeholder-shown+span::before,
-        input:not(:focus):placeholder-shown+span::after,
-        textarea:not(:focus):placeholder-shown+span::after,
-        .css-1pcexqc-container:not(:focus):placeholder-shown+span::before {
+        input:not(:focus):placeholder-shown + span::before,
+        textarea:not(:focus):placeholder-shown + span::before,
+        .css-1pcexqc-container:not(:focus):placeholder-shown + span::before,
+        input:not(:focus):placeholder-shown + span::after,
+        textarea:not(:focus):placeholder-shown + span::after,
+        .css-1pcexqc-container:not(:focus):placeholder-shown + span::before {
             border-top-color: transparent !important;
         }
 
@@ -431,22 +412,20 @@
             border-top-color: transparent !important;
         }
 
-        input:focus+span,
-        textarea:focus+span,
-        .css-1pcexqc-container:focus+span {
+        input:focus + span,
+        textarea:focus + span,
+        .css-1pcexqc-container:focus + span {
             color: #da3021;
         }
 
-        input:focus+span {
-
+        input:focus + span {
             &::before,
             &::after {
                 border-top-color: #da3021 !important;
             }
         }
 
-        textarea:focus+span {
-
+        textarea:focus + span {
             &::before,
             &::after {
                 border-top-color: #da3021 !important;
@@ -454,14 +433,13 @@
         }
     }
 
-    &:hover> {
-
-        input+span::before,
-        textarea+span::before,
-        .css-1pcexqc-container+span::before,
-        input+span::after,
-        textarea+span::after,
-        .css-1pcexqc-container+span::after {
+    &:hover > {
+        input + span::before,
+        textarea + span::before,
+        .css-1pcexqc-container + span::before,
+        input + span::after,
+        textarea + span::after,
+        .css-1pcexqc-container + span::after {
             border-top-color: #da3021 !important;
         }
 
@@ -473,19 +451,18 @@
     }
 
     > {
-
         input:not(:focus):placeholder-shown,
         textarea:not(:focus):placeholder-shown,
         .css-1pcexqc-container:not(:focus):placeholder-shown {
             border-top-color: #da3021 !important;
         }
 
-        input:not(:focus):placeholder-shown+span::before,
-        textarea:not(:focus):placeholder-shown+span::before,
-        .css-1pcexqc-container:not(:focus):placeholder-shown+span::before,
-        input:not(:focus):placeholder-shown+span::after,
-        textarea:not(:focus):placeholder-shown+span::after,
-        .css-1pcexqc-container:not(:focus):placeholder-shown+span::before {
+        input:not(:focus):placeholder-shown + span::before,
+        textarea:not(:focus):placeholder-shown + span::before,
+        .css-1pcexqc-container:not(:focus):placeholder-shown + span::before,
+        input:not(:focus):placeholder-shown + span::after,
+        textarea:not(:focus):placeholder-shown + span::after,
+        .css-1pcexqc-container:not(:focus):placeholder-shown + span::before {
             border-top-color: transparent !important;
         }
 
@@ -495,30 +472,27 @@
             border-top-color: transparent !important;
         }
 
-        input:focus+span,
-        textarea:focus+span,
-        .css-1pcexqc-container:focus+span {
+        input:focus + span,
+        textarea:focus + span,
+        .css-1pcexqc-container:focus + span {
             color: #da3021;
         }
 
-        input:focus+span {
-
+        input:focus + span {
             &::before,
             &::after {
                 border-top-color: #da3021 !important;
             }
         }
 
-        textarea:focus+span {
-
+        textarea:focus + span {
             &::before,
             &::after {
                 border-top-color: #da3021 !important;
             }
         }
 
-        .css-1pcexqc-container:focus+span {
-
+        .css-1pcexqc-container:focus + span {
             &::before,
             &::after {
                 border-top-color: #da3021 !important;
@@ -529,9 +503,9 @@
         textarea:disabled,
         .css-1pcexqc-container:disabled {
             // + span {
-            border: 1px solid #DFE3E5;
+            border: 1px solid #dfe3e5;
             // border-top-color: transparent !important;
-            color: #DFE3E5;
+            color: #dfe3e5;
             // }
         }
     }
@@ -547,12 +521,12 @@
     color: $gray-500;
 }
 
-.from-to-input>input:focus,
-.from-to-input>textarea:focus {
+.from-to-input > input:focus,
+.from-to-input > textarea:focus {
     border-color: #4f2e90 !important;
 }
 
-.from-to-input>.outside-label {
+.from-to-input > .outside-label {
     position: absolute;
     top: -6px;
     left: 14px;
@@ -564,7 +538,7 @@
     padding: 2px;
 }
 
-.from-to-input>.inside-label {
+.from-to-input > .inside-label {
     position: absolute;
     top: 24px;
     left: 16px;
@@ -572,7 +546,7 @@
     color: #8c8f91;
 }
 
-.from-to-input>.static-placeholder {
+.from-to-input > .static-placeholder {
     position: absolute;
     top: 22px;
     left: 56px;
@@ -589,20 +563,19 @@
         color: #da3021 !important;
     }
 
-    &:focus+span,
-    textarea:focus+span,
-    .css-1pcexqc-container:focus+span {
+    &:focus + span,
+    textarea:focus + span,
+    .css-1pcexqc-container:focus + span {
         color: #4f2e90;
     }
 
     > {
-
-        input:not(:focus):placeholder-shown+span::before,
-        textarea:not(:focus):placeholder-shown+span::before,
-        .css-1pcexqc-container:not(:focus):placeholder-shown+span::before,
-        input:not(:focus):placeholder-shown+span::after,
-        textarea:not(:focus):placeholder-shown+span::after,
-        .css-1pcexqc-container:not(:focus):placeholder-shown+span::before {
+        input:not(:focus):placeholder-shown + span::before,
+        textarea:not(:focus):placeholder-shown + span::before,
+        .css-1pcexqc-container:not(:focus):placeholder-shown + span::before,
+        input:not(:focus):placeholder-shown + span::after,
+        textarea:not(:focus):placeholder-shown + span::after,
+        .css-1pcexqc-container:not(:focus):placeholder-shown + span::before {
             border-top-color: red !important;
         }
 
@@ -615,8 +588,8 @@
 
 ///// Price  input
 
-.price-input>input:focus,
-.price-input>textarea:focus {
+.price-input > input:focus,
+.price-input > textarea:focus {
     border-color: #4f2e90 !important;
 }
 
@@ -629,7 +602,7 @@
     color: $gray-500;
 }
 
-.price-input>.outside-label {
+.price-input > .outside-label {
     position: absolute;
     top: -6px;
     left: 14px;
@@ -641,7 +614,7 @@
     padding: 2px;
 }
 
-.price-input>.static-placeholder {
+.price-input > .static-placeholder {
     position: absolute;
     top: 22px;
     right: 16px;
@@ -660,20 +633,19 @@
         color: #da3021 !important;
     }
 
-    &:focus+span,
-    textarea:focus+span,
-    .css-1pcexqc-container:focus+span {
+    &:focus + span,
+    textarea:focus + span,
+    .css-1pcexqc-container:focus + span {
         color: #4f2e90;
     }
 
     > {
-
-        input:not(:focus):placeholder-shown+span::before,
-        textarea:not(:focus):placeholder-shown+span::before,
-        .css-1pcexqc-container:not(:focus):placeholder-shown+span::before,
-        input:not(:focus):placeholder-shown+span::after,
-        textarea:not(:focus):placeholder-shown+span::after,
-        .css-1pcexqc-container:not(:focus):placeholder-shown+span::before {
+        input:not(:focus):placeholder-shown + span::before,
+        textarea:not(:focus):placeholder-shown + span::before,
+        .css-1pcexqc-container:not(:focus):placeholder-shown + span::before,
+        input:not(:focus):placeholder-shown + span::after,
+        textarea:not(:focus):placeholder-shown + span::after,
+        .css-1pcexqc-container:not(:focus):placeholder-shown + span::before {
             border-top-color: red !important;
         }
 
@@ -702,27 +674,26 @@ textarea {
     cursor: none;
 
     input {
-        border: 1px solid #DFE3E5 !important;
-        color: #DFE3E5 !important;
-        pointer-events: none
+        border: 1px solid #dfe3e5 !important;
+        color: #dfe3e5 !important;
+        pointer-events: none;
     }
 
     input::placeholder {
-        color: #DFE3E5 !important;
+        color: #dfe3e5 !important;
     }
-
 
     input:disabled,
     textarea:disabled,
     .css-1pcexqc-container:disabled {
-        border-color: #DFE3E5 !important;
-        border-top-color: #DFE3E5 !important;
+        border-color: #dfe3e5 !important;
+        border-top-color: #dfe3e5 !important;
         pointer-events: none;
 
-        +span {
+        + span {
             border-color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.38) !important;
             border-top-color: transparent !important;
-            color: #5C6265;
+            color: #5c6265;
             pointer-events: none;
         }
     }
@@ -730,19 +701,18 @@ textarea {
     input:disabled:placeholder-shown,
     textarea:disabled:placeholder-shown,
     .css-1pcexqc-container:disabled:placeholder-shown {
-        border-top-color: #DFE3E5 !important;
+        border-top-color: #dfe3e5 !important;
 
-        +span {
-            border-top-color: #DFE3E5 !important;
+        + span {
+            border-top-color: #dfe3e5 !important;
         }
     }
-
 }
 
-.disabled__input>.static-placeholder {
-    color: #DFE3E5 !important;
+.disabled__input > .static-placeholder {
+    color: #dfe3e5 !important;
 }
 
-.disabled__input>.inside-label {
-    color: #DFE3E5 !important;
+.disabled__input > .inside-label {
+    color: #dfe3e5 !important;
 }
