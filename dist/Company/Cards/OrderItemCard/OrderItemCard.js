@@ -106,7 +106,9 @@ var OrderItemCard = function OrderItemCard(_ref) {
       className: "w-33 orderNumberMobile"
     }, "Ordrenummer: ", order_product.order_id), _react.default.createElement("p", {
       className: "w-33"
-    }, "Betalingsm\xE5te: Kort")));
+    }, "Betalingsm\xE5te: Kort"), (order_product === null || order_product === void 0 ? void 0 : order_product.tipio_offer_option_title) && _react.default.createElement("p", {
+      className: "w-33"
+    }, "St\xF8rrelse: ", order_product === null || order_product === void 0 ? void 0 : order_product.tipio_offer_option_title)));
   })), _react.default.createElement("div", {
     className: "orderItem__content--totalSum"
   }, _react.default.createElement("p", null, "Totalsum"), _react.default.createElement("p", null, order.total_price, " Kr")), _react.default.createElement("div", {

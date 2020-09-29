@@ -1,6 +1,7 @@
 .pure-material-textfield-outlined {
     input:-webkit-autofill + .label-sm {
         color: #5c6265;
+
         &:active {
             input:-webkit-autofill + .label-sm {
                 color: #4f2e90;
@@ -27,6 +28,7 @@
     input {
         position: relative;
     }
+
     .error-icon {
         z-index: 10;
         top: 20px;
@@ -365,10 +367,12 @@
     input {
         padding-right: 35px;
     }
+
     .error-icon {
         display: block;
         position: absolute;
     }
+
     > {
         input,
         textarea,
@@ -377,6 +381,7 @@
             border-right: 1px solid #da3021 !important;
             border-bottom: 1px solid #da3021 !important;
         }
+
         input + span {
             &::before,
             &::after {
@@ -497,10 +502,11 @@
         input:disabled,
         textarea:disabled,
         .css-1pcexqc-container:disabled {
-            + span {
-                border-top-color: transparent !important;
-                color: #da3021;
-            }
+            // + span {
+            border: 1px solid #dfe3e5;
+            // border-top-color: transparent !important;
+            color: #dfe3e5;
+            // }
         }
     }
 }
@@ -552,6 +558,7 @@
     input {
         border-color: #da3021 !important;
     }
+
     .outside-label {
         color: #da3021 !important;
     }
@@ -621,6 +628,7 @@
     input {
         border-color: #da3021 !important;
     }
+
     .outside-label {
         color: #da3021 !important;
     }
@@ -660,4 +668,51 @@ textarea {
     input:focus::placeholder {
         visibility: visible;
     }
+}
+
+.disabled__input {
+    cursor: none;
+
+    input {
+        border: 1px solid #dfe3e5 !important;
+        color: #dfe3e5 !important;
+        pointer-events: none;
+    }
+
+    input::placeholder {
+        color: #dfe3e5 !important;
+    }
+
+    input:disabled,
+    textarea:disabled,
+    .css-1pcexqc-container:disabled {
+        border-color: #dfe3e5 !important;
+        border-top-color: #dfe3e5 !important;
+        pointer-events: none;
+
+        + span {
+            border-color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.38) !important;
+            border-top-color: transparent !important;
+            color: #5c6265;
+            pointer-events: none;
+        }
+    }
+
+    input:disabled:placeholder-shown,
+    textarea:disabled:placeholder-shown,
+    .css-1pcexqc-container:disabled:placeholder-shown {
+        border-top-color: #dfe3e5 !important;
+
+        + span {
+            border-top-color: #dfe3e5 !important;
+        }
+    }
+}
+
+.disabled__input > .static-placeholder {
+    color: #dfe3e5 !important;
+}
+
+.disabled__input > .inside-label {
+    color: #dfe3e5 !important;
 }

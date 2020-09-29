@@ -13,6 +13,8 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _reactSelect = _interopRequireDefault(require("react-select"));
 
+var _classnames = _interopRequireDefault(require("classnames"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
@@ -27,7 +29,6 @@ function _iterableToArrayLimit(arr, i) { if (!(Symbol.iterator in Object(arr) ||
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
-// import ErrorMessage from '../ErrorMessage/ErrorMessage';
 function Select(_ref) {
   var placeholder = _ref.placeholder,
       options = _ref.options,
@@ -36,6 +37,8 @@ function Select(_ref) {
       defaultValue = _ref.defaultValue,
       displayErrors = _ref.displayErrors,
       errors = _ref.errors,
+      _ref$disabled = _ref.disabled,
+      disabled = _ref$disabled === void 0 ? false : _ref$disabled,
       name = _ref.name;
 
   var _useState = (0, _react.useState)({
@@ -52,8 +55,10 @@ function Select(_ref) {
   };
 
   return _react.default.createElement("div", {
-    className: "custom-material-select"
-  }, _react.default.createElement("label", {
+    className: (0, _classnames.default)('custom-material-select', {
+      disabled__select: disabled
+    })
+  }, label && _react.default.createElement("label", {
     className: "select-label"
   }, label), _react.default.createElement(_reactSelect.default, {
     value: value,
@@ -65,7 +70,8 @@ function Select(_ref) {
       };
     }),
     placeholder: placeholder || '-',
-    isClearable: false
+    isClearable: false // isDisabled={disabled}
+
   }));
 }
 

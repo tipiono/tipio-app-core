@@ -21,7 +21,8 @@
         width: 35%;
         display: inline-block;
 
-        .from-to-input, .price-input {
+        .from-to-input,
+        .price-input {
           margin-bottom: 1rem;
         }
       }
@@ -138,6 +139,7 @@
 
     &__additionalSales {
       width: 100%;
+
       &--title {
         font-size: 1.375rem;
       }
@@ -153,5 +155,11 @@
     &__deliveryTimeForm {
       width: 100%;
     }
+  }
+}
+
+.createOfferForm__stripeSection {
+  .stripeSection__content {
+    border: 2px solid #DA3021;
   }
 }

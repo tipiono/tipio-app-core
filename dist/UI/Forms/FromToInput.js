@@ -23,11 +23,14 @@ var _default = _react.default.forwardRef(function (_ref, ref) {
       label = _ref.label,
       name = _ref.name,
       errors = _ref.errors,
-      props = _objectWithoutProperties(_ref, ["from", "to", "label", "name", "errors"]);
+      _ref$disabled = _ref.disabled,
+      disabled = _ref$disabled === void 0 ? false : _ref$disabled,
+      props = _objectWithoutProperties(_ref, ["from", "to", "label", "name", "errors", "disabled"]);
 
   return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("label", {
     className: (0, _classnames.default)('pure-material-textfield-outlined from-to-input', {
-      validationError: errors && errors[name]
+      validationError: errors && errors[name],
+      disabled__input: disabled
     })
   }, _react.default.createElement("input", _extends({
     placeholder: to,
@@ -37,8 +40,10 @@ var _default = _react.default.forwardRef(function (_ref, ref) {
   }, props, {
     ref: ref,
     style: {
-      paddingLeft: props.paddingleft ? "".concat(props.paddingleft + 55 + 8 + 5.328125, "px") : '75px'
-    }
+      paddingLeft: props.paddingleft ? "".concat(props.paddingleft + 55 + 8 + 5.328125, "px") : '75px',
+      color: disabled ? '#DFE3E5' : ''
+    },
+    disabled: disabled
   })), _react.default.createElement("label", {
     className: "outside-label"
   }, label), _react.default.createElement("span", {
