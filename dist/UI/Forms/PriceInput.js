@@ -21,11 +21,14 @@ var _default = _react.default.forwardRef(function (_ref, ref) {
   var label = _ref.label,
       name = _ref.name,
       errors = _ref.errors,
-      props = _objectWithoutProperties(_ref, ["label", "name", "errors"]);
+      _ref$disabled = _ref.disabled,
+      disabled = _ref$disabled === void 0 ? false : _ref$disabled,
+      props = _objectWithoutProperties(_ref, ["label", "name", "errors", "disabled"]);
 
   return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("label", {
-    className: (0, _classnames.default)("pure-material-textfield-outlined price-input", {
-      'validationError': errors && errors[name]
+    className: (0, _classnames.default)('pure-material-textfield-outlined price-input', {
+      validationError: errors && errors[name],
+      disabled__input: disabled
     })
   }, _react.default.createElement("input", _extends({
     placeholder: "50",
@@ -33,7 +36,8 @@ var _default = _react.default.forwardRef(function (_ref, ref) {
     name: name,
     id: name
   }, props, {
-    ref: ref
+    ref: ref,
+    disabled: disabled
   })), _react.default.createElement("label", {
     className: "outside-label"
   }, label), _react.default.createElement("p", {

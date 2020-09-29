@@ -1,9 +1,18 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import ReactSelect from 'react-select';
-// import ErrorMessage from '../ErrorMessage/ErrorMessage';
-
-function Select({ placeholder, options, label, onChange, defaultValue, displayErrors, errors, name }) {
+import cx from 'classnames';
+function Select({
+    placeholder,
+    options,
+    label,
+    onChange,
+    defaultValue,
+    displayErrors,
+    errors,
+    disabled = false,
+    name
+}) {
     const [value, setValue] = useState({ value: defaultValue, label: defaultValue } || false);
 
     const _onChange = (v) => {
@@ -11,7 +20,11 @@ function Select({ placeholder, options, label, onChange, defaultValue, displayEr
         onChange(v);
     };
     return (
-        <div className="custom-material-select">
+        <div
+            className={cx('custom-material-select', {
+                disabled__select: disabled
+            })}
+        >
             {label && <label className="select-label">{label}</label>}
             <ReactSelect
                 value={value}
@@ -19,6 +32,7 @@ function Select({ placeholder, options, label, onChange, defaultValue, displayEr
                 options={options.map((x) => ({ value: x, label: x }))}
                 placeholder={placeholder || '-'}
                 isClearable={false}
+                // isDisabled={disabled}
             />
 
             {/*{displayErrors && errors && errors[name] &&*/}

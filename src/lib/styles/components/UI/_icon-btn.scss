@@ -1,21 +1,39 @@
 .iconButton {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 
-  &--plus {
-    margin-right: .625rem;
-    //transition: all ease 200ms;
-  }
+    &--plus {
+        margin-right: 0.625rem;
+        //transition: all ease 200ms;
+    }
 
-  &--text {
-    color: $primary;
-  }
+    &--text {
+        color: $primary;
+    }
 
-  &:hover {
-    text-decoration: none;
-  }
+    &:hover {
+        text-decoration: none;
+    }
 
-  &:hover > &--plus {
-    //transform: rotate(90deg);
-  }
+    &:hover > &--plus {
+        //transform: rotate(90deg);
+    }
+}
+
+.disabled__iconButton {
+    cursor: none;
+
+    .iconButton--text {
+        color: #5c6265;
+    }
+
+    svg {
+        circle {
+            fill: #dfe3e5;
+        }
+
+        path {
+            fill: #5c6265;
+        }
+    }
 }
