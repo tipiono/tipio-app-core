@@ -7,6 +7,8 @@ exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
+var _classnames = _interopRequireDefault(require("classnames"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
@@ -17,10 +19,14 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 
 var IconButton = function IconButton(_ref) {
   var text = _ref.text,
-      props = _objectWithoutProperties(_ref, ["text"]);
+      _ref$disabled = _ref.disabled,
+      disabled = _ref$disabled === void 0 ? false : _ref$disabled,
+      props = _objectWithoutProperties(_ref, ["text", "disabled"]);
 
   return _react.default.createElement("a", _extends({
-    className: "iconButton",
+    className: (0, _classnames.default)('iconButton', {
+      disabled__iconButton: disabled
+    }),
     href: ""
   }, props), _react.default.createElement("svg", {
     className: "iconButton--plus",

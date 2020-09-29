@@ -15,7 +15,26 @@
     text-decoration: none;
   }
 
-  &:hover > &--plus {
+  &:hover>&--plus {
     //transform: rotate(90deg);
   }
+}
+
+.disabled__iconButton {
+  cursor: none;
+
+  .iconButton--text {
+    color: #5C6265;
+  }
+
+  svg {
+    circle {
+      fill: #DFE3E5;
+    }
+
+    path {
+      fill: #5C6265;
+    }
+  }
+
 }

@@ -57,9 +57,9 @@ var _default = _react.default.forwardRef(function (_ref, ref) {
     className: "chooseAddSaleCard__content--price"
   }, _react.default.createElement("h6", {
     className: "chooseAddSaleCard__content--price--sale"
-  }, salePrice, " Kr"), _react.default.createElement("h6", {
+  }, salePrice.toLocaleString('nb-NO'), " Kr"), _react.default.createElement("h6", {
     className: "chooseAddSaleCard__content--price--cost"
-  }, costPrice, " Kr")), _react.default.createElement("h6", {
+  }, costPrice.toLocaleString('nb-NO'), " Kr")), _react.default.createElement("h6", {
     className: "chooseAddSaleCard__content--title",
     onClick: onClick
   }, title))), _react.default.createElement(_Checkbox.default, _extends({

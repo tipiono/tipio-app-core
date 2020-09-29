@@ -29,6 +29,7 @@ const OrderItemCard = ({ order, deliveredOnChange, dontShowOrderUpdate }) => {
 
         return day + '.' + month + '.' + year + ' - ' + hours + ':' + min;
     };
+
     return (
         <>
             <section className="orderItem">
@@ -76,7 +77,9 @@ const OrderItemCard = ({ order, deliveredOnChange, dontShowOrderUpdate }) => {
                                     <p className="w-33">{getFormattedDate(order_product.created_at)}</p>
                                     <p className="w-33 orderNumberMobile">Ordrenummer: {order_product.order_id}</p>
                                     <p className="w-33">Betalingsmåte: Kort</p>
-                                    {/* <p className="w-33">Størrelse: 46</p> */}
+                                    {order_product?.tipio_offer_option_title && (
+                                        <p className="w-33">Størrelse: {order_product?.tipio_offer_option_title}</p>
+                                    )}
                                 </div>
                             </div>
                         ))}

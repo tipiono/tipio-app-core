@@ -25,18 +25,22 @@ var _default = _react.default.forwardRef(function (_ref, ref) {
       errors = _ref.errors,
       displayErrors = _ref.displayErrors,
       onBlur = _ref.onBlur,
-      props = _objectWithoutProperties(_ref, ["placeholder", "name", "errors", "displayErrors", "onBlur"]);
+      _ref$disabled = _ref.disabled,
+      disabled = _ref$disabled === void 0 ? false : _ref$disabled,
+      props = _objectWithoutProperties(_ref, ["placeholder", "name", "errors", "displayErrors", "onBlur", "disabled"]);
 
   return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("label", {
     className: (0, _classnames.default)('pure-material-textfield-outlined ', {
-      validationError: errors && errors[name]
+      validationError: errors && errors[name],
+      disabled__input: disabled
     })
   }, _react.default.createElement("input", _extends({
     placeholder: " ",
     id: props.id || name,
     name: name
   }, props, {
-    ref: ref
+    ref: ref,
+    disabled: disabled
   })), _react.default.createElement("span", {
     className: "label-sm"
   }, placeholder), displayErrors && errors && errors[name] && _react.default.createElement("span", {
