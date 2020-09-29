@@ -56,7 +56,6 @@ var OrderItemCard = function OrderItemCard(_ref) {
     return day + '.' + month + '.' + year + ' - ' + hours + ':' + min;
   };
 
-  console.log(order);
   return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("section", {
     className: "orderItem"
   }, !dontShowOrderUpdate && _react.default.createElement("div", {
