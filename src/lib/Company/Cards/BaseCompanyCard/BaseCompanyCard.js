@@ -69,9 +69,7 @@ const BaseCompanyCard = ({
                     <p className="baseCompanyCard__body--description">{!showBrand ? props.subtitle : brand}</p>
 
                     <div className="baseCompanyCard__body--cost">
-                        <h3 className="baseCompanyCard__body--cost--price">
-                            {potential_earning.toLocaleString('nb-NO')} Kr
-                        </h3>
+                        <h3 className="baseCompanyCard__body--cost--price">{potential_earning} Kr</h3>
                         <span className="baseCompanyCard__body--cost--label">
                             {showRevenue ? 'Omstening' : 'Potensiell omsetning'}
                         </span>
