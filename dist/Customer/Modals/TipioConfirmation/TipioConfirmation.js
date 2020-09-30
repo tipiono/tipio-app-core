@@ -67,7 +67,7 @@ function TipioConfirmation(_ref) {
     className: "tipio__confirmation__share"
   }, _react.default.createElement(_reactShare.FacebookShareButton, {
     url: share.link,
-    quote: share.title,
+    quote: 'Kjenner jeg noen andre som kunne tenke seg denne?',
     className: "Demo__some-network__share-button"
   }, _react.default.createElement("li", {
     className: "tipio__confirmation__share--item"

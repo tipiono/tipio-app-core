@@ -28,7 +28,7 @@ function TipioConfirmation({ image, expiresIn, share, title, description, ...pro
                     <ul className="tipio__confirmation__share">
                         <FacebookShareButton
                             url={share.link}
-                            quote={share.title}
+                            quote={'Kjenner jeg noen andre som kunne tenke seg denne?'}
                             className="Demo__some-network__share-button"
                         >
                             <li className="tipio__confirmation__share--item">
