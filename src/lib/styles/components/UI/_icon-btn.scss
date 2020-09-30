@@ -1,6 +1,7 @@
 .iconButton {
     display: flex;
     align-items: center;
+    cursor: pointer;
 
     &--plus {
         margin-right: 0.625rem;
@@ -21,8 +22,6 @@
 }
 
 .disabled__iconButton {
-    cursor: none;
-
     .iconButton--text {
         color: #5c6265;
     }

@@ -3,11 +3,10 @@ import cx from 'classnames';
 
 const IconButton = ({ text, disabled = false, ...props }) => {
     return (
-        <a
+        <div
             className={cx('iconButton', {
                 disabled__iconButton: disabled
             })}
-            href=""
             {...props}
         >
             <svg className="iconButton--plus" width={30} height={30}>
@@ -21,7 +20,7 @@ const IconButton = ({ text, disabled = false, ...props }) => {
                 </g>
             </svg>
             <span className="iconButton--text">{text}</span>
-        </a>
+        </div>
     );
 };
 
