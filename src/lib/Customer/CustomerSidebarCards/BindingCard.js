@@ -6,6 +6,7 @@ import ShareButton from './ShareButton';
 import HorizontalTimeline from '../Timelines/HorizontalTimeline';
 import SecondaryButton from '../../UI/Buttons/SecondaryButton';
 import SecondaryOutlineButton from '../../UI/Buttons/SecondaryOutlineButton';
+import replaceWithSpace from '../../Util/replaceWithSpace';
 
 const BindingCard = ({
     children,
@@ -29,7 +30,7 @@ const BindingCard = ({
                                     ('' + firstRange.price).length >= 5
                             })}
                         >
-                            {firstRange.price} Kr
+                            {replaceWithSpace(firstRange.price)} Kr
                         </h3>
                         <span className="customerSidebarCard__footer__salePrice--minBuyers--label">
                             Pris fra {firstRange.from}-{firstRange.to} kjøp
@@ -45,7 +46,7 @@ const BindingCard = ({
                             })}
                         >
                             {' '}
-                            {secondRange.price} Kr
+                            {replaceWithSpace(secondRange.price)} Kr
                         </h3>
                         <span className="customerSidebarCard__footer__salePrice--maxBuyers--label">
                             Pris fra {secondRange.from}-{secondRange.to} kjøp

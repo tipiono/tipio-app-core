@@ -7,6 +7,8 @@ exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
+var _replaceWithSpace = _interopRequireDefault(require("../../Util/replaceWithSpace"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
@@ -37,7 +39,7 @@ var BaseCard = function BaseCard(_ref) {
     id: props.marketPriceId
   }, "Markedspris"), _react.default.createElement("h4", {
     className: "customerSidebarCard__header__cost--price"
-  }, props.market_price, " Kr"))), _react.default.createElement("div", {
+  }, (0, _replaceWithSpace.default)(props.market_price), " Kr"))), _react.default.createElement("div", {
     className: "customerSidebarCard__footer"
   }, children));
 };

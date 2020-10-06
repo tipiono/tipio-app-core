@@ -21,6 +21,8 @@ var _SecondaryButton = _interopRequireDefault(require("../../UI/Buttons/Secondar
 
 var _SecondaryOutlineButton = _interopRequireDefault(require("../../UI/Buttons/SecondaryOutlineButton"));
 
+var _replaceWithSpace = _interopRequireDefault(require("../../Util/replaceWithSpace"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
@@ -47,7 +49,7 @@ var BindingCard = function BindingCard(_ref) {
     className: (0, _classnames.default)('customerSidebarCard__footer__salePrice--minBuyers--price', {
       'customerSidebarCard__footer__salePrice--minBuyers--priceSmall': ('' + firstRange.price).length >= 5
     })
-  }, firstRange.price, " Kr"), _react.default.createElement("span", {
+  }, (0, _replaceWithSpace.default)(firstRange.price), " Kr"), _react.default.createElement("span", {
     className: "customerSidebarCard__footer__salePrice--minBuyers--label"
   }, "Pris fra ", firstRange.from, "-", firstRange.to, " kj\xF8p")) : null, secondRange ? _react.default.createElement("li", {
     className: "customerSidebarCard__footer__salePrice--maxBuyers"
@@ -55,7 +57,7 @@ var BindingCard = function BindingCard(_ref) {
     className: (0, _classnames.default)('customerSidebarCard__footer__salePrice--maxBuyers--price', {
       'customerSidebarCard__footer__salePrice--maxBuyers--priceSmall': ('' + secondRange.price).length >= 5
     })
-  }, ' ', secondRange.price, " Kr"), _react.default.createElement("span", {
+  }, ' ', (0, _replaceWithSpace.default)(secondRange.price), " Kr"), _react.default.createElement("span", {
     className: "customerSidebarCard__footer__salePrice--maxBuyers--label"
   }, "Pris fra ", secondRange.from, "-", secondRange.to, " kj\xF8p")) : null), props.bindCount > 0 && _react.default.createElement("div", {
     className: "customerSidebarCard__footer--progressBar"
