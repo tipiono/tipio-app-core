@@ -11,6 +11,8 @@ var _TipioCountdown = _interopRequireDefault(require("../../../UI/TipioCountdown
 
 var _SalesProgressBar = _interopRequireDefault(require("../../SalesProgressBar/SalesProgressBar"));
 
+var _replaceWithSpace = _interopRequireDefault(require("../../../Util/replaceWithSpace"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function BiddingCard(_ref) {
@@ -51,9 +53,9 @@ function BiddingCard(_ref) {
     className: "biddingCard__body--price"
   }, _react.default.createElement("h4", {
     className: "biddingCard__body--price--sale"
-  }, salePrice), _react.default.createElement("h4", {
+  }, (0, _replaceWithSpace.default)(salePrice), " Kr"), _react.default.createElement("h4", {
     className: "biddingCard__body--price--cost"
-  }, costPrice)), _react.default.createElement("div", {
+  }, (0, _replaceWithSpace.default)(costPrice), " Kr")), _react.default.createElement("div", {
     className: "biddingCard__body--content"
   }, _react.default.createElement("a", {
     onClick: onClick,

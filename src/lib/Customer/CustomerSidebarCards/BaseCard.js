@@ -1,4 +1,5 @@
 import React from 'react';
+import replaceWithSpace from '../../Util/replaceWithSpace';
 
 const BaseCard = ({ children, ...props }) => {
     return (
@@ -23,7 +24,7 @@ const BaseCard = ({ children, ...props }) => {
                         Markedspris
                     </p>
                     <h4 className="customerSidebarCard__header__cost--price">
-                        {props.market_price.replace(/(?!^)(?=(?:\d{3})+(?:\.|$))/gm, ' ')} Kr
+                        {replaceWithSpace(props.market_price)} Kr
                     </h4>
                 </div>
             </div>
