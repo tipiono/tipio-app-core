@@ -29,7 +29,7 @@ const BindingCard = ({
                                     ('' + firstRange.price).length >= 5
                             })}
                         >
-                            {firstRange.price} Kr
+                            {firstRange.price.replace(/(?!^)(?=(?:\d{3})+(?:\.|$))/gm, ' ')} Kr
                         </h3>
                         <span className="customerSidebarCard__footer__salePrice--minBuyers--label">
                             Pris fra {firstRange.from}-{firstRange.to} kjøp
@@ -45,7 +45,7 @@ const BindingCard = ({
                             })}
                         >
                             {' '}
-                            {secondRange.price} Kr
+                            {secondRange.price.replace(/(?!^)(?=(?:\d{3})+(?:\.|$))/gm, ' ')} Kr
                         </h3>
                         <span className="customerSidebarCard__footer__salePrice--maxBuyers--label">
                             Pris fra {secondRange.from}-{secondRange.to} kjøp
