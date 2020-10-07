@@ -1,6 +1,7 @@
 import React from 'react';
 import TipioCountdown from '../../../UI/TipioCountdown/TipioCountdown';
 import SalesProgressBar from '../../SalesProgressBar/SalesProgressBar';
+import replaceWithSpace from '../../../Util/replaceWithSpace';
 
 function BiddingCard({
     id,
@@ -42,8 +43,8 @@ function BiddingCard({
 
                 <div className="biddingCard__body">
                     <div className="biddingCard__body--price">
-                        <h4 className="biddingCard__body--price--sale">{salePrice}</h4>
-                        <h4 className="biddingCard__body--price--cost">{costPrice}</h4>
+                        <h4 className="biddingCard__body--price--sale">{replaceWithSpace(salePrice)} Kr</h4>
+                        <h4 className="biddingCard__body--price--cost">{replaceWithSpace(costPrice)} Kr</h4>
                     </div>
 
                     <div className="biddingCard__body--content">

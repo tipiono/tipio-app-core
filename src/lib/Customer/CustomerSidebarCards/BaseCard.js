@@ -1,4 +1,5 @@
 import React from 'react';
+import replaceWithSpace from '../../Util/replaceWithSpace';
 
 const BaseCard = ({ children, ...props }) => {
     return (
@@ -22,7 +23,9 @@ const BaseCard = ({ children, ...props }) => {
                     <p className="customerSidebarCard__header__cost--label" id={props.marketPriceId}>
                         Markedspris
                     </p>
-                    <h4 className="customerSidebarCard__header__cost--price">{props.market_price} Kr</h4>
+                    <h4 className="customerSidebarCard__header__cost--price">
+                        {replaceWithSpace(props.market_price)} Kr
+                    </h4>
                 </div>
             </div>
 
