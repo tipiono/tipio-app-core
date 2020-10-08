@@ -30,7 +30,7 @@ const BindingCard = ({
                                     ('' + firstRange.price).length >= 5
                             })}
                         >
-                            {replaceWithSpace(firstRange.price)} Kr
+                            {firstRange?.price && replaceWithSpace(firstRange?.price)} Kr
                         </h3>
                         <span className="customerSidebarCard__footer__salePrice--minBuyers--label">
                             Pris fra {firstRange.from}-{firstRange.to} kjøp
@@ -46,7 +46,7 @@ const BindingCard = ({
                             })}
                         >
                             {' '}
-                            {replaceWithSpace(secondRange.price)} Kr
+                            {secondRange?.price && replaceWithSpace(secondRange?.price)} Kr
                         </h3>
                         <span className="customerSidebarCard__footer__salePrice--maxBuyers--label">
                             Pris fra {secondRange.from}-{secondRange.to} kjøp

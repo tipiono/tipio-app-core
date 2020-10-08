@@ -43,8 +43,12 @@ function BiddingCard({
 
                 <div className="biddingCard__body">
                     <div className="biddingCard__body--price">
-                        <h4 className="biddingCard__body--price--sale">{replaceWithSpace(salePrice)} Kr</h4>
-                        <h4 className="biddingCard__body--price--cost">{replaceWithSpace(costPrice)} Kr</h4>
+                        <h4 className="biddingCard__body--price--sale">
+                            {salePrice && replaceWithSpace(salePrice)} Kr
+                        </h4>
+                        <h4 className="biddingCard__body--price--cost">
+                            {costPrice && replaceWithSpace(costPrice)} Kr
+                        </h4>
                     </div>
 
                     <div className="biddingCard__body--content">
