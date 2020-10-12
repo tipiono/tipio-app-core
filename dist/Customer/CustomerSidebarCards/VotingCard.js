@@ -1,6 +1,6 @@
 "use strict";
 
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -31,32 +31,32 @@ var VotingCard = function VotingCard(_ref) {
   var state = _ref.state,
       props = _objectWithoutProperties(_ref, ["state"]);
 
-  return _react.default.createElement(_BaseCard.default, props, state === 'display_interested_button' && _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("div", {
+  return /*#__PURE__*/_react.default.createElement(_BaseCard.default, props, state === 'display_interested_button' && /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("div", {
     className: "customerSidebarCard__footer--action"
-  }, _react.default.createElement(_SecondaryOutlineButton.default, {
+  }, /*#__PURE__*/_react.default.createElement(_SecondaryOutlineButton.default, {
     text: 'Meld interesse',
     onClick: props.voteOnClick,
     loading: props.voteLoading,
     id: props.id
-  })), _react.default.createElement("p", {
+  })), /*#__PURE__*/_react.default.createElement("p", {
     className: "customerSidebarCard__footer--alert"
-  }, "Dette er ikke bindende")), state === 'interested' && _react.default.createElement("div", {
+  }, "Dette er ikke bindende")), state === 'interested' && /*#__PURE__*/_react.default.createElement("div", {
     className: "customerSidebarCard__footer--action"
-  }, _react.default.createElement(_ShareButton.default, {
+  }, /*#__PURE__*/_react.default.createElement(_ShareButton.default, {
     onClick: props.shareOnClick
-  }), _react.default.createElement("div", {
+  }), /*#__PURE__*/_react.default.createElement("div", {
     className: "customerSidebarCard__footer--action--notInterested"
-  }, _react.default.createElement(_GrayOutlineButton.default, {
+  }, /*#__PURE__*/_react.default.createElement(_GrayOutlineButton.default, {
     text: "Meld av interesse",
     onClick: props.notInterestedOnClick
-  }))), state === 'restore' && _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("div", {
+  }))), state === 'restore' && /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("div", {
     className: "customerSidebarCard__footer--action"
-  }, _react.default.createElement(_SecondaryOutlineButton.default, {
+  }, /*#__PURE__*/_react.default.createElement(_SecondaryOutlineButton.default, {
     text: 'Gjennopprett',
     onClick: props.restoreOnClick
-  })), _react.default.createElement("p", {
+  })), /*#__PURE__*/_react.default.createElement("p", {
     className: "customerSidebarCard__footer--alert"
-  }, "Dette er ikke bindende")), props.meta && props.meta.joined_count > 0 ? _react.default.createElement("p", {
+  }, "Dette er ikke bindende")), props.meta && props.meta.joined_count > 0 ? /*#__PURE__*/_react.default.createElement("p", {
     className: "customerSidebarCard__footer--interestedCounter"
   }, "Allerede ", props.meta.joined_count, " Interesserte!") : '');
 };

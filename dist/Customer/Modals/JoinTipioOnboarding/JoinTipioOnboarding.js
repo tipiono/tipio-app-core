@@ -16,9 +16,9 @@ function _objectDestructuringEmpty(obj) { if (obj == null) throw new TypeError("
 function JoinTipioOnboarding(_ref) {
   _objectDestructuringEmpty(_ref);
 
-  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_Modal.Modal, {
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_Modal.Modal, {
     showCloseButton: true
-  }, _react.default.createElement("div", null, "###")));
+  }, /*#__PURE__*/_react.default.createElement("div", null, "###")));
 }
 
 var _default = JoinTipioOnboarding;

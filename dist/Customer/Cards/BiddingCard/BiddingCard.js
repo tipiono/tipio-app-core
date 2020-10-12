@@ -29,47 +29,47 @@ function BiddingCard(_ref) {
       onClick = _ref.onClick,
       bindHasExpired = _ref.bindHasExpired,
       link = _ref.link;
-  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("div", {
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("div", {
     className: "biddingCard"
-  }, _react.default.createElement("div", {
+  }, /*#__PURE__*/_react.default.createElement("div", {
     className: "biddingCard__header"
-  }, _react.default.createElement("a", {
+  }, /*#__PURE__*/_react.default.createElement("a", {
     href: link ? link : "/tipio/bind/".concat(id),
     className: "lazy-image biddingCard__header--preview",
     onClick: onClick
-  }, _react.default.createElement("img", {
+  }, /*#__PURE__*/_react.default.createElement("img", {
     className: "lazyload biddingCard__header--preview--image",
     "data-src": image,
     src: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 2'%3E%3C/svg%3E",
     alt: ""
-  })), expiresIn && _react.default.createElement("div", {
+  })), expiresIn && /*#__PURE__*/_react.default.createElement("div", {
     className: "biddingCard__header--timeLeft"
-  }, _react.default.createElement(_TipioCountdown.default, {
+  }, /*#__PURE__*/_react.default.createElement(_TipioCountdown.default, {
     className: "timer",
     expires_in: expiresIn
-  }))), _react.default.createElement("div", {
+  }))), /*#__PURE__*/_react.default.createElement("div", {
     className: "biddingCard__body"
-  }, _react.default.createElement("div", {
+  }, /*#__PURE__*/_react.default.createElement("div", {
     className: "biddingCard__body--price"
-  }, _react.default.createElement("h4", {
+  }, /*#__PURE__*/_react.default.createElement("h4", {
     className: "biddingCard__body--price--sale"
-  }, salePrice && (0, _replaceWithSpace.default)(salePrice), " Kr"), _react.default.createElement("h4", {
+  }, salePrice && (0, _replaceWithSpace.default)(salePrice)), /*#__PURE__*/_react.default.createElement("h4", {
     className: "biddingCard__body--price--cost"
-  }, costPrice && (0, _replaceWithSpace.default)(costPrice), " Kr")), _react.default.createElement("div", {
+  }, costPrice && (0, _replaceWithSpace.default)(costPrice))), /*#__PURE__*/_react.default.createElement("div", {
     className: "biddingCard__body--content"
-  }, _react.default.createElement("a", {
+  }, /*#__PURE__*/_react.default.createElement("a", {
     onClick: onClick,
     href: "/tipio/bind/".concat(id)
-  }, _react.default.createElement("h4", {
+  }, /*#__PURE__*/_react.default.createElement("h4", {
     className: "biddingCard__body--content--title"
-  }, title)), brand && _react.default.createElement("p", {
+  }, title)), brand && /*#__PURE__*/_react.default.createElement("p", {
     className: "biddingCard__body--content--description"
-  }, brand.toUpperCase())), _react.default.createElement("div", {
+  }, brand.toUpperCase())), /*#__PURE__*/_react.default.createElement("div", {
     className: "biddingCard__body--salesbar"
-  }, !bindHasExpired && (bindingCount > 0 ? _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_SalesProgressBar.default, {
+  }, !bindHasExpired && (bindingCount > 0 ? /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_SalesProgressBar.default, {
     percentage: salesProgressBarPercentage,
     bindingCount: bindingCount
-  })) : '')), _react.default.createElement("div", {
+  })) : '')), /*#__PURE__*/_react.default.createElement("div", {
     className: "biddingCard__body--share"
   }, children))));
 }
