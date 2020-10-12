@@ -15,13 +15,13 @@ var DisabledButton = function DisabledButton(_ref) {
   var loading = _ref.loading,
       text = _ref.text,
       onClick = _ref.onClick;
-  return _react.default.createElement("button", {
+  return /*#__PURE__*/_react.default.createElement("button", {
     id: "tipio-join-button",
     type: "button",
     className: "btn btn-secondary btn-lg btn-block",
     onClick: onClick,
     disabled: true
-  }, !loading && text, loading && _react.default.createElement("span", null, ' ', _react.default.createElement("span", {
+  }, !loading && text, loading && /*#__PURE__*/_react.default.createElement("span", null, ' ', /*#__PURE__*/_react.default.createElement("span", {
     className: "spinner-border spinner-border-sm",
     role: "status",
     "aria-hidden": "true"

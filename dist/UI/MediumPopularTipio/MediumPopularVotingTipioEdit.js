@@ -14,11 +14,11 @@ var _SecondaryOutlineButton = _interopRequireDefault(require("../Buttons/Seconda
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var MediumPopularVotingTipioEdit = function MediumPopularVotingTipioEdit(props) {
-  return _react.default.createElement(_MediumPopularTipio.default, props, _react.default.createElement("h6", {
+  return /*#__PURE__*/_react.default.createElement(_MediumPopularTipio.default, props, /*#__PURE__*/_react.default.createElement("h6", {
     className: "mediumPopularTipio__content--interested"
-  }, props.count, " interesserte!"), _react.default.createElement("div", {
+  }, props.count, " interesserte!"), /*#__PURE__*/_react.default.createElement("div", {
     className: "mediumPopularTipio__content__submit"
-  }, _react.default.createElement(_SecondaryOutlineButton.default, {
+  }, /*#__PURE__*/_react.default.createElement(_SecondaryOutlineButton.default, {
     text: "Rediger",
     onClick: props.onEditClick
   })));

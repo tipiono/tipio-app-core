@@ -21,15 +21,15 @@ function ToggleSwitch(_ref) {
       onChange = _ref.onChange,
       props = _objectWithoutProperties(_ref, ["name", "checked", "onChange"]);
 
-  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("div", {
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("div", {
     className: "material-toggle"
-  }, _react.default.createElement("input", _extends({
+  }, /*#__PURE__*/_react.default.createElement("input", _extends({
     id: name,
     name: name,
     type: "checkbox",
     checked: checked,
     onChange: onChange
-  }, props)), _react.default.createElement("label", {
+  }, props)), /*#__PURE__*/_react.default.createElement("label", {
     htmlFor: name,
     className: "label-red"
   })));

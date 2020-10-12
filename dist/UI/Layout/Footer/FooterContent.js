@@ -16,18 +16,18 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 var FooterContent = function FooterContent(_ref) {
   var title = _ref.title,
       data = _ref.data;
-  return _react.default.createElement("div", {
+  return /*#__PURE__*/_react.default.createElement("div", {
     className: "col-sm-12 col-md-3"
-  }, _react.default.createElement("div", {
+  }, /*#__PURE__*/_react.default.createElement("div", {
     className: "customFooter__list"
-  }, _react.default.createElement("h5", {
+  }, /*#__PURE__*/_react.default.createElement("h5", {
     className: "customFooter__list__title"
-  }, title), _react.default.createElement("ul", {
+  }, title), /*#__PURE__*/_react.default.createElement("ul", {
     className: "customFooter__list__content"
   }, data.map(function (e, key) {
-    return _react.default.createElement("li", {
+    return /*#__PURE__*/_react.default.createElement("li", {
       key: key
-    }, _react.default.createElement("a", _extends({
+    }, /*#__PURE__*/_react.default.createElement("a", _extends({
       className: "customFooter__list__content__link"
     }, e.anchorProps), e.label));
   }))));

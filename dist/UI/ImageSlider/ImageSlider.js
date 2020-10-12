@@ -23,13 +23,13 @@ function ImageSlider(_ref) {
       showTimer = _ref.showTimer,
       tipio_expires_in = _ref.tipio_expires_in,
       onClick = _ref.onClick;
-  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("div", {
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("div", {
     className: (0, _classnames.default)('imageSlider', images && {
       showIndicators: images.length >= 5
     }, images && {
       removeMargin: images.length < 5
     })
-  }, _react.default.createElement(_reactResponsiveCarousel.Carousel, {
+  }, /*#__PURE__*/_react.default.createElement(_reactResponsiveCarousel.Carousel, {
     showIndicators: images.length >= 2,
     showArrows: images.length >= 5,
     showStatus: false,
@@ -39,14 +39,14 @@ function ImageSlider(_ref) {
     swipeScrollTolerance: 40,
     onClickItem: onClick && onClick
   }, images && images.map(function (item, i) {
-    return _react.default.createElement("img", {
+    return /*#__PURE__*/_react.default.createElement("img", {
       src: item.blob_url,
       alt: "...",
       key: i
     });
-  })), showTimer && tipio_expires_in && _react.default.createElement("div", {
+  })), showTimer && tipio_expires_in && /*#__PURE__*/_react.default.createElement("div", {
     className: "imageSlider__countDown"
-  }, _react.default.createElement(_TipioCountdown.default, {
+  }, /*#__PURE__*/_react.default.createElement(_TipioCountdown.default, {
     className: "timer",
     expires_in: tipio_expires_in
   }))));

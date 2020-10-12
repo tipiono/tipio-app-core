@@ -14,11 +14,11 @@ var _Modal = require("../../../UI/Modal/Modal");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function Categories(props) {
-  return _react.default.createElement(_Modal.Modal, {
+  return /*#__PURE__*/_react.default.createElement(_Modal.Modal, {
     type: _Modal.ModalType.XLARGE,
     onCloseButtonClick: props.onClose,
     appendCenteredClass: false
-  }, _react.default.createElement(_CategoriesForm.default, props));
+  }, /*#__PURE__*/_react.default.createElement(_CategoriesForm.default, props));
 }
 
 var _default = Categories;

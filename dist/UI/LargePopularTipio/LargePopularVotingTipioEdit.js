@@ -14,11 +14,11 @@ var _SecondaryOutlineButton = _interopRequireDefault(require("../Buttons/Seconda
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var LargePopularVotingTipioEdit = function LargePopularVotingTipioEdit(props) {
-  return _react.default.createElement(_LargePopularTipio.default, props, _react.default.createElement("h6", {
+  return /*#__PURE__*/_react.default.createElement(_LargePopularTipio.default, props, /*#__PURE__*/_react.default.createElement("h6", {
     className: "largePopularTipio__content--interested"
-  }, props.count, " interesserte!"), _react.default.createElement("div", {
+  }, props.count, " interesserte!"), /*#__PURE__*/_react.default.createElement("div", {
     className: "largePopularTipio__content__submit"
-  }, _react.default.createElement(_SecondaryOutlineButton.default, {
+  }, /*#__PURE__*/_react.default.createElement(_SecondaryOutlineButton.default, {
     text: "Rediger",
     onClick: props.onEditClick
   })));

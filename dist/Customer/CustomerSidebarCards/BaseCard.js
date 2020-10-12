@@ -19,27 +19,27 @@ var BaseCard = function BaseCard(_ref) {
   var children = _ref.children,
       props = _objectWithoutProperties(_ref, ["children"]);
 
-  return _react.default.createElement("div", {
+  return /*#__PURE__*/_react.default.createElement("div", {
     className: "customerSidebarCard",
     id: props.id
-  }, _react.default.createElement("div", {
+  }, /*#__PURE__*/_react.default.createElement("div", {
     className: "customerSidebarCard__header"
-  }, _react.default.createElement("div", {
+  }, /*#__PURE__*/_react.default.createElement("div", {
     className: "customerSidebarCard__header__content"
-  }, _react.default.createElement("h3", {
+  }, /*#__PURE__*/_react.default.createElement("h3", {
     className: "customerSidebarCard__header__content--title"
-  }, props.title), _react.default.createElement("p", {
+  }, props.title), /*#__PURE__*/_react.default.createElement("p", {
     className: "customerSidebarCard__header__content--subtitle"
-  }, props.brand ? props.brand : props.subtitle || '')), props.inventory && props.inventory > 0 && props.inventory <= 10 ? _react.default.createElement("p", {
+  }, props.brand ? props.brand : props.subtitle || '')), props.inventory && props.inventory > 0 && props.inventory <= 10 ? /*#__PURE__*/_react.default.createElement("p", {
     className: "customerSidebarCard__header__stock"
-  }, "Kun ", props.inventory, " igjen") : '', _react.default.createElement("div", {
+  }, "Kun ", props.inventory, " igjen") : '', /*#__PURE__*/_react.default.createElement("div", {
     className: "customerSidebarCard__header__cost"
-  }, _react.default.createElement("p", {
+  }, /*#__PURE__*/_react.default.createElement("p", {
     className: "customerSidebarCard__header__cost--label",
     id: props.marketPriceId
-  }, "Markedspris"), _react.default.createElement("h4", {
+  }, "Markedspris"), /*#__PURE__*/_react.default.createElement("h4", {
     className: "customerSidebarCard__header__cost--price"
-  }, (props === null || props === void 0 ? void 0 : props.market_price) && (0, _replaceWithSpace.default)(props === null || props === void 0 ? void 0 : props.market_price), " Kr"))), _react.default.createElement("div", {
+  }, (props === null || props === void 0 ? void 0 : props.market_price) && (0, _replaceWithSpace.default)(props === null || props === void 0 ? void 0 : props.market_price), " Kr"))), /*#__PURE__*/_react.default.createElement("div", {
     className: "customerSidebarCard__footer"
   }, children));
 };

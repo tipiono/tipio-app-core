@@ -19,7 +19,7 @@ var TipioWithOfferCompanyCard = function TipioWithOfferCompanyCard(_ref) {
   var children = _ref.children,
       props = _objectWithoutProperties(_ref, ["children"]);
 
-  return _react.default.createElement("div", null, _react.default.createElement(_BaseCompanyCard.default, props, children));
+  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_BaseCompanyCard.default, props, children));
 };
 
 var _default = TipioWithOfferCompanyCard;

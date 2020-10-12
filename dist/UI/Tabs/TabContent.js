@@ -11,5 +11,5 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function TabContent(_ref) {
   var children = _ref.children;
-  return _react.default.createElement("div", null, " ", children, " ");
+  return /*#__PURE__*/_react.default.createElement("div", null, " ", children, " ");
 }
