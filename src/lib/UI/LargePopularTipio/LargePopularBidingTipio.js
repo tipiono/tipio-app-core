@@ -14,9 +14,9 @@ const LargePopularBidingTipio = (props) => {
         <LargePopularTipio {...props}>
             <div className="largePopularTipio__content__price">
                 <h6 className="largePopularTipio__content__price--marketprice">
-                    {replaceWithSpace(props.market_price)} Kr
+                    {props.market_price && replaceWithSpace(props.market_price)} Kr
                 </h6>
-                <h6 className="largePopularTipio__content__price--saleprice">{replaceWithSpace(price)} Kr</h6>
+                <h6 className="largePopularTipio__content__price--saleprice">{price && replaceWithSpace(price)} Kr</h6>
             </div>
 
             <div className="largePopularTipio__content__submit">
