@@ -39,7 +39,7 @@ var BaseCard = function BaseCard(_ref) {
     id: props.marketPriceId
   }, "Markedspris"), _react.default.createElement("h4", {
     className: "customerSidebarCard__header__cost--price"
-  }, (0, _replaceWithSpace.default)(props.market_price), " Kr"))), _react.default.createElement("div", {
+  }, (props === null || props === void 0 ? void 0 : props.market_price) && (0, _replaceWithSpace.default)(props === null || props === void 0 ? void 0 : props.market_price), " Kr"))), _react.default.createElement("div", {
     className: "customerSidebarCard__footer"
   }, children));
 };

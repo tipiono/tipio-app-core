@@ -24,7 +24,7 @@ const BaseCard = ({ children, ...props }) => {
                         Markedspris
                     </p>
                     <h4 className="customerSidebarCard__header__cost--price">
-                        {replaceWithSpace(props.market_price)} Kr
+                        {props?.market_price && replaceWithSpace(props?.market_price)} Kr
                     </h4>
                 </div>
             </div>

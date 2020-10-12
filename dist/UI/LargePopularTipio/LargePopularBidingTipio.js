@@ -26,9 +26,9 @@ var LargePopularBidingTipio = function LargePopularBidingTipio(props) {
     className: "largePopularTipio__content__price"
   }, _react.default.createElement("h6", {
     className: "largePopularTipio__content__price--marketprice"
-  }, (0, _replaceWithSpace.default)(props.market_price), " Kr"), _react.default.createElement("h6", {
+  }, props.market_price && (0, _replaceWithSpace.default)(props.market_price), " Kr"), _react.default.createElement("h6", {
     className: "largePopularTipio__content__price--saleprice"
-  }, (0, _replaceWithSpace.default)(price), " Kr")), _react.default.createElement("div", {
+  }, price && (0, _replaceWithSpace.default)(price), " Kr")), _react.default.createElement("div", {
     className: "largePopularTipio__content__submit"
   }, props.binded ? _react.default.createElement(_SecondaryButton.default, {
     text: "Del n\xE5",
