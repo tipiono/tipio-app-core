@@ -22,43 +22,43 @@ var AddMoreSaleCompanyCard = function AddMoreSaleCompanyCard(props) {
     saleDiscount = "".concat(props.company_price - props.first_price, " kr");
   }
 
-  return _react.default.createElement("div", {
+  return /*#__PURE__*/_react.default.createElement("div", {
     className: "addMoreSaleCard"
-  }, _react.default.createElement("div", {
+  }, /*#__PURE__*/_react.default.createElement("div", {
     className: "d-flex flex-row align-items-center"
-  }, _react.default.createElement("div", {
+  }, /*#__PURE__*/_react.default.createElement("div", {
     className: "addMoreSaleCard__preview"
-  }, _react.default.createElement("a", {
+  }, /*#__PURE__*/_react.default.createElement("a", {
     className: "addMoreSaleCard__preview--image lazy-image",
     href: "",
     onClick: function onClick(e) {
       e.preventDefault();
       props.titleOnClick(props);
     }
-  }, props.tipio.images && props.tipio.images.length && _react.default.createElement("img", {
+  }, props.tipio.images && props.tipio.images.length && /*#__PURE__*/_react.default.createElement("img", {
     className: "lazyload img-fluid",
     src: props.tipio.images[0].blob_url,
     alt: ""
-  }), _react.default.createElement("span", {
+  }), /*#__PURE__*/_react.default.createElement("span", {
     className: "addMoreSaleCard__preview--discount"
-  }, saleDiscount), ((_props$tipio = props.tipio) === null || _props$tipio === void 0 ? void 0 : _props$tipio.sustainable) && _react.default.createElement("div", {
+  }, saleDiscount), ((_props$tipio = props.tipio) === null || _props$tipio === void 0 ? void 0 : _props$tipio.sustainable) && /*#__PURE__*/_react.default.createElement("div", {
     className: "addMoreSaleCard__preview--sustainable"
-  }, _react.default.createElement("span", null, "B\xE6rekraftig")))), _react.default.createElement("div", {
+  }, /*#__PURE__*/_react.default.createElement("span", null, "B\xE6rekraftig")))), /*#__PURE__*/_react.default.createElement("div", {
     className: "addMoreSaleCard__content"
-  }, _react.default.createElement("h5", null, _react.default.createElement("a", {
+  }, /*#__PURE__*/_react.default.createElement("h5", null, /*#__PURE__*/_react.default.createElement("a", {
     href: "",
     className: "addMoreSaleCard__content--title",
     onClick: function onClick(e) {
       e.preventDefault();
       props.titleOnClick(props);
     }
-  }, props.tipio.title)), _react.default.createElement("div", {
+  }, props.tipio.title)), /*#__PURE__*/_react.default.createElement("div", {
     className: "addMoreSaleCard__content__price"
-  }, _react.default.createElement("h6", {
+  }, /*#__PURE__*/_react.default.createElement("h6", {
     className: "addMoreSaleCard__content__price--sale"
-  }, props.first_price, " Kr"), _react.default.createElement("h6", {
+  }, props.first_price, " Kr"), /*#__PURE__*/_react.default.createElement("h6", {
     className: "addMoreSaleCard__content__price--cost"
-  }, props.company_price, " Kr"))), !props.delete && _react.default.createElement("a", {
+  }, props.company_price, " Kr"))), !props.delete && /*#__PURE__*/_react.default.createElement("a", {
     onClick: function onClick(e) {
       e.preventDefault();
       props.onDelete(props.sale_offer_id);

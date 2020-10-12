@@ -27,28 +27,28 @@ function TipioOfTheDay(_ref) {
       link = _ref.link,
       props = _objectWithoutProperties(_ref, ["id", "children", "title", "subtitle", "voting_expires_in", "images", "onClick", "showTimer", "link"]);
 
-  return _react.default.createElement("div", {
+  return /*#__PURE__*/_react.default.createElement("div", {
     className: "tipioOfTheDay"
-  }, _react.default.createElement("a", {
+  }, /*#__PURE__*/_react.default.createElement("a", {
     href: link ? link : "/tipio/vote/".concat(id),
     onClick: onClick,
     className: "tipioOfTheDay__preview"
-  }, _react.default.createElement("img", {
+  }, /*#__PURE__*/_react.default.createElement("img", {
     className: "tipioOfTheDay__preview--image",
     src: images && images.length && images[0].blob_url,
     alt: ""
-  }), showTimer || props.bindingTipio && _react.default.createElement("div", {
+  }), showTimer || props.bindingTipio && /*#__PURE__*/_react.default.createElement("div", {
     className: "tipioOfTheDay__preview--timeLeft"
-  }, _react.default.createElement(_TipioCountdown.default, {
+  }, /*#__PURE__*/_react.default.createElement(_TipioCountdown.default, {
     className: "timer",
     expires_in: props.bindingTipio ? props.binding_expires_in : voting_expires_in
-  }))), _react.default.createElement("div", {
+  }))), /*#__PURE__*/_react.default.createElement("div", {
     className: "tipioOfTheDay__content"
-  }, _react.default.createElement("a", {
+  }, /*#__PURE__*/_react.default.createElement("a", {
     href: "/tipio/vote/".concat(id),
     className: "tipioOfTheDay__content--title",
     onClick: onClick
-  }, title), _react.default.createElement("p", {
+  }, title), /*#__PURE__*/_react.default.createElement("p", {
     className: "tipioOfTheDay__content--description"
   }, subtitle), children));
 }

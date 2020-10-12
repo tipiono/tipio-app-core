@@ -39,39 +39,39 @@ function SaleCard(_ref) {
     saleDiscount = "".concat(parseInt(salePrice) - parseInt(costPrice), " kr");
   }
 
-  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("div", {
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("div", {
     className: (0, _classnames.default)('saleCard', {
       inActiveSaleCard: !isValidTipio
     })
-  }, _react.default.createElement("div", {
+  }, /*#__PURE__*/_react.default.createElement("div", {
     className: "d-flex flex-row mb-4"
-  }, _react.default.createElement("a", {
+  }, /*#__PURE__*/_react.default.createElement("a", {
     className: "saleCard__preview lazy-image",
     href: "",
     onClick: onClick
-  }, _react.default.createElement("img", {
+  }, /*#__PURE__*/_react.default.createElement("img", {
     className: "saleCard__preview--image lazyload",
     src: image,
     alt: ""
-  }), _react.default.createElement("span", {
+  }), /*#__PURE__*/_react.default.createElement("span", {
     className: "saleCard__preview--discount"
-  }, saleDiscount), sustainable && _react.default.createElement("div", {
+  }, saleDiscount), sustainable && /*#__PURE__*/_react.default.createElement("div", {
     className: "saleCard__preview--sustainable"
-  }, _react.default.createElement("span", null, "B\xE6rekraftig"))), _react.default.createElement("div", {
+  }, /*#__PURE__*/_react.default.createElement("span", null, "B\xE6rekraftig"))), /*#__PURE__*/_react.default.createElement("div", {
     className: "saleCard__content"
-  }, _react.default.createElement("div", {
+  }, /*#__PURE__*/_react.default.createElement("div", {
     className: "saleCard__content--price"
-  }, _react.default.createElement("h6", {
+  }, /*#__PURE__*/_react.default.createElement("h6", {
     className: "saleCard__content--price--sale"
-  }, salePrice, " Kr"), _react.default.createElement("h6", {
+  }, salePrice, " Kr"), /*#__PURE__*/_react.default.createElement("h6", {
     className: "saleCard__content--price--cost"
-  }, costPrice, " Kr")), _react.default.createElement("a", {
+  }, costPrice, " Kr")), /*#__PURE__*/_react.default.createElement("a", {
     onClick: onClick
-  }, _react.default.createElement("h6", {
+  }, /*#__PURE__*/_react.default.createElement("h6", {
     className: "saleCard__content--title"
-  }, title)), _react.default.createElement("div", {
+  }, title)), /*#__PURE__*/_react.default.createElement("div", {
     className: "saleCard__content--timeLeft"
-  }, _react.default.createElement(_index.PinkyCountdownSM, {
+  }, /*#__PURE__*/_react.default.createElement(_index.PinkyCountdownSM, {
     expires_in: expiresIn,
     type: _index.CountdownType.PINK
   })))), children));

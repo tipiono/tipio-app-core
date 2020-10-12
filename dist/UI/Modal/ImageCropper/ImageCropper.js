@@ -23,7 +23,7 @@ function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return 
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -31,27 +31,31 @@ function _defineProperties(target, props) { for (var i = 0; i < props.length; i+
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
-var ImageCropper =
-/*#__PURE__*/
-function (_Component) {
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+var ImageCropper = /*#__PURE__*/function (_Component) {
   _inherits(ImageCropper, _Component);
+
+  var _super = _createSuper(ImageCropper);
 
   function ImageCropper(props) {
     var _this;
 
     _classCallCheck(this, ImageCropper);
 
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(ImageCropper).call(this, props));
+    _this = _super.call(this, props);
     _this.modalOnClose = _this.modalOnClose.bind(_assertThisInitialized(_this));
     _this.cropDoneOnClick = _this.cropDoneOnClick.bind(_assertThisInitialized(_this));
     _this.state = {
@@ -123,42 +127,42 @@ function (_Component) {
         modalOnClose = function modalOnClose() {};
       }
 
-      return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_Modal.Modal, {
+      return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_Modal.Modal, {
         showCloseButton: true,
         onCloseButtonClick: this.modalOnClose
-      }, _react.default.createElement("div", {
+      }, /*#__PURE__*/_react.default.createElement("div", {
         className: "imageCropper"
-      }, _react.default.createElement("div", {
+      }, /*#__PURE__*/_react.default.createElement("div", {
         className: "imageCropper__content"
-      }, _react.default.createElement("h3", {
+      }, /*#__PURE__*/_react.default.createElement("h3", {
         className: "imageCropper__content--title"
-      }, this.props.title), !this.state.cropperReady && _react.default.createElement("div", {
+      }, this.props.title), !this.state.cropperReady && /*#__PURE__*/_react.default.createElement("div", {
         className: "d-flex justify-content-center"
-      }, _react.default.createElement("div", {
+      }, /*#__PURE__*/_react.default.createElement("div", {
         className: "spinner-border",
         role: "status"
-      }, _react.default.createElement("span", {
+      }, /*#__PURE__*/_react.default.createElement("span", {
         className: "sr-only"
-      }, "Loading..."))), _react.default.createElement("div", {
+      }, "Loading..."))), /*#__PURE__*/_react.default.createElement("div", {
         style: {
           opacity: this.state.cropperReady ? 100 : 0,
           width: '350px',
           height: '350px'
         }
-      }, _react.default.createElement("img", {
+      }, /*#__PURE__*/_react.default.createElement("img", {
         id: "image",
         src: this.props.image.preview
-      })), this.props.indicator && this.props.indicator, _react.default.createElement("ul", {
+      })), this.props.indicator && this.props.indicator, /*#__PURE__*/_react.default.createElement("ul", {
         className: "imageCropper__content__action"
-      }, _react.default.createElement("li", {
+      }, /*#__PURE__*/_react.default.createElement("li", {
         className: "imageCropper__content__action--cancel"
-      }, _react.default.createElement(_GrayOutlineButton.default, {
+      }, /*#__PURE__*/_react.default.createElement(_GrayOutlineButton.default, {
         text: 'Avbryt',
         onClick: this.modalOnClose,
         disabled: this.props.isSubmitting
-      })), _react.default.createElement("li", {
+      })), /*#__PURE__*/_react.default.createElement("li", {
         className: "imageCropper__content__action--next"
-      }, _react.default.createElement(_SecondaryButton.default, {
+      }, /*#__PURE__*/_react.default.createElement(_SecondaryButton.default, {
         text: 'Neste',
         onClick: this.cropDoneOnClick,
         loading: this.props.isSubmitting

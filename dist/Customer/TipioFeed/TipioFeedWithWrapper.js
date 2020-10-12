@@ -36,15 +36,15 @@ var TipioFeedWithWrapper = function TipioFeedWithWrapper(props) {
       var item = props.tipios[i];
 
       if (showAddTipioButton && i === 0 && props.AddTipioButton) {
-        items.push(_react.default.createElement(props.AddTipioButton, {
+        items.push( /*#__PURE__*/_react.default.createElement(props.AddTipioButton, {
           key: "add-button"
         }));
       }
 
       if (props.card) {
-        items.push(_react.default.createElement("div", {
+        items.push( /*#__PURE__*/_react.default.createElement("div", {
           className: "mb-3 mb-md-4"
-        }, _react.default.createElement(_withAnimation.default, {
+        }, /*#__PURE__*/_react.default.createElement(_withAnimation.default, {
           key: props.card(item.id)
         }, props.card(item))));
       }
@@ -60,24 +60,24 @@ var TipioFeedWithWrapper = function TipioFeedWithWrapper(props) {
   };
   var v = imgCountClassName[props.tipios.length + 1];
   var selectImagesClass = v ? v : 'one-quarter';
-  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("div", {
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("div", {
     className: props.rootContainerClass
-  }, _react.default.createElement("div", {
+  }, /*#__PURE__*/_react.default.createElement("div", {
     className: "container"
-  }, _react.default.createElement(_reactMasonryCss.default, {
+  }, /*#__PURE__*/_react.default.createElement(_reactMasonryCss.default, {
     breakpointCols: breakpointColumnsObj(props.itemsPerRow || 4),
     className: 'my-masonry-grid ' + selectImagesClass,
     columnClassName: "my-masonry-grid_column"
-  }, items), props.loading && _react.default.createElement("div", {
+  }, items), props.loading && /*#__PURE__*/_react.default.createElement("div", {
     className: "d-flex justify-content-center"
-  }, _react.default.createElement("div", {
+  }, /*#__PURE__*/_react.default.createElement("div", {
     className: "spinner-border",
     role: "status"
-  }, _react.default.createElement("span", {
+  }, /*#__PURE__*/_react.default.createElement("span", {
     className: "sr-only"
-  }, "Loading..."))))), props.tipios && props.tipios.length > 0 && props.page > 0 && _react.default.createElement("div", {
+  }, "Loading..."))))), props.tipios && props.tipios.length > 0 && props.page > 0 && /*#__PURE__*/_react.default.createElement("div", {
     className: "d-flex justify-content-center py-5"
-  }, _react.default.createElement(_Pagination.default, {
+  }, /*#__PURE__*/_react.default.createElement(_Pagination.default, {
     page: props.page,
     pageCount: props.pageCount ? props.pageCount : 1,
     showPrevButton: showPrevButton,

@@ -1,6 +1,6 @@
 "use strict";
 
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -29,19 +29,23 @@ function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return 
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
-function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
 
-function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance"); }
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
 
-function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter); }
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter); }
 
-function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
 
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
 
-function _iterableToArrayLimit(arr, i) { if (!(Symbol.iterator in Object(arr) || Object.prototype.toString.call(arr) === "[object Arguments]")) { return; } var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
@@ -158,26 +162,26 @@ function ImageUploader(_ref) {
 
   if (files && files.length > 1) {
     thumbs = files.slice(1).map(function (file) {
-      return _react.default.createElement("div", {
+      return /*#__PURE__*/_react.default.createElement("div", {
         key: file.name,
         className: "uploadViewer__thumbnail--item"
-      }, _react.default.createElement("img", {
+      }, /*#__PURE__*/_react.default.createElement("img", {
         className: "uploadViewer__thumbnail--item--image",
         src: file.preview
-      }), _react.default.createElement("span", {
+      }), /*#__PURE__*/_react.default.createElement("span", {
         className: "uploadViewer__thumbnail--item--remove",
         onClick: function onClick(e) {
           e.preventDefault();
           removeImageButtonOnClick(file);
         }
-      }, _react.default.createElement(_RemoveImageIcon.default, null)));
+      }, /*#__PURE__*/_react.default.createElement(_RemoveImageIcon.default, null)));
     });
   }
 
   var indicator = null;
 
   if (!initialCropCompleted) {
-    indicator = _react.default.createElement("p", {
+    indicator = /*#__PURE__*/_react.default.createElement("p", {
       className: "label-sm mb-0 mt-3",
       style: {
         textAlign: 'center'
@@ -185,7 +189,7 @@ function ImageUploader(_ref) {
     }, croppedImageIndex, " av ", files && files.length);
   }
 
-  return _react.default.createElement(_react.default.Fragment, null, showCropper && _react.default.createElement(_index.ImageCropper, {
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, showCropper && /*#__PURE__*/_react.default.createElement(_index.ImageCropper, {
     title: title,
     image: cropImage,
     onDone: cropperOnDone,
@@ -193,43 +197,43 @@ function ImageUploader(_ref) {
     showCloseButton: initialCropCompleted,
     indicator: indicator,
     setLoading: cropperSetLoading
-  }), _react.default.createElement(_reactDropzone.default, {
+  }), /*#__PURE__*/_react.default.createElement(_reactDropzone.default, {
     accept: "image/*",
     onDrop: onDrop
   }, function (_ref2) {
     var getRootProps = _ref2.getRootProps,
         getInputProps = _ref2.getInputProps;
-    return _react.default.createElement("section", {
+    return /*#__PURE__*/_react.default.createElement("section", {
       className: "uploadViewer"
-    }, _react.default.createElement("div", getRootProps({
+    }, /*#__PURE__*/_react.default.createElement("div", getRootProps({
       className: 'dropzone',
       onClick: function onClick(event) {
         return event.preventDefault();
       }
-    }), _react.default.createElement("input", getInputProps()), files && files.length === 0 && _react.default.createElement(_Placeholder.default, null)), files && files.length > 0 && _react.default.createElement("div", {
+    }), /*#__PURE__*/_react.default.createElement("input", getInputProps()), files && files.length === 0 && /*#__PURE__*/_react.default.createElement(_Placeholder.default, null)), files && files.length > 0 && /*#__PURE__*/_react.default.createElement("div", {
       className: "uploadViewer__main"
-    }, _react.default.createElement("img", {
+    }, /*#__PURE__*/_react.default.createElement("img", {
       className: "uploadViewer__main--image",
       src: files[0].preview
-    }), _react.default.createElement("span", {
+    }), /*#__PURE__*/_react.default.createElement("span", {
       className: "uploadViewer__main--remove",
       onClick: function onClick(e) {
         e.preventDefault();
         removeImageButtonOnClick(files[0]);
       }
-    }, _react.default.createElement(_RemoveImageIcon.default, null))), _react.default.createElement("aside", {
+    }, /*#__PURE__*/_react.default.createElement(_RemoveImageIcon.default, null))), /*#__PURE__*/_react.default.createElement("aside", {
       className: "uploadViewer__thumbnail"
-    }, thumbs), _react.default.createElement("div", getRootProps({
+    }, thumbs), /*#__PURE__*/_react.default.createElement("div", getRootProps({
       className: 'dropzone'
-    }), _react.default.createElement("input", getInputProps()), files && files.length > 0 && _react.default.createElement("div", {
+    }), /*#__PURE__*/_react.default.createElement("input", getInputProps()), files && files.length > 0 && /*#__PURE__*/_react.default.createElement("div", {
       className: "mt-3 mb-5"
-    }, _react.default.createElement(_IconButton.default, {
+    }, /*#__PURE__*/_react.default.createElement(_IconButton.default, {
       text: "Last opp produktbilder",
       onClick: function onClick(e) {
         e.preventDefault();
       }
     }))));
-  }), displayErrors && errors && errors[name] && _react.default.createElement(_ErrorMessage.default, {
+  }), displayErrors && errors && errors[name] && /*#__PURE__*/_react.default.createElement(_ErrorMessage.default, {
     content: errors[name].message,
     color: 'bg-red'
   }));
