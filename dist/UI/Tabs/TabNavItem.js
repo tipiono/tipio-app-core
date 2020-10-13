@@ -22,9 +22,9 @@ function TabNavItem(_ref) {
       isActive = _ref.isActive,
       props = _objectWithoutProperties(_ref, ["children", "isActive"]);
 
-  return /*#__PURE__*/_react.default.createElement("li", _extends({}, props, {
+  return _react.default.createElement("li", _extends({}, props, {
     className: "tab__item"
-  }), /*#__PURE__*/_react.default.createElement("a", {
+  }), _react.default.createElement("a", {
     className: (0, _classnames.default)('tab__item--link', {
       'active': isActive
     })

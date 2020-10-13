@@ -18,26 +18,26 @@ function TipioWithOffer(_ref) {
       sale = _ref.sale,
       joined = _ref.joined,
       nextOnClick = _ref.nextOnClick;
-  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_Modal.Modal, {
+  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_Modal.Modal, {
     showCloseButton: true
-  }, /*#__PURE__*/_react.default.createElement("div", {
+  }, _react.default.createElement("div", {
     className: "tipio__withOffer"
-  }, /*#__PURE__*/_react.default.createElement("a", {
+  }, _react.default.createElement("a", {
     href: ""
-  }, /*#__PURE__*/_react.default.createElement("img", {
+  }, _react.default.createElement("img", {
     className: "tipio__withOffer--image",
     src: image,
     width: "310px",
     alt: "Tipio with offer"
-  })), /*#__PURE__*/_react.default.createElement("h3", {
+  })), _react.default.createElement("h3", {
     className: "tipio__withOffer--title"
-  }, "Gratulerer!"), /*#__PURE__*/_react.default.createElement("p", {
+  }, "Gratulerer!"), _react.default.createElement("p", {
     className: "tipio__withOffer--description"
-  }, joined, " andre kj\xF8pte med deg! Prisen gikk ytterligere ned til"), /*#__PURE__*/_react.default.createElement("h4", {
+  }, joined, " andre kj\xF8pte med deg! Prisen gikk ytterligere ned til"), _react.default.createElement("h4", {
     className: "tipio__withOffer--salePrice"
-  }, sale), /*#__PURE__*/_react.default.createElement("div", {
+  }, sale), _react.default.createElement("div", {
     className: "tipio__withOffer--action"
-  }, /*#__PURE__*/_react.default.createElement(_SecondaryButton.default, {
+  }, _react.default.createElement(_SecondaryButton.default, {
     text: "Neste",
     onClick: nextOnClick
   })))));

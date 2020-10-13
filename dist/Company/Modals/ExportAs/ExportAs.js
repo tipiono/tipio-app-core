@@ -17,22 +17,22 @@ var ExportAs = function ExportAs(_ref) {
   var onClose = _ref.onClose,
       exportExcelOnClick = _ref.exportExcelOnClick,
       exportCSVOnClick = _ref.exportCSVOnClick;
-  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_Modal.Modal, {
+  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_Modal.Modal, {
     showCloseButton: true,
     onCloseButtonClick: onClose
-  }, /*#__PURE__*/_react.default.createElement("div", {
+  }, _react.default.createElement("div", {
     className: "exportAs"
-  }, /*#__PURE__*/_react.default.createElement("div", {
+  }, _react.default.createElement("div", {
     className: "exportAs--cvs",
     onClick: exportCSVOnClick
-  }, /*#__PURE__*/_react.default.createElement(_ExportIcon.default, null), /*#__PURE__*/_react.default.createElement("h3", {
+  }, _react.default.createElement(_ExportIcon.default, null), _react.default.createElement("h3", {
     className: "exportAs--cvs--label"
-  }, "Eksporter CSV-fil")), /*#__PURE__*/_react.default.createElement("div", {
+  }, "Eksporter CSV-fil")), _react.default.createElement("div", {
     className: "exportAs--divider"
-  }), /*#__PURE__*/_react.default.createElement("div", {
+  }), _react.default.createElement("div", {
     className: "exportAs--excel",
     onClick: exportExcelOnClick
-  }, /*#__PURE__*/_react.default.createElement(_ExportIcon.default, null), /*#__PURE__*/_react.default.createElement("h3", {
+  }, _react.default.createElement(_ExportIcon.default, null), _react.default.createElement("h3", {
     className: "exportAs--excel--label"
   }, "Eksporter Excel-fil")))));
 };

@@ -55,11 +55,9 @@ const BindingCard = ({
                 ) : null}
             </ul>
 
-            {props.bindCount > 0 && (
-                <div className="customerSidebarCard__footer--progressBar">
-                    <SalesProgressBarTooltip bindCount={props.bindCount} percentage={bindingPercentage} />
-                </div>
-            )}
+            <div className="customerSidebarCard__footer--progressBar">
+                <SalesProgressBarTooltip bindCount={props.bindCount} percentage={bindingPercentage} />
+            </div>
 
             {children}
 
@@ -82,6 +80,7 @@ const BindingCard = ({
             )}
 
             {props.expiredTipio && <SecondaryOutlineButton text={'Gjenopprett'} onClick={onRestoreClick} />}
+            <p className="customerSidebarCard__footer--conditon">Pengene trekkes ikke før tilbudet er over</p>
         </BaseCard>
     );
 };

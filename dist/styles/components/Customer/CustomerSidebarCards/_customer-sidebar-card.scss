@@ -63,6 +63,14 @@
             font-family: 'Riposte-Medium', sans-serif;
         }
 
+        &--conditon {
+            text-align: center;
+            color: #8c8f91;
+            font-size: 0.75rem;
+            margin-top: 21px;
+            font-family: 'Riposte-Light', sans-serif;
+        }
+
         &__salePrice {
             display: flex;
             justify-content: space-between;
@@ -147,6 +155,7 @@
                 &--title {
                     font-size: 1.125rem;
                 }
+
                 &--subtitle {
                     font-size: 0.875rem;
                 }
@@ -158,6 +167,7 @@
                 &--label {
                     font-size: 0.75rem;
                 }
+
                 &--price {
                     font-size: 1.5rem;
                 }
@@ -173,21 +183,26 @@
                 &--minBuyers {
                     &--price {
                         font-size: 1.5rem;
+
                         &:before {
                             margin-right: 8px;
                         }
                     }
+
                     &--priceSmall {
                         font-size: 1.25rem;
                     }
                 }
+
                 &--maxBuyers {
                     &--price {
                         font-size: 1.5rem;
+
                         &:before {
                             margin-right: 8px;
                         }
                     }
+
                     &--priceSmall {
                         font-size: 1.25rem;
                     }

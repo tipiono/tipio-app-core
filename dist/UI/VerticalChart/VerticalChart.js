@@ -129,7 +129,7 @@ var VerticalChart = function VerticalChart(_ref) {
       }]
     }
   };
-  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_reactChartjs.Bar, {
+  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_reactChartjs.Bar, {
     data: charData,
     options: options
   }));

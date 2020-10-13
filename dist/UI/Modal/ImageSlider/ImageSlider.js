@@ -27,15 +27,15 @@ function ImageSliderModal(_ref) {
       selectedItem = _ref.selectedItem,
       props = _objectWithoutProperties(_ref, ["onCloseButtonClick", "images", "selectedItem"]);
 
-  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_Modal.Modal, _extends({
+  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_Modal.Modal, _extends({
     showCloseButton: true,
     onCloseButtonClick: onCloseButtonClick,
     type: _Modal.ModalType.XLARGE
-  }, props), /*#__PURE__*/_react.default.createElement("div", {
+  }, props), _react.default.createElement("div", {
     className: "imageSlider__modal"
-  }, /*#__PURE__*/_react.default.createElement("div", {
+  }, _react.default.createElement("div", {
     className: "imageSlider"
-  }, /*#__PURE__*/_react.default.createElement(_reactResponsiveCarousel.Carousel, {
+  }, _react.default.createElement(_reactResponsiveCarousel.Carousel, {
     showIndicators: images.length >= 2,
     showArrows: images.length > 0,
     showStatus: false,
@@ -45,7 +45,7 @@ function ImageSliderModal(_ref) {
     swipeScrollTolerance: 40,
     selectedItem: selectedItem
   }, images && images.map(function (item, i) {
-    return /*#__PURE__*/_react.default.createElement("img", {
+    return _react.default.createElement("img", {
       src: item.blob_url,
       alt: "...",
       key: i
