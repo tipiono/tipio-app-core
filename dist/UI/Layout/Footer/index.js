@@ -12,17 +12,17 @@ var _FooterContent = _interopRequireDefault(require("./FooterContent"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var Footer = function Footer() {
-  return /*#__PURE__*/_react.default.createElement("footer", {
+  return _react.default.createElement("footer", {
     className: "customFooter"
-  }, /*#__PURE__*/_react.default.createElement("div", {
+  }, _react.default.createElement("div", {
     className: "container"
-  }, /*#__PURE__*/_react.default.createElement("div", {
+  }, _react.default.createElement("div", {
     className: "row"
-  }, /*#__PURE__*/_react.default.createElement("div", {
+  }, _react.default.createElement("div", {
     className: "col-sm-12 col-md-11 mx-auto"
-  }, /*#__PURE__*/_react.default.createElement("div", {
+  }, _react.default.createElement("div", {
     className: "row"
-  }, /*#__PURE__*/_react.default.createElement(_FooterContent.default, {
+  }, _react.default.createElement(_FooterContent.default, {
     title: 'Kontakt oss',
     data: [{
       label: 'Bryggegata 3, 0250 Oslo',
@@ -41,7 +41,7 @@ var Footer = function Footer() {
         href: 'mailto:post@tipio.no'
       }
     }]
-  }), /*#__PURE__*/_react.default.createElement(_FooterContent.default, {
+  }), _react.default.createElement(_FooterContent.default, {
     title: 'Følg Tipio',
     data: [{
       label: 'Facebook',
@@ -59,11 +59,11 @@ var Footer = function Footer() {
         href: 'https://www.linkedin.com/company/tipio/?viewAsMember=true'
       }
     }]
-  }), /*#__PURE__*/_react.default.createElement("div", {
+  }), _react.default.createElement("div", {
     className: "col-sm-12 col-md-6"
-  }, /*#__PURE__*/_react.default.createElement("p", {
+  }, _react.default.createElement("p", {
     className: "customFooter__description"
-  }, "Hvorfor kj\xF8pe dyrt alene n\xE5r vi kan handle billig sammen?", /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("span", null), "I Tipio kan du fortelle butikkene hva du \xF8nsker \xE5 f\xE5 en bedre pris p\xE5.")))))));
+  }, "Hvorfor kj\xF8pe dyrt alene n\xE5r vi kan handle billig sammen?", _react.default.createElement("br", null), _react.default.createElement("span", null), "I Tipio kan du fortelle butikkene hva du \xF8nsker \xE5 f\xE5 en bedre pris p\xE5.")))))));
 };
 
 var _default = Footer;

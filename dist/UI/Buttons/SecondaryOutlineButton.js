@@ -26,12 +26,12 @@ var SecondaryOutlineButton = function SecondaryOutlineButton(_ref) {
       textColor = _ref.textColor,
       props = _objectWithoutProperties(_ref, ["loading", "text", "onClick", "textColor"]);
 
-  return /*#__PURE__*/_react.default.createElement("button", _extends({
+  return _react.default.createElement("button", _extends({
     type: "button",
     disabled: loading,
     className: (0, _classnames.default)('btn btn-outline-secondary btn-block btn-lg', textColor),
     onClick: onClick
-  }, props), !loading && text, loading && /*#__PURE__*/_react.default.createElement("span", null, ' ', /*#__PURE__*/_react.default.createElement("span", {
+  }, props), !loading && text, loading && _react.default.createElement("span", null, ' ', _react.default.createElement("span", {
     className: "spinner-border spinner-border-sm",
     role: "status",
     "aria-hidden": "true"

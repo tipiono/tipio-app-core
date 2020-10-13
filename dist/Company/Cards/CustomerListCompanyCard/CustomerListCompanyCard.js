@@ -14,7 +14,7 @@ var _index = require("../../../index");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var CustomerListCompanyCard = function CustomerListCompanyCard() {
-  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_BaseCompanyCard.default, null, /*#__PURE__*/_react.default.createElement(_index.SecondaryOutlineButton, {
+  return _react.default.createElement("div", null, _react.default.createElement(_BaseCompanyCard.default, null, _react.default.createElement(_index.SecondaryOutlineButton, {
     text: 'Se kundeliste'
   })));
 };

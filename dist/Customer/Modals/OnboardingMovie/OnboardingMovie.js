@@ -13,11 +13,11 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function OnboardingMovie(_ref) {
   var movieURL = _ref.movieURL;
-  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_Modal.Modal, {
+  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_Modal.Modal, {
     showCloseButton: true
-  }, /*#__PURE__*/_react.default.createElement("div", {
+  }, _react.default.createElement("div", {
     className: "onboarding__movie"
-  }, /*#__PURE__*/_react.default.createElement("iframe", {
+  }, _react.default.createElement("iframe", {
     className: "onboarding__movie--iframe",
     src: movieURL,
     width: "640",

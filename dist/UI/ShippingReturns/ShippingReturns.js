@@ -12,13 +12,13 @@ var _van = _interopRequireDefault(require("../../static/assets/images/van.svg"))
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var ShippingReturns = function ShippingReturns() {
-  return /*#__PURE__*/_react.default.createElement("div", {
+  return _react.default.createElement("div", {
     className: "shippingReturns"
-  }, /*#__PURE__*/_react.default.createElement("img", {
+  }, _react.default.createElement("img", {
     className: "shippingReturns__icon",
     src: _van.default,
     alt: ""
-  }), /*#__PURE__*/_react.default.createElement("span", {
+  }), _react.default.createElement("span", {
     className: "shippingReturns__title"
   }, "Gratis frakt"));
 };

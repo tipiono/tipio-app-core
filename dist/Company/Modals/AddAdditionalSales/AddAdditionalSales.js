@@ -23,30 +23,30 @@ function AddAdditionalSales(_ref) {
   var image = _ref.image,
       props = _objectWithoutProperties(_ref, ["image"]);
 
-  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_Modal.Modal, {
+  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_Modal.Modal, {
     showCloseButton: true,
     onCloseButtonClick: props.cancel
-  }, /*#__PURE__*/_react.default.createElement("div", {
+  }, _react.default.createElement("div", {
     className: "addSales"
-  }, /*#__PURE__*/_react.default.createElement("a", {
+  }, _react.default.createElement("a", {
     href: ""
-  }, /*#__PURE__*/_react.default.createElement("img", {
+  }, _react.default.createElement("img", {
     className: "addSales--image",
     src: image,
     width: "310px",
     alt: "Tipio with offer"
-  })), /*#__PURE__*/_react.default.createElement("h4", {
+  })), _react.default.createElement("h4", {
     className: "addSales--title"
-  }, "Vil du legge inn mersalg?"), /*#__PURE__*/_react.default.createElement("p", {
+  }, "Vil du legge inn mersalg?"), _react.default.createElement("p", {
     className: "addSales--description"
-  }, "Du kan n\xE5 legge ut tre eksklusive mersalgs tilbud ", /*#__PURE__*/_react.default.createElement("br", null), " til dine kunder"), /*#__PURE__*/_react.default.createElement("div", {
+  }, "Du kan n\xE5 legge ut tre eksklusive mersalgs tilbud ", _react.default.createElement("br", null), " til dine kunder"), _react.default.createElement("div", {
     className: "addSales--action mb-3"
-  }, /*#__PURE__*/_react.default.createElement(_SecondaryButton.default, {
+  }, _react.default.createElement(_SecondaryButton.default, {
     text: "Legg inn mersalg",
     onClick: props.postAdditionalSales
-  })), /*#__PURE__*/_react.default.createElement("div", {
+  })), _react.default.createElement("div", {
     className: "addSales--action"
-  }, /*#__PURE__*/_react.default.createElement(_SecondaryOutlineButton.default, {
+  }, _react.default.createElement(_SecondaryOutlineButton.default, {
     text: "Ikke denne gangen",
     onClick: props.cancel
   })))));

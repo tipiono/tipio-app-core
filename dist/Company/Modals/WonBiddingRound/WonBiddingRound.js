@@ -18,26 +18,26 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function WonBiddingRound(_ref) {
   var image = _ref.image,
       defaultValue = _ref.defaultValue;
-  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_Modal.Modal, {
+  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_Modal.Modal, {
     showCloseButton: true
-  }, /*#__PURE__*/_react.default.createElement("div", {
+  }, _react.default.createElement("div", {
     className: "wonBiddingRound"
-  }, /*#__PURE__*/_react.default.createElement("a", {
+  }, _react.default.createElement("a", {
     href: ""
-  }, /*#__PURE__*/_react.default.createElement("img", {
+  }, _react.default.createElement("img", {
     className: "wonBiddingRound--image",
     src: image,
     width: "310px",
     alt: "Tipio with offer"
-  })), /*#__PURE__*/_react.default.createElement("h4", {
+  })), _react.default.createElement("h4", {
     className: "wonBiddingRound--title"
-  }, "Gratulerer du vant budrunden!"), /*#__PURE__*/_react.default.createElement("p", {
+  }, "Gratulerer du vant budrunden!"), _react.default.createElement("p", {
     className: "wonBiddingRound--description"
-  }, "Du kan n\xE5 legge ut tre eksklusive mersalgs tilbud ", /*#__PURE__*/_react.default.createElement("br", null), " til dine kunder"), /*#__PURE__*/_react.default.createElement("div", {
+  }, "Du kan n\xE5 legge ut tre eksklusive mersalgs tilbud ", _react.default.createElement("br", null), " til dine kunder"), _react.default.createElement("div", {
     className: "wonBiddingRound--action"
-  }, /*#__PURE__*/_react.default.createElement(_SecondaryButton.default, {
+  }, _react.default.createElement(_SecondaryButton.default, {
     text: "Se tilbudet"
-  })), /*#__PURE__*/_react.default.createElement("div", {
+  })), _react.default.createElement("div", {
     className: "wonBiddingRound--timeLeft"
   }))));
 }

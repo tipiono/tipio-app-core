@@ -12,14 +12,14 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function Avatar(_ref) {
   var src = _ref.src,
       loading = _ref.loading;
-  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, src && /*#__PURE__*/_react.default.createElement("img", {
+  return _react.default.createElement(_react.default.Fragment, null, src && _react.default.createElement("img", {
     className: "avatar",
     src: src,
     alt: ""
-  }), loading ? /*#__PURE__*/_react.default.createElement("div", {
+  }), loading ? _react.default.createElement("div", {
     className: "spinner-grow",
     role: "status"
-  }, /*#__PURE__*/_react.default.createElement("span", {
+  }, _react.default.createElement("span", {
     className: "sr-only"
   }, "Loading...")) : null);
 }

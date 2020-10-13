@@ -37,21 +37,21 @@ function HorizontalTimeline(_ref) {
     return titles.step1;
   };
 
-  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("div", {
+  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("div", {
     className: "horizontal-timeline"
-  }, /*#__PURE__*/_react.default.createElement("ul", {
+  }, _react.default.createElement("ul", {
     className: "horizontal-timeline-bar"
-  }, /*#__PURE__*/_react.default.createElement("li", {
+  }, _react.default.createElement("li", {
     className: (0, _classnames.default)("horizontal-timeline-item step-1", _defineProperty({}, status.step1, true))
-  }), /*#__PURE__*/_react.default.createElement("li", {
+  }), _react.default.createElement("li", {
     className: (0, _classnames.default)("horizontal-timeline-item step-2", _defineProperty({}, status.step2, true))
-  }), /*#__PURE__*/_react.default.createElement("li", {
+  }), _react.default.createElement("li", {
     className: (0, _classnames.default)("horizontal-timeline-item step-3", _defineProperty({}, status.step3, true))
-  })), /*#__PURE__*/_react.default.createElement("div", {
+  })), _react.default.createElement("div", {
     className: "horizontal-timeline-content"
-  }, /*#__PURE__*/_react.default.createElement("h4", {
+  }, _react.default.createElement("h4", {
     className: "timeline-item-title"
-  }, _renderTitle()), /*#__PURE__*/_react.default.createElement("a", {
+  }, _renderTitle()), _react.default.createElement("a", {
     href: "#",
     onClick: verticalStatusOnClick
   }, "Sjekk status"))));
