@@ -19,9 +19,13 @@ body.noscroll {
     position: fixed;
     width: 100%;
     z-index: 988;
+    height: 88px;
+    display: flex;
+    align-items: center;
 
     @include media-breakpoint-down(sm) {
         padding: 6px 0;
+        height: 60px;
     }
 
     .nav-wrapper {
@@ -65,10 +69,12 @@ body.noscroll {
                     &:hover {
                         text-decoration: none;
                     }
+
                     @include media-breakpoint-down(sm) {
                         .mr-3 {
                             margin-right: 0 !important;
                         }
+
                         // span {
                         //     display: none;
                         // }
@@ -185,6 +191,7 @@ body.noscroll {
     .menu-tabs {
         position: absolute;
         width: 100%;
+
         @include media-breakpoint-up(md) {
             display: none;
         }
@@ -210,9 +217,11 @@ body.noscroll {
 
         .add-new {
             margin-bottom: 30px;
+
             p {
                 display: flex;
                 align-items: center;
+
                 span {
                     padding-bottom: 5px;
                     font-size: 22px;
@@ -220,6 +229,7 @@ body.noscroll {
                     margin-left: 18px;
                     border-bottom: 1px solid transparent;
                 }
+
                 &:hover {
                     svg {
                         g {
@@ -228,6 +238,7 @@ body.noscroll {
                             }
                         }
                     }
+
                     span {
                         border-bottom: 1px solid #a794cb;
                     }
@@ -265,14 +276,18 @@ body.noscroll {
             padding-bottom: 9px;
             display: flex;
             align-items: center;
+
             svg {
                 margin-right: 1rem;
             }
+
             &:hover {
                 text-decoration: none;
             }
+
             .nav-item__title {
                 padding-bottom: 2px;
+
                 &:hover {
                     box-shadow: 0 1px 0 0 rgba(167, 148, 203, 1);
                     text-decoration: none;
@@ -338,8 +353,10 @@ body.noscroll {
             }
         }
 
-        scrollbar-width: none; /* Firefox */
-        -ms-overflow-style: none; /* IE 10+ */
+        scrollbar-width: none;
+        /* Firefox */
+        -ms-overflow-style: none;
+        /* IE 10+ */
 
         ::-webkit-scrollbar-track {
             -webkit-box-shadow: none !important;
@@ -424,6 +441,7 @@ body.noscroll {
             position: absolute;
             top: 36%;
             right: 0;
+
             @include media-breakpoint-down(sm) {
                 top: 32%;
                 right: 16px;
@@ -457,6 +475,7 @@ body.noscroll {
                     text-decoration: underline;
                 }
             }
+
             a {
                 color: $gray-700;
             }
@@ -512,6 +531,7 @@ body.noscroll {
                 margin-right: 0;
             }
         }
+
         @include media-breakpoint-down(sm) {
             .shoppingbag-action-item {
                 width: 48%;
@@ -667,6 +687,7 @@ body.noscroll {
         -ms-transform: translateY(20px);
         transform: translateY(20px);
     }
+
     100% {
         opacity: 1;
         -webkit-transform: translateY(0px);
