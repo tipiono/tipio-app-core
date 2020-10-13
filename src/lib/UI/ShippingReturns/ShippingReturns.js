@@ -5,7 +5,7 @@ const ShippingReturns = () => {
     return (
         <div className="shippingReturns">
             <img className="shippingReturns__icon" src={Van} alt=""/>
-            <span className="shippingReturns__title">Gratis frakt og retur</span>
+            <span className="shippingReturns__title">Gratis frakt</span>
         </div>
     );
 };

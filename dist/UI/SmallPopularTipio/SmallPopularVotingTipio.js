@@ -21,14 +21,14 @@ var SmallPopularVotingTipio = function SmallPopularVotingTipio(props) {
   var _useTranslation = (0, _reactI18next.useTranslation)(),
       t = _useTranslation.t;
 
-  return _react.default.createElement(_SmallPopularTipio.default, props, _react.default.createElement("h6", {
+  return /*#__PURE__*/_react.default.createElement(_SmallPopularTipio.default, props, /*#__PURE__*/_react.default.createElement("h6", {
     className: "smallPopularTipio__content--interested"
-  }, props.join_count, " interesserte!"), _react.default.createElement("div", {
+  }, props.join_count, " interesserte!"), /*#__PURE__*/_react.default.createElement("div", {
     className: "smallPopularTipio__content__submit"
-  }, props.joined ? _react.default.createElement(_SecondaryButton.default, {
+  }, props.joined ? /*#__PURE__*/_react.default.createElement(_SecondaryButton.default, {
     text: "Del n\xE5",
     onClick: props.shareOnClick
-  }) : _react.default.createElement(_SecondaryOutlineButton.default, {
+  }) : /*#__PURE__*/_react.default.createElement(_SecondaryOutlineButton.default, {
     text: "Meld interesse",
     onClick: props.voteOnClick
   })));

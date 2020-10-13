@@ -17,25 +17,25 @@ function _objectWithoutProperties(source, excluded) { if (source == null) return
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
-var _default = _react.default.forwardRef(function (_ref, ref) {
+var _default = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
   var placeholder = _ref.placeholder,
       name = _ref.name,
       errors = _ref.errors,
       displayErrors = _ref.displayErrors,
       props = _objectWithoutProperties(_ref, ["placeholder", "name", "errors", "displayErrors"]);
 
-  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("label", {
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("label", {
     className: "pure-material-textfield-outlined"
-  }, _react.default.createElement("textarea", _extends({
+  }, /*#__PURE__*/_react.default.createElement("textarea", _extends({
     rows: "4",
     placeholder: " ",
     type: "radio",
     name: name
   }, props, {
     ref: ref
-  })), _react.default.createElement("span", {
+  })), /*#__PURE__*/_react.default.createElement("span", {
     className: "label-sm"
-  }, placeholder)), displayErrors && errors && errors[name] && _react.default.createElement(_ErrorMessage.default, {
+  }, placeholder)), displayErrors && errors && errors[name] && /*#__PURE__*/_react.default.createElement(_ErrorMessage.default, {
     content: errors[name].message,
     color: "bg-red"
   }));

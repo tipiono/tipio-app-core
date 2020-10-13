@@ -26,30 +26,30 @@ var PopularFeatureTipio = function PopularFeatureTipio(_ref) {
       onClick = _ref.onClick,
       props = _objectWithoutProperties(_ref, ["children", "brand", "binding_count", "link", "forceLoad", "title", "onClick"]);
 
-  return _react.default.createElement("div", {
+  return /*#__PURE__*/_react.default.createElement("div", {
     className: "mediumPopularTipio"
-  }, _react.default.createElement("div", {
+  }, /*#__PURE__*/_react.default.createElement("div", {
     className: "mediumPopularTipio__preview lazy-image",
     onClick: onClick
-  }, _react.default.createElement("img", {
+  }, /*#__PURE__*/_react.default.createElement("img", {
     className: "mediumPopularTipio__preview--image lazyload",
     src: props.images && props.images.length && props.images[0].blob_url,
     alt: ""
-  })), _react.default.createElement("div", {
+  })), /*#__PURE__*/_react.default.createElement("div", {
     className: "mediumPopularTipio__content"
-  }, _react.default.createElement("a", {
+  }, /*#__PURE__*/_react.default.createElement("a", {
     href: link,
     onClick: onClick,
     className: "text-truncate mediumPopularTipio__content--title",
     title: title
-  }, title), _react.default.createElement("p", {
+  }, title), /*#__PURE__*/_react.default.createElement("p", {
     className: "text-truncate mediumPopularTipio__content--description",
     title: brand
-  }, !brand ? props.subtitle : brand), binding_count > 0 && _react.default.createElement("div", {
+  }, !brand ? props.subtitle : brand), binding_count > 0 && /*#__PURE__*/_react.default.createElement("div", {
     className: "featureTipiosCompanyCards__body--interested"
-  }, _react.default.createElement("h5", {
+  }, /*#__PURE__*/_react.default.createElement("h5", {
     className: "featureTipiosCompanyCards__body--interested--counter"
-  }, binding_count, " interesserte!")), _react.default.createElement(_SecondaryOutlineButton.default, {
+  }, binding_count, " interesserte!")), /*#__PURE__*/_react.default.createElement(_SecondaryOutlineButton.default, {
     text: "Gi tilbud",
     onClick: onClick
   })));

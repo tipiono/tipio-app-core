@@ -14,11 +14,11 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function ContentSpinner(_ref) {
   var _ref$pt = _ref.pt,
       pt = _ref$pt === void 0 ? true : _ref$pt;
-  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("div", {
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("div", {
     className: (0, _classnames.default)('text-center', {
       'pt-6': pt
     })
-  }, _react.default.createElement("span", {
+  }, /*#__PURE__*/_react.default.createElement("span", {
     className: "spinner-border text-primary",
     role: "status",
     "aria-hidden": "true"

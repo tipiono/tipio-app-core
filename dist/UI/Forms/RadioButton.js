@@ -15,22 +15,22 @@ function _objectWithoutProperties(source, excluded) { if (source == null) return
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
-var _default = _react.default.forwardRef(function (_ref, ref) {
+var _default = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
   var id = _ref.id,
       text = _ref.text,
       name = _ref.name,
       errors = _ref.errors,
       props = _objectWithoutProperties(_ref, ["id", "text", "name", "errors"]);
 
-  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("div", {
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("div", {
     className: "md-radio"
-  }, _react.default.createElement("input", _extends({
+  }, /*#__PURE__*/_react.default.createElement("input", _extends({
     id: id,
     type: "radio",
     name: name
   }, props, {
     ref: ref
-  })), _react.default.createElement("label", {
+  })), /*#__PURE__*/_react.default.createElement("label", {
     htmlFor: id
   }, text)), errors && errors[name] && errors[name].message);
 });

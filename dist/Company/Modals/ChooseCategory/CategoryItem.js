@@ -25,38 +25,38 @@ var CategoryItem = function CategoryItem(_ref) {
       withCheckbox = _ref.withCheckbox,
       onChange = _ref.onChange,
       selectedMap = _ref.selectedMap;
-  return _react.default.createElement("div", {
+  return /*#__PURE__*/_react.default.createElement("div", {
     className: "category-item select"
-  }, withCheckbox && _react.default.createElement(_Checkbox.default, {
+  }, withCheckbox && /*#__PURE__*/_react.default.createElement(_Checkbox.default, {
     id: id,
     onChange: onChange,
     value: id,
     checked: selectedMap[id] || false
-  }), _react.default.createElement("span", {
+  }), /*#__PURE__*/_react.default.createElement("span", {
     className: 'category-link ' + (selected ? 'selected' : ''),
     onClick: onSelect
-  }, _react.default.createElement("div", {
+  }, /*#__PURE__*/_react.default.createElement("div", {
     className: "category-left-icon"
-  }, _react.default.createElement(_svgInline.default, {
+  }, /*#__PURE__*/_react.default.createElement(_svgInline.default, {
     url: icon
-  })), _react.default.createElement("span", null, title), _react.default.createElement("svg", {
+  })), /*#__PURE__*/_react.default.createElement("span", null, title), /*#__PURE__*/_react.default.createElement("svg", {
     className: "category-right-icon",
     width: "20",
     height: "20",
     viewBox: "0 0 24 24"
-  }, _react.default.createElement("g", {
+  }, /*#__PURE__*/_react.default.createElement("g", {
     className: "nc-icon-wrapper",
     strokeLinecap: "round",
     strokeLinejoin: "round",
     strokeWidth: "2",
     fill: "#371e1e",
     stroke: "#371e1e"
-  }, _react.default.createElement("polyline", {
+  }, /*#__PURE__*/_react.default.createElement("polyline", {
     "data-color": "color-2",
     fill: "none",
     strokeMiterlimit: "10",
     points: " 6,12 10,16 18,8 "
-  }), _react.default.createElement("circle", {
+  }), /*#__PURE__*/_react.default.createElement("circle", {
     fill: "none",
     stroke: "#371e1e",
     strokeMiterlimit: "10",
