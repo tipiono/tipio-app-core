@@ -11,7 +11,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var Cover = function Cover(_ref) {
   var src = _ref.src;
-  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("img", {
+  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("img", {
     className: "cover",
     src: src,
     alt: ""

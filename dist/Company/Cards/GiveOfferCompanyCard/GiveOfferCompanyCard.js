@@ -21,7 +21,7 @@ var GiveOfferCompanyCard = function GiveOfferCompanyCard(_ref) {
   var children = _ref.children,
       props = _objectWithoutProperties(_ref, ["children"]);
 
-  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_BaseCompanyCard.default, props, /*#__PURE__*/_react.default.createElement(_index.SecondaryButton, {
+  return _react.default.createElement("div", null, _react.default.createElement(_BaseCompanyCard.default, props, _react.default.createElement(_index.SecondaryButton, {
     text: 'Gi tilbud',
     loading: props.loading,
     onClick: props.onClick

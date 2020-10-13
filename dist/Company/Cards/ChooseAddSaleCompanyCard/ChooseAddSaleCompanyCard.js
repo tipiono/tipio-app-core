@@ -17,7 +17,7 @@ function _objectWithoutProperties(source, excluded) { if (source == null) return
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
-var _default = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
+var _default = _react.default.forwardRef(function (_ref, ref) {
   var image = _ref.image,
       title = _ref.title,
       salePrice = _ref.salePrice,
@@ -33,36 +33,36 @@ var _default = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
       sustainable = _ref.sustainable,
       props = _objectWithoutProperties(_ref, ["image", "title", "salePrice", "costPrice", "saleDiscount", "children", "defaultValue", "id", "label", "name", "errors", "onClick", "sustainable"]);
 
-  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("div", {
+  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("div", {
     className: "chooseAddSaleCard"
-  }, /*#__PURE__*/_react.default.createElement("div", {
+  }, _react.default.createElement("div", {
     className: "d-flex flex-row mb-4 mb-md-5"
-  }, /*#__PURE__*/_react.default.createElement("div", {
+  }, _react.default.createElement("div", {
     className: "chooseAddSaleCard__preview"
-  }, /*#__PURE__*/_react.default.createElement("a", {
+  }, _react.default.createElement("a", {
     className: "chooseAddSaleCard__preview--image lazy-image",
     href: "",
     onClick: onClick
-  }, /*#__PURE__*/_react.default.createElement("img", {
+  }, _react.default.createElement("img", {
     className: "lazyload img-fluid",
     src: image,
     alt: ""
-  }), /*#__PURE__*/_react.default.createElement("span", {
+  }), _react.default.createElement("span", {
     className: "chooseAddSaleCard__preview--discount"
-  }, saleDiscount), sustainable && /*#__PURE__*/_react.default.createElement("div", {
+  }, saleDiscount), sustainable && _react.default.createElement("div", {
     className: "chooseAddSaleCard__preview--sustainable"
-  }, /*#__PURE__*/_react.default.createElement("span", null, "B\xE6rekraftig")))), /*#__PURE__*/_react.default.createElement("div", {
+  }, _react.default.createElement("span", null, "B\xE6rekraftig")))), _react.default.createElement("div", {
     className: "chooseAddSaleCard__content"
-  }, /*#__PURE__*/_react.default.createElement("div", {
+  }, _react.default.createElement("div", {
     className: "chooseAddSaleCard__content--price"
-  }, /*#__PURE__*/_react.default.createElement("h6", {
+  }, _react.default.createElement("h6", {
     className: "chooseAddSaleCard__content--price--sale"
-  }, salePrice.toLocaleString('nb-NO'), " Kr"), /*#__PURE__*/_react.default.createElement("h6", {
+  }, salePrice.toLocaleString('nb-NO'), " Kr"), _react.default.createElement("h6", {
     className: "chooseAddSaleCard__content--price--cost"
-  }, costPrice.toLocaleString('nb-NO'), " Kr")), /*#__PURE__*/_react.default.createElement("h6", {
+  }, costPrice.toLocaleString('nb-NO'), " Kr")), _react.default.createElement("h6", {
     className: "chooseAddSaleCard__content--title",
     onClick: onClick
-  }, title))), /*#__PURE__*/_react.default.createElement(_Checkbox.default, _extends({
+  }, title))), _react.default.createElement(_Checkbox.default, _extends({
     label: 'Legg til mersalg',
     id: id,
     name: name

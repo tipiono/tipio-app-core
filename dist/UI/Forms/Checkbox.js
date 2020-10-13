@@ -17,7 +17,7 @@ function _objectWithoutProperties(source, excluded) { if (source == null) return
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
-var _default = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
+var _default = _react.default.forwardRef(function (_ref, ref) {
   var id = _ref.id,
       label = _ref.label,
       name = _ref.name,
@@ -26,17 +26,17 @@ var _default = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
       children = _ref.children,
       props = _objectWithoutProperties(_ref, ["id", "label", "name", "errors", "displayErrors", "children"]);
 
-  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("div", {
+  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("div", {
     className: "md-checkbox"
-  }, /*#__PURE__*/_react.default.createElement("input", _extends({
+  }, _react.default.createElement("input", _extends({
     type: "checkbox",
     id: id,
     name: name
   }, props, {
     ref: ref
-  })), /*#__PURE__*/_react.default.createElement("label", {
+  })), _react.default.createElement("label", {
     htmlFor: id
-  }, label), children), displayErrors && errors && errors[name] && /*#__PURE__*/_react.default.createElement(_ErrorMessage.default, {
+  }, label), children), displayErrors && errors && errors[name] && _react.default.createElement(_ErrorMessage.default, {
     content: errors[name].message,
     color: 'bg-red'
   }));

@@ -26,33 +26,33 @@ var HighligtedGiveOfferCompanyCards = function HighligtedGiveOfferCompanyCards(_
       onClick = _ref.onClick,
       props = _objectWithoutProperties(_ref, ["children", "brand", "binding_count", "link", "forceLoad", "title", "onClick"]);
 
-  return /*#__PURE__*/_react.default.createElement("div", {
+  return _react.default.createElement("div", {
     className: "highligtedGiveOfferCompanyCards"
-  }, props.images && props.images.length && /*#__PURE__*/_react.default.createElement("a", {
+  }, props.images && props.images.length && _react.default.createElement("a", {
     href: link,
     className: "highligtedGiveOfferCompanyCards__preview lazy-image",
     onClick: onClick
-  }, /*#__PURE__*/_react.default.createElement("img", {
+  }, _react.default.createElement("img", {
     className: "highligtedGiveOfferCompanyCards__preview--image lazyload",
     "data-src": props.images[0].blob_url,
     src: !forceLoad ? "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 2'%3E%3C/svg%3E" : props.images[0].blob_url,
     alt: ""
-  })), /*#__PURE__*/_react.default.createElement("div", {
+  })), _react.default.createElement("div", {
     className: "highligtedGiveOfferCompanyCards__content"
-  }, /*#__PURE__*/_react.default.createElement("a", {
+  }, _react.default.createElement("a", {
     href: link,
     onClick: onClick
-  }, /*#__PURE__*/_react.default.createElement("h1", {
+  }, _react.default.createElement("h1", {
     className: "highligtedGiveOfferCompanyCards__content--title"
-  }, title)), /*#__PURE__*/_react.default.createElement("p", {
+  }, title)), _react.default.createElement("p", {
     className: "highligtedGiveOfferCompanyCards__content--brand"
-  }, !brand ? props.subtitle : brand), binding_count > 0 && /*#__PURE__*/_react.default.createElement("div", {
+  }, !brand ? props.subtitle : brand), binding_count > 0 && _react.default.createElement("div", {
     className: "highligtedGiveOfferCompanyCards__content--interested"
-  }, /*#__PURE__*/_react.default.createElement("h5", {
+  }, _react.default.createElement("h5", {
     className: "highligtedGiveOfferCompanyCards__content--interested--counter"
-  }, binding_count, " interesserte!")), /*#__PURE__*/_react.default.createElement("div", {
+  }, binding_count, " interesserte!")), _react.default.createElement("div", {
     className: "highligtedGiveOfferCompanyCards__content--button"
-  }, /*#__PURE__*/_react.default.createElement(_index.SecondaryOutlineButton, {
+  }, _react.default.createElement(_index.SecondaryOutlineButton, {
     text: 'Gi tilbud',
     onClick: onClick
   }))));

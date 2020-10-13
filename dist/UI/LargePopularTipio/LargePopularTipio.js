@@ -21,28 +21,28 @@ var LargePopularTipio = function LargePopularTipio(_ref) {
       images = _ref.images,
       onClick = _ref.onClick,
       type = _ref.type;
-  return /*#__PURE__*/_react.default.createElement("div", {
+  return _react.default.createElement("div", {
     className: "largePopularTipio"
-  }, /*#__PURE__*/_react.default.createElement("div", {
+  }, _react.default.createElement("div", {
     className: "largePopularTipio__preview lazy-image",
     onClick: onClick
-  }, /*#__PURE__*/_react.default.createElement("img", {
+  }, _react.default.createElement("img", {
     className: "largePopularTipio__preview--image lazyload",
     "data-src": images && images.length && images[0].blob_url,
     src: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 2'%3E%3C/svg%3E",
     alt: ""
-  }), type === 2 && /*#__PURE__*/_react.default.createElement("div", {
+  }), type === 2 && _react.default.createElement("div", {
     className: "largePopularTipio__preview--timeLeft"
-  }, /*#__PURE__*/_react.default.createElement(_TipioCountdown.default, {
+  }, _react.default.createElement(_TipioCountdown.default, {
     className: "timer",
     expires_in: binding_expires_in
-  }))), /*#__PURE__*/_react.default.createElement("div", {
+  }))), _react.default.createElement("div", {
     className: "largePopularTipio__content"
-  }, /*#__PURE__*/_react.default.createElement("a", {
+  }, _react.default.createElement("a", {
     href: "/tipio/".concat(type === 2 ? 'bind' : 'vote', "/").concat(id),
     onClick: onClick,
     className: "largePopularTipio__content--title"
-  }, title), /*#__PURE__*/_react.default.createElement("a", {
+  }, title), _react.default.createElement("a", {
     href: "/tipio/".concat(type === 2 ? 'bind' : 'vote', "/").concat(id),
     className: "largePopularTipio__content--description"
   }, brand ? brand : subtitle), children));
