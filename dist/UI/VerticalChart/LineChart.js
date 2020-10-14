@@ -122,7 +122,7 @@ var LineChart = function LineChart(_ref) {
       }
     }
   };
-  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_reactChartjs.Line, {
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_reactChartjs.Line, {
     data: charData,
     options: options
   }));

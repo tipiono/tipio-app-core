@@ -1,6 +1,6 @@
 "use strict";
 
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -23,14 +23,14 @@ var Overlay = function Overlay(_ref) {
       onMouseEnter = _ref.onMouseEnter,
       top = _ref.top;
   (0, _useLockBodyScroll.default)();
-  return _react.default.createElement("a", {
+  return /*#__PURE__*/_react.default.createElement("a", {
     onClick: function onClick(e) {
       e.preventDefault();
 
       _onClick();
     },
     onMouseEnter: onMouseEnter
-  }, _react.default.createElement("div", {
+  }, /*#__PURE__*/_react.default.createElement("div", {
     className: "overlay show",
     style: {
       opacity: opacity,

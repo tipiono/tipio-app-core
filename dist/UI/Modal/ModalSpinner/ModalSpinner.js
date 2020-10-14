@@ -13,16 +13,16 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function ModalSpinner(_ref) {
   var title = _ref.title;
-  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_Modal.Modal, {
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_Modal.Modal, {
     onCloseButtonClick: function onCloseButtonClick() {}
-  }, _react.default.createElement("div", {
+  }, /*#__PURE__*/_react.default.createElement("div", {
     className: "modalSpinner"
-  }, _react.default.createElement("div", {
+  }, /*#__PURE__*/_react.default.createElement("div", {
     className: "modalSpinner--size spinner-border text-secondary",
     role: "status"
-  }, _react.default.createElement("span", {
+  }, /*#__PURE__*/_react.default.createElement("span", {
     className: "sr-only"
-  }, "Loading...")), _react.default.createElement("h3", {
+  }, "Loading...")), /*#__PURE__*/_react.default.createElement("h3", {
     className: "modalSpinner--title"
   }, title))));
 }
