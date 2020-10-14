@@ -23,7 +23,7 @@ var TipioOfTheDayVoting = function TipioOfTheDayVoting(_ref) {
   var children = _ref.children,
       props = _objectWithoutProperties(_ref, ["children"]);
 
-  return _react.default.createElement(_TipioOfTheDay.default, props, _react.default.createElement("div", {
+  return /*#__PURE__*/_react.default.createElement(_TipioOfTheDay.default, props, /*#__PURE__*/_react.default.createElement("div", {
     className: "tipioOfTheDay__content--submit"
   }, children));
 };

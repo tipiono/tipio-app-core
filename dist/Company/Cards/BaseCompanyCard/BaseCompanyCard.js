@@ -39,50 +39,50 @@ var BaseCompanyCard = function BaseCompanyCard(_ref) {
     return showBindingCount ? 'kjøpte' : 'påmeldte';
   };
 
-  return _react.default.createElement("div", null, _react.default.createElement("div", {
+  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("div", {
     className: "baseCompanyCard"
-  }, _react.default.createElement("span", {
+  }, /*#__PURE__*/_react.default.createElement("span", {
     onClick: function onClick(e) {
       e.preventDefault();
       props.onClick();
     }
-  }, _react.default.createElement("div", {
+  }, /*#__PURE__*/_react.default.createElement("div", {
     className: "baseCompanyCard__header"
-  }, props.images && props.images.length && _react.default.createElement("a", {
+  }, props.images && props.images.length && /*#__PURE__*/_react.default.createElement("a", {
     href: link,
     className: "lazy-image baseCompanyCard__header--preview"
-  }, _react.default.createElement("img", {
+  }, /*#__PURE__*/_react.default.createElement("img", {
     className: "lazyload baseCompanyCard__header--preview--image",
     "data-src": props.images[0].blob_url,
     src: !forceLoad ? "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 2'%3E%3C/svg%3E" : props.images[0].blob_url,
     alt: ""
-  })), _react.default.createElement("div", {
+  })), /*#__PURE__*/_react.default.createElement("div", {
     className: "baseCompanyCard__header--timeLeft"
-  }, _react.default.createElement(_TipioCountdown.default, {
+  }, /*#__PURE__*/_react.default.createElement(_TipioCountdown.default, {
     className: "timer",
     expires_in: expires_in
-  })), sustainable && _react.default.createElement("div", {
+  })), sustainable && /*#__PURE__*/_react.default.createElement("div", {
     className: "baseCompanyCard__header--sustainable"
-  }, _react.default.createElement("span", null, "B\xE6rekraftig")))), _react.default.createElement("div", {
+  }, /*#__PURE__*/_react.default.createElement("span", null, "B\xE6rekraftig")))), /*#__PURE__*/_react.default.createElement("div", {
     className: "baseCompanyCard__body"
-  }, _react.default.createElement("a", {
+  }, /*#__PURE__*/_react.default.createElement("a", {
     href: link,
     onClick: function onClick() {
       props.onClick();
     }
-  }, _react.default.createElement("h5", {
+  }, /*#__PURE__*/_react.default.createElement("h5", {
     className: "baseCompanyCard__body--title"
-  }, props.title)), _react.default.createElement("p", {
+  }, props.title)), /*#__PURE__*/_react.default.createElement("p", {
     className: "baseCompanyCard__body--description"
-  }, !showBrand ? props.subtitle : brand), _react.default.createElement("div", {
+  }, !showBrand ? props.subtitle : brand), /*#__PURE__*/_react.default.createElement("div", {
     className: "baseCompanyCard__body--cost"
-  }, _react.default.createElement("h3", {
+  }, /*#__PURE__*/_react.default.createElement("h3", {
     className: "baseCompanyCard__body--cost--price"
-  }, potential_earning, " Kr"), _react.default.createElement("span", {
+  }, potential_earning, " Kr"), /*#__PURE__*/_react.default.createElement("span", {
     className: "baseCompanyCard__body--cost--label"
-  }, showRevenue ? 'Omstening' : 'Potensiell omsetning')), binding_count > 0 && _react.default.createElement("div", {
+  }, showRevenue ? 'Omstening' : 'Potensiell omsetning')), binding_count > 0 && /*#__PURE__*/_react.default.createElement("div", {
     className: "baseCompanyCard__body--interested"
-  }, _react.default.createElement("h6", {
+  }, /*#__PURE__*/_react.default.createElement("h6", {
     className: "baseCompanyCard__body--interested--counter"
   }, binding_count, " ", showLabel(), " !", ' ')), children)));
 };

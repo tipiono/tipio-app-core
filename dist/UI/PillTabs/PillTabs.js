@@ -15,15 +15,15 @@ function PillTabs(_ref) {
   var items = _ref.items,
       activeIndex = _ref.activeIndex,
       onClick = _ref.onClick;
-  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("ul", {
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("ul", {
     className: "pillTab"
   }, items.map(function (item, i) {
-    return _react.default.createElement("li", {
+    return /*#__PURE__*/_react.default.createElement("li", {
       key: item,
       className: (0, _classnames.default)("pillTab__item", {
         active: activeIndex === i
       })
-    }, _react.default.createElement("a", {
+    }, /*#__PURE__*/_react.default.createElement("a", {
       href: "",
       className: "pillTab__item--link",
       onClick: onClick,

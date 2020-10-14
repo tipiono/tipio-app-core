@@ -14,25 +14,25 @@ function SuccessStory(_ref) {
       subtitle = _ref.subtitle,
       image = _ref.image,
       onClick = _ref.onClick;
-  return _react.default.createElement("div", {
+  return /*#__PURE__*/_react.default.createElement("div", {
     className: "successStory"
-  }, _react.default.createElement("a", {
+  }, /*#__PURE__*/_react.default.createElement("a", {
     href: "",
     className: "successStory__preview lazy-image",
     onClick: onClick
-  }, _react.default.createElement("img", {
+  }, /*#__PURE__*/_react.default.createElement("img", {
     className: "successStory__preview--image lazyload",
     "data-src": image,
     src: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 2'%3E%3C/svg%3E",
     alt: ""
-  })), _react.default.createElement("div", {
+  })), /*#__PURE__*/_react.default.createElement("div", {
     className: "successStory__content"
-  }, _react.default.createElement("a", {
+  }, /*#__PURE__*/_react.default.createElement("a", {
     href: "",
     onClick: onClick
-  }, _react.default.createElement("h1", {
+  }, /*#__PURE__*/_react.default.createElement("h1", {
     className: "successStory__content--title"
-  }, title)), _react.default.createElement("p", {
+  }, title)), /*#__PURE__*/_react.default.createElement("p", {
     className: "successStory__content--description"
   }, subtitle)));
 }

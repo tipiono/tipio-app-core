@@ -22,38 +22,38 @@ var CompanyAddBidCard = function CompanyAddBidCard(props) {
       showOfferPrice = props.showOfferPrice,
       firstRange = props.firstRange,
       secondRange = props.secondRange;
-  return _react.default.createElement("div", {
+  return /*#__PURE__*/_react.default.createElement("div", {
     className: "companyAddBidCard"
-  }, _react.default.createElement(_CompanySidebarBaseCard.default, props, props.loading ? _react.default.createElement("div", {
+  }, /*#__PURE__*/_react.default.createElement(_CompanySidebarBaseCard.default, props, props.loading ? /*#__PURE__*/_react.default.createElement("div", {
     className: "placeholder-content companyAddBidCard--placeholder mb-4"
-  }, "\xA0") : _react.default.createElement("h6", {
+  }, "\xA0") : /*#__PURE__*/_react.default.createElement("h6", {
     className: "companyAddBidCard--interested"
-  }, meta.joined_count, " ", showBindingCount ? 'kjøpte!' : 'påmeldte!'), _react.default.createElement("div", {
+  }, meta.joined_count, " ", showBindingCount ? 'kjøpte!' : 'påmeldte!'), /*#__PURE__*/_react.default.createElement("div", {
     className: "companyAddBidCard__price"
-  }, _react.default.createElement("div", {
+  }, /*#__PURE__*/_react.default.createElement("div", {
     className: "companyAddBidCard__price--cost"
-  }, _react.default.createElement("p", {
+  }, /*#__PURE__*/_react.default.createElement("p", {
     className: "companyAddBidCard__price--cost--label"
-  }, "Markedspris"), _react.default.createElement("h6", {
+  }, "Markedspris"), /*#__PURE__*/_react.default.createElement("h6", {
     className: "companyAddBidCard__price--cost--amount"
-  }, tipio.market_price, " Kr")), _react.default.createElement("span", {
+  }, tipio.market_price, " Kr")), /*#__PURE__*/_react.default.createElement("span", {
     className: "border-right d-none d-md-block"
-  }), _react.default.createElement("div", {
+  }), /*#__PURE__*/_react.default.createElement("div", {
     className: "companyAddBidCard__price--sale"
-  }, showMinimumPrice && _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("p", {
+  }, showMinimumPrice && /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("p", {
     className: "companyAddBidCard__price--sale--label",
     id: props.__onboardingMinimumPriceId || 'priceSale'
-  }, "Minimumpris"), _react.default.createElement("h6", {
+  }, "Minimumpris"), /*#__PURE__*/_react.default.createElement("h6", {
     className: "companyAddBidCard__price--sale--amount"
-  }, meta.minimum_price, " Kr")), showNewPrice && _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("p", {
+  }, meta.minimum_price, " Kr")), showNewPrice && /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("p", {
     className: "companyAddBidCard__price--sale--label",
     id: props.__onboardingMinimumPriceId || 'priceSale'
-  }, "Ny pris"), _react.default.createElement("h6", {
+  }, "Ny pris"), /*#__PURE__*/_react.default.createElement("h6", {
     className: "companyAddBidCard__price--sale--amount"
-  }, (0, _generatePrice.default)(meta.joined_count, firstRange, secondRange), " Kr")), showOfferPrice && _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("p", {
+  }, (0, _generatePrice.default)(meta.joined_count, firstRange, secondRange), " Kr")), showOfferPrice && /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("p", {
     className: "companyAddBidCard__price--sale--label",
     id: props.__onboardingMinimumPriceId || 'priceSale'
-  }, "Ditt tilbud"), _react.default.createElement("h6", {
+  }, "Ditt tilbud"), /*#__PURE__*/_react.default.createElement("h6", {
     className: "companyAddBidCard__price--sale--amount"
   }, (0, _generatePrice.default)(meta.joined_count, firstRange, secondRange), " Kr"))))));
 };
