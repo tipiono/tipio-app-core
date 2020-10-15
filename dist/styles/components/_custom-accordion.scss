@@ -50,7 +50,7 @@
       font-family: 'Riposte-Light', sans-serif;
       line-height: 19px;
       padding-bottom: 1rem;
-      word-wrap: break-word;
+      white-space: pre-wrap;
 
       &:not(.show) {
         display: none;
