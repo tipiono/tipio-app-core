@@ -8,13 +8,19 @@
     margin-bottom: 30px;
 
     .tipio-status-header-image {
+      width: 84px;
+      overflow: hidden;
+      text-align: center;
+      position: relative;
+      border-radius: 50%;
+      border: 1px solid $gray-200;
+      margin-right: 16px;
+      cursor: pointer;
+
       img {
-        width: 84px;
-        height: 84px;
-        border-radius: 50%;
-        border: 1px solid $gray-200;
-        margin-right: 16px;
-        cursor: pointer;
+        max-width: 100%;
+        max-height: 84px;
+        object-fit: cover;
 
       }
     }
