@@ -40,43 +40,43 @@ var BindingCard = function BindingCard(_ref) {
       onRestoreClick = _ref.onRestoreClick,
       props = _objectWithoutProperties(_ref, ["children", "state", "firstRange", "secondRange", "onShareClick", "onBindClick", "bindingPercentage", "onRestoreClick"]);
 
-  return _react.default.createElement(_BaseCard.default, props, _react.default.createElement("ul", {
+  return /*#__PURE__*/_react.default.createElement(_BaseCard.default, props, /*#__PURE__*/_react.default.createElement("ul", {
     className: "customerSidebarCard__footer__salePrice"
-  }, firstRange ? _react.default.createElement("li", {
+  }, firstRange ? /*#__PURE__*/_react.default.createElement("li", {
     className: "customerSidebarCard__footer__salePrice--minBuyers",
     id: props.minimumByersId
-  }, _react.default.createElement("h3", {
+  }, /*#__PURE__*/_react.default.createElement("h3", {
     className: (0, _classnames.default)('customerSidebarCard__footer__salePrice--minBuyers--price', {
       'customerSidebarCard__footer__salePrice--minBuyers--priceSmall': ('' + firstRange.price).length >= 5
     })
-  }, (firstRange === null || firstRange === void 0 ? void 0 : firstRange.price) && (0, _replaceWithSpace.default)(firstRange === null || firstRange === void 0 ? void 0 : firstRange.price), " Kr"), _react.default.createElement("span", {
+  }, (firstRange === null || firstRange === void 0 ? void 0 : firstRange.price) && (0, _replaceWithSpace.default)(firstRange === null || firstRange === void 0 ? void 0 : firstRange.price), " Kr"), /*#__PURE__*/_react.default.createElement("span", {
     className: "customerSidebarCard__footer__salePrice--minBuyers--label"
-  }, "Pris fra ", firstRange.from, "-", firstRange.to, " kj\xF8p")) : null, secondRange ? _react.default.createElement("li", {
+  }, "Pris fra ", firstRange.from, "-", firstRange.to, " kj\xF8p")) : null, secondRange ? /*#__PURE__*/_react.default.createElement("li", {
     className: "customerSidebarCard__footer__salePrice--maxBuyers"
-  }, _react.default.createElement("h3", {
+  }, /*#__PURE__*/_react.default.createElement("h3", {
     className: (0, _classnames.default)('customerSidebarCard__footer__salePrice--maxBuyers--price', {
       'customerSidebarCard__footer__salePrice--maxBuyers--priceSmall': ('' + secondRange.price).length >= 5
     })
-  }, ' ', (secondRange === null || secondRange === void 0 ? void 0 : secondRange.price) && (0, _replaceWithSpace.default)(secondRange === null || secondRange === void 0 ? void 0 : secondRange.price), " Kr"), _react.default.createElement("span", {
+  }, ' ', (secondRange === null || secondRange === void 0 ? void 0 : secondRange.price) && (0, _replaceWithSpace.default)(secondRange === null || secondRange === void 0 ? void 0 : secondRange.price), " Kr"), /*#__PURE__*/_react.default.createElement("span", {
     className: "customerSidebarCard__footer__salePrice--maxBuyers--label"
-  }, "Pris fra ", secondRange.from, "-", secondRange.to, " kj\xF8p")) : null), _react.default.createElement("div", {
+  }, "Pris fra ", secondRange.from, "-", secondRange.to, " kj\xF8p")) : null), /*#__PURE__*/_react.default.createElement("div", {
     className: "customerSidebarCard__footer--progressBar"
-  }, _react.default.createElement(_SalesProgressBarTooltip.default, {
+  }, /*#__PURE__*/_react.default.createElement(_SalesProgressBarTooltip.default, {
     bindCount: props.bindCount,
     percentage: bindingPercentage
-  })), children, state !== 'bought' && !props.expiredTipio && _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_SecondaryButton.default, {
+  })), children, state !== 'bought' && !props.expiredTipio && /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_SecondaryButton.default, {
     text: 'Legg i handlekurv',
     onClick: onBindClick
-  })), state === 'bought' && !props.expiredTipio && _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("div", {
+  })), state === 'bought' && !props.expiredTipio && /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("div", {
     className: "customerSidebarCard__footer--action"
-  }, _react.default.createElement(_ShareButton.default, {
+  }, /*#__PURE__*/_react.default.createElement(_ShareButton.default, {
     onClick: onShareClick
-  })), _react.default.createElement("div", {
+  })), /*#__PURE__*/_react.default.createElement("div", {
     className: "customerSidebarCard__footer--timeline"
-  }, _react.default.createElement(_HorizontalTimeline.default, props))), props.expiredTipio && _react.default.createElement(_SecondaryOutlineButton.default, {
+  }, /*#__PURE__*/_react.default.createElement(_HorizontalTimeline.default, props))), props.expiredTipio && /*#__PURE__*/_react.default.createElement(_SecondaryOutlineButton.default, {
     text: 'Gjenopprett',
     onClick: onRestoreClick
-  }), _react.default.createElement("p", {
+  }), /*#__PURE__*/_react.default.createElement("p", {
     className: "customerSidebarCard__footer--conditon"
   }, "Pengene trekkes ikke f\xF8r tilbudet er over"));
 };

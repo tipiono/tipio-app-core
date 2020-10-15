@@ -7,6 +7,7 @@
     &__description {
         font-family: 'Riposte-Light', sans-serif;
         line-height: 1.375rem;
+        white-space: pre-wrap;
 
         ul li {
             word-wrap: break-word;

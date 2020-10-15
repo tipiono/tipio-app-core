@@ -21,11 +21,11 @@ function PublicLayout(_ref) {
   var children = _ref.children,
       props = _objectWithoutProperties(_ref, ["children"]);
 
-  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("header", {
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("header", {
     className: "header"
-  }, _react.default.createElement(_index.default, props)), _react.default.createElement("main", {
+  }, /*#__PURE__*/_react.default.createElement(_index.default, props)), /*#__PURE__*/_react.default.createElement("main", {
     className: "main"
-  }, children), props.showFooter && _react.default.createElement(_Footer.default, null));
+  }, children), props.showFooter && /*#__PURE__*/_react.default.createElement(_Footer.default, null));
 }
 
 var _default = PublicLayout;

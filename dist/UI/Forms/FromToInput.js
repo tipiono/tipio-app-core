@@ -17,7 +17,7 @@ function _objectWithoutProperties(source, excluded) { if (source == null) return
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
-var _default = _react.default.forwardRef(function (_ref, ref) {
+var _default = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
   var from = _ref.from,
       to = _ref.to,
       label = _ref.label,
@@ -27,12 +27,12 @@ var _default = _react.default.forwardRef(function (_ref, ref) {
       disabled = _ref$disabled === void 0 ? false : _ref$disabled,
       props = _objectWithoutProperties(_ref, ["from", "to", "label", "name", "errors", "disabled"]);
 
-  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("label", {
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("label", {
     className: (0, _classnames.default)('pure-material-textfield-outlined from-to-input', {
       validationError: errors && errors[name],
       disabled__input: disabled
     })
-  }, _react.default.createElement("input", _extends({
+  }, /*#__PURE__*/_react.default.createElement("input", _extends({
     placeholder: to,
     type: "number",
     name: name,
@@ -44,11 +44,11 @@ var _default = _react.default.forwardRef(function (_ref, ref) {
       color: disabled ? '#DFE3E5' : ''
     },
     disabled: disabled
-  })), _react.default.createElement("label", {
+  })), /*#__PURE__*/_react.default.createElement("label", {
     className: "outside-label"
-  }, label), _react.default.createElement("span", {
+  }, label), /*#__PURE__*/_react.default.createElement("span", {
     className: "inside-label"
-  }, "Fra"), _react.default.createElement("p", {
+  }, "Fra"), /*#__PURE__*/_react.default.createElement("p", {
     className: "static-placeholder"
   }, from, " -")));
 });

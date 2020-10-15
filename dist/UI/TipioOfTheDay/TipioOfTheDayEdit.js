@@ -14,9 +14,9 @@ var _SecondaryOutlineButton = _interopRequireDefault(require("../Buttons/Seconda
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var TipioOfTheDayEdit = function TipioOfTheDayEdit(props) {
-  return _react.default.createElement(_TipioOfTheDay.default, props, _react.default.createElement("div", {
+  return /*#__PURE__*/_react.default.createElement(_TipioOfTheDay.default, props, /*#__PURE__*/_react.default.createElement("div", {
     className: "tipioOfTheDay__content--submit"
-  }, _react.default.createElement(_SecondaryOutlineButton.default, {
+  }, /*#__PURE__*/_react.default.createElement(_SecondaryOutlineButton.default, {
     text: "Rediger",
     textColor: "text-white",
     onClick: props.onClickEdit
