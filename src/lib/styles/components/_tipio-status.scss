@@ -1,40 +1,45 @@
 .tipio-status {
-  padding: 60px 0;
+    padding: 60px 0;
 
-  .tipio-status-header {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-bottom: 30px;
+    .tipio-status-header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 30px;
 
-    .tipio-status-header-image {
-      img {
-        width: 84px;
-        height: 84px;
-        border-radius: 50%;
-        border: 1px solid $gray-200;
-        margin-right: 16px;
-        cursor: pointer;
+        .tipio-status-header-image {
+            width: 84px;
+            overflow: hidden;
+            text-align: center;
+            position: relative;
+            border-radius: 50%;
+            border: 1px solid $gray-200;
+            margin-right: 16px;
+            cursor: pointer;
 
-      }
+            img {
+                max-width: 100%;
+                max-height: 84px;
+                object-fit: cover;
+            }
+        }
+
+        .tipio-status-header-title {
+            margin-bottom: 4px;
+
+            a {
+                color: $gray-700;
+            }
+        }
+
+        .tipio-status-header-subtitle {
+            font-family: 'Riposte-Light', sans-serif;
+            margin-bottom: 0;
+        }
     }
 
-    .tipio-status-header-title {
-      margin-bottom: 4px;
-
-      a {
-        color: $gray-700;
-      }
+    .tipio-status-body {
+        margin-left: 40px;
+        margin-bottom: 60px;
     }
-
-    .tipio-status-header-subtitle {
-      font-family: 'Riposte-Light', sans-serif;
-      margin-bottom: 0;
-    }
-  }
-
-  .tipio-status-body {
-    margin-left: 40px;
-    margin-bottom: 60px;
-  }
 }
