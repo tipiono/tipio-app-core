@@ -20,7 +20,7 @@ var ShippingReturns = function ShippingReturns() {
     alt: ""
   }), /*#__PURE__*/_react.default.createElement("span", {
     className: "shippingReturns__title"
-  }, "Gratis frakt"));
+  }, "Gratis frakt og retur"));
 };
 
 var _default = ShippingReturns;
