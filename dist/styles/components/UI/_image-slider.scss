@@ -26,6 +26,7 @@
             margin: 0 10px;
           }
         }
+
         .selected {
           img {
             margin: 0;
@@ -91,6 +92,11 @@
 
   /// Thumbnails Images
   .carousel {
+    .slide iframe {
+      margin: 0;
+      width: 100%;
+    }
+
     .thumbs-wrapper {
       margin: 0 40px;
 
@@ -119,6 +125,8 @@
       }
     }
   }
+
+
 
   &__countDown {
     position: absolute;
@@ -158,7 +166,9 @@
       .thumbs-wrapper {
         display: none;
       }
+
     }
+
     &__countDown {
       bottom: 0px;
     }
