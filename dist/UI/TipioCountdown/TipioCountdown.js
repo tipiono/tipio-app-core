@@ -82,7 +82,7 @@ var TipioCountdown = /*#__PURE__*/function (_React$Component) {
       var _this = this;
 
       var substractN = new Date(this.props.expires_in);
-      substractN.setHours(substractN.getHours() - 72);
+      substractN.setHours(substractN.getHours() - 120);
 
       if (substractN > new Date()) {
         return null;
