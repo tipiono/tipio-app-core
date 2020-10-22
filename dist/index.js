@@ -671,6 +671,12 @@ Object.defineProperty(exports, "FooterMainCard", {
     return _FooterMainCard.default;
   }
 });
+Object.defineProperty(exports, "SalesProgressBarTooltip", {
+  enumerable: true,
+  get: function get() {
+    return _SalesProgressBarTooltip.default;
+  }
+});
 Object.defineProperty(exports, "DeleteAccount", {
   enumerable: true,
   get: function get() {
@@ -1204,6 +1210,8 @@ var _CategoriesForm = _interopRequireDefault(require("./Company/Modals/ChooseCat
 var _TipioFeedWithWrapper = _interopRequireDefault(require("./Customer/TipioFeed/TipioFeedWithWrapper"));
 
 var _FooterMainCard = _interopRequireDefault(require("./Customer/Cards/FooterMainCard/FooterMainCard"));
+
+var _SalesProgressBarTooltip = _interopRequireDefault(require("./Customer/SalesProgressBarTooltip/SalesProgressBarTooltip"));
 
 var _DeleteAccount = _interopRequireDefault(require("./Company/Modals/DeleteAccount/DeleteAccount"));
 

@@ -1,5 +1,8 @@
-import React from "react";
-import SecondaryButton from '../../../UI/Buttons/SecondaryButton'
-export default function BiddingCardShareButton () {
-    return  <SecondaryButton text="Del nå"/>;
-}
+import React from 'react';
+import SecondaryButton from '../../../UI/Buttons/SecondaryButton';
+
+const BiddingCardShareButton = (props) => {
+    return <SecondaryButton text="Del nå" {...props} />;
+};
+
+export default BiddingCardShareButton;
