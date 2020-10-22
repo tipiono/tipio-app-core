@@ -32,9 +32,7 @@ const BindingCard = ({
                         >
                             {firstRange?.price && replaceWithSpace(firstRange?.price)} Kr
                         </h3>
-                        <span className="customerSidebarCard__footer__salePrice--minBuyers--label">
-                            Pris fra {firstRange.from}-{firstRange.to} kjøp
-                        </span>
+                        <span className="customerSidebarCard__footer__salePrice--minBuyers--label">Kjøp alene</span>
                     </li>
                 ) : null}
                 {secondRange ? (
@@ -48,9 +46,7 @@ const BindingCard = ({
                             {' '}
                             {secondRange?.price && replaceWithSpace(secondRange?.price)} Kr
                         </h3>
-                        <span className="customerSidebarCard__footer__salePrice--maxBuyers--label">
-                            Pris fra {secondRange.from}-{secondRange.to} kjøp
-                        </span>
+                        <span className="customerSidebarCard__footer__salePrice--maxBuyers--label">Kjøp sammen</span>
                     </li>
                 ) : null}
             </ul>

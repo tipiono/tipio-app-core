@@ -51,7 +51,7 @@ var BindingCard = function BindingCard(_ref) {
     })
   }, (firstRange === null || firstRange === void 0 ? void 0 : firstRange.price) && (0, _replaceWithSpace.default)(firstRange === null || firstRange === void 0 ? void 0 : firstRange.price), " Kr"), /*#__PURE__*/_react.default.createElement("span", {
     className: "customerSidebarCard__footer__salePrice--minBuyers--label"
-  }, "Pris fra ", firstRange.from, "-", firstRange.to, " kj\xF8p")) : null, secondRange ? /*#__PURE__*/_react.default.createElement("li", {
+  }, "Kj\xF8p alene")) : null, secondRange ? /*#__PURE__*/_react.default.createElement("li", {
     className: "customerSidebarCard__footer__salePrice--maxBuyers"
   }, /*#__PURE__*/_react.default.createElement("h3", {
     className: (0, _classnames.default)('customerSidebarCard__footer__salePrice--maxBuyers--price', {
@@ -59,7 +59,7 @@ var BindingCard = function BindingCard(_ref) {
     })
   }, ' ', (secondRange === null || secondRange === void 0 ? void 0 : secondRange.price) && (0, _replaceWithSpace.default)(secondRange === null || secondRange === void 0 ? void 0 : secondRange.price), " Kr"), /*#__PURE__*/_react.default.createElement("span", {
     className: "customerSidebarCard__footer__salePrice--maxBuyers--label"
-  }, "Pris fra ", secondRange.from, "-", secondRange.to, " kj\xF8p")) : null), /*#__PURE__*/_react.default.createElement("div", {
+  }, "Kj\xF8p sammen")) : null), /*#__PURE__*/_react.default.createElement("div", {
     className: "customerSidebarCard__footer--progressBar"
   }, /*#__PURE__*/_react.default.createElement(_SalesProgressBarTooltip.default, {
     bindCount: props.bindCount,
