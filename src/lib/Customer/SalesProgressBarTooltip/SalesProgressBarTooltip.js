@@ -16,7 +16,7 @@ function SalesProgressBarTooltip({ percentage, bindCount }) {
             </div>
 
             {bindCount > 0 && (
-                <div className="sales__progress--tooltip middle">
+                <div className="sales__progress--tooltip middle p-0 m-0">
                     <span>{bindCount} har allerede kjøpt!</span>
                 </div>
             )}

@@ -63,8 +63,6 @@
         }
 
         &--content {
-            margin-bottom: 38px;
-
             &--title {
                 font-family: 'Riposte-Regular', sans-serif;
                 font-size: 38px;
@@ -78,11 +76,8 @@
         }
 
         &--salesbar {
-            margin-bottom: 38px;
-
             .sales__progress--bar {
                 height: 10px;
-                margin-bottom: 1rem;
             }
 
             .sales__progress--label {
@@ -136,11 +131,8 @@
             }
 
             &--content {
-                margin-bottom: 1.3rem;
-
                 &--title {
                     font-size: 1.5rem;
-                    margin-bottom: 8px;
                 }
 
                 &--description {
@@ -150,7 +142,6 @@
 
             &--salesbar {
                 width: 100%;
-                margin-bottom: 1.5rem;
             }
 
             button {

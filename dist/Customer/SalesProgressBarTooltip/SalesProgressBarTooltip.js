@@ -29,7 +29,7 @@ function SalesProgressBarTooltip(_ref) {
     },
     className: "tooltip-progressbar"
   })), bindCount > 0 && /*#__PURE__*/_react.default.createElement("div", {
-    className: "sales__progress--tooltip middle"
+    className: "sales__progress--tooltip middle p-0 m-0"
   }, /*#__PURE__*/_react.default.createElement("span", null, bindCount, " har allerede kj\xF8pt!")));
 }
 
