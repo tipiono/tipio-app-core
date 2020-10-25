@@ -24,9 +24,7 @@ var ImageSlider = function ImageSlider(_ref) {
       showThumbs = _ref.showThumbs,
       showTimer = _ref.showTimer,
       tipio_expires_in = _ref.tipio_expires_in,
-      onClick = _ref.onClick,
-      _ref$hasVideo = _ref.hasVideo,
-      hasVideo = _ref$hasVideo === void 0 ? false : _ref$hasVideo;
+      onClick = _ref.onClick;
 
   var YoutubeSlide = function YoutubeSlide(_ref2) {
     var url = _ref2.url,
@@ -48,16 +46,16 @@ var ImageSlider = function ImageSlider(_ref) {
 
   var imageSrc = [];
   images.map(function (image) {
-    imageSrc.push(image.blob_url);
-  });
+    if (image.blob_url) {
+      imageSrc.push(image.blob_url);
+    } else {
+      var videoId = getVideoId(image.url);
 
-  if (hasVideo) {
-    var videoId = getVideoId('https://www.youtube.com/watch?v=VeT16PSVjLE');
-
-    if (videoId) {
-      imageSrc.push(getVideoThumb(videoId));
+      if (videoId) {
+        imageSrc.push(getVideoThumb(videoId));
+      }
     }
-  }
+  });
 
   var customRenderThumb = function customRenderThumb() {
     return imageSrc.map(function (item) {
@@ -84,14 +82,18 @@ var ImageSlider = function ImageSlider(_ref) {
     onClickItem: onClick && onClick,
     renderThumbs: customRenderThumb
   }, images && images.map(function (item, i) {
-    return /*#__PURE__*/_react.default.createElement("img", {
-      src: item.blob_url,
-      alt: "...",
-      key: i
-    });
-  }), hasVideo && /*#__PURE__*/_react.default.createElement(YoutubeSlide, {
-    key: "youtube-1",
-    url: "https://www.youtube.com/watch?v=VeT16PSVjLE"
+    if (item.blob_url) {
+      return /*#__PURE__*/_react.default.createElement("img", {
+        src: item.blob_url,
+        alt: "...",
+        key: i
+      });
+    } else {
+      return /*#__PURE__*/_react.default.createElement(YoutubeSlide, {
+        key: "youtube-1",
+        url: item.url
+      });
+    }
   })), showTimer && tipio_expires_in && /*#__PURE__*/_react.default.createElement("div", {
     className: "imageSlider__countDown"
   }, /*#__PURE__*/_react.default.createElement(_TipioCountdown.default, {

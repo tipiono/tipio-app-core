@@ -13,6 +13,8 @@ var _reactResponsiveCarousel = require("react-responsive-carousel");
 
 require("react-responsive-carousel/lib/styles/carousel.min.css");
 
+var _reactPlayer = _interopRequireDefault(require("react-player"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
@@ -21,11 +23,21 @@ function _objectWithoutProperties(source, excluded) { if (source == null) return
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
-function ImageSliderModal(_ref) {
+var ImageSliderModal = function ImageSliderModal(_ref) {
   var onCloseButtonClick = _ref.onCloseButtonClick,
       images = _ref.images,
       selectedItem = _ref.selectedItem,
       props = _objectWithoutProperties(_ref, ["onCloseButtonClick", "images", "selectedItem"]);
+
+  var YoutubeSlide = function YoutubeSlide(_ref2) {
+    var url = _ref2.url,
+        isSelected = _ref2.isSelected;
+    return /*#__PURE__*/_react.default.createElement(_reactPlayer.default, {
+      width: "100%",
+      url: url,
+      playing: isSelected
+    });
+  };
 
   return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_Modal.Modal, _extends({
     showCloseButton: true,
@@ -45,13 +57,20 @@ function ImageSliderModal(_ref) {
     swipeScrollTolerance: 40,
     selectedItem: selectedItem
   }, images && images.map(function (item, i) {
-    return /*#__PURE__*/_react.default.createElement("img", {
-      src: item.blob_url,
-      alt: "...",
-      key: i
-    });
+    if (item.blob_url) {
+      return /*#__PURE__*/_react.default.createElement("img", {
+        src: item.blob_url,
+        alt: "...",
+        key: i
+      });
+    } else {
+      return /*#__PURE__*/_react.default.createElement(YoutubeSlide, {
+        key: "youtube-1",
+        url: item.url
+      });
+    }
   }))))));
-}
+};
 
 var _default = ImageSliderModal;
 exports.default = _default;

@@ -5,7 +5,7 @@ import cx from 'classnames';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import TipioCountdown from '../TipioCountdown/TipioCountdown';
 
-const ImageSlider = ({ images, showThumbs, showTimer, tipio_expires_in, onClick, hasVideo = false }) => {
+const ImageSlider = ({ images, showThumbs, showTimer, tipio_expires_in, onClick }) => {
     const YoutubeSlide = ({ url, isSelected }) => <ReactPlayer width="100%" url={url} playing={isSelected} />;
 
     const getVideoThumb = (videoId) => `https://img.youtube.com/vi/${videoId}/default.jpg`;
@@ -14,14 +14,15 @@ const ImageSlider = ({ images, showThumbs, showTimer, tipio_expires_in, onClick,
 
     let imageSrc = [];
     images.map((image) => {
-        imageSrc.push(image.blob_url);
-    });
-    if (hasVideo) {
-        const videoId = getVideoId('https://www.youtube.com/watch?v=VeT16PSVjLE');
-        if (videoId) {
-            imageSrc.push(getVideoThumb(videoId));
+        if (image.blob_url) {
+            imageSrc.push(image.blob_url);
+        } else {
+            const videoId = getVideoId(image.url);
+            if (videoId) {
+                imageSrc.push(getVideoThumb(videoId));
+            }
         }
-    }
+    });
 
     const customRenderThumb = () => {
         return imageSrc.map((item) => {
@@ -49,8 +50,14 @@ const ImageSlider = ({ images, showThumbs, showTimer, tipio_expires_in, onClick,
                     onClickItem={onClick && onClick}
                     renderThumbs={customRenderThumb}
                 >
-                    {images && images.map((item, i) => <img src={item.blob_url} alt="..." key={i} />)}
-                    {hasVideo && <YoutubeSlide key="youtube-1" url="https://www.youtube.com/watch?v=VeT16PSVjLE" />}
+                    {images &&
+                        images.map((item, i) => {
+                            if (item.blob_url) {
+                                return <img src={item.blob_url} alt="..." key={i} />;
+                            } else {
+                                return <YoutubeSlide key="youtube-1" url={item.url} />;
+                            }
+                        })}
                 </Carousel>
                 {showTimer && tipio_expires_in && (
                     <div className="imageSlider__countDown">
