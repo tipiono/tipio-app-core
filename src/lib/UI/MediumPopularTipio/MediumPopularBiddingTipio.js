@@ -2,19 +2,20 @@ import React from 'react';
 import MediumPopularTipio from './MediumPopularTipio';
 import SecondaryButton from '../Buttons/SecondaryButton';
 import SecondaryOutlineButton from '../Buttons/SecondaryButton';
-import generatePrice from '../../Util/generatePrice';
+import replaceWithSpace from '../../Util/replaceWithSpace';
 
 const MediumPopularBiddingTipio = (props) => {
     const rangeList = (props.tipio_offer && props.tipio_offer.offer_price_ranges) || [];
-    const firstRange = rangeList.length > 0 && parseInt(rangeList[1].price, 10) && rangeList[1];
     const secondRange = rangeList.length > 0 && parseInt(rangeList[0].price, 10) && rangeList[0];
+    const hasOptions = props?.tipio_offer?.tipio_offer_options && props?.tipio_offer?.tipio_offer_options?.length !== 0;
 
     return (
         <MediumPopularTipio {...props}>
             <div className="mediumPopularTipio__content__price">
                 <h6 className="mediumPopularTipio__content__price--marketprice">{props.market_price} Kr</h6>
                 <h6 className="mediumPopularTipio__content__price--saleprice">
-                    {generatePrice(props.bind_count, firstRange, secondRange)} Kr
+                    {' '}
+                    {secondRange.price && replaceWithSpace(secondRange.price)} Kr Kr
                 </h6>
             </div>
 
@@ -22,7 +23,10 @@ const MediumPopularBiddingTipio = (props) => {
                 {props.binded ? (
                     <SecondaryOutlineButton text="Del nå" onClick={props.shareOnClick} />
                 ) : (
-                    <SecondaryButton text="Legg i handlekurv" onClick={props.bindOnClick} />
+                    <SecondaryButton
+                        text={hasOptions ? 'Se produkt' : 'Legg i handlekurv'}
+                        onClick={props.bindOnClick}
+                    />
                 )}
             </div>
         </MediumPopularTipio>
