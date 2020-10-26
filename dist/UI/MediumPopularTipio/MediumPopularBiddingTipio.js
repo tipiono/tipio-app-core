@@ -11,27 +11,29 @@ var _MediumPopularTipio = _interopRequireDefault(require("./MediumPopularTipio")
 
 var _SecondaryButton = _interopRequireDefault(require("../Buttons/SecondaryButton"));
 
-var _generatePrice = _interopRequireDefault(require("../../Util/generatePrice"));
+var _replaceWithSpace = _interopRequireDefault(require("../../Util/replaceWithSpace"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var MediumPopularBiddingTipio = function MediumPopularBiddingTipio(props) {
+  var _props$tipio_offer, _props$tipio_offer2, _props$tipio_offer2$t;
+
   var rangeList = props.tipio_offer && props.tipio_offer.offer_price_ranges || [];
-  var firstRange = rangeList.length > 0 && parseInt(rangeList[1].price, 10) && rangeList[1];
   var secondRange = rangeList.length > 0 && parseInt(rangeList[0].price, 10) && rangeList[0];
+  var hasOptions = (props === null || props === void 0 ? void 0 : (_props$tipio_offer = props.tipio_offer) === null || _props$tipio_offer === void 0 ? void 0 : _props$tipio_offer.tipio_offer_options) && (props === null || props === void 0 ? void 0 : (_props$tipio_offer2 = props.tipio_offer) === null || _props$tipio_offer2 === void 0 ? void 0 : (_props$tipio_offer2$t = _props$tipio_offer2.tipio_offer_options) === null || _props$tipio_offer2$t === void 0 ? void 0 : _props$tipio_offer2$t.length) !== 0;
   return /*#__PURE__*/_react.default.createElement(_MediumPopularTipio.default, props, /*#__PURE__*/_react.default.createElement("div", {
     className: "mediumPopularTipio__content__price"
   }, /*#__PURE__*/_react.default.createElement("h6", {
     className: "mediumPopularTipio__content__price--marketprice"
   }, props.market_price, " Kr"), /*#__PURE__*/_react.default.createElement("h6", {
     className: "mediumPopularTipio__content__price--saleprice"
-  }, (0, _generatePrice.default)(props.bind_count, firstRange, secondRange), " Kr")), /*#__PURE__*/_react.default.createElement("div", {
+  }, ' ', secondRange.price && (0, _replaceWithSpace.default)(secondRange.price), " Kr Kr")), /*#__PURE__*/_react.default.createElement("div", {
     className: "mediumPopularTipio__content__submit"
   }, props.binded ? /*#__PURE__*/_react.default.createElement(_SecondaryButton.default, {
     text: "Del n\xE5",
     onClick: props.shareOnClick
   }) : /*#__PURE__*/_react.default.createElement(_SecondaryButton.default, {
-    text: "Legg i handlekurv",
+    text: hasOptions ? 'Se produkt' : 'Legg i handlekurv',
     onClick: props.bindOnClick
   })));
 };

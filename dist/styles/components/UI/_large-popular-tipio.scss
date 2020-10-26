@@ -10,6 +10,8 @@
         &--image {
             max-width: 100%;
             max-height: 500px;
+            background: white;
+            object-fit: contain;
             -webkit-transform: translateZ(0) scale(1.01, 1.01);
             transform: translateZ(0) scale(1.01, 1.01);
         }
