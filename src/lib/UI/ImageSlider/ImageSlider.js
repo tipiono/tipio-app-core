@@ -5,7 +5,7 @@ import cx from 'classnames';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import TipioCountdown from '../TipioCountdown/TipioCountdown';
 
-const ImageSlider = ({ images, showThumbs, showTimer, tipio_expires_in, onClick }) => {
+const ImageSlider = ({ images, showThumbs, showTimer, tipio_expires_in, onClick, saleDiscount }) => {
     const YoutubeSlide = ({ url, isSelected }) => <ReactPlayer width="100%" url={url} playing={isSelected} />;
 
     const getVideoThumb = (videoId) => `https://img.youtube.com/vi/${videoId}/default.jpg`;
@@ -64,6 +64,7 @@ const ImageSlider = ({ images, showThumbs, showTimer, tipio_expires_in, onClick 
                         <TipioCountdown className="timer" expires_in={tipio_expires_in} />
                     </div>
                 )}
+                {saleDiscount && <span className="imageSlider__discount">{saleDiscount}</span>}
             </div>
         </>
     );

@@ -62,7 +62,6 @@
             }
         }
 
-
         &__price {
             display: flex;
             flex-direction: row;
@@ -107,7 +106,7 @@
             &--title {
                 font-size: 1.5rem;
                 font-family: 'Riposte-Medium', sans-serif;
-                margin-bottom: .5rem;
+                margin-bottom: 0.5rem;
             }
 
             &--description {
