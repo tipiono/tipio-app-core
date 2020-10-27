@@ -21,7 +21,7 @@ const BindingCard = ({
 }) => {
     return (
         <BaseCard {...props}>
-            {props.expiredTipio && (
+            {state === 'bought' && !props.expiredTipio && (
                 <>
                     <ul className="customerSidebarCard__footer__salePrice">
                         {firstRange ? (
@@ -76,7 +76,12 @@ const BindingCard = ({
                 </>
             )}
 
-            {props.expiredTipio && <SecondaryOutlineButton text={'Gjenopprett'} onClick={onRestoreClick} />}
+            {props.expiredTipio && (
+                <>
+                    <SecondaryOutlineButton text={'Gjenopprett'} onClick={onRestoreClick} />
+                    <p className="customerSidebarCard__footer--conditon">Dette er ikke bindende</p>
+                </>
+            )}
         </BaseCard>
     );
 };

@@ -3,7 +3,7 @@ import React from 'react';
 function SalesProgressBarTooltip({ percentage, bindCount }) {
     return (
         <>
-            <div className="sales__progress mb-6">
+            <div className="sales__progress">
                 <div className="sales__progress--bar progress">
                     <div
                         className={`progress-bar bg-secondary`}
