@@ -24,7 +24,8 @@ var ImageSlider = function ImageSlider(_ref) {
       showThumbs = _ref.showThumbs,
       showTimer = _ref.showTimer,
       tipio_expires_in = _ref.tipio_expires_in,
-      onClick = _ref.onClick;
+      onClick = _ref.onClick,
+      saleDiscount = _ref.saleDiscount;
 
   var YoutubeSlide = function YoutubeSlide(_ref2) {
     var url = _ref2.url,
@@ -99,7 +100,9 @@ var ImageSlider = function ImageSlider(_ref) {
   }, /*#__PURE__*/_react.default.createElement(_TipioCountdown.default, {
     className: "timer",
     expires_in: tipio_expires_in
-  }))));
+  })), saleDiscount && /*#__PURE__*/_react.default.createElement("span", {
+    className: "imageSlider__discount"
+  }, saleDiscount)));
 };
 
 var _default = ImageSlider;

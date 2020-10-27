@@ -33,7 +33,7 @@ var MediumPopularBiddingTipio = function MediumPopularBiddingTipio(props) {
     text: "Del n\xE5",
     onClick: props.shareOnClick
   }) : /*#__PURE__*/_react.default.createElement(_SecondaryButton.default, {
-    text: hasOptions ? 'Se produkt' : 'Legg i handlekurv',
+    text: 'Se produkt',
     onClick: props.bindOnClick
   })));
 };
