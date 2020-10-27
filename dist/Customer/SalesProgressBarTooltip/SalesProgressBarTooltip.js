@@ -13,7 +13,7 @@ function SalesProgressBarTooltip(_ref) {
   var percentage = _ref.percentage,
       bindCount = _ref.bindCount;
   return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("div", {
-    className: "sales__progress mb-6"
+    className: "sales__progress"
   }, /*#__PURE__*/_react.default.createElement("div", {
     className: "sales__progress--bar progress"
   }, /*#__PURE__*/_react.default.createElement("div", {
