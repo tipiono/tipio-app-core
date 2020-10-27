@@ -30,7 +30,7 @@ var SmallPopularBiddingTipio = function SmallPopularBiddingTipio(props) {
   }, secondRange.price && (0, _replaceWithSpace.default)(secondRange.price), " Kr")), /*#__PURE__*/_react.default.createElement("div", {
     className: "smallPopularTipio__content__submit"
   }, /*#__PURE__*/_react.default.createElement(_SecondaryButton.default, {
-    text: hasOptions ? 'Se produkt' : 'Legg i handlekurv',
+    text: 'Se produkt',
     onClick: props.bindOnClick
   })));
 };
