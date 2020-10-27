@@ -53,9 +53,9 @@ function BiddingCard(_ref) {
     className: "biddingCard__body--price"
   }, /*#__PURE__*/_react.default.createElement("h4", {
     className: "biddingCard__body--price--sale"
-  }, salePrice && (0, _replaceWithSpace.default)(salePrice)), /*#__PURE__*/_react.default.createElement("h4", {
+  }, salePrice && (0, _replaceWithSpace.default)(salePrice), " Kr"), /*#__PURE__*/_react.default.createElement("h4", {
     className: "biddingCard__body--price--cost"
-  }, costPrice && (0, _replaceWithSpace.default)(costPrice))), /*#__PURE__*/_react.default.createElement("div", {
+  }, costPrice && (0, _replaceWithSpace.default)(costPrice), " Kr")), /*#__PURE__*/_react.default.createElement("div", {
     className: "biddingCard__body--content"
   }, /*#__PURE__*/_react.default.createElement("a", {
     onClick: onClick,

@@ -1,14 +1,13 @@
 import React from 'react';
 import LargePopularTipio from './LargePopularTipio';
 import SecondaryButton from '../Buttons/SecondaryButton';
-import generatePrice from '../../Util/generatePrice';
 import replaceWithSpace from '../../Util/replaceWithSpace';
 
 const LargePopularBidingTipio = (props) => {
     const rangeList = (props.tipio_offer && props.tipio_offer.offer_price_ranges) || [];
-    const firstRange = rangeList.length > 0 && parseInt(rangeList[1].price, 10) && rangeList[1];
     const secondRange = rangeList.length > 0 && parseInt(rangeList[0].price, 10) && rangeList[0];
-    const price = generatePrice(props.bind_count, firstRange, secondRange);
+    const price = secondRange.price;
+    const hasOptions = props?.tipio_offer?.tipio_offer_options && props?.tipio_offer?.tipio_offer_options?.length !== 0;
 
     return (
         <LargePopularTipio {...props}>
@@ -23,7 +22,10 @@ const LargePopularBidingTipio = (props) => {
                 {props.binded ? (
                     <SecondaryButton text="Del nå" onClick={props.shareOnClick} />
                 ) : (
-                    <SecondaryButton text="Legg i handlekurv" onClick={props.bindOnClick} />
+                    <SecondaryButton
+                        text={hasOptions ? 'Se produkt' : 'Legg i handlekurv'}
+                        onClick={props.bindOnClick}
+                    />
                 )}
             </div>
         </LargePopularTipio>
