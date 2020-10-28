@@ -55,9 +55,9 @@ function BiddingCard(_ref) {
     "data-src": image,
     src: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 2'%3E%3C/svg%3E",
     alt: ""
-  })), /*#__PURE__*/_react.default.createElement("span", {
+  })), expiresIn && /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("span", {
     className: "imageSlider__discount"
-  }, displayDiscount()), expiresIn && /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("div", {
+  }, displayDiscount()), /*#__PURE__*/_react.default.createElement("div", {
     className: "biddingCard__header--timeLeft"
   }, /*#__PURE__*/_react.default.createElement(_TipioCountdown.default, {
     className: "timer",

@@ -42,9 +42,9 @@ function BiddingCard({
                             alt=""
                         />
                     </a>
-                    <span className="imageSlider__discount">{displayDiscount()}</span>
                     {expiresIn && (
                         <>
+                            <span className="imageSlider__discount">{displayDiscount()}</span>
                             <div className="biddingCard__header--timeLeft">
                                 <TipioCountdown className="timer" expires_in={expiresIn} />
                             </div>

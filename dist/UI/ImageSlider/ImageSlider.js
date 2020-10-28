@@ -109,14 +109,14 @@ var ImageSlider = function ImageSlider(_ref) {
         url: item.url
       });
     }
-  })), showTimer && tipio_expires_in && /*#__PURE__*/_react.default.createElement("div", {
+  })), showTimer && tipio_expires_in && /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("span", {
+    className: "imageSlider__discount"
+  }, salePrice && displayDiscount()), /*#__PURE__*/_react.default.createElement("div", {
     className: "imageSlider__countDown"
   }, /*#__PURE__*/_react.default.createElement(_TipioCountdown.default, {
     className: "timer",
     expires_in: tipio_expires_in
-  })), /*#__PURE__*/_react.default.createElement("span", {
-    className: "imageSlider__discount"
-  }, displayDiscount())));
+  })))));
 };
 
 var _default = ImageSlider;

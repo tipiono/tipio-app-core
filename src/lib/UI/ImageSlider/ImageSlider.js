@@ -70,11 +70,13 @@ const ImageSlider = ({ images, showThumbs, showTimer, tipio_expires_in, onClick,
                         })}
                 </Carousel>
                 {showTimer && tipio_expires_in && (
-                    <div className="imageSlider__countDown">
-                        <TipioCountdown className="timer" expires_in={tipio_expires_in} />
-                    </div>
+                    <>
+                        <span className="imageSlider__discount">{salePrice && displayDiscount()}</span>
+                        <div className="imageSlider__countDown">
+                            <TipioCountdown className="timer" expires_in={tipio_expires_in} />
+                        </div>
+                    </>
                 )}
-                <span className="imageSlider__discount">{displayDiscount()}</span>
             </div>
         </>
     );
