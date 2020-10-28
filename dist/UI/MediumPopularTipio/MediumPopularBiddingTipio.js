@@ -24,7 +24,7 @@ var MediumPopularBiddingTipio = function MediumPopularBiddingTipio(props) {
     className: "mediumPopularTipio__content__price--marketprice"
   }, props.market_price, " Kr"), /*#__PURE__*/_react.default.createElement("h6", {
     className: "mediumPopularTipio__content__price--saleprice"
-  }, ' ', secondRange.price && (0, _replaceWithSpace.default)(secondRange.price), " Kr Kr")), /*#__PURE__*/_react.default.createElement("div", {
+  }, ' ', secondRange.price && (0, _replaceWithSpace.default)(secondRange.price), " Kr")), /*#__PURE__*/_react.default.createElement("div", {
     className: "mediumPopularTipio__content__submit"
   }, props.binded ? /*#__PURE__*/_react.default.createElement(_SecondaryButton.default, {
     text: "Del n\xE5",
