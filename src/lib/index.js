@@ -115,6 +115,7 @@ import ImageUploader from './Customer/ImageUploader/ImageUploader';
 import CategoriesForm from './Company/Modals/ChooseCategory/CategoriesForm';
 import TipioFeedWithWrapper from './Customer/TipioFeed/TipioFeedWithWrapper';
 import FooterMainCard from './Customer/Cards/FooterMainCard/FooterMainCard';
+import SalesProgressBarTooltip from './Customer/SalesProgressBarTooltip/SalesProgressBarTooltip';
 
 /*
  *   Company Components
@@ -351,5 +352,6 @@ export {
     TipioOfTheDayBidding,
     SingleBiddingCard,
     SingleVotingCard,
-    ConfirmedIcon
+    ConfirmedIcon,
+    SalesProgressBarTooltip
 };

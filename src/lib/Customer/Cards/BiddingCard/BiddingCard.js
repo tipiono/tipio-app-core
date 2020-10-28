@@ -2,6 +2,7 @@ import React from 'react';
 import TipioCountdown from '../../../UI/TipioCountdown/TipioCountdown';
 import SalesProgressBar from '../../SalesProgressBar/SalesProgressBar';
 import replaceWithSpace from '../../../Util/replaceWithSpace';
+import CalculateDescountPercentage from '../../../Util/calculateDiscountPercentage';
 
 function BiddingCard({
     id,
@@ -18,6 +19,13 @@ function BiddingCard({
     bindHasExpired,
     link
 }) {
+    const displayDiscount = () => {
+        const percentage = CalculateDescountPercentage(costPrice, salePrice);
+        if (percentage < -14) {
+            return percentage + '%';
+        }
+        return `Spar ${costPrice - salePrice} kr`;
+    };
     return (
         <>
             <div className="biddingCard">
@@ -35,9 +43,12 @@ function BiddingCard({
                         />
                     </a>
                     {expiresIn && (
-                        <div className="biddingCard__header--timeLeft">
-                            <TipioCountdown className="timer" expires_in={expiresIn} />
-                        </div>
+                        <>
+                            <span className="imageSlider__discount">{displayDiscount()}</span>
+                            <div className="biddingCard__header--timeLeft">
+                                <TipioCountdown className="timer" expires_in={expiresIn} />
+                            </div>
+                        </>
                     )}
                 </div>
 

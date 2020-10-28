@@ -31,6 +31,7 @@ const SingleBiddingCard = ({
     return (
         <div className="singleBiddingCard">
             <div className="singleBiddingCard__header">
+                <span className="imageSlider__discount">{saleDiscount}</span>
                 <a
                     href={`/tipio/bind/${id}`}
                     className="lazy-image singleBiddingCard__header--preview"

@@ -50,7 +50,9 @@ var SingleBiddingCard = function SingleBiddingCard(_ref) {
     className: "singleBiddingCard"
   }, /*#__PURE__*/_react.default.createElement("div", {
     className: "singleBiddingCard__header"
-  }, /*#__PURE__*/_react.default.createElement("a", {
+  }, /*#__PURE__*/_react.default.createElement("span", {
+    className: "imageSlider__discount"
+  }, saleDiscount), /*#__PURE__*/_react.default.createElement("a", {
     href: "/tipio/bind/".concat(id),
     className: "lazy-image singleBiddingCard__header--preview",
     onClick: onClick

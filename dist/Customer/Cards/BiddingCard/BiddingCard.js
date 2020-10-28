@@ -13,6 +13,8 @@ var _SalesProgressBar = _interopRequireDefault(require("../../SalesProgressBar/S
 
 var _replaceWithSpace = _interopRequireDefault(require("../../../Util/replaceWithSpace"));
 
+var _calculateDiscountPercentage = _interopRequireDefault(require("../../../Util/calculateDiscountPercentage"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function BiddingCard(_ref) {
@@ -29,6 +31,17 @@ function BiddingCard(_ref) {
       onClick = _ref.onClick,
       bindHasExpired = _ref.bindHasExpired,
       link = _ref.link;
+
+  var displayDiscount = function displayDiscount() {
+    var percentage = (0, _calculateDiscountPercentage.default)(costPrice, salePrice);
+
+    if (percentage < -14) {
+      return percentage + '%';
+    }
+
+    return "Spar ".concat(costPrice - salePrice, " kr");
+  };
+
   return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("div", {
     className: "biddingCard"
   }, /*#__PURE__*/_react.default.createElement("div", {
@@ -42,12 +55,14 @@ function BiddingCard(_ref) {
     "data-src": image,
     src: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 2'%3E%3C/svg%3E",
     alt: ""
-  })), expiresIn && /*#__PURE__*/_react.default.createElement("div", {
+  })), expiresIn && /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("span", {
+    className: "imageSlider__discount"
+  }, displayDiscount()), /*#__PURE__*/_react.default.createElement("div", {
     className: "biddingCard__header--timeLeft"
   }, /*#__PURE__*/_react.default.createElement(_TipioCountdown.default, {
     className: "timer",
     expires_in: expiresIn
-  }))), /*#__PURE__*/_react.default.createElement("div", {
+  })))), /*#__PURE__*/_react.default.createElement("div", {
     className: "biddingCard__body"
   }, /*#__PURE__*/_react.default.createElement("div", {
     className: "biddingCard__body--price"
