@@ -18,13 +18,19 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var MediumPopularBiddingTipio = function MediumPopularBiddingTipio(props) {
   var rangeList = props.tipio_offer && props.tipio_offer.offer_price_ranges || [];
   var secondRange = rangeList.length > 0 && parseInt(rangeList[0].price, 10) && rangeList[0];
+  var bestPrice = null;
+
+  if (rangeList.length > 0) {
+    bestPrice = rangeList[0].price < rangeList[1].price ? rangeList[0].price : rangeList[1].price;
+  }
+
   return /*#__PURE__*/_react.default.createElement(_MediumPopularTipio.default, props, /*#__PURE__*/_react.default.createElement("div", {
     className: "mediumPopularTipio__content__price"
   }, /*#__PURE__*/_react.default.createElement("h6", {
     className: "mediumPopularTipio__content__price--marketprice"
   }, props.market_price, " Kr"), /*#__PURE__*/_react.default.createElement("h6", {
     className: "mediumPopularTipio__content__price--saleprice"
-  }, ' ', secondRange.price && (0, _replaceWithSpace.default)(secondRange.price), " Kr")), /*#__PURE__*/_react.default.createElement("div", {
+  }, ' ', secondRange.price && (0, _replaceWithSpace.default)(bestPrice), " Kr")), /*#__PURE__*/_react.default.createElement("div", {
     className: "mediumPopularTipio__content__submit"
   }, props.binded ? /*#__PURE__*/_react.default.createElement(_SecondaryButton.default, {
     text: "Del n\xE5",
