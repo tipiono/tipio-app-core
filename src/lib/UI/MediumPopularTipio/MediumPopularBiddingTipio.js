@@ -10,7 +10,10 @@ const MediumPopularBiddingTipio = (props) => {
 
     let bestPrice = null;
     if (rangeList.length > 0) {
-        bestPrice = rangeList[0].price < rangeList[1].price ? rangeList[0].price : rangeList[1].price;
+        bestPrice =
+            parseInt(rangeList[0].price) < parseInt(rangeList[1].price)
+                ? parseInt(rangeList[0].price)
+                : parseInt(rangeList[1].price);
     }
 
     return (
