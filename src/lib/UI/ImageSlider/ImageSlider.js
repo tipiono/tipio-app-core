@@ -4,8 +4,9 @@ import ReactPlayer from 'react-player';
 import cx from 'classnames';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import TipioCountdown from '../TipioCountdown/TipioCountdown';
+import CalculateDescountPercentage from '../../Util/calculateDiscountPercentage';
 
-const ImageSlider = ({ images, showThumbs, showTimer, tipio_expires_in, onClick, saleDiscount }) => {
+const ImageSlider = ({ images, showThumbs, showTimer, tipio_expires_in, onClick, costPrice, salePrice }) => {
     const YoutubeSlide = ({ url, isSelected }) => <ReactPlayer width="100%" url={url} playing={isSelected} />;
 
     const getVideoThumb = (videoId) => `https://img.youtube.com/vi/${videoId}/default.jpg`;
@@ -28,6 +29,14 @@ const ImageSlider = ({ images, showThumbs, showTimer, tipio_expires_in, onClick,
         return imageSrc.map((item) => {
             return <img src={item} />;
         });
+    };
+
+    const displayDiscount = () => {
+        const percentage = CalculateDescountPercentage(costPrice, salePrice);
+        if (percentage < -15) {
+            return percentage + '%';
+        }
+        return `Spar ${costPrice - salePrice} kr`;
     };
 
     return (
@@ -64,7 +73,7 @@ const ImageSlider = ({ images, showThumbs, showTimer, tipio_expires_in, onClick,
                         <TipioCountdown className="timer" expires_in={tipio_expires_in} />
                     </div>
                 )}
-                {saleDiscount && <span className="imageSlider__discount">{saleDiscount}</span>}
+                <span className="imageSlider__discount">{displayDiscount()}</span>
             </div>
         </>
     );
