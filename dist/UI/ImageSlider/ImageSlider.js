@@ -111,7 +111,7 @@ var ImageSlider = function ImageSlider(_ref) {
     }
   })), showTimer && tipio_expires_in && /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("span", {
     className: "imageSlider__discount"
-  }, displayDiscount()), /*#__PURE__*/_react.default.createElement("div", {
+  }, salePrice && displayDiscount()), /*#__PURE__*/_react.default.createElement("div", {
     className: "imageSlider__countDown"
   }, /*#__PURE__*/_react.default.createElement(_TipioCountdown.default, {
     className: "timer",
