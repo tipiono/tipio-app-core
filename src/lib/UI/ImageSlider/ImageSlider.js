@@ -10,7 +10,7 @@ const ImageSlider = ({ images, showThumbs, showTimer, tipio_expires_in, onClick,
 
     const getVideoThumb = (videoId) => `https://img.youtube.com/vi/${videoId}/default.jpg`;
 
-    const getVideoId = (url) => url.substr('https://www.youtube.com/watch?v='.length, url.length);
+    const getVideoId = (url) => url.match(/youtu(?:.*\/v\/|.*v\=|\.be\/)([A-Za-z0-9_\-]{11})/)[1];
 
     let imageSrc = [];
     images.map((image) => {

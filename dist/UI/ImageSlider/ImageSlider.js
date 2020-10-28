@@ -42,7 +42,7 @@ var ImageSlider = function ImageSlider(_ref) {
   };
 
   var getVideoId = function getVideoId(url) {
-    return url.substr('https://www.youtube.com/watch?v='.length, url.length);
+    return url.match(/youtu(?:.*\/v\/|.*v\=|\.be\/)([A-Za-z0-9_\-]{11})/)[1];
   };
 
   var imageSrc = [];
