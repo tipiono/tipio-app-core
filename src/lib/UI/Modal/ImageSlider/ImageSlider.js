@@ -20,6 +20,7 @@ const ImageSliderModal = ({ onCloseButtonClick, images, selectedItem, ...props }
                             renderBottomCenterControls={false}
                             swipeScrollTolerance={40}
                             selectedItem={selectedItem}
+                            useKeyboardArrows={true}
                         >
                             {images &&
                                 images.map((item, i) => {

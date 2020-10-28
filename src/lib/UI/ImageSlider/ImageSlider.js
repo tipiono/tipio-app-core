@@ -49,6 +49,7 @@ const ImageSlider = ({ images, showThumbs, showTimer, tipio_expires_in, onClick,
                     swipeScrollTolerance={40}
                     onClickItem={onClick && onClick}
                     renderThumbs={customRenderThumb}
+                    useKeyboardArrows={true}
                 >
                     {images &&
                         images.map((item, i) => {
