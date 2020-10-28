@@ -55,7 +55,8 @@ var ImageSliderModal = function ImageSliderModal(_ref) {
     infiniteLoop: true,
     renderBottomCenterControls: false,
     swipeScrollTolerance: 40,
-    selectedItem: selectedItem
+    selectedItem: selectedItem,
+    useKeyboardArrows: true
   }, images && images.map(function (item, i) {
     if (item.blob_url) {
       return /*#__PURE__*/_react.default.createElement("img", {
