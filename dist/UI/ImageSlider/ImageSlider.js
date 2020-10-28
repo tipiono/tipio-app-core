@@ -17,6 +17,8 @@ require("react-responsive-carousel/lib/styles/carousel.min.css");
 
 var _TipioCountdown = _interopRequireDefault(require("../TipioCountdown/TipioCountdown"));
 
+var _calculateDiscountPercentage = _interopRequireDefault(require("../../Util/calculateDiscountPercentage"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var ImageSlider = function ImageSlider(_ref) {
@@ -25,7 +27,8 @@ var ImageSlider = function ImageSlider(_ref) {
       showTimer = _ref.showTimer,
       tipio_expires_in = _ref.tipio_expires_in,
       onClick = _ref.onClick,
-      saleDiscount = _ref.saleDiscount;
+      costPrice = _ref.costPrice,
+      salePrice = _ref.salePrice;
 
   var YoutubeSlide = function YoutubeSlide(_ref2) {
     var url = _ref2.url,
@@ -66,6 +69,16 @@ var ImageSlider = function ImageSlider(_ref) {
     });
   };
 
+  var displayDiscount = function displayDiscount() {
+    var percentage = (0, _calculateDiscountPercentage.default)(costPrice, salePrice);
+
+    if (percentage < -14) {
+      return percentage + '%';
+    }
+
+    return "Spar ".concat(costPrice - salePrice, " kr");
+  };
+
   return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("div", {
     className: (0, _classnames.default)('imageSlider', images && {
       showIndicators: images.length >= 5
@@ -101,9 +114,9 @@ var ImageSlider = function ImageSlider(_ref) {
   }, /*#__PURE__*/_react.default.createElement(_TipioCountdown.default, {
     className: "timer",
     expires_in: tipio_expires_in
-  })), saleDiscount && /*#__PURE__*/_react.default.createElement("span", {
+  })), /*#__PURE__*/_react.default.createElement("span", {
     className: "imageSlider__discount"
-  }, saleDiscount)));
+  }, displayDiscount())));
 };
 
 var _default = ImageSlider;
