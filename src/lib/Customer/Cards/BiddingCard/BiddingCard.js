@@ -21,7 +21,7 @@ function BiddingCard({
 }) {
     const displayDiscount = () => {
         const percentage = CalculateDescountPercentage(costPrice, salePrice);
-        if (percentage < -15) {
+        if (percentage < -14) {
             return percentage + '%';
         }
         return `Spar ${costPrice - salePrice} kr`;

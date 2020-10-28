@@ -33,7 +33,7 @@ const ImageSlider = ({ images, showThumbs, showTimer, tipio_expires_in, onClick,
 
     const displayDiscount = () => {
         const percentage = CalculateDescountPercentage(costPrice, salePrice);
-        if (percentage < -15) {
+        if (percentage < -14) {
             return percentage + '%';
         }
         return `Spar ${costPrice - salePrice} kr`;

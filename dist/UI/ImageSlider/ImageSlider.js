@@ -72,7 +72,7 @@ var ImageSlider = function ImageSlider(_ref) {
   var displayDiscount = function displayDiscount() {
     var percentage = (0, _calculateDiscountPercentage.default)(costPrice, salePrice);
 
-    if (percentage < -15) {
+    if (percentage < -14) {
       return percentage + '%';
     }
 
