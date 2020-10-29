@@ -17,7 +17,7 @@ const MediumPopularBiddingTipio = (props) => {
     }
 
     return (
-        <MediumPopularTipio {...props}>
+        <MediumPopularTipio {...props} bestPrice={bestPrice}>
             <div className="mediumPopularTipio__content__price">
                 <h6 className="mediumPopularTipio__content__price--marketprice">{props.market_price} Kr</h6>
                 <h6 className="mediumPopularTipio__content__price--saleprice">
