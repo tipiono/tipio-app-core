@@ -12,7 +12,7 @@ export const getBestPrice = (priceRange) => {
 };
 
 export const createDiscountLabel = (price, salePrice) => {
-    const bestPrice = getBestPrice(salePrice);
+    const bestPrice = typeof salePrice === 'object' ? getBestPrice(salePrice) : salePrice;
     let discount = calculateDiscountPercentage(price, bestPrice);
     return discount < -14 ? `${discount}%` : `Spar ${price - bestPrice} kr`;
 };
