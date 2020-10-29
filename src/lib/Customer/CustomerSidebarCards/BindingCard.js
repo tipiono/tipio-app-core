@@ -17,6 +17,7 @@ const BindingCard = ({
     onBindClick,
     bindingPercentage,
     onRestoreClick,
+    isIceTipio,
     ...props
 }) => {
     return (
@@ -35,7 +36,7 @@ const BindingCard = ({
                                     {firstRange?.price && replaceWithSpace(firstRange?.price)} Kr
                                 </h3>
                                 <span className="customerSidebarCard__footer__salePrice--minBuyers--label">
-                                    Pris fra {firstRange.from}-{firstRange.to} kjøp
+                                    {isIceTipio ? '20GB' : `Pris fra ${firstRange.from}-${firstRange.to} kjøp`}
                                 </span>
                             </li>
                         ) : null}
@@ -51,7 +52,7 @@ const BindingCard = ({
                                     {secondRange?.price && replaceWithSpace(secondRange?.price)} Kr
                                 </h3>
                                 <span className="customerSidebarCard__footer__salePrice--maxBuyers--label">
-                                    Pris fra {secondRange.from}-{secondRange.to} kjøp
+                                    {isIceTipio ? '8GB' : `Pris fra ${secondRange.from}-${secondRange.to} kjøp`}
                                 </span>
                             </li>
                         ) : null}
