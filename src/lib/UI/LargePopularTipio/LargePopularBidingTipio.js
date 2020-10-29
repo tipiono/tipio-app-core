@@ -7,7 +7,7 @@ const LargePopularBidingTipio = (props) => {
     const rangeList = (props.tipio_offer && props.tipio_offer.offer_price_ranges) || [];
     const secondRange = rangeList.length > 0 && parseInt(rangeList[0].price, 10) && rangeList[0];
     const price = secondRange.price;
-
+    console.log(props);
     return (
         <LargePopularTipio {...props}>
             <div className="largePopularTipio__content__price">

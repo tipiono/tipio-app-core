@@ -23,7 +23,7 @@ exports.getBestPrice = getBestPrice;
 var createDiscountLabel = function createDiscountLabel(price, salePrice) {
   var bestPrice = getBestPrice(salePrice);
   var discount = calculateDiscountPercentage(price, bestPrice);
-  return discount < -14 ? "".concat(discount, "%") : "Spar ".concat(bestPrice, " kr");
+  return discount < -14 ? "".concat(discount, "%") : "Spar ".concat(price - bestPrice, " kr");
 };
 
 exports.createDiscountLabel = createDiscountLabel;

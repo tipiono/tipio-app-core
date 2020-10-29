@@ -1,6 +1,5 @@
 import React from 'react';
 import TipioCountdown from '../TipioCountdown/TipioCountdown';
-import calculateDiscountPercentage, { getBestPrice } from '../../Util/calculateDiscountPercentage';
 import { createDiscountLabel } from '../../Util/calculateDiscountPercentage';
 
 function TipioOfTheDay({
