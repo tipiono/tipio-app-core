@@ -1,7 +1,37 @@
 import React from 'react';
 import TipioCountdown from '../TipioCountdown/TipioCountdown';
+import CalculateDescountPercentage from '../../Util/calculateDiscountPercentage';
 
-const MediumPopularTipio = ({ id, children, title, binding_expires_in, images, brand, type, onClick }) => {
+const MediumPopularTipio = ({
+    id,
+    children,
+    title,
+    binding_expires_in,
+    images,
+    brand,
+    type,
+    onClick,
+    market_price,
+    tipio_offer
+}) => {
+    const rangeList = (tipio_offer && tipio_offer.offer_price_ranges) || [];
+
+    let bestPrice = null;
+    if (rangeList.length > 0) {
+        bestPrice =
+            parseInt(rangeList[0].price) < parseInt(rangeList[1].price)
+                ? parseInt(rangeList[0].price)
+                : parseInt(rangeList[1].price);
+    }
+
+    const displayDiscount = () => {
+        const percentage = CalculateDescountPercentage(market_price, bestPrice);
+        if (percentage < -14) {
+            return percentage + '%';
+        }
+        return `Spar ${market_price - bestPrice} kr`;
+    };
+
     return (
         <div className="mediumPopularTipio">
             <div className="mediumPopularTipio__preview lazy-image" onClick={onClick}>
@@ -11,9 +41,12 @@ const MediumPopularTipio = ({ id, children, title, binding_expires_in, images, b
                     alt=""
                 />
                 {type === 2 && (
-                    <div className="mediumPopularTipio__preview--timeLeft">
-                        <TipioCountdown className="timer" expires_in={binding_expires_in} />
-                    </div>
+                    <>
+                        <span className="imageSlider__discount">{displayDiscount()}</span>
+                        <div className="mediumPopularTipio__preview--timeLeft">
+                            <TipioCountdown className="timer" expires_in={binding_expires_in} />
+                        </div>
+                    </>
                 )}
             </div>
 
