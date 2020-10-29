@@ -12,18 +12,8 @@ const MediumPopularTipio = ({
     type,
     onClick,
     market_price,
-    tipio_offer
+    bestPrice
 }) => {
-    const rangeList = (tipio_offer && tipio_offer.offer_price_ranges) || [];
-
-    let bestPrice = null;
-    if (rangeList.length > 0) {
-        bestPrice =
-            parseInt(rangeList[0].price) < parseInt(rangeList[1].price)
-                ? parseInt(rangeList[0].price)
-                : parseInt(rangeList[1].price);
-    }
-
     const displayDiscount = () => {
         const percentage = CalculateDescountPercentage(market_price, bestPrice);
         if (percentage < -14) {

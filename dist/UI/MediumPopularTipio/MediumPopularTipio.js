@@ -23,13 +23,7 @@ var MediumPopularTipio = function MediumPopularTipio(_ref) {
       type = _ref.type,
       onClick = _ref.onClick,
       market_price = _ref.market_price,
-      tipio_offer = _ref.tipio_offer;
-  var rangeList = tipio_offer && tipio_offer.offer_price_ranges || [];
-  var bestPrice = null;
-
-  if (rangeList.length > 0) {
-    bestPrice = parseInt(rangeList[0].price) < parseInt(rangeList[1].price) ? parseInt(rangeList[0].price) : parseInt(rangeList[1].price);
-  }
+      bestPrice = _ref.bestPrice;
 
   var displayDiscount = function displayDiscount() {
     var percentage = (0, _calculateDiscountPercentage.default)(market_price, bestPrice);
