@@ -38,13 +38,13 @@
     &__content {
         width: 50%;
         margin-left: 66px;
+        text-align: center;
 
         &--title {
             font-size: 2.25rem;
             font-family: 'Riposte-Regular', sans-serif;
             margin-bottom: 0;
             color: $primary;
-            width: 85%;
 
             &:hover {
                 text-decoration-color: $gray-100;
@@ -58,13 +58,13 @@
             margin-bottom: 2.5rem;
             font-family: 'Riposte-Light', sans-serif;
             color: $gray-700;
-            width: 70%;
         }
 
         &__price {
             display: flex;
             flex-direction: row;
             margin-bottom: 3.125rem;
+            justify-content: center;
 
             &--marketprice {
                 font-size: 1.5rem;
@@ -82,7 +82,12 @@
         }
 
         &__submit {
-            width: 75%;
+            display: flex;
+            justify-content: center;
+
+            button {
+                width: 75%;
+            }
         }
 
         &--interested {

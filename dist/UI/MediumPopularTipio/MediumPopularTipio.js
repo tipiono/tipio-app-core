@@ -45,9 +45,10 @@ var MediumPopularTipio = function MediumPopularTipio(_ref) {
   }, /*#__PURE__*/_react.default.createElement("a", {
     href: "/tipio/".concat(type === 2 ? 'bind' : 'vote', "/").concat(id),
     onClick: onClick,
-    className: "text-truncate mediumPopularTipio__content--title",
     title: title
-  }, title), /*#__PURE__*/_react.default.createElement("p", {
+  }, /*#__PURE__*/_react.default.createElement("h4", {
+    className: "mediumPopularTipio__content--title"
+  }, " ", title)), /*#__PURE__*/_react.default.createElement("p", {
     className: "text-truncate mediumPopularTipio__content--description",
     title: brand
   }, brand), children));
