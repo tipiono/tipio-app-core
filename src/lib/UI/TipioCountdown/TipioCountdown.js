@@ -11,7 +11,7 @@ const renderer = ({ hours, minutes, seconds, completed }) => {
         if (hours > 48) {
             return <span className={cn + ' timer'}>{Math.floor(hours / 24)} dager</span>;
         } else if (hours > 24 && hours <= 48) {
-            return <span className={cn + ' timer'}>{hours} timmer</span>;
+            return <span className={cn + ' timer'}>{hours} timer</span>;
         } else
             return (
                 <span className={cn + ' timer'}>
