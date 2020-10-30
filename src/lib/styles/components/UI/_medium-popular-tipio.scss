@@ -10,11 +10,12 @@
         position: relative;
         text-align: center;
         cursor: pointer;
+        border: 1px solid #c2e7e2;
+        background: white;
 
         &--image {
             max-width: 100%;
             max-height: 460px;
-            background: white;
             object-fit: contain;
             -webkit-transform: translateZ(0) scale(1.01, 1.01);
             transform: translateZ(0) scale(1.01, 1.01);
