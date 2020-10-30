@@ -9,6 +9,8 @@ var _react = _interopRequireDefault(require("react"));
 
 var _TipioCountdown = _interopRequireDefault(require("../TipioCountdown/TipioCountdown"));
 
+var _calculateDiscountPercentage = require("../../Util/calculateDiscountPercentage");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
@@ -37,12 +39,14 @@ function TipioOfTheDay(_ref) {
     className: "tipioOfTheDay__preview--image",
     src: images && images.length && images[0].blob_url,
     alt: ""
-  }), showTimer || props.bindingTipio && /*#__PURE__*/_react.default.createElement("div", {
+  }), showTimer || props.bindingTipio && /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("span", {
+    className: "imageSlider__discount"
+  }, (0, _calculateDiscountPercentage.createDiscountLabel)(props.market_price, props.tipio_offer.offer_price_ranges)), /*#__PURE__*/_react.default.createElement("div", {
     className: "tipioOfTheDay__preview--timeLeft"
   }, /*#__PURE__*/_react.default.createElement(_TipioCountdown.default, {
     className: "timer",
     expires_in: props.bindingTipio ? props.binding_expires_in : voting_expires_in
-  }))), /*#__PURE__*/_react.default.createElement("div", {
+  })))), /*#__PURE__*/_react.default.createElement("div", {
     className: "tipioOfTheDay__content"
   }, /*#__PURE__*/_react.default.createElement("a", {
     href: "/tipio/vote/".concat(id),
