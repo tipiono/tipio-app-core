@@ -9,6 +9,8 @@ var _react = _interopRequireDefault(require("react"));
 
 var _TipioCountdown = _interopRequireDefault(require("../TipioCountdown/TipioCountdown"));
 
+var _calculateDiscountPercentage = require("../../Util/calculateDiscountPercentage");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var LargePopularTipio = function LargePopularTipio(_ref) {
@@ -20,7 +22,9 @@ var LargePopularTipio = function LargePopularTipio(_ref) {
       binding_expires_in = _ref.binding_expires_in,
       images = _ref.images,
       onClick = _ref.onClick,
-      type = _ref.type;
+      type = _ref.type,
+      market_price = _ref.market_price,
+      tipio_offer = _ref.tipio_offer;
   return /*#__PURE__*/_react.default.createElement("div", {
     className: "largePopularTipio"
   }, /*#__PURE__*/_react.default.createElement("div", {
@@ -31,12 +35,14 @@ var LargePopularTipio = function LargePopularTipio(_ref) {
     "data-src": images && images.length && images[0].blob_url,
     src: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 2'%3E%3C/svg%3E",
     alt: ""
-  }), type === 2 && /*#__PURE__*/_react.default.createElement("div", {
+  }), type === 2 && /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("span", {
+    className: "imageSlider__discount"
+  }, (0, _calculateDiscountPercentage.createDiscountLabel)(market_price, tipio_offer.offer_price_ranges)), /*#__PURE__*/_react.default.createElement("div", {
     className: "largePopularTipio__preview--timeLeft"
   }, /*#__PURE__*/_react.default.createElement(_TipioCountdown.default, {
     className: "timer",
     expires_in: binding_expires_in
-  }))), /*#__PURE__*/_react.default.createElement("div", {
+  })))), /*#__PURE__*/_react.default.createElement("div", {
     className: "largePopularTipio__content"
   }, /*#__PURE__*/_react.default.createElement("a", {
     href: "/tipio/".concat(type === 2 ? 'bind' : 'vote', "/").concat(id),

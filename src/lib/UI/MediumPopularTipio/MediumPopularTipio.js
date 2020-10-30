@@ -1,6 +1,6 @@
 import React from 'react';
 import TipioCountdown from '../TipioCountdown/TipioCountdown';
-import CalculateDescountPercentage from '../../Util/calculateDiscountPercentage';
+import { createDiscountLabel } from '../../Util/calculateDiscountPercentage';
 
 const MediumPopularTipio = ({
     id,
@@ -12,16 +12,8 @@ const MediumPopularTipio = ({
     type,
     onClick,
     market_price,
-    bestPrice
+    tipio_offer
 }) => {
-    const displayDiscount = () => {
-        const percentage = CalculateDescountPercentage(market_price, bestPrice);
-        if (percentage < -14) {
-            return percentage + '%';
-        }
-        return `Spar ${market_price - bestPrice} kr`;
-    };
-
     return (
         <div className="mediumPopularTipio">
             <div className="mediumPopularTipio__preview lazy-image" onClick={onClick}>
@@ -32,7 +24,9 @@ const MediumPopularTipio = ({
                 />
                 {type === 2 && (
                     <>
-                        <span className="imageSlider__discount">{displayDiscount()}</span>
+                        <span className="imageSlider__discount">
+                            {createDiscountLabel(market_price, tipio_offer.offer_price_ranges)}
+                        </span>
                         <div className="mediumPopularTipio__preview--timeLeft">
                             <TipioCountdown className="timer" expires_in={binding_expires_in} />
                         </div>

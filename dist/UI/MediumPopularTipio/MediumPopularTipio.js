@@ -9,7 +9,7 @@ var _react = _interopRequireDefault(require("react"));
 
 var _TipioCountdown = _interopRequireDefault(require("../TipioCountdown/TipioCountdown"));
 
-var _calculateDiscountPercentage = _interopRequireDefault(require("../../Util/calculateDiscountPercentage"));
+var _calculateDiscountPercentage = require("../../Util/calculateDiscountPercentage");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -23,18 +23,7 @@ var MediumPopularTipio = function MediumPopularTipio(_ref) {
       type = _ref.type,
       onClick = _ref.onClick,
       market_price = _ref.market_price,
-      bestPrice = _ref.bestPrice;
-
-  var displayDiscount = function displayDiscount() {
-    var percentage = (0, _calculateDiscountPercentage.default)(market_price, bestPrice);
-
-    if (percentage < -14) {
-      return percentage + '%';
-    }
-
-    return "Spar ".concat(market_price - bestPrice, " kr");
-  };
-
+      tipio_offer = _ref.tipio_offer;
   return /*#__PURE__*/_react.default.createElement("div", {
     className: "mediumPopularTipio"
   }, /*#__PURE__*/_react.default.createElement("div", {
@@ -46,7 +35,7 @@ var MediumPopularTipio = function MediumPopularTipio(_ref) {
     alt: ""
   }), type === 2 && /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("span", {
     className: "imageSlider__discount"
-  }, displayDiscount()), /*#__PURE__*/_react.default.createElement("div", {
+  }, (0, _calculateDiscountPercentage.createDiscountLabel)(market_price, tipio_offer.offer_price_ranges)), /*#__PURE__*/_react.default.createElement("div", {
     className: "mediumPopularTipio__preview--timeLeft"
   }, /*#__PURE__*/_react.default.createElement(_TipioCountdown.default, {
     className: "timer",

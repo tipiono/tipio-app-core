@@ -1,5 +1,6 @@
 import React from 'react';
 import TipioCountdown from '../TipioCountdown/TipioCountdown';
+import { createDiscountLabel } from '../../Util/calculateDiscountPercentage';
 
 function TipioOfTheDay({
     id,
@@ -23,12 +24,17 @@ function TipioOfTheDay({
                 />
                 {showTimer ||
                     (props.bindingTipio && (
-                        <div className="tipioOfTheDay__preview--timeLeft">
-                            <TipioCountdown
-                                className="timer"
-                                expires_in={props.bindingTipio ? props.binding_expires_in : voting_expires_in}
-                            />
-                        </div>
+                        <>
+                            <span className="imageSlider__discount">
+                                {createDiscountLabel(props.market_price, props.tipio_offer.offer_price_ranges)}
+                            </span>
+                            <div className="tipioOfTheDay__preview--timeLeft">
+                                <TipioCountdown
+                                    className="timer"
+                                    expires_in={props.bindingTipio ? props.binding_expires_in : voting_expires_in}
+                                />
+                            </div>
+                        </>
                     ))}
             </a>
 

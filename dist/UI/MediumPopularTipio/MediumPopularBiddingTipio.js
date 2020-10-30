@@ -11,30 +11,18 @@ var _MediumPopularTipio = _interopRequireDefault(require("./MediumPopularTipio")
 
 var _SecondaryButton = _interopRequireDefault(require("../Buttons/SecondaryButton"));
 
-var _replaceWithSpace = _interopRequireDefault(require("../../Util/replaceWithSpace"));
+var _calculateDiscountPercentage = require("../../Util/calculateDiscountPercentage");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
-
 var MediumPopularBiddingTipio = function MediumPopularBiddingTipio(props) {
-  var rangeList = props.tipio_offer && props.tipio_offer.offer_price_ranges || [];
-  var secondRange = rangeList.length > 0 && parseInt(rangeList[0].price, 10) && rangeList[0];
-  var bestPrice = null;
-
-  if (rangeList.length > 0) {
-    bestPrice = parseInt(rangeList[0].price) < parseInt(rangeList[1].price) ? parseInt(rangeList[0].price) : parseInt(rangeList[1].price);
-  }
-
-  return /*#__PURE__*/_react.default.createElement(_MediumPopularTipio.default, _extends({}, props, {
-    bestPrice: bestPrice
-  }), /*#__PURE__*/_react.default.createElement("div", {
+  return /*#__PURE__*/_react.default.createElement(_MediumPopularTipio.default, props, /*#__PURE__*/_react.default.createElement("div", {
     className: "mediumPopularTipio__content__price"
   }, /*#__PURE__*/_react.default.createElement("h6", {
     className: "mediumPopularTipio__content__price--marketprice"
   }, props.market_price, " Kr"), /*#__PURE__*/_react.default.createElement("h6", {
     className: "mediumPopularTipio__content__price--saleprice"
-  }, ' ', bestPrice && bestPrice.toLocaleString('nb-NO'), " kr")), /*#__PURE__*/_react.default.createElement("div", {
+  }, ' ', (0, _calculateDiscountPercentage.getBestPrice)(props.tipio_offer.offer_price_ranges).toLocaleString('nb-NO'), " kr")), /*#__PURE__*/_react.default.createElement("div", {
     className: "mediumPopularTipio__content__submit"
   }, props.binded ? /*#__PURE__*/_react.default.createElement(_SecondaryButton.default, {
     text: "Del n\xE5",
