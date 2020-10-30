@@ -54,12 +54,20 @@ var _renderer = function renderer(_ref) {
       minutes = _ref.minutes,
       seconds = _ref.seconds,
       completed = _ref.completed;
-  var cn = hours < 24 ? 'purple' : 'turquoise';
+  var cn = hours < 48 ? 'purple' : 'turquoise';
 
   if (completed) {
     return /*#__PURE__*/_react.default.createElement(Completionist, null);
   } else {
-    return /*#__PURE__*/_react.default.createElement("span", {
+    if (hours > 48) {
+      return /*#__PURE__*/_react.default.createElement("span", {
+        className: cn + ' timer'
+      }, Math.floor(hours / 24), " dager");
+    } else if (hours > 24 && hours <= 48) {
+      return /*#__PURE__*/_react.default.createElement("span", {
+        className: cn + ' timer'
+      }, hours, " timmer");
+    } else return /*#__PURE__*/_react.default.createElement("span", {
       className: cn + ' timer'
     }, hours, ":", minutes, ":", seconds);
   }
