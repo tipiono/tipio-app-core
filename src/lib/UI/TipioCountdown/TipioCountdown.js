@@ -4,15 +4,20 @@ import Countdown, { calcTimeDelta, formatTimeDelta } from 'react-countdown-now/d
 const Completionist = () => <span className="inactive timer">Ikke aktiv</span>;
 
 const renderer = ({ hours, minutes, seconds, completed }) => {
-    let cn = hours < 24 ? 'purple' : 'turquoise';
+    let cn = hours < 48 ? 'purple' : 'turquoise';
     if (completed) {
         return <Completionist />;
     } else {
-        return (
-            <span className={cn + ' timer'}>
-                {hours}:{minutes}:{seconds}
-            </span>
-        );
+        if (hours > 48) {
+            return <span className={cn + ' timer'}>{Math.floor(hours / 24)} dager</span>;
+        } else if (hours > 24 && hours <= 48) {
+            return <span className={cn + ' timer'}>{hours} timer</span>;
+        } else
+            return (
+                <span className={cn + ' timer'}>
+                    {hours}:{minutes}:{seconds}
+                </span>
+            );
     }
 };
 
