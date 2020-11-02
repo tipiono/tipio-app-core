@@ -9,7 +9,7 @@ const renderer = ({ hours, minutes, seconds, completed }) => {
         return <Completionist />;
     } else {
         if (hours > 48) {
-            return <span className={cn + ' timer'}>{Math.floor(hours / 24)} dager</span>;
+            return <span className={cn + ' timer'}>{Math.floor(hours / 24)} dager igjen</span>;
         } else if (hours > 24 && hours <= 48) {
             return <span className={cn + ' timer'}>{hours} timer</span>;
         } else
