@@ -62,7 +62,7 @@ var _renderer = function renderer(_ref) {
     if (hours > 48) {
       return /*#__PURE__*/_react.default.createElement("span", {
         className: cn + ' timer'
-      }, Math.floor(hours / 24), " dager");
+      }, Math.floor(hours / 24), " dager igjen");
     } else if (hours > 24 && hours <= 48) {
       return /*#__PURE__*/_react.default.createElement("span", {
         className: cn + ' timer'
