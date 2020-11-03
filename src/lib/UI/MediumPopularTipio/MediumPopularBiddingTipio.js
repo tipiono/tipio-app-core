@@ -2,7 +2,7 @@ import React from 'react';
 import MediumPopularTipio from './MediumPopularTipio';
 import SecondaryButton from '../Buttons/SecondaryButton';
 import SecondaryOutlineButton from '../Buttons/SecondaryButton';
-import { getBestPrice } from '../../Util/calculateDiscountPercentage';
+import replaceWithSpace from '../../Util/replaceWithSpace';
 
 const MediumPopularBiddingTipio = (props) => {
     return (
@@ -11,7 +11,7 @@ const MediumPopularBiddingTipio = (props) => {
                 <h6 className="mediumPopularTipio__content__price--marketprice">{props.market_price} Kr</h6>
                 <h6 className="mediumPopularTipio__content__price--saleprice">
                     {' '}
-                    {getBestPrice(props.tipio_offer.offer_price_ranges).toLocaleString('nb-NO')} kr
+                    {props?.tipio_offer?.price && replaceWithSpace(props.tipio_offer.price)} Kr
                 </h6>
             </div>
 
