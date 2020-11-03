@@ -47,13 +47,13 @@ var BaseCard = function BaseCard(_ref) {
     className: "customerSidebarCard__price--cost--label"
   }, "F\xF8rpris"), /*#__PURE__*/_react.default.createElement("h6", {
     className: "customerSidebarCard__price--cost--amount"
-  }, '399', " Kr")), /*#__PURE__*/_react.default.createElement("div", {
+  }, (props === null || props === void 0 ? void 0 : props.market_price) && (0, _replaceWithSpace.default)(props === null || props === void 0 ? void 0 : props.market_price), " Kr")), /*#__PURE__*/_react.default.createElement("div", {
     className: "customerSidebarCard__price--sale"
   }, /*#__PURE__*/_react.default.createElement("p", {
     className: "customerSidebarCard__price--sale--label"
   }, "Gruppepris"), /*#__PURE__*/_react.default.createElement("h6", {
     className: "customerSidebarCard__price--sale--amount"
-  }, "1234 Kr")))), /*#__PURE__*/_react.default.createElement("div", {
+  }, (props === null || props === void 0 ? void 0 : props.price) && (0, _replaceWithSpace.default)(props.price), " Kr")))), /*#__PURE__*/_react.default.createElement("div", {
     className: "customerSidebarCard__footer"
   }, children));
 };
