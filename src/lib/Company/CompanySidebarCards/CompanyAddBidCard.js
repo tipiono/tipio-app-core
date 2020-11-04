@@ -3,16 +3,7 @@ import CompanySidebarBaseCard from './CompanySidebarBaseCard';
 import generatePrice from '../../Util/generatePrice';
 
 const CompanyAddBidCard = (props) => {
-    const {
-        tipio,
-        meta,
-        showMinimumPrice,
-        showNewPrice,
-        showBindingCount,
-        showOfferPrice,
-        firstRange,
-        secondRange
-    } = props;
+    const { tipio, meta, showMinimumPrice, showNewPrice, showBindingCount, showOfferPrice, price } = props;
 
     return (
         <div className="companyAddBidCard">
@@ -54,7 +45,7 @@ const CompanyAddBidCard = (props) => {
                                     Ny pris
                                 </p>
                                 <h6 className="companyAddBidCard__price--sale--amount">
-                                    {generatePrice(meta.joined_count, firstRange, secondRange)} Kr
+                                    {generatePrice(meta.joined_count, price)} Kr
                                 </h6>
                             </>
                         )}
@@ -66,9 +57,7 @@ const CompanyAddBidCard = (props) => {
                                 >
                                     Ditt tilbud
                                 </p>
-                                <h6 className="companyAddBidCard__price--sale--amount">
-                                    {generatePrice(meta.joined_count, firstRange, secondRange)} Kr
-                                </h6>
+                                <h6 className="companyAddBidCard__price--sale--amount">{price} Kr</h6>
                             </>
                         )}
                     </div>
