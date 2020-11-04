@@ -44,9 +44,7 @@ const CompanyAddBidCard = (props) => {
                                 >
                                     Ny pris
                                 </p>
-                                <h6 className="companyAddBidCard__price--sale--amount">
-                                    {generatePrice(meta.joined_count, price)} Kr
-                                </h6>
+                                <h6 className="companyAddBidCard__price--sale--amount">{price} Kr</h6>
                             </>
                         )}
                         {showOfferPrice && (

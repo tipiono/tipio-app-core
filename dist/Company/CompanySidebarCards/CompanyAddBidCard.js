@@ -49,7 +49,7 @@ var CompanyAddBidCard = function CompanyAddBidCard(props) {
     id: props.__onboardingMinimumPriceId || 'priceSale'
   }, "Ny pris"), /*#__PURE__*/_react.default.createElement("h6", {
     className: "companyAddBidCard__price--sale--amount"
-  }, (0, _generatePrice.default)(meta.joined_count, price), " Kr")), showOfferPrice && /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("p", {
+  }, price, " Kr")), showOfferPrice && /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("p", {
     className: "companyAddBidCard__price--sale--label",
     id: props.__onboardingMinimumPriceId || 'priceSale'
   }, "Ditt tilbud"), /*#__PURE__*/_react.default.createElement("h6", {
