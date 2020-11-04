@@ -19,14 +19,32 @@ const BaseCard = ({ children, ...props }) => {
                     ''
                 )}
 
-                <div className="customerSidebarCard__header__cost">
-                    <p className="customerSidebarCard__header__cost--label" id={props.marketPriceId}>
-                        Markedspris
-                    </p>
-                    <h4 className="customerSidebarCard__header__cost--price">
-                        {props?.market_price && replaceWithSpace(props?.market_price)} Kr
-                    </h4>
-                </div>
+                {props.expiredTipio ? (
+                    <div className="customerSidebarCard__header__cost">
+                        <p className="customerSidebarCard__header__cost--label" id={props.marketPriceId}>
+                            Markedspris
+                        </p>
+                        <h4 className="customerSidebarCard__header__cost--price">
+                            {props?.market_price && replaceWithSpace(props?.market_price)} Kr
+                        </h4>
+                    </div>
+                ) : (
+                    <div className="customerSidebarCard__price">
+                        <div className="customerSidebarCard__price--cost">
+                            <p className="customerSidebarCard__price--cost--label">Førpris</p>
+                            <h6 className="customerSidebarCard__price--cost--amount">
+                                {props?.market_price && replaceWithSpace(props?.market_price)} Kr
+                            </h6>
+                        </div>
+
+                        <div className="customerSidebarCard__price--sale">
+                            <p className="customerSidebarCard__price--sale--label">Gruppepris</p>
+                            <h6 className="customerSidebarCard__price--sale--amount">
+                                {props?.price && replaceWithSpace(props.price)} Kr
+                            </h6>
+                        </div>
+                    </div>
+                )}
             </div>
 
             <div className="customerSidebarCard__footer">{children}</div>

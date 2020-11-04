@@ -26,7 +26,7 @@ function TipioOfTheDay({
                     (props.bindingTipio && (
                         <>
                             <span className="imageSlider__discount">
-                                {createDiscountLabel(props.market_price, props.tipio_offer.offer_price_ranges)}
+                                {createDiscountLabel(props.market_price, props.tipio_offer.price)}
                             </span>
                             <div className="tipioOfTheDay__preview--timeLeft">
                                 <TipioCountdown
