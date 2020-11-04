@@ -18,7 +18,7 @@ function _objectWithoutProperties(source, excluded) { if (source == null) return
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
 var SmallPopularTipio = function SmallPopularTipio(_ref) {
-  var _props$tipio_offer;
+  var _props$tipio_offer, _props$tipio_offer2;
 
   var id = _ref.id,
       children = _ref.children,
@@ -42,7 +42,7 @@ var SmallPopularTipio = function SmallPopularTipio(_ref) {
     alt: ""
   }), type === 2 && /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, ' ', /*#__PURE__*/_react.default.createElement("span", {
     className: "imageSlider__discount"
-  }, (0, _calculateDiscountPercentage.createDiscountLabel)(props.market_price, (_props$tipio_offer = props.tipio_offer) === null || _props$tipio_offer === void 0 ? void 0 : _props$tipio_offer.price)), /*#__PURE__*/_react.default.createElement("div", {
+  }, ((_props$tipio_offer = props.tipio_offer) === null || _props$tipio_offer === void 0 ? void 0 : _props$tipio_offer.price) && (0, _calculateDiscountPercentage.createDiscountLabel)(props.market_price, (_props$tipio_offer2 = props.tipio_offer) === null || _props$tipio_offer2 === void 0 ? void 0 : _props$tipio_offer2.price)), /*#__PURE__*/_react.default.createElement("div", {
     className: "smallPopularTipio__preview--timeLeft"
   }, /*#__PURE__*/_react.default.createElement(_TipioCountdown.default, {
     className: "timer",
