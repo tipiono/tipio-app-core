@@ -18,7 +18,7 @@ const BindingCard = ({
     return (
         <BaseCard {...props}>
             {children}
-            {bindCount > 0 && (
+            {!props.expiredTipio && bindCount > 0 && (
                 <p className="customerSidebarCard__footer--interestedCounter">{bindCount} har allerede kjøpt!</p>
             )}
             {props.expiredTipio && (
