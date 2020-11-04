@@ -39,7 +39,7 @@ var CompanySidebarBaseCard = function CompanySidebarBaseCard(_ref) {
     className: "placeholder-content companySidebarCard__header--placeholder"
   }, "\xA0") : /*#__PURE__*/_react.default.createElement("h3", {
     className: "companySidebarCard__header__cost--price"
-  }, generatedRevenue ? generatedRevenue : meta.potential_earning, " Kr"))), children);
+  }, generatedRevenue !== undefined ? generatedRevenue : meta.potential_earning, " Kr"))), children);
 };
 
 var _default = CompanySidebarBaseCard;

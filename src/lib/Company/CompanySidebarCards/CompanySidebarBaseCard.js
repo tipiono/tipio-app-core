@@ -18,7 +18,7 @@ const CompanySidebarBaseCard = ({ children, ...props }) => {
                         <div className="placeholder-content companySidebarCard__header--placeholder">&nbsp;</div>
                     ) : (
                         <h3 className="companySidebarCard__header__cost--price">
-                            {generatedRevenue ? generatedRevenue : meta.potential_earning} Kr
+                            {generatedRevenue !== undefined ? generatedRevenue : meta.potential_earning} Kr
                         </h3>
                     )}
                 </div>
