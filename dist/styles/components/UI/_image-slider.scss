@@ -138,11 +138,11 @@
         position: absolute;
         top: 0;
         left: 0;
-        font-size: 1rem;
-        font-family: 'Riposte-Medium', sans-serif;
         color: #fff;
         background: #e74298;
-        padding: 0.5rem 0.7rem;
+        padding: 5px 21px;
+        font-family: 'DroidSansMono', sans-serif;
+        font-size: 12px;
     }
 
     @include media-breakpoint-down(sm) {
@@ -181,11 +181,6 @@
 
         &__countDown {
             bottom: 0px;
-        }
-
-        &__discount {
-            font-size: 1rem;
-            padding: 0.4375rem 0.6875rem;
         }
     }
 }
