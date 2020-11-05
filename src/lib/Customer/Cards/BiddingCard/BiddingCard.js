@@ -61,20 +61,6 @@ function BiddingCard({
                         </a>
                         {brand && <p className="biddingCard__body--content--description">{brand.toUpperCase()}</p>}
                     </div>
-
-                    <div className="biddingCard__body--salesbar">
-                        {!bindHasExpired &&
-                            (bindingCount > 0 ? (
-                                <>
-                                    <SalesProgressBar
-                                        percentage={salesProgressBarPercentage}
-                                        bindingCount={bindingCount}
-                                    />
-                                </>
-                            ) : (
-                                ''
-                            ))}
-                    </div>
                     <div className="biddingCard__body--share">{children}</div>
                 </div>
             </div>
