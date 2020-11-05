@@ -6,7 +6,7 @@ import GrayOutlineButton from '../../UI/Buttons/GrayOutlineButton';
 
 const VotingCard = ({ state, ...props }) => {
     return (
-        <BaseCard {...props}>
+        <BaseCard {...props} vote={true}>
             {state === 'display_interested_button' && (
                 <>
                     <div className="customerSidebarCard__footer--action">
