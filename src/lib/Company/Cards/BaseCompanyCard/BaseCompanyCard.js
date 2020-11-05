@@ -46,7 +46,7 @@ const BaseCompanyCard = ({
                             </a>
                         )}
 
-                        <div className="baseCompanyCard__header--timeLeft">
+                        <div className="timeleft__countdown">
                             <TipioCountdown className="timer" expires_in={expires_in} />
                         </div>
                         {sustainable && (

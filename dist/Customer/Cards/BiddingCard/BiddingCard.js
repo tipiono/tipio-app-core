@@ -47,7 +47,7 @@ function BiddingCard(_ref) {
   })), expiresIn && /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("span", {
     className: "imageSlider__discount"
   }, (0, _calculateDiscountPercentage.createDiscountLabel)(costPrice, salePrice)), /*#__PURE__*/_react.default.createElement("div", {
-    className: "biddingCard__header--timeLeft"
+    className: "timeleft__countdown"
   }, /*#__PURE__*/_react.default.createElement(_TipioCountdown.default, {
     className: "timer",
     expires_in: expiresIn
