@@ -11,15 +11,12 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _SecondaryButton = _interopRequireDefault(require("../../../UI/Buttons/SecondaryButton"));
 
-var _generatePrice = _interopRequireDefault(require("../../../Util/generatePrice"));
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var FooterMainCard = function FooterMainCard(_ref) {
   var title = _ref.title,
       marketPrice = _ref.marketPrice,
-      firstRange = _ref.firstRange,
-      secondRange = _ref.secondRange,
+      price = _ref.price,
       bindCount = _ref.bindCount,
       onBindClick = _ref.onBindClick;
   return /*#__PURE__*/_react.default.createElement("div", {
@@ -44,7 +41,7 @@ var FooterMainCard = function FooterMainCard(_ref) {
     className: "footerMainCard__content__priceValue"
   }, /*#__PURE__*/_react.default.createElement("h6", {
     className: "footerMainCard__content__priceValue__new"
-  }, (0, _generatePrice.default)(bindCount, firstRange, secondRange), " Kr"), /*#__PURE__*/_react.default.createElement("h6", {
+  }, price, " Kr"), /*#__PURE__*/_react.default.createElement("h6", {
     className: "footerMainCard__content__priceValue__first"
   }, marketPrice, " Kr")))), /*#__PURE__*/_react.default.createElement("div", {
     className: "col-4 col-md-3 ml-auto"
@@ -58,8 +55,7 @@ var FooterMainCard = function FooterMainCard(_ref) {
 FooterMainCard.propTypes = {
   title: _propTypes.default.string.isRequired,
   marketPrice: _propTypes.default.string.isRequired,
-  firstRange: _propTypes.default.object.isRequired,
-  secondRange: _propTypes.default.object.isRequired,
+  price: _propTypes.default.string.isRequired,
   bindCount: _propTypes.default.number.isRequired,
   onBindClick: _propTypes.default.func.isRequired
 };

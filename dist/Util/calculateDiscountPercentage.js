@@ -15,13 +15,9 @@ function calculateDiscountPercentage(price, salePrice) {
 }
 
 var getBestPrice = function getBestPrice(priceRange) {
-  var _priceRange$, _priceRange$2, _priceRange$4;
+  var _priceRange$;
 
-  if (parseInt((_priceRange$ = priceRange[0]) === null || _priceRange$ === void 0 ? void 0 : _priceRange$.price) < parseInt((_priceRange$2 = priceRange[1]) === null || _priceRange$2 === void 0 ? void 0 : _priceRange$2.price)) {
-    var _priceRange$3;
-
-    return parseInt((_priceRange$3 = priceRange[0]) === null || _priceRange$3 === void 0 ? void 0 : _priceRange$3.price);
-  } else return parseInt((_priceRange$4 = priceRange[1]) === null || _priceRange$4 === void 0 ? void 0 : _priceRange$4.price);
+  return parseInt((_priceRange$ = priceRange[0]) === null || _priceRange$ === void 0 ? void 0 : _priceRange$.price);
 };
 
 exports.getBestPrice = getBestPrice;

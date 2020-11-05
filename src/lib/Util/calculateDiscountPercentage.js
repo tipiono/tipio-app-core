@@ -6,9 +6,7 @@ function calculateDiscountPercentage(price, salePrice) {
 }
 
 export const getBestPrice = (priceRange) => {
-    if (parseInt(priceRange[0]?.price) < parseInt(priceRange[1]?.price)) {
-        return parseInt(priceRange[0]?.price);
-    } else return parseInt(priceRange[1]?.price);
+    return parseInt(priceRange[0]?.price);
 };
 
 export const createDiscountLabel = (price, salePrice) => {
