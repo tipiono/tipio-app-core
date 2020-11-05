@@ -19,7 +19,6 @@ var BaseCard = function BaseCard(_ref) {
   var children = _ref.children,
       props = _objectWithoutProperties(_ref, ["children"]);
 
-  console.log(props.expiredTipio);
   return /*#__PURE__*/_react.default.createElement("div", {
     className: "customerSidebarCard",
     id: props.id
