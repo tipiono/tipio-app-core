@@ -26,7 +26,7 @@ const FeatureTipiosCompanyCards = ({ expires_in, brand, binding_count, forceLoad
                                 />
                             </a>
                         )}
-                        <div className="featureTipiosCompanyCards__header--timeLeft">
+                        <div className="timeleft__countdown">
                             <TipioCountdown className="timer" expires_in={expires_in} />
                         </div>
                     </div>

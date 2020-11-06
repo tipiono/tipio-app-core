@@ -57,7 +57,7 @@ var BaseCompanyCard = function BaseCompanyCard(_ref) {
     src: !forceLoad ? "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 2'%3E%3C/svg%3E" : props.images[0].blob_url,
     alt: ""
   })), /*#__PURE__*/_react.default.createElement("div", {
-    className: "baseCompanyCard__header--timeLeft"
+    className: "timeleft__countdown"
   }, /*#__PURE__*/_react.default.createElement(_TipioCountdown.default, {
     className: "timer",
     expires_in: expires_in

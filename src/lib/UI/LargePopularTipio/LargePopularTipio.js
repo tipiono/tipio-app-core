@@ -29,7 +29,7 @@ const LargePopularTipio = ({
                         <span className="imageSlider__discount">
                             {createDiscountLabel(market_price, tipio_offer?.price)}
                         </span>
-                        <div className="largePopularTipio__preview--timeLeft">
+                        <div className="timeleft__countdown">
                             <TipioCountdown className="timer" expires_in={binding_expires_in} />
                         </div>
                     </>

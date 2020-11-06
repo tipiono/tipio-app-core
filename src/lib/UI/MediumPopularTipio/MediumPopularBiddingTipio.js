@@ -8,7 +8,9 @@ const MediumPopularBiddingTipio = (props) => {
     return (
         <MediumPopularTipio {...props}>
             <div className="mediumPopularTipio__content__price">
-                <h6 className="mediumPopularTipio__content__price--marketprice">{props.market_price} Kr</h6>
+                <h6 className="mediumPopularTipio__content__price--marketprice">
+                    {props.market_price && replaceWithSpace(props.market_price)} Kr
+                </h6>
                 <h6 className="mediumPopularTipio__content__price--saleprice">
                     {' '}
                     {props?.tipio_offer?.price && replaceWithSpace(props.tipio_offer.price)} Kr

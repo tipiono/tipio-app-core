@@ -26,13 +26,6 @@
             }
         }
 
-        &--timeLeft {
-            span {
-                position: absolute;
-                bottom: 0;
-                right: 0;
-            }
-        }
         &--sustainable {
             position: absolute;
             bottom: 0;
@@ -168,14 +161,6 @@
                     -webkit-transform: translateZ(0) scale(1.04, 1.04);
                     transform: translateZ(0) scale(1.04, 1.04);
                 }
-            }
-        }
-
-        &--timeLeft {
-            span {
-                position: absolute;
-                bottom: 0;
-                right: 0;
             }
         }
     }

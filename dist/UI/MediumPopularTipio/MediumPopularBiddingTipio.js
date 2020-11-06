@@ -22,7 +22,7 @@ var MediumPopularBiddingTipio = function MediumPopularBiddingTipio(props) {
     className: "mediumPopularTipio__content__price"
   }, /*#__PURE__*/_react.default.createElement("h6", {
     className: "mediumPopularTipio__content__price--marketprice"
-  }, props.market_price, " Kr"), /*#__PURE__*/_react.default.createElement("h6", {
+  }, props.market_price && (0, _replaceWithSpace.default)(props.market_price), " Kr"), /*#__PURE__*/_react.default.createElement("h6", {
     className: "mediumPopularTipio__content__price--saleprice"
   }, ' ', (props === null || props === void 0 ? void 0 : (_props$tipio_offer = props.tipio_offer) === null || _props$tipio_offer === void 0 ? void 0 : _props$tipio_offer.price) && (0, _replaceWithSpace.default)(props.tipio_offer.price), " Kr")), /*#__PURE__*/_react.default.createElement("div", {
     className: "mediumPopularTipio__content__submit"

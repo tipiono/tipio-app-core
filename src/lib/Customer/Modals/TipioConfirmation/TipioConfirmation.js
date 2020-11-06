@@ -18,7 +18,7 @@ function TipioConfirmation({ image, expiresIn, share, title, description, ...pro
                     <a className="tipio__confirmation--image" href="">
                         <img className="img-fluid" src={image} width="310px" alt="Tipio with offer" />
 
-                        <div className="tipio__confirmation--timeLeft">
+                        <div className="timeleft__countdown">
                             <TipioCountdown className="timer" expires_in={expiresIn} />
                         </div>
                     </a>
