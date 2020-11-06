@@ -55,7 +55,7 @@ function TipioConfirmation(_ref) {
     width: "310px",
     alt: "Tipio with offer"
   }), /*#__PURE__*/_react.default.createElement("div", {
-    className: "tipio__confirmation--timeLeft"
+    className: "timeleft__countdown"
   }, /*#__PURE__*/_react.default.createElement(_TipioCountdown.default, {
     className: "timer",
     expires_in: expiresIn

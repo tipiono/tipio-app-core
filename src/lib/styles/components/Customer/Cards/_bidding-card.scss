@@ -26,14 +26,6 @@
                 }
             }
         }
-
-        &--timeLeft {
-            span {
-                position: absolute;
-                bottom: 2px;
-                right: 0;
-            }
-        }
     }
 
     &__body {
@@ -98,11 +90,6 @@
                 &--image {
                     max-height: 240px;
                 }
-            }
-
-            .imageSlider__discount {
-                font-size: 0.75rem;
-                padding: 0.3125rem 0.5rem;
             }
         }
 
