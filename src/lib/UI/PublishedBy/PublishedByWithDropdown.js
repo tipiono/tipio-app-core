@@ -30,7 +30,7 @@ const PublishedByWithDropDown = (props) => {
                             quote={share.title}
                             className="Demo__some-network__share-button"
                         >
-                            Del på facebook
+                            Del på Facebook
                         </FacebookShareButton>
                     </NewDropdownItem>
                     <NewDropdownItem
@@ -38,7 +38,7 @@ const PublishedByWithDropDown = (props) => {
                         href={messengerShareUrlMobile(share.link)}
                         onClick={!isMobile ? (_) => shareOnMessengerWeb(share.link) : undefined}
                     >
-                        Del på Messanger
+                        Del på Messenger
                     </NewDropdownItem>
                     <NewDropdownItem key={'3'}>
                         <TwitterShareButton
