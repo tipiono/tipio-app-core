@@ -18,9 +18,6 @@ const BindingCard = ({
     return (
         <BaseCard {...props}>
             {children}
-            {!props.expiredTipio && bindCount > 0 && (
-                <p className="customerSidebarCard__footer--interestedCounter">{bindCount} har allerede kjøpt!</p>
-            )}
             {props.expiredTipio && (
                 <>
                     <SecondaryOutlineButton text={'Gjenopprett'} onClick={onRestoreClick} />
