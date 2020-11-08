@@ -28,9 +28,7 @@ function SalesProgressBarTooltip(_ref) {
       marginLeft: "".concat(percentage, "%")
     },
     className: "tooltip-progressbar"
-  })), bindCount > 0 && /*#__PURE__*/_react.default.createElement("div", {
-    className: "sales__progress--tooltip middle"
-  }, /*#__PURE__*/_react.default.createElement("span", null, bindCount, " har allerede kj\xF8pt!")));
+  })));
 }
 
 var _default = SalesProgressBarTooltip;

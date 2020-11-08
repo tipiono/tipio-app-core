@@ -14,13 +14,6 @@ function SalesProgressBarTooltip({ percentage, bindCount }) {
                 />
                 <span style={{ marginLeft: `${percentage}%` }} className="tooltip-progressbar"></span>
             </div>
-
-            {bindCount > 0 && (
-                <div className="sales__progress--tooltip middle">
-                    <span>{bindCount} har allerede kjøpt!</span>
-                </div>
-            )}
-            {/* </div> */}
         </>
     );
 }
