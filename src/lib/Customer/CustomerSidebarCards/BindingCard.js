@@ -9,9 +9,7 @@ const BindingCard = ({
     secondRange,
     onShareClick,
     onBindClick,
-    bindingPercentage,
     onRestoreClick,
-    isIceTipio,
     bindCount,
     ...props
 }) => {
