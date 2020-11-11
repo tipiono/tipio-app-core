@@ -67,6 +67,7 @@ function Select(_ref) {
   }, label), /*#__PURE__*/_react.default.createElement(_reactSelect.default, {
     value: value,
     onChange: _onChange,
+    className: errors ? 'error-label' : '',
     options: options.map(function (x) {
       return {
         value: x,
