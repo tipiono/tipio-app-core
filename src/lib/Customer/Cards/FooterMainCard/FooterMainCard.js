@@ -13,10 +13,10 @@ const FooterMainCard = ({ title, marketPrice, price, bindCount, onBindClick }) =
                     <div className="footerMainCard__content">
                         <div className="footerMainCard__content__priceLabel">
                             <h6 className="footerMainCard__content__priceLabel__new">Pris nå</h6>
-                            <h6 className="footerMainCard__content__priceLabel__first">Markedspris</h6>
+                            <h6 className="footerMainCard__content__priceLabel__first">Førpris</h6>
                         </div>
                         <div className="footerMainCard__content__priceValue">
-                            <h6 className="footerMainCard__content__priceValue__new">{price} Kr</h6>
+                            <h6 className="footerMainCard__content__priceValue__newPrice">{price} Kr</h6>
                             <h6 className="footerMainCard__content__priceValue__first">{marketPrice} Kr</h6>
                         </div>
                     </div>
