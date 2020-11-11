@@ -6,6 +6,7 @@
         text-align: center;
         background: $white;
         cursor: pointer;
+        border: 1px solid #e5e5e5;
 
         &--image {
             max-width: 100%;
@@ -72,7 +73,7 @@
             &--saleprice {
                 font-size: 1.5rem;
                 margin-bottom: 0;
-                color: $cyan;
+                color: $pink;
             }
         }
 

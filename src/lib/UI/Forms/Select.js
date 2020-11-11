@@ -29,6 +29,7 @@ function Select({
             <ReactSelect
                 value={value}
                 onChange={_onChange}
+                className={errors ? 'error-label' : ''}
                 options={options.map((x) => ({ value: x, label: x }))}
                 placeholder={placeholder || '-'}
                 isClearable={false}
