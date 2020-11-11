@@ -37,10 +37,10 @@ var FooterMainCard = function FooterMainCard(_ref) {
     className: "footerMainCard__content__priceLabel__new"
   }, "Pris n\xE5"), /*#__PURE__*/_react.default.createElement("h6", {
     className: "footerMainCard__content__priceLabel__first"
-  }, "Markedspris")), /*#__PURE__*/_react.default.createElement("div", {
+  }, "F\xF8rpris")), /*#__PURE__*/_react.default.createElement("div", {
     className: "footerMainCard__content__priceValue"
   }, /*#__PURE__*/_react.default.createElement("h6", {
-    className: "footerMainCard__content__priceValue__new"
+    className: "footerMainCard__content__priceValue__newPrice"
   }, price, " Kr"), /*#__PURE__*/_react.default.createElement("h6", {
     className: "footerMainCard__content__priceValue__first"
   }, marketPrice, " Kr")))), /*#__PURE__*/_react.default.createElement("div", {
