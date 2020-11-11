@@ -1,32 +1,32 @@
 .tipio__withOffer {
-  padding: 5.625rem 0;
-  text-align: center;
+    padding: 5.625rem 0;
+    text-align: center;
 
-  &--image {
-    max-width: 100%;
-    height: auto;
-    border: 1px solid $gray-100;
-    margin-bottom: 1.5rem;
-  }
+    &--image {
+        max-width: 100%;
+        height: auto;
+        border: 1px solid $gray-100;
+        margin-bottom: 1.5rem;
+    }
 
-  &--title {
-    font-family: 'Riposte-Regular', sans-serif;
-    margin-bottom: .8rem;
-  }
+    &--title {
+        font-family: 'Riposte-Regular', sans-serif;
+        margin-bottom: 0.8rem;
+    }
 
-  &--description {
-    margin-bottom: 1.25rem;
-    font-size: 1.125rem;
-    line-height: 1.5rem;
-  }
+    &--description {
+        margin-bottom: 1.25rem;
+        font-size: 1.125rem;
+        line-height: 1.5rem;
+    }
 
-  &--salePrice {
-    color: $pink;
-    margin-bottom: 2.2rem;
-  }
+    &--salePrice {
+        color: $pink;
+        margin-bottom: 2.2rem;
+    }
 
-  &--action {
-    width: 50%;
-    margin: 0 auto;
-  }
+    &--action {
+        width: 50%;
+        margin: 0 auto;
+    }
 }
