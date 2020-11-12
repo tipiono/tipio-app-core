@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = void 0;
 
 function formatText(input, formatter, separator) {
-  var maxLength = 160;
+  var maxLength = 155;
   var text;
   var rest;
 
