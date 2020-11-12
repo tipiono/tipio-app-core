@@ -1,5 +1,5 @@
 function formatText(input, formatter, separator) {
-    const maxLength = 155;
+    const maxLength = 145;
     let text;
     let rest;
 
