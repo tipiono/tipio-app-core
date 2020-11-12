@@ -25,7 +25,7 @@ exports.getBestPrice = getBestPrice;
 var createDiscountLabel = function createDiscountLabel(price, salePrice) {
   var bestPrice = _typeof(salePrice) === 'object' ? getBestPrice(salePrice) : salePrice;
   var discount = calculateDiscountPercentage(price, bestPrice);
-  return discount < -25 ? "".concat(discount, "%") : "-".concat(price - bestPrice, " Kr");
+  return discount < -21 ? "".concat(discount, "%") : "-".concat(price - bestPrice, " Kr");
 };
 
 exports.createDiscountLabel = createDiscountLabel;
