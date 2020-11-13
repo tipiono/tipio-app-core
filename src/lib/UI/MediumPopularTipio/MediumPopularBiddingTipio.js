@@ -21,7 +21,7 @@ const MediumPopularBiddingTipio = (props) => {
                 {props.binded ? (
                     <SecondaryOutlineButton text="Del nå" onClick={props.shareOnClick} />
                 ) : (
-                    <SecondaryButton text={'Se produkt'} onClick={props.bindOnClick} />
+                    <SecondaryButton text={'Se tilbud'} onClick={props.bindOnClick} />
                 )}
             </div>
         </MediumPopularTipio>
