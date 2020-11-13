@@ -4,7 +4,7 @@ import Countdown, { calcTimeDelta, formatTimeDelta } from 'react-countdown-now/d
 const Completionist = () => <span className="inactive timer">Ikke aktiv</span>;
 
 const renderer = ({ hours, minutes, seconds, completed }) => {
-    let cn = hours < 48 ? 'purple' : 'turquoise';
+    let cn = 'purple';
     if (completed) {
         return <Completionist />;
     } else {
