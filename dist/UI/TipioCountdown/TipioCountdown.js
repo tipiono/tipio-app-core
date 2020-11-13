@@ -54,7 +54,7 @@ var _renderer = function renderer(_ref) {
       minutes = _ref.minutes,
       seconds = _ref.seconds,
       completed = _ref.completed;
-  var cn = hours < 48 ? 'purple' : 'turquoise';
+  var cn = 'purple';
 
   if (completed) {
     return /*#__PURE__*/_react.default.createElement(Completionist, null);
