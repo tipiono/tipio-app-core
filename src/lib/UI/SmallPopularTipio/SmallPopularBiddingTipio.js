@@ -16,7 +16,7 @@ const SmallPopularBiddingTipio = (props) => {
             </div>
 
             <div className="smallPopularTipio__content__submit">
-                <SecondaryButton text={'Se produkt'} onClick={props.bindOnClick} />
+                <SecondaryButton text={'Se tilbud'} onClick={props.bindOnClick} />
             </div>
         </SmallPopularTipio>
     );
