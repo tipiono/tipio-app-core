@@ -33,7 +33,7 @@ var LargePopularBidingTipio = function LargePopularBidingTipio(props) {
     text: "Del n\xE5",
     onClick: props.shareOnClick
   }) : /*#__PURE__*/_react.default.createElement(_SecondaryButton.default, {
-    text: 'Se produkt',
+    text: 'Se tilbud',
     onClick: props.bindOnClick
   })));
 };
