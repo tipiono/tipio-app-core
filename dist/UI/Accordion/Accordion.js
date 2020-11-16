@@ -86,7 +86,7 @@ var Accordion = /*#__PURE__*/function (_Component) {
     _this = _super.call(this, props);
     _this.headerOnClick = _this.headerOnClick.bind(_assertThisInitialized(_this));
     _this.state = {
-      active: 0
+      active: _this.props.show ? 1 : 0
     };
     return _this;
   }

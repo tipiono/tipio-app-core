@@ -29,7 +29,7 @@ const SmallPopularTipio = ({
                             {props.tipio_offer?.price &&
                                 createDiscountLabel(props.market_price, props.tipio_offer?.price)}
                         </span>
-                        <div className="smallPopularTipio__preview--timeLeft">
+                        <div className="timeleft__countdown">
                             <TipioCountdown className="timer" expires_in={binding_expires_in} />
                         </div>
                     </>

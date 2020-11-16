@@ -45,7 +45,7 @@ class Accordion extends Component {
         super(props);
         this.headerOnClick = this.headerOnClick.bind(this);
         this.state = {
-            active: 0
+            active: this.props.show ? 1 : 0
         };
     }
 
@@ -55,7 +55,6 @@ class Accordion extends Component {
         active = active === this.state.active ? 0 : active;
         this.setState({ active });
     }
-
     render() {
         return (
             <div className="customAccordion" id="accordionExample">

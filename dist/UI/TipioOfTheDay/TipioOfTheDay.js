@@ -42,7 +42,7 @@ function TipioOfTheDay(_ref) {
   }), showTimer || props.bindingTipio && /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("span", {
     className: "imageSlider__discount"
   }, (0, _calculateDiscountPercentage.createDiscountLabel)(props.market_price, props.tipio_offer.price)), /*#__PURE__*/_react.default.createElement("div", {
-    className: "tipioOfTheDay__preview--timeLeft"
+    className: "timeleft__countdown"
   }, /*#__PURE__*/_react.default.createElement(_TipioCountdown.default, {
     className: "timer",
     expires_in: props.bindingTipio ? props.binding_expires_in : voting_expires_in

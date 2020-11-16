@@ -40,7 +40,7 @@ function VotingCard(_ref) {
     "data-src": image,
     alt: ""
   })), showTimmer && /*#__PURE__*/_react.default.createElement("div", {
-    className: "votingCard__header--timeLeft"
+    className: "timeleft__countdown"
   }, /*#__PURE__*/_react.default.createElement(_TipioCountdown.default, {
     className: "timer",
     expires_in: expiresIn

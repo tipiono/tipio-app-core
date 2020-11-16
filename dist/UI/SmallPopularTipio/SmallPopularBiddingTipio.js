@@ -22,12 +22,12 @@ var SmallPopularBiddingTipio = function SmallPopularBiddingTipio(props) {
     className: "smallPopularTipio__content__price"
   }, /*#__PURE__*/_react.default.createElement("h6", {
     className: "smallPopularTipio__content__price--marketprice"
-  }, props.market_price, " Kr"), /*#__PURE__*/_react.default.createElement("h6", {
+  }, props.market_price && (0, _replaceWithSpace.default)(props.market_price), " Kr"), /*#__PURE__*/_react.default.createElement("h6", {
     className: "smallPopularTipio__content__price--saleprice"
   }, (props === null || props === void 0 ? void 0 : (_props$tipio_offer = props.tipio_offer) === null || _props$tipio_offer === void 0 ? void 0 : _props$tipio_offer.price) && (0, _replaceWithSpace.default)(props === null || props === void 0 ? void 0 : (_props$tipio_offer2 = props.tipio_offer) === null || _props$tipio_offer2 === void 0 ? void 0 : _props$tipio_offer2.price), " Kr")), /*#__PURE__*/_react.default.createElement("div", {
     className: "smallPopularTipio__content__submit"
   }, /*#__PURE__*/_react.default.createElement(_SecondaryButton.default, {
-    text: 'Se produkt',
+    text: 'Se tilbud',
     onClick: props.bindOnClick
   })));
 };

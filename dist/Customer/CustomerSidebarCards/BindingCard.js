@@ -24,15 +24,11 @@ var BindingCard = function BindingCard(_ref) {
       secondRange = _ref.secondRange,
       onShareClick = _ref.onShareClick,
       onBindClick = _ref.onBindClick,
-      bindingPercentage = _ref.bindingPercentage,
       onRestoreClick = _ref.onRestoreClick,
-      isIceTipio = _ref.isIceTipio,
       bindCount = _ref.bindCount,
-      props = _objectWithoutProperties(_ref, ["children", "state", "firstRange", "secondRange", "onShareClick", "onBindClick", "bindingPercentage", "onRestoreClick", "isIceTipio", "bindCount"]);
+      props = _objectWithoutProperties(_ref, ["children", "state", "firstRange", "secondRange", "onShareClick", "onBindClick", "onRestoreClick", "bindCount"]);
 
-  return /*#__PURE__*/_react.default.createElement(_BaseCard.default, props, children, !props.expiredTipio && bindCount > 0 && /*#__PURE__*/_react.default.createElement("p", {
-    className: "customerSidebarCard__footer--interestedCounter"
-  }, bindCount, " har allerede kj\xF8pt!"), props.expiredTipio && /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_SecondaryOutlineButton.default, {
+  return /*#__PURE__*/_react.default.createElement(_BaseCard.default, props, children, props.expiredTipio && /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_SecondaryOutlineButton.default, {
     text: 'Gjenopprett',
     onClick: onRestoreClick
   }), /*#__PURE__*/_react.default.createElement("p", {

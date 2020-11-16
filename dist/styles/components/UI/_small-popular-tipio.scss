@@ -8,6 +8,7 @@
         background: $white;
         text-align: center;
         cursor: pointer;
+        border: 1px solid #f5f5f5;
 
         &--image {
             max-width: 100%;
@@ -24,12 +25,6 @@
                 -webkit-transform: translateZ(0) scale(1.04, 1.04);
                 transform: translateZ(0) scale(1.04, 1.04);
             }
-        }
-
-        &--timeLeft {
-            position: absolute;
-            bottom: 0;
-            right: 0;
         }
     }
 
@@ -81,7 +76,7 @@
             &--saleprice {
                 font-size: 1.5rem;
                 margin-bottom: 0;
-                color: $cyan;
+                color: $pink;
             }
         }
 
