@@ -5,6 +5,10 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = exports.createDiscountLabel = exports.getBestPrice = void 0;
 
+var _replaceWithSpace = _interopRequireDefault(require("./replaceWithSpace"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function calculateDiscountPercentage(price, salePrice) {
@@ -25,7 +29,8 @@ exports.getBestPrice = getBestPrice;
 var createDiscountLabel = function createDiscountLabel(price, salePrice) {
   var bestPrice = _typeof(salePrice) === 'object' ? getBestPrice(salePrice) : salePrice;
   var discount = calculateDiscountPercentage(price, bestPrice);
-  return price - bestPrice < 1000 ? "".concat(discount, "%") : "-".concat(price - bestPrice, " Kr");
+  var priceToShow = price - bestPrice;
+  return priceToShow < 1000 ? "".concat(discount, "%") : "-" + (0, _replaceWithSpace.default)(priceToShow.toString()) + " Kr";
 };
 
 exports.createDiscountLabel = createDiscountLabel;
