@@ -49,15 +49,19 @@ var SmallPopularTipio = function SmallPopularTipio(_ref) {
     expires_in: binding_expires_in
   })))), /*#__PURE__*/_react.default.createElement("div", {
     className: "smallPopularTipio__content"
-  }, /*#__PURE__*/_react.default.createElement("a", {
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "smallPopularTipio__content--inner"
+  }, ' ', /*#__PURE__*/_react.default.createElement("a", {
     href: "/tipio/".concat(type === 2 ? 'bind' : 'vote', "/").concat(id),
     onClick: onClick,
-    className: "text-truncate smallPopularTipio__content--title",
+    className: "smallPopularTipio__content--title",
     title: title
   }, title), /*#__PURE__*/_react.default.createElement("p", {
-    className: "text-truncate smallPopularTipio__content--description",
+    className: "smallPopularTipio__content--description",
     title: brand ? brand : subtitle
-  }, brand ? brand : subtitle, ' '), children));
+  }, brand ? brand : subtitle, ' ')), /*#__PURE__*/_react.default.createElement("div", {
+    className: "smallPopularTipio__content--children"
+  }, children)));
 };
 
 var _default = SmallPopularTipio;
