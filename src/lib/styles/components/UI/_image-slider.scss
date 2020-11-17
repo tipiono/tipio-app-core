@@ -189,3 +189,9 @@
         }
     }
 }
+
+.removeBottomMargin {
+    .carousel-slider .slider-wrapper {
+        margin-bottom: 1rem;
+    }
+}
