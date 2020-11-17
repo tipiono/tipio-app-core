@@ -37,7 +37,8 @@ const ImageSlider = ({ images, showThumbs, showTimer, tipio_expires_in, onClick,
                 className={cx(
                     'imageSlider',
                     images && { showIndicators: images.length >= 5 },
-                    images && { removeMargin: images.length < 5 }
+                    images && { removeMargin: images.length < 5 },
+                    images && { removeBottomMargin: images.length === 1 }
                 )}
             >
                 <Carousel

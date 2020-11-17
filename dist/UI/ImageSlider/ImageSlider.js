@@ -74,6 +74,8 @@ var ImageSlider = function ImageSlider(_ref) {
       showIndicators: images.length >= 5
     }, images && {
       removeMargin: images.length < 5
+    }, images && {
+      removeBottomMargin: images.length === 1
     })
   }, /*#__PURE__*/_react.default.createElement(_reactResponsiveCarousel.Carousel, {
     showIndicators: images.length >= 2,
