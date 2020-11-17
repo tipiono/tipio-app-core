@@ -24,11 +24,11 @@ var FooterMainCard = function FooterMainCard(_ref) {
   }, /*#__PURE__*/_react.default.createElement("div", {
     className: "row align-items-center"
   }, /*#__PURE__*/_react.default.createElement("div", {
-    className: "col-6 col-lg-5"
+    className: "col-6 col-lg-5 d-none d-lg-block"
   }, /*#__PURE__*/_react.default.createElement("h3", {
     className: "footerMainCard__title"
   }, title)), /*#__PURE__*/_react.default.createElement("div", {
-    className: "col-8 col-md-4 d-none d-lg-block"
+    className: "col-8 col-md-4 "
   }, /*#__PURE__*/_react.default.createElement("div", {
     className: "footerMainCard__content"
   }, /*#__PURE__*/_react.default.createElement("div", {
