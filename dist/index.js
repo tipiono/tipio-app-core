@@ -119,6 +119,12 @@ Object.defineProperty(exports, "Input", {
     return _Input.default;
   }
 });
+Object.defineProperty(exports, "DatePickerSelect", {
+  enumerable: true,
+  get: function get() {
+    return _DatePicker.default;
+  }
+});
 Object.defineProperty(exports, "PlaceholderInput", {
   enumerable: true,
   get: function get() {
@@ -1030,6 +1036,8 @@ var CountdownType = _interopRequireWildcard(require("./UI/Countdown/CountdownTyp
 exports.CountdownType = CountdownType;
 
 var _Input = _interopRequireDefault(require("./UI/Forms/Input"));
+
+var _DatePicker = _interopRequireDefault(require("./UI/Forms/DatePicker"));
 
 var _PlaceholderInput = _interopRequireDefault(require("./UI/Forms/PlaceholderInput"));
 

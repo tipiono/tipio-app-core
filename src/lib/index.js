@@ -21,6 +21,7 @@ import Select from './UI/Forms/Select';
 import SelectWithSeperateValues from './UI/Forms/SelectWithSeperateValues';
 import * as CountdownType from './UI/Countdown/CountdownType';
 import Input from './UI/Forms/Input';
+import DatePickerSelect from './UI/Forms/DatePicker';
 import PlaceholderInput from './UI/Forms/PlaceholderInput';
 import Textarea from './UI/Forms/Textarea';
 import Checkbox from './UI/Forms/Checkbox';
@@ -229,6 +230,7 @@ export {
     TipioCountdown,
     CountdownType,
     Input,
+    DatePickerSelect,
     PlaceholderInput,
     Textarea,
     Select,
