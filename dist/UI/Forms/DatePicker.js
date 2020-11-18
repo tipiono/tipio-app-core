@@ -29,7 +29,8 @@ var DatePickerSelect = function DatePickerSelect(_ref) {
       _onChange = _ref.onChange,
       minDate = _ref.minDate,
       maxDate = _ref.maxDate,
-      dateFormat = _ref.dateFormat;
+      dateFormat = _ref.dateFormat,
+      filterDate = _ref.filterDate;
   (0, _reactDatepicker.registerLocale)('nb', _nb.default);
   return /*#__PURE__*/_react.default.createElement("div", {
     className: "custom-material-select "
@@ -41,6 +42,7 @@ var DatePickerSelect = function DatePickerSelect(_ref) {
       return _onChange(date);
     },
     minDate: minDate,
+    filterDate: filterDate ? filterDate : null,
     maxDate: maxDate,
     locale: "nb",
     dateFormat: dateFormat
