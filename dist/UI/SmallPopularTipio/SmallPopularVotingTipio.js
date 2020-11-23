@@ -29,7 +29,7 @@ var SmallPopularVotingTipio = function SmallPopularVotingTipio(props) {
     text: "Del n\xE5",
     onClick: props.shareOnClick
   }) : /*#__PURE__*/_react.default.createElement(_SecondaryOutlineButton.default, {
-    text: "Meld interesse",
+    text: "F\xE5 tilbudsvarsel",
     onClick: props.voteOnClick
   })));
 };

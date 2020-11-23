@@ -11,7 +11,7 @@ const VotingCard = ({ state, ...props }) => {
                 <>
                     <div className="customerSidebarCard__footer--action">
                         <SecondaryOutlineButton
-                            text={'Meld interesse'}
+                            text={'Få tilbudsvarsel'}
                             onClick={props.voteOnClick}
                             loading={props.voteLoading}
                             id={props.id}
@@ -24,7 +24,7 @@ const VotingCard = ({ state, ...props }) => {
                 <div className="customerSidebarCard__footer--action">
                     <ShareButton onClick={props.shareOnClick} />
                     <div className="customerSidebarCard__footer--action--notInterested">
-                        <GrayOutlineButton text="Meld av interesse" onClick={props.notInterestedOnClick} />
+                        <GrayOutlineButton text="Skru av tilbudsvarsel" onClick={props.notInterestedOnClick} />
                     </div>
                 </div>
             )}
