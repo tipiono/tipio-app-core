@@ -53,7 +53,7 @@ var SingleVotingCard = function SingleVotingCard(_ref) {
     text: "Del n\xE5",
     onClick: shareOnClick
   }) : /*#__PURE__*/_react.default.createElement(_SecondaryOutlineButton.default, {
-    text: "Meld interesse",
+    text: "F\xE5 tilbudsvarsel",
     onClick: voteOnClick
   }))));
 };

@@ -12,7 +12,7 @@ const MediumPopularVotingTipio = (props) => {
                 {props.joined ? (
                     <SecondaryButton text="Del nå" onClick={props.shareOnClick} />
                 ) : (
-                    <SecondaryOutlineButton text="Meld interesse" onClick={props.voteOnClick} />
+                    <SecondaryOutlineButton text="Få tilbudsvarsel" onClick={props.voteOnClick} />
                 )}
             </div>
         </MediumPopularTipio>

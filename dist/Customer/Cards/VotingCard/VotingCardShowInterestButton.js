@@ -15,6 +15,6 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 
 function VotingCardShowInterestButton(props) {
   return /*#__PURE__*/_react.default.createElement(_SecondaryOutlineButton.default, _extends({
-    text: "Meld interesse"
+    text: "F\xE5 tilbudsvarsel"
   }, props));
 }

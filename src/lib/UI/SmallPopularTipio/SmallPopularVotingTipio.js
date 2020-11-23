@@ -1,8 +1,8 @@
 import React from 'react';
-import SmallPopularTipio from "./SmallPopularTipio";
+import SmallPopularTipio from './SmallPopularTipio';
 import { useTranslation } from 'react-i18next';
-import SecondaryButton from "../Buttons/SecondaryButton";
-import SecondaryOutlineButton from "../Buttons/SecondaryOutlineButton";
+import SecondaryButton from '../Buttons/SecondaryButton';
+import SecondaryOutlineButton from '../Buttons/SecondaryOutlineButton';
 
 const SmallPopularVotingTipio = (props) => {
     const { t } = useTranslation();
@@ -13,16 +13,10 @@ const SmallPopularVotingTipio = (props) => {
 
             <div className="smallPopularTipio__content__submit">
                 {props.joined ? (
-                    <SecondaryButton
-                        text="Del nå"
-                        onClick={props.shareOnClick}
-                    />
+                    <SecondaryButton text="Del nå" onClick={props.shareOnClick} />
                 ) : (
-                        <SecondaryOutlineButton
-                            text="Meld interesse"
-                            onClick={props.voteOnClick}
-                        />
-                    )}
+                    <SecondaryOutlineButton text="Få tilbudsvarsel" onClick={props.voteOnClick} />
+                )}
             </div>
         </SmallPopularTipio>
     );
