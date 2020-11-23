@@ -35,7 +35,7 @@ const SingleVotingCard = ({
                     {joined ? (
                         <SecondaryOutlineButton text="Del nå" onClick={shareOnClick} />
                     ) : (
-                        <SecondaryOutlineButton text="Meld interesse" onClick={voteOnClick} />
+                        <SecondaryOutlineButton text="Få tilbudsvarsel" onClick={voteOnClick} />
                     )}
                 </span>
             </div>
