@@ -90,6 +90,11 @@
                 margin: 0 !important;
             }
         }
+        @include media-breakpoint-down(sm) {
+            .slider-wrapper {
+                border: none;
+            }
+        }
     }
 
     /// Thumbnails Images
@@ -144,6 +149,23 @@
         font-family: 'Riposte-Medium', sans-serif;
         font-size: 12px;
     }
+
+    &__saleDiscount {
+        position: absolute;
+        bottom: 0;
+        right: 15px;
+        color: #fff;
+        background: #e74298;
+        height: 68px;
+        min-width: 68px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Riposte-Medium', sans-serif;
+        font-size: 18px;
+        border-radius: 50%;
+    }
+
 
     @include media-breakpoint-down(sm) {
         .carousel-slider {
