@@ -97,6 +97,7 @@
                 max-height: 320px;
             }
         }
+
         &__content {
             &--title {
                 font-size: 1.5rem;
@@ -135,7 +136,8 @@
         }
     }
 }
-.popularTipio__discount{
+
+.popularTipio__discount {
     position: absolute;
     top: 10px;
     left: 13px;
@@ -143,6 +145,8 @@
     background: #e74298;
     height: 68px;
     min-width: 68px;
+    padding-left: 11px;
+    padding-right: 11px;
     display: flex;
     align-items: center;
     justify-content: center;

@@ -158,6 +158,8 @@
         background: #e74298;
         height: 68px;
         min-width: 68px;
+        padding-left: 11px;
+        padding-right: 11px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -165,7 +167,6 @@
         font-size: 18px;
         border-radius: 50%;
     }
-
 
     @include media-breakpoint-down(sm) {
         .carousel-slider {
