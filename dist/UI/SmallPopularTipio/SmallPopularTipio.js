@@ -41,7 +41,7 @@ var SmallPopularTipio = function SmallPopularTipio(_ref) {
     src: images && images.length && images[0].blob_url,
     alt: ""
   }), type === 2 && /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, ' ', /*#__PURE__*/_react.default.createElement("span", {
-    className: "imageSlider__discount"
+    className: "popularTipio__discount"
   }, ((_props$tipio_offer = props.tipio_offer) === null || _props$tipio_offer === void 0 ? void 0 : _props$tipio_offer.price) && (0, _calculateDiscountPercentage.createDiscountLabel)(props.market_price, (_props$tipio_offer2 = props.tipio_offer) === null || _props$tipio_offer2 === void 0 ? void 0 : _props$tipio_offer2.price)), /*#__PURE__*/_react.default.createElement("div", {
     className: "timeleft__countdown"
   }, /*#__PURE__*/_react.default.createElement(_TipioCountdown.default, {
@@ -49,15 +49,19 @@ var SmallPopularTipio = function SmallPopularTipio(_ref) {
     expires_in: binding_expires_in
   })))), /*#__PURE__*/_react.default.createElement("div", {
     className: "smallPopularTipio__content"
-  }, /*#__PURE__*/_react.default.createElement("a", {
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "smallPopularTipio__content--inner"
+  }, ' ', /*#__PURE__*/_react.default.createElement("a", {
     href: "/tipio/".concat(type === 2 ? 'bind' : 'vote', "/").concat(id),
     onClick: onClick,
-    className: "text-truncate smallPopularTipio__content--title",
+    className: "smallPopularTipio__content--title",
     title: title
   }, title), /*#__PURE__*/_react.default.createElement("p", {
-    className: "text-truncate smallPopularTipio__content--description",
+    className: "smallPopularTipio__content--description",
     title: brand ? brand : subtitle
-  }, brand ? brand : subtitle, ' '), children));
+  }, brand ? brand : subtitle, ' ')), /*#__PURE__*/_react.default.createElement("div", {
+    className: "smallPopularTipio__content--children"
+  }, children)));
 };
 
 var _default = SmallPopularTipio;

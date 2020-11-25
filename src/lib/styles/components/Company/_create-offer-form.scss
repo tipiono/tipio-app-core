@@ -27,6 +27,30 @@
                 }
             }
 
+            &--date {
+                .custom-material-select {
+                    margin-top: 6px;
+
+                    .select-label {
+                        color: #5c6265;
+                    }
+
+                    .react-datepicker__input-container {
+                        input {
+                            border: 1px solid #c9cfd3;
+                            height: 56px;
+                            width: 100%;
+                            color: #5c6265;
+                            padding-left: 14px;
+                        }
+                    }
+
+                    .react-datepicker {
+                        top: 1rem;
+                    }
+                }
+            }
+
             &--submit {
                 width: 72.5%;
                 margin-top: 3rem;

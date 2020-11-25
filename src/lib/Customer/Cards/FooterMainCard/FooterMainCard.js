@@ -6,10 +6,10 @@ const FooterMainCard = ({ title, marketPrice, price, bindCount, onBindClick }) =
     return (
         <div className="footerMainCard">
             <div className="row align-items-center">
-                <div className="col-6 col-lg-5">
+                <div className="col-6 col-lg-5 d-none d-lg-block">
                     <h3 className="footerMainCard__title">{title}</h3>
                 </div>
-                <div className="col-8 col-md-4 d-none d-lg-block">
+                <div className="col-8 col-md-4 ">
                     <div className="footerMainCard__content">
                         <div className="footerMainCard__content__priceLabel">
                             <h6 className="footerMainCard__content__priceLabel__new">Pris nå</h6>

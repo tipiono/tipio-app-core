@@ -1,3 +1,5 @@
+import replaceWithSpace from './replaceWithSpace';
+
 function calculateDiscountPercentage(price, salePrice) {
     const priceNumber = parseFloat(price);
     const salePriceNumber = parseFloat(salePrice);
@@ -12,7 +14,8 @@ export const getBestPrice = (priceRange) => {
 export const createDiscountLabel = (price, salePrice) => {
     const bestPrice = typeof salePrice === 'object' ? getBestPrice(salePrice) : salePrice;
     let discount = calculateDiscountPercentage(price, bestPrice);
-    return price - bestPrice < 1000 ? `${discount}%` : `-${price - bestPrice} Kr`;
+    const priceToShow = price - bestPrice;
+    return priceToShow < 1000 ? `${discount}%` : `-` + replaceWithSpace(priceToShow.toString()) + ` Kr`;
 };
 
 export default calculateDiscountPercentage;
