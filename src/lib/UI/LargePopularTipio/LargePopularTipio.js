@@ -26,7 +26,7 @@ const LargePopularTipio = ({
                 />
                 {type === 2 && (
                     <>
-                        <span className="popularTipio__discount">
+                        <span className="imageSlider__discount">
                             {createDiscountLabel(market_price, tipio_offer?.price)}
                         </span>
                         <div className="timeleft__countdown">
