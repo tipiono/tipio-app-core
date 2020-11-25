@@ -34,7 +34,7 @@ var MediumPopularTipio = function MediumPopularTipio(_ref) {
     src: images && images.length && images[0].blob_url,
     alt: ""
   }), type === 2 && /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("span", {
-    className: "popularTipio__discount"
+    className: "imageSlider__discount"
   }, (0, _calculateDiscountPercentage.createDiscountLabel)(market_price, tipio_offer === null || tipio_offer === void 0 ? void 0 : tipio_offer.price)), /*#__PURE__*/_react.default.createElement("div", {
     className: "timeleft__countdown"
   }, /*#__PURE__*/_react.default.createElement(_TipioCountdown.default, {

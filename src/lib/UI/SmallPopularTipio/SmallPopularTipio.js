@@ -25,7 +25,7 @@ const SmallPopularTipio = ({
                 {type === 2 && (
                     <>
                         {' '}
-                        <span className="popularTipio__discount">
+                        <span className="imageSlider__discount">
                             {props.tipio_offer?.price &&
                                 createDiscountLabel(props.market_price, props.tipio_offer?.price)}
                         </span>
