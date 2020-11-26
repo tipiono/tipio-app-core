@@ -27,9 +27,8 @@ var ErrorMessage = function ErrorMessage(_ref) {
   }, title, " "), /*#__PURE__*/_react.default.createElement("span", {
     className: "errorMessage--content"
   }, content), link && /*#__PURE__*/_react.default.createElement("a", {
-    href: "/auth/login",
-    onClick: onLinkClick
-  }, " Logg inn"));
+    href: "/auth/login"
+  }, ' ', "Logg inn"));
 };
 
 var _default = ErrorMessage;

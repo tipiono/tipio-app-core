@@ -6,12 +6,7 @@ const ErrorMessage = ({ title, content, color, paddingY, paddingX, textAlign, li
         <div className={cx('errorMessage', color, paddingY, paddingX, textAlign)}>
             <span className="errorMessage--title">{title} </span>
             <span className="errorMessage--content">{content}</span>
-            {link && (
-                <a href="/auth/login" onClick={onLinkClick}>
-                    {' '}
-                    Logg inn
-                </a>
-            )}
+            {link && <a href="/auth/login"> Logg inn</a>}
         </div>
     );
 };
