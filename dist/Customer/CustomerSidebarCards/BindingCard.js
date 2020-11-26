@@ -31,9 +31,7 @@ var BindingCard = function BindingCard(_ref) {
   return /*#__PURE__*/_react.default.createElement(_BaseCard.default, props, children, props.expiredTipio && /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_SecondaryOutlineButton.default, {
     text: 'Gjenopprett',
     onClick: onRestoreClick
-  }), /*#__PURE__*/_react.default.createElement("p", {
-    className: "customerSidebarCard__footer--conditon"
-  }, "Dette er ikke bindende")));
+  })));
 };
 
 var _default = BindingCard;

@@ -19,7 +19,6 @@ const BindingCard = ({
             {props.expiredTipio && (
                 <>
                     <SecondaryOutlineButton text={'Gjenopprett'} onClick={onRestoreClick} />
-                    <p className="customerSidebarCard__footer--conditon">Dette er ikke bindende</p>
                 </>
             )}
         </BaseCard>
