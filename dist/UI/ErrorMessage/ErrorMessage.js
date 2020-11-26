@@ -17,14 +17,19 @@ var ErrorMessage = function ErrorMessage(_ref) {
       color = _ref.color,
       paddingY = _ref.paddingY,
       paddingX = _ref.paddingX,
-      textAlign = _ref.textAlign;
+      textAlign = _ref.textAlign,
+      link = _ref.link,
+      onLinkClick = _ref.onLinkClick;
   return /*#__PURE__*/_react.default.createElement("div", {
-    className: (0, _classnames.default)("errorMessage", color, paddingY, paddingX, textAlign)
+    className: (0, _classnames.default)('errorMessage', color, paddingY, paddingX, textAlign)
   }, /*#__PURE__*/_react.default.createElement("span", {
     className: "errorMessage--title"
   }, title, " "), /*#__PURE__*/_react.default.createElement("span", {
     className: "errorMessage--content"
-  }, content));
+  }, content), link && /*#__PURE__*/_react.default.createElement("a", {
+    href: "/auth/login",
+    onClick: onLinkClick
+  }, " Logg inn"));
 };
 
 var _default = ErrorMessage;
