@@ -18,8 +18,7 @@ var ErrorMessage = function ErrorMessage(_ref) {
       paddingY = _ref.paddingY,
       paddingX = _ref.paddingX,
       textAlign = _ref.textAlign,
-      link = _ref.link,
-      onLinkClick = _ref.onLinkClick;
+      link = _ref.link;
   return /*#__PURE__*/_react.default.createElement("div", {
     className: (0, _classnames.default)('errorMessage', color, paddingY, paddingX, textAlign)
   }, /*#__PURE__*/_react.default.createElement("span", {
@@ -28,7 +27,7 @@ var ErrorMessage = function ErrorMessage(_ref) {
     className: "errorMessage--content"
   }, content), link && /*#__PURE__*/_react.default.createElement("a", {
     href: "/auth/login"
-  }, ' ', "Logg inn"));
+  }, " Logg inn"));
 };
 
 var _default = ErrorMessage;
