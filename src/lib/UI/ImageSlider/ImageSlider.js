@@ -73,12 +73,8 @@ const ImageSlider = ({
                 </Carousel>
                 {showTimer && tipio_expires_in && (
                     <>
-                        {!showSaleDiscountBottom && costPrice && salePrice ? (
+                        {costPrice && salePrice && (
                             <span className="imageSlider__discount">{createDiscountLabel(costPrice, salePrice)}</span>
-                        ) : (
-                            <span className="imageSlider__saleDiscount">
-                                {createDiscountLabel(costPrice, salePrice)}
-                            </span>
                         )}
                         {!showSaleDiscountBottom && (
                             <div className="imageSlider__countDown">

@@ -102,10 +102,8 @@ var ImageSlider = function ImageSlider(_ref) {
         url: item.url
       });
     }
-  })), showTimer && tipio_expires_in && /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, !showSaleDiscountBottom && costPrice && salePrice ? /*#__PURE__*/_react.default.createElement("span", {
+  })), showTimer && tipio_expires_in && /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, costPrice && salePrice && /*#__PURE__*/_react.default.createElement("span", {
     className: "imageSlider__discount"
-  }, (0, _calculateDiscountPercentage.createDiscountLabel)(costPrice, salePrice)) : /*#__PURE__*/_react.default.createElement("span", {
-    className: "imageSlider__saleDiscount"
   }, (0, _calculateDiscountPercentage.createDiscountLabel)(costPrice, salePrice)), !showSaleDiscountBottom && /*#__PURE__*/_react.default.createElement("div", {
     className: "imageSlider__countDown"
   }, /*#__PURE__*/_react.default.createElement(_TipioCountdown.default, {
