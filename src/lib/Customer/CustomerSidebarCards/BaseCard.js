@@ -19,7 +19,7 @@ const BaseCard = ({ children, ...props }) => {
                     ''
                 )}
 
-                {props.expiredTipio || props.vote ? (
+                {props.vote ? (
                     <div className="customerSidebarCard__header__cost">
                         <p className="customerSidebarCard__header__cost--label" id={props.marketPriceId}>
                             Markedspris
