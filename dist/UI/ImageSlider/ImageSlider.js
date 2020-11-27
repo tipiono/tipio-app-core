@@ -29,7 +29,8 @@ var ImageSlider = function ImageSlider(_ref) {
       onClick = _ref.onClick,
       costPrice = _ref.costPrice,
       salePrice = _ref.salePrice,
-      showSaleDiscountBottom = _ref.showSaleDiscountBottom;
+      showSaleDiscountBottom = _ref.showSaleDiscountBottom,
+      soldOut = _ref.soldOut;
 
   var YoutubeSlide = function YoutubeSlide(_ref2) {
     var url = _ref2.url,
@@ -108,7 +109,8 @@ var ImageSlider = function ImageSlider(_ref) {
     className: "imageSlider__countDown"
   }, /*#__PURE__*/_react.default.createElement(_TipioCountdown.default, {
     className: "timer",
-    expires_in: tipio_expires_in
+    expires_in: tipio_expires_in,
+    soldOut: soldOut
   })))));
 };
 

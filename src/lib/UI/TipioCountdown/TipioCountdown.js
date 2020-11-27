@@ -3,12 +3,14 @@ import Countdown, { calcTimeDelta, formatTimeDelta } from 'react-countdown-now/d
 
 const Completionist = () => <span className="inactive timer">Ikke aktiv</span>;
 
-const renderer = ({ hours, minutes, seconds, completed }) => {
+const renderer = ({ hours, minutes, seconds, completed, soldOut }) => {
     let cn = 'purple';
     if (completed) {
         return <Completionist />;
     } else {
-        if (hours > 48) {
+        if (soldOut) {
+            return <span className="inactive timer">Utsolgt</span>;
+        } else if (hours > 48) {
             return <span className={cn + ' timer'}>{Math.floor(hours / 24)} dager igjen</span>;
         } else if (hours > 24 && hours <= 48) {
             return <span className={cn + ' timer'}>{hours} timer</span>;
@@ -25,7 +27,7 @@ class TipioCountdown extends React.Component {
     render() {
         const substractN = new Date(this.props.expires_in);
         substractN.setHours(substractN.getHours() - 120);
-
+        const soldOut = this.props.soldOut;
         if (substractN > new Date()) {
             return null;
         }
@@ -37,7 +39,7 @@ class TipioCountdown extends React.Component {
                     const result = formatTimeDelta(calcTimeDelta(this.props.expires_in), {
                         daysInHours: true
                     });
-                    return renderer({ ...result, completed });
+                    return renderer({ ...result, completed, soldOut });
                 }}
             />
         );

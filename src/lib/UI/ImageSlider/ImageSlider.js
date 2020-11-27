@@ -14,7 +14,8 @@ const ImageSlider = ({
     onClick,
     costPrice,
     salePrice,
-    showSaleDiscountBottom
+    showSaleDiscountBottom,
+    soldOut
 }) => {
     const YoutubeSlide = ({ url, isSelected }) => <ReactPlayer width="100%" url={url} playing={isSelected} />;
 
@@ -78,7 +79,7 @@ const ImageSlider = ({
                         )}
                         {!showSaleDiscountBottom && (
                             <div className="imageSlider__countDown">
-                                <TipioCountdown className="timer" expires_in={tipio_expires_in} />
+                                <TipioCountdown className="timer" expires_in={tipio_expires_in} soldOut={soldOut} />
                             </div>
                         )}
                     </>
