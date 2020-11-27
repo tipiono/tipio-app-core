@@ -79,7 +79,11 @@ const ImageSlider = ({
                         )}
                         {!showSaleDiscountBottom && (
                             <div className="imageSlider__countDown">
-                                <TipioCountdown className="timer" expires_in={tipio_expires_in} soldOut={soldOut} />
+                                <TipioCountdown
+                                    className="timer"
+                                    expires_in={tipio_expires_in}
+                                    soldOut={soldOut ? true : false}
+                                />
                             </div>
                         )}
                     </>

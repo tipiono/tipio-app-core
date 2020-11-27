@@ -110,7 +110,7 @@ var ImageSlider = function ImageSlider(_ref) {
   }, /*#__PURE__*/_react.default.createElement(_TipioCountdown.default, {
     className: "timer",
     expires_in: tipio_expires_in,
-    soldOut: soldOut
+    soldOut: soldOut ? true : false
   })))));
 };
 

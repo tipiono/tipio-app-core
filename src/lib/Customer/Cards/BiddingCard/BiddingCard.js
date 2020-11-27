@@ -13,10 +13,8 @@ function BiddingCard({
     salePrice,
     costPrice,
     children,
-    salesProgressBarPercentage,
-    bindingCount,
+    inventory_available,
     onClick,
-    bindHasExpired,
     link
 }) {
     return (
@@ -39,12 +37,15 @@ function BiddingCard({
                         <>
                             <span className="imageSlider__discount">{createDiscountLabel(costPrice, salePrice)}</span>
                             <div className="timeleft__countdown">
-                                <TipioCountdown className="timer" expires_in={expiresIn} />
+                                <TipioCountdown
+                                    className="timer"
+                                    expires_in={expiresIn}
+                                    soldOut={inventory_available === 0 ? true : false}
+                                />
                             </div>
                         </>
                     )}
                 </div>
-
                 <div className="biddingCard__body">
                     <div className="biddingCard__body--price">
                         <h4 className="biddingCard__body--price--sale">

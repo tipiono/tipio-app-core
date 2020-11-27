@@ -26,10 +26,8 @@ function BiddingCard(_ref) {
       salePrice = _ref.salePrice,
       costPrice = _ref.costPrice,
       children = _ref.children,
-      salesProgressBarPercentage = _ref.salesProgressBarPercentage,
-      bindingCount = _ref.bindingCount,
+      inventory_available = _ref.inventory_available,
       onClick = _ref.onClick,
-      bindHasExpired = _ref.bindHasExpired,
       link = _ref.link;
   return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("div", {
     className: "biddingCard"
@@ -50,7 +48,8 @@ function BiddingCard(_ref) {
     className: "timeleft__countdown"
   }, /*#__PURE__*/_react.default.createElement(_TipioCountdown.default, {
     className: "timer",
-    expires_in: expiresIn
+    expires_in: expiresIn,
+    soldOut: inventory_available === 0 ? true : false
   })))), /*#__PURE__*/_react.default.createElement("div", {
     className: "biddingCard__body"
   }, /*#__PURE__*/_react.default.createElement("div", {
