@@ -71,6 +71,7 @@ var ImageSlider = function ImageSlider(_ref) {
     });
   };
 
+  console.log((0, _calculateDiscountPercentage.createDiscountLabel)(costPrice, salePrice));
   return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("div", {
     className: (0, _classnames.default)('imageSlider', images && {
       showIndicators: images.length >= 5
@@ -103,9 +104,9 @@ var ImageSlider = function ImageSlider(_ref) {
         url: item.url
       });
     }
-  })), showTimer && tipio_expires_in && /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, costPrice && salePrice && /*#__PURE__*/_react.default.createElement("span", {
+  })), costPrice && salePrice && /*#__PURE__*/_react.default.createElement("span", {
     className: "imageSlider__discount"
-  }, (0, _calculateDiscountPercentage.createDiscountLabel)(costPrice, salePrice)), !showSaleDiscountBottom && /*#__PURE__*/_react.default.createElement("div", {
+  }, (0, _calculateDiscountPercentage.createDiscountLabel)(costPrice, salePrice)), showTimer && tipio_expires_in && /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, !showSaleDiscountBottom && /*#__PURE__*/_react.default.createElement("div", {
     className: "imageSlider__countDown"
   }, /*#__PURE__*/_react.default.createElement(_TipioCountdown.default, {
     className: "timer",
