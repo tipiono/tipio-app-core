@@ -653,6 +653,12 @@ Object.defineProperty(exports, "TipioSidebarBindingCard", {
     return _BindingCard.default;
   }
 });
+Object.defineProperty(exports, "TipioSidebarJoinBindingCard", {
+  enumerable: true,
+  get: function get() {
+    return _JoinBindingCart.default;
+  }
+});
 Object.defineProperty(exports, "ImageUploader", {
   enumerable: true,
   get: function get() {
@@ -1210,6 +1216,8 @@ var _Categories2 = _interopRequireDefault(require("./Customer/Modals/ChooseCateg
 var _VotingCard2 = _interopRequireDefault(require("./Customer/CustomerSidebarCards/VotingCard"));
 
 var _BindingCard = _interopRequireDefault(require("./Customer/CustomerSidebarCards/BindingCard"));
+
+var _JoinBindingCart = _interopRequireDefault(require("./Customer/CustomerSidebarCards/JoinBindingCart"));
 
 var _ImageUploader = _interopRequireDefault(require("./Customer/ImageUploader/ImageUploader"));
 

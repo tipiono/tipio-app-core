@@ -71,7 +71,6 @@ var ImageSlider = function ImageSlider(_ref) {
     });
   };
 
-  console.log((0, _calculateDiscountPercentage.createDiscountLabel)(costPrice, salePrice));
   return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("div", {
     className: (0, _classnames.default)('imageSlider', images && {
       showIndicators: images.length >= 5

@@ -11,15 +11,7 @@ const BaseCard = ({ children, ...props }) => {
                         {props.brand ? props.brand : props.subtitle || ''}
                     </p>
                 </div>
-                {/* add limited stock */}
-
-                {props.inventory && props.inventory > 0 && props.inventory <= 10 && !props.expiredTipio ? (
-                    <p className="customerSidebarCard__header__stock">Kun {props.inventory} igjen</p>
-                ) : (
-                    ''
-                )}
-
-                {props.vote ? (
+                {props.vote && (
                     <div className="customerSidebarCard__header__cost">
                         <p className="customerSidebarCard__header__cost--label" id={props.marketPriceId}>
                             Markedspris
@@ -28,23 +20,8 @@ const BaseCard = ({ children, ...props }) => {
                             {props?.market_price && replaceWithSpace(props?.market_price)} Kr
                         </h4>
                     </div>
-                ) : (
-                    <div className="customerSidebarCard__price">
-                        <div className="customerSidebarCard__price--cost">
-                            <h6 className="customerSidebarCard__price--cost--amount">
-                                {props?.market_price && replaceWithSpace(props?.market_price)} Kr
-                            </h6>
-                        </div>
-
-                        <div className="customerSidebarCard__price--sale">
-                            <h6 className="customerSidebarCard__price--sale--amount">
-                                {props?.price && replaceWithSpace(props.price)} Kr
-                            </h6>
-                        </div>
-                    </div>
                 )}
             </div>
-
             <div className="customerSidebarCard__footer">{children}</div>
         </div>
     );

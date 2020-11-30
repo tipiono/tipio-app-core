@@ -9,9 +9,11 @@ var _react = _interopRequireDefault(require("react"));
 
 var _BaseCard = _interopRequireDefault(require("./BaseCard"));
 
-var _SecondaryOutlineButton = _interopRequireDefault(require("../../UI/Buttons/SecondaryOutlineButton"));
+var _SalesProgressBarTooltip = _interopRequireDefault(require("../SalesProgressBarTooltip/SalesProgressBarTooltip"));
 
 var _replaceWithSpace = _interopRequireDefault(require("../../Util/replaceWithSpace"));
+
+var _calculateDiscountPercentage = _interopRequireDefault(require("../../Util/calculateDiscountPercentage"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -19,37 +21,35 @@ function _objectWithoutProperties(source, excluded) { if (source == null) return
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
-var BindingCard = function BindingCard(_ref) {
+var JoinBindingCard = function JoinBindingCard(_ref) {
   var children = _ref.children,
-      state = _ref.state,
-      firstRange = _ref.firstRange,
-      secondRange = _ref.secondRange,
-      onShareClick = _ref.onShareClick,
-      onBindClick = _ref.onBindClick,
-      onRestoreClick = _ref.onRestoreClick,
-      bindCount = _ref.bindCount,
-      props = _objectWithoutProperties(_ref, ["children", "state", "firstRange", "secondRange", "onShareClick", "onBindClick", "onRestoreClick", "bindCount"]);
+      props = _objectWithoutProperties(_ref, ["children"]);
 
-  var isNotActive = true;
-  return /*#__PURE__*/_react.default.createElement(_BaseCard.default, props, props.inventory && props.inventory > 0 && props.inventory <= 10 && !props.expiredTipio ? /*#__PURE__*/_react.default.createElement("p", {
-    className: "customerSidebarCard__header__stock"
-  }, "Kun ", props.inventory, " igjen") : '', /*#__PURE__*/_react.default.createElement("div", {
+  var maxParticipantsRequired = 25;
+  var joinCount = 25;
+  var percentage = 100 + (0, _calculateDiscountPercentage.default)(maxParticipantsRequired, joinCount);
+  return /*#__PURE__*/_react.default.createElement(_BaseCard.default, props, /*#__PURE__*/_react.default.createElement("div", {
     className: "customerSidebarCard__price"
   }, /*#__PURE__*/_react.default.createElement("div", {
     className: "customerSidebarCard__price--cost"
   }, /*#__PURE__*/_react.default.createElement("h6", {
     className: "customerSidebarCard__price--cost--amount"
-  }, (props === null || props === void 0 ? void 0 : props.market_price) && (0, _replaceWithSpace.default)(props === null || props === void 0 ? void 0 : props.market_price), " Kr")), /*#__PURE__*/_react.default.createElement("div", {
+  }, (props === null || props === void 0 ? void 0 : props.market_price) && (0, _replaceWithSpace.default)(props === null || props === void 0 ? void 0 : props.market_price), " Kr"), /*#__PURE__*/_react.default.createElement("p", {
+    className: "customerSidebarCard__price--cost--label"
+  }, "F\xF8rpris")), /*#__PURE__*/_react.default.createElement("div", {
     className: "customerSidebarCard__price--sale"
   }, /*#__PURE__*/_react.default.createElement("h6", {
     className: "customerSidebarCard__price--sale--amount"
-  }, (props === null || props === void 0 ? void 0 : props.price) && (0, _replaceWithSpace.default)(props.price), " Kr"))), props.expiredTipio && /*#__PURE__*/_react.default.createElement("div", {
-    className: "mt-4"
-  }, /*#__PURE__*/_react.default.createElement(_SecondaryOutlineButton.default, {
-    text: 'Gjenopprett',
-    onClick: onRestoreClick
-  })), isNotActive && /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null), children);
+  }, (props === null || props === void 0 ? void 0 : props.price) && (0, _replaceWithSpace.default)(props.price), " Kr"), /*#__PURE__*/_react.default.createElement("p", {
+    className: "customerSidebarCard__price--cost--label"
+  }, "Gruppepris"))), /*#__PURE__*/_react.default.createElement("div", {
+    className: "customerSidebarCard__footer--progressBar"
+  }, /*#__PURE__*/_react.default.createElement(_SalesProgressBarTooltip.default, {
+    bindCount: joinCount,
+    percentage: percentage,
+    totalCount: maxParticipantsRequired
+  })), children);
 };
 
-var _default = BindingCard;
+var _default = JoinBindingCard;
 exports.default = _default;

@@ -39,7 +39,66 @@
         }
     }
 
+
+    &__price {
+        margin-top: 1rem;
+        display: flex;
+        justify-content: space-between;
+
+        &--cost {
+            &--label {
+                font-size: 0.75rem;
+                color: #8c8f91;
+                margin-bottom: 0.4rem;
+            }
+
+            &--amount {
+                font-size: 1.5rem;
+                color: #5c6265;
+                text-decoration: line-through;
+                margin-bottom: 0;
+            }
+        }
+
+        &--sale {
+            &--label {
+                text-align: right;
+                font-size: 0.75rem;
+                color: #188576;
+                margin-bottom: 0.4rem;
+            }
+
+            &--amount {
+                font-size: 1.5rem;
+                color: $pink;
+                margin-bottom: 0;
+            }
+        }
+    }
+
     &__footer {
+        margin-top: 1.6rem;
+
+        &--bought {
+            color: #188576;
+            font-size: 0.875rem;
+            text-align: center;
+            margin-top: 0.875rem;
+        }
+
+        &--info {
+            color: #5c6265;
+            margin-top: 1.25rem;
+            font-size: 0.75rem;
+            font-family: 'Riposte-Light', sans-serif;
+            display: flex;
+            justify-content: center;
+
+            p {
+                width: 60%;
+                text-align: center;
+            }
+        }
         &--action {
             margin-bottom: 2rem;
 

@@ -112,6 +112,7 @@ import Categories from './Company/Modals/ChooseCategory/Categories';
 import CustomerCategories from './Customer/Modals/ChooseCategory/Categories';
 import TipioSidebarVotingCard from './Customer/CustomerSidebarCards/VotingCard';
 import TipioSidebarBindingCard from './Customer/CustomerSidebarCards/BindingCard';
+import TipioSidebarJoinBindingCard from './Customer/CustomerSidebarCards/JoinBindingCart';
 import ImageUploader from './Customer/ImageUploader/ImageUploader';
 import CategoriesForm from './Company/Modals/ChooseCategory/CategoriesForm';
 import TipioFeedWithWrapper from './Customer/TipioFeed/TipioFeedWithWrapper';
@@ -240,6 +241,7 @@ export {
     ToggleSwitch,
     TipioSidebarVotingCard,
     TipioSidebarBindingCard,
+    TipioSidebarJoinBindingCard,
     ImageSlider,
     ImageSliderModal,
     ProductDetails,
