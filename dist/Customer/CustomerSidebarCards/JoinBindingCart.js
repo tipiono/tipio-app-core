@@ -23,10 +23,10 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 
 var JoinBindingCard = function JoinBindingCard(_ref) {
   var children = _ref.children,
-      props = _objectWithoutProperties(_ref, ["children"]);
+      maxParticipantsRequired = _ref.maxParticipantsRequired,
+      joinCount = _ref.joinCount,
+      props = _objectWithoutProperties(_ref, ["children", "maxParticipantsRequired", "joinCount"]);
 
-  var maxParticipantsRequired = 25;
-  var joinCount = 25;
   var percentage = 100 + (0, _calculateDiscountPercentage.default)(maxParticipantsRequired, joinCount);
   return /*#__PURE__*/_react.default.createElement(_BaseCard.default, props, /*#__PURE__*/_react.default.createElement("div", {
     className: "customerSidebarCard__price"

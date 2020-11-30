@@ -4,9 +4,7 @@ import SalesProgressBarTooltip from '../SalesProgressBarTooltip/SalesProgressBar
 import replaceWithSpace from '../../Util/replaceWithSpace';
 import calculateDiscountPercentage from '../../Util/calculateDiscountPercentage';
 
-const JoinBindingCard = ({ children, ...props }) => {
-    const maxParticipantsRequired = 25;
-    const joinCount = 25;
+const JoinBindingCard = ({ children, maxParticipantsRequired, joinCount, ...props }) => {
     const percentage = 100 + calculateDiscountPercentage(maxParticipantsRequired, joinCount);
     return (
         <BaseCard {...props}>
