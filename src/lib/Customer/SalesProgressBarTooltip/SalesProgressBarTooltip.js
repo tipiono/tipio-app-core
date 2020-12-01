@@ -1,4 +1,5 @@
 import React from 'react';
+import cx from 'classnames';
 
 function SalesProgressBarTooltip({ percentage, bindCount, totalCount }) {
     const inactiveWidth = 100 - percentage;
@@ -20,7 +21,12 @@ function SalesProgressBarTooltip({ percentage, bindCount, totalCount }) {
                         className="tooltip-progressbar d-flex justify-content-end"
                     ></span>
                 </div>
-                <span style={{ marginTop: `-10px` }} className="tooltip-progressbar d-flex justify-content-end">
+                <span
+                    style={{ marginTop: `-10px` }}
+                    className={cx('tooltip-progressbar d-flex justify-content-end', {
+                        'full-tooltip-progressbar': inactiveWidth === 0
+                    })}
+                >
                     {' '}
                     <svg width={14} height={14} viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle cx={7} cy={7} r={7} fill="#F5F5F5" />

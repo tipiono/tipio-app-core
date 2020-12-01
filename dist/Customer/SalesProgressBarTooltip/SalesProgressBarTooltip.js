@@ -7,6 +7,8 @@ exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
+var _classnames = _interopRequireDefault(require("classnames"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function SalesProgressBarTooltip(_ref) {
@@ -34,7 +36,9 @@ function SalesProgressBarTooltip(_ref) {
     style: {
       marginTop: "-10px"
     },
-    className: "tooltip-progressbar d-flex justify-content-end"
+    className: (0, _classnames.default)('tooltip-progressbar d-flex justify-content-end', {
+      'full-tooltip-progressbar': inactiveWidth === 0
+    })
   }, ' ', /*#__PURE__*/_react.default.createElement("svg", {
     width: 14,
     height: 14,
