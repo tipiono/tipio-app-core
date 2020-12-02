@@ -125,4 +125,14 @@
             }
         }
     }
+
+    @include media-breakpoint-down(xs) {
+        &__body {
+            padding: 0.625rem 0.625rem 2rem;
+        }
+
+        .votingCard__body button {
+           padding: 6px 0.625rem !important;
+        }
+    }
 }
