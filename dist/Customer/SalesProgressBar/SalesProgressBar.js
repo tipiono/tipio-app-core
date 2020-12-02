@@ -11,10 +11,12 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function SalesProgressBar(_ref) {
   var percentage = _ref.percentage,
-      bindingCount = _ref.bindingCount;
+      bindingCount = _ref.bindingCount,
+      totalCount = _ref.totalCount;
+  var inactiveWidth = 100 - percentage;
   return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("div", {
     className: "sales__progress"
-  }, /*#__PURE__*/_react.default.createElement("div", {
+  }, /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, ' ', /*#__PURE__*/_react.default.createElement("div", {
     className: "sales__progress--bar progress"
   }, /*#__PURE__*/_react.default.createElement("div", {
     className: "progress-bar bg-secondary",
@@ -25,9 +27,9 @@ function SalesProgressBar(_ref) {
     "aria-valuenow": "25",
     "aria-valuemin": "0",
     "aria-valuemax": "100"
-  })), /*#__PURE__*/_react.default.createElement("span", {
+  }))), /*#__PURE__*/_react.default.createElement("span", {
     className: "sales__progress--label"
-  }, "Allerede ", bindingCount, " har kj\xF8pt")));
+  }, bindingCount, " av ", totalCount, " er med")));
 }
 
 var _default = SalesProgressBar;

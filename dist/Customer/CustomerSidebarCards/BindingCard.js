@@ -11,7 +11,9 @@ var _BaseCard = _interopRequireDefault(require("./BaseCard"));
 
 var _SecondaryOutlineButton = _interopRequireDefault(require("../../UI/Buttons/SecondaryOutlineButton"));
 
-var _replaceWithSpace = _interopRequireDefault(require("../../Util/replaceWithSpace"));
+var _SalesProgressBarTooltip = _interopRequireDefault(require("../SalesProgressBarTooltip/SalesProgressBarTooltip"));
+
+var _calculateDiscountPercentage = _interopRequireDefault(require("../../Util/calculateDiscountPercentage"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -27,28 +29,23 @@ var BindingCard = function BindingCard(_ref) {
       onShareClick = _ref.onShareClick,
       onBindClick = _ref.onBindClick,
       onRestoreClick = _ref.onRestoreClick,
-      bindCount = _ref.bindCount,
-      props = _objectWithoutProperties(_ref, ["children", "state", "firstRange", "secondRange", "onShareClick", "onBindClick", "onRestoreClick", "bindCount"]);
+      maxBindCount = _ref.maxBindCount,
+      joinCount = _ref.joinCount,
+      props = _objectWithoutProperties(_ref, ["children", "state", "firstRange", "secondRange", "onShareClick", "onBindClick", "onRestoreClick", "maxBindCount", "joinCount"]);
 
-  var isNotActive = true;
-  return /*#__PURE__*/_react.default.createElement(_BaseCard.default, props, props.inventory && props.inventory > 0 && props.inventory <= 10 && !props.expiredTipio ? /*#__PURE__*/_react.default.createElement("p", {
-    className: "customerSidebarCard__header__stock"
-  }, "Kun ", props.inventory, " igjen") : '', /*#__PURE__*/_react.default.createElement("div", {
-    className: "customerSidebarCard__price"
-  }, /*#__PURE__*/_react.default.createElement("div", {
-    className: "customerSidebarCard__price--cost"
-  }, /*#__PURE__*/_react.default.createElement("h6", {
-    className: "customerSidebarCard__price--cost--amount"
-  }, (props === null || props === void 0 ? void 0 : props.market_price) && (0, _replaceWithSpace.default)(props === null || props === void 0 ? void 0 : props.market_price), " Kr")), /*#__PURE__*/_react.default.createElement("div", {
-    className: "customerSidebarCard__price--sale"
-  }, /*#__PURE__*/_react.default.createElement("h6", {
-    className: "customerSidebarCard__price--sale--amount"
-  }, (props === null || props === void 0 ? void 0 : props.price) && (0, _replaceWithSpace.default)(props.price), " Kr"))), props.expiredTipio && /*#__PURE__*/_react.default.createElement("div", {
+  var percentage = 100 + (0, _calculateDiscountPercentage.default)(maxBindCount, joinCount);
+  return /*#__PURE__*/_react.default.createElement(_BaseCard.default, props, maxBindCount && joinCount > 0 && /*#__PURE__*/_react.default.createElement("div", {
+    className: "customerSidebarCard__footer--progressBar"
+  }, /*#__PURE__*/_react.default.createElement(_SalesProgressBarTooltip.default, {
+    bindCount: joinCount,
+    percentage: percentage,
+    totalCount: maxBindCount
+  })), props.expiredTipio && /*#__PURE__*/_react.default.createElement("div", {
     className: "mt-4"
   }, /*#__PURE__*/_react.default.createElement(_SecondaryOutlineButton.default, {
     text: 'Gjenopprett',
     onClick: onRestoreClick
-  })), isNotActive && /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null), children);
+  })), children);
 };
 
 var _default = BindingCard;

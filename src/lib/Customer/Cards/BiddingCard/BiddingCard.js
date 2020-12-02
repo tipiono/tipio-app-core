@@ -3,6 +3,7 @@ import TipioCountdown from '../../../UI/TipioCountdown/TipioCountdown';
 import SalesProgressBar from '../../SalesProgressBar/SalesProgressBar';
 import replaceWithSpace from '../../../Util/replaceWithSpace';
 import { createDiscountLabel } from '../../../Util/calculateDiscountPercentage';
+import calculateDiscountPercentage from '../../../Util/calculateDiscountPercentage';
 
 function BiddingCard({
     id,
@@ -15,8 +16,12 @@ function BiddingCard({
     children,
     inventory_available,
     onClick,
+    maxJoinCount,
+    joinCount,
+    bindHasExpired,
     link
 }) {
+    const percentage = 100 + calculateDiscountPercentage(maxJoinCount, joinCount);
     return (
         <>
             <div className="biddingCard">
@@ -61,6 +66,21 @@ function BiddingCard({
                             <h4 className="biddingCard__body--content--title">{title}</h4>
                         </a>
                         {brand && <p className="biddingCard__body--content--description">{brand.toUpperCase()}</p>}
+                    </div>
+                    <div className="biddingCard__body--salesbar">
+                        {!bindHasExpired &&
+                            maxJoinCount &&
+                            (joinCount > 0 ? (
+                                <>
+                                    <SalesProgressBar
+                                        percentage={percentage}
+                                        bindingCount={joinCount}
+                                        totalCount={maxJoinCount}
+                                    />
+                                </>
+                            ) : (
+                                ''
+                            ))}
                     </div>
                     <div className="biddingCard__body--share">{children}</div>
                 </div>

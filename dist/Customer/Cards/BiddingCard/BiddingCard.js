@@ -1,5 +1,7 @@
 "use strict";
 
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -13,7 +15,11 @@ var _SalesProgressBar = _interopRequireDefault(require("../../SalesProgressBar/S
 
 var _replaceWithSpace = _interopRequireDefault(require("../../../Util/replaceWithSpace"));
 
-var _calculateDiscountPercentage = require("../../../Util/calculateDiscountPercentage");
+var _calculateDiscountPercentage = _interopRequireWildcard(require("../../../Util/calculateDiscountPercentage"));
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -28,7 +34,11 @@ function BiddingCard(_ref) {
       children = _ref.children,
       inventory_available = _ref.inventory_available,
       onClick = _ref.onClick,
+      maxJoinCount = _ref.maxJoinCount,
+      joinCount = _ref.joinCount,
+      bindHasExpired = _ref.bindHasExpired,
       link = _ref.link;
+  var percentage = 100 + (0, _calculateDiscountPercentage.default)(maxJoinCount, joinCount);
   return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("div", {
     className: "biddingCard"
   }, /*#__PURE__*/_react.default.createElement("div", {
@@ -68,6 +78,12 @@ function BiddingCard(_ref) {
   }, title)), brand && /*#__PURE__*/_react.default.createElement("p", {
     className: "biddingCard__body--content--description"
   }, brand.toUpperCase())), /*#__PURE__*/_react.default.createElement("div", {
+    className: "biddingCard__body--salesbar"
+  }, !bindHasExpired && maxJoinCount && (joinCount > 0 ? /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_SalesProgressBar.default, {
+    percentage: percentage,
+    bindingCount: joinCount,
+    totalCount: maxJoinCount
+  })) : '')), /*#__PURE__*/_react.default.createElement("div", {
     className: "biddingCard__body--share"
   }, children))));
 }

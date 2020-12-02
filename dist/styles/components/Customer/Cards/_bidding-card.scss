@@ -74,6 +74,11 @@
 
         &--salesbar {
             width: 70%;
+
+            .sales__progress--bar {
+                height: 5px;
+                background: #F5F5F5;
+            }
         }
 
         &--share {

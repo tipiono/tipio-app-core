@@ -16,6 +16,7 @@ function SalesProgressBarTooltip(_ref) {
       bindCount = _ref.bindCount,
       totalCount = _ref.totalCount;
   var inactiveWidth = 100 - percentage;
+  var margin = percentage - 2;
   return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, ' ', /*#__PURE__*/_react.default.createElement("div", {
     className: "sales__progress--bar progress"
   }, /*#__PURE__*/_react.default.createElement("div", {
@@ -27,19 +28,18 @@ function SalesProgressBarTooltip(_ref) {
     "aria-valuenow": "25",
     "aria-valuemin": "0",
     "aria-valuemax": "100"
+  }, /*#__PURE__*/_react.default.createElement("span", {
+    className: (0, _classnames.default)('progress-bar__active', {
+      'd-none': bindCount === totalCount
+    }),
+    style: {
+      marginLeft: "".concat(margin, "%")
+    }
   }), /*#__PURE__*/_react.default.createElement("span", {
-    style: {
-      width: "".concat(inactiveWidth, "%")
-    },
-    className: "tooltip-progressbar d-flex justify-content-end"
-  })), /*#__PURE__*/_react.default.createElement("span", {
-    style: {
-      marginTop: "-10px"
-    },
-    className: (0, _classnames.default)('tooltip-progressbar d-flex justify-content-end', {
-      'full-tooltip-progressbar': inactiveWidth === 0
+    className: (0, _classnames.default)('check-icon', {
+      'd-none': bindCount !== totalCount
     })
-  }, ' ', /*#__PURE__*/_react.default.createElement("svg", {
+  }, /*#__PURE__*/_react.default.createElement("svg", {
     width: 14,
     height: 14,
     viewBox: "0 0 14 14",
@@ -49,13 +49,18 @@ function SalesProgressBarTooltip(_ref) {
     cx: 7,
     cy: 7,
     r: 7,
-    fill: "#F5F5F5"
+    fill: "#4ABCAC"
   }), /*#__PURE__*/_react.default.createElement("path", {
     d: "M9.787 3.696L6.075 8.393l-1.7-1.668a.515.515 0 10-.72.735l2.109 2.07a.515.515 0 00.764-.05l4.067-5.146a.515.515 0 10-.808-.638z",
     fill: "#fff"
-  })))), bindCount > 0 && /*#__PURE__*/_react.default.createElement("div", {
-    className: "sales__progress--tooltip middle"
-  }, /*#__PURE__*/_react.default.createElement("span", null, bindCount, "/", totalCount, " er med!")));
+  })))), /*#__PURE__*/_react.default.createElement("span", {
+    style: {
+      width: "".concat(inactiveWidth, "%")
+    },
+    className: "tooltip-progressbar d-flex justify-content-end"
+  }), ' ')), bindCount > 0 && /*#__PURE__*/_react.default.createElement("div", {
+    className: "sales__progress--tooltip middle mt-3"
+  }, /*#__PURE__*/_react.default.createElement("span", null, bindCount, "/", totalCount, " er interessert!")));
 }
 
 var _default = SalesProgressBarTooltip;

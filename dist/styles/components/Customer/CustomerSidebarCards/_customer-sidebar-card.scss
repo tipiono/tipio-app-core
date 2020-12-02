@@ -24,6 +24,7 @@
                 font-size: 0.875rem;
                 color: $gray-500;
                 margin-bottom: 0.275rem;
+                text-align: left;
             }
 
             &--price {
@@ -49,6 +50,7 @@
                 font-size: 0.75rem;
                 color: #8c8f91;
                 margin-bottom: 0.4rem;
+                text-align: left;
             }
 
             &--amount {
@@ -65,6 +67,7 @@
                 font-size: 0.75rem;
                 color: #188576;
                 margin-bottom: 0.4rem;
+                text-align: right;
             }
 
             &--amount {
@@ -191,7 +194,8 @@
 
         &--progressBar {
             margin-bottom: 2rem;
-            margin-top:0.75rem
+            margin-top: 0.75rem;
+            position: relative;
         }
 
         &--timeline {
