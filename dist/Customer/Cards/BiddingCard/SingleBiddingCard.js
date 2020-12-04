@@ -84,7 +84,7 @@ var SingleBiddingCard = function SingleBiddingCard(_ref) {
     className: "singleBiddingCard__body--price--sale"
   }, (0, _generatePrice.default)(bindingCount, firstRange, secondRange), " Kr")), /*#__PURE__*/_react.default.createElement("div", {
     className: "singleBiddingCard__body--salesbar"
-  }, bindingCount > 0 ? /*#__PURE__*/_react.default.createElement(_SalesProgressBar.default, {
+  }, bindingCount ? /*#__PURE__*/_react.default.createElement(_SalesProgressBar.default, {
     percentage: bindingPercentage,
     bindingCount: bindingCount
   }) : ''), /*#__PURE__*/_react.default.createElement("span", {

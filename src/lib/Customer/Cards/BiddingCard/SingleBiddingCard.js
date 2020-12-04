@@ -60,7 +60,7 @@ const SingleBiddingCard = ({
                 </div>
 
                 <div className="singleBiddingCard__body--salesbar">
-                    {bindingCount > 0 ? (
+                    {bindingCount ? (
                         <SalesProgressBar percentage={bindingPercentage} bindingCount={bindingCount} />
                     ) : (
                         ''

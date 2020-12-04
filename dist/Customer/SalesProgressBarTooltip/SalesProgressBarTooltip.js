@@ -58,7 +58,7 @@ function SalesProgressBarTooltip(_ref) {
       width: "".concat(inactiveWidth, "%")
     },
     className: "tooltip-progressbar d-flex justify-content-end"
-  }), ' ')), bindCount > 0 && /*#__PURE__*/_react.default.createElement("div", {
+  }), ' ')), /*#__PURE__*/_react.default.createElement("div", {
     className: "sales__progress--tooltip middle mt-3"
   }, /*#__PURE__*/_react.default.createElement("span", null, bindCount, "/", totalCount, " er interessert!")));
 }

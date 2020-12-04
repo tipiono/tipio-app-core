@@ -34,7 +34,7 @@ var BindingCard = function BindingCard(_ref) {
       props = _objectWithoutProperties(_ref, ["children", "state", "firstRange", "secondRange", "onShareClick", "onBindClick", "onRestoreClick", "maxBindCount", "joinCount"]);
 
   var percentage = 100 + (0, _calculateDiscountPercentage.default)(maxBindCount, joinCount);
-  return /*#__PURE__*/_react.default.createElement(_BaseCard.default, props, maxBindCount && joinCount > 0 && /*#__PURE__*/_react.default.createElement("div", {
+  return /*#__PURE__*/_react.default.createElement(_BaseCard.default, props, maxBindCount && /*#__PURE__*/_react.default.createElement("div", {
     className: "customerSidebarCard__footer--progressBar"
   }, /*#__PURE__*/_react.default.createElement(_SalesProgressBarTooltip.default, {
     bindCount: joinCount,
