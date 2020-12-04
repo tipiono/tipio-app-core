@@ -13,7 +13,6 @@ function SalesProgressBar(_ref) {
   var percentage = _ref.percentage,
       bindingCount = _ref.bindingCount,
       totalCount = _ref.totalCount;
-  var inactiveWidth = 100 - percentage;
   return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("div", {
     className: "sales__progress"
   }, /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, ' ', /*#__PURE__*/_react.default.createElement("div", {

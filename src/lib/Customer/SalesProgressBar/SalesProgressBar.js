@@ -1,7 +1,6 @@
 import React from 'react';
 
 function SalesProgressBar({ percentage, bindingCount, totalCount }) {
-    const inactiveWidth = 100 - percentage;
     return (
         <>
             <div className="sales__progress">
