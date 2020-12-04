@@ -20,7 +20,7 @@ const BindingCard = ({
 
     return (
         <BaseCard {...props}>
-            {maxBindCount && joinCount > 0 && (
+            {maxBindCount && (
                 <div className="customerSidebarCard__footer--progressBar">
                     <SalesProgressBarTooltip bindCount={joinCount} percentage={percentage} totalCount={maxBindCount} />
                 </div>

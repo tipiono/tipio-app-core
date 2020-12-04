@@ -79,11 +79,11 @@ function BiddingCard(_ref) {
     className: "biddingCard__body--content--description"
   }, brand.toUpperCase())), /*#__PURE__*/_react.default.createElement("div", {
     className: "biddingCard__body--salesbar"
-  }, !bindHasExpired && maxJoinCount && (joinCount > 0 ? /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_SalesProgressBar.default, {
+  }, !bindHasExpired && maxJoinCount && /*#__PURE__*/_react.default.createElement(_SalesProgressBar.default, {
     percentage: percentage,
     bindingCount: joinCount,
     totalCount: maxJoinCount
-  })) : '')), /*#__PURE__*/_react.default.createElement("div", {
+  })), /*#__PURE__*/_react.default.createElement("div", {
     className: "biddingCard__body--share"
   }, children))));
 }

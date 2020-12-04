@@ -49,14 +49,11 @@ function SalesProgressBarTooltip({ percentage, bindCount, totalCount }) {
                     ></span>{' '}
                 </div>
             </>
-            {bindCount > 0 && (
-                <div className="sales__progress--tooltip middle mt-3">
-                    <span>
-                        {bindCount}/{totalCount} er interessert!
-                    </span>
-                </div>
-            )}
-            {/* </div> */}
+            <div className="sales__progress--tooltip middle mt-3">
+                <span>
+                    {bindCount}/{totalCount} er interessert!
+                </span>
+            </div>
         </>
     );
 }
