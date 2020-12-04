@@ -82,10 +82,16 @@
         }
 
         &--share {
-            width: 70%;
-
             button {
                 margin-top: 1.625rem;
+            }
+
+            .btn-secondary {
+                width: 70%;
+            }
+
+            .btn-outline-secondary {
+                width: 100%;
             }
         }
     }
@@ -130,7 +136,9 @@
             }
 
             &--share {
-                width: 100%;
+                .btn-secondary {
+                    width: 100%;
+                }
             }
 
             button {
