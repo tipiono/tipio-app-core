@@ -1,6 +1,8 @@
 import React from 'react';
 import BaseCard from './BaseCard';
 import SecondaryOutlineButton from '../../UI/Buttons/SecondaryOutlineButton';
+import SalesProgressBarTooltip from '../SalesProgressBarTooltip/SalesProgressBarTooltip';
+import calculateDiscountPercentage from '../../Util/calculateDiscountPercentage';
 
 const BindingCard = ({
     children,
@@ -10,19 +12,26 @@ const BindingCard = ({
     onShareClick,
     onBindClick,
     onRestoreClick,
-    bindCount,
+    maxBindCount,
+    joinCount,
     ...props
 }) => {
+    const percentage = 100 + calculateDiscountPercentage(maxBindCount, joinCount);
+
     return (
         <BaseCard {...props}>
-            {children}
-            {props.expiredTipio && (
-                <>
-                    <SecondaryOutlineButton text={'Gjenopprett'} onClick={onRestoreClick} />
-                </>
+            {maxBindCount && joinCount > 0 && (
+                <div className="customerSidebarCard__footer--progressBar">
+                    <SalesProgressBarTooltip bindCount={joinCount} percentage={percentage} totalCount={maxBindCount} />
+                </div>
             )}
+            {props.expiredTipio && (
+                <div className="mt-4">
+                    <SecondaryOutlineButton text={'Gjenopprett'} onClick={onRestoreClick} />
+                </div>
+            )}
+            {children}
         </BaseCard>
     );
 };
-
 export default BindingCard;
