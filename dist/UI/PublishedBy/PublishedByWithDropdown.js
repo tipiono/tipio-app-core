@@ -47,13 +47,13 @@ var PublishedByWithDropDown = function PublishedByWithDropDown(props) {
     url: share.link,
     quote: share.title,
     className: "Demo__some-network__share-button"
-  }, "Del p\xE5 facebook")), /*#__PURE__*/_react.default.createElement(_NewDropdown.NewDropdownItem, {
+  }, "Del p\xE5 Facebook")), /*#__PURE__*/_react.default.createElement(_NewDropdown.NewDropdownItem, {
     key: '2',
     href: (0, _fbShare.messengerShareUrlMobile)(share.link),
     onClick: !_reactDeviceDetect.isMobile ? function (_) {
       return (0, _fbShare.shareOnMessengerWeb)(share.link);
     } : undefined
-  }, "Del p\xE5 Messanger"), /*#__PURE__*/_react.default.createElement(_NewDropdown.NewDropdownItem, {
+  }, "Del p\xE5 Messenger"), /*#__PURE__*/_react.default.createElement(_NewDropdown.NewDropdownItem, {
     key: '3'
   }, /*#__PURE__*/_react.default.createElement(_reactShare.TwitterShareButton, {
     url: share.link,
