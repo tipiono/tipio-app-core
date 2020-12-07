@@ -28,7 +28,7 @@ function SalesProgressBar(_ref) {
     "aria-valuemax": "100"
   }))), /*#__PURE__*/_react.default.createElement("span", {
     className: "sales__progress--label"
-  }, bindingCount, " av ", totalCount, " er med")));
+  }, bindingCount, " av ", totalCount, " er interesserte!")));
 }
 
 var _default = SalesProgressBar;
