@@ -18,7 +18,7 @@ function SalesProgressBar({ percentage, bindingCount, totalCount }) {
                     </div>
                 </>
                 <span className="sales__progress--label">
-                    {bindingCount} av {totalCount} er med
+                    {bindingCount} av {totalCount} er interesserte!
                 </span>
             </div>
         </>
