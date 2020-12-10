@@ -188,6 +188,7 @@ import limitTipios from './Util/limitTipios';
 import sortNestedArr from './Util/sortNestedArr';
 import useLockBodyScroll from './Hooks/useLockBodyScroll';
 import isValidTipio from './Util/validateTipio';
+import replaceWithSpace from './Util/replaceWithSpace';
 
 export {
     styles,
@@ -296,6 +297,7 @@ export {
     RemoveImageIcon,
     calculateDiscountPercentage as _util_CalculateDiscountPercentage,
     formatText as _util_FormatText,
+    replaceWithSpace as _util_ReplaceWithSpace,
     isValidTipio,
     sortNestedArr,
     MaterialSearch,
