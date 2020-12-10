@@ -57,12 +57,16 @@
                 flex-direction: row;
 
                 &--cost {
-                    color: $pink;
+                    color: $primary;
                 }
                 &--sale {
                     color: #8c8f91;
                     text-decoration: line-through;
                     letter-spacing: 0.4px;
+                }
+
+                &--salePrice {
+                    color: $pink;
                     margin-left: 1.5rem;
                 }
             }
@@ -164,6 +168,9 @@
                     justify-content: space-between;
 
                     &--sale {
+                        margin-left: 0;
+                    }
+                    &--salePrice {
                         margin-left: 0;
                     }
                 }
