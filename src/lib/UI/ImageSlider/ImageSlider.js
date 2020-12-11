@@ -5,6 +5,7 @@ import cx from 'classnames';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import TipioCountdown from '../TipioCountdown/TipioCountdown';
 import { createDiscountLabel } from '../../Util/calculateDiscountPercentage';
+import NafMembership from '../Logo/NafMemberShip';
 
 const ImageSlider = ({
     images,
@@ -15,7 +16,8 @@ const ImageSlider = ({
     costPrice,
     salePrice,
     showSaleDiscountBottom,
-    soldOut
+    soldOut,
+    hasNafMembership
 }) => {
     const YoutubeSlide = ({ url, isSelected }) => <ReactPlayer width="100%" url={url} playing={isSelected} />;
 
@@ -87,6 +89,11 @@ const ImageSlider = ({
                             </div>
                         )}
                     </>
+                )}
+                {hasNafMembership && (
+                    <div className="imageSlider__membership">
+                        <NafMembership />
+                    </div>
                 )}
             </div>
         </>

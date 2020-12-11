@@ -4,7 +4,7 @@ import SalesProgressBar from '../../SalesProgressBar/SalesProgressBar';
 import replaceWithSpace from '../../../Util/replaceWithSpace';
 import { createDiscountLabel } from '../../../Util/calculateDiscountPercentage';
 import calculateDiscountPercentage from '../../../Util/calculateDiscountPercentage';
-
+import NafMembership from '../../../UI/Logo/NafMemberShip';
 function BiddingCard({
     id,
     image,
@@ -19,7 +19,8 @@ function BiddingCard({
     maxJoinCount,
     joinCount,
     bindHasExpired,
-    link
+    link,
+    hasNafMembership
 }) {
     const percentage = 100 + calculateDiscountPercentage(maxJoinCount, joinCount);
     return (
@@ -49,6 +50,11 @@ function BiddingCard({
                                 />
                             </div>
                         </>
+                    )}
+                    {hasNafMembership && (
+                        <div className="tipio__membership">
+                            <NafMembership />
+                        </div>
                     )}
                 </div>
                 <div className="biddingCard__body">
