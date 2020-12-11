@@ -11,6 +11,8 @@ var _TipioCountdown = _interopRequireDefault(require("../TipioCountdown/TipioCou
 
 var _calculateDiscountPercentage = require("../../Util/calculateDiscountPercentage");
 
+var _NafMemberShip = _interopRequireDefault(require("../Logo/NafMemberShip"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
@@ -29,7 +31,8 @@ var SmallPopularTipio = function SmallPopularTipio(_ref) {
       subtitle = _ref.subtitle,
       type = _ref.type,
       onClick = _ref.onClick,
-      props = _objectWithoutProperties(_ref, ["id", "children", "title", "binding_expires_in", "images", "brand", "subtitle", "type", "onClick"]);
+      hasNafMembership = _ref.hasNafMembership,
+      props = _objectWithoutProperties(_ref, ["id", "children", "title", "binding_expires_in", "images", "brand", "subtitle", "type", "onClick", "hasNafMembership"]);
 
   return /*#__PURE__*/_react.default.createElement("div", {
     className: "smallPopularTipio"
@@ -47,7 +50,9 @@ var SmallPopularTipio = function SmallPopularTipio(_ref) {
   }, /*#__PURE__*/_react.default.createElement(_TipioCountdown.default, {
     className: "timer",
     expires_in: binding_expires_in
-  })))), /*#__PURE__*/_react.default.createElement("div", {
+  }))), hasNafMembership && /*#__PURE__*/_react.default.createElement("div", {
+    className: "tipio__membership"
+  }, /*#__PURE__*/_react.default.createElement(_NafMemberShip.default, null))), /*#__PURE__*/_react.default.createElement("div", {
     className: "smallPopularTipio__content"
   }, /*#__PURE__*/_react.default.createElement("div", {
     className: "smallPopularTipio__content--inner"

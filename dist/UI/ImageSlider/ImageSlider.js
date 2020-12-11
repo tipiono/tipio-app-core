@@ -19,6 +19,8 @@ var _TipioCountdown = _interopRequireDefault(require("../TipioCountdown/TipioCou
 
 var _calculateDiscountPercentage = require("../../Util/calculateDiscountPercentage");
 
+var _NafMemberShip = _interopRequireDefault(require("../Logo/NafMemberShip"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var ImageSlider = function ImageSlider(_ref) {
@@ -30,7 +32,8 @@ var ImageSlider = function ImageSlider(_ref) {
       costPrice = _ref.costPrice,
       salePrice = _ref.salePrice,
       showSaleDiscountBottom = _ref.showSaleDiscountBottom,
-      soldOut = _ref.soldOut;
+      soldOut = _ref.soldOut,
+      hasNafMembership = _ref.hasNafMembership;
 
   var YoutubeSlide = function YoutubeSlide(_ref2) {
     var url = _ref2.url,
@@ -111,7 +114,9 @@ var ImageSlider = function ImageSlider(_ref) {
     className: "timer",
     expires_in: tipio_expires_in,
     soldOut: soldOut ? true : false
-  })))));
+  }))), hasNafMembership && /*#__PURE__*/_react.default.createElement("div", {
+    className: "imageSlider__membership"
+  }, /*#__PURE__*/_react.default.createElement(_NafMemberShip.default, null))));
 };
 
 var _default = ImageSlider;

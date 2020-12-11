@@ -17,6 +17,8 @@ var _replaceWithSpace = _interopRequireDefault(require("../../../Util/replaceWit
 
 var _calculateDiscountPercentage = _interopRequireWildcard(require("../../../Util/calculateDiscountPercentage"));
 
+var _NafMemberShip = _interopRequireDefault(require("../../../UI/Logo/NafMemberShip"));
+
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
@@ -37,7 +39,8 @@ function BiddingCard(_ref) {
       maxJoinCount = _ref.maxJoinCount,
       joinCount = _ref.joinCount,
       bindHasExpired = _ref.bindHasExpired,
-      link = _ref.link;
+      link = _ref.link,
+      hasNafMembership = _ref.hasNafMembership;
   var percentage = 100 + (0, _calculateDiscountPercentage.default)(maxJoinCount, joinCount);
   return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("div", {
     className: "biddingCard"
@@ -60,7 +63,9 @@ function BiddingCard(_ref) {
     className: "timer",
     expires_in: expiresIn,
     soldOut: inventory_available === 0 ? true : false
-  })))), /*#__PURE__*/_react.default.createElement("div", {
+  }))), hasNafMembership && /*#__PURE__*/_react.default.createElement("div", {
+    className: "tipio__membership"
+  }, /*#__PURE__*/_react.default.createElement(_NafMemberShip.default, null))), /*#__PURE__*/_react.default.createElement("div", {
     className: "biddingCard__body"
   }, /*#__PURE__*/_react.default.createElement("div", {
     className: "biddingCard__body--price"

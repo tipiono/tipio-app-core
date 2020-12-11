@@ -11,6 +11,8 @@ var _TipioCountdown = _interopRequireDefault(require("../TipioCountdown/TipioCou
 
 var _calculateDiscountPercentage = require("../../Util/calculateDiscountPercentage");
 
+var _NafMemberShip = _interopRequireDefault(require("../Logo/NafMemberShip"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var LargePopularTipio = function LargePopularTipio(_ref) {
@@ -24,7 +26,8 @@ var LargePopularTipio = function LargePopularTipio(_ref) {
       onClick = _ref.onClick,
       type = _ref.type,
       market_price = _ref.market_price,
-      tipio_offer = _ref.tipio_offer;
+      tipio_offer = _ref.tipio_offer,
+      hasNafMembership = _ref.hasNafMembership;
   return /*#__PURE__*/_react.default.createElement("div", {
     className: "largePopularTipio"
   }, /*#__PURE__*/_react.default.createElement("div", {
@@ -42,7 +45,9 @@ var LargePopularTipio = function LargePopularTipio(_ref) {
   }, /*#__PURE__*/_react.default.createElement(_TipioCountdown.default, {
     className: "timer",
     expires_in: binding_expires_in
-  })))), /*#__PURE__*/_react.default.createElement("div", {
+  }))), hasNafMembership && /*#__PURE__*/_react.default.createElement("div", {
+    className: "tipio__membership"
+  }, /*#__PURE__*/_react.default.createElement(_NafMemberShip.default, null))), /*#__PURE__*/_react.default.createElement("div", {
     className: "largePopularTipio__content"
   }, /*#__PURE__*/_react.default.createElement("a", {
     href: "/tipio/".concat(type === 2 ? 'bind' : 'vote', "/").concat(id),
