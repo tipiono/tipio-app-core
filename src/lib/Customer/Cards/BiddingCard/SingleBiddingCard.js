@@ -17,6 +17,7 @@ const SingleBiddingCard = ({
     onClick,
     id,
     hasNafMembership,
+    saleDiscount,
     ...props
 }) => {
     const rangeList = (props.tipio_offer && props.tipio_offer.offer_price_ranges) || [];
