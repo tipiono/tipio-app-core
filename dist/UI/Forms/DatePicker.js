@@ -52,9 +52,9 @@ var DatePickerSelect = function DatePickerSelect(_ref) {
 DatePickerSelect.defaultProps = {};
 DatePickerSelect.propTypes = {
   label: _propTypes.default.string,
-  selectedDate: _propTypes.default.Date,
-  minDate: _propTypes.default.Date,
-  maxDate: _propTypes.default.Date,
+  selectedDate: _propTypes.default.string,
+  minDate: _propTypes.default.string,
+  maxDate: _propTypes.default.string,
   dateFormat: _propTypes.default.string
 };
 var _default = DatePickerSelect;

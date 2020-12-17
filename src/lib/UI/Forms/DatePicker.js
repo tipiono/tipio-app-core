@@ -26,9 +26,9 @@ DatePickerSelect.defaultProps = {};
 
 DatePickerSelect.propTypes = {
     label: PropTypes.string,
-    selectedDate: PropTypes.Date,
-    minDate: PropTypes.Date,
-    maxDate: PropTypes.Date,
+    selectedDate: PropTypes.string,
+    minDate: PropTypes.string,
+    maxDate: PropTypes.string,
     dateFormat: PropTypes.string
 };
 
