@@ -11,11 +11,6 @@ const BaseCard = ({ children, ...props }) => {
                         {props.brand ? props.brand : props.subtitle || ''}
                     </p>
                 </div>
-                {props.inventory && props.inventory > 0 && props.inventory <= 10 && !props.expiredTipio ? (
-                    <p className="customerSidebarCard__header__stock"></p>
-                ) : (
-                    ''
-                )}
                 {props.vote ? (
                     <div className="customerSidebarCard__header__cost">
                         <p className="customerSidebarCard__header__cost--label" id={props.marketPriceId}>

@@ -35,9 +35,7 @@ var AddSaleSidebarCard = function AddSaleSidebarCard(_ref) {
     className: "addSaleSidebarCard__header__content--title"
   }, title), /*#__PURE__*/_react.default.createElement("p", {
     className: "addSaleSidebarCard__header__content--subtitle"
-  }, brand))), inventory && inventory > 0 && inventory <= 10 ? /*#__PURE__*/_react.default.createElement("p", {
-    className: "addSaleSidebarCard__stock"
-  }) : '', /*#__PURE__*/_react.default.createElement("div", {
+  }, brand))), /*#__PURE__*/_react.default.createElement("div", {
     className: "addSaleSidebarCard__price"
   }, /*#__PURE__*/_react.default.createElement("div", {
     className: "addSaleSidebarCard__price--cost"
