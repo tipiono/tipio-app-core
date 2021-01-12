@@ -4,7 +4,7 @@ import SalesProgressBar from '../../SalesProgressBar/SalesProgressBar';
 import SecondaryButton from '../../../UI/Buttons/SecondaryButton';
 import generatePrice from '../../../Util/generatePrice';
 import calculateDiscountPercentage from '../../../Util/calculateDiscountPercentage';
-
+import NafMembership from '../../../UI/Logo/NafMemberShip';
 const SingleBiddingCard = ({
     image,
     title,
@@ -16,6 +16,8 @@ const SingleBiddingCard = ({
     bindingCount,
     onClick,
     id,
+    hasNafMembership,
+    saleDiscount,
     ...props
 }) => {
     const rangeList = (props.tipio_offer && props.tipio_offer.offer_price_ranges) || [];
@@ -31,6 +33,11 @@ const SingleBiddingCard = ({
     return (
         <div className="singleBiddingCard">
             <div className="singleBiddingCard__header">
+                {hasNafMembership && (
+                    <div className="tipio__membership">
+                        <NafMembership />
+                    </div>
+                )}
                 <span className="imageSlider__discount">{saleDiscount}</span>
                 <a
                     href={`/tipio/bind/${id}`}
@@ -60,7 +67,7 @@ const SingleBiddingCard = ({
                 </div>
 
                 <div className="singleBiddingCard__body--salesbar">
-                    {bindingCount > 0 ? (
+                    {bindingCount ? (
                         <SalesProgressBar percentage={bindingPercentage} bindingCount={bindingCount} />
                     ) : (
                         ''

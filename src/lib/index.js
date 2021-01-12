@@ -21,6 +21,7 @@ import Select from './UI/Forms/Select';
 import SelectWithSeperateValues from './UI/Forms/SelectWithSeperateValues';
 import * as CountdownType from './UI/Countdown/CountdownType';
 import Input from './UI/Forms/Input';
+import DatePickerSelect from './UI/Forms/DatePicker';
 import PlaceholderInput from './UI/Forms/PlaceholderInput';
 import Textarea from './UI/Forms/Textarea';
 import Checkbox from './UI/Forms/Checkbox';
@@ -187,6 +188,7 @@ import limitTipios from './Util/limitTipios';
 import sortNestedArr from './Util/sortNestedArr';
 import useLockBodyScroll from './Hooks/useLockBodyScroll';
 import isValidTipio from './Util/validateTipio';
+import replaceWithSpace from './Util/replaceWithSpace';
 
 export {
     styles,
@@ -229,6 +231,7 @@ export {
     TipioCountdown,
     CountdownType,
     Input,
+    DatePickerSelect,
     PlaceholderInput,
     Textarea,
     Select,
@@ -294,6 +297,7 @@ export {
     RemoveImageIcon,
     calculateDiscountPercentage as _util_CalculateDiscountPercentage,
     formatText as _util_FormatText,
+    replaceWithSpace as _util_ReplaceWithSpace,
     isValidTipio,
     sortNestedArr,
     MaterialSearch,

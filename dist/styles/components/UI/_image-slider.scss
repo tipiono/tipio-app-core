@@ -90,6 +90,12 @@
                 margin: 0 !important;
             }
         }
+
+        @include media-breakpoint-down(sm) {
+            .slider-wrapper {
+                border: none;
+            }
+        }
     }
 
     /// Thumbnails Images
@@ -145,10 +151,34 @@
         font-size: 12px;
     }
 
+    &__membership {
+        position: absolute;
+        bottom: 134px;
+        left: 9px;
+    }
+
+    &__saleDiscount {
+        position: absolute;
+        bottom: 0;
+        right: 15px;
+        color: #fff;
+        background: #e74298;
+        height: 68px;
+        min-width: 68px;
+        padding-left: 11px;
+        padding-right: 11px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Riposte-Medium', sans-serif;
+        font-size: 18px;
+        border-radius: 50%;
+    }
+
     @include media-breakpoint-down(sm) {
         .carousel-slider {
             .slider-wrapper {
-                margin-bottom: 2rem;
+                margin-bottom: 1.6rem;
                 border-left: 0;
                 border-right: 0;
 
@@ -164,7 +194,7 @@
             /// Dot Indicatiors
             .control-dots {
                 display: block;
-                bottom: -30px !important;
+                bottom: -23px !important;
             }
 
             // Arrows (hide on mobile view)
@@ -187,5 +217,21 @@
             font-size: 10px;
             padding: 3px 12px;
         }
+
+        &__membership {
+            bottom: 9px;
+        }
     }
+}
+
+.removeBottomMargin {
+    .carousel-slider .slider-wrapper {
+        margin-bottom: 1rem;
+    }
+}
+
+.tipio__membership {
+    position: absolute;
+    bottom: 7px;
+    left: 7px;
 }

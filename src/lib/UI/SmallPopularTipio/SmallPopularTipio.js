@@ -1,7 +1,7 @@
 import React from 'react';
 import TipioCountdown from '../TipioCountdown/TipioCountdown';
 import { createDiscountLabel } from '../../Util/calculateDiscountPercentage';
-
+import NafMembership from '../Logo/NafMemberShip';
 const SmallPopularTipio = ({
     id,
     children,
@@ -12,6 +12,7 @@ const SmallPopularTipio = ({
     subtitle,
     type,
     onClick,
+    hasNafMembership,
     ...props
 }) => {
     return (
@@ -34,22 +35,29 @@ const SmallPopularTipio = ({
                         </div>
                     </>
                 )}
+                {hasNafMembership && (
+                    <div className="tipio__membership">
+                        <NafMembership />
+                    </div>
+                )}
             </div>
 
             <div className="smallPopularTipio__content">
-                <a
-                    href={`/tipio/${type === 2 ? 'bind' : 'vote'}/${id}`}
-                    onClick={onClick}
-                    className="text-truncate smallPopularTipio__content--title"
-                    title={title}
-                >
-                    {title}
-                </a>
-                <p className="text-truncate smallPopularTipio__content--description" title={brand ? brand : subtitle}>
-                    {brand ? brand : subtitle}{' '}
-                </p>
-
-                {children}
+                <div className="smallPopularTipio__content--inner">
+                    {' '}
+                    <a
+                        href={`/tipio/${type === 2 ? 'bind' : 'vote'}/${id}`}
+                        onClick={onClick}
+                        className="smallPopularTipio__content--title"
+                        title={title}
+                    >
+                        {title}
+                    </a>
+                    <p className="smallPopularTipio__content--description" title={brand ? brand : subtitle}>
+                        {brand ? brand : subtitle}{' '}
+                    </p>
+                </div>
+                <div className="smallPopularTipio__content--children">{children}</div>
             </div>
         </div>
     );

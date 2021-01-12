@@ -19,6 +19,8 @@ var _TipioCountdown = _interopRequireDefault(require("../TipioCountdown/TipioCou
 
 var _calculateDiscountPercentage = require("../../Util/calculateDiscountPercentage");
 
+var _NafMemberShip = _interopRequireDefault(require("../Logo/NafMemberShip"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var ImageSlider = function ImageSlider(_ref) {
@@ -28,7 +30,10 @@ var ImageSlider = function ImageSlider(_ref) {
       tipio_expires_in = _ref.tipio_expires_in,
       onClick = _ref.onClick,
       costPrice = _ref.costPrice,
-      salePrice = _ref.salePrice;
+      salePrice = _ref.salePrice,
+      showSaleDiscountBottom = _ref.showSaleDiscountBottom,
+      soldOut = _ref.soldOut,
+      hasNafMembership = _ref.hasNafMembership;
 
   var YoutubeSlide = function YoutubeSlide(_ref2) {
     var url = _ref2.url,
@@ -74,6 +79,8 @@ var ImageSlider = function ImageSlider(_ref) {
       showIndicators: images.length >= 5
     }, images && {
       removeMargin: images.length < 5
+    }, images && {
+      removeBottomMargin: images.length === 1
     })
   }, /*#__PURE__*/_react.default.createElement(_reactResponsiveCarousel.Carousel, {
     showIndicators: images.length >= 2,
@@ -99,14 +106,17 @@ var ImageSlider = function ImageSlider(_ref) {
         url: item.url
       });
     }
-  })), showTimer && tipio_expires_in && /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, costPrice && salePrice && /*#__PURE__*/_react.default.createElement("span", {
+  })), costPrice && salePrice && /*#__PURE__*/_react.default.createElement("span", {
     className: "imageSlider__discount"
-  }, (0, _calculateDiscountPercentage.createDiscountLabel)(costPrice, salePrice)), /*#__PURE__*/_react.default.createElement("div", {
+  }, (0, _calculateDiscountPercentage.createDiscountLabel)(costPrice, salePrice)), showTimer && tipio_expires_in && /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, !showSaleDiscountBottom && /*#__PURE__*/_react.default.createElement("div", {
     className: "imageSlider__countDown"
   }, /*#__PURE__*/_react.default.createElement(_TipioCountdown.default, {
     className: "timer",
-    expires_in: tipio_expires_in
-  })))));
+    expires_in: tipio_expires_in,
+    soldOut: soldOut ? true : false
+  }))), hasNafMembership && /*#__PURE__*/_react.default.createElement("div", {
+    className: "imageSlider__membership"
+  }, /*#__PURE__*/_react.default.createElement(_NafMemberShip.default, null))));
 };
 
 var _default = ImageSlider;

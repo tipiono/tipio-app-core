@@ -38,7 +38,7 @@ var VotingCard = function VotingCard(_ref) {
   }), state === 'display_interested_button' && /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("div", {
     className: "customerSidebarCard__footer--action"
   }, /*#__PURE__*/_react.default.createElement(_SecondaryOutlineButton.default, {
-    text: 'Meld interesse',
+    text: 'Få tilbudsvarsel',
     onClick: props.voteOnClick,
     loading: props.voteLoading,
     id: props.id
@@ -51,7 +51,7 @@ var VotingCard = function VotingCard(_ref) {
   }), /*#__PURE__*/_react.default.createElement("div", {
     className: "customerSidebarCard__footer--action--notInterested"
   }, /*#__PURE__*/_react.default.createElement(_GrayOutlineButton.default, {
-    text: "Meld av interesse",
+    text: "Skru av tilbudsvarsel",
     onClick: props.notInterestedOnClick
   }))), state === 'restore' && /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("div", {
     className: "customerSidebarCard__footer--action"

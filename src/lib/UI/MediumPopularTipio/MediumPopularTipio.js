@@ -1,7 +1,7 @@
 import React from 'react';
 import TipioCountdown from '../TipioCountdown/TipioCountdown';
 import { createDiscountLabel } from '../../Util/calculateDiscountPercentage';
-
+import NafMembership from '../Logo/NafMemberShip';
 const MediumPopularTipio = ({
     id,
     children,
@@ -12,7 +12,8 @@ const MediumPopularTipio = ({
     type,
     onClick,
     market_price,
-    tipio_offer
+    tipio_offer,
+    hasNafMembership
 }) => {
     return (
         <div className="mediumPopularTipio">
@@ -31,6 +32,11 @@ const MediumPopularTipio = ({
                             <TipioCountdown className="timer" expires_in={binding_expires_in} />
                         </div>
                     </>
+                )}
+                {hasNafMembership && (
+                    <div className="tipio__membership">
+                        <NafMembership />
+                    </div>
                 )}
             </div>
 

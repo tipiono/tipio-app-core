@@ -3,7 +3,8 @@ import TipioCountdown from '../../../UI/TipioCountdown/TipioCountdown';
 import SalesProgressBar from '../../SalesProgressBar/SalesProgressBar';
 import replaceWithSpace from '../../../Util/replaceWithSpace';
 import { createDiscountLabel } from '../../../Util/calculateDiscountPercentage';
-
+import calculateDiscountPercentage from '../../../Util/calculateDiscountPercentage';
+import NafMembership from '../../../UI/Logo/NafMemberShip';
 function BiddingCard({
     id,
     image,
@@ -13,12 +14,15 @@ function BiddingCard({
     salePrice,
     costPrice,
     children,
-    salesProgressBarPercentage,
-    bindingCount,
+    inventory_available,
     onClick,
+    maxJoinCount,
+    joinCount,
     bindHasExpired,
-    link
+    link,
+    hasNafMembership
 }) {
+    const percentage = 100 + calculateDiscountPercentage(maxJoinCount, joinCount);
     return (
         <>
             <div className="biddingCard">
@@ -39,12 +43,20 @@ function BiddingCard({
                         <>
                             <span className="imageSlider__discount">{createDiscountLabel(costPrice, salePrice)}</span>
                             <div className="timeleft__countdown">
-                                <TipioCountdown className="timer" expires_in={expiresIn} />
+                                <TipioCountdown
+                                    className="timer"
+                                    expires_in={expiresIn}
+                                    soldOut={inventory_available === 0 ? true : false}
+                                />
                             </div>
                         </>
                     )}
+                    {hasNafMembership && (
+                        <div className="tipio__membership">
+                            <NafMembership />
+                        </div>
+                    )}
                 </div>
-
                 <div className="biddingCard__body">
                     <div className="biddingCard__body--price">
                         <h4 className="biddingCard__body--price--sale">
@@ -60,6 +72,15 @@ function BiddingCard({
                             <h4 className="biddingCard__body--content--title">{title}</h4>
                         </a>
                         {brand && <p className="biddingCard__body--content--description">{brand.toUpperCase()}</p>}
+                    </div>
+                    <div className="biddingCard__body--salesbar">
+                        {!bindHasExpired && maxJoinCount && (
+                            <SalesProgressBar
+                                percentage={percentage}
+                                bindingCount={joinCount}
+                                totalCount={maxJoinCount}
+                            />
+                        )}
                     </div>
                     <div className="biddingCard__body--share">{children}</div>
                 </div>

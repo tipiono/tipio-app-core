@@ -1,7 +1,7 @@
 import React from 'react';
 import TipioCountdown from '../TipioCountdown/TipioCountdown';
 import { createDiscountLabel } from '../../Util/calculateDiscountPercentage';
-
+import NafMembership from '../Logo/NafMemberShip';
 function TipioOfTheDay({
     id,
     children,
@@ -12,6 +12,7 @@ function TipioOfTheDay({
     onClick,
     showTimer,
     link,
+    hasNafMembership,
     ...props
 }) {
     return (
@@ -36,6 +37,11 @@ function TipioOfTheDay({
                             </div>
                         </>
                     ))}
+                {hasNafMembership && (
+                    <div className="tipio__membership">
+                        <NafMembership />
+                    </div>
+                )}
             </a>
 
             <div className="tipioOfTheDay__content">

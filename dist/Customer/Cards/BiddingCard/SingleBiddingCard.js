@@ -17,6 +17,8 @@ var _generatePrice = _interopRequireDefault(require("../../../Util/generatePrice
 
 var _calculateDiscountPercentage = _interopRequireDefault(require("../../../Util/calculateDiscountPercentage"));
 
+var _NafMemberShip = _interopRequireDefault(require("../../../UI/Logo/NafMemberShip"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
@@ -34,7 +36,9 @@ var SingleBiddingCard = function SingleBiddingCard(_ref) {
       bindingCount = _ref.bindingCount,
       onClick = _ref.onClick,
       id = _ref.id,
-      props = _objectWithoutProperties(_ref, ["image", "title", "brand", "expiresIn", "market_price", "costPrice", "salesProgressBarPercentage", "bindingCount", "onClick", "id"]);
+      hasNafMembership = _ref.hasNafMembership,
+      saleDiscount = _ref.saleDiscount,
+      props = _objectWithoutProperties(_ref, ["image", "title", "brand", "expiresIn", "market_price", "costPrice", "salesProgressBarPercentage", "bindingCount", "onClick", "id", "hasNafMembership", "saleDiscount"]);
 
   var rangeList = props.tipio_offer && props.tipio_offer.offer_price_ranges || [];
   var firstRange = rangeList.length > 0 && parseInt(rangeList[1].price, 10) && rangeList[1];
@@ -50,7 +54,9 @@ var SingleBiddingCard = function SingleBiddingCard(_ref) {
     className: "singleBiddingCard"
   }, /*#__PURE__*/_react.default.createElement("div", {
     className: "singleBiddingCard__header"
-  }, /*#__PURE__*/_react.default.createElement("span", {
+  }, hasNafMembership && /*#__PURE__*/_react.default.createElement("div", {
+    className: "tipio__membership"
+  }, /*#__PURE__*/_react.default.createElement(_NafMemberShip.default, null)), /*#__PURE__*/_react.default.createElement("span", {
     className: "imageSlider__discount"
   }, saleDiscount), /*#__PURE__*/_react.default.createElement("a", {
     href: "/tipio/bind/".concat(id),
@@ -84,7 +90,7 @@ var SingleBiddingCard = function SingleBiddingCard(_ref) {
     className: "singleBiddingCard__body--price--sale"
   }, (0, _generatePrice.default)(bindingCount, firstRange, secondRange), " Kr")), /*#__PURE__*/_react.default.createElement("div", {
     className: "singleBiddingCard__body--salesbar"
-  }, bindingCount > 0 ? /*#__PURE__*/_react.default.createElement(_SalesProgressBar.default, {
+  }, bindingCount ? /*#__PURE__*/_react.default.createElement(_SalesProgressBar.default, {
     percentage: bindingPercentage,
     bindingCount: bindingCount
   }) : ''), /*#__PURE__*/_react.default.createElement("span", {

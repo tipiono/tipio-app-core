@@ -20,7 +20,6 @@ var LargePopularBidingTipio = function LargePopularBidingTipio(props) {
 
   var rangeList = props.tipio_offer && props.tipio_offer.offer_price_ranges || [];
   var secondRange = rangeList.length > 0 && parseInt(rangeList[0].price, 10) && rangeList[0];
-  var price = secondRange.price;
   return /*#__PURE__*/_react.default.createElement(_LargePopularTipio.default, props, /*#__PURE__*/_react.default.createElement("div", {
     className: "largePopularTipio__content__price"
   }, /*#__PURE__*/_react.default.createElement("h6", {

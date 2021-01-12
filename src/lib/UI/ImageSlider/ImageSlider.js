@@ -5,8 +5,20 @@ import cx from 'classnames';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import TipioCountdown from '../TipioCountdown/TipioCountdown';
 import { createDiscountLabel } from '../../Util/calculateDiscountPercentage';
+import NafMembership from '../Logo/NafMemberShip';
 
-const ImageSlider = ({ images, showThumbs, showTimer, tipio_expires_in, onClick, costPrice, salePrice }) => {
+const ImageSlider = ({
+    images,
+    showThumbs,
+    showTimer,
+    tipio_expires_in,
+    onClick,
+    costPrice,
+    salePrice,
+    showSaleDiscountBottom,
+    soldOut,
+    hasNafMembership
+}) => {
     const YoutubeSlide = ({ url, isSelected }) => <ReactPlayer width="100%" url={url} playing={isSelected} />;
 
     const getVideoThumb = (videoId) => `https://img.youtube.com/vi/${videoId}/default.jpg`;
@@ -37,7 +49,8 @@ const ImageSlider = ({ images, showThumbs, showTimer, tipio_expires_in, onClick,
                 className={cx(
                     'imageSlider',
                     images && { showIndicators: images.length >= 5 },
-                    images && { removeMargin: images.length < 5 }
+                    images && { removeMargin: images.length < 5 },
+                    images && { removeBottomMargin: images.length === 1 }
                 )}
             >
                 <Carousel
@@ -61,15 +74,26 @@ const ImageSlider = ({ images, showThumbs, showTimer, tipio_expires_in, onClick,
                             }
                         })}
                 </Carousel>
+                {costPrice && salePrice && (
+                    <span className="imageSlider__discount">{createDiscountLabel(costPrice, salePrice)}</span>
+                )}
                 {showTimer && tipio_expires_in && (
                     <>
-                        {costPrice && salePrice && (
-                            <span className="imageSlider__discount">{createDiscountLabel(costPrice, salePrice)}</span>
+                        {!showSaleDiscountBottom && (
+                            <div className="imageSlider__countDown">
+                                <TipioCountdown
+                                    className="timer"
+                                    expires_in={tipio_expires_in}
+                                    soldOut={soldOut ? true : false}
+                                />
+                            </div>
                         )}
-                        <div className="imageSlider__countDown">
-                            <TipioCountdown className="timer" expires_in={tipio_expires_in} />
-                        </div>
                     </>
+                )}
+                {hasNafMembership && (
+                    <div className="imageSlider__membership">
+                        <NafMembership />
+                    </div>
                 )}
             </div>
         </>

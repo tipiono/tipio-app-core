@@ -53,13 +53,18 @@ var _renderer = function renderer(_ref) {
   var hours = _ref.hours,
       minutes = _ref.minutes,
       seconds = _ref.seconds,
-      completed = _ref.completed;
+      completed = _ref.completed,
+      soldOut = _ref.soldOut;
   var cn = 'purple';
 
   if (completed) {
     return /*#__PURE__*/_react.default.createElement(Completionist, null);
   } else {
-    if (hours > 48) {
+    if (soldOut) {
+      return /*#__PURE__*/_react.default.createElement("span", {
+        className: "inactive timer"
+      }, "Utsolgt");
+    } else if (hours > 48) {
       return /*#__PURE__*/_react.default.createElement("span", {
         className: cn + ' timer'
       }, Math.floor(hours / 24), " dager igjen");
@@ -91,6 +96,7 @@ var TipioCountdown = /*#__PURE__*/function (_React$Component) {
 
       var substractN = new Date(this.props.expires_in);
       substractN.setHours(substractN.getHours() - 120);
+      var soldOut = this.props.soldOut;
 
       if (substractN > new Date()) {
         return null;
@@ -104,7 +110,8 @@ var TipioCountdown = /*#__PURE__*/function (_React$Component) {
             daysInHours: true
           });
           return _renderer(_objectSpread(_objectSpread({}, result), {}, {
-            completed: completed
+            completed: completed,
+            soldOut: soldOut
           }));
         }
       });
