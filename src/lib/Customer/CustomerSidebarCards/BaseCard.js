@@ -12,7 +12,7 @@ const BaseCard = ({ children, ...props }) => {
                     </p>
                 </div>
                 {props.inventory && props.inventory > 0 && props.inventory <= 10 && !props.expiredTipio ? (
-                    <p className="customerSidebarCard__header__stock">Kun {props.inventory} igjen</p>
+                    <p className="customerSidebarCard__header__stock"></p>
                 ) : (
                     ''
                 )}

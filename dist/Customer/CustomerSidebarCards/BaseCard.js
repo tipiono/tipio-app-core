@@ -32,7 +32,7 @@ var BaseCard = function BaseCard(_ref) {
     className: "customerSidebarCard__header__content--subtitle"
   }, props.brand ? props.brand : props.subtitle || '')), props.inventory && props.inventory > 0 && props.inventory <= 10 && !props.expiredTipio ? /*#__PURE__*/_react.default.createElement("p", {
     className: "customerSidebarCard__header__stock"
-  }, "Kun ", props.inventory, " igjen") : '', props.vote ? /*#__PURE__*/_react.default.createElement("div", {
+  }) : '', props.vote ? /*#__PURE__*/_react.default.createElement("div", {
     className: "customerSidebarCard__header__cost"
   }, /*#__PURE__*/_react.default.createElement("p", {
     className: "customerSidebarCard__header__cost--label",
