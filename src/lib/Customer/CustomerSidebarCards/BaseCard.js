@@ -14,7 +14,7 @@ const BaseCard = ({ children, ...props }) => {
                 {/* add limited stock */}
 
                 {props.inventory && props.inventory > 0 && props.inventory <= 10 ? (
-                    <p className="customerSidebarCard__header__stock">Kun {props.inventory} igjen</p>
+                    <p className="customerSidebarCard__header__stock"></p>
                 ) : (
                     ''
                 )}
